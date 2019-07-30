@@ -41,4 +41,4 @@ Discussion of this work occurs on the
 technical issues needs to occur on the mailing list.
 
 You might also like to familiarize yourself with other
-[working group documents](https://datatracker.ietf.org/wg/ccamp/documents/).
+[working group documents](https://datatracker.ietf.org/wg/teas/documents/).
