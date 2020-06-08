@@ -7,7 +7,7 @@ Internet-Drafts are working documents of the Internet Engineering Task Force (IE
 Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."
 The list of current Internet-Drafts can be accessed at http://www.ietf.org/ietf/1id-abstracts.txt
 The list of Internet-Draft Shadow Directories can be accessed at http://www.ietf.org/shadow.html
-This Internet-Draft will expire on December 5, 2020.
+This Internet-Draft will expire on December 8, 2020.
 Copyright Notice
 Copyright (c) 2020 IETF Trust and the persons identified as the document authors. All rights reserved.
 This document is subject to BCP 78 and the IETF Trust’s Legal Provisions Relating to IETF Documents (http://trustee.ietf.org/license-info) in effect on the date of publication of this document. Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
@@ -44,7 +44,7 @@ A.2.	Router port failure	26
 Authors’ Addresses	26
 
 1.  Introduction
-The full automation of the management and control of Service Providers transport networks (IP/MPLS, Optical and also Microwave) is key for achieving the new challenges coming now with 5G as well as with the increased demand in terms of business agility and mobility in a digital world. ACTN architecture, by abstracting the network complexity from Optical and IP/MPLS networks towards MDSC and then from MDSC towards OSS/BSS or Orchestration layer through the use of standard interfaces and data models, is allowing an unlimited range of transport connectivity services that can be requested by the upper layers fulfilling almost any kind of service level requirements from a network perspective (e.g. physical diversity, latency, bandwidth, topology etc.) [BJVS1]
+The full automation of the management and control of Service Providers transport networks (IP/MPLS, Optical and also Microwave) is key for achieving the new challenges coming now with 5G as well as with the increased demand in terms of business agility and mobility in a digital world. ACTN architecture, by abstracting the network complexity from Optical and IP/MPLS networks towards MDSC and then from MDSC towards OSS/BSS or Orchestration layer through the use of standard interfaces and data models, is allowing a wide range of transport connectivity services that can be requested by the upper layers fulfilling almost any kind of service level requirements from a network perspective (e.g. physical diversity, latency, bandwidth, topology etc.) [BJVS1]
 Packet Optical Integration (POI) is an advanced use case of traffic engineering. In wide area networks, a packet network based on the Internet Protocol (IP) and possibly Multiprotocol Label Switching (MPLS) is typically realized on top of an optical transport network that uses Dense Wavelength Division Multiplexing (DWDM)(and optionally an Optical Transport Network (OTN)layer[BJVS2]). In many existing network deployments, the packet and the optical networks are engineered and operated independently of each other. There are technical differences between the technologies (e.g., routers vs. optical switches) and the corresponding network engineering and planning methods (e.g., inter-domain peering optimization in IP vs. dealing with physical impairments in DWDM, or very different time scales). In addition, customers needs can be different between a packet and an optical network, and it is not uncommon to use different vendors in both domains. Last but not least, state-of-the-art packet and optical networks use sophisticated but complex technologies, and for a network engineer it may not be trivial to be a full expert in both areas. As a result, packet and optical networks are often operated in technical and organizational silos.
 This separation is inefficient for many reasons. Both capital expenditure (CAPEX) and operational expenditure (OPEX) could be significantly reduced by better integrating the packet and the optical network. Multi-layer online topology insight can speed up troubleshooting (e.g., alarm correlation) and network operation (e.g., coordination of maintenance events), multi-layer offline topology inventory can improve service quality (e.g., detection of diversity constraint violations) and multi-layer traffic engineering can use the available network capacity more efficiently (e.g., coordination of restoration). In addition, provisioning workflows can be simplified or automated as needed across layers (e.g, to achieve bandwidth on demand, or to perform maintenance events).
 ACTN framework enables this complete multi-layer and multi-vendor integration of packet and optical networks through MDSC and packet and optical PNCs.
@@ -68,10 +68,10 @@ This document analyses a number of deployment scenarios for Packet and Optical I
                |           |            |           |
                |           \            /           |
      +-------------------+  \          /  +-------------------+
-CE  / PE             ASBR \  |        /  / ASBR            PE  \  CE
+CE  / PE               BR \  |        /  / BR              PE  \  CE
 o--/---o               o---\-|-------|--/---o               o---\--o
    \   :               :   / |       |  \   :               :   /
-    \  :  AS Domain 1  :  /  |       |   \  :  AS Domain 2  :  /
+    \  : PKT Domain 1  :  /  |       |   \  : PKT Domain 2  :  /
      +-:---------------:-+   |       |    +-:---------------:--+
        :               :     |       |      :               :
        :               :     |       |      :               :
@@ -268,43 +268,43 @@ o The Egress Optical Domain PE needs to POP the ODU label before sending the pac
 3.  Multi-layer and multi-domain services scenarios
 Multi-layer and multi-domain scenarios, based on reference network described in section 2 , and very relevant for Service Providers, are described in the next sections. For each scenario existing IETF protocols and data models are identified with particular focus on the MPI in the ACTN architecture. Non ACTN IETF data models required for L2/L3VPN service provisioning between MDSC and IP PNCs are also identified.
 3.1.  Scenario 1: network and service topology discovery
-In this scenario, the MSDC needs to discover through the underlying PNCs, the full network topology, at both WDM and IP layers, in terms of nodes (NEs) and links, including inter AS domain links as well as cross-layer links but also in terms of tunnels (MPLS or SR paths in IP layer and OCh and optionally ODUk tunnels in optical layer).MDSC discovers also the IP/MPLS transport services (L2VPN/L3VPN) deployed, both intra-domain and inter-domain wise.[BJVS11]
-Each PNC provides to the MDSC an abstracted or full topology view of the WDM or of the IP topology of the domain it controls. This topology can be abstracted in the sense that some detailed NE information is hidden at the MPI, and all or some of the NEs and related physical links are exposed as abstract nodes and logical (virtual) links, depending on the level of abstraction the user wants. This detailed information is key to understand both the inter-AS domain links (seen by each controller as UNI interfaces but as I-NNI interfaces by the MDSC) as well as the cross-layer mapping between IP and WDM layer.
-The MDSC also maintains an up-to-date network database of both IP and WDM layers (and optionally OTN layer) through the use of IETF notifications through MPI with the PNCs. It should be possible to correlate such information (e.g.: which port, lambda/OTSi, direction is used by a specific IP service on the WDM equipment)[BJVS12]
-For the cross-layer links it is key for MDSC to be able to correlate automatically the information from the PNC network databases about the physical ports from the routers (single link or bundle links for LAG) to client ports in the ROADM.[BJVS13]
-
-[BJVS14]It should be possible at MDSC level to easily correlate WDM and IP layers alarms to speed-up troubleshooting
-Alarms and event notifications are required between MDSC and PNCs so that any network changes are reported almost in real-time to the MDSC (e.g. NE or link failure, MPLS tunnel switched from main to backup path etc.). [BJVS15]As specified in [RFC7923] MDSC must be able to subscribe to specific objects from PNC YANG datastores for notifications.
+In this scenario, the MSDC needs to discover through the underlying PNCs, the network topology, at both WDM and IP layers, in terms of nodes (NEs) and links, including inter AS domain links as well as cross-layer links but also in terms of tunnels (MPLS or SR paths in IP layer and OCh and optionally ODUk tunnels in optical layer).MDSC discovers also the IP/MPLS transport services (L2VPN/L3VPN) deployed, both intra-domain and inter-domain wise.
+Each PNC provides to the MDSC an abstracted or full topology view of the WDM or the IP topology of the domain it controls. This topology can be abstracted in the sense that some detailed NE information is hidden at the MPI, and all or some of the NEs and related physical links are exposed as abstract nodes and logical (virtual) links, depending on the level of abstraction the user requires. This information is key to understand both the inter-AS domain links (seen by each controller as UNI interfaces but as I-NNI interfaces by the MDSC) as well as the cross-layer mapping between IP and WDM layer.
+The MDSC also maintains an up-to-date network database of both IP and WDM layers (and optionally OTN layer) through the use of IETF notifications through MPI with the PNCs when any topology change occurs. It should be possible also to correlate information coming from IP and WDM layers (e.g.: which port, lambda/OTSi, direction is used by a specific IP service on the WDM equipment)[BJVS11]
+In particular, For the cross-layer links it is key for MDSC to be able to correlate automatically the information from the PNC network databases about the physical ports from the routers (single link or bundle links for LAG) to client ports in the ROADM.[BJVS12]
+[BJVS13]It should be possible at MDSC level to easily correlate WDM and IP layers alarms to speed-up troubleshooting
+Alarms and event notifications are required between MDSC and PNCs so that any network changes are reported almost in real-time to the MDSC (e.g. NE or link failure, MPLS tunnel switched from main to backup path etc.). [BJVS14]As specified in [RFC7923] MDSC must be able to subscribe to specific objects from PNC YANG datastores for notifications.
 3.1.1.  Common YANG models used at MPIs
 Both Optical and Packet PNCs use the following common topology YANG models at the MPI to report their abstract topologies:
 o The Base Network Model, defined in the “ietf-network” YANG module of [RFC8345]
 o The Base Network Topology Model, defined in the “ietf-network-topology” YANG module of [RFC8345], which augments the Base Network Model
 o The TE Topology Model, defined in the “ietf-te-topology” YANG module of [TE-TOPO], which augments the Base Network Topology Model
 These common YANG models are generic and augmented by technology-specific YANG modules as described in the following sections.
-Both Optical and Packet PNCs must use the following common notifications YANG models at the MPI so that any network changes can be reported almost in real-time to MDSC by the PNCs:[BJVS16]
-o Dynamic Subscription to YANG Events and Datastores over RESTONCF as defined in [RFC8650]
+Both Optical and Packet PNCs must use the following common notifications YANG models at the MPI so that any network changes can be reported almost in real-time to MDSC by the PNCs:[BJVS15]
+o Dynamic Subscription to YANG Events and Datastores over RESTCONF as defined in [RFC8650]
 o Subscription to YANG Notifications for Datastores updates as defined in [RFC8641]
 PNCs and MDSCs must be compliant with subscription requirements as stated in [RFC7923].
 3.1.2.  Required YANG models at the optical MPIs
 The Optical PNC also uses at least the following technology-specific topology YANG models, providing WDM and Ethernet technology-specific augmentations of the generic TE Topology Model:
 o The WSON Topology Model, defined in the “ietf-wson-topology” YANG modules of [WSON-TOPO], or the Flexigrid Topology Model, defined in the “ietf-flexi-grid-topology” YANG module of [FlexiTOPO].
-o Optionally[BJVS17] the OTN Topology Model, defined in the “ietf-otn-topology” YANG module of the draft draft-ietf-ccamp-otn-topo-yang-10 [OTN-TOPO] 
+o Optionally[BJVS16] the OTN Topology Model, defined in the “ietf-otn-topology” YANG module of the draft draft-ietf-ccamp-otn-topo-yang-10 [OTN-TOPO] 
 o The Ethernet Topology Model, defined in the “ietf-eth-te-topology” YANG module of [CLIENT-TOPO]
 o Optionally when OTN layer is used, the network data model for L1 OTN services (e.g. an Ethernet transparent service) as defined in “ietf-trans-client-service” YANG module of draft-ietf-ccamp-client-signal-yang [CLIENT-SIGNAL] 
 The WSON Topology Model or, alternatively, the Flexigrid Topology model is used to report the DWDM network topology (e.g., ROADMs and links) depending on whether the DWDM optical network is based on fixed grid or flexible-grid.
 The Ethernet Topology is used to report the access links between the IP routers and the edge ROADMs.
 3.1.3.  Required YANG models at the Packet MPIs
-The Packet PNC also uses at least the following technology-specific topology YANG models, providing IP and Ethernet technology-specific augmentations of the generic Topology Models described in section 3.1.1.1. :
+The Packet PNC also uses at least the following technology-specific topology YANG models, providing IP and Ethernet technology-specific augmentations of the generic Topology Models described in section 3.1.1.  :
 o The L3 Topology Model, defined in the “ietfl3unicasttopology” YANG modules of [RFC8346], which augments the Base Network Topology Model
 o The L3 specific data model including extended TE attributes (e.g. performance derived metrics like latency), defined in “ietf-l3-te-topology” and in “ietf-te-topology-packet” in draft-ietf-teas-l3-te-topo [L3-TE-TOPO]
-o The Ethernet Topology Model, defined in the “ietf-eth-te-topology” YANG module of [CLIENT-TOPO], which augments the TE Topology Model[BJVS18]
+o The Ethernet Topology Model, defined in the “ietf-eth-te-topology” YANG module of [CLIENT-TOPO], which augments the TE Topology Model[BJVS17]
 The Ethernet Topology Model is used to report the access links between the IP routers and the edge ROADMs as well as the interdomain links between ASBRs, while the L3 Topology Model is used to report the IP network topology (e.g., IP routers and links).
 
-o The User Network Interface (UNI) Topology Model, being defined in the “ietf-uni-topology” module of the draft-ogondio-opsawg-uni-topology [UNI-TOPO] which augment “ietf-network” module defined in [RFC8345] adding service attachment points to the nodes to which L2VPN/L3VPN IP/MPLS services can be attached.[BJVS19]
+
+o The User Network Interface (UNI) Topology Model, being defined in the “ietf-uni-topology” module of the draft-ogondio-opsawg-uni-topology [UNI-TOPO] which augment “ietf-network” module defined in [RFC8345] adding service attachment points to the nodes to which L2VPN/L3VPN IP/MPLS services can be attached.[BJVS18]
 o L3VPN network data model defined in “ietf-l3vpn-ntw” module of draft-ietf-opsawg-l3sm-l3nm [L3NM] used for non-ACTN MPI for L3VPN service provisioning
 o L2VPN network data model defined in “ietf-l2vpn-ntw” module of draft-ietf-barguil-opsawg-l2sm-l2nm [L2NM] used for non-ACTN MPI for L2VPN service provisioning
 
-[BJVS20]
+[BJVS19]
 3.1.4.  Inter-domain link discovery
 In the reference network of Figure 1, there are two types of interdomain links:
 o Links between two IP domains (ASes)
@@ -437,22 +437,22 @@ Sharing existing TE tunnels at IP/MPLS doesn't require any coordination of IP an
 [BJVS8]In current network scenario peering between two IP AS domain is done at router level (colocated routers). Even in the case of having ASBRs interconnected through WDM, don't think we would by-pass ASBRs. Router by-pass may happen within each domain.
 [BJVS9]There is not an optical tunnel end-to-end across optical domains but yes coordination is needed to set-up optical tunnel required in each optical domain.
 [BJVS10]In current network scenario there is not such "underlay optical tunnel". in fact both optical domains are from different Vendors and have no interconnection as indicated in Figure 1
-[BJVS11]New text proposed (generally highlighted in yellow) to be agreed in next calls
-[BJVS12]Moved from a later section that has been deleted
-[BJVS13]Point to be further discussed. Possibility to have separate data model in future for inventory related information?
-[BJVS14]This has been already mentioned above
-[BJVS15]Notifications were not mentioned so far between PNC and MDSC. We can add them as suggested in common YANG models to be supported both by MDSC and PNCs
-[BJVS16]Proposal to include YANG data models required for network/service notifications changes over MPI as part of the common YANG models
-[BJVS17]Proposed to add this draft as optional when OTN layer exists on top of WDM layer.
-[BJVS18]Need to clarify between [CLIENT-TOPO] and [UNI-TOPO]
-[BJVS19]Still very early stage but thought to work together with L3NM for exposing the UNI topology.Need to be clarified further.[CLIENT-TOPO] may be needed for L1 or L2 optical services while [UNI-TOPO] may be needed for L2VPN/L3VPN IP/MPLS services?
-[BJVS20]Moved above jst after the L3 and Ethernet topology data models
+[BJVS11]Moved from a later section that has been deleted
+[BJVS12]Point to be further discussed. Possibility to have separate data model in future for inventory related information?
+[BJVS13]This has been already mentioned above
+[BJVS14]Notifications were not mentioned so far between PNC and MDSC. We can add them as suggested in common YANG models to be supported both by MDSC and PNCs
+[BJVS15]Proposal to include YANG data models required for network/service notifications changes over MPI as part of the common YANG models. Any additional one missing?
+[BJVS16]Proposed to add this draft as optional when OTN layer exists on top of WDM layer.
+[BJVS17]Need to be discussed [CLIENT-TOPO] vs [UNI-TOPO] as L3NM is considering [UNI-TOPO]as indicated below
+
+[BJVS18]Still very early stage but thought to work together with L3NM for exposing the UNI topology.Need to be clarified further.[CLIENT-TOPO] may be needed for L1 or L2 optical services while [UNI-TOPO] may be needed for L2VPN/L3VPN IP/MPLS services?
+[BJVS19]Moved above jst after the L3 and Ethernet topology data models
 Internet-Draft	ACTN POI 	June 2020
 
 
 
 
-Peruzzini et al.	Expires December 5, 2020	[Page 3]
+Peruzzini et al.	Expires December 8, 2020	[Page 2]
 
 
 
@@ -468,13 +468,13 @@ Intended status: Informational		Jean-Francois Bouquier
 		Daniele Ceccarelli
 		Ericsson
 
-Expires: December 2020		June 5, 2020
+Expires: December 2020		June 8, 2020
 	
 
 
 
 
 
-Peruzzini et al.	Expires December 5, 2020	[Page 1]
+Peruzzini et al.	Expires December 8, 2020	[Page 1]
 
 
