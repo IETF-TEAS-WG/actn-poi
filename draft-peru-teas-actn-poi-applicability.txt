@@ -1,15 +1,15 @@
 TEAS Working Group                                      Fabio Peruzzini
 Internet Draft                                                      TIM
-Intended status: Informational                               Italo Busi
+Intended status: Informational                   Jean-Francois Bouquier
+                                                               Vodafone
+                                                             Italo Busi
                                                                  Huawei
                                                             Daniel King
                                                      Old Dog Consulting
-                                                         Sergio Belotti
-                                                                  Nokia
-                                                    Gabriele Galimberti
-                                                                  Cisco
+                                                     Daniele Ceccarelli
+                                                               Ericsson
 
-Expires: September 2020                                   March 9, 2020
+Expires: December 2020                                    June 17, 2020
 
 
 
@@ -17,7 +17,7 @@ Expires: September 2020                                   March 9, 2020
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-               draft-peru-teas-actn-poi-applicability-03.txt
+                 draft-peru-teas-actn-poi-applicability-04
 
 
 Status of this Memo
@@ -41,7 +41,7 @@ Status of this Memo
    The list of Internet-Draft Shadow Directories can be accessed at
    http://www.ietf.org/shadow.html
 
-   This Internet-Draft will expire on September 9, 2020.
+   This Internet-Draft will expire on September 17, 2020.
 
 
 
@@ -49,9 +49,9 @@ Status of this Memo
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 1]
+Peruzzini et al.      Expires December 17, 2020                [Page 1]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 Copyright Notice
@@ -103,9 +103,9 @@ Table of Contents
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 2]
+Peruzzini et al.      Expires December 17, 2020                [Page 2]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
       3.3. Provisioning of an IP link/LAG over DWDM with path
@@ -157,9 +157,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 3]
+Peruzzini et al.      Expires December 17, 2020                [Page 3]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    art packet and optical networks use sophisticated but complex
@@ -211,9 +211,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 4]
+Peruzzini et al.      Expires December 17, 2020                [Page 4]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -265,9 +265,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 5]
+Peruzzini et al.      Expires December 17, 2020                [Page 5]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    The MDSC in Figure 1 is responsible for multi-domain and multi-layer
@@ -319,9 +319,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 6]
+Peruzzini et al.      Expires December 17, 2020                [Page 6]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 3. Multi-Layer Topology Coordination
@@ -373,9 +373,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 7]
+Peruzzini et al.      Expires December 17, 2020                [Page 7]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 3.1.1. Common YANG Models used at the MPI
@@ -427,9 +427,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 8]
+Peruzzini et al.      Expires December 17, 2020                [Page 8]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  The L3 Topology Model, defined in the "ietf-l3-unicast-topology"
@@ -481,9 +481,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020                [Page 9]
+Peruzzini et al.      Expires December 17, 2020                [Page 9]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    Both types of inter-domain Ethernet links are discovered using the
@@ -535,9 +535,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 10]
+Peruzzini et al.      Expires December 17, 2020               [Page 10]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  The Ethernet Client Signal Model, defined in the "ietf-eth-tran-
@@ -589,9 +589,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 11]
+Peruzzini et al.      Expires December 17, 2020               [Page 11]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    The Optical Transponders are reported by the O-PNC as Trail
@@ -643,9 +643,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 12]
+Peruzzini et al.      Expires December 17, 2020               [Page 12]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 3.3.1. YANG models used at the MPIs
@@ -697,9 +697,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 13]
+Peruzzini et al.      Expires December 17, 2020               [Page 13]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    a) LAG was defined between the two end routers. MDSC, after checking
@@ -751,9 +751,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 14]
+Peruzzini et al.      Expires December 17, 2020               [Page 14]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    two AS domains which are transported by two transport underlay
@@ -805,9 +805,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 15]
+Peruzzini et al.      Expires December 17, 2020               [Page 15]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -859,9 +859,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 16]
+Peruzzini et al.      Expires December 17, 2020               [Page 16]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  CMI (CNC-MDSC Interface) interfacing CNC with MDSC function in
@@ -913,9 +913,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 17]
+Peruzzini et al.      Expires December 17, 2020               [Page 17]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
              Customer
@@ -967,9 +967,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 18]
+Peruzzini et al.      Expires December 17, 2020               [Page 18]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  L2SM YANG [RFC8466] provides all L2VPN service configuration and
@@ -1021,9 +1021,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 19]
+Peruzzini et al.      Expires December 17, 2020               [Page 19]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    One of the important service functions the Service/Network
@@ -1075,9 +1075,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 20]
+Peruzzini et al.      Expires December 17, 2020               [Page 20]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -1129,9 +1129,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 21]
+Peruzzini et al.      Expires December 17, 2020               [Page 21]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    associated with an L3VPN service. For the first two cases, VN
@@ -1183,9 +1183,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 22]
+Peruzzini et al.      Expires December 17, 2020               [Page 22]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  It is the responsibility of the Service Configuration Function of
@@ -1237,9 +1237,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 23]
+Peruzzini et al.      Expires December 17, 2020               [Page 23]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -1291,9 +1291,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 24]
+Peruzzini et al.      Expires December 17, 2020               [Page 24]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    pool. Otherwise, an MPLS tunnel with modified bandwidth or a new
@@ -1343,9 +1343,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 25]
+Peruzzini et al.      Expires December 17, 2020               [Page 25]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    the VPN packets arrive and thus POP the VPN label and forward the
@@ -1397,9 +1397,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 26]
+Peruzzini et al.      Expires December 17, 2020               [Page 26]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 5.3.2. Scenario B: Isolated VN/Tunnel Establishment
@@ -1451,9 +1451,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 27]
+Peruzzini et al.      Expires December 17, 2020               [Page 27]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    Figure 6 shows how the Optical Domain Controllers create a new
@@ -1505,9 +1505,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 28]
+Peruzzini et al.      Expires December 17, 2020               [Page 28]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    o  The MDSC of the service/network orchestrator requests the L-MDSC
@@ -1559,9 +1559,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 29]
+Peruzzini et al.      Expires December 17, 2020               [Page 29]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -1613,9 +1613,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 30]
+Peruzzini et al.      Expires December 17, 2020               [Page 30]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 6. Security Considerations
@@ -1667,9 +1667,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 31]
+Peruzzini et al.      Expires December 17, 2020               [Page 31]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    [WSON-TOPO] Lee, Y. et al., " A YANG Data Model for WSON (Wavelength
@@ -1721,9 +1721,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 32]
+Peruzzini et al.      Expires December 17, 2020               [Page 32]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
    [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, "Layer 2
@@ -1775,9 +1775,9 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 33]
+Peruzzini et al.      Expires December 17, 2020               [Page 33]
 
-Internet-Draft                 ACTN POI                      March 2020
+Internet-Draft                 ACTN POI                       June 2020
 
 
 
@@ -1797,6 +1797,13 @@ Internet-Draft                 ACTN POI                      March 2020
    Email: fabio.peruzzini@telecomitalia.it
 
 
+   Jean-Francois Bouquier
+   Vodafone
+
+   Email: jeff.bouquier@vodafone.com
+
+
+
    Italo Busi
    Huawei
 
@@ -1809,6 +1816,22 @@ Internet-Draft                 ACTN POI                      March 2020
 
    Email: daniel@olddog.co.uk
 
+
+
+   Daniele Ceccarelli
+   Ericsson
+
+   Email: daniele.ceccarelli@ericsson.com
+
+
+
+
+
+
+
+Peruzzini et al.      Expires December 17, 2020               [Page 34]
+
+Internet-Draft                 ACTN POI                       June 2020
 
 
    Sergio Belotti
@@ -1825,15 +1848,6 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-
-
-
-
-Peruzzini et al.      Expires September 9, 2020               [Page 34]
-
-Internet-Draft                 ACTN POI                      March 2020
-
-
    Zheng Yanlei
    China Unicom
 
@@ -1841,17 +1855,17 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
+   Anton Snitser
+   Sedona
+
+   Email: antons@sedonasys.com
+
+
+
    Washington Costa Pereira Correia
    TIM Brasil
 
    Email: wcorreia@timbrasil.com.br
-
-
-
-   Jean-Francois Bouquier
-   Vodafone
-
-   Email: jeff.bouquier@vodafone.com
 
 
 
@@ -1869,10 +1883,10 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-   Daniele Ceccarelli
-   Ericsson
+Peruzzini et al.      Expires December 17, 2020               [Page 35]
+
+Internet-Draft                 ACTN POI                       June 2020
 
-   Email: daniele.ceccarelli@ericsson.com
 
 
 
@@ -1883,9 +1897,6 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-Peruzzini et al.      Expires September 9, 2020               [Page 35]
-
-Internet-Draft                 ACTN POI                      March 2020
 
 
 
@@ -1926,16 +1937,5 @@ Internet-Draft                 ACTN POI                      March 2020
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Peruzzini et al.      Expires September 9, 2020               [Page 36]
+Peruzzini et al.      Expires December 17, 2020               [Page 36]
 
