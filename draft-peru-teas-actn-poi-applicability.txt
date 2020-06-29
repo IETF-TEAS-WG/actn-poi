@@ -1,7 +1,7 @@
 TEAS Working Group                                      Fabio Peruzzini
 Internet Draft                                                      TIM
 Intended status: Informational                   Jean-Francois Bouquier
-                                                               Vodafone
+                                                                Vodafone
                                                              Italo Busi
                                                                  Huawei
                                                             Daniel King
@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: December 2020                                    June 17, 2020
+Expires: December 2020                                    June 29, 2020
 
 
 
@@ -17,7 +17,7 @@ Expires: December 2020                                    June 17, 2020
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-                 draft-peru-teas-actn-poi-applicability-04
+                 draft-peru-teas-actn-poi-applicability-05
 
 
 Status of this Memo
@@ -41,7 +41,7 @@ Status of this Memo
    The list of Internet-Draft Shadow Directories can be accessed at
    http://www.ietf.org/shadow.html
 
-   This Internet-Draft will expire on September 17, 2020.
+   This Internet-Draft will expire on December 29, 2020.
 
 
 
@@ -49,7 +49,7 @@ Status of this Memo
 
 
 
-Peruzzini et al.      Expires December 17, 2020                [Page 1]
+Peruzzini et al.      Expires December 29, 2020                [Page 1]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -85,25 +85,25 @@ Table of Contents
 
 
    1. Introduction...................................................3
-   2. Reference Scenario.............................................4
+   2. Reference Scenario.............................................5
       2.1. Generic Assumptions.......................................6
    3. Multi-Layer Topology Coordination..............................7
       3.1. Discovery of existing Och, ODU, IP links, IP tunnels and IP
       services.......................................................7
          3.1.1. Common YANG Models used at the MPI...................8
             3.1.1.1. YANG models used at the Optical MPIs............8
-            3.1.1.2. Required YANG models at the Packet MPIs.........8
+            3.1.1.2. Required YANG models at the Packet MPIs.........9
          3.1.2. Inter-domain link Discovery..........................9
       3.2. Provisioning of an IP Link/LAG over DWDM.................10
          3.2.1. YANG models used at the MPIs........................10
             3.2.1.1. YANG models used at the Optical MPIs...........10
             3.2.1.2. Required YANG models at the Packet MPIs........11
-         3.2.2. IP Link Setup Procedure.............................11
+         3.2.2. IP Link Setup Procedure.............................12
 
 
 
 
-Peruzzini et al.      Expires December 17, 2020                [Page 2]
+Peruzzini et al.      Expires December 29, 2020                [Page 2]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -135,8 +135,9 @@ Internet-Draft                 ACTN POI                       June 2020
    9. References....................................................31
       9.1. Normative References.....................................31
       9.2. Informative References...................................32
-   10. Acknowledgments..............................................34
-   11. Authors' Addresses...........................................34
+   Acknowledgments..................................................34
+   Contributors.....................................................34
+   Authors' Addresses...............................................35
 
 1. Introduction
 
@@ -153,15 +154,15 @@ Internet-Draft                 ACTN POI                       June 2020
    dealing with physical impairments in DWDM, or very different time
    scales). In addition, customers and customer needs vary between a
    packet and an optical network, and it is not uncommon to use
-   different vendors in both domains. Last but not least, state-of-the-
 
 
 
-Peruzzini et al.      Expires December 17, 2020                [Page 3]
+Peruzzini et al.      Expires December 29, 2020                [Page 3]
 
 Internet-Draft                 ACTN POI                       June 2020
 
 
+   different vendors in both domains. Last but not least, state-of-the-
    art packet and optical networks use sophisticated but complex
    technologies, and for a network engineer, it may not be trivial to
    be a full expert in both areas. As a result, packet and optical
@@ -203,18 +204,23 @@ Internet-Draft                 ACTN POI                       June 2020
    integration between IP and optical DWDM domain, in an end-to-end
    multi-vendor network.
 
+
+
+
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 4]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
 2. Reference Scenario
 
    This document uses "Reference Scenario 1" with multiple Optical
    domains and multiple Packet domains. The following Figure 1 shows
    this scenario in case of two Optical domains and two Packet domains:
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 4]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
 
                               +----------+
@@ -255,6 +261,15 @@ Internet-Draft                 ACTN POI                       June 2020
    interface (MPI) permits MDSC to interact with the different
    Provisioning Network Controller (O/P-PNCs).
 
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 5]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    The MPI interface presents an abstracted topology to MDSC hiding
    technology-specific aspects of the network and hiding topology
    details depending on the policy chosen regarding the level of
@@ -262,13 +277,6 @@ Internet-Draft                 ACTN POI                       June 2020
    based on P-PNC and O-PNC configuration parameters (e.g. provide the
    potential connectivity between any PE and any ABSR in an MPLS-TE
    network).
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 5]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    The MDSC in Figure 1 is responsible for multi-domain and multi-layer
    coordination across multiple Packet and Optical domains, as well as
@@ -307,6 +315,15 @@ Internet-Draft                 ACTN POI                       June 2020
    The data models used on these interfaces are assumed to use the YANG
    1.1 Data Modeling Language, as defined in [RFC7950].
 
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 6]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    The RESTCONF protocol, as defined in [RFC8040], using the JSON
    representation, defined in [RFC7951], is assumed to be used at these
    interfaces.
@@ -314,15 +331,6 @@ Internet-Draft                 ACTN POI                       June 2020
    As required in [RFC8040], the "ietf-yang-library" YANG module
    defined in [RFC8525] is used to allow the MDSC to discover the set
    of YANG modules supported by each PNC at its MPI.
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 6]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
 3. Multi-Layer Topology Coordination
 
@@ -359,6 +367,17 @@ Internet-Draft                 ACTN POI                       June 2020
 
    o  An abstract view of the WDM and IP topology must be available;
 
+
+
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 7]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    o  MDSC must keep an up-to-date network inventory of both IP and WDM
       layers, and it should be possible to correlate such information
       (e.g., which port, lambda/OTSi, the direction it is used by a
@@ -366,17 +385,6 @@ Internet-Draft                 ACTN POI                       June 2020
 
    o  It should be possible at MDSC level to easily correlate WDM and
       IP layers alarms to speed-up troubleshooting.
-
-
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 7]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
 3.1.1. Common YANG Models used at the MPI
 
@@ -417,20 +425,18 @@ Internet-Draft                 ACTN POI                       June 2020
    The Ethernet Topology Model is used to report the Ethernet access
    links on the edge ROADMs.
 
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 8]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
 3.1.1.2. Required YANG models at the Packet MPIs
 
    The Packet PNC also uses at least the following technology-specific
    topology YANG models, providing IP and Ethernet technology-specific
    augmentations of the generic Topology Models:
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 8]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    o  The L3 Topology Model, defined in the "ietf-l3-unicast-topology"
       YANG modules of [RFC8346], which augments the Base Network
@@ -472,19 +478,20 @@ Internet-Draft                 ACTN POI                       June 2020
 
    The MDSC can understand how to merge these inter-domain Ethernet
    links together using the plug-id attribute defined in the TE
+
+
+
+Peruzzini et al.      Expires December 29, 2020                [Page 9]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    Topology Model [TE-TOPO], as described in as described in section
    4.3 of [TE-TOPO].
 
    A more detailed description of how the plug-id can be used to
    discover inter-domain link is also provided in section 5.1.4 of
    [TNBI].
-
-
-
-Peruzzini et al.      Expires December 17, 2020                [Page 9]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    Both types of inter-domain Ethernet links are discovered using the
    plug-id attributes reported in the Ethernet Topologies exposed by
@@ -525,6 +532,14 @@ Internet-Draft                 ACTN POI                       June 2020
 
    The optical PNC uses at least the following YANG models:
 
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 10]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    o  The TE Tunnel Model, defined in the "ietf-te" YANG module of
       [TE-TUNNEL]
 
@@ -532,13 +547,6 @@ Internet-Draft                 ACTN POI                       June 2020
       modules of [WSON-TUNNEL], or the Flexi-grid Media Channel Model,
       defined in the "ietf-flexi-grid-media-channel" YANG module of
       [Flexi-MC]
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 10]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    o  The Ethernet Client Signal Model, defined in the "ietf-eth-tran-
       service" YANG module of [CLIENT-SIGNAL]
@@ -577,6 +585,15 @@ Internet-Draft                 ACTN POI                       June 2020
    automatically discovered by the P-PNC, the IP Topology is needed
    only to report these IP Links after being discovered by the P-PNC.
 
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 11]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    The IP Topology can also be used to configure the IP Links created
    over DWDM.
 
@@ -585,14 +602,6 @@ Internet-Draft                 ACTN POI                       June 2020
    The MDSC requires the O-PNC to setup a WDM Tunnel (either a WSON
    Tunnel or a Flexi-grid Tunnel) within the DWDM network between the
    two Optical Transponders (OTs) associated with the two access links.
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 11]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    The Optical Transponders are reported by the O-PNC as Trail
    Termination Points (TTPs), defined in [TE-TOPO], within the WDM
@@ -629,6 +638,16 @@ Internet-Draft                 ACTN POI                       June 2020
    links) to have the right low latency constraint fulfilled end-to-end
    across domains.
 
+
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 12]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    MDSC must be able to automatically create two IP links between two
    routers, over DWDM network, with physical path diversity (avoiding
    SRLGs communicated by O-PNCs to the MDSC).
@@ -639,14 +658,6 @@ Internet-Draft                 ACTN POI                       June 2020
 
    Optical connectivity must be set up accordingly by MDSC through O-
    PNCs.
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 12]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
 3.3.1. YANG models used at the MPIs
 
@@ -683,24 +694,20 @@ Internet-Draft                 ACTN POI                       June 2020
    the routers and in the ROADM muxponder board at both ends as back-up
    ports to recover any other port failure on client-side of the ROADM
    (either on router port side or on muxponder side or on the link
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 13]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    between them). When client-side port failure occurs, alarms are
    raised to MDSC by IP-PNC and O-PNC (port status down, LOS etc.).
    MDSC checks with OP-PNC(s) that there is no optical failure in the
    optical layer.
 
    There can be two cases here:
-
-
-
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 13]
-
-Internet-Draft                 ACTN POI                       June 2020
-
 
    a) LAG was defined between the two end routers. MDSC, after checking
       that optical layer is fine between the two end ROADMs, triggers
@@ -742,20 +749,19 @@ Internet-Draft                 ACTN POI                       June 2020
    lee-teas-actn-poi-applicability-00 and need to be reconciled with
    the other sections (the introduction in particular) of this document
 
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 14]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    This section provides a number of deployment scenarios for packet
    and optical integration (POI). Specifically, this section provides a
    deployment scenario in which ACTN hierarchy is deployed to control a
    multi-layer and multi-domain network via two IP/MPLS PNCs and two
    Optical PNCs with coordination with L-MDSC. This scenario is in the
    context of an upper layer service configuration (e.g. L3VPN) across
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 14]
-
-Internet-Draft                 ACTN POI                       June 2020
-
-
    two AS domains which are transported by two transport underlay
    domains (e.g. OTN).
 
@@ -799,13 +805,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 15]
+Peruzzini et al.      Expires December 29, 2020               [Page 15]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -859,7 +859,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 16]
+Peruzzini et al.      Expires December 29, 2020               [Page 16]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -913,7 +913,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 17]
+Peruzzini et al.      Expires December 29, 2020               [Page 17]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -967,7 +967,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 18]
+Peruzzini et al.      Expires December 29, 2020               [Page 18]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1021,7 +1021,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 19]
+Peruzzini et al.      Expires December 29, 2020               [Page 19]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1075,7 +1075,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 20]
+Peruzzini et al.      Expires December 29, 2020               [Page 20]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1129,7 +1129,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 21]
+Peruzzini et al.      Expires December 29, 2020               [Page 21]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1183,7 +1183,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 22]
+Peruzzini et al.      Expires December 29, 2020               [Page 22]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1237,7 +1237,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 23]
+Peruzzini et al.      Expires December 29, 2020               [Page 23]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1291,7 +1291,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 24]
+Peruzzini et al.      Expires December 29, 2020               [Page 24]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1343,7 +1343,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 25]
+Peruzzini et al.      Expires December 29, 2020               [Page 25]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1397,7 +1397,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 26]
+Peruzzini et al.      Expires December 29, 2020               [Page 26]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1451,7 +1451,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 27]
+Peruzzini et al.      Expires December 29, 2020               [Page 27]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1505,7 +1505,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 28]
+Peruzzini et al.      Expires December 29, 2020               [Page 28]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1559,7 +1559,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 29]
+Peruzzini et al.      Expires December 29, 2020               [Page 29]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1613,7 +1613,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 30]
+Peruzzini et al.      Expires December 29, 2020               [Page 30]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1667,7 +1667,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 31]
+Peruzzini et al.      Expires December 29, 2020               [Page 31]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1721,7 +1721,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 32]
+Peruzzini et al.      Expires December 29, 2020               [Page 32]
 
 Internet-Draft                 ACTN POI                       June 2020
 
@@ -1775,64 +1775,21 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 33]
+Peruzzini et al.      Expires December 29, 2020               [Page 33]
 
 Internet-Draft                 ACTN POI                       June 2020
 
 
 
 
-10. Acknowledgments
+Acknowledgments
 
    This document was prepared using 2-Word-v2.0.template.dot.
 
    Some of this analysis work was supported in part by the European
    Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).
 
-11. Authors' Addresses
-
-   Fabio Peruzzini
-   TIM
-
-   Email: fabio.peruzzini@telecomitalia.it
-
-
-   Jean-Francois Bouquier
-   Vodafone
-
-   Email: jeff.bouquier@vodafone.com
-
-
-
-   Italo Busi
-   Huawei
-
-   Email: Italo.busi@huawei.com
-
-
-
-   Daniel King
-   Old Dog Consulting
-
-   Email: daniel@olddog.co.uk
-
-
-
-   Daniele Ceccarelli
-   Ericsson
-
-   Email: daniele.ceccarelli@ericsson.com
-
-
-
-
-
-
-
-Peruzzini et al.      Expires December 17, 2020               [Page 34]
-
-Internet-Draft                 ACTN POI                       June 2020
-
+Contributors
 
    Sergio Belotti
    Nokia
@@ -1869,6 +1826,14 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 34]
+
+Internet-Draft                 ACTN POI                       June 2020
+
+
    Michael Scharf
    Hochschule Esslingen - University of Applied Sciences
 
@@ -1883,19 +1848,52 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 35]
+   Jeff Tantsura
+   Apstra
+
+   Email: jefftant.ietf@gmail.com
+
+Authors' Addresses
+
+   Fabio Peruzzini
+   TIM
+
+   Email: fabio.peruzzini@telecomitalia.it
+
+
+   Jean-Francois Bouquier
+   Vodafone
+
+   Email: jeff.bouquier@vodafone.com
+
+
+
+   Italo Busi
+   Huawei
+
+   Email: Italo.busi@huawei.com
+
+
+
+   Daniel King
+   Old Dog Consulting
+
+   Email: daniel@olddog.co.uk
+
+
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 35]
 
 Internet-Draft                 ACTN POI                       June 2020
 
 
 
 
-   Jeff Tantsura
-   Apstra
+   Daniele Ceccarelli
+   Ericsson
 
-   Email: jefftant.ietf@gmail.com
-
-
+   Email: daniele.ceccarelli@ericsson.com
 
 
 
@@ -1937,5 +1935,7 @@ Internet-Draft                 ACTN POI                       June 2020
 
 
 
-Peruzzini et al.      Expires December 17, 2020               [Page 36]
+
+
+Peruzzini et al.      Expires December 29, 2020               [Page 36]
 
