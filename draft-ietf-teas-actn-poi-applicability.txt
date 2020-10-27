@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: April 2021                                    October 20, 2020
+Expires: April 2021                                    October 27, 2020
 
 
 
@@ -50,7 +50,7 @@ Status of this Memo
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 1]
+Peruzzini et al.        Expires April 27, 2021                 [Page 1]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -84,17 +84,14 @@ Abstract
    the MPI (Multi-Domain Service Coordinator to Provisioning Network
    Controllers Interface)in the ACTN architecture.
 
-
-
 Table of Contents
-
 
    1. Introduction...................................................3
    2. Reference architecture and network scenario....................4
       2.1. L2/L3VPN Service Request in North Bound of MDSC...........8
       2.2. Service and Network Orchestration........................10
          2.2.1. Hard Isolation......................................12
-         2.2.2. Shared Tunnel Selection.............................12
+         2.2.2. Shared Tunnel Selection.............................13
       2.3. IP/MPLS Domain Controller and NE Functions...............13
       2.4. Optical Domain Controller and NE Functions...............15
    3. Interface protocols and YANG data models for the MPIs.........15
@@ -102,31 +99,32 @@ Table of Contents
       3.2. YANG data models at the MPIs.............................16
          3.2.1. Common YANG data models at the MPIs.................16
          3.2.2. YANG models at the Optical MPIs.....................16
-         3.2.3. YANG data models at the Packet MPIs.................17
+         3.2.3. YANG data models at the Packet MPIs.................18
+   4. Multi-layer and multi-domain services scenarios...............19
+      4.1. Scenario 1: network and service topology discovery.......19
+         4.1.1. Inter-domain link discovery.........................20
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 2]
+Peruzzini et al.        Expires April 27, 2021                 [Page 2]
 
 Internet-Draft                 ACTN POI                    October 2020
 
 
-   4. Multi-layer and multi-domain services scenarios...............18
-      4.1. Scenario 1: network and service topology discovery.......18
-         4.1.1. Inter-domain link discovery.........................19
-      4.2. L2VPN/L3VPN establishment................................20
-   5. Security Considerations.......................................21
-   6. Operational Considerations....................................21
-   7. IANA Considerations...........................................21
-   8. References....................................................21
-      8.1. Normative References.....................................21
-      8.2. Informative References...................................23
-   Appendix A.    Multi-layer and multi-domain resiliency...........25
-      A.1.  Maintenance Window......................................25
-      A.2.  Router port failure.....................................25
-   Acknowledgments..................................................26
-   Contributors.....................................................26
-   Authors' Addresses...............................................27
+         4.1.2. IP Link Setup Procedure.............................21
+      4.2. L2VPN/L3VPN establishment................................22
+   5. Security Considerations.......................................22
+   6. Operational Considerations....................................23
+   7. IANA Considerations...........................................23
+   8. References....................................................23
+      8.1. Normative References.....................................23
+      8.2. Informative References...................................24
+   Appendix A.    Multi-layer and multi-domain resiliency...........27
+      A.1.  Maintenance Window......................................27
+      A.2.  Router port failure.....................................27
+   Acknowledgments..................................................28
+   Contributors.....................................................28
+   Authors' Addresses...............................................29
 
 1. Introduction
 
@@ -159,15 +157,16 @@ Internet-Draft                 ACTN POI                    October 2020
    packet and an optical network, and it is not uncommon to use
    different vendors in both domains. Last but not least, state-of-the-
    art packet and optical networks use sophisticated but complex
+   technologies, and for a network engineer it may not be trivial to be
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 3]
+
+Peruzzini et al.        Expires April 27, 2021                 [Page 3]
 
 Internet-Draft                 ACTN POI                    October 2020
 
 
-   technologies, and for a network engineer it may not be trivial to be
    a full expert in both areas. As a result, packet and optical
    networks are often operated in technical and organizational silos.
 
@@ -205,10 +204,6 @@ Internet-Draft                 ACTN POI                    October 2020
    and Optical DWDM domain (and optionally OTN layer), in an end-to-end
    multi-vendor service provisioning perspective.
 
-
-
-
-
 2. Reference architecture and network scenario
 
    This document analyses a number of deployment scenarios for Packet
@@ -218,11 +213,14 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 4]
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                 [Page 4]
 
 Internet-Draft                 ACTN POI                    October 2020
-
-
 
 
 
@@ -271,16 +269,16 @@ Internet-Draft                 ACTN POI                    October 2020
    interface (MPI) permits MDSC to interact with the different
    Provisioning Network Controller (O/P-PNCs).
 
+   The MPI interface presents an abstracted topology to MDSC hiding
+   technology-specific aspects of the network and hiding topology
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 5]
+Peruzzini et al.        Expires April 27, 2021                 [Page 5]
 
 Internet-Draft                 ACTN POI                    October 2020
 
 
-   The MPI interface presents an abstracted topology to MDSC hiding
-   technology-specific aspects of the network and hiding topology
    details depending on the policy chosen regarding the level of
    abstraction supported. The level of abstraction can be obtained
    based on P-PNC and O-PNC configuration parameters (e.g. provide the
@@ -327,16 +325,16 @@ Internet-Draft                 ACTN POI                    October 2020
    Although the new technologies (e.g. QSFP-DD ZR 400G) are making
    convenient to fit the DWDM pluggable interfaces on the Routers, the
    deployment of those pluggable is not yet widely adopted by the
+   operators. The reason is that most of operators are not yet ready to
+   manage Packet and Transport networks in a unified single domain. As
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 6]
+Peruzzini et al.        Expires April 27, 2021                 [Page 6]
 
 Internet-Draft                 ACTN POI                    October 2020
 
 
-   operators. The reason is that most of operators are not yet ready to
-   manage Packet and Transport networks in a unified single domain. As
    a consequence, this draft is not addressing the unified scenario.
    This matter will be described in a different draft.
 
@@ -386,7 +384,9 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 7]
+
+
+Peruzzini et al.        Expires April 27, 2021                 [Page 7]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -442,7 +442,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 8]
+Peruzzini et al.        Expires April 27, 2021                 [Page 8]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -498,7 +498,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                 [Page 9]
+Peruzzini et al.        Expires April 27, 2021                 [Page 9]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -554,7 +554,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 10]
+Peruzzini et al.        Expires April 27, 2021                [Page 10]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -610,7 +610,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 11]
+Peruzzini et al.        Expires April 27, 2021                [Page 11]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -666,7 +666,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 12]
+Peruzzini et al.        Expires April 27, 2021                [Page 12]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -722,7 +722,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 13]
+Peruzzini et al.        Expires April 27, 2021                [Page 13]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -778,7 +778,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 14]
+Peruzzini et al.        Expires April 27, 2021                [Page 14]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -834,7 +834,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 15]
+Peruzzini et al.        Expires April 27, 2021                [Page 15]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -890,7 +890,7 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 16]
+Peruzzini et al.        Expires April 27, 2021                [Page 16]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -899,17 +899,16 @@ Internet-Draft                 ACTN POI                    October 2020
       modules of [WSON-TOPO], or the Flexi-grid Topology Model, defined
       in the "ietf-flexi-grid-topology" YANG module of [Flexi-TOPO].
 
-   o  Optionally the OTN Topology Model, defined in the "ietf-otn-
-      topology" YANG module of the draft draft-ietf-ccamp-otn-topo-
-      yang-10 [OTN-TOPO]
+   o  Optionally, when the OTN layer is used, the OTN Topology Model,
+      as defined in the "ietf-otn-topology" YANG module of [OTN-TOPO].
 
    o  The Ethernet Topology Model, defined in the "ietf-eth-te-
-      topology" YANG module of [CLIENT-TOPO]
+      topology" YANG module of [CLIENT-TOPO].
 
-   o  Optionally when OTN layer is used, the network data model for L1
-      OTN services (e.g. an Ethernet transparent service) as defined in
-      "ietf-trans-client-service" YANG module of draft-ietf-ccamp-
-      client-signal-yang [CLIENT-SIGNAL]
+   o  Optionally, when the OTN layer is used, the network data model
+      for L1 OTN services (e.g. an Ethernet transparent service) as
+      defined in "ietf-trans-client-service" YANG module of draft-ietf-
+      ccamp-client-signal-yang [CLIENT-SIGNAL].
 
    o  The WSON Topology Model or, alternatively, the Flexi-grid
       Topology model is used to report the DWDM network topology (e.g.,
@@ -919,8 +918,46 @@ Internet-Draft                 ACTN POI                    October 2020
    The Ethernet Topology is used to report the access links between the
    IP routers and the edge ROADMs.
 
-   [Editor's note:] Add YANG models used for tunnel and service
-   configuration.
+   The optical PNC uses at least the following YANG models:
+
+   o  The TE Tunnel Model, defined in the "ietf-te" YANG module of
+      [TE-TUNNEL]
+
+   o  The WSON Tunnel Model, defined in the "ietf-wson-tunnel" YANG
+      modules of [WSON-TUNNEL], or the Flexi-grid Media Channel Model,
+      defined in the "ietf-flexi-grid-media-channel" YANG module of
+      [Flexi-MC]
+
+   o  Optionally, when the OTN layer is used, the OTN Tunnel Model,
+      defined in the "ietf-otn-tunnel" YANG module of [OTN-TUNNEL].
+
+   o  The Ethernet Client Signal Model, defined in the "ietf-eth-tran-
+      service" YANG module of [CLIENT-SIGNAL].
+
+   The TE Tunnel model is generic and augmented by technology-specific
+   models such as the WSON Tunnel Model and the Flexi-grid Media
+   Channel Model.
+
+   The WSON Tunnel Model or, alternatively, the Flexi-grid Media
+   Channel Model are used to setup connectivity within the DWDM network
+   depending on whether the DWDM optical network is based on fixed grid
+   or flexible-grid.
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 17]
+
+Internet-Draft                 ACTN POI                    October 2020
+
+
+   The Ethernet Client Signal Model is used to configure the steering
+   of the Ethernet client traffic between Ethernet access links and TE
+   Tunnels, which in this case could be either WSON Tunnels or
+   Flexi-Grid Media Channels. This model is generic and applies to any
+   technology-specific TE Tunnel: technology-specific attributes are
+   provided by the technology-specific models which augment the generic
+   TE-Tunnel Model.
 
 3.2.3. YANG data models at the Packet MPIs
 
@@ -942,15 +979,6 @@ Internet-Draft                 ACTN POI                    October 2020
       topology" YANG module of [CLIENT-TOPO], which augments the TE
       Topology Model
 
-
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 17]
-
-Internet-Draft                 ACTN POI                    October 2020
-
-
    The Ethernet Topology Model is used to report the access links
    between the IP routers and the edge ROADMs as well as the
    inter-domain links between ASBRs, while the L3 Topology Model is
@@ -969,6 +997,15 @@ Internet-Draft                 ACTN POI                    October 2020
    o  L3VPN network data model defined in "ietf-l3vpn-ntw" module of
       draft-ietf-opsawg-l3sm-l3nm [L3NM] used for non-ACTN MPI for
       L3VPN service provisioning
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 18]
+
+Internet-Draft                 ACTN POI                    October 2020
+
 
    o  L2VPN network data model defined in "ietf-l2vpn-ntw" module of
       draft-ietf-barguil-opsawg-l2sm-l2nm [L2NM] used for non-ACTN MPI
@@ -999,14 +1036,6 @@ Internet-Draft                 ACTN POI                    October 2020
 
    Each PNC provides to the MDSC an abstracted or full topology view of
    the WDM or the IP topology of the domain it controls. This topology
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 18]
-
-Internet-Draft                 ACTN POI                    October 2020
-
-
    can be abstracted in the sense that some detailed NE information is
    hidden at the MPI, and all or some of the NEs and related physical
    links are exposed as abstract nodes and logical (virtual) links,
@@ -1022,6 +1051,17 @@ Internet-Draft                 ACTN POI                    October 2020
    occurs. It should be possible also to correlate information coming
    from IP and WDM layers (e.g.: which port, lambda/OTSi, direction is
    used by a specific IP service on the WDM equipment)
+
+
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 19]
+
+Internet-Draft                 ACTN POI                    October 2020
+
 
    In particular, For the cross-layer links it is key for MDSC to be
    able to correlate automatically the information from the PNC network
@@ -1056,13 +1096,6 @@ Internet-Draft                 ACTN POI                    October 2020
    This document considers the following two options for discovering
    inter-domain links:
 
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 19]
-
-Internet-Draft                 ACTN POI                    October 2020
-
-
    1. Static configuration
 
    2. LLDP [IEEE 802.1AB] automatic discovery
@@ -1077,6 +1110,14 @@ Internet-Draft                 ACTN POI                    October 2020
    A more detailed description of how the plug-id can be used to
    discover inter-domain link is also provided in section 5.1.4 of
    [TNBI].
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 20]
+
+Internet-Draft                 ACTN POI                    October 2020
+
 
    Both types of inter-domain links are discovered using the plug-id
    attributes reported in the Ethernet Topologies exposed by the two
@@ -1097,6 +1138,43 @@ Internet-Draft                 ACTN POI                    October 2020
    implementation specific and needs to be consistent across all the
    PNCs.
 
+4.1.2. IP Link Setup Procedure
+
+   The MDSC requires the O-PNC to setup a WDM Tunnel (either a WSON
+   Tunnel or a Flexi grid Tunnel) within the DWDM network between the
+   two Optical Transponders (OTs) associated with the two access links.
+
+   The Optical Transponders are reported by the O-PNC as Trail
+   Termination Points (TTPs), defined in [TE TOPO], within the WDM
+   Topology. The association between the Ethernet access link and the
+   WDM TTP is reported by the Inter Layer Lock (ILL) identifiers,
+   defined in [TE TOPO], reported by the O PNC within the Ethernet
+   Topology and WDM Topology.
+
+   The MDSC also requires the O-PNC to steer the Ethernet client
+   traffic between the two access Ethernet Links over the WDM Tunnel.
+
+   After the WDM Tunnel has been setup and the client traffic steering
+   configured, the two IP routers can exchange Ethernet packets between
+   themselves, including LLDP messages.
+
+   If LLDP [IEEE 802.1AB] is used between the two routers, the P PNC
+   can automatically discover the IP Link being set up by the MDSC. The
+   IP LTPs terminating this IP Link are supported by the ETH LTPs
+   terminating the two access links.
+
+   Otherwise, the MDSC needs to require the P PNC to configure an IP
+   Link between the two routers: the MDSC also configures the two ETH
+   LTPs which support the two IP LTPs terminating this IP Link.
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 21]
+
+Internet-Draft                 ACTN POI                    October 2020
+
+
 4.2. L2VPN/L3VPN establishment
 
    To be added
@@ -1110,46 +1188,48 @@ Internet-Draft                 ACTN POI                    October 2020
    destination PE and the mapping to a tunnel (either an LDP or a BGP
    tunnel) toward the destination PE is done by automatically without
    any configuration. It is to be determined the impact on the PE VRF
-
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 20]
-
-Internet-Draft                 ACTN POI                    October 2020
-
-
    operation when the tunnel is an optical bypass tunnel which does not
    participate either LDP or BGP.
 
    New text to answer the yellow part:
 
    The MDSC Network-related function will then coordinate with the PNCs
-      involved in the process to provide the provisioning information
-      through ACTN MDSC to PNC (MPI) interface. The relevant data
-      models used at the MPI may be in the form of L3NM, L2NM or others
-      and are exchanged through MPI API calls. Through this process
-      MDSC Network-related functions provide the configuration
-      information to realize a VPN service to PNCs. For example, this
-      process will inform PNCs on what PE routers compose a L3VPN, the
-      topology requested, the VPN attributes, etc.
+   involved in the process to provide the provisioning information
+   through ACTN MDSC to PNC (MPI) interface. The relevant data models
+   used at the MPI may be in the form of L3NM, L2NM or others and are
+   exchanged through MPI API calls. Through this process MDSC Network-
+   related functions provide the configuration information to realize a
+   VPN service to PNCs. For example, this process will inform PNCs on
+   what PE routers compose a L3VPN, the topology requested, the VPN
+   attributes, etc.
 
    At the end of the process PNCs will deliver the actual configuration
-      to the devices (either physical or virtual), through the ACTN
-      Southbound Interface (SBI). In this case the configuration
-      policies may be exchanged using a Netconf session delivering
-      configuration commands associated to device-specific data models
-      (e.g. BGP[], QOS [], etc.).
+   to the devices (either physical or virtual), through the ACTN
+   Southbound Interface (SBI). In this case the configuration policies
+   may be exchanged using a Netconf session delivering configuration
+   commands associated to device-specific data models (e.g. BGP[], QOS
+   [], etc.).
 
    Having the topology information of the network domains under their
-      control, PNCs will deliver all the information necessary to
-      create, update, optimize or delete the tunnels connecting the PE
-      nodes as requested by the VPN instantiation.
+   control, PNCs will deliver all the information necessary to create,
+   update, optimize or delete the tunnels connecting the PE nodes as
+   requested by the VPN instantiation.
 
 5. Security Considerations
 
    Several security considerations have been identified and will be
    discussed in future versions of this document.
+
+
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 22]
+
+Internet-Draft                 ACTN POI                    October 2020
+
 
 6. Operational Considerations
 
@@ -1161,19 +1241,6 @@ Internet-Draft                 ACTN POI                    October 2020
 7. IANA Considerations
 
    This document requires no IANA actions.
-
-
-
-
-
-
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 21]
-
-Internet-Draft                 ACTN POI                    October 2020
-
 
 8. References
 
@@ -1210,8 +1277,22 @@ Internet-Draft                 ACTN POI                    October 2020
              Switched Optical Networks)", draft-ietf-ccamp-wson-yang,
              work in progress.
 
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 23]
+
+Internet-Draft                 ACTN POI                    October 2020
+
+
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
+             yang, work in progress.
+
+   [OTN-TOPO] Zheng, H. et al., "A YANG Data Model for Optical
+             Transport Network Topology", draft-ietf-ccamp-otn-topo-
              yang, work in progress.
 
    [CLIENT-TOPO]  Zheng, H. et al., "A YANG Data Model for Client-layer
@@ -1221,15 +1302,6 @@ Internet-Draft                 ACTN POI                    October 2020
    [L3-TE-TOPO]   Liu, X. et al., "YANG Data Model for Layer 3 TE
              Topologies", draft-ietf-teas-yang-l3-te-topo, work in
              progress.
-
-
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 22]
-
-Internet-Draft                 ACTN POI                    October 2020
-
 
    [TE-TUNNEL] Saad, T. et al., "A YANG Data Model for Traffic
              Engineering Tunnels and Interfaces", draft-ietf-teas-yang-
@@ -1241,6 +1313,9 @@ Internet-Draft                 ACTN POI                    October 2020
    [Flexi-MC]  Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
              media-channel-yang, work in progress.
+
+   [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
+             ietf-ccamp-otn-tunnel-model, work in progress.
 
    [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport
              Network Client Signals", draft-ietf-ccamp-client-signal-
@@ -1259,6 +1334,15 @@ Internet-Draft                 ACTN POI                    October 2020
              Service (VPLS) Using BGP for Auto-Discovery and
              Signaling", RFC 4761, January 2007.
 
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 24]
+
+Internet-Draft                 ACTN POI                    October 2020
+
+
    [RFC6074] E. Rosen, B. Davie, V. Radoaca, and W. Luo, "Provisioning,
              Auto-Discovery, and Signaling in Layer 2 Virtual Private
              Networks (L2VPNs)", RFC 6074, January 2011.
@@ -1276,16 +1360,6 @@ Internet-Draft                 ACTN POI                    October 2020
 
    [RFC7436] H. Shah, E. Rosen, F. Le Faucheur, and G. Heron, "IP-Only
              LAN Service (IPLS)", RFC 7436, January 2015.
-
-
-
-
-
-
-Peruzzini et al.        Expires April 20, 2021                [Page 23]
-
-Internet-Draft                 ACTN POI                    October 2020
-
 
    [RFC8214] S. Boutros, A. Sajassi, S. Salam, J. Drake, and J.
              Rabadan, "Virtual Private Wire Service Support in Ethernet
@@ -1318,6 +1392,13 @@ Internet-Draft                 ACTN POI                    October 2020
              Yang Model", draft-ietf-teas-te-service-mapping-yang, work
              in progress.
 
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 25]
+
+Internet-Draft                 ACTN POI                    October 2020
+
+
    [ACTN-PM] Y. Lee, et al., "YANG models for VN & TE Performance
              Monitoring Telemetry and Scaling Intent Autonomics",
              draft-lee-teas-actn-pm-telemetry-autonomics, work in
@@ -1338,7 +1419,38 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 24]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peruzzini et al.        Expires April 27, 2021                [Page 26]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -1394,7 +1506,7 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 25]
+Peruzzini et al.        Expires April 27, 2021                [Page 27]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -1450,7 +1562,7 @@ Contributors
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 26]
+Peruzzini et al.        Expires April 27, 2021                [Page 28]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -1506,7 +1618,7 @@ Authors' Addresses
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 27]
+Peruzzini et al.        Expires April 27, 2021                [Page 29]
 
 Internet-Draft                 ACTN POI                    October 2020
 
@@ -1562,5 +1674,5 @@ Internet-Draft                 ACTN POI                    October 2020
 
 
 
-Peruzzini et al.        Expires April 20, 2021                [Page 28]
+Peruzzini et al.        Expires April 27, 2021                [Page 30]
 
