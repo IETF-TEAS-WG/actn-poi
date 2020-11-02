@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: March 2021                                  September 29, 2020
+Expires: May 2021                                      November 2, 2020
 
 
 
@@ -41,7 +41,7 @@ Status of this Memo
    The list of Internet-Draft Shadow Directories can be accessed at
    http://www.ietf.org/shadow.html
 
-   This Internet-Draft will expire on March 29, 2021.
+   This Internet-Draft will expire on April 9, 2021.
 
 
 
@@ -50,9 +50,9 @@ Status of this Memo
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 1]
+Peruzzini et al.         Expires May 2, 2021                   [Page 1]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
 Copyright Notice
@@ -84,47 +84,47 @@ Abstract
    the MPI (Multi-Domain Service Coordinator to Provisioning Network
    Controllers Interface)in the ACTN architecture.
 
-
-
 Table of Contents
-
 
    1. Introduction...................................................3
    2. Reference architecture and network scenario....................4
-      2.1. Generic Assumptions.......................................8
-      2.2. L2/L3VPN Service Request in North Bound of MDSC...........8
-      2.3. Service and Network Orchestration........................10
-         2.3.1. Hard Isolation......................................12
-         2.3.2. Shared Tunnel Selection.............................13
-      2.4. IP/MPLS Domain Controller and NE Functions...............13
-      2.5. Optical Domain Controller and NE Functions...............15
-   3. Multi-layer and multi-domain services scenarios...............15
-      3.1. Scenario 1: network and service topology discovery.......15
-         3.1.1. Common YANG models used at MPIs.....................16
-         3.1.2. Required YANG models at the optical MPIs............17
-         3.1.3. Required YANG models at the Packet MPIs.............18
+      2.1. L2/L3VPN Service Request in North Bound of MDSC...........8
+      2.2. Service and Network Orchestration........................10
+         2.2.1. Hard Isolation......................................12
+         2.2.2. Shared Tunnel Selection.............................13
+      2.3. IP/MPLS Domain Controller and NE Functions...............13
+      2.4. Optical Domain Controller and NE Functions...............15
+   3. Interface protocols and YANG data models for the MPIs.........15
+      3.1. RESTCONF protocol at the MPIs............................15
+      3.2. YANG data models at the MPIs.............................16
+         3.2.1. Common YANG data models at the MPIs.................16
+         3.2.2. YANG models at the Optical MPIs.....................16
+         3.2.3. YANG data models at the Packet MPIs.................18
+   4. Multi-layer and multi-domain services scenarios...............19
+      4.1. Scenario 1: network and service topology discovery.......19
+         4.1.1. Inter-domain link discovery.........................20
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 2]
+Peruzzini et al.         Expires May 2, 2021                   [Page 2]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
-         3.1.4. Inter-domain link discovery.........................19
-      3.2. L2VPN/L3VPN establishment................................20
-   4. Security Considerations.......................................20
-   5. Operational Considerations....................................21
-   6. IANA Considerations...........................................21
-   7. References....................................................21
-      7.1. Normative References.....................................21
-      7.2. Informative References...................................22
-   Appendix A.    Multi-layer and multi-domain resiliency...........25
-      A.1.  Maintenance Window......................................25
-      A.2.  Router port failure.....................................25
-   Acknowledgments..................................................25
-   Contributors.....................................................25
-   Authors' Addresses...............................................26
+         4.1.2. IP Link Setup Procedure.............................21
+      4.2. L2VPN/L3VPN establishment................................22
+   5. Security Considerations.......................................22
+   6. Operational Considerations....................................23
+   7. IANA Considerations...........................................23
+   8. References....................................................23
+      8.1. Normative References.....................................23
+      8.2. Informative References...................................24
+   Appendix A.    Multi-layer and multi-domain resiliency...........27
+      A.1.  Maintenance Window......................................27
+      A.2.  Router port failure.....................................27
+   Acknowledgments..................................................28
+   Contributors.....................................................28
+   Authors' Addresses...............................................29
 
 1. Introduction
 
@@ -162,9 +162,9 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 3]
+Peruzzini et al.         Expires May 2, 2021                   [Page 3]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    a full expert in both areas. As a result, packet and optical
@@ -196,17 +196,13 @@ Internet-Draft                 ACTN POI                  September 2020
    disciplines. The focus of the scenarios are IP/MPLS networks
    operated as client of optical DWDM networks. The scenarios are
    ordered by increasing level of integration and complexity. For each
-   multi-layer use case, the document analyzes how to use the
+   multi-layer scenario, the document analyzes how to use the
    interfaces and data models of the ACTN architecture.
 
-   Understanding the level of standardization and the gaps will help to
-   better assess the feasibility of integration between IP and Optical
-   DWDM domain (and optionally OTN layer), in an end-to-end multi-
-   vendor service provisioning perspective.
-
-
-
-
+   Understanding the level of standardization and the possible gaps
+   will help to better assess the feasibility of integration between IP
+   and Optical DWDM domain (and optionally OTN layer), in an end-to-end
+   multi-vendor service provisioning perspective.
 
 2. Reference architecture and network scenario
 
@@ -218,11 +214,13 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 4]
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                   [Page 4]
 
-Internet-Draft                 ACTN POI                  September 2020
-
-
+Internet-Draft                 ACTN POI                   November 2020
 
 
 
@@ -263,40 +261,89 @@ Internet-Draft                 ACTN POI                  September 2020
 
    The routers between IP domains can be either AS Boundary Routers
    (ASBR) or Area Border Router (ABR): in this document the generic
-   term Border Router (BR) is used to represent either an ASBR or a BR.
+   term Border Router (BR) is used to represent either an ASBR or a
+   ABR.
 
    The MDSC is responsible for coordinating the whole multi-domain
    multi-layer (Packet and Optical) network. A specific standard
    interface (MPI) permits MDSC to interact with the different
    Provisioning Network Controller (O/P-PNCs).
 
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                 [Page 5]
-
-Internet-Draft                 ACTN POI                  September 2020
-
-
    The MPI interface presents an abstracted topology to MDSC hiding
    technology-specific aspects of the network and hiding topology
+
+
+
+Peruzzini et al.         Expires May 2, 2021                   [Page 5]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    details depending on the policy chosen regarding the level of
    abstraction supported. The level of abstraction can be obtained
    based on P-PNC and O-PNC configuration parameters (e.g. provide the
    potential connectivity between any PE and any BR in an MPLS-TE
    network).
 
+   In the network scenario of Figure 1, it is assumed that:
+
+   o  The domain boundaries between the IP and Optical domains are
+      congruent. In other words, one Optical domain supports
+      connectivity between Routers in one and only one Packet Domain;
+
+   o  Inter-domain links exist only between Packet domains (i.e.,
+      between BR routers) and between Packet and Optical domains (i.e.,
+      between routers and Optical NEs). In other words, there are no
+      inter-domain links between Optical domains;
+
+   o  The interfaces between the Routers and the Optical NEs are
+      "Ethernet" physical interfaces;
+
+   o  The interfaces between the Border Routers (BRs) are "Ethernet"
+      physical interfaces.
+
+   This version of the document assumes that the IP Link supported by
+   the Optical network are always intra-AS (PE-BR, intra-domain BR-BR,
+   PE-P, BR-P, or P-P) and that the BRs are co-located and connected by
+   an IP Link supported by an Ethernet physical link.
+
+   The possibility to setup inter-AS/inter-area IP Links (e.g.,
+   inter-domain BR-BR or PE-PE), supported by Optical network, is for
+   further study.
+
+   Therefore, if inter-domain links between the Optical domains exist,
+   they would be used to support multi-domain Optical services, which
+   are outside the scope of this document.
+
+   The Optical NEs within the optical domains can be ROADMs or OTN
+   switches, with or without a ROADM.
+
    The MDSC in Figure 1 is responsible for multi-domain and multi-layer
    coordination across multiple Packet and Optical domains, as well as
    to provide L2/L3VPN services.
+
+   Although the new technologies (e.g. QSFP-DD ZR 400G) are making
+   convenient to fit the DWDM pluggable interfaces on the Routers, the
+   deployment of those pluggable is not yet widely adopted by the
+   operators. The reason is that most of operators are not yet ready to
+   manage Packet and Transport networks in a unified single domain. As
+
+
+
+Peruzzini et al.         Expires May 2, 2021                   [Page 6]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
+   a consequence, this draft is not addressing the unified scenario.
+   This matter will be described in a different draft.
 
    From an implementation perspective, the functions associated with
    MDSC and described in [RFC8453] may be grouped in different ways.
 
    1. Both the service- and network-related functions are collapsed into
-     a single, monolithic implementation, dealing with the
-     virtualization of the customer requests, received from the CMI,
+     a single, monolithic implementation, dealing with the end customer
+     service requests, received from the CMI (Customer MDSC Interface),
      and the adaptation to the relevant network models. Such case is
      represented in Figure 2 of [RFC8453]
    2. An implementation can choose to split the service-related and the
@@ -319,8 +366,14 @@ Internet-Draft                 ACTN POI                  September 2020
    Please note that in current service provider's network deployments,
    at the North Bound of the MDSC, instead of a CNC, typically there is
    an OSS/Orchestration layer. In this case, the MDSC would implement
-   only the Network Orchestration functions, as described in point 2
-   above.
+   only the Network Orchestration functions, as in [RFC8309] and
+   described in point 2 above. In this case, the MDSC is dealing with
+   the network services requests received from the OSS/Orchestration
+   layer.
+
+   [Editors'note:] Check for a better term to define the network
+   services. It may be worthwhile defining what are the customer and
+   network services.
 
    The OSS/Orchestration layer is a key part of the architecture
    framework for a service provider:
@@ -330,14 +383,17 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 6]
+
+
+
+Peruzzini et al.         Expires May 2, 2021                   [Page 7]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    o  to coordinate NFV, Transport (e.g. IP, Optical and Microwave
       networks), Fixed Acess, Core and Radio domains enabling full
-      automation of end-to-end services
+      automation of end-to-end services to the end customers.
 
    o  to enable catalogue-driven service provisioning from external
       applications (e.g. Customer Portal for Enterprise Business
@@ -369,86 +425,30 @@ Internet-Draft                 ACTN POI                  September 2020
    Above two MDSC workflow cases are in the scope of this draft or in
    future versions.
 
-   In the network scenario of Figure 1, it is assumed that:
-
-   o  The domain boundaries between the IP and Optical domains are
-      congruent. In other words, one Optical domain supports
-      connectivity between Routers in one and only one Packet Domain;
-
-   o  Inter-domain links exist only between Packet domains (i.e.,
-      between BR routers) and between Packet and Optical domains (i.e.,
-      between routers and Optical NEs). In other words, there are no
-      inter-domain links between Optical domains;
-
-   o  The interfaces between the Routers and the Optical NEs are
-      "Ethernet" physical interfaces;
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                 [Page 7]
-
-Internet-Draft                 ACTN POI                  September 2020
-
-
-   o  The interfaces between the Border Routers (BRs) are "Ethernet"
-      physical interfaces.
-
-   This version of the document assumes that the IP Link supported by
-   the Optical network are always intra-AS (PE-BR, intra-domain BR-BR,
-   PE-P, BR-P, or P-P) and that the BRs are co-located and connected by
-   an IP Link supported by an Ethernet physical link.
-
-   The possibility to setup inter-AS/inter-area IP Links (e.g.,
-   inter-domain BR-BR or PE-PE), supported by Optical network, is for
-   further study.
-
-   Therefore, if inter-domain links between the Optical domains exist,
-   they would be used to support multi-domain Optical services, which
-   are outside the scope of this document.
-
-   The Optical NEs within the optical domains can be ROADMs or OTN
-   switches, with or without a ROADM.
-
-2.1. Generic Assumptions
-
-   This section describes general assumptions which are applicable at
-   all the MPI interfaces, between each PNC (Optical or Packet) and the
-   MDSC, and also to all the scenarios discussed in this document.
-
-   The data models used on these interfaces are assumed to use the YANG
-   1.1 Data Modeling Language, as defined in [RFC7950].
-
-   The RESTCONF protocol, as defined in [RFC8040], using the JSON
-   representation, defined in [RFC7951], is assumed to be used at these
-   interfaces. Extensions to RESTCONF, as defined in [RFC8527], to be
-   compliant with Network Management Datastore Architecture (NMDA)
-   defined in [RFC8342], are assumed to be used as well at these MPI
-   interfaces and also at CMI interfaces.
-
-   As required in [RFC8040], the "ietf-yang-library" YANG module
-   defined in [RFC8525] is used to allow the MDSC to discover the set
-   of YANG modules supported by each PNC at its MPI.
-
-2.2. L2/L3VPN Service Request in North Bound of MDSC
+2.1. L2/L3VPN Service Request in North Bound of MDSC
 
    As explained in section 2, the OSS/Orchestration layer can request
    the MDSC to setup of L2/L3VPN services (with or without TE
    requirements).
 
    Although the interface between the OSS/Orchestration layer is
-   usually operator-specific, Error! Reference source not found. shows
-   an example of a possible control flow between the OSS/Orchestration
+   usually operator-specific, ideally it would be using a RESTCONF/YANG
+   interface with more abstracted version of the MPI YANG data models
+   used for network configuration (e.g. L3NM, L2NM).
+
+   Figure 2 shows an example of a possible control flow between the
+   OSS/Orchestration layer and the MDSC to instantiate L2/L3VPN
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 8]
+
+Peruzzini et al.         Expires May 2, 2021                   [Page 8]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
-   layer and the MDSC to instantiate L2/L3VPN services, using the YANG
-   models under definition in [VN], [L2NM], [L3NM] and [TSM].
+   services, using the YANG models under definition in [VN], [L2NM],
+   [L3NM] and [TSM].
 
                +-------------------------------------------+
                |                                           |
@@ -498,9 +498,9 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                 [Page 9]
+Peruzzini et al.         Expires May 2, 2021                   [Page 9]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    o  The L3NM YANG model [L3NM], whose primary focus is the MPI, can
@@ -518,20 +518,20 @@ Internet-Draft                 ACTN POI                  September 2020
           requirement type as to how each L2/L3VPN/VN instance is
           created with respect to the underlay TE tunnels (e.g.,
           whether they require a new and isolated set of TE underlay
-          tunnels or not). See Section 2.3 for detailed discussion on
+          tunnels or not). See Section 2.2 for detailed discussion on
           the mapping requirement types.
 
        o Site mapping provides the site reference information across
           L2/L3VPN Site ID, VN Access Point ID, and the LTP of the
           access link.
 
-2.3. Service and Network Orchestration
+2.2. Service and Network Orchestration
 
    From a functional standpoint, MDSC represented in Figure 2
    interfaces with the OSS/Orchestration layer and decouples L2/L3VPN
    service configuration functions from network configuration
-   functions. Therfore in this document the MDSC performs the functions
-   of the Network Orchestrator, as defined in [RFC 8309].
+   functions. Therefore in this document the MDSC performs the
+   functions of the Network Orchestrator, as defined in [RFC 8309].
 
    One of the important MDSC functions is to identify which TE Tunnels
    should carry the L2/L3VPN traffic (e.g., from TE & Service Mapping
@@ -542,29 +542,29 @@ Internet-Draft                 ACTN POI                  September 2020
    TE binding requirement types [TSM] are:
 
    1. Hard Isolation with deterministic latency: The L2/L3VPN service
-     requires a set of dedicated TE Tunnels providing deterministic
-     latency performances and that cannot be not shared with other
-     services, nor compete for bandwidth with other Tunnels.
+      requires a set of dedicated TE Tunnels providing deterministic
+      latency performances and that cannot be not shared with other
+      services, nor compete for bandwidth with other Tunnels.
 
    2. Hard Isolation: This is similar to the above case without
-     deterministic latency requirements.
+      deterministic latency requirements.
 
 
 
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 10]
+Peruzzini et al.         Expires May 2, 2021                  [Page 10]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    3. Soft Isolation: The L2/L3VPN service requires a set of dedicated
-     MPLS-TE tunnels which cannot be shared with other services, but
-     which could compete for bandwidth with other Tunnels.
+      MPLS-TE tunnels which cannot be shared with other services, but
+      which could compete for bandwidth with other Tunnels.
 
    4. Sharing: The L2/L3VPN service allows sharing the MPLS-TE Tunnels
-     supporting it with other services.
+      supporting it with other services.
 
    For the first three types, there could be additional TE binding
    requirements with respect to different VN members of the same VN (on
@@ -574,7 +574,7 @@ Internet-Draft                 ACTN POI                  September 2020
    members can be soft-isolated or shared.
 
    In order to fulfill the the L2/L3VPN end-to-end TE requirements,
-   including the TE binding rquirements, the MDSC needs to perform
+   including the TE binding requirements, the MDSC needs to perform
    multi-layer/multi-domain path computation to select the BRs, the
    intra-domain MPLS-TE Tunnels and the intra-domain Optical Tunnels.
 
@@ -610,9 +610,9 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 11]
+Peruzzini et al.         Expires May 2, 2021                  [Page 11]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    2. Partial summarization: MDSC has full visibility of the TE
@@ -640,16 +640,17 @@ Internet-Draft                 ACTN POI                  September 2020
       vendor-specific optical attributes (which may be different in the
       two domains if they are provided by different vendors).
 
-   The current version of this draft assumes that MDSC supports model
-   #2 (Partial summarization).
+   The current version of this draft assumes that MDSC supports at
+   least model #2 (Partial summarization).
 
    [Note: check with opeerators for some references on real deployment]
 
-2.3.1. Hard Isolation
+2.2.1. Hard Isolation
 
    For example, when "Hard Isolation with or w/o deterministic latency"
    TE binding requirement is applied for a L2/L3VPN, new Optical
-   by-pass Tunnels needs to be setup between PEs and BRs.
+   Tunnels need to be setup to support dedicated IP Links between PEs
+   and BRs.
 
    The MDSC needs to identify the set of IP/MPLS domains and their BRs.
    This requires the MDSC to request each O-PNC to compute the
@@ -661,22 +662,23 @@ Internet-Draft                 ACTN POI                  September 2020
    nodes (e.g., using the inter-layer lock or the transitional link
    information, defined in [RFC8795]).
 
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 12]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    When the optimal multi-layer/multi-domain path has been computed,
    the MDSC requests each O-PNC to setup the selected Optical Tunnels
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 12]
-
-Internet-Draft                 ACTN POI                  September 2020
-
-
    and P-PNC to setup the intra-domain MPLS-TE Tunnels, over the
    selected Optical Tunnels. MDSC also properly configures its BGP
    speakers and PE/BR forwarding tables to ensure that the VPN traffic
    is properly forwarded.
 
-2.3.2. Shared Tunnel Selection
+2.2.2. Shared Tunnel Selection
 
    In case of shared tunnel selection, the MDSC needs to check if there
    is multi-domain path which can support the L2/L3VPN end-to-end TE
@@ -706,7 +708,7 @@ Internet-Draft                 ACTN POI                  September 2020
    distributed in the PE and BR nodes by BGP. The MDSC is responsible
    to configure the BGP speakeers in each P-PNC, if needed.
 
-2.4. IP/MPLS Domain Controller and NE Functions
+2.3. IP/MPLS Domain Controller and NE Functions
 
    IP/MPLS networks are assumed to have multiple domains, where each
    domain, corresponding to either an IGP area or an Autonomous System
@@ -720,11 +722,9 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 13]
+Peruzzini et al.         Expires May 2, 2021                  [Page 13]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
 
@@ -760,7 +760,7 @@ Internet-Draft                 ACTN POI                  September 2020
 
    If new MPLS-TE Tunnels are needed or mofications (e.g., bandwidth
    ingrease) to existing MPLS_TE Tunnels are needed, as outlined in
-   section 2.3, the MDSC would request their setup or modifications to
+   section 2.2, the MDSC would request their setup or modifications to
    the P-PNCs (step 1 in Figure 3). Then the MDSC would request the
    P-PNC to configure the VPN, including the selection of the
    intra-domain TE Tunnel (step 2 in Figure 3).
@@ -778,16 +778,16 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 14]
+Peruzzini et al.         Expires May 2, 2021                  [Page 14]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    o  MPLS-TE tunnel label, assigned by the next hop P node of the
       tunnel selected by the MDSC and distributed by mechanism internal
       to the IP/MPLS domain (e.g., RSVP-TE).
 
-2.5. Optical Domain Controller and NE Functions
+2.4. Optical Domain Controller and NE Functions
 
    Optical network provides the underlay connectivity services to
    IP/MPLS networks. The coordination of Packet/Optical multi-layer is
@@ -808,73 +808,47 @@ Internet-Draft                 ACTN POI                  September 2020
    the scope of this document.
 
    Depending on the type of optical network, TE topology abstraction,
-   path compution and path setup can be single-single (either OTN or
+   path compution and path setup can be single-layer (either OTN or
    WDM) or multi-layer OTN/WDM. In the latter case, the multi-layer
    coordination between the OTN and WDM layers is performed by the
    O-PNC.
 
-3. Multi-layer and multi-domain services scenarios
+3. Interface protocols and YANG data models for the MPIs
 
-   Multi-layer and multi-domain scenarios, based on reference network
-   described in section 2. , and very relevant for Service Providers,
-   are described in the next sections. For each scenario existing IETF
-   protocols and data models are identified with particular focus on
-   the MPI in the ACTN architecture. Non ACTN IETF data models required
-   for L2/L3VPN service provisioning between MDSC and IP PNCs are also
-   identified.
+   This section describes general assumptions which are applicable at
+   all the MPI interfaces, between each PNC (Optical or Packet) and the
+   MDSC, and also to all the scenarios discussed in this document.
 
-3.1. Scenario 1: network and service topology discovery
+3.1. RESTCONF protocol at the MPIs
 
-   In this scenario, the MSDC needs to discover through the underlying
-   PNCs, the network topology, at both WDM and IP layers, in terms of
-   nodes (NEs) and links, including inter AS domain links as well as
-   cross-layer links but also in terms of tunnels (MPLS or SR paths in
-   IP layer and OCh and optionally ODUk tunnels in optical layer).MDSC
+   The RESTCONF protocol, as defined in [RFC8040], using the JSON
+   representation, defined in [RFC7951], is assumed to be used at these
+   interfaces. Extensions to RESTCONF, as defined in [RFC8527], to be
+   compliant with Network Management Datastore Architecture (NMDA)
+   defined in [RFC8342], are assumed to be used as well at these MPI
+   interfaces and also at CMI interfaces.
 
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 15]
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 15]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
-   discovers also the IP/MPLS transport services (L2VPN/L3VPN)
-   deployed, both intra-domain and inter-domain wise.
+3.2. YANG data models at the MPIs
 
-   Each PNC provides to the MDSC an abstracted or full topology view of
-   the WDM or the IP topology of the domain it controls. This topology
-   can be abstracted in the sense that some detailed NE information is
-   hidden at the MPI, and all or some of the NEs and related physical
-   links are exposed as abstract nodes and logical (virtual) links,
-   depending on the level of abstraction the user requires. This
-   information is key to understand both the inter-AS domain links
-   (seen by each controller as UNI interfaces but as I-NNI interfaces
-   by the MDSC) as well as the cross-layer mapping between IP and WDM
-   layer.
+   The data models used on these interfaces are assumed to use the YANG
+   1.1 Data Modeling Language, as defined in [RFC7950].
 
-   The MDSC also maintains an up-to-date network database of both IP
-   and WDM layers (and optionally OTN layer) through the use of IETF
-   notifications through MPI with the PNCs when any topology change
-   occurs. It should be possible also to correlate information coming
-   from IP and WDM layers (e.g.: which port, lambda/OTSi, direction is
-   used by a specific IP service on the WDM equipment)
+3.2.1. Common YANG data models at the MPIs
 
-   In particular, For the cross-layer links it is key for MDSC to be
-   able to correlate automatically the information from the PNC network
-   databases about the physical ports from the routers (single link or
-   bundle links for LAG) to client ports in the ROADM.
-
-  It should be possible at MDSC level to easily correlate WDM and IP
-  layers alarms to speed-up troubleshooting
-
-  Alarms and event notifications are required between MDSC and PNCs so
-  that any network changes are reported almost in real-time to the MDSC
-  (e.g. NE or link failure, MPLS tunnel switched from main to backup
-  path etc.). As specified in [RFC7923] MDSC must be able to subscribe
-  to specific objects from PNC YANG datastores for notifications.
-
-3.1.1. Common YANG models used at MPIs
+   As required in [RFC8040], the "ietf-yang-library" YANG module
+   defined in [RFC8525] is used to allow the MDSC to discover the set
+   of YANG modules supported by each PNC at its MPI.
 
    Both Optical and Packet PNCs use the following common topology YANG
    models at the MPI to report their abstract topologies:
@@ -886,18 +860,9 @@ Internet-Draft                 ACTN POI                  September 2020
       topology" YANG module of [RFC8345], which augments the Base
       Network Model
 
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 16]
-
-Internet-Draft                 ACTN POI                  September 2020
-
-
    o  The TE Topology Model, defined in the "ietf-te-topology" YANG
-      module of [TE-TOPO], which augments the Base Network Topology
-      Model
+      module of [RFC8795], which augments the Base Network Topology
+      Model with TE specific information.
 
    These common YANG models are generic and augmented by technology-
    specific YANG modules as described in the following sections.
@@ -915,51 +880,91 @@ Internet-Draft                 ACTN POI                  September 2020
    PNCs and MDSCs must be compliant with subscription requirements as
    stated in [RFC7923].
 
-3.1.2. Required YANG models at the optical MPIs
+3.2.2. YANG models at the Optical MPIs
 
    The Optical PNC also uses at least the following technology-specific
    topology YANG models, providing WDM and Ethernet technology-specific
    augmentations of the generic TE Topology Model:
 
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 16]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    o  The WSON Topology Model, defined in the "ietf-wson-topology" YANG
       modules of [WSON-TOPO], or the Flexi-grid Topology Model, defined
       in the "ietf-flexi-grid-topology" YANG module of [Flexi-TOPO].
 
-   o  Optionally the OTN Topology Model, defined in the "ietf-otn-
-      topology" YANG module of the draft draft-ietf-ccamp-otn-topo-
-      yang-10 [OTN-TOPO]
+   o  Optionally, when the OTN layer is used, the OTN Topology Model,
+      as defined in the "ietf-otn-topology" YANG module of [OTN-TOPO].
 
    o  The Ethernet Topology Model, defined in the "ietf-eth-te-
-      topology" YANG module of [CLIENT-TOPO]
+      topology" YANG module of [CLIENT-TOPO].
 
-   o  Optionally when OTN layer is used, the network data model for L1
-      OTN services (e.g. an Ethernet transparent service) as defined in
-      "ietf-trans-client-service" YANG module of draft-ietf-ccamp-
-      client-signal-yang [CLIENT-SIGNAL]
+   o  Optionally, when the OTN layer is used, the network data model
+      for L1 OTN services (e.g. an Ethernet transparent service) as
+      defined in "ietf-trans-client-service" YANG module of draft-ietf-
+      ccamp-client-signal-yang [CLIENT-SIGNAL].
 
-   The WSON Topology Model or, alternatively, the Flexi-grid Topology
-   model is used to report the DWDM network topology (e.g., ROADMs and
-   links) depending on whether the DWDM optical network is based on
-   fixed grid or flexible-grid.
-
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 17]
-
-Internet-Draft                 ACTN POI                  September 2020
-
+   o  The WSON Topology Model or, alternatively, the Flexi-grid
+      Topology model is used to report the DWDM network topology (e.g.,
+      ROADMs and links) depending on whether the DWDM optical network
+      is based on fixed grid or flexible-grid.
 
    The Ethernet Topology is used to report the access links between the
    IP routers and the edge ROADMs.
 
-3.1.3. Required YANG models at the Packet MPIs
+   The optical PNC uses at least the following YANG models:
+
+   o  The TE Tunnel Model, defined in the "ietf-te" YANG module of
+      [TE-TUNNEL]
+
+   o  The WSON Tunnel Model, defined in the "ietf-wson-tunnel" YANG
+      modules of [WSON-TUNNEL], or the Flexi-grid Media Channel Model,
+      defined in the "ietf-flexi-grid-media-channel" YANG module of
+      [Flexi-MC]
+
+   o  Optionally, when the OTN layer is used, the OTN Tunnel Model,
+      defined in the "ietf-otn-tunnel" YANG module of [OTN-TUNNEL].
+
+   o  The Ethernet Client Signal Model, defined in the "ietf-eth-tran-
+      service" YANG module of [CLIENT-SIGNAL].
+
+   The TE Tunnel model is generic and augmented by technology-specific
+   models such as the WSON Tunnel Model and the Flexi-grid Media
+   Channel Model.
+
+   The WSON Tunnel Model or, alternatively, the Flexi-grid Media
+   Channel Model are used to setup connectivity within the DWDM network
+   depending on whether the DWDM optical network is based on fixed grid
+   or flexible-grid.
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 17]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
+   The Ethernet Client Signal Model is used to configure the steering
+   of the Ethernet client traffic between Ethernet access links and TE
+   Tunnels, which in this case could be either WSON Tunnels or
+   Flexi-Grid Media Channels. This model is generic and applies to any
+   technology-specific TE Tunnel: technology-specific attributes are
+   provided by the technology-specific models which augment the generic
+   TE-Tunnel Model.
+
+3.2.3. YANG data models at the Packet MPIs
 
    The Packet PNC also uses at least the following technology-specific
    topology YANG models, providing IP and Ethernet technology-specific
    augmentations of the generic Topology Models described in section
-   3.1.1. :
+   3.2.1:
 
    o  The L3 Topology Model, defined in the "ietf-l3-unicast-topology"
       YANG modules of [RFC8346], which augments the Base Network
@@ -993,23 +998,86 @@ Internet-Draft                 ACTN POI                  September 2020
       draft-ietf-opsawg-l3sm-l3nm [L3NM] used for non-ACTN MPI for
       L3VPN service provisioning
 
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 18]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    o  L2VPN network data model defined in "ietf-l2vpn-ntw" module of
       draft-ietf-barguil-opsawg-l2sm-l2nm [L2NM] used for non-ACTN MPI
       for L2VPN service provisioning
 
+   [Editor's note:] Add YANG models used for tunnel and service
+   configuration.
+
+4. Multi-layer and multi-domain services scenarios
+
+   Multi-layer and multi-domain scenarios, based on reference network
+   described in section 2, and very relevant for Service Providers, are
+   described in the next sections. For each scenario existing IETF
+   protocols and data models are identified with particular focus on
+   the MPI in the ACTN architecture. Non ACTN IETF data models required
+   for L2/L3VPN service provisioning between MDSC and IP PNCs are also
+   identified.
+
+4.1. Scenario 1: network and service topology discovery
+
+   In this scenario, the MSDC needs to discover through the underlying
+   PNCs, the network topology, at both WDM and IP layers, in terms of
+   nodes (NEs) and links, including inter AS domain links as well as
+   cross-layer links but also in terms of tunnels (MPLS or SR paths in
+   IP layer and OCh and optionally ODUk tunnels in optical layer).MDSC
+   discovers also the IP/MPLS transport services (L2VPN/L3VPN)
+   deployed, both intra-domain and inter-domain wise.
+
+   Each PNC provides to the MDSC an abstracted or full topology view of
+   the WDM or the IP topology of the domain it controls. This topology
+   can be abstracted in the sense that some detailed NE information is
+   hidden at the MPI, and all or some of the NEs and related physical
+   links are exposed as abstract nodes and logical (virtual) links,
+   depending on the level of abstraction the user requires. This
+   information is key to understand both the inter-AS domain links
+   (seen by each controller as UNI interfaces but as I-NNI interfaces
+   by the MDSC) as well as the cross-layer mapping between IP and WDM
+   layer.
+
+   The MDSC also maintains an up-to-date network database of both IP
+   and WDM layers (and optionally OTN layer) through the use of IETF
+   notifications through MPI with the PNCs when any topology change
+   occurs. It should be possible also to correlate information coming
+   from IP and WDM layers (e.g.: which port, lambda/OTSi, direction is
+   used by a specific IP service on the WDM equipment)
 
 
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 18]
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 19]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
+   In particular, For the cross-layer links it is key for MDSC to be
+   able to correlate automatically the information from the PNC network
+   databases about the physical ports from the routers (single link or
+   bundle links for LAG) to client ports in the ROADM.
 
+  It should be possible at MDSC level to easily correlate WDM and IP
+  layers alarms to speed-up troubleshooting
 
-3.1.4. Inter-domain link discovery
+  Alarms and event notifications are required between MDSC and PNCs so
+  that any network changes are reported almost in real-time to the MDSC
+  (e.g. NE or link failure, MPLS tunnel switched from main to backup
+  path etc.). As specified in [RFC7923] MDSC must be able to subscribe
+  to specific objects from PNC YANG datastores for notifications.
+
+4.1.1. Inter-domain link discovery
 
    In the reference network of Figure 1, there are two types of
    inter-domain links:
@@ -1022,15 +1090,34 @@ Internet-Draft                 ACTN POI                  September 2020
 
    The inter-domain link information is reported to the MDSC by the two
    adjacent PNCs, controlling the two ends of the inter-domain link.
+   The MDSC needs to understa how to merge the these inter-domain
+   Ethernet links together.
+
+   This document considers the following two options for discovering
+   inter-domain links:
+
+   1. Static configuration
+
+   2. LLDP [IEEE 802.1AB] automatic discovery
+
+   Other options are possible but not described in this document.
 
    The MDSC can understand how to merge these inter-domain links
    together using the plug-id attribute defined in the TE Topology
-   Model [TE-TOPO], as described in as described in section 4.3 of [TE-
-   TOPO].
+   Model [RFC8795], as described in as described in section 4.3 of
+   [RFC8795].
 
    A more detailed description of how the plug-id can be used to
    discover inter-domain link is also provided in section 5.1.4 of
    [TNBI].
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 20]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    Both types of inter-domain links are discovered using the plug-id
    attributes reported in the Ethernet Topologies exposed by the two
@@ -1039,31 +1126,56 @@ Internet-Draft                 ACTN POI                  September 2020
    Topologies exposed by the two adjacent P-PNCs, supported by the two
    ETH LTPs of an Ethernet Link discovered between these two P-PNCs.
 
-   Two options are possible to discover these inter-domain links:
-
-   4. Static configuration
-
-   5. LLDP [IEEE 802.1AB] automatic discovery
-
-   Since the static configuration requires an administrative burden to
-   configure network-wide unique identifiers, the automatic discovery
-   solution based on LLDP is preferable when LLDP is supported.
+   The static configuration requires an administrative burden to
+   configure network-wide unique identifiers: it is therefore more
+   viable for inter-AS links. For the links between the IP routers and
+   the Optical NEs, the automatic discovery solution based on LLDP
+   snooping is preferable when LLDP snooping is supported by the
+   Optical NEs.
 
    As outlined in [TNBI], the encoding of the plug-id namespace as well
    as of the LLDP information within the plug-id value is
    implementation specific and needs to be consistent across all the
    PNCs.
 
+4.1.2. IP Link Setup Procedure
+
+   The MDSC requires the O-PNC to setup a WDM Tunnel (either a WSON
+   Tunnel or a Flexi grid Tunnel) within the DWDM network between the
+   two Optical Transponders (OTs) associated with the two access links.
+
+   The Optical Transponders are reported by the O-PNC as Trail
+   Termination Points (TTPs), defined in [TE TOPO], within the WDM
+   Topology. The association between the Ethernet access link and the
+   WDM TTP is reported by the Inter Layer Lock (ILL) identifiers,
+   defined in [TE TOPO], reported by the O PNC within the Ethernet
+   Topology and WDM Topology.
+
+   The MDSC also requires the O-PNC to steer the Ethernet client
+   traffic between the two access Ethernet Links over the WDM Tunnel.
+
+   After the WDM Tunnel has been setup and the client traffic steering
+   configured, the two IP routers can exchange Ethernet packets between
+   themselves, including LLDP messages.
+
+   If LLDP [IEEE 802.1AB] is used between the two routers, the P PNC
+   can automatically discover the IP Link being set up by the MDSC. The
+   IP LTPs terminating this IP Link are supported by the ETH LTPs
+   terminating the two access links.
+
+   Otherwise, the MDSC needs to require the P PNC to configure an IP
+   Link between the two routers: the MDSC also configures the two ETH
+   LTPs which support the two IP LTPs terminating this IP Link.
 
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 19]
+Peruzzini et al.         Expires May 2, 2021                  [Page 21]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
-3.2. L2VPN/L3VPN establishment
+4.2. L2VPN/L3VPN establishment
 
    To be added
 
@@ -1082,28 +1194,28 @@ Internet-Draft                 ACTN POI                  September 2020
    New text to answer the yellow part:
 
    The MDSC Network-related function will then coordinate with the PNCs
-      involved in the process to provide the provisioning information
-      through ACTN MDSC to PNC (MPI) interface. The relevant data
-      models used at the MPI may be in the form of L3NM, L2NM or others
-      and are exchanged through MPI API calls. Through this process
-      MDSC Network-related functions provide the configuration
-      information to realize a VPN service to PNCs. For example, this
-      process will inform PNCs on what PE routers compose a L3VPN, the
-      topology requested, the VPN attributes, etc.
+   involved in the process to provide the provisioning information
+   through ACTN MDSC to PNC (MPI) interface. The relevant data models
+   used at the MPI may be in the form of L3NM, L2NM or others and are
+   exchanged through MPI API calls. Through this process MDSC Network-
+   related functions provide the configuration information to realize a
+   VPN service to PNCs. For example, this process will inform PNCs on
+   what PE routers compose a L3VPN, the topology requested, the VPN
+   attributes, etc.
 
    At the end of the process PNCs will deliver the actual configuration
-      to the devices (either physical or virtual), through the ACTN
-      Southbound Interface (SBI). In this case the configuration
-      policies may be exchanged using a Netconf session delivering
-      configuration commands associated to device-specific data models
-      (e.g. BGP[], QOS [], etc.).
+   to the devices (either physical or virtual), through the ACTN
+   Southbound Interface (SBI). In this case the configuration policies
+   may be exchanged using a Netconf session delivering configuration
+   commands associated to device-specific data models (e.g. BGP[], QOS
+   [], etc.).
 
    Having the topology information of the network domains under their
-      control, PNCs will deliver all the information necessary to
-      create, update, optimize or delete the tunnels connecting the PE
-      nodes as requested by the VPN instantiation.
+   control, PNCs will deliver all the information necessary to create,
+   update, optimize or delete the tunnels connecting the PE nodes as
+   requested by the VPN instantiation.
 
-4. Security Considerations
+5. Security Considerations
 
    Several security considerations have been identified and will be
    discussed in future versions of this document.
@@ -1114,25 +1226,25 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 20]
+Peruzzini et al.         Expires May 2, 2021                  [Page 22]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
-5. Operational Considerations
+6. Operational Considerations
 
    Telemetry data, such as the collection of lower-layer networking
    health and consideration of network and service performance from POI
    domain controllers, may be required. These requirements and
    capabilities will be discussed in future versions of this document.
 
-6. IANA Considerations
+7. IANA Considerations
 
    This document requires no IANA actions.
 
-7. References
+8. References
 
-7.1. Normative References
+8.1. Normative References
 
    [RFC7950] Bjorklund, M. et al., "The YANG 1.1 Data Modeling
              Language", RFC 7950, August 2016.
@@ -1154,12 +1266,12 @@ Internet-Draft                 ACTN POI                  September 2020
 
    [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019.
 
+   [RFC8795] Liu, X. et al., "YANG Data Model for Traffic Engineering
+             (TE) Topologies", RFC8795, August 2020.
+
    [IEEE 802.1AB] IEEE 802.1AB-2016, "IEEE Standard for Local and
              metropolitan area networks - Station and Media Access
              Control Connectivity Discovery", March 2016.
-
-   [TE-TOPO] Liu, X. et al., "YANG Data Model for TE Topologies",
-             draft-ietf-teas-yang-te-topo, work in progress.
 
    [WSON-TOPO] Lee, Y. et al., " A YANG Data Model for WSON (Wavelength
              Switched Optical Networks)", draft-ietf-ccamp-wson-yang,
@@ -1170,13 +1282,17 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 21]
+Peruzzini et al.         Expires May 2, 2021                  [Page 23]
 
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
+             yang, work in progress.
+
+   [OTN-TOPO] Zheng, H. et al., "A YANG Data Model for Optical
+             Transport Network Topology", draft-ietf-ccamp-otn-topo-
              yang, work in progress.
 
    [CLIENT-TOPO]  Zheng, H. et al., "A YANG Data Model for Client-layer
@@ -1198,11 +1314,14 @@ Internet-Draft                 ACTN POI                  September 2020
              Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
              media-channel-yang, work in progress.
 
+   [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
+             ietf-ccamp-otn-tunnel-model, work in progress.
+
    [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport
              Network Client Signals", draft-ietf-ccamp-client-signal-
              yang, work in progress.
 
-7.2. Informative References
+8.2. Informative References
 
    [RFC1930] J. Hawkinson, T. Bates, "Guideline for creation,
              selection, and registration of an Autonomous System (AS)",
@@ -1215,6 +1334,15 @@ Internet-Draft                 ACTN POI                  September 2020
              Service (VPLS) Using BGP for Auto-Discovery and
              Signaling", RFC 4761, January 2007.
 
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 24]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    [RFC6074] E. Rosen, B. Davie, V. Radoaca, and W. Luo, "Provisioning,
              Auto-Discovery, and Signaling in Layer 2 Virtual Private
              Networks (L2VPNs)", RFC 6074, January 2011.
@@ -1222,14 +1350,6 @@ Internet-Draft                 ACTN POI                  September 2020
    [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, "Layer 2
              Virtual Private Networks Using BGP for Auto-Discovery and
              Signaling", RFC 6624, May 2012.
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 22]
-
-Internet-Draft                 ACTN POI                  September 2020
-
 
    [RFC7209] A. Sajassi, R. Aggarwal, J. Uttaro, N. Bitar, W.
              Henderickx, and A. Isaac, "Requirements for Ethernet VPN
@@ -1272,6 +1392,13 @@ Internet-Draft                 ACTN POI                  September 2020
              Yang Model", draft-ietf-teas-te-service-mapping-yang, work
              in progress.
 
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 25]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    [ACTN-PM] Y. Lee, et al., "YANG models for VN & TE Performance
              Monitoring Telemetry and Scaling Intent Autonomics",
              draft-lee-teas-actn-pm-telemetry-autonomics, work in
@@ -1282,76 +1409,123 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-Peruzzini et al.        Expires March 29, 2021                [Page 23]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 26]
 
-Internet-Draft                 ACTN POI                  September 2020
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 24]
-
-Internet-Draft                 ACTN POI                  September 2020
+Internet-Draft                 ACTN POI                   November 2020
 
 
 Appendix A. Multi-layer and multi-domain resiliency
 
 A.1.  Maintenance Window
 
-   To be added
+   Before planned maintenance operation on DWDM network takes place, IP
+   traffic should be moved hitless to another link.
+
+   MDSC must reroute IP traffic before the events takes place. It
+   should be possible to lock IP traffic to the protection route until
+   the maintenance event is finished, unless a fault occurs on such
+   path.
 
 A.2.  Router port failure
 
-   To be added
+   The focus is on client-side protection scheme between IP router and
+   reconfigurable ROADM. Scenario here is to define only one port in
+   the routers and in the ROADM muxponder board at both ends as back-up
+   ports to recover any other port failure on client-side of the ROADM
+   (either on router port side or on muxponder side or on the link
+   between them). When client-side port failure occurs, alarms are
+   raised to MDSC by IP-PNC and O-PNC (port status down, LOS etc.).
+   MDSC checks with OP-PNC(s) that there is no optical failure in the
+   optical layer.
+
+   There can be two cases here:
+
+   a) LAG was defined between the two end routers. MDSC, after checking
+      that optical layer is fine between the two end ROADMs, triggers
+      the ROADM configuration so that the router back-up port with its
+      associated muxponder port can reuse the OCh that was already in
+      use previously by the failed router port and adds the new link to
+      the LAG on the failure side.
+
+      While the ROADM reconfiguration takes place, IP/MPLS traffic is
+      using the reduced bandwidth of the IP link bundle, discarding
+      lower priority traffic if required. Once backup port has been
+      reconfigured to reuse the existing OCh and new link has been
+      added to the LAG then original Bandwidth is recovered between the
+      end routers.
+
+      Note: in this LAG scenario let assume that BFD is running at LAG
+      level so that there is nothing triggered at MPLS level when one
+      of the link member of the LAG fails.
+
+
+
+
+
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 27]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
+   b) If there is no LAG then the scenario is not clear since a router
+      port failure would automatically trigger (through BFD failure)
+      first a sub-50ms protection at MPLS level :FRR (MPLS RSVP-TE
+      case) or TI-LFA (MPLS based SR-TE case) through a protection
+      port. At the same time MDSC, after checking that optical network
+      connection is still fine, would trigger the reconfiguration of
+      the back-up port of the router and of the ROADM muxponder to re-
+      use the same OCh as the one used originally for the failed router
+      port. Once everything has been correctly configured, MDSC Global
+      PCE could suggest to the operator to trigger a possible re-
+      optimisation of the back-up MPLS path to go back to the  MPLS
+      primary path through the back-up port of the router and the
+      original OCh if overall cost, latency etc. is improved. However,
+      in this scenario, there is a need for protection port PLUS back-
+      up port in the router which does not lead to clear port savings.
 
 Acknowledgments
 
@@ -1386,17 +1560,15 @@ Contributors
    Anton Snitser
    Sedona
 
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 28]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    Email: antons@sedonasys.com
 
-
-
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 25]
-
-Internet-Draft                 ACTN POI                  September 2020
 
 
    Washington Costa Pereira Correia
@@ -1443,16 +1615,16 @@ Authors' Addresses
    Jean-Francois Bouquier
    Vodafone
 
+
+
+
+Peruzzini et al.         Expires May 2, 2021                  [Page 29]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    Email: jeff.bouquier@vodafone.com
 
-
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 26]
-
-Internet-Draft                 ACTN POI                  September 2020
 
 
    Italo Busi
@@ -1502,9 +1674,5 @@ Internet-Draft                 ACTN POI                  September 2020
 
 
 
-
-
-
-
-Peruzzini et al.        Expires March 29, 2021                [Page 27]
+Peruzzini et al.         Expires May 2, 2021                  [Page 30]
 
