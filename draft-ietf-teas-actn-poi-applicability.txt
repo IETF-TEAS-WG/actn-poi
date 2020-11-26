@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: May 2021                                      November 3, 2020
+Expires: May 2021                                     November 26, 2020
 
 
 
@@ -50,7 +50,7 @@ Status of this Memo
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 1]
+Peruzzini et al.         Expires May 26, 2021                  [Page 1]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -101,31 +101,31 @@ Table of Contents
          3.2.2. YANG models at the Optical MPIs.....................16
          3.2.3. YANG data models at the Packet MPIs.................18
       3.3. PCEP.....................................................19
-   4. Multi-layer and multi-domain services scenarios...............19
-      4.1. Scenario 1: network and service topology discovery.......19
+   4. Multi-layer and multi-domain services scenarios...............20
+      4.1. Scenario 1: network and service topology discovery.......20
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 2]
+Peruzzini et al.         Expires May 26, 2021                  [Page 2]
 
 Internet-Draft                 ACTN POI                   November 2020
 
 
-         4.1.1. Inter-domain link discovery.........................20
-         4.1.2. IP Link Setup Procedure.............................21
-      4.2. L2VPN/L3VPN establishment................................22
+         4.1.1. Inter-domain link discovery.........................21
+         4.1.2. IP Link Setup Procedure.............................22
+      4.2. L2VPN/L3VPN establishment................................23
    5. Security Considerations.......................................23
-   6. Operational Considerations....................................23
-   7. IANA Considerations...........................................23
-   8. References....................................................23
-      8.1. Normative References.....................................23
+   6. Operational Considerations....................................24
+   7. IANA Considerations...........................................24
+   8. References....................................................24
+      8.1. Normative References.....................................24
       8.2. Informative References...................................25
-   Appendix A.    Multi-layer and multi-domain resiliency...........27
-      A.1.  Maintenance Window......................................27
-      A.2.  Router port failure.....................................27
-   Acknowledgments..................................................28
-   Contributors.....................................................28
-   Authors' Addresses...............................................29
+   Appendix A.    Multi-layer and multi-domain resiliency...........28
+      A.1.  Maintenance Window......................................28
+      A.2.  Router port failure.....................................28
+   Acknowledgments..................................................29
+   Contributors.....................................................29
+   Authors' Addresses...............................................30
 
 1. Introduction
 
@@ -162,7 +162,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 3]
+Peruzzini et al.         Expires May 26, 2021                  [Page 3]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -218,7 +218,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 4]
+Peruzzini et al.         Expires May 26, 2021                  [Page 4]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -274,7 +274,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 5]
+Peruzzini et al.         Expires May 26, 2021                  [Page 5]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -330,7 +330,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 6]
+Peruzzini et al.         Expires May 26, 2021                  [Page 6]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -386,7 +386,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 7]
+Peruzzini et al.         Expires May 26, 2021                  [Page 7]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -442,7 +442,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 8]
+Peruzzini et al.         Expires May 26, 2021                  [Page 8]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -498,7 +498,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                   [Page 9]
+Peruzzini et al.         Expires May 26, 2021                  [Page 9]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -554,7 +554,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 10]
+Peruzzini et al.         Expires May 26, 2021                 [Page 10]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -610,7 +610,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 11]
+Peruzzini et al.         Expires May 26, 2021                 [Page 11]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -666,7 +666,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 12]
+Peruzzini et al.         Expires May 26, 2021                 [Page 12]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -722,7 +722,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 13]
+Peruzzini et al.         Expires May 26, 2021                 [Page 13]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -778,7 +778,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 14]
+Peruzzini et al.         Expires May 26, 2021                 [Page 14]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -834,7 +834,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 15]
+Peruzzini et al.         Expires May 26, 2021                 [Page 15]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -890,7 +890,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 16]
+Peruzzini et al.         Expires May 26, 2021                 [Page 16]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -946,7 +946,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 17]
+Peruzzini et al.         Expires May 26, 2021                 [Page 17]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1002,7 +1002,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 18]
+Peruzzini et al.         Expires May 26, 2021                 [Page 18]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1016,15 +1016,14 @@ Internet-Draft                 ACTN POI                   November 2020
 
 3.3. PCEP
 
-   [RFC8623] examines the applicability of a Path Computation Element
+   [RFC8637] examines the applicability of a Path Computation Element
    (PCE) [RFC5440] and PCE Communication Protocol (PCEP) to the ACTN
    framework. It further describes how the PCE architecture is
-   applicable to ACTN.  It also lists the PCEP extensions that are
-   needed to use PCEP as an ACTN interface.  The stateful PCE
-   [RFC8231], PCE-Initiation [RFC8281], stateful Hierarchical PCE (H-
-   PCE) [RFC8751], and PCE as a central controller (PCECC) [RFC8283]
-   are some of the key extensions that enable the use of PCE/PCEP for
-   ACTN.
+   applicable to ACTN and lists the PCEP extensions that are needed to
+   use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
+   Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751],
+   and PCE as a central controller (PCECC) [RFC8283] are some of the
+   key extensions that enable the use of PCE/PCEP for ACTN.
 
    Since the PCEP supports path computation in the packet as well as
    optical networks, PCEP is well suited for inter-layer path
@@ -1033,10 +1032,49 @@ Internet-Draft                 ACTN POI                   November 2020
    Further, the section 6.1 of [RFC8751] states the H-PCE applicability
    for inter-layer or POI.
 
-   [RFC8623] lists various PCEP extensions that are applicable to ACTN.
-   It also list the PCEP extension for optical network and POI. Note
-   that the PCEP can be used in conjunction with the YANG models
-   described in the rest of this document.
+   [RFC8637] lists various PCEP extensions that are applicable to ACTN.
+   It also list the PCEP extension for optical network and POI.
+
+   Note that the PCEP can be used in conjunction with the YANG models
+   described in the rest of this document. Depending on whether ACTN is
+   deployed in a greenfield or browfield, two options are possible:
+
+   1. The MDSC uses a single RESTCONF/YANG interface towards each PNC
+      to discover all the TE information and requests the creation of
+      TE tunnels. It may either perform full multi-layer path
+      computation or delegate path computation to the underneath PNCs.
+
+      This approach is very attractive for operators from an
+      multi-vendor integration perspective as it is simple and we need
+      only one type of interface (RESTCONF) and use the relevant YANG
+      data models depending on the operator use case considered.
+      Benefits of having only one protocol for the MPI between MDSC and
+      PNC have been already highlighted in [PATH-COMPUTE].
+
+
+
+
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 19]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
+   2. The MDSC uses the RESTCONF/YANG interface towards each PNC to
+      discover all the TE information and requests the creation of TE
+      tunnels but it uses PCEP for hierararchical path computation.
+
+      As mentioned in Option 1, from an operator perspective this
+      option can add integration complexity to have two protocols
+      instead of one, unless the RESTOCONF/YANG interface is added to
+      an existing PCEP deployment (brownfield scenario).
+
+   Section 4 of this draft analyses the case where a single
+   RESTCONF/YANG interface is deployed at the MPI (i.e., option 1
+   above).
 
 4. Multi-layer and multi-domain services scenarios
 
@@ -1055,14 +1093,6 @@ Internet-Draft                 ACTN POI                   November 2020
    nodes (NEs) and links, including inter AS domain links as well as
    cross-layer links but also in terms of tunnels (MPLS or SR paths in
    IP layer and OCh and optionally ODUk tunnels in optical layer).MDSC
-
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 19]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    discovers also the IP/MPLS transport services (L2VPN/L3VPN)
    deployed, both intra-domain and inter-domain wise.
 
@@ -1081,6 +1111,14 @@ Internet-Draft                 ACTN POI                   November 2020
    and WDM layers (and optionally OTN layer) through the use of IETF
    notifications through MPI with the PNCs when any topology change
    occurs. It should be possible also to correlate information coming
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 20]
+
+Internet-Draft                 ACTN POI                   November 2020
+
+
    from IP and WDM layers (e.g.: which port, lambda/OTSi, direction is
    used by a specific IP service on the WDM equipment)
 
@@ -1111,14 +1149,6 @@ Internet-Draft                 ACTN POI                   November 2020
 
    The inter-domain link information is reported to the MDSC by the two
    adjacent PNCs, controlling the two ends of the inter-domain link.
-
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 20]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    The MDSC needs to understa how to merge the these inter-domain
    Ethernet links together.
 
@@ -1127,7 +1157,7 @@ Internet-Draft                 ACTN POI                   November 2020
 
    1. Static configuration
 
-   2. LLDP [IEEE 802.1AB] automatic discovery
+   3. LLDP [IEEE 802.1AB] automatic discovery
 
    Other options are possible but not described in this document.
 
@@ -1135,6 +1165,15 @@ Internet-Draft                 ACTN POI                   November 2020
    together using the plug-id attribute defined in the TE Topology
    Model [RFC8795], as described in as described in section 4.3 of
    [RFC8795].
+
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 21]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    A more detailed description of how the plug-id can be used to
    discover inter-domain link is also provided in section 5.1.4 of
@@ -1167,14 +1206,6 @@ Internet-Draft                 ACTN POI                   November 2020
 
    The Optical Transponders are reported by the O-PNC as Trail
    Termination Points (TTPs), defined in [TE TOPO], within the WDM
-
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 21]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    Topology. The association between the Ethernet access link and the
    WDM TTP is reported by the Inter Layer Lock (ILL) identifiers,
    defined in [TE TOPO], reported by the O PNC within the Ethernet
@@ -1191,6 +1222,14 @@ Internet-Draft                 ACTN POI                   November 2020
    can automatically discover the IP Link being set up by the MDSC. The
    IP LTPs terminating this IP Link are supported by the ETH LTPs
    terminating the two access links.
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 22]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    Otherwise, the MDSC needs to require the P PNC to configure an IP
    Link between the two routers: the MDSC also configures the two ETH
@@ -1224,13 +1263,6 @@ Internet-Draft                 ACTN POI                   November 2020
    what PE routers compose a L3VPN, the topology requested, the VPN
    attributes, etc.
 
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 22]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    At the end of the process PNCs will deliver the actual configuration
    to the devices (either physical or virtual), through the ACTN
    Southbound Interface (SBI). In this case the configuration policies
@@ -1247,6 +1279,13 @@ Internet-Draft                 ACTN POI                   November 2020
 
    Several security considerations have been identified and will be
    discussed in future versions of this document.
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 23]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
 6. Operational Considerations
 
@@ -1278,15 +1317,6 @@ Internet-Draft                 ACTN POI                   November 2020
    [RFC8346] Clemm, A. et al., "A YANG Data Model for Layer 3
              Topologies", RFC8346, March 2018.
 
-
-
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 23]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    [RFC8453] Ceccarelli, D., Lee, Y. et al., "Framework for Abstraction
              and Control of TE Networks (ACTN)", RFC8453, August 2018.
 
@@ -1302,6 +1332,16 @@ Internet-Draft                 ACTN POI                   November 2020
    [WSON-TOPO] Lee, Y. et al., " A YANG Data Model for WSON (Wavelength
              Switched Optical Networks)", draft-ietf-ccamp-wson-yang,
              work in progress.
+
+
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 24]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
@@ -1333,16 +1373,6 @@ Internet-Draft                 ACTN POI                   November 2020
    [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
              ietf-ccamp-otn-tunnel-model, work in progress.
 
-
-
-
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 24]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport
              Network Client Signals", draft-ietf-ccamp-client-signal-
              yang, work in progress.
@@ -1359,6 +1389,15 @@ Internet-Draft                 ACTN POI                   November 2020
    [RFC4761] K. Kompella, Ed., Y. Rekhter, Ed., "Virtual Private LAN
              Service (VPLS) Using BGP for Auto-Discovery and
              Signaling", RFC 4761, January 2007.
+
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 25]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    [RFC6074] E. Rosen, B. Davie, V. Radoaca, and W. Luo, "Provisioning,
              Auto-Discovery, and Signaling in Layer 2 Virtual Private
@@ -1392,13 +1431,6 @@ Internet-Draft                 ACTN POI                   November 2020
              Private Network (L2VPN) Service Delivery", RFC8466,
              October 2018.
 
-
-
-Peruzzini et al.         Expires May 3, 2021                  [Page 25]
-
-Internet-Draft                 ACTN POI                   November 2020
-
-
    [TNBI]    Busi, I., Daniel, K. et al., "Transport Northbound
              Interface Applicability Statement", draft-ietf-ccamp-
              transport-nbi-app-statement, work in progress.
@@ -1415,6 +1447,13 @@ Internet-Draft                 ACTN POI                   November 2020
    [TSM]     Y. Lee, et al., "Traffic Engineering and Service Mapping
              Yang Model", draft-ietf-teas-te-service-mapping-yang, work
              in progress.
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 26]
+
+Internet-Draft                 ACTN POI                   November 2020
+
 
    [ACTN-PM] Y. Lee, et al., "YANG models for VN & TE Performance
              Monitoring Telemetry and Scaling Intent Autonomics",
@@ -1450,7 +1489,24 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 26]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peruzzini et al.         Expires May 26, 2021                 [Page 27]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1506,7 +1562,7 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 27]
+Peruzzini et al.         Expires May 26, 2021                 [Page 28]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1562,7 +1618,7 @@ Contributors
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 28]
+Peruzzini et al.         Expires May 26, 2021                 [Page 29]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1618,7 +1674,7 @@ Authors' Addresses
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 29]
+Peruzzini et al.         Expires May 26, 2021                 [Page 30]
 
 Internet-Draft                 ACTN POI                   November 2020
 
@@ -1674,5 +1730,5 @@ Internet-Draft                 ACTN POI                   November 2020
 
 
 
-Peruzzini et al.         Expires May 3, 2021                  [Page 30]
+Peruzzini et al.         Expires May 26, 2021                 [Page 31]
 
