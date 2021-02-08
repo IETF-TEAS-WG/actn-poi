@@ -1,0 +1,87 @@
+# ACTN POI bi-weekly call (January 26, 2021)
+
+## Participants
+- Aihua Guo
+- Brent Foster
+- Gabriele Galimberti
+- Jeff Bouquier
+- Jeff Tantsura
+- Michael Scharf
+- Sergio Belotti
+
+## Review of the minutes of the last calls (January 11, 2021)
+
+Minutes of the call on January 11, 2021 reviewed: [minutes-2021-01-11](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/minutes-2021-01-11.md)
+
+Brent Foster mentioned that we can use kramdown tool instead of word to write the draft text
+
+Brent Foster volounteered to provide us a demo about how to use this tool
+
+**Past Actions:**
+- [x] __Gabriele__: check if some IP experts can also join the work.\
+__Closed:__ Brent Foster is joining this work.
+
+- [ ] **Jeff**: propose some text describing the need for a standard inventory NBI\
+__On-going:__ the plan is to discuss this topic in the next call (February 8)
+
+- [ ] **Italo/Sergio**: check with TE authors about the network inventory model\
+__On-going:__ the plan is to discuss this topic in the next call (February 8)
+
+- [x] **Jeff**: propose a L3VPN scenario to be analysed\
+__On-going:__ For discussion today
+
+- [ ] **Jeff/Italo/Paolo**: start analysing the L3VPN scenario (to be provided by Jeff)\
+__Waiting for the scenario__
+
+- [ ] **Sergio/Gabriele**: check for other volounteers to start analysing the L3VPN scenario\
+__Status:__ Brent Foster is joining this work.
+
+### Ad-hoc call on January 12, 2021
+
+An issue with LLDP snooping is that this protocol is not described in any standard document.
+
+- [x] __Jeff T.__: Provide some public vendor-specific documentation that could be referenced by the draft\
+__Closed:__ Information provided by Jeff and Micheal in [Issue #39](https://github.com/FabioPeruzzini/actn-poi/issues/39)
+
+## Discussion
+
+### L3VPN scenario
+
+Michael: As suggested in the comment from Swamy https://github.com/FabioPeruzzini/actn-poi/issues/38#issuecomment-764600320, an IP PCE typically needs to know SRLG values in order to meet tunnel diversity constraints in a dynamic topology. An IP PCE may need to recalculate and optimize the IP routes taken by tunnels in the packet layer independent of IP tunnel and/or L3VPN service provisioning, e.g. whenever the IP topology changes (say, due to link failures). And IP rerouting can happen much more frequently than tunnel setup or L3VPN provisioning. If SRGLs were only known to the MDSC, the MDSC could have to calculate all IP routes in all cases and just replace the IP PCE. This could result in scalability issues.
+
+Brent pointed out that then SRLGs can be configured on the router interfaces.
+
+In the context of the ACTN POI reference architecture, the SRLGs can be exported from an O-PNC to a P-PNC via the MDSC. The P-PNC can use this information to properly configure the router interfaces.
+
+Jeff T.: 3 cases for multi-domain L3VPN:
+1. BGP Best Path
+1. Flex-Algo (virtualization,igp topology)
+1. Multi-domain Traffic Engineering
+
+Brent: In L3VPN typically carrier is more focus in BW managment than traffic engineering. 
+
+This can change with colored next hop when you signal a VPN prefix with a tunnel information
+
+The two IP domains can use RSVP-TE or SR or one domain can be RSVP-TE and the other SR.
+
+One option is to use EPE (Egress Peering Engineering) or Binding SID. Binding SID can also be used to steer the VPN traffic toward an Optical Tunnel.
+
+Jeff B. thinks that the Binding SID is the best option but it would be good to check with other operators if this is the right direction to go.
+
+**Actions:**
+- [ ] __Jeff T.__: Provide some background information about this option
+
+- [ ] __Jeff B.__: Check with other operators about the option to consider for multi-domain L3VPN (e.g., Binding SID)
+
+### Plan for IETF 110
+
+Daniel has volounteer to have a full review of the -02 draft before submitting it to IETF.
+
+Possible plan for an update at IETF 110:
+- All: prepare a -02 draft for IETF 110 before February 12
+- Daniel: provide a review before February 19
+- Italo: submit the -02 draft on February 22 (cut-off dealine)
+
+## Next calls:
+- February 8th at 11am CET (Slot 1)
+- February 23rd at 5pm CET (Slot 2)
