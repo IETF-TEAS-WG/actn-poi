@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: September 2021                                  March 14, 2021
+Expires: September 2021                                  March 15, 2021
 
 
 
@@ -50,7 +50,7 @@ Copyright Notice
 
 
 
-Peruzzini et al.      Expires September 14, 2021               [Page 1]
+Peruzzini et al.      Expires September 15, 2021               [Page 1]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -106,7 +106,7 @@ Table of Contents
    7. IANA Considerations...........................................24
    8. References....................................................24
 
-Peruzzini et al.      Expires September 14, 2021               [Page 2]
+Peruzzini et al.      Expires September 15, 2021               [Page 2]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -162,7 +162,7 @@ Internet-Draft                 ACTN POI                      March 2021
    troubleshooting (e.g., alarm correlation) and network operation
    (e.g., coordination of maintenance events), multi-layer offline
 
-Peruzzini et al.      Expires September 14, 2021               [Page 3]
+Peruzzini et al.      Expires September 15, 2021               [Page 3]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -218,7 +218,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021               [Page 4]
+Peruzzini et al.      Expires September 15, 2021               [Page 4]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -236,7 +236,7 @@ Internet-Draft                 ACTN POI                      March 2021
                   |           |            |           |
                   |           \            /           |
         +-------------------+  \          /  +-------------------+
-   CE  / PE               BR \  |        /  / BR              PE  \  CE
+   CE1 / PE1             BR1 \  |        /  / BR2             PE2 \ CE2
    o--/---o               o---\-|-------|--/---o               o---\--o
       \   :               :   / |       |  \   :               :   /
        \  : PKT Domain 1  :  /  |       |   \  : PKT Domain 2  :  /
@@ -274,7 +274,7 @@ Internet-Draft                 ACTN POI                      March 2021
    details depending on the policy chosen regarding the level of
    abstraction supported. The level of abstraction can be obtained
 
-Peruzzini et al.      Expires September 14, 2021               [Page 5]
+Peruzzini et al.      Expires September 15, 2021               [Page 5]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -330,7 +330,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021               [Page 6]
+Peruzzini et al.      Expires September 15, 2021               [Page 6]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -386,7 +386,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021               [Page 7]
+Peruzzini et al.      Expires September 15, 2021               [Page 7]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -442,7 +442,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021               [Page 8]
+Peruzzini et al.      Expires September 15, 2021               [Page 8]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -498,7 +498,7 @@ Internet-Draft                 ACTN POI                      March 2021
    o  The TE & Service Mapping YANG model [TSM] provides TE-service
       mapping as well as site mapping.
 
-Peruzzini et al.      Expires September 14, 2021               [Page 9]
+Peruzzini et al.      Expires September 15, 2021               [Page 9]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -554,7 +554,7 @@ Internet-Draft                 ACTN POI                      March 2021
    network resources). For the first two cases, VN members can be
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 10]
+Peruzzini et al.      Expires September 15, 2021              [Page 10]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -610,7 +610,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 11]
+Peruzzini et al.      Expires September 15, 2021              [Page 11]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -666,7 +666,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 12]
+Peruzzini et al.      Expires September 15, 2021              [Page 12]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -722,7 +722,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 13]
+Peruzzini et al.      Expires September 15, 2021              [Page 13]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -778,7 +778,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 14]
+Peruzzini et al.      Expires September 15, 2021              [Page 14]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -834,7 +834,7 @@ Internet-Draft                 ACTN POI                      March 2021
    1.1 Data Modeling Language, as defined in [RFC7950].
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 15]
+Peruzzini et al.      Expires September 15, 2021              [Page 15]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -890,7 +890,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 16]
+Peruzzini et al.      Expires September 15, 2021              [Page 16]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -946,7 +946,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 17]
+Peruzzini et al.      Expires September 15, 2021              [Page 17]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1002,7 +1002,7 @@ Internet-Draft                 ACTN POI                      March 2021
    use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
    Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751],
 
-Peruzzini et al.      Expires September 14, 2021              [Page 18]
+Peruzzini et al.      Expires September 15, 2021              [Page 18]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1058,7 +1058,7 @@ Internet-Draft                 ACTN POI                      March 2021
    the MPI in the ACTN architecture. Non ACTN IETF data models required
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 19]
+Peruzzini et al.      Expires September 15, 2021              [Page 19]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1114,7 +1114,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 20]
+Peruzzini et al.      Expires September 15, 2021              [Page 20]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1170,7 +1170,7 @@ Internet-Draft                 ACTN POI                      March 2021
    configure network-wide unique identifiers: it is therefore more
    viable for inter-AS links. For the links between the IP routers and
 
-Peruzzini et al.      Expires September 14, 2021              [Page 21]
+Peruzzini et al.      Expires September 15, 2021              [Page 21]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1226,7 +1226,7 @@ Internet-Draft                 ACTN POI                      March 2021
    (LTP), with inventory information, e.g., the physical port
    supporting an LTP, if any.
 
-Peruzzini et al.      Expires September 14, 2021              [Page 22]
+Peruzzini et al.      Expires September 15, 2021              [Page 22]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1282,7 +1282,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 23]
+Peruzzini et al.      Expires September 15, 2021              [Page 23]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1338,7 +1338,7 @@ Internet-Draft                 ACTN POI                      March 2021
              yang, work in progress.
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 24]
+Peruzzini et al.      Expires September 15, 2021              [Page 24]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1394,7 +1394,7 @@ Internet-Draft                 ACTN POI                      March 2021
              Virtual Private Networks Using BGP for Auto-Discovery and
              Signaling", RFC 6624, May 2012.
 
-Peruzzini et al.      Expires September 14, 2021              [Page 25]
+Peruzzini et al.      Expires September 15, 2021              [Page 25]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1450,7 +1450,7 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 26]
+Peruzzini et al.      Expires September 15, 2021              [Page 26]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1506,7 +1506,7 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 27]
+Peruzzini et al.      Expires September 15, 2021              [Page 27]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1562,7 +1562,7 @@ Contributors
 
    Email: antons@sedonasys.com
 
-Peruzzini et al.      Expires September 14, 2021              [Page 28]
+Peruzzini et al.      Expires September 15, 2021              [Page 28]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1618,7 +1618,7 @@ Authors' Addresses
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 29]
+Peruzzini et al.      Expires September 15, 2021              [Page 29]
 
 Internet-Draft                 ACTN POI                      March 2021
 
@@ -1674,5 +1674,5 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 14, 2021              [Page 30]
+Peruzzini et al.      Expires September 15, 2021              [Page 30]
 
