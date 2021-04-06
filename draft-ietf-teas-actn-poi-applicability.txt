@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: September 2021                                  March 15, 2021
+Expires: October 2021                                     April 6, 2021
 
 
 
@@ -50,9 +50,9 @@ Copyright Notice
 
 
 
-Peruzzini et al.      Expires September 15, 2021               [Page 1]
+Peruzzini et al.       Expires October 6, 2021                 [Page 1]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -97,20 +97,22 @@ Table of Contents
          3.2.3. YANG data models at the Packet MPIs.................18
       3.3. PCEP.....................................................18
    4. Multi-layer and multi-domain services scenarios...............19
-      4.1. Scenario 1: network and service topology discovery.......20
+      4.1. Scenario 1: inventory, service and network topology
+      discovery.....................................................20
          4.1.1. Inter-domain link discovery.........................21
          4.1.2. IP Link Setup Procedure.............................22
+         4.1.3. Inventory discovery.................................22
       4.2. L2VPN/L3VPN establishment................................23
    5. Security Considerations.......................................23
    6. Operational Considerations....................................24
+
+Peruzzini et al.       Expires October 6, 2021                 [Page 2]
+
+Internet-Draft                 ACTN POI                      April 2021
+
+
    7. IANA Considerations...........................................24
    8. References....................................................24
-
-Peruzzini et al.      Expires September 15, 2021               [Page 2]
-
-Internet-Draft                 ACTN POI                      March 2021
-
-
       8.1. Normative References.....................................24
       8.2. Informative References...................................25
    Appendix A.    Multi-layer and multi-domain resiliency...........27
@@ -159,14 +161,14 @@ Internet-Draft                 ACTN POI                      March 2021
    expenditure (CAPEX) and operational expenditure (OPEX) could be
    significantly reduced by better integrating the packet and the
    optical network. Multi-layer online topology insight can speed up
+
+Peruzzini et al.       Expires October 6, 2021                 [Page 3]
+
+Internet-Draft                 ACTN POI                      April 2021
+
+
    troubleshooting (e.g., alarm correlation) and network operation
    (e.g., coordination of maintenance events), multi-layer offline
-
-Peruzzini et al.      Expires September 15, 2021               [Page 3]
-
-Internet-Draft                 ACTN POI                      March 2021
-
-
    topology inventory can improve service quality (e.g., detection of
    diversity constraint violations) and multi-layer traffic engineering
    can use the available network capacity more efficiently (e.g.,
@@ -216,11 +218,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-
-
-Peruzzini et al.      Expires September 15, 2021               [Page 4]
+Peruzzini et al.       Expires October 6, 2021                 [Page 4]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 
@@ -274,9 +274,9 @@ Internet-Draft                 ACTN POI                      March 2021
    details depending on the policy chosen regarding the level of
    abstraction supported. The level of abstraction can be obtained
 
-Peruzzini et al.      Expires September 15, 2021               [Page 5]
+Peruzzini et al.       Expires October 6, 2021                 [Page 5]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    based on P-PNC and O-PNC configuration parameters (e.g. provide the
@@ -330,9 +330,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021               [Page 6]
+Peruzzini et al.       Expires October 6, 2021                 [Page 6]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    From an implementation perspective, the functions associated with
@@ -386,9 +386,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021               [Page 7]
+Peruzzini et al.       Expires October 6, 2021                 [Page 7]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    o  to enable catalogue-driven service provisioning from external
@@ -442,9 +442,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021               [Page 8]
+Peruzzini et al.       Expires October 6, 2021                 [Page 8]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
                +-------------------------------------------+
@@ -498,9 +498,9 @@ Internet-Draft                 ACTN POI                      March 2021
    o  The TE & Service Mapping YANG model [TSM] provides TE-service
       mapping as well as site mapping.
 
-Peruzzini et al.      Expires September 15, 2021               [Page 9]
+Peruzzini et al.       Expires October 6, 2021                 [Page 9]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
        o TE-service mapping provides the mapping between a L2/L3VPN
@@ -554,9 +554,9 @@ Internet-Draft                 ACTN POI                      March 2021
    network resources). For the first two cases, VN members can be
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 10]
+Peruzzini et al.       Expires October 6, 2021                [Page 10]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    hard-isolated, soft-isolated, or shared. For the third case, VN
@@ -610,9 +610,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 11]
+Peruzzini et al.       Expires October 6, 2021                [Page 11]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    3. Full knowledge: MDSC has the complete and enough detailed view of
@@ -666,9 +666,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 12]
+Peruzzini et al.       Expires October 6, 2021                [Page 12]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    If such a path is found, the MDSC selects the optimal path from the
@@ -722,9 +722,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 13]
+Peruzzini et al.       Expires October 6, 2021                [Page 13]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 
@@ -778,9 +778,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 14]
+Peruzzini et al.       Expires October 6, 2021                [Page 14]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    o  MPLS-TE tunnel label, assigned by the next hop P node of the
@@ -834,9 +834,9 @@ Internet-Draft                 ACTN POI                      March 2021
    1.1 Data Modeling Language, as defined in [RFC7950].
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 15]
+Peruzzini et al.       Expires October 6, 2021                [Page 15]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 3.2.1. Common YANG data models at the MPIs
@@ -890,9 +890,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 16]
+Peruzzini et al.       Expires October 6, 2021                [Page 16]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    o  The Ethernet Topology Model, defined in the "ietf-eth-te-
@@ -946,9 +946,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 17]
+Peruzzini et al.       Expires October 6, 2021                [Page 17]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 3.2.3. YANG data models at the Packet MPIs
@@ -1002,9 +1002,9 @@ Internet-Draft                 ACTN POI                      March 2021
    use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
    Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751],
 
-Peruzzini et al.      Expires September 15, 2021              [Page 18]
+Peruzzini et al.       Expires October 6, 2021                [Page 18]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    and PCE as a central controller (PCECC) [RFC8283] are some of the
@@ -1058,9 +1058,9 @@ Internet-Draft                 ACTN POI                      March 2021
    the MPI in the ACTN architecture. Non ACTN IETF data models required
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 19]
+Peruzzini et al.       Expires October 6, 2021                [Page 19]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    for L2/L3VPN service provisioning between MDSC and IP PNCs are also
@@ -1114,9 +1114,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 20]
+Peruzzini et al.       Expires October 6, 2021                [Page 20]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
   Alarms and event notifications are required between MDSC and PNCs so
@@ -1170,9 +1170,9 @@ Internet-Draft                 ACTN POI                      March 2021
    configure network-wide unique identifiers: it is therefore more
    viable for inter-AS links. For the links between the IP routers and
 
-Peruzzini et al.      Expires September 15, 2021              [Page 21]
+Peruzzini et al.       Expires October 6, 2021                [Page 21]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    the Optical NEs, the automatic discovery solution based on LLDP
@@ -1226,9 +1226,9 @@ Internet-Draft                 ACTN POI                      March 2021
    (LTP), with inventory information, e.g., the physical port
    supporting an LTP, if any.
 
-Peruzzini et al.      Expires September 15, 2021              [Page 22]
+Peruzzini et al.       Expires October 6, 2021                [Page 22]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    Inventory information through MPI and correlation with topology
@@ -1282,9 +1282,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 23]
+Peruzzini et al.       Expires October 6, 2021                [Page 23]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 6. Operational Considerations
@@ -1338,9 +1338,9 @@ Internet-Draft                 ACTN POI                      March 2021
              yang, work in progress.
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 24]
+Peruzzini et al.       Expires October 6, 2021                [Page 24]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    [OTN-TOPO] Zheng, H. et al., "A YANG Data Model for Optical
@@ -1394,9 +1394,9 @@ Internet-Draft                 ACTN POI                      March 2021
              Virtual Private Networks Using BGP for Auto-Discovery and
              Signaling", RFC 6624, May 2012.
 
-Peruzzini et al.      Expires September 15, 2021              [Page 25]
+Peruzzini et al.       Expires October 6, 2021                [Page 25]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    [RFC7209] A. Sajassi, R. Aggarwal, J. Uttaro, N. Bitar, W.
@@ -1450,9 +1450,9 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 26]
+Peruzzini et al.       Expires October 6, 2021                [Page 26]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 Appendix A. Multi-layer and multi-domain resiliency
@@ -1506,9 +1506,9 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 27]
+Peruzzini et al.       Expires October 6, 2021                [Page 27]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    b) If there is no LAG then the scenario is not clear since a router
@@ -1562,9 +1562,9 @@ Contributors
 
    Email: antons@sedonasys.com
 
-Peruzzini et al.      Expires September 15, 2021              [Page 28]
+Peruzzini et al.       Expires October 6, 2021                [Page 28]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
 
@@ -1618,9 +1618,9 @@ Authors' Addresses
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 29]
+Peruzzini et al.       Expires October 6, 2021                [Page 29]
 
-Internet-Draft                 ACTN POI                      March 2021
+Internet-Draft                 ACTN POI                      April 2021
 
 
    Italo Busi
@@ -1674,5 +1674,5 @@ Internet-Draft                 ACTN POI                      March 2021
 
 
 
-Peruzzini et al.      Expires September 15, 2021              [Page 30]
+Peruzzini et al.       Expires October 6, 2021                [Page 30]
 
