@@ -6,12 +6,13 @@
 
 This repository is to facilitate the work on the Applicability Statement of ACTN to POI propose to [IETF TEAS](https://datatracker.ietf.org/wg/teas/documents/) WG
 
+The datatracker information for this draft is avilable at: https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability/
+
 ### Abstract
 
-This document considers the applicability of ACTN to Packet Optical Integration (POI) and IP and Optical DWDM domain internetworking, and specifically the YANG models being defined by the IETF to support this deployment architecture.
+This document considers the applicability of Abstraction and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)in the context of IP/MPLS and Optical internetworking, identifying the YANG data models being defined by the IETF to support this deployment architecture as well as specific scenarios relevant for Service Providers.
 
-In this document we highlight the IETF protocols and data models that may be used for the ACTN and control of POI networks, with particular focus on the interfaces between the MDSC (Multi-Domain Service Coordinator) and the underlying Packet and Optical Domain Controllers (P-PNC and O-PNC) to support Packet Optical Integration (POI) use cases.
-
+Existing IETF protocols and data models are identified for each multi-layer (packet over optical) scenario with particular focus on the MPI (Multi-Domain Service Coordinator to Provisioning Network Controllers Interface)in the ACTN architecture.
 
 ## Contributing
 
@@ -30,6 +31,13 @@ You agree to comply with all applicable IETF policies and procedures, including,
 BCP 78, 79, the TLP, and the TLP rules regarding code components (e.g. being
 subject to a Simplified BSD License) in Contributions.
 
+### Weekly Calls
+
+The contributors on this draft has weekly informal conference calls:
+- Slot 1: every two weeks at , starting from April 6, 2021: https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics
+- Slot 2: every two week at , starting from April 13, 2021: https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics
+
+Minutes of these calls are available at: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
 
 ### Other Resources
 
