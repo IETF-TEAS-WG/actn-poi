@@ -2,9 +2,7 @@
 
 ## Scope
 
-This repository is to facilitate the work on the Applicability Statement of ACTN to POI propose to [IETF TEAS](https://datatracker.ietf.org/wg/teas/documents/) WG
-
-The datatracker information for this draft is avilable at: https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability/
+This repository is to facilitate the work on the [IETF TEAS](https://datatracker.ietf.org/wg/teas/documents/) WG Internet-Draft, "[Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)](https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability/)".
 
 ## Abstract
 
@@ -35,9 +33,9 @@ The contributors on this draft has weekly informal conference calls on two alter
 - [Slot 1](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics): every two weeks at 4:30am EDT, starting from April 6, 2021
 - [Slot 2](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics): every two week at 11am EDT, starting from April 13, 2021
 
-Draft minutes of these calls are taken at: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
+The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
 
-Approved minutes of these calls are published at: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
+Draft minutes are taken during the call at: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 ### Other Resources
 
