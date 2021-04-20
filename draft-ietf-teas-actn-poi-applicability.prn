@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: October 2021                                     April 6, 2021 
+     Expires: October 2021                                    April 20, 2021 
                                          
       
                                            
@@ -59,7 +59,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 1] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 1] 
 
 
 
@@ -122,10 +122,10 @@
               4.1.2. IP Link Setup Procedure.............................22 
               4.1.3. Inventory discovery.................................22 
            4.2. L2VPN/L3VPN establishment................................23 
-        5. Security Considerations.......................................23 
+        5. Security Considerations.......................................24 
         6. Operational Considerations....................................24 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 2] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 2] 
 
 
 
@@ -144,12 +144,12 @@
         8. References....................................................24 
            8.1. Normative References.....................................24 
            8.2. Informative References...................................25 
-        Appendix A.    Multi-layer and multi-domain resiliency...........27 
-           A.1.  Maintenance Window......................................27 
-           A.2.  Router port failure.....................................27 
-        Acknowledgments..................................................28 
-        Contributors.....................................................28 
-        Authors’ Addresses...............................................29 
+        Appendix A.    Multi-layer and multi-domain resiliency...........28 
+           A.1.  Maintenance Window......................................28 
+           A.2.  Router port failure.....................................28 
+        Acknowledgments..................................................29 
+        Contributors.....................................................29 
+        Authors’ Addresses...............................................30 
          
      1. Introduction 
 
@@ -191,7 +191,7 @@
         significantly reduced by better integrating the packet and the 
         optical network. Multi-layer online topology insight can speed up 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 3] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 3] 
 
 
 
@@ -257,7 +257,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 4] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 4] 
 
 
 
@@ -323,7 +323,7 @@
         details depending on the policy chosen regarding the level of 
         abstraction supported. The level of abstraction can be obtained 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 5] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 5] 
 
 
 
@@ -389,7 +389,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 6] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 6] 
 
 
 
@@ -455,7 +455,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 7] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 7] 
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 8] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 8] 
 
 
 
@@ -587,7 +587,7 @@
         o  The TE & Service Mapping YANG model [TSM] provides TE-service 
            mapping as well as site mapping.  
 
-     Peruzzini et al.       Expires October 6, 2021                 [Page 9] 
+     Peruzzini et al.       Expires October 20, 2021                [Page 9] 
 
 
 
@@ -653,7 +653,7 @@
         network resources). For the first two cases, VN members can be 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 10] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 10] 
 
 
 
@@ -719,7 +719,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 11] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 11] 
 
 
 
@@ -785,7 +785,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 12] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 12] 
 
 
 
@@ -851,7 +851,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 13] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 13] 
 
 
 
@@ -917,7 +917,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 14] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 14] 
 
 
 
@@ -983,7 +983,7 @@
         1.1 Data Modeling Language, as defined in [RFC7950]. 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 15] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 15] 
 
 
 
@@ -1049,7 +1049,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 16] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 16] 
 
 
 
@@ -1115,7 +1115,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 17] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 17] 
 
 
 
@@ -1181,7 +1181,7 @@
         use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
         Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751], 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 18] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 18] 
 
 
 
@@ -1247,7 +1247,7 @@
         the MPI in the ACTN architecture. Non ACTN IETF data models required 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 19] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 19] 
 
 
 
@@ -1276,7 +1276,13 @@
         In addition, the MDSC should discover the IP/MPLS transport services 
         (L2VPN/L3VPN) deployed, both intra-domain and inter-domain wise. 
 
-        MDSC should also discover also the whole inventory information of 
+        The O-PNC and P-PNC could discover and report the inventory 
+        information of their equipment that is used by the different 
+        management layers. In the context of POI, the inventory information 
+        of IP and WDM equipment can complement the topology views and 
+        facilitate the IP-Optical multi-layer view. 
+
+        MDSC could also discover also the whole inventory information of 
         both IP and WDM equipment and be able to correlate this information 
         with the links reported in the network topology. 
 
@@ -1305,15 +1311,9 @@
         databases about the physical ports from the routers (single link or 
         bundle links for LAG) to client ports in the ROADM. 
 
-       It should be possible at MDSC level to easily correlate WDM and IP 
-       layers alarms to speed-up troubleshooting 
 
 
-
-
-
-
-     Peruzzini et al.       Expires October 6, 2021                [Page 20] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 20] 
 
 
 
@@ -1327,6 +1327,9 @@
 
      Internet-Draft                 ACTN POI                      April 2021 
          
+
+       It should be possible at MDSC level to easily correlate WDM and IP 
+       layers alarms to speed-up troubleshooting 
 
        Alarms and event notifications are required between MDSC and PNCs so 
        that any network changes are reported almost in real-time to the MDSC 
@@ -1375,11 +1378,8 @@
         Topologies exposed by the two adjacent P-PNCs, supported by the two 
         ETH LTPs of an Ethernet Link discovered between these two P-PNCs. 
 
-        The static configuration requires an administrative burden to 
-        configure network-wide unique identifiers: it is therefore more 
-        viable for inter-AS links. For the links between the IP routers and 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 21] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 21] 
 
 
 
@@ -1394,6 +1394,9 @@
      Internet-Draft                 ACTN POI                      April 2021 
          
 
+        The static configuration requires an administrative burden to 
+        configure network-wide unique identifiers: it is therefore more 
+        viable for inter-AS links. For the links between the IP routers and 
         the Optical NEs, the automatic discovery solution based on LLDP 
         snooping is preferable when LLDP snooping is supported by the 
         Optical NEs. 
@@ -1440,12 +1443,9 @@
         [RFC8345] has foreseen some work for inventory as an augmentation of 
         the network model, but no YANG data model has been developed so far. 
 
-        There are also no YANG data models in IETF that could be used to 
-        correlate topology information, e.g., a link termination point 
-        (LTP), with inventory information, e.g., the physical port 
-        supporting an LTP, if any. 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 22] 
+
+     Peruzzini et al.       Expires October 20, 2021               [Page 22] 
 
 
 
@@ -1459,6 +1459,11 @@
 
      Internet-Draft                 ACTN POI                      April 2021 
          
+
+        There are also no YANG data models in IETF that could be used to 
+        correlate topology information, e.g., a link termination point 
+        (LTP), with inventory information, e.g., the physical port 
+        supporting an LTP, if any. 
 
         Inventory information through MPI and correlation with topology 
         information is identified as a gap requiring further work, which is 
@@ -1504,14 +1509,9 @@
         update, optimize or delete the tunnels connecting the PE nodes as 
         requested by the VPN instantiation. 
 
-     5. Security Considerations 
-
-        Several security considerations have been identified and will be 
-        discussed in future versions of this document. 
 
 
-
-     Peruzzini et al.       Expires October 6, 2021                [Page 23] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 23] 
 
 
 
@@ -1525,6 +1525,11 @@
 
      Internet-Draft                 ACTN POI                      April 2021 
          
+
+     5. Security Considerations 
+
+        Several security considerations have been identified and will be 
+        discussed in future versions of this document. 
 
      6. Operational Considerations 
 
@@ -1572,12 +1577,7 @@
                   Switched Optical Networks)", draft-ietf-ccamp-wson-yang, 
                   work in progress. 
 
-        [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for 
-                  Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
-                  yang, work in progress. 
-
-
-     Peruzzini et al.       Expires October 6, 2021                [Page 24] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 24] 
 
 
 
@@ -1591,6 +1591,10 @@
 
      Internet-Draft                 ACTN POI                      April 2021 
          
+
+        [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for 
+                  Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
+                  yang, work in progress. 
 
         [OTN-TOPO] Zheng, H. et al., "A YANG Data Model for Optical 
                   Transport Network Topology", draft-ietf-ccamp-otn-topo-
@@ -1639,11 +1643,7 @@
                   Auto-Discovery, and Signaling in Layer 2 Virtual Private 
                   Networks (L2VPNs)”, RFC 6074, January 2011. 
 
-        [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, “Layer 2 
-                  Virtual Private Networks Using BGP for Auto-Discovery and 
-                  Signaling”, RFC 6624, May 2012. 
-
-     Peruzzini et al.       Expires October 6, 2021                [Page 25] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 25] 
 
 
 
@@ -1657,6 +1657,10 @@
 
      Internet-Draft                 ACTN POI                      April 2021 
          
+
+        [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, “Layer 2 
+                  Virtual Private Networks Using BGP for Auto-Discovery and 
+                  Signaling”, RFC 6624, May 2012. 
 
         [RFC7209] A. Sajassi, R. Aggarwal, J. Uttaro, N. Bitar, W. 
                   Henderickx, and A. Isaac, “Requirements for Ethernet VPN 
@@ -1704,12 +1708,74 @@
                   draft-lee-teas-actn-pm-telemetry-autonomics, work in 
                   progress.  
 
+
+     Peruzzini et al.       Expires October 20, 2021               [Page 26] 
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                      April 2021 
+         
+
         [BGP-L3VPN] D. Jain, et al. “Yang Data Model for BGP/MPLS L3 VPNs”, 
                   draft-ietf-bess-l3vpn-yang, work in progress.  
 
          
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 26] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Peruzzini et al.       Expires October 20, 2021               [Page 27] 
 
 
 
@@ -1775,7 +1841,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 27] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 28] 
 
 
 
@@ -1841,7 +1907,7 @@
 
         Email: antons@sedonasys.com 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 28] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 29] 
 
 
 
@@ -1907,7 +1973,7 @@
          
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 29] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 30] 
 
 
 
@@ -1973,7 +2039,7 @@
 
 
 
-     Peruzzini et al.       Expires October 6, 2021                [Page 30] 
+     Peruzzini et al.       Expires October 20, 2021               [Page 31] 
 
 
 
