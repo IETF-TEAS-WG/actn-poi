@@ -4,6 +4,8 @@
 
 This repository is to facilitate the work on the [IETF TEAS](https://datatracker.ietf.org/wg/teas/documents/) WG Internet-Draft, "[Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)](https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability/)".
 
+[Diff editor copy vs published version](https://www.ietf.org/rfcdiff?url1=draft-ietf-teas-actn-poi-applicability&url2=https://github.com/FabioPeruzzini/actn-poi/blob/master/draft-ietf-teas-actn-poi-applicability.txt)
+
 ## Abstract
 
 This document considers the applicability of Abstraction and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)in the context of IP/MPLS and Optical internetworking, identifying the YANG data models being defined by the IETF to support this deployment architecture as well as specific scenarios relevant for Service Providers.
