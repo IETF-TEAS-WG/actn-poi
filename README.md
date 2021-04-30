@@ -4,7 +4,11 @@
 
 This repository is to facilitate the work on the [IETF TEAS](https://datatracker.ietf.org/wg/teas/documents/) WG Internet-Draft, "[Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)](https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability/)".
 
-[Diff editor copy vs published version](https://www.ietf.org/rfcdiff?url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
+Diff editor copy vs published version:
+- [Side-by-side diff](https://www.ietf.org/rfcdiff?url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
+- [Before-after diff](https://www.ietf.org/rfcdiff?difftype=--abdiff&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
+- [Changebars](https://www.ietf.org/rfcdiff?difftype=--chbars&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
+- [Side-by-side diff](https://www.ietf.org/rfcdiff?difftype=--hwdiff&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
 
 ## Abstract
 
