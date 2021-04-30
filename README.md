@@ -8,7 +8,7 @@ Diff editor copy vs published version:
 - [Side-by-side diff](https://www.ietf.org/rfcdiff?url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
 - [Before-after diff](https://www.ietf.org/rfcdiff?difftype=--abdiff&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
 - [Changebars](https://www.ietf.org/rfcdiff?difftype=--chbars&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
-- [Side-by-side diff](https://www.ietf.org/rfcdiff?difftype=--hwdiff&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
+- [Html wdiff](https://www.ietf.org/rfcdiff?difftype=--hwdiff&url1=draft-ietf-teas-actn-poi-applicability&url2=https://raw.githubusercontent.com/FabioPeruzzini/actn-poi/master/draft-ietf-teas-actn-poi-applicability.txt)
 
 ## Abstract
 
