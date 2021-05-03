@@ -36,8 +36,8 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- [Slot 1](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics): every two weeks at 4:30am EDT, starting from April 6, 2021
-- [Slot 2](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics): every two week at 11am EDT, starting from April 13, 2021
+- [Slot 1 (US friendly)](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics): every two weeks at 11am EDT, starting from May 4, 2021
+- [Slot 2 (China friendly)](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics): every two week at 4:30am EDT, starting from May 11, 2021
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
 
