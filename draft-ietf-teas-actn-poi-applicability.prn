@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: November 2021                                      May 5, 2021 
+     Expires: November 2021                                     May 11, 2021 
                                          
       
                                            
@@ -59,7 +59,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 1] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 1] 
 
 
 
@@ -125,7 +125,7 @@
         5. Security Considerations.......................................24 
         6. Operational Considerations....................................24 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 2] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 2] 
 
 
 
@@ -191,7 +191,7 @@
         significantly reduced by better integrating the packet and the 
         optical network. Multi-layer online topology insight can speed up 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 3] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 3] 
 
 
 
@@ -257,7 +257,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 4] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 4] 
 
 
 
@@ -323,7 +323,7 @@
         details depending on the policy chosen regarding the level of 
         abstraction supported. The level of abstraction can be obtained 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 5] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 5] 
 
 
 
@@ -389,7 +389,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 6] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 6] 
 
 
 
@@ -455,7 +455,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 7] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 7] 
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 8] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 8] 
 
 
 
@@ -587,7 +587,7 @@
         o  The TE & Service Mapping YANG model [TSM] provides TE-service 
            mapping as well as site mapping.  
 
-     Peruzzini et al.       Expires November 5, 2021                [Page 9] 
+     Peruzzini et al.      Expires November 11, 2021                [Page 9] 
 
 
 
@@ -653,7 +653,7 @@
         network resources). For the first two cases, VN members can be 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 10] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 10] 
 
 
 
@@ -695,11 +695,11 @@
            controller). A possible solution could be to include a CNC 
            function in the P-PNC to request the MDSC multi-domain Optical 
            path computation, as shown in Figure 10 of [RFC8453]. Another 
-           possible solution could be to rely on the MDSC hierarchy, as 
-           defined in section 4.1 of [RFC8453], where, for each domain, a 
-           "lower-level MDSC" (L-MDSC) provides the essential multi-layer 
-           correlation and the "higher-level MDSC" (H-MDSC) provides the 
-           multi-domain coordination. 
+           possible solution could be to rely on the MDSC recursive 
+           hierarchy, as defined in section 4.1 of [RFC8453], where, for 
+           each domain, a "lower-level MDSC" (L-MDSC) provides the essential 
+           multi-layer correlation and the "higher-level MDSC" (H-MDSC) 
+           provides the multi-domain coordination. 
 
         2. Partial summarization: MDSC has full visibility of the TE 
            topology of the packet network domains and an abstracted view of 
@@ -719,7 +719,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 11] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 11] 
 
 
 
@@ -785,7 +785,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 12] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 12] 
 
 
 
@@ -851,7 +851,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 13] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 13] 
 
 
 
@@ -917,7 +917,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 14] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 14] 
 
 
 
@@ -983,7 +983,7 @@
         1.1 Data Modeling Language, as defined in [RFC7950]. 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 15] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 15] 
 
 
 
@@ -1049,7 +1049,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 16] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 16] 
 
 
 
@@ -1115,7 +1115,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 17] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 17] 
 
 
 
@@ -1181,7 +1181,7 @@
         use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
         Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751], 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 18] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 18] 
 
 
 
@@ -1247,7 +1247,7 @@
         the MPI in the ACTN architecture. Non ACTN IETF data models required 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 19] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 19] 
 
 
 
@@ -1313,7 +1313,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 20] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 20] 
 
 
 
@@ -1379,7 +1379,7 @@
         ETH LTPs of an Ethernet Link discovered between these two P-PNCs. 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 21] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 21] 
 
 
 
@@ -1445,7 +1445,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 22] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 22] 
 
 
 
@@ -1511,7 +1511,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 23] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 23] 
 
 
 
@@ -1577,7 +1577,7 @@
                   Switched Optical Networks)", draft-ietf-ccamp-wson-yang, 
                   work in progress. 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 24] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 24] 
 
 
 
@@ -1643,7 +1643,7 @@
                   Auto-Discovery, and Signaling in Layer 2 Virtual Private 
                   Networks (L2VPNs)”, RFC 6074, January 2011. 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 25] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 25] 
 
 
 
@@ -1709,7 +1709,7 @@
                   progress.  
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 26] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 26] 
 
 
 
@@ -1775,7 +1775,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 27] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 27] 
 
 
 
@@ -1841,7 +1841,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 28] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 28] 
 
 
 
@@ -1907,7 +1907,7 @@
 
         Email: antons@sedonasys.com 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 29] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 29] 
 
 
 
@@ -1973,7 +1973,7 @@
          
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 30] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 30] 
 
 
 
@@ -2039,7 +2039,7 @@
 
 
 
-     Peruzzini et al.       Expires November 5, 2021               [Page 31] 
+     Peruzzini et al.      Expires November 11, 2021               [Page 31] 
 
 
 
