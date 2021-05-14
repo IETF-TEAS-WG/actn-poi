@@ -126,6 +126,8 @@ informative:
 
 --- middle
 
+{: #introduction}
+
 # Introduction
 
    The full automation of the management and control of Service
@@ -381,6 +383,8 @@ informative:
    Above two MDSC workflow cases are in the scope of this draft. The
    workflow initiation is transparent at the MPI.
 
+{: #lxvpn-mdsc-nbi}
+
 ## L2/L3VPN Service Request in North Bound of MDSC
 
    As explained in {{reference-architecture}}, the OSS/Orchestration layer can request
@@ -528,7 +532,12 @@ informative:
       retrieve the topology/configuration information from the Optical
       controller). A possible solution could be to include a CNC
       function in the P-PNC to request the MDSC multi-domain Optical
-      path computation, as shown in Figure 10 of {{RFC8453}}.
+      path computation, as shown in Figure 10 of {{RFC8453}}. Another
+      possible solution could be to rely on the MDSC recursive
+      hierarchy, as defined in section 4.1 of {{RFC8453}}, where, for
+      each domain, a "lower-level MDSC" (L-MDSC) provides the essential
+      multi-layer correlation and the "higher-level MDSC" (H-MDSC)
+      provides the multi-domain coordination.
 
    2. Partial summarization: MDSC has full visibility of the TE
       topology of the packet network domains and an abstracted view of
@@ -614,6 +623,8 @@ informative:
    distributed in the PE and BR nodes by BGP. The MDSC is responsible
    to configure the BGP speakeers in each P-PNC, if needed.
 
+{: #ip-controller}
+
 ## IP/MPLS Domain Controller and NE Functions
 
    IP/MPLS networks are assumed to have multiple domains, where each
@@ -680,6 +691,8 @@ informative:
       tunnel selected by the MDSC and distributed by mechanism internal
       to the IP/MPLS domain (e.g., RSVP-TE).
 
+{: #optical-controller}
+
 ## Optical Domain Controller and NE Functions
 
    Optical network provides the underlay connectivity services to
@@ -706,11 +719,15 @@ informative:
    coordination between the OTN and WDM layers is performed by the
    O-PNC.
 
+{: #mpi}
+
 # Interface protocols and YANG data models for the MPIs
 
    This section describes general assumptions which are applicable at
    all the MPI interfaces, between each PNC (Optical or Packet) and the
    MDSC, and also to all the scenarios discussed in this document.
+
+{: #mpi-restconf}
 
 ## RESTCONF protocol at the MPIs
 
@@ -720,6 +737,8 @@ informative:
    compliant with Network Management Datastore Architecture (NMDA)
    defined in {{!RFC8342}}, are assumed to be used as well at these MPI
    interfaces and also at CMI interfaces.
+
+{: #mpi-yang}
 
 ## YANG data models at the MPIs
 
@@ -763,6 +782,8 @@ informative:
 
    PNCs and MDSCs must be compliant with subscription requirements as
    stated in {{!RFC7923}}.
+
+{: #optical-yang}
 
 ### YANG models at the Optical MPIs
 
@@ -826,6 +847,8 @@ informative:
    provided by the technology-specific models which augment the generic
    TE-Tunnel Model.
 
+{: #packet-yang}
+
 ### YANG data models at the Packet MPIs
 
    The Packet PNC also uses at least the following technology-specific
@@ -866,6 +889,8 @@ informative:
 
    \[Editors' note]: Add YANG models used for tunnel and service
    configuration.
+
+{: #mpi-pcep}
 
 ## PCEP
 
@@ -929,6 +954,8 @@ informative:
    for L2/L3VPN service provisioning between MDSC and IP PNCs are also
    identified.
 
+{: #scenario-1}
+
 ## Scenario 1: inventory, service and network topology discovery
 
    In this scenario, the MSDC needs to discover through the underlying
@@ -984,6 +1011,8 @@ informative:
   path etc.). As specified in {{!RFC7923}} MDSC must be able to subscribe
   to specific objects from PNC YANG datastores for notifications.
 
+{: #inter-domain-link}
+
 ### Inter-domain link discovery
 
    In the reference network of {{reference-scenario}}, there are two types of
@@ -1037,6 +1066,8 @@ informative:
    implementation specific and needs to be consistent across all the
    PNCs.
 
+{: #ip-link}
+
 ### IP Link Setup Procedure
 
    The MDSC requires the O-PNC to setup a WDM Tunnel (either a WSON
@@ -1066,6 +1097,8 @@ informative:
    Link between the two routers: the MDSC also configures the two ETH
    LTPs which support the two IP LTPs terminating this IP Link.
 
+{: #inventory}
+
 ### Inventory discovery
 
    The are no YANG data models in IETF that could be used to report at
@@ -1082,6 +1115,8 @@ informative:
    Inventory information through MPI and correlation with topology
    information is identified as a gap requiring further work, which is
    outside of the scope of this draft.
+
+{: #scenario-2}
 
 ## L2VPN/L3VPN establishment
 
