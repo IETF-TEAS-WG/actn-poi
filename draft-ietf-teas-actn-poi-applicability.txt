@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: November 2021                                     May 14, 2021
+Expires: December 2021                                    June 14, 2021
 
 
 
@@ -50,9 +50,9 @@ Copyright Notice
 
 
 
-Peruzzini et al.      Expires November 14, 2021                [Page 1]
+Peruzzini et al.      Expires December 14, 2021                [Page 1]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -103,24 +103,24 @@ Table of Contents
          4.1.2. IP Link Setup Procedure.............................22
          4.1.3. Inventory discovery.................................22
       4.2. L2VPN/L3VPN establishment................................23
-   5. Security Considerations.......................................24
-   6. Operational Considerations....................................24
+   5. Security Considerations.......................................26
+   6. Operational Considerations....................................26
 
-Peruzzini et al.      Expires November 14, 2021                [Page 2]
+Peruzzini et al.      Expires December 14, 2021                [Page 2]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
-   7. IANA Considerations...........................................24
-   8. References....................................................24
-      8.1. Normative References.....................................24
-      8.2. Informative References...................................25
-   Appendix A.    Multi-layer and multi-domain resiliency...........28
-      A.1.  Maintenance Window......................................28
-      A.2.  Router port failure.....................................28
-   Acknowledgments..................................................29
-   Contributors.....................................................29
-   Authors' Addresses...............................................30
+   7. IANA Considerations...........................................26
+   8. References....................................................26
+      8.1. Normative References.....................................26
+      8.2. Informative References...................................28
+   Appendix A.    Multi-layer and multi-domain resiliency...........30
+      A.1.  Maintenance Window......................................30
+      A.2.  Router port failure.....................................30
+   Acknowledgments..................................................31
+   Contributors.....................................................31
+   Authors' Addresses...............................................32
 
 1. Introduction
 
@@ -162,9 +162,9 @@ Internet-Draft                 ACTN POI                        May 2021
    significantly reduced by better integrating the packet and the
    optical network. Multi-layer online topology insight can speed up
 
-Peruzzini et al.      Expires November 14, 2021                [Page 3]
+Peruzzini et al.      Expires December 14, 2021                [Page 3]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    troubleshooting (e.g., alarm correlation) and network operation
@@ -218,9 +218,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021                [Page 4]
+Peruzzini et al.      Expires December 14, 2021                [Page 4]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 
@@ -274,9 +274,9 @@ Internet-Draft                 ACTN POI                        May 2021
    details depending on the policy chosen regarding the level of
    abstraction supported. The level of abstraction can be obtained
 
-Peruzzini et al.      Expires November 14, 2021                [Page 5]
+Peruzzini et al.      Expires December 14, 2021                [Page 5]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    based on P-PNC and O-PNC configuration parameters (e.g. provide the
@@ -330,9 +330,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021                [Page 6]
+Peruzzini et al.      Expires December 14, 2021                [Page 6]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    From an implementation perspective, the functions associated with
@@ -386,9 +386,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021                [Page 7]
+Peruzzini et al.      Expires December 14, 2021                [Page 7]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    o  to enable catalogue-driven service provisioning from external
@@ -442,9 +442,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021                [Page 8]
+Peruzzini et al.      Expires December 14, 2021                [Page 8]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
                +-------------------------------------------+
@@ -498,9 +498,9 @@ Internet-Draft                 ACTN POI                        May 2021
    o  The TE & Service Mapping YANG model [TSM] provides TE-service
       mapping as well as site mapping.
 
-Peruzzini et al.      Expires November 14, 2021                [Page 9]
+Peruzzini et al.      Expires December 14, 2021                [Page 9]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
        o TE-service mapping provides the mapping between a L2/L3VPN
@@ -554,9 +554,9 @@ Internet-Draft                 ACTN POI                        May 2021
    network resources). For the first two cases, VN members can be
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 10]
+Peruzzini et al.      Expires December 14, 2021               [Page 10]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    hard-isolated, soft-isolated, or shared. For the third case, VN
@@ -585,12 +585,7 @@ Internet-Draft                 ACTN POI                        May 2021
       retrieve the topology/configuration information from the Optical
       controller). A possible solution could be to include a CNC
       function in the P-PNC to request the MDSC multi-domain Optical
-      path computation, as shown in Figure 10 of [RFC8453]. Another
-      possible solution could be to rely on the MDSC recursive
-      hierarchy, as defined in section 4.1 of [RFC8453], where, for
-      each domain, a "lower-level MDSC" (L-MDSC) provides the essential
-      multi-layer correlation and the "higher-level MDSC" (H-MDSC)
-      provides the multi-domain coordination.
+      path computation, as shown in Figure 10 of [RFC8453].
 
    2. Partial summarization: MDSC has full visibility of the TE
       topology of the packet network domains and an abstracted view of
@@ -610,9 +605,14 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 11]
+
+
+
+
+
+Peruzzini et al.      Expires December 14, 2021               [Page 11]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    3. Full knowledge: MDSC has the complete and enough detailed view of
@@ -666,9 +666,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 12]
+Peruzzini et al.      Expires December 14, 2021               [Page 12]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    If such a path is found, the MDSC selects the optimal path from the
@@ -722,9 +722,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 13]
+Peruzzini et al.      Expires December 14, 2021               [Page 13]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 
@@ -778,9 +778,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 14]
+Peruzzini et al.      Expires December 14, 2021               [Page 14]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    o  MPLS-TE tunnel label, assigned by the next hop P node of the
@@ -834,9 +834,9 @@ Internet-Draft                 ACTN POI                        May 2021
    1.1 Data Modeling Language, as defined in [RFC7950].
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 15]
+Peruzzini et al.      Expires December 14, 2021               [Page 15]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 3.2.1. Common YANG data models at the MPIs
@@ -890,9 +890,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 16]
+Peruzzini et al.      Expires December 14, 2021               [Page 16]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    o  The Ethernet Topology Model, defined in the "ietf-eth-te-
@@ -946,9 +946,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 17]
+Peruzzini et al.      Expires December 14, 2021               [Page 17]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 3.2.3. YANG data models at the Packet MPIs
@@ -1002,9 +1002,9 @@ Internet-Draft                 ACTN POI                        May 2021
    use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
    Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751],
 
-Peruzzini et al.      Expires November 14, 2021               [Page 18]
+Peruzzini et al.      Expires December 14, 2021               [Page 18]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    and PCE as a central controller (PCECC) [RFC8283] are some of the
@@ -1058,9 +1058,9 @@ Internet-Draft                 ACTN POI                        May 2021
    the MPI in the ACTN architecture. Non ACTN IETF data models required
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 19]
+Peruzzini et al.      Expires December 14, 2021               [Page 19]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    for L2/L3VPN service provisioning between MDSC and IP PNCs are also
@@ -1114,9 +1114,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 20]
+Peruzzini et al.      Expires December 14, 2021               [Page 20]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
   It should be possible at MDSC level to easily correlate WDM and IP
@@ -1170,9 +1170,9 @@ Internet-Draft                 ACTN POI                        May 2021
    ETH LTPs of an Ethernet Link discovered between these two P-PNCs.
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 21]
+Peruzzini et al.      Expires December 14, 2021               [Page 21]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    The static configuration requires an administrative burden to
@@ -1226,9 +1226,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 22]
+Peruzzini et al.      Expires December 14, 2021               [Page 22]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    There are also no YANG data models in IETF that could be used to
@@ -1240,52 +1240,192 @@ Internet-Draft                 ACTN POI                        May 2021
    information is identified as a gap requiring further work, which is
    outside of the scope of this draft.
 
-4.2. L2VPN/L3VPN establishment
+4.2. Establishment of L2VPN/L3VPN with TE requirements
 
-   To be added
+   In this scenario the MDSC needs to setup a multi-domain L2VPN or a
+   L3VPN with some SLA requirements.
 
-   [Editor's Note] What mechanism would convey on the interface to the
-   IP/MPLS domain controllers as well as on the SBI (between IP/MPLS
-   domain controllers and IP/MPLS PE routers) the TE binding policy
-   dynamically for the L3VPN? Typically, VRF is the function of the
-   device that participate MP-BGP in MPLS VPN. With current MP-BGP
-   implementation in MPLS VPN, the VRF's BGP next hop is the
-   destination PE and the mapping to a tunnel (either an LDP or a BGP
-   tunnel) toward the destination PE is done by automatically without
-   any configuration. It is to be determined the impact on the PE VRF
-   operation when the tunnel is an optical bypass tunnel which does not
-   participate either LDP or BGP.
+   What are the models at P-PNC MPI:
 
-   New text to answer the yellow part:
+   o  L3NM
 
-   The MDSC Network-related function will then coordinate with the PNCs
-   involved in the process to provide the provisioning information
-   through ACTN MDSC to PNC (MPI) interface. The relevant data models
-   used at the MPI may be in the form of L3NM, L2NM or others and are
-   exchanged through MPI API calls. Through this process MDSC Network-
-   related functions provide the configuration information to realize a
-   VPN service to PNCs. For example, this process will inform PNCs on
-   what PE routers compose a L3VPN, the topology requested, the VPN
-   attributes, etc.
+   o  TE Tunnel
 
-   At the end of the process PNCs will deliver the actual configuration
-   to the devices (either physical or virtual), through the ACTN
-   Southbound Interface (SBI). In this case the configuration policies
-   may be exchanged using a Netconf session delivering configuration
-   commands associated to device-specific data models (e.g. BGP[], QOS
-   [], etc.).
+   o  TE Service Mapping (TSM)
 
-   Having the topology information of the network domains under their
-   control, PNCs will deliver all the information necessary to create,
-   update, optimize or delete the tunnels connecting the PE nodes as
-   requested by the VPN instantiation.
+   Figure 4 provides an example of an hub&spoke L3VPN with three PEs
+   where the hub PE (PE13) and one spoke PE (PE14) are within the same
+   packet domain and the other spoke PE (PE23) is within a different
+   packet domain.
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 23]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Figure 4 Multi-domain L3VPN example
+
+
+Peruzzini et al.      Expires December 14, 2021               [Page 23]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
+
+   There are many options to implement multi-domain L3VPN, including:
+
+     1. BGP-LU (seamless MPLS)
+     2. Inter-domain RSVP-TE
+     3. Inter-domain SR-TE
+
+   This version of the draft analyses the inter-domain SR-TE option. A
+   future update of this draft will provide an high-analysis of the
+   BGP-LU option. Other options are not analysed in this document.
+
+   It is assumed that each packet domain in Figure 4 is implementing
+   SR-TE and the stitching between two domains is done using end-to-
+   end/multi-domain SR-TE.
+
+   It is assumed that the MDSC adopts  the partial summarization model,
+   described in section 2.2, having full visibility of the underlying
+   multi-layer TE topology.
+
+   The MDSC needs to translate the L3VPN SLA requirements to TE
+   requirements and specific SR policies.
+
+   The MDSC needs to find the SR-TE paths between PE13 (hub PE) and,
+   respectively, PE23 and PE14 (spoke PEs) that meet the L3VPN TE
+   requirements.
+
+   For each SR-TE path required to support the L3VPN, it is possible
+   that:
+
+   1. A SR-TE path that meets the TE requirements already exist in the
+      network.
+
+   2. An existing SR-TE path could be modified (e.g., through bandwidth
+      increase) to meet the TE requirements:
+
+       a. The SR-TE path characteristics can be modified only in the
+          packet  layer.
+
+       b. One or more new underlay Optical tunnels need to be setup to
+          support the requestested changes of the overlay SR-TE paths
+          (multi-layer involved).
+
+   3. A new SR-TE path needs to be setup:
+
+       a. The new SR-TE path reuses existing underlay optical tunnels;
+
+       b. One or more new underlay Optical tunnels need to be setup to
+          support the setup of the new SR-TE path  (multi-layer
+          involved).
+
+   For example, considering the L3VPN in Figure 4, the MDSC knows that:
+
+Peruzzini et al.      Expires December 14, 2021               [Page 24]
+
+Internet-Draft                 ACTN POI                       June 2021
+
+
+   o  an SR-TE path  between PE13 and PE14 already exists but have not
+      enough bandwidth to support the new L3VPN;
+
+   o  the IP link between P16 and PE14 has not enough bandwidth to
+      support increasing the bandwidth of that SR-TE path;
+
+   o  it is possible to setup a new underlay optical tunnel to increase
+      the bandwidth of the IP link between P16 and PE14 to support
+      increasing the bandwidth of that overlay SR-TE path.
+
+   [Editor's Note] Further investigation is needed to understand how
+   the MDSC could control the bandwidth of an SR-TE path.
+
+   The MDSC discovers the bandwidth of all the IP Links, including the
+   link, as described in section 4.1.
+
+   MDSC can use the path computation YANG model, defined in [PATH-
+   COMPUTE], to request the O-PNC1 to perform the path computation of
+   the optical tunnel that could be used to increase the bandwidth of
+   the IP link between P16 and PE14.
+
+   [Editor's Note] Check for technology-specific extensions of the path
+   computation YANG model.
+
+   The MDSC would therefore request:
+
+   o  the O-PNC1 to setup a new optical tunnel between the ROADMs
+      connected to P16 and PE14;
+
+   o  the P-PNC1 to update the LAG configuration of the IP link between
+      P16 and PE14;
+
+   o  the P-PNC1 to update the bandwidth of the selected SR-TE path
+      between PE13 and PE14.
+
+   [Editor's Note] Further investigation is needed to understand how
+   the MDSC can request the P-PNC to modify the bandwidth used by an
+   SR-TE path.
+
+   For example, considering the L3VPN in Figure 4, the MDSC can also
+   decide that a new multi-domain SR-TE path needs to be setup betweend
+   PE13 and P23.
+
+   As described in section 2.2, with partial summarization, the MDSC
+   will use the TE topology information provided by the P-PNCs and the
+   results of the path computation requests send to the O-PNCs to
+   compute the multi-layer/multi-domain path between PE13 and P23.
+
+   For example, the multi-layer/multi-domain performed by the MDSC
+   could require the setup of:
+
+Peruzzini et al.      Expires December 14, 2021               [Page 25]
+
+Internet-Draft                 ACTN POI                       June 2021
+
+
+     . a new underlay optical tunnel between PE13 and BR11, supporting
+        a new IP link, as described in section 4.1.2;
+     . a new underlay optical tunnel between BR21 and P24 to increase
+        the bandwidth of an existing IP link/LAG.
+
+   [Editor's Note] Clean up this text and the text in section 4.1.2 if
+   the latter is update to reflect the IP link discovery rather than IP
+   link setup.
+
+   MDSC then configures the new end-to-end SR-TE path with the right SR
+   policy and requests P-PNC 1 and P-PNC 2 to configure the complete
+   label stack to be pushed respectively on PE13 for one direction and
+   on PE23 for the other direction).
+
+   [Editor's Note] Further investigation is needed to understand how
+   the new end-to-end SR-TE path can be configured (in particular which
+   information should the MDSC provide to the P-PNC to drive its
+   configuration of the complete label stack to be pushed on PE).
+
+   Once the SR-TE paths have been selected and, if needed,
+   setup/modified, the MDSC can configure on both P-PNCs the L3VPN and
+   its binding with the selected SR-TE paths  using the [L3NM] and
+   [TSM] YANG models.
+
+   [Editor's Note] Further investigation is needed to understand how
+   the binding between a L3VPN and this new end-to-end SR-TE path can
+   be configured.
 
 5. Security Considerations
 
@@ -1309,6 +1449,11 @@ Internet-Draft                 ACTN POI                        May 2021
 
    [RFC7950] Bjorklund, M. et al., "The YANG 1.1 Data Modeling
              Language", RFC 7950, August 2016.
+
+Peruzzini et al.      Expires December 14, 2021               [Page 26]
+
+Internet-Draft                 ACTN POI                       June 2021
+
 
    [RFC7951] Lhotka, L., "JSON Encoding of Data Modeled with YANG", RFC
              7951, August 2016.
@@ -1338,11 +1483,6 @@ Internet-Draft                 ACTN POI                        May 2021
              Switched Optical Networks)", draft-ietf-ccamp-wson-yang,
              work in progress.
 
-Peruzzini et al.      Expires November 14, 2021               [Page 24]
-
-Internet-Draft                 ACTN POI                        May 2021
-
-
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
              yang, work in progress.
@@ -1365,6 +1505,11 @@ Internet-Draft                 ACTN POI                        May 2021
 
    [WSON-TUNNEL]  Lee, Y. et al., "A Yang Data Model for WSON Tunnel",
              draft-ietf-ccamp-wson-tunnel-model, work in progress.
+
+Peruzzini et al.      Expires December 14, 2021               [Page 27]
+
+Internet-Draft                 ACTN POI                       June 2021
+
 
    [Flexi-MC]  Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
@@ -1394,11 +1539,6 @@ Internet-Draft                 ACTN POI                        May 2021
              Auto-Discovery, and Signaling in Layer 2 Virtual Private
              Networks (L2VPNs)", RFC 6074, January 2011.
 
-Peruzzini et al.      Expires November 14, 2021               [Page 25]
-
-Internet-Draft                 ACTN POI                        May 2021
-
-
    [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, "Layer 2
              Virtual Private Networks Using BGP for Auto-Discovery and
              Signaling", RFC 6624, May 2012.
@@ -1419,6 +1559,13 @@ Internet-Draft                 ACTN POI                        May 2021
 
    [RFC8299] Q. Wu, S. Litkowski, L. Tomotaki, and K. Ogaki, "YANG Data
              Model for L3VPN Service Delivery", RFC 8299, January 2018.
+
+
+
+Peruzzini et al.      Expires December 14, 2021               [Page 28]
+
+Internet-Draft                 ACTN POI                       June 2021
+
 
    [RFC8309] Q. Wu, W. Liu, and A. Farrel, "Service Model Explained",
              RFC 8309, January 2018.
@@ -1449,12 +1596,6 @@ Internet-Draft                 ACTN POI                        May 2021
              draft-lee-teas-actn-pm-telemetry-autonomics, work in
              progress.
 
-
-Peruzzini et al.      Expires November 14, 2021               [Page 26]
-
-Internet-Draft                 ACTN POI                        May 2021
-
-
    [BGP-L3VPN] D. Jain, et al. "Yang Data Model for BGP/MPLS L3 VPNs",
              draft-ietf-bess-l3vpn-yang, work in progress.
 
@@ -1477,38 +1618,9 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Peruzzini et al.      Expires November 14, 2021               [Page 27]
+Peruzzini et al.      Expires December 14, 2021               [Page 29]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 Appendix A. Multi-layer and multi-domain resiliency
@@ -1562,9 +1674,9 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 28]
+Peruzzini et al.      Expires December 14, 2021               [Page 30]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    b) If there is no LAG then the scenario is not clear since a router
@@ -1618,9 +1730,9 @@ Contributors
 
    Email: antons@sedonasys.com
 
-Peruzzini et al.      Expires November 14, 2021               [Page 29]
+Peruzzini et al.      Expires December 14, 2021               [Page 31]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
 
@@ -1674,9 +1786,9 @@ Authors' Addresses
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 30]
+Peruzzini et al.      Expires December 14, 2021               [Page 32]
 
-Internet-Draft                 ACTN POI                        May 2021
+Internet-Draft                 ACTN POI                       June 2021
 
 
    Italo Busi
@@ -1730,5 +1842,5 @@ Internet-Draft                 ACTN POI                        May 2021
 
 
 
-Peruzzini et al.      Expires November 14, 2021               [Page 31]
+Peruzzini et al.      Expires December 14, 2021               [Page 33]
 
