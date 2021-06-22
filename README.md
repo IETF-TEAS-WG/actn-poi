@@ -39,13 +39,13 @@ The contributors on this draft has weekly informal conference calls on two alter
 - Slot 1 (US friendly): every two weeks at 11am EDT, starting from May 4, 2021
   - [Calendar](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m1f27ff49f21119bc2cc522005af7cb2e)
+  - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
 - Slot 2 (China friendly): every two week at 4:30am EDT, starting from May 11, 2021
   - [Calendar](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m1b325a3b9aace0b99377ae43ee31402c)
+  - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
-
-Draft minutes are taken during the call at: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 ### Other Resources
 
