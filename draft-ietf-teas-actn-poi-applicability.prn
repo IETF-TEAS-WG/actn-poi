@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: December 2021                                    June 22, 2021 
+     Expires: December 2021                                    June 24, 2021 
                                          
       
                                            
@@ -59,7 +59,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 1] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 1] 
 
 
 
@@ -122,10 +122,10 @@
               4.1.2. IP Link Setup Procedure.............................22 
               4.1.3. Inventory discovery.................................22 
            4.2. L2VPN/L3VPN establishment................................23 
-        5. Security Considerations.......................................28 
-        6. Operational Considerations....................................28 
+        5. Security Considerations.......................................29 
+        6. Operational Considerations....................................29 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 2] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 2] 
 
 
 
@@ -140,16 +140,16 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
-        7. IANA Considerations...........................................28 
-        8. References....................................................28 
-           8.1. Normative References.....................................28 
-           8.2. Informative References...................................29 
-        Appendix A.    Multi-layer and multi-domain resiliency...........32 
-           A.1.  Maintenance Window......................................32 
-           A.2.  Router port failure.....................................32 
-        Acknowledgments..................................................33 
-        Contributors.....................................................33 
-        Authors’ Addresses...............................................34 
+        7. IANA Considerations...........................................29 
+        8. References....................................................29 
+           8.1. Normative References.....................................29 
+           8.2. Informative References...................................30 
+        Appendix A.    Multi-layer and multi-domain resiliency...........33 
+           A.1.  Maintenance Window......................................33 
+           A.2.  Router port failure.....................................33 
+        Acknowledgments..................................................34 
+        Contributors.....................................................34 
+        Authors’ Addresses...............................................35 
          
      1. Introduction 
 
@@ -191,7 +191,7 @@
         significantly reduced by better integrating the packet and the 
         optical network. Multi-layer online topology insight can speed up 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 3] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 3] 
 
 
 
@@ -257,7 +257,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 4] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 4] 
 
 
 
@@ -323,7 +323,7 @@
         details depending on the policy chosen regarding the level of 
         abstraction supported. The level of abstraction can be obtained 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 5] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 5] 
 
 
 
@@ -389,7 +389,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 6] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 6] 
 
 
 
@@ -455,7 +455,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 7] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 7] 
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 8] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 8] 
 
 
 
@@ -587,7 +587,7 @@
         o  The TE & Service Mapping YANG model [TSM] provides TE-service 
            mapping as well as site mapping.  
 
-     Peruzzini et al.      Expires December 22, 2021                [Page 9] 
+     Peruzzini et al.      Expires December 24, 2021                [Page 9] 
 
 
 
@@ -653,7 +653,7 @@
         network resources). For the first two cases, VN members can be 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 10] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 10] 
 
 
 
@@ -719,7 +719,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 11] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 11] 
 
 
 
@@ -785,7 +785,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 12] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 12] 
 
 
 
@@ -851,7 +851,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 13] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 13] 
 
 
 
@@ -917,7 +917,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 14] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 14] 
 
 
 
@@ -983,7 +983,7 @@
         1.1 Data Modeling Language, as defined in [RFC7950]. 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 15] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 15] 
 
 
 
@@ -1049,7 +1049,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 16] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 16] 
 
 
 
@@ -1115,7 +1115,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 17] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 17] 
 
 
 
@@ -1181,7 +1181,7 @@
         use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
         Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751], 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 18] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 18] 
 
 
 
@@ -1247,7 +1247,7 @@
         the MPI in the ACTN architecture. Non ACTN IETF data models required 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 19] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 19] 
 
 
 
@@ -1313,7 +1313,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 20] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 20] 
 
 
 
@@ -1379,7 +1379,7 @@
         ETH LTPs of an Ethernet Link discovered between these two P-PNCs. 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 21] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 21] 
 
 
 
@@ -1445,7 +1445,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 22] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 22] 
 
 
 
@@ -1487,31 +1487,31 @@
         packet domain and the other spoke PE (PE23) is within a different 
         packet domain. 
 
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-                         Figure 4 Multi-domain L3VPN example 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 23] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 23] 
 
 
 
@@ -1526,11 +1526,71 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
+             ------ 
+            | CE13 |___________________ 
+             ------                    )           __________________ 
+            ( |                         )         (                  ) 
+           (  | PE13     P15       BR11  )       (  BR21         P24  ) 
+          ( ____         ___       ____   )     (   ____         ___   ) 
+         ( / H  \ _ _ _ /   \ _ _ /    \ _)_ _ _(_ /    \ _ _ _ /   \  ) 
+        (  \____/...    \___/     \____/   )   (   \____/       \___/   ) 
+        (          :.....                   )  (                  |     ) 
+        (    ____       :__       ____      )  (  ____           _|__   ) 
+         (  / S  \...../   \._._./    \__________/    \._._._._./  S \  ) 
+          ( \____/     \___/     \____/     )  ( \____/         \____/  ) 
+           (   |                           )    (                   |  ) 
+            (  | PE14   P16       BR12     )    ( BR22         PE23 |  ) 
+             ( |                          )      (                  | ) 
+             ------                      )        (               ------ 
+            | CE14 | ___________________)          (_____________| CE23 | 
+             ------                                               ------ 
+         
+            _____________________________         ___________________ 
+           (                             )       (                   ) 
+          ( ____              ____        )     (       ____          ) 
+         ( /    \ __ _ _ _ _ /    \        )   (       /    \ _ _      ) 
+        (  \____/..          \____/         )  (       \____/    \     ) 
+        (     |   :.....  ...:   \          )  (        /         \    ) 
+        (    _|__      :__:        \____    )  (    ___/         __\_  ) 
+        (   /    \_ _ /    \ _ _ _ /    \   )  (   /    \ _ _ _ /    \ ) 
+         (  \____/    \____/       \____/  )   (   \____/       \____/ ) 
+          (                               )     (                     ) 
+           (_____________________________)       (___________________) 
+         
+                  Optical Domain 1                  Optical Domain 2 
+         
+         
+             H / S = Hub VRF / Spoke VRF 
+            _._._  = Intra-domain local protection TI-LFA 
+            ____   = Inter-domain interconnections 
+            .....  = SR policy Path 1 
+            _ _ _  = SR policy Path 2 
+         
+                         Figure 4 Multi-domain L3VPN example 
+
         There are many options to implement multi-domain L3VPN, including: 
 
           1. BGP-LU (seamless MPLS) 
           2. Inter-domain RSVP-TE 
           3. Inter-domain SR-TE 
+
+
+
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 24] 
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                       June 2021 
+         
 
         This version of the draft analyses the inter-domain SR-TE option. A 
         future update of this draft will provide an high-analysis of the 
@@ -1577,7 +1637,13 @@
                support the requested changes of the overlay SR-TE paths  
                (multi-layer involved). 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 24] 
+        3. A new SR-TE path needs to be setup: 
+
+            a. The new SR-TE path reuses existing underlay optical tunnels; 
+
+
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 25] 
 
 
 
@@ -1591,10 +1657,6 @@
 
      Internet-Draft                 ACTN POI                       June 2021 
          
-
-        3. A new SR-TE path needs to be setup: 
-
-            a. The new SR-TE path reuses existing underlay optical tunnels; 
 
             b. One or more new underlay Optical tunnels need to be setup to 
                support the setup of the new SR-TE path  (multi-layer 
@@ -1643,7 +1705,11 @@
         The MDSC discovers the bandwidth of all the IP Links, including the 
         link between P16 and PE14, as described in section 4.1. 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 25] 
+        MDSC can use the path computation YANG model, defined in [PATH-
+        COMPUTE], to request the O-PNC1 to perform the path computation of 
+
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 26] 
 
 
 
@@ -1658,8 +1724,6 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
-        MDSC can use the path computation YANG model, defined in [PATH-
-        COMPUTE], to request the O-PNC1 to perform the path computation of 
         the optical tunnel that could be used to increase the bandwidth of 
         the IP link between P16 and PE14. 
 
@@ -1707,9 +1771,11 @@
         decide that a new multi-domain SR-TE path needs to be setup betweend 
         PE13 and PE23. 
 
+        As described in section 2.2, with partial summarization, the MDSC 
+        will use the TE topology information provided by the P-PNCs and the 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 26] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 27] 
 
 
 
@@ -1724,8 +1790,6 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
-        As described in section 2.2, with partial summarization, the MDSC 
-        will use the TE topology information provided by the P-PNCs and the 
         results of the path computation requests send to the O-PNCs to 
         compute the multi-layer/multi-domain path between PE13 and PE23. 
 
@@ -1775,7 +1839,9 @@
         forward the packet to BR21 over a give inter-domain link: check the 
         SR-TE topology model? 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 27] 
+                         JUNE 22 – DRAFTED UP TO THIS POINT 
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 28] 
 
 
 
@@ -1789,8 +1855,6 @@
 
      Internet-Draft                 ACTN POI                       June 2021 
          
-
-                         JUNE 22 – DRAFTED UP TO THIS POINT 
 
         Once the SR-TE paths have been selected and, if needed, 
         setup/modified, the MDSC can configure on both P-PNCs the L3VPN and 
@@ -1841,7 +1905,9 @@
 
         [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019. 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 28] 
+
+
+     Peruzzini et al.      Expires December 24, 2021               [Page 29] 
 
 
 
@@ -1907,7 +1973,7 @@
                   selection, and registration of an Autonomous System (AS)”, 
                   RFC 1930, March 1996. 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 29] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 30] 
 
 
 
@@ -1973,7 +2039,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 30] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 31] 
 
 
 
@@ -2039,7 +2105,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 31] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 32] 
 
 
 
@@ -2105,7 +2171,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 32] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 33] 
 
 
 
@@ -2171,7 +2237,7 @@
 
         Email: antons@sedonasys.com 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 33] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 34] 
 
 
 
@@ -2237,7 +2303,7 @@
          
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 34] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 35] 
 
 
 
@@ -2303,7 +2369,7 @@
 
 
 
-     Peruzzini et al.      Expires December 22, 2021               [Page 35] 
+     Peruzzini et al.      Expires December 24, 2021               [Page 36] 
 
 
 
