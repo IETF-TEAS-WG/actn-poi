@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: December 2021                                    June 24, 2021 
+     Expires: December 2021                                    June 29, 2021 
                                          
       
                                            
@@ -26,7 +26,7 @@
                  Networks (ACTN) to Packet Optical Integration (POI) 
 
 
-                      draft-ietf-teas-actn-poi-applicability-02 
+                      draft-ietf-teas-actn-poi-applicability-03 
 
 
      Status of this Memo 
@@ -59,7 +59,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 1] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 1] 
 
 
 
@@ -114,18 +114,18 @@
               3.2.1. Common YANG data models at the MPIs.................16 
               3.2.2. YANG models at the Optical MPIs.....................16 
               3.2.3. YANG data models at the Packet MPIs.................18 
-           3.3. PCEP.....................................................18 
-        4. Multi-layer and multi-domain services scenarios...............19 
+           3.3. PCEP.....................................................19 
+        4. Multi-layer and multi-domain services scenarios...............20 
            4.1. Scenario 1: inventory, service and network topology 
            discovery.....................................................20 
               4.1.1. Inter-domain link discovery.........................21 
               4.1.2. IP Link Setup Procedure.............................22 
               4.1.3. Inventory discovery.................................22 
            4.2. L2VPN/L3VPN establishment................................23 
-        5. Security Considerations.......................................29 
+        5. Security Considerations.............Error! Bookmark not defined. 
         6. Operational Considerations....................................29 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 2] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 2] 
 
 
 
@@ -141,9 +141,9 @@
          
 
         7. IANA Considerations...........................................29 
-        8. References....................................................29 
-           8.1. Normative References.....................................29 
-           8.2. Informative References...................................30 
+        8. References....................................................30 
+           8.1. Normative References.....................................30 
+           8.2. Informative References...................................31 
         Appendix A.    Multi-layer and multi-domain resiliency...........33 
            A.1.  Maintenance Window......................................33 
            A.2.  Router port failure.....................................33 
@@ -191,7 +191,7 @@
         significantly reduced by better integrating the packet and the 
         optical network. Multi-layer online topology insight can speed up 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 3] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 3] 
 
 
 
@@ -257,7 +257,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 4] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 4] 
 
 
 
@@ -323,7 +323,7 @@
         details depending on the policy chosen regarding the level of 
         abstraction supported. The level of abstraction can be obtained 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 5] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 5] 
 
 
 
@@ -389,7 +389,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 6] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 6] 
 
 
 
@@ -455,7 +455,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 7] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 7] 
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 8] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 8] 
 
 
 
@@ -587,7 +587,7 @@
         o  The TE & Service Mapping YANG model [TSM] provides TE-service 
            mapping as well as site mapping.  
 
-     Peruzzini et al.      Expires December 24, 2021                [Page 9] 
+     Peruzzini et al.      Expires December 29, 2021                [Page 9] 
 
 
 
@@ -653,7 +653,7 @@
         network resources). For the first two cases, VN members can be 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 10] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 10] 
 
 
 
@@ -719,7 +719,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 11] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 11] 
 
 
 
@@ -785,7 +785,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 12] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 12] 
 
 
 
@@ -851,7 +851,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 13] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 13] 
 
 
 
@@ -917,7 +917,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 14] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 14] 
 
 
 
@@ -983,7 +983,7 @@
         1.1 Data Modeling Language, as defined in [RFC7950]. 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 15] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 15] 
 
 
 
@@ -1049,7 +1049,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 16] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 16] 
 
 
 
@@ -1115,7 +1115,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 17] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 17] 
 
 
 
@@ -1138,13 +1138,18 @@
         3.2.1: 
 
         o  The L3 Topology Model, defined in the “ietf-l3-unicast-topology” 
-           YANG modules of [RFC8346], which augments the Base Network 
+           YANG module of [RFC8346], which augments the Base Network 
            Topology Model 
 
         o  The L3 specific data model including extended TE attributes (e.g. 
            performance derived metrics like latency), defined in “ietf-l3-
-           te-topology” and in “ietf-te-topology-packet” in draft-ietf-teas-
-           l3-te-topo [L3-TE-TOPO] 
+           te-topology” and in “ietf-te-topology-packet” YANG modules of 
+           [L3-TE-TOPO] 
+
+        o  When SR-TE is used, the SR Topology Model, defined in the “ietf-
+           sr-mpls-topology” YANG module of [SR-TE-TOPO]: this YANG module 
+           is used together with other YANG modules to provide the SR-TE 
+           topology view as described in figure 2 of [SR-TE-TOPO] 
 
         o  The Ethernet Topology Model, defined in the “ietf-eth-te-
            topology” YANG module of [CLIENT-TOPO], which augments the TE 
@@ -1172,16 +1177,11 @@
         [Editor’s note:] Add YANG models used for tunnel and service 
         configuration. 
 
-     3.3. PCEP 
 
-        [RFC8637] examines the applicability of a Path Computation Element 
-        (PCE) [RFC5440] and PCE Communication Protocol (PCEP) to the ACTN 
-        framework. It further describes how the PCE architecture is 
-        applicable to ACTN and lists the PCEP extensions that are needed to 
-        use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
-        Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751], 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 18] 
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 18] 
 
 
 
@@ -1196,6 +1196,14 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
+     3.3. PCEP 
+
+        [RFC8637] examines the applicability of a Path Computation Element 
+        (PCE) [RFC5440] and PCE Communication Protocol (PCEP) to the ACTN 
+        framework. It further describes how the PCE architecture is 
+        applicable to ACTN and lists the PCEP extensions that are needed to 
+        use PCEP as an ACTN interface.  The stateful PCE [RFC8231], PCE-
+        Initiation [RFC8281], stateful Hierarchical PCE (H-PCE) [RFC8751], 
         and PCE as a central controller (PCECC) [RFC8283] are some of the 
         key extensions that enable the use of PCE/PCEP for ACTN. 
 
@@ -1238,16 +1246,8 @@
         RESTCONF/YANG interface is deployed at the MPI (i.e., option 1 
         above). 
 
-     4. Multi-layer and multi-domain services scenarios 
 
-        Multi-layer and multi-domain scenarios, based on reference network 
-        described in section 2, and very relevant for Service Providers, are 
-        described in the next sections. For each scenario existing IETF 
-        protocols and data models are identified with particular focus on 
-        the MPI in the ACTN architecture. Non ACTN IETF data models required 
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 19] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 19] 
 
 
 
@@ -1262,6 +1262,13 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
+     4. Multi-layer and multi-domain services scenarios 
+
+        Multi-layer and multi-domain scenarios, based on reference network 
+        described in section 2, and very relevant for Service Providers, are 
+        described in the next sections. For each scenario existing IETF 
+        protocols and data models are identified with particular focus on 
+        the MPI in the ACTN architecture. Non ACTN IETF data models required 
         for L2/L3VPN service provisioning between MDSC and IP PNCs are also 
         identified. 
 
@@ -1306,14 +1313,7 @@
         and WDM layers (e.g.: which port, lambda/OTSi, direction is used by 
         a specific IP service on the WDM equipment). 
 
-        In particular, for the cross-layer links it is key for MDSC to be 
-        able to correlate automatically the information from the PNC network 
-        databases about the physical ports from the routers (single link or 
-        bundle links for LAG) to client ports in the ROADM. 
-
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 20] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 20] 
 
 
 
@@ -1327,6 +1327,11 @@
 
      Internet-Draft                 ACTN POI                       June 2021 
          
+
+        In particular, for the cross-layer links it is key for MDSC to be 
+        able to correlate automatically the information from the PNC network 
+        databases about the physical ports from the routers (single link or 
+        bundle links for LAG) to client ports in the ROADM. 
 
        It should be possible at MDSC level to easily correlate WDM and IP 
        layers alarms to speed-up troubleshooting 
@@ -1373,13 +1378,8 @@
 
         Both types of inter-domain links are discovered using the plug-id 
         attributes reported in the Ethernet Topologies exposed by the two 
-        adjacent PNCs. The MDSC can also discover an inter-domain IP 
-        link/adjacency between the two IP LTPs, reported in the IP 
-        Topologies exposed by the two adjacent P-PNCs, supported by the two 
-        ETH LTPs of an Ethernet Link discovered between these two P-PNCs. 
 
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 21] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 21] 
 
 
 
@@ -1393,6 +1393,11 @@
 
      Internet-Draft                 ACTN POI                       June 2021 
          
+
+        adjacent PNCs. The MDSC can also discover an inter-domain IP 
+        link/adjacency between the two IP LTPs, reported in the IP 
+        Topologies exposed by the two adjacent P-PNCs, supported by the two 
+        ETH LTPs of an Ethernet Link discovered between these two P-PNCs. 
 
         The static configuration requires an administrative burden to 
         configure network-wide unique identifiers: it is therefore more 
@@ -1406,34 +1411,9 @@
         implementation specific and needs to be consistent across all the 
         PNCs. 
 
-     4.1.2. IP Link Setup Procedure 
+     4.1.2. Multi-layer IP Link discovery 
 
-        The MDSC requires the O-PNC to setup a WDM Tunnel (either a WSON 
-        Tunnel or a Flexi grid Tunnel) within the DWDM network between the 
-        two Optical Transponders (OTs) associated with the two access links. 
-
-        The Optical Transponders are reported by the O-PNC as Trail 
-        Termination Points (TTPs), defined in [TE TOPO], within the WDM 
-        Topology. The association between the Ethernet access link and the 
-        WDM TTP is reported by the Inter Layer Lock (ILL) identifiers, 
-        defined in [TE TOPO], reported by the O PNC within the Ethernet 
-        Topology and WDM Topology. 
-
-        The MDSC also requires the O-PNC to steer the Ethernet client 
-        traffic between the two access Ethernet Links over the WDM Tunnel. 
-
-        After the WDM Tunnel has been setup and the client traffic steering 
-        configured, the two IP routers can exchange Ethernet packets between 
-        themselves, including LLDP messages. 
-
-        If LLDP [IEEE 802.1AB] is used between the two routers, the P PNC 
-        can automatically discover the IP Link being set up by the MDSC. The 
-        IP LTPs terminating this IP Link are supported by the ETH LTPs 
-        terminating the two access links. 
-
-        Otherwise, the MDSC needs to require the P PNC to configure an IP 
-        Link between the two routers: the MDSC also configures the two ETH 
-        LTPs which support the two IP LTPs terminating this IP Link. 
+        To be added 
 
      4.1.3. Inventory discovery 
 
@@ -1443,9 +1423,29 @@
         [RFC8345] has foreseen some work for inventory as an augmentation of 
         the network model, but no YANG data model has been developed so far. 
 
+        There are also no YANG data models in IETF that could be used to 
+        correlate topology information, e.g., a link termination point 
+        (LTP), with inventory information, e.g., the physical port 
+        supporting an LTP, if any. 
 
+        Inventory information through MPI and correlation with topology 
+        information is identified as a gap requiring further work, which is 
+        outside of the scope of this draft. 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 22] 
+     4.1.4. SR-TE paths discovery 
+
+        This version of the draft assumes that discovery of existing SR-TE 
+        paths, including their bandwidth, at the MPI is done using the 
+        generic TE tunnel YANG data model, defined in [TE-TUNNEL], with 
+        SR-TE specific augmentations, as also outlined in section 1 of 
+        [TE-TUNNEL]. 
+
+        To enable MDSC to discover the full end-to-end SR-TE path 
+        configuration, the SR-TE specific augmentation of the [TE-TUNNEL] 
+        should allow the P PNC to report the SID list assigned to an SR-TE 
+        path within its domain. 
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 22] 
 
 
 
@@ -1460,27 +1460,20 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
-        There are also no YANG data models in IETF that could be used to 
-        correlate topology information, e.g., a link termination point 
-        (LTP), with inventory information, e.g., the physical port 
-        supporting an LTP, if any. 
+        [Editors’ note:] Need to check if SR-TE specific augmentation is 
+        required for SR-TE path discovery 
 
-        Inventory information through MPI and correlation with topology 
-        information is identified as a gap requiring further work, which is 
-        outside of the scope of this draft. 
+        For example, considering the L3VPN in Figure 4, the PE13-P16-PE14 
+        SR-TE path, as well as the SR-TE path in the reverse direction 
+        (between PE14 and PE13), could be reported by the P-PNC1 to the MDSC 
+        as TE paths of the same TE tunnel instance. The bandwidth of these 
+        TE paths represents the bandwidth allocated by P-PNC1 to the two SR-
+        TE paths,which can be symmetric or asymmetric in the two directions. 
 
      4.2. Establishment of L2VPN/L3VPN with TE requirements 
 
         In this scenario the MDSC needs to setup a multi-domain L2VPN or a 
         L3VPN with some SLA requirements. 
-
-        What are the models at P-PNC MPI: 
-
-        o  L3NM 
-
-        o  TE Tunnel 
-
-        o  TE Service Mapping (TSM) 
 
         Figure 4 provides an example of an hub&spoke L3VPN with three PEs 
         where the hub PE (PE13) and one spoke PE (PE14) are within the same 
@@ -1511,7 +1504,14 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 23] 
+
+
+
+
+
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 23] 
 
 
 
@@ -1561,23 +1561,23 @@
          
          
              H / S = Hub VRF / Spoke VRF 
-            _._._  = Intra-domain local protection TI-LFA 
             ____   = Inter-domain interconnections 
             .....  = SR policy Path 1 
             _ _ _  = SR policy Path 2 
          
                          Figure 4 Multi-domain L3VPN example 
 
+        [Editors’ note:] Update the SR policy paths to show the intra-domain 
+        PE13-P16-P14 and inter-domain PE13-BR11-BR12-P24-PE23 paths. No need 
+        to show the TI-LFA in this figure. Remove also the intra-domain TI-
+        LFA. 
+
         There are many options to implement multi-domain L3VPN, including: 
 
           1. BGP-LU (seamless MPLS) 
           2. Inter-domain RSVP-TE 
-          3. Inter-domain SR-TE 
 
-
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 24] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 24] 
 
 
 
@@ -1592,22 +1592,23 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
+          3. Inter-domain SR-TE 
+
         This version of the draft analyses the inter-domain SR-TE option. A 
         future update of this draft will provide an high-analysis of the 
         BGP-LU option. Other options are not analysed in this document. 
 
         It is assumed that each packet domain in Figure 4 is implementing 
         SR-TE and the stitching between two domains is done using end-to-
-        end/multi-domain SR-TE. It is assumed that each packet domain in 
-        Figure 4 is using TI-LFA, with SRLG awareness, for local protection 
-        within each domain. 
+        end/multi-domain SR-TE. It is assumed that the bandwidth of each 
+        intra-domain SR-TE path is managed by the P-PNC and that binding SID 
+        is used for the end-to-end SR-TE path stitching. It is assumed that 
+        each packet domain in Figure 4 is using TI-LFA, with SRLG awareness, 
+        for local protection within each domain. 
 
         [Editor’s note:] Analyse how TI-LFA can take into account multi-
         layer SRLG disjointness, providing that SRLG information is provided 
         by the O-PNCs to the P-PNC throught the MDSC. 
-
-        The MDSC needs to translate the L3VPN SLA requirements to TE 
-        requirements and specific SR policies. 
 
         It is assumed that the MDSC adopts  the partial summarization model, 
         described in section 2.2, having full visibility of the packet layer 
@@ -1615,11 +1616,10 @@
         topology. 
 
         The MDSC needs to translate the L3VPN SLA requirements to TE 
-        requirements and specific SR policies. 
-
-        The MDSC needs to find the SR-TE paths between PE13 (hub PE) and, 
-        respectively, PE23 and PE14 (spoke PEs) that meet the L3VPN TE 
-        requirements. 
+        requirements (e.g., bandwidth, TE metric bounds, SRLG disjointness, 
+        nodes/links/domains inclusion/exclusion) and find the SR-TE paths 
+        between PE13 (hub PE) and, respectively, PE23 and PE14 (spoke PEs) 
+        that meet these TE requirements. 
 
         For each SR-TE path required to support the L3VPN, it is possible 
         that: 
@@ -1631,11 +1631,11 @@
            increase) to meet the TE requirements: 
 
             a. The SR-TE path characteristics can be modified only in the 
-               packet  layer. 
+               packet layer. 
 
             b. One or more new underlay Optical tunnels need to be setup to 
                support the requested changes of the overlay SR-TE paths  
-               (multi-layer involved). 
+               (multi-layer coordination is required). 
 
         3. A new SR-TE path needs to be setup: 
 
@@ -1643,7 +1643,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 25] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 25] 
 
 
 
@@ -1660,122 +1660,56 @@
 
             b. One or more new underlay Optical tunnels need to be setup to 
                support the setup of the new SR-TE path  (multi-layer 
-               involved). 
+               coordination is required). 
 
-        For example, considering the L3VPN in Figure 4, the MDSC knows that: 
+        For example, considering the L3VPN in Figure 4, the MDSC discovers 
+        that: 
 
-        o  an SR-TE path between PE13 and PE14 already exists but have not 
-           enough bandwidth to support the new L3VPN; 
+        o  a PE13-P16-PE14 SR-TE path already exists but have not enough 
+           bandwidth to support the new L3VPN, as described in section 
+           4.1.4; 
 
-        o  the IP link between P16 and PE14 has not enough bandwidth to 
-           support increasing the bandwidth of that SR-TE path; 
+        o  the IP link(s) between P16 and PE14 has not enough bandwidth to 
+           support increasing the bandwidth of that SR-TE path, as described 
+           in section 4.1; 
 
-        o  it is possible to setup a new underlay optical tunnel to increase 
-           the bandwidth of the IP link between P16 and PE14 to support 
-           increasing the bandwidth of that overlay SR-TE path. 
-
-        [Editor’s Note] Further investigation is needed to understand how 
-        the MDSC could control the bandwidth of an SR-TE path. 
-
-        Regarding SR-TE path and bandwidth, two options. 
-
-        Option 1: have an ad-hoc SR-TE path model (e.g., draft-ietf-spring-
-        sr-policy-yang) 
-
-        Option 2: is to rely on the generic TE tunnel model, defined in [TE-
-        TUNNEL] with SR-TE technology-specific augmentation, to be defined. 
-
-        In this case the SR-TE path between PE13 and PE14, as well as the 
-        SR-TE path in the reverse direction (between PE14 and PE13) are 
-        reported by the P-PNC to the MDSC as paths within a TE tunnel 
-        instance. The bandwidth of the path/tunnel represents the bandwidth 
-        of these SR-TE path. 
-
-        The P-PNC reports the available bandwidth on the IP links, including 
-        the IP link between P16 and PE14, using the SR-TE topology model, 
-        defined in draft-ietf-teas-yang-sr-te-topo. 
-
-        MDSC can request the O-PNC, using the PC RPC, defined in [PATH-
-        COMPUTE], whether it is possible to setup a new optical tunnel 
-        between P16 and PE14. Need to check if OTN and/or WDM technology-
-        specific extensions are required. The dimensioning of the underlay 
-        optical tunnel is decided by the MDSC based on its multi-layer 
-        optimization policy. 
-
-        The MDSC discovers the bandwidth of all the IP Links, including the 
-        link between P16 and PE14, as described in section 4.1. 
-
-        MDSC can use the path computation YANG model, defined in [PATH-
-        COMPUTE], to request the O-PNC1 to perform the path computation of 
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 26] 
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       June 2021 
-         
-
-        the optical tunnel that could be used to increase the bandwidth of 
-        the IP link between P16 and PE14. 
+        o  a new underlay optical tunnel could be setup to increase the 
+           bandwidth IP link(s) between P16 and PE14 to support increasing 
+           the bandwidth of that overlay SR-TE path, as described in section 
+           4.2.1. The dimensioning of the underlay optical tunnel is decided 
+           by the MDSC based on the bandwidth requested by the SR-TE path 
+           and on its multi-layer optimization policy, which is an internal 
+           MDSC implementation issue. 
 
         [Editor’s Note] Clarify that the IP link bandwidth increase can be 
         done either by LAG or by ECMP. Both options are valid and widely 
         deployed and more or less the same from POI perspective. 
 
-        [Editor’s Note] Check for technology-specific extensions of the path 
-        computation YANG model. 
-
         The MDSC would therefore request: 
 
         o  the O-PNC1 to setup a new optical tunnel between the ROADMs 
-           connected to P16 and PE14; 
+           connected to P16 and PE14, as described in section 4.2.2; 
 
         o  the P-PNC1 to update the configuration of the existing IP link, 
            in case of LAG, or configure a new IP link, in case of ECMP, 
-           between P16 and PE14; 
+           between P16 and PE14, as described in section 4.2.2; 
 
         o  the P-PNC1 to update the bandwidth of the selected SR-TE path 
-           between PE13 and PE14. 
-
-        [Editor’s Note] Further investigation is needed to understand how 
-        the MDSC can request the P-PNC to modify the bandwidth used by an 
-        SR-TE path. 
-
-        MDSC requests the O-PNC to setup a new optical tunnel between the 
-        ROADMs connected to P16 and PE14 using either [OTN-TUNNEL] or [WSON-
-        TUNNEL] or [FLEXI-GRID-MEDIA-CHANNEL] model depending on the 
-        underlying optical technology. MDSC also configures the [CLIENT-
-        SIGNAL] on the access links between the ROADM and the routers. 
-
-        See section xyz about the configuration of the IP Link/LAG (to be 
-        cleaned-up). 
-
-        With option 2, MDSC can use the [TE-TUNNEL] model to request the P-
-        PNC to increase the bandwidth allocated to the SR-TE path between 
-        PE13 and PE14 and, if needed, also on the reverse SR-TE path between 
-        PE14 and PE13. The [TE-TUNNEL] model supports both symmetric and 
-        asymmetric bandwidth configuration in the two directions. 
-
-        With option 1, more investigation is required. 
+           between PE13 and PE14, as described in section 4.2.3. 
 
         For example, considering the L3VPN in Figure 4, the MDSC can also 
-        decide that a new multi-domain SR-TE path needs to be setup betweend 
+        decide that a new multi-domain SR-TE path needs to be setup between 
         PE13 and PE23. 
 
         As described in section 2.2, with partial summarization, the MDSC 
         will use the TE topology information provided by the P-PNCs and the 
+        results of the path computation requests sent to the O-PNCs, as 
+        described in section section 4.2.1, to compute the 
+        multi-layer/multi-domain path between PE13 and PE23. 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 27] 
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 26] 
 
 
 
@@ -1789,59 +1723,59 @@
 
      Internet-Draft                 ACTN POI                       June 2021 
          
-
-        results of the path computation requests send to the O-PNCs to 
-        compute the multi-layer/multi-domain path between PE13 and PE23. 
 
         For example, the multi-layer/multi-domain performed by the MDSC 
         could require the setup of: 
 
         o  a new underlay optical tunnel between PE13 and BR11, supporting a 
-           new IP link, as described in section 4.1.2; 
+           new IP link, as described in section 4.2.2; 
 
         o  a new underlay optical tunnel between BR21 and P24 to increase 
-           the bandwidth of an existing IP link/LAG. 
+           the bandwidth of the IP link(s) between BR21 and P24, as 
+           described in section 4.2.2. 
 
-        [Editor’s Note] Clean up this text and the text in section 4.1.2 if 
-        the latter is update to reflect the IP link discovery rather than IP 
-        link setup. 
+        After that, the MDSC requests P-PNC2 to setup an SR-TE path between 
+        BR21 and PE23, with an explicit path (BR21, P24, PE23) as described 
+        in section 4.2.3. The P-PNC2, knowing the node and the adjacency 
+        SIDs assigned within its domain, can install the proper SR policy, 
+        or hierarchical policies, within BR21 and returns to the MDSC the 
+        assigned binding SID. 
 
-        MDSC then configures the new end-to-end SR-TE path with the right SR 
-        policy and requests P-PNC 1 and P-PNC 2 to configure the complete 
-        label stack to be pushed respectively on PE13 for one direction and 
-        on PE23 for the other direction). 
-
-        [Editor’s Note] Further investigation is needed to understand how 
-        the new end-to-end SR-TE path can be configured (in particular which 
-        information should the MDSC provide to the P-PNC to drive its 
-        configuration of the complete label stack to be pushed on PE). 
-
-        [Editor’s Note] Update the text above to consider the binding SID 
-        case. 
-
-        MDSC requests P-PNC2 to setup an SR-TE path between BR21 and PE23, 
-        with the explicit path (BR21, P24, PE23), to force P-PNC2 to setup 
-        the path that has been computed by MDSC: P-PNC installs the policy 
-        in BR21 and returns to the MDSC the assigned binding SID. The 
-        binding SID should be persistent in case BR21 or P-PNC rebooting. 
-
-        With option 2 the request can be made using the generic [TE-TUNNEL], 
-        which supports specifying the explicit path, with 
-        technology-specific SR-TE extensions which should include a 
-        mechanism for the P-PNC2 to report MDSC the value of the allocated 
-        binding SID. 
+        [Editor’s Note] Further investigation is needed for the SR specific 
+        extensions to the TE tunnel model. 
 
         MDSC request P-PNC1 to setup an SR-TE path between PE13 and BR11, 
-        specifying the EPE SID and the binding SID to be used for the end-
-        to-end SR-TE path stitching. 
+        with an explicit path (PE13, BR11), specifying the inter-domain link 
+        toward BR21 and the binding SID to be used for the end-to-end SR-TE 
+        path stitching, as described in section 4.2.3. The P-PNC1, knowing 
+        also the node and the adjacency SIDs assigned within its domain and 
+        the EPE SID assigned by BR11 to the inter-domain link toward BR21, 
+        installs the proper policy, or policies, within PE13. 
 
-        How the MDSC can discover the EPE SID to be used instruct BR11 to 
-        forward the packet to BR21 over a give inter-domain link: check the 
-        SR-TE topology model? 
+        Once the SR-TE paths have been selected and, if needed, 
+        setup/modified, the MDSC can request to both P-PNCs to configure the 
+        L3VPN and its binding with the selected SR-TE paths  using the 
+        [L3NM] and [TSM] YANG models. 
 
-                         JUNE 22 – DRAFTED UP TO THIS POINT 
+        [Editor’s Note] Further investigation is needed to understand how 
+        the binding between a L3VPN and this new end-to-end SR-TE path can 
+        be configured. 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 28] 
+     4.2.1. Optical Path Computation 
+
+        As described in section 2.2, the optical path computation is usually 
+        performed by the Optical PNC. 
+
+        When performing multi-layer/multi-domain path computation, the MDSC 
+        can delegate the Optical PNCs for single-domain optical path 
+        computation. 
+
+        As discussed in [PATH-COMPUTE], there are two options to request an 
+        Optical PNC to perform optical path computation: either via a 
+        "compute-only" TE tunnel path, using the generic TE tunnel YANG data 
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 27] 
 
 
 
@@ -1856,14 +1790,104 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
-        Once the SR-TE paths have been selected and, if needed, 
-        setup/modified, the MDSC can configure on both P-PNCs the L3VPN and 
-        its binding with the selected SR-TE paths  using the [L3NM] and 
-        [TSM] YANG models. 
+        model defined in [TE-TUNNEL] or via the path computation RPC defined 
+        in [PATH-COMPUTE]. 
 
-        [Editor’s Note] Further investigation is needed to understand how 
-        the binding between a L3VPN and this new end-to-end SR-TE path can 
-        be configured. 
+        This draft assumes that the path computation RPC is used. 
+
+        The are no YANG data models in IETF that could be used to augment 
+        the generic path computation RPC with technology-specific 
+        attributes. 
+
+        Optical technology-specific augmentation for the path computation 
+        RPC is identified as a gap requiring further work, which is outside 
+        of the scope of this draft. 
+
+     4.2.2. Multi-layer IP Link Setup and Update 
+
+        The MDSC requires the O-PNC to setup an Optical Tunnel (either a 
+        WSON Tunnel or a Flexi-grid Tunnel or an OTN Tunnel) within the 
+        Optical network between the two Optical Transponders (OTs), in case 
+        of DWDM network, or the two OTN access cards, in case of OTN 
+        networks, associated with the two access links. 
+
+        The Optical Transponders, or the OTN access cards, are reported by 
+        the O-PNC as Trail Termination Points (TTPs), defined in [TE-TOPO], 
+        within the Optical Topology. The association between the Ethernet 
+        access link and the Optical TTP is reported using the Inter Layer 
+        Lock (ILL) identifiers, defined in [TE-TOPO], within the Ethernet 
+        Topology and Optical Topology, exposed by the O-PNC. 
+
+        The MDSC also requires the O-PNC to steer the Ethernet client 
+        traffic between the two access Ethernet Links over the Optical 
+        Tunnel. 
+
+        After the Optical Tunnel has been setup and the client traffic 
+        steering configured, the two IP routers can exchange Ethernet 
+        packets between themselves, including LLDP messages. 
+
+        If LLDP [IEEE 802.1AB] is used between the two routers, the P PNC 
+        can automatically discover the IP Link being set up by the MDSC. The 
+        IP LTPs terminating this IP Link are supported by the ETH LTPs 
+        terminating the two access links. 
+
+        Otherwise, the MDSC needs to require the P-PNC to configure an IP 
+        Link between the two routers: the MDSC also configures the two ETH 
+        LTPs which support the two IP LTPs terminating this IP Link. 
+
+        [Editor’s Note] Clarify that the IP link bandwidth increase can be 
+        done either by LAG or by ECMP. Both options are valid and widely 
+        deployed and more or less the same from POI perspective. 
+
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 28] 
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                       June 2021 
+         
+
+     4.2.3. SR-TE Path Setup and Update 
+
+        This version of the draft assumes that SR-TE path setup and update 
+        at the MPI could be done using the generic TE tunnel YANG data 
+        model, defined in [TE TUNNEL], with SR TE specific augmentations, as 
+        also outlined in section 1 of [TE TUNNEL]. 
+
+        The MDSC can use the [TE-TUNNEL] model to request the P-PNC to setup 
+        TE paths specifying the explicit path to force the P-PNC to setup 
+        the actual path being computed by MDSC. 
+
+        The [TE-TUNNEL] model supports requesting the setup of both end-
+        to-end as well as segment TE paths (within one domain). 
+
+        In the latter case, SR-TE specific augmentations of the [TE-TUNNEL] 
+        model should be defined to allow the MDSC to configure the binding 
+        SIDs to be used for the end to-end SR-TE path stitching and to allow 
+        the P-PNC to report the binding SID assigned to the segment TE 
+        paths. 
+
+        The assigned binding SID should be persistent in case router or P-
+        PNC rebooting. 
+
+        The MDSC can also use the [TE-TUNNEL] model to request the P-PNC to 
+        increase the bandwidth allocated to an existing TE path, and, if 
+        needed, also on its reverse TE path. The [TE-TUNNEL] model supports 
+        both symmetric and asymmetric bandwidth configuration in the two 
+        directions. 
+
+        SR-TE path setup and update (e.g., bandwidth increase) through MPI 
+        is identified as a gap requiring further work, which is outside of 
+        the scope of this draft. 
 
      5. Security Considerations 
 
@@ -1880,6 +1904,23 @@
      7. IANA Considerations 
 
         This document requires no IANA actions. 
+
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 29] 
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                       June 2021 
+         
 
      8. References 
 
@@ -1904,23 +1945,6 @@
                   and Control of TE Networks (ACTN)", RFC8453, August 2018. 
 
         [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019. 
-
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 29] 
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       June 2021 
-         
 
         [RFC8795] Liu, X. et al., "YANG Data Model for Traffic Engineering 
                   (TE) Topologies", RFC8795, August 2020. 
@@ -1949,31 +1973,7 @@
                   Topologies", draft-ietf-teas-yang-l3-te-topo, work in 
                   progress. 
 
-        [TE-TUNNEL] Saad, T. et al., "A YANG Data Model for Traffic 
-                  Engineering Tunnels and Interfaces", draft-ietf-teas-yang-
-                  te, work in progress. 
-
-        [WSON-TUNNEL]  Lee, Y. et al., "A Yang Data Model for WSON Tunnel", 
-                  draft-ietf-ccamp-wson-tunnel-model, work in progress. 
-
-        [Flexi-MC]  Lopez de Vergara, J. E. et al., "YANG data model for 
-                  Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
-                  media-channel-yang, work in progress. 
-
-        [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
-                  ietf-ccamp-otn-tunnel-model, work in progress. 
-
-        [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport 
-                  Network Client Signals", draft-ietf-ccamp-client-signal-
-                  yang, work in progress. 
-
-     8.2. Informative References 
-
-        [RFC1930] J. Hawkinson, T. Bates, “Guideline for creation, 
-                  selection, and registration of an Autonomous System (AS)”, 
-                  RFC 1930, March 1996. 
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 30] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 30] 
 
 
 
@@ -1988,12 +1988,71 @@
      Internet-Draft                 ACTN POI                       June 2021 
          
 
+        [SR-TE-TOPO]   Liu, X. et al., "YANG Data Model for SR and SR TE 
+                  Topologies on MPLS Data Plane", draft-ietf-teas-yang-sr-
+                  te-topo, work in progress. 
+
+        [TE-TUNNEL] Saad, T. et al., "A YANG Data Model for Traffic 
+                  Engineering Tunnels and Interfaces", draft-ietf-teas-yang-
+                  te, work in progress. 
+
+        [WSON-TUNNEL]  Lee, Y. et al., "A Yang Data Model for WSON Tunnel", 
+                  draft-ietf-ccamp-wson-tunnel-model, work in progress. 
+
+        [Flexi-MC]  Lopez de Vergara, J. E. et al., "YANG data model for 
+                  Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
+                  media-channel-yang, work in progress. 
+
+        [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
+                  ietf-ccamp-otn-tunnel-model, work in progress. 
+
+        [PATH-COMPUTE] Busi, I., Belotti, S. et al, "Yang model for 
+                  requesting Path Computation", draft-ietf-teas-yang-path-
+                  computation, work in progress. 
+
+        [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport 
+                  Network Client Signals", draft-ietf-ccamp-client-signal-
+                  yang, work in progress. 
+
+        [L2NM]    S. Barguil, et al., “A Layer 2 VPN Network YANG Model”, 
+                  draft-ietf-opsawg-l2nm, work in progress.  
+
+        [L3NM]    S. Barguil, et al., “A Layer 3 VPN Network YANG Model”, 
+                  draft-ietf-opsawg-l3sm-l3nm, work in progress.  
+
+        [TSM]     Y. Lee, et al., “Traffic Engineering and Service Mapping 
+                  Yang Model”, draft-ietf-teas-te-service-mapping-yang, work 
+                  in progress.  
+
+     8.2. Informative References 
+
+        [RFC1930] J. Hawkinson, T. Bates, “Guideline for creation, 
+                  selection, and registration of an Autonomous System (AS)”, 
+                  RFC 1930, March 1996. 
+
         [RFC4364] E. Rosen and Y. Rekhter, “BGP/MPLS IP Virtual Private 
                   Networks (VPNs)”, RFC 4364, February 2006.  
 
         [RFC4761] K. Kompella, Ed., Y. Rekhter, Ed., “Virtual Private LAN 
                   Service (VPLS) Using BGP for Auto-Discovery and 
                   Signaling”, RFC 4761, January 2007.  
+
+
+
+     Peruzzini et al.      Expires December 29, 2021               [Page 31] 
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                       June 2021 
+         
 
         [RFC6074] E. Rosen, B. Davie, V. Radoaca, and W. Luo, “Provisioning, 
                   Auto-Discovery, and Signaling in Layer 2 Virtual Private 
@@ -2034,33 +2093,6 @@
         [VN]      Y. Lee, et al., “A Yang Data Model for ACTN VN Operation”, 
                   draft-ietf-teas-actn-vn-yang, work in progress.  
 
-        [L2NM]    S. Barguil, et al., “A Layer 2 VPN Network YANG Model”, 
-                  draft-ietf-opsawg-l2nm, work in progress.  
-
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 31] 
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       June 2021 
-         
-
-        [L3NM]    S. Barguil, et al., “A Layer 3 VPN Network YANG Model”, 
-                  draft-ietf-opsawg-l3sm-l3nm, work in progress.  
-
-        [TSM]     Y. Lee, et al., “Traffic Engineering and Service Mapping 
-                  Yang Model”, draft-ietf-teas-te-service-mapping-yang, work 
-                  in progress.  
-
         [ACTN-PM] Y. Lee, et al., “YANG models for VN & TE Performance 
                   Monitoring Telemetry and Scaling Intent Autonomics”, 
                   draft-lee-teas-actn-pm-telemetry-autonomics, work in 
@@ -2073,39 +2105,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     Peruzzini et al.      Expires December 24, 2021               [Page 32] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 32] 
 
 
 
@@ -2171,7 +2171,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 33] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 33] 
 
 
 
@@ -2237,7 +2237,7 @@
 
         Email: antons@sedonasys.com 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 34] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 34] 
 
 
 
@@ -2303,7 +2303,7 @@
          
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 35] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 35] 
 
 
 
@@ -2369,7 +2369,7 @@
 
 
 
-     Peruzzini et al.      Expires December 24, 2021               [Page 36] 
+     Peruzzini et al.      Expires December 29, 2021               [Page 36] 
 
 
 
