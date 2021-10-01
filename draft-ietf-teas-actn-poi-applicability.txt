@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: February 2022                                  August 31, 2021
+Expires: April 2022                                     October 1, 2021
 
 
 
@@ -50,9 +50,9 @@ Status of this Memo
    reference material or to cite them other than as "work in progress."
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 1]
+Peruzzini et al.        Expires April 1, 2022                  [Page 1]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    The list of current Internet-Drafts can be accessed at
@@ -99,20 +99,20 @@ Table of Contents
       4.1. Scenario 1: inventory, service and network topology
       discovery.....................................................21
          4.1.1. Inter-domain link discovery.........................23
-         4.1.2. Multi-layer IP Link discovery.......................24
+         4.1.2. Multi-layer IP link discovery.......................24
          4.1.3. Inventory discovery.................................24
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 2]
+Peruzzini et al.        Expires April 1, 2022                  [Page 2]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
          4.1.4. SR-TE paths discovery...............................25
       4.2. Establishment of L2VPN/L3VPN with TE requirements........25
          4.2.1. Optical Path Computation............................30
-         4.2.2. Multi-layer IP Link Setup and Update................30
+         4.2.2. Multi-layer IP link Setup and Update................30
          4.2.3. SR-TE Path Setup and Update.........................31
    5. Security Considerations.......................................31
    6. Operational Considerations....................................32
@@ -158,9 +158,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 3]
+Peruzzini et al.        Expires April 1, 2022                  [Page 3]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    can be different between a packet and an optical network, and it is
@@ -212,9 +212,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 4]
+Peruzzini et al.        Expires April 1, 2022                  [Page 4]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 
@@ -266,9 +266,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 5]
+Peruzzini et al.        Expires April 1, 2022                  [Page 5]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    interface (MPI) permits MDSC to interact with the different
@@ -320,9 +320,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 6]
+Peruzzini et al.        Expires April 1, 2022                  [Page 6]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    The MDSC in Figure 1 is responsible for multi-domain and multi-layer
@@ -374,9 +374,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 7]
+Peruzzini et al.        Expires April 1, 2022                  [Page 7]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    [Editors'note:] Check for a better term to define the network
@@ -428,9 +428,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 8]
+Peruzzini et al.        Expires April 1, 2022                  [Page 8]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 2.1. L2/L3VPN Service Request North Bound of MDSC
@@ -482,9 +482,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022                [Page 9]
+Peruzzini et al.        Expires April 1, 2022                  [Page 9]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
        o It provides the profile of VN in terms of VN members, each of
@@ -536,9 +536,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 10]
+Peruzzini et al.        Expires April 1, 2022                 [Page 10]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    One of the important MDSC functions is to identify which TE Tunnels
@@ -590,9 +590,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 11]
+Peruzzini et al.        Expires April 1, 2022                 [Page 11]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    1. Summarization: MDSC has an abstracted TE topology view of all of
@@ -616,10 +616,10 @@ Internet-Draft                 ACTN POI                     August 2021
       provides the essential multi-layer correlation and the "higher-
       level MDSC" (MDSC-H) provides the multi-domain coordination.
       In this case, the MDSC-H can get an abstact view of the
-      underlying multi-layer domain topologies from its underalyig L-
-      MDCs. Each MDSC-L gets the full view of the IP domain topology
+      underlying multi-layer domain topologies from its underlying
+      MDSC-L. Each MDSC-L gets the full view of the IP domain topology
       from P-PNC and can get an abstracted view of the optical domain
-      topology from its underlaying O-PNC. In other words, topology
+      topology from its underlying O-PNC. In other words, topology
       abstraction is possible at the MPIs between MDSC-L and O-PNC and
       between MDSC-L and MDSC-H.
 
@@ -644,9 +644,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 12]
+Peruzzini et al.        Expires April 1, 2022                 [Page 12]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    3. Full knowledge: MDSC has the complete and enough detailed view of
@@ -698,9 +698,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 13]
+Peruzzini et al.        Expires April 1, 2022                 [Page 13]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    service requirements (e.g., bandwidth, latency, etc.) using existing
@@ -752,9 +752,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 14]
+Peruzzini et al.        Expires April 1, 2022                 [Page 14]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 
@@ -806,9 +806,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 15]
+Peruzzini et al.        Expires April 1, 2022                 [Page 15]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    o  end-to-end LSP label: assigned by the egress BR, selected by the
@@ -860,9 +860,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 16]
+Peruzzini et al.        Expires April 1, 2022                 [Page 16]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    Architecture (NMDA) defined in [RFC8342], are assumed to be used as
@@ -914,9 +914,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 17]
+Peruzzini et al.        Expires April 1, 2022                 [Page 17]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 3.2.2. YANG models at the Optical MPIs
@@ -968,9 +968,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 18]
+Peruzzini et al.        Expires April 1, 2022                 [Page 18]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    The TE Tunnel model is generic and augmented by technology-specific
@@ -1022,9 +1022,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 19]
+Peruzzini et al.        Expires April 1, 2022                 [Page 19]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    o  The User Network Interface (UNI) Topology Model, being defined in
@@ -1076,9 +1076,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 20]
+Peruzzini et al.        Expires April 1, 2022                 [Page 20]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    1. The MDSC uses a single RESTCONF/YANG interface towards each PNC
@@ -1130,9 +1130,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 21]
+Peruzzini et al.        Expires April 1, 2022                 [Page 21]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    The O-PNC and P-PNC could discover and report the inventory
@@ -1184,9 +1184,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 22]
+Peruzzini et al.        Expires April 1, 2022                 [Page 22]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 4.1.1. Inter-domain link discovery
@@ -1238,9 +1238,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 23]
+Peruzzini et al.        Expires April 1, 2022                 [Page 23]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    on LLDP snooping is preferable when LLDP snooping is supported by
@@ -1292,9 +1292,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 24]
+Peruzzini et al.        Expires April 1, 2022                 [Page 24]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    Inventory information through MPI and correlation with topology
@@ -1346,9 +1346,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 25]
+Peruzzini et al.        Expires April 1, 2022                 [Page 25]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
         ------
@@ -1400,9 +1400,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 26]
+Peruzzini et al.        Expires April 1, 2022                 [Page 26]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    There are many options to implement multi-domain L3VPN, including:
@@ -1454,9 +1454,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 27]
+Peruzzini et al.        Expires April 1, 2022                 [Page 27]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
        b. One or more new underlay Optical tunnels need to be setup to
@@ -1508,9 +1508,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 28]
+Peruzzini et al.        Expires April 1, 2022                 [Page 28]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    As described in section 2.2, with partial summarization, the MDSC
@@ -1562,9 +1562,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 29]
+Peruzzini et al.        Expires April 1, 2022                 [Page 29]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 4.2.1. Optical Path Computation
@@ -1616,9 +1616,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 30]
+Peruzzini et al.        Expires April 1, 2022                 [Page 30]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    Otherwise, the MDSC needs to require the P-PNC to configure an IP
@@ -1670,9 +1670,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 31]
+Peruzzini et al.        Expires April 1, 2022                 [Page 31]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 6. Operational Considerations
@@ -1724,9 +1724,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 32]
+Peruzzini et al.        Expires April 1, 2022                 [Page 32]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
@@ -1778,9 +1778,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 33]
+Peruzzini et al.        Expires April 1, 2022                 [Page 33]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    [L3NM]    S. Barguil, et al., "A Layer 3 VPN Network YANG Model",
@@ -1832,9 +1832,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 34]
+Peruzzini et al.        Expires April 1, 2022                 [Page 34]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    [RFC8309] Q. Wu, W. Liu, and A. Farrel, "Service Model Explained",
@@ -1886,9 +1886,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 35]
+Peruzzini et al.        Expires April 1, 2022                 [Page 35]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 Appendix A. Multi-layer and multi-domain resiliency
@@ -1940,9 +1940,9 @@ A.2.  Router port failure
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 36]
+Peruzzini et al.        Expires April 1, 2022                 [Page 36]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    b) If there is no LAG then the scenario is not clear since a router
@@ -1994,9 +1994,9 @@ Contributors
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 37]
+Peruzzini et al.        Expires April 1, 2022                 [Page 37]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
    Anton Snitser
@@ -2048,9 +2048,9 @@ Internet-Draft                 ACTN POI                     August 2021
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 38]
+Peruzzini et al.        Expires April 1, 2022                 [Page 38]
 
-Internet-Draft                 ACTN POI                     August 2021
+Internet-Draft                 ACTN POI                    October 2021
 
 
 Authors' Addresses
@@ -2102,5 +2102,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.      Expires February 31, 2022               [Page 39]
+Peruzzini et al.        Expires April 1, 2022                 [Page 39]
 
