@@ -36,13 +36,15 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- Slot 1 (US friendly): every two weeks at 11am EDT, starting from May 4, 2021
-  - [Calendar](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot1_Webex_Meeting.ics)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m1f27ff49f21119bc2cc522005af7cb2e)
+- Slot 1 (US friendly): every two weeks at 11am EDT, from November 23, 2021 till March 15, 2022
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/lB5Sm09X66z9aqTRe5a5jjT0gPA/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m4e7b59b34b8b2e9d1e3351217504fd67)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m68b9821151952f756276ba0bccc312f6)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- Slot 2 (China friendly): every two week at 4:30am EDT, starting from May 11, 2021
-  - [Calendar](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/Slot2_Webex_Meeting.ics)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m1b325a3b9aace0b99377ae43ee31402c)
+- Slot 2 (China friendly): every two week at 4:30am EDT, starting from November 16, 2021 till March 8, 2022
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/OwNb9Af4XFb-dAc9xrs0rFgOBRk/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=ma1e2ae5c36e02296f426ef01f700939b)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m3e1988c289b7600c11a78e6ea51a5619)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
