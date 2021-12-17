@@ -41,7 +41,7 @@ The contributors on this draft has weekly informal conference calls on two alter
   - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m982b59604dd52412035f70231747ceea)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m68b9821151952f756276ba0bccc312f6)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- Slot 2 (US friendly): every two week at 4:30am EDT, starting from December 28, 2021 till March 8, 2022
+- Slot 2 (US friendly): every two week at 11:00am NAEST, starting from December 28, 2021 till March 8, 2022
   - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/KRn6DK8y8Xo3hRllyDpmek6K4jw/)
   - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m5544bf5b65d40e485012e7fe8313e938)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m3e1988c289b7600c11a78e6ea51a5619)
