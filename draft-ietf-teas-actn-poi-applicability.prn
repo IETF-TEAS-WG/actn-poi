@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: June 2022                                    December 20, 2021 
+     Expires: June 2022                                    December 21, 2021 
                                          
       
                                            
@@ -59,7 +59,7 @@
         reference material or to cite them other than as "work in progress." 
 
 
-     Peruzzini et al.        Expires June 20, 2022                  [Page 1] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 1] 
 
 
 
@@ -123,7 +123,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 2] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 2] 
       
       
 
@@ -189,7 +189,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 3] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 3] 
       
       
 
@@ -255,7 +255,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 4] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 4] 
       
       
 
@@ -321,7 +321,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 5] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 5] 
       
       
 
@@ -387,7 +387,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 6] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 6] 
       
       
 
@@ -453,7 +453,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 7] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 7] 
       
       
 
@@ -519,7 +519,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 8] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 8] 
       
       
 
@@ -585,7 +585,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                  [Page 9] 
+     Peruzzini et al.        Expires June 21, 2022                  [Page 9] 
       
       
 
@@ -651,7 +651,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 10] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 10] 
       
       
 
@@ -717,7 +717,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 11] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 11] 
       
       
 
@@ -783,7 +783,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 12] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 12] 
       
       
 
@@ -849,7 +849,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 13] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 13] 
       
       
 
@@ -915,7 +915,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 14] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 14] 
       
       
 
@@ -981,7 +981,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 15] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 15] 
       
       
 
@@ -1047,7 +1047,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 16] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 16] 
       
       
 
@@ -1101,7 +1101,7 @@
         Need to check the need/applicability of the “ietf-l3-te-topology” in 
         this scenario since it is not described in [SR-TE-TOPO]. 
 
-        The packet PNC uses at least one of the following YANG data models: 
+        The packet PNC uses at least the following YANG data models: 
 
         o  L3VPN Network Model defined in “ietf-l3vpn-ntw” module of draft-
            ietf-opsawg-l3sm-l3nm [L3NM]; 
@@ -1113,7 +1113,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 17] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 17] 
       
       
 
@@ -1179,7 +1179,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 18] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 18] 
       
       
 
@@ -1237,15 +1237,15 @@
 
         o  the hardware inventory information of IP and optical equipment. 
 
-        The O-PNC and P-PNC could discover and report the hardware inventory 
-        information of their equipment that is used by the different 
-        management layers. In the context of POI, the inventory information 
-        of IP and optical equipment can complement the topology views and 
-        facilitate the IP-Optical multi-layer view. 
+        The O-PNC and P-PNC could discover and report the hardware network 
+        inventory information of their equipment that is used by the 
+        different management layers. In the context of POI, the inventory 
+        information of IP and optical equipment can complement the topology 
+        views and facilitate the IP-Optical multi-layer view. 
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 19] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 19] 
       
       
 
@@ -1311,7 +1311,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 20] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 20] 
       
       
 
@@ -1345,7 +1345,8 @@
         (e.g., OTN switching nodes and links), when the optional OTN layer 
         is deployed within the optical domain. 
 
-        Provide details on the optical domain abstraction? 
+        Provide details on the optical domain abstraction (yes as discussed 
+        in 2021-12-21) 
 
           . One TE node for each ROADM in the DWDM topology and one TE node 
              for each OTN switching node in the OTN topology 
@@ -1363,8 +1364,8 @@
         The Optical Transponders and, optionally, the OTN access cards, are 
         reported by the O-PNC as Trail Termination Points (TTPs), defined in 
         [TE-TOPO], within the Optical Topology. The association between the 
-        Ethernet access link and the Optical TTP is reported using the Inter 
-        Layer Lock (ILL) identifiers, defined in [TE-TOPO], within the 
+        Ethernet cross-layer link and the Optical TTP is reported using the 
+        Inter Layer Lock (ILL) identifiers, defined in [TE-TOPO], within the 
         Ethernet Topology and Optical Topology, exposed by the O-PNC. 
 
         The optical links are discovered by mechanisms, which are outside 
@@ -1374,10 +1375,9 @@
 
 
 
-
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 21] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 21] 
       
       
 
@@ -1410,7 +1410,8 @@
         The WSON Tunnel Model or, alternatively, the Flexi-grid Tunnel 
         model, depending on whether the DWDM optical network is based on 
         fixed grid or flexible-grid, is used to report all the DWDM tunnels 
-        established within the optical network,. 
+        established within the optical network, regardless of the mechanism 
+        being used to set them up. 
 
         When the optional OTN layer is deployed within the optical domain, 
         the OTN Tunnel Model is used to report the OTN tunnels and tunnel 
@@ -1419,7 +1420,8 @@
 
         The Ethernet client signal Model is used to report all the 
         connectivity provided by optical tunnels between Ethernet edge LTPs, 
-        regardless of the mechanism being used to set them up. 
+        terminating a cross-layer link, regardless of the mechanism being 
+        used to set them up. 
 
         In other words, the O-PNCs report in their operational datastores 
         all the Ethernet client signals and all the optical tunnels setup by 
@@ -1438,12 +1440,10 @@
         TE path computation. In particular, one TE node is reported for each 
         IP router and one TE link is reported for each intra-domain IP link. 
 
-        All the intra-domain IP links are discovered by the P-PNCs, using 
-        LLDP [IEEE 802.1AB] or any other mechanisms, which are outside the 
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 22] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 22] 
       
       
 
@@ -1460,6 +1460,8 @@
      Internet-Draft                 ACTN POI                   December 2021 
          
 
+        All the intra-domain IP links are discovered by the P-PNCs, using 
+        LLDP [IEEE 802.1AB] or any other mechanisms, which are outside the 
         scope of this document, and reported at the MPIs within the SR-TE 
         network topology. 
 
@@ -1505,11 +1507,9 @@
         scope of this document. 
 
 
-
-
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 23] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 23] 
       
       
 
@@ -1537,8 +1537,6 @@
            domain; 
 
         o  Access links between a CE device and a PE router. 
-
-        What about access links between CEs and PEs? 
 
         All the three types of links are Ethernet physical links. 
 
@@ -1572,10 +1570,12 @@
 
         1. Static configuration 
 
+        2. LLDP [IEEE 802.1AB] automatic discovery 
+
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 24] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 24] 
       
       
 
@@ -1591,8 +1591,6 @@
 
      Internet-Draft                 ACTN POI                   December 2021 
          
-
-        2. LLDP [IEEE 802.1AB] automatic discovery 
 
         Other options are possible but not described in this document. 
 
@@ -1637,11 +1635,13 @@
 
         There are also no YANG data models in IETF that could be used to 
         correlate topology information, e.g., a link termination point 
+        (LTP), with inventory information, e.g., the physical port 
+        supporting an LTP, if any. 
 
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 25] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 25] 
       
       
 
@@ -1657,9 +1657,6 @@
 
      Internet-Draft                 ACTN POI                   December 2021 
          
-
-        (LTP), with inventory information, e.g., the physical port 
-        supporting an LTP, if any. 
 
         Inventory information through MPI and correlation with topology 
         information is identified as a gap requiring further work and 
@@ -1705,9 +1702,12 @@
 
 
 
+
+
+
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 26] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 26] 
       
       
 
@@ -1773,7 +1773,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 27] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 27] 
       
       
 
@@ -1839,7 +1839,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 28] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 28] 
       
       
 
@@ -1905,7 +1905,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 29] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 29] 
       
       
 
@@ -1971,7 +1971,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 30] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 30] 
       
       
 
@@ -2037,7 +2037,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 31] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 31] 
       
       
 
@@ -2103,7 +2103,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 32] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 32] 
       
       
 
@@ -2169,7 +2169,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 33] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 33] 
       
       
 
@@ -2235,7 +2235,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 34] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 34] 
       
       
 
@@ -2301,7 +2301,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 35] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 35] 
       
       
 
@@ -2367,7 +2367,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 36] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 36] 
       
       
 
@@ -2433,7 +2433,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 37] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 37] 
       
       
 
@@ -2499,7 +2499,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 38] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 38] 
       
       
 
@@ -2565,7 +2565,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 39] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 39] 
       
       
 
@@ -2631,7 +2631,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 40] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 40] 
       
       
 
@@ -2697,7 +2697,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 41] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 41] 
       
       
 
@@ -2763,7 +2763,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 42] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 42] 
       
       
 
@@ -2829,7 +2829,7 @@
 
       
       
-     Peruzzini et al.        Expires June 20, 2022                 [Page 43] 
+     Peruzzini et al.        Expires June 21, 2022                 [Page 43] 
       
       
 
