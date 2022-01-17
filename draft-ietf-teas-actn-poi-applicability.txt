@@ -17,7 +17,7 @@ Expires: July 2022                                     January 17, 2022
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-                 draft-ietf-teas-actn-poi-applicability-04
+                 draft-ietf-teas-actn-poi-applicability-05
 
 
 Abstract
@@ -1155,10 +1155,10 @@ Internet-Draft                 ACTN POI                    January 2022
 
    The Optical Transponders and, optionally, the OTN access cards, are
    reported by the O-PNC as Trail Termination Points (TTPs), defined in
-   [TE-TOPO], within the abstract optical network topology. The
+   [RFC8795], within the abstract optical network topology. The
    association between the Ethernet LTPs terminating the Ethernet
    cross-layer links and the Optical TTPs is reported using the Inter
-   Layer Lock (ILL) identifiers, defined in [TE-TOPO].
+   Layer Lock (ILL) identifiers, defined in [RFC8795].
 
    Since the MDSC would delegate optical path computation to its
    underlay O-PNCs, the following information can be abstracted and not
@@ -1711,8 +1711,8 @@ Internet-Draft                 ACTN POI                    January 2022
 
    Once the SR-TE paths have been selected and, if needed,
    setup/modified, the MDSC can request to both P-PNCs to configure the
-   L3VPN and its binding with the selected SR-TE paths  using the
-   [L3NM] and [TSM] YANG data models.
+   L3VPN and its binding with the selected SR-TE paths using the [L3NM]
+   and [TSM] YANG data models.
 
    [Editor's Note] Further investigation is needed to understand how
    the binding between a L3VPN and this new end-to-end SR-TE path can
@@ -1816,8 +1816,8 @@ Internet-Draft                 ACTN POI                    January 2022
 
    This version of the draft assumes that SR-TE path setup and update
    at the MPI could be done using the generic TE tunnel YANG data
-   model, defined in [TE TUNNEL], with SR TE specific augmentations, as
-   also outlined in section 1 of [TE TUNNEL].
+   model, defined in [TE-TUNNEL], with SR TE specific augmentations, as
+   also outlined in section 1 of [TE-TUNNEL].
 
    The MDSC can use the [TE-TUNNEL] model to request the P-PNC to setup
    TE paths specifying the explicit path to force the P-PNC to setup
@@ -2127,7 +2127,7 @@ Appendix A. OSS/Orchestration Layer
 
    As discussed in section 2.1.1, in this document, the MDSC interfaces
    with the OSS/Orchestration layer and, therefore, it performs the
-   functions of the Network Orchestrator, as defined in [RFC 8309].
+   functions of the Network Orchestrator, as defined in [RFC8309].
 
    The OSS/Orchestration layer requests the creation of a network
    service to the MDSC specifying its end-points (PEs and the
