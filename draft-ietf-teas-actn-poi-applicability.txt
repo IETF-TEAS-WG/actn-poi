@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: July 2022                                     January 11, 2022
+Expires: July 2022                                     January 17, 2022
 
 
 
@@ -50,7 +50,7 @@ Status of this Memo
    reference material or to cite them other than as "work in progress."
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 1]
+Peruzzini et al.        Expires July 17, 2022                  [Page 1]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -65,7 +65,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 Copyright Notice
 
-   Copyright (c) 2021 IETF Trust and the persons identified as the
+   Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors. All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -104,7 +104,7 @@ Table of Contents
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 2]
+Peruzzini et al.        Expires July 17, 2022                  [Page 2]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -127,7 +127,7 @@ Internet-Draft                 ACTN POI                    January 2022
    7. IANA Considerations...........................................35
    8. References....................................................36
       8.1. Normative References.....................................36
-      8.2. Informative References...................................37
+      8.2. Informative References...................................38
    Appendix A.    OSS/Orchestration Layer...........................40
       A.1.  MDSC NBI................................................40
    Appendix B.    Multi-layer and multi-domain resiliency...........43
@@ -158,7 +158,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 3]
+Peruzzini et al.        Expires July 17, 2022                  [Page 3]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -212,7 +212,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 4]
+Peruzzini et al.        Expires July 17, 2022                  [Page 4]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -266,7 +266,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 5]
+Peruzzini et al.        Expires July 17, 2022                  [Page 5]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -320,7 +320,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 6]
+Peruzzini et al.        Expires July 17, 2022                  [Page 6]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -374,7 +374,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 7]
+Peruzzini et al.        Expires July 17, 2022                  [Page 7]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -428,7 +428,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 8]
+Peruzzini et al.        Expires July 17, 2022                  [Page 8]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -482,7 +482,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                  [Page 9]
+Peruzzini et al.        Expires July 17, 2022                  [Page 9]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -536,7 +536,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 10]
+Peruzzini et al.        Expires July 17, 2022                 [Page 10]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -590,7 +590,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 11]
+Peruzzini et al.        Expires July 17, 2022                 [Page 11]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -644,7 +644,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 12]
+Peruzzini et al.        Expires July 17, 2022                 [Page 12]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -698,7 +698,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 13]
+Peruzzini et al.        Expires July 17, 2022                 [Page 13]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -752,7 +752,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 14]
+Peruzzini et al.        Expires July 17, 2022                 [Page 14]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -806,7 +806,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 15]
+Peruzzini et al.        Expires July 17, 2022                 [Page 15]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -860,7 +860,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 16]
+Peruzzini et al.        Expires July 17, 2022                 [Page 16]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -896,7 +896,7 @@ Internet-Draft                 ACTN POI                    January 2022
    Topology Model:
 
    o  The WSON Topology Model, defined in the "ietf-wson-topology" YANG
-      module of [WSON-TOPO];
+      module of [RFC9094];
 
    o  the Flexi-grid Topology Model, defined in the "ietf-flexi-grid-
       topology" YANG module of [Flexi-TOPO];
@@ -914,7 +914,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 17]
+Peruzzini et al.        Expires July 17, 2022                 [Page 17]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -968,7 +968,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 18]
+Peruzzini et al.        Expires July 17, 2022                 [Page 18]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1022,7 +1022,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 19]
+Peruzzini et al.        Expires July 17, 2022                 [Page 19]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1076,7 +1076,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 20]
+Peruzzini et al.        Expires July 17, 2022                 [Page 20]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1130,7 +1130,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 21]
+Peruzzini et al.        Expires July 17, 2022                 [Page 21]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1184,7 +1184,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 22]
+Peruzzini et al.        Expires July 17, 2022                 [Page 22]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1238,7 +1238,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 23]
+Peruzzini et al.        Expires July 17, 2022                 [Page 23]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1292,7 +1292,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 24]
+Peruzzini et al.        Expires July 17, 2022                 [Page 24]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1346,7 +1346,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 25]
+Peruzzini et al.        Expires July 17, 2022                 [Page 25]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1400,7 +1400,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 26]
+Peruzzini et al.        Expires July 17, 2022                 [Page 26]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1454,7 +1454,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 27]
+Peruzzini et al.        Expires July 17, 2022                 [Page 27]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1508,7 +1508,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 28]
+Peruzzini et al.        Expires July 17, 2022                 [Page 28]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1562,7 +1562,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 29]
+Peruzzini et al.        Expires July 17, 2022                 [Page 29]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1616,7 +1616,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 30]
+Peruzzini et al.        Expires July 17, 2022                 [Page 30]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1670,7 +1670,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 31]
+Peruzzini et al.        Expires July 17, 2022                 [Page 31]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1724,7 +1724,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 32]
+Peruzzini et al.        Expires July 17, 2022                 [Page 32]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1778,7 +1778,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 33]
+Peruzzini et al.        Expires July 17, 2022                 [Page 33]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1832,7 +1832,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 34]
+Peruzzini et al.        Expires July 17, 2022                 [Page 34]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1886,7 +1886,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 35]
+Peruzzini et al.        Expires July 17, 2022                 [Page 35]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -1894,6 +1894,9 @@ Internet-Draft                 ACTN POI                    January 2022
 8. References
 
 8.1. Normative References
+
+   [RFC7923] Voit, E. et al., "Requirements for Subscription to YANG
+             Datastores", RFC 7923, June 2016.
 
    [RFC7950] Bjorklund, M. et al., "The YANG 1.1 Data Modeling
              Language", RFC 7950, August 2016.
@@ -1903,6 +1906,9 @@ Internet-Draft                 ACTN POI                    January 2022
 
    [RFC8040] Bierman, A. et al., "RESTCONF Protocol", RFC 8040, January
              2017.
+
+   [RFC8342] Bjorklund, M. et al., "Network Management Datastore
+             Architecture (NMDA)", RFC 8342, March 2018.
 
    [RFC8345] Clemm, A., Medved, J. et al., "A Yang Data Model for
              Network Topologies", RFC8345, March 2018.
@@ -1915,16 +1921,33 @@ Internet-Draft                 ACTN POI                    January 2022
 
    [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019.
 
+   [RFC8527] Bjorklund, M. et al., "RESTCONF Extensions to Support the
+             Network Management Datastore Architecture", RFC 8527,
+             March 2019.
+
+   [RFC8641] Clemm, A. and E. Voit, "Subscription to YANG Notifications
+             for Datastore Updates", RFC 8641, September 2019.
+
+   [RFC8650] Voit, E. et al., "Dynamic Subscription to YANG Events and
+             Datastores over RESTCONF", RFC 8650, November 2019.
+
    [RFC8795] Liu, X. et al., "YANG Data Model for Traffic Engineering
              (TE) Topologies", RFC8795, August 2020.
+
+   [RFC9094] Zheng H., Lee, Y. et al., "A YANG Data Model for
+             Wavelength Switched Optical Networks (WSONs)", RFC 9094,
+             August 2021.
+
+
+
+Peruzzini et al.        Expires July 17, 2022                 [Page 36]
+
+Internet-Draft                 ACTN POI                    January 2022
+
 
    [IEEE 802.1AB] IEEE 802.1AB-2016, "IEEE Standard for Local and
              metropolitan area networks - Station and Media Access
              Control Connectivity Discovery", March 2016.
-
-   [WSON-TOPO] Lee, Y. et al., " A YANG Data Model for WSON (Wavelength
-             Switched Optical Networks)", draft-ietf-ccamp-wson-yang,
-             work in progress.
 
    [Flexi-TOPO]   Lopez de Vergara, J. E. et al., "YANG data model for
              Flexi-Grid Optical Networks", draft-ietf-ccamp-flexigrid-
@@ -1937,13 +1960,6 @@ Internet-Draft                 ACTN POI                    January 2022
    [CLIENT-TOPO]  Zheng, H. et al., "A YANG Data Model for Client-layer
              Topology", draft-zheng-ccamp-client-topo-yang, work in
              progress.
-
-
-
-Peruzzini et al.        Expires July 11, 2022                 [Page 36]
-
-Internet-Draft                 ACTN POI                    January 2022
-
 
    [L3-TE-TOPO]   Liu, X. et al., "YANG Data Model for Layer 3 TE
              Topologies", draft-ietf-teas-yang-l3-te-topo, work in
@@ -1960,8 +1976,8 @@ Internet-Draft                 ACTN POI                    January 2022
    [WSON-TUNNEL]  Lee, Y. et al., "A Yang Data Model for WSON Tunnel",
              draft-ietf-ccamp-wson-tunnel-model, work in progress.
 
-   [Flexi-TUNNEL] Lopez de Vergara, J. E. et al., "YANG data model for
-             Flexi-Grid media-channels", draft-ietf-ccamp-flexigrid-
+   [Flexi-TUNNEL] Lopez de Vergara, J. E. et al., "A YANG Data Model
+             for Flexi-Grid Tunnels ", draft-ietf-ccamp-flexigrid-
              tunnel-yang, work in progress.
 
    [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-
@@ -1975,6 +1991,48 @@ Internet-Draft                 ACTN POI                    January 2022
              Network Client Signals", draft-ietf-ccamp-client-signal-
              yang, work in progress.
 
+
+
+
+Peruzzini et al.        Expires July 17, 2022                 [Page 37]
+
+Internet-Draft                 ACTN POI                    January 2022
+
+
+8.2. Informative References
+
+   [RFC1930] J. Hawkinson, T. Bates, "Guideline for creation,
+             selection, and registration of an Autonomous System (AS)",
+             RFC 1930, March 1996.
+
+   [RFC5440] Vasseur, JP. et al., "Path Computation Element (PCE)
+             Communication Protocol (PCEP)", RFC 5440, March 2009.
+
+   [RFC5623] Oki, E. et al., "Framework for PCE-Based Inter-Layer MPLS
+             and GMPLS Traffic Engineering", RFC 5623, September 2009.
+
+   [RFC8231] Crabbe, E. et al., "Path Computation Element Communication
+             Protocol (PCEP) Extensions for Stateful PCE", RFC 8231,
+             September 2017.
+
+   [RFC8281] Crabbe, E. et al., "Path Computation Element Communication
+             Protocol (PCEP) Extensions for PCE-Initiated LSP Setup in
+             a Stateful PCE Model", RFC 8281, December 2017.
+
+   [RFC8283] Farrel, A. et al., "An Architecture for Use of PCE and the
+             PCE Communication Protocol (PCEP) in a Network with
+             Central Control", RFC 8283, December 2017.
+
+   [RFC8309] Q. Wu, W. Liu, and A. Farrel, "Service Model Explained",
+             RFC 8309, January 2018.
+
+   [RFC8637] Dhody, D. et al., "Applicability of the Path Computation
+             Element (PCE) to the Abstraction and Control of TE
+             Networks (ACTN)", RFC 8637, July 2019.
+
+   [RFC8751] Dhody, D. et al., "Hierarchical Stateful Path Computation
+             Element (PCE)", RFC 8751, March 2020.
+
    [L2NM]    S. Barguil, et al., "A Layer 2 VPN Network YANG Model",
              draft-ietf-opsawg-l2nm, work in progress.
 
@@ -1985,58 +2043,15 @@ Internet-Draft                 ACTN POI                    January 2022
              Yang Model", draft-ietf-teas-te-service-mapping-yang, work
              in progress.
 
-8.2. Informative References
-
-   [RFC1930] J. Hawkinson, T. Bates, "Guideline for creation,
-             selection, and registration of an Autonomous System (AS)",
-             RFC 1930, March 1996.
 
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 37]
+
+Peruzzini et al.        Expires July 17, 2022                 [Page 38]
 
 Internet-Draft                 ACTN POI                    January 2022
 
-
-   [RFC4364] E. Rosen and Y. Rekhter, "BGP/MPLS IP Virtual Private
-             Networks (VPNs)", RFC 4364, February 2006.
-
-   [RFC4761] K. Kompella, Ed., Y. Rekhter, Ed., "Virtual Private LAN
-             Service (VPLS) Using BGP for Auto-Discovery and
-             Signaling", RFC 4761, January 2007.
-
-   [RFC6074] E. Rosen, B. Davie, V. Radoaca, and W. Luo, "Provisioning,
-             Auto-Discovery, and Signaling in Layer 2 Virtual Private
-             Networks (L2VPNs)", RFC 6074, January 2011.
-
-   [RFC6624] K. Kompella, B. Kothari, and R. Cherukuri, "Layer 2
-             Virtual Private Networks Using BGP for Auto-Discovery and
-             Signaling", RFC 6624, May 2012.
-
-   [RFC7209] A. Sajassi, R. Aggarwal, J. Uttaro, N. Bitar, W.
-             Henderickx, and A. Isaac, "Requirements for Ethernet VPN
-             (EVPN)", RFC 7209, May 2014.
-
-   [RFC7432] A. Sajassi, Ed., et al., "BGP MPLS-Based Ethernet VPN",
-             RFC 7432, February 2015.
-
-   [RFC7436] H. Shah, E. Rosen, F. Le Faucheur, and G. Heron, "IP-Only
-             LAN Service (IPLS)", RFC 7436, January 2015.
-
-   [RFC8214] S. Boutros, A. Sajassi, S. Salam, J. Drake, and J.
-             Rabadan, "Virtual Private Wire Service Support in Ethernet
-             VPN", RFC 8214, August 2017.
-
-   [RFC8299] Q. Wu, S. Litkowski, L. Tomotaki, and K. Ogaki, "YANG Data
-             Model for L3VPN Service Delivery", RFC 8299, January 2018.
-
-   [RFC8309] Q. Wu, W. Liu, and A. Farrel, "Service Model Explained",
-             RFC 8309, January 2018.
-
-   [RFC8466] G. Fioccola, ed., "A YANG Data Model for Layer 2 Virtual
-             Private Network (L2VPN) Service Delivery", RFC8466,
-             October 2018.
 
    [TNBI]    Busi, I., Daniel, K. et al., "Transport Northbound
              Interface Applicability Statement", draft-ietf-ccamp-
@@ -2045,21 +2060,10 @@ Internet-Draft                 ACTN POI                    January 2022
    [VN]      Y. Lee, et al., "A Yang Data Model for ACTN VN Operation",
              draft-ietf-teas-actn-vn-yang, work in progress.
 
-
-
-
-Peruzzini et al.        Expires July 11, 2022                 [Page 38]
-
-Internet-Draft                 ACTN POI                    January 2022
-
-
-   [ACTN-PM] Y. Lee, et al., "YANG models for VN & TE Performance
-             Monitoring Telemetry and Scaling Intent Autonomics",
-             draft-lee-teas-actn-pm-telemetry-autonomics, work in
+   [UNI-TOPO]  Gonzalez de Dios O., et al., "A Network YANG Model for
+             Service Attachment Points", draft-dbwb-opsawg-sap, work in
              progress.
 
-   [BGP-L3VPN] D. Jain, et al. "Yang Data Model for BGP/MPLS L3 VPNs",
-             draft-ietf-bess-l3vpn-yang, work in progress.
 
 
 
@@ -2098,11 +2102,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-
-
-
-
-Peruzzini et al.        Expires July 11, 2022                 [Page 39]
+Peruzzini et al.        Expires July 17, 2022                 [Page 39]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2156,7 +2156,7 @@ A.1.  MDSC NBI
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 40]
+Peruzzini et al.        Expires July 17, 2022                 [Page 40]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2210,7 +2210,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 41]
+Peruzzini et al.        Expires July 17, 2022                 [Page 41]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2264,7 +2264,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 42]
+Peruzzini et al.        Expires July 17, 2022                 [Page 42]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2318,7 +2318,7 @@ B.2.  Router port failure
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 43]
+Peruzzini et al.        Expires July 17, 2022                 [Page 43]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2372,7 +2372,7 @@ Contributors
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 44]
+Peruzzini et al.        Expires July 17, 2022                 [Page 44]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2426,7 +2426,7 @@ Internet-Draft                 ACTN POI                    January 2022
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 45]
+Peruzzini et al.        Expires July 17, 2022                 [Page 45]
 
 Internet-Draft                 ACTN POI                    January 2022
 
@@ -2480,5 +2480,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.        Expires July 11, 2022                 [Page 46]
+Peruzzini et al.        Expires July 17, 2022                 [Page 46]
 
