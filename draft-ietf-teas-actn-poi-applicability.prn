@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: July 2022                                     January 17, 2022 
+     Expires: July 2022                                     January 20, 2022 
                                          
       
                                            
@@ -59,7 +59,7 @@
         reference material or to cite them other than as "work in progress." 
 
 
-     Peruzzini et al.        Expires July 17, 2022                  [Page 1] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 1] 
 
 
 
@@ -123,7 +123,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 2] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 2] 
       
       
 
@@ -155,7 +155,7 @@
               4.2.3. SR-TE Path Setup and Update.........................34 
         5. Security Considerations.......................................35 
         6. Operational Considerations....................................35 
-        7. IANA Considerations...........................................35 
+        7. IANA Considerations...........................................36 
         8. References....................................................36 
            8.1. Normative References.....................................36 
            8.2. Informative References...................................38 
@@ -189,7 +189,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 3] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 3] 
       
       
 
@@ -255,7 +255,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 4] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 4] 
       
       
 
@@ -321,7 +321,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 5] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 5] 
       
       
 
@@ -387,7 +387,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 6] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 6] 
       
       
 
@@ -453,7 +453,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 7] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 7] 
       
       
 
@@ -519,7 +519,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 8] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 8] 
       
       
 
@@ -585,7 +585,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                  [Page 9] 
+     Peruzzini et al.        Expires July 20, 2022                  [Page 9] 
       
       
 
@@ -651,7 +651,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 10] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 10] 
       
       
 
@@ -717,7 +717,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 11] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 11] 
       
       
 
@@ -779,11 +779,11 @@
         path. 
 
         The methods and types of path requirements and impairments, such as 
-        those detailed in [OIA-Topo], used by the O-PNC for optical path 
+        those detailed in [OIA-TOPO], used by the O-PNC for optical path 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 12] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 12] 
       
       
 
@@ -849,7 +849,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 13] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 13] 
       
       
 
@@ -915,7 +915,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 14] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 14] 
       
       
 
@@ -981,7 +981,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 15] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 15] 
       
       
 
@@ -1047,7 +1047,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 16] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 16] 
       
       
 
@@ -1113,7 +1113,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 17] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 17] 
       
       
 
@@ -1179,7 +1179,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 18] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 18] 
       
       
 
@@ -1245,7 +1245,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 19] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 19] 
       
       
 
@@ -1311,7 +1311,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 20] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 20] 
       
       
 
@@ -1377,7 +1377,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 21] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 21] 
       
       
 
@@ -1413,8 +1413,8 @@
         (e.g., ROADMs). 
 
         The Optical Transponders and, optionally, the OTN access cards, are 
-        reported by the O-PNC as Trail Termination Points (TTPs), defined in 
-        [RFC8795], within the abstract optical network topology. The 
+        abstracted at MPI by the O-PNC as Trail Termination Points (TTPs), 
+        defined in [RFC8795], within the optical network topology. The 
         association between the Ethernet LTPs terminating the Ethernet 
         cross-layer links and the Optical TTPs is reported using the Inter 
         Layer Lock (ILL) identifiers, defined in [RFC8795]. 
@@ -1424,7 +1424,7 @@
         reported at the MPI: 
 
         o  the optical parameters required for optical path computation, 
-           such as those detailed in [OIA-Topo]; 
+           such as those detailed in [OIA-TOPO]; 
 
         o  the underlay OTS links and ILAs of OMS links; 
 
@@ -1443,7 +1443,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 22] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 22] 
       
       
 
@@ -1509,7 +1509,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 23] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 23] 
       
       
 
@@ -1535,15 +1535,18 @@
         router and one TE link is reported for each intra-domain IP link. 
 
         All the intra-domain IP links are discovered by the P-PNCs, using 
-        LLDP [IEEE 802.1AB] or any other mechanisms, which are outside the 
-        scope of this document, and reported at the MPIs within the SR-TE 
-        network topology. 
+        either LLDP [IEEE 802.1AB] or any other mechanisms, which are 
+        outside the scope of this document, and reported at the MPIs within 
+        the SR-TE network topology. 
 
         Shall we report the underlay ETH link for single-layer intra-domain 
         IP link or reporting the IP link is sufficient? Reporting the 
         underlay ETH link could facilitate building the relationship with 
         the inventory as well as expose whether an single-layer intra-domain 
         IP link is supported by a LAG or not. 
+
+        2022-01-18: for the consistency of the model is useful to report 
+        also the underlay ETH link. 
 
      4.1.4. SR-TE paths discovery 
 
@@ -1569,13 +1572,10 @@
         SR-TE path and the SR-TE path in the reverse direction (between PE14 
         and PE13) could be reported by the P-PNC1 to the MDSC as TE paths of 
         the same TE tunnel instance. The bandwidth of these TE paths 
-        represents the bandwidth allocated by P-PNC1 to the two SR-TE 
-        paths,which can be symmetric or asymmetric in the two directions. 
-
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 24] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 24] 
       
       
 
@@ -1591,6 +1591,9 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        represents the bandwidth allocated by P-PNC1 to the two SR-TE 
+        paths,which can be symmetric or asymmetric in the two directions. 
 
         The P-PNCs use the TE tunnel model to report, at the MPI, all the 
         SR-TE paths established within their packet domain regardless of the 
@@ -1636,12 +1639,9 @@
 
         1. Static configuration 
 
-        2. LLDP [IEEE 802.1AB] automatic discovery 
-
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 25] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 25] 
       
       
 
@@ -1657,6 +1657,8 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        2. LLDP [IEEE 802.1AB] automatic discovery 
 
         Other options are possible but not described in this document. 
 
@@ -1703,11 +1705,9 @@
         for inter-domain link discovery are the Chassis ID, or optionally 
         the System Name, and the Port ID. 
 
-
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 26] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 26] 
       
       
 
@@ -1741,7 +1741,8 @@
         information sent and received by the corresponding router port 
         within the IP LTPs. However, this approach might not work with LAG 
         interfaces. For further discussion whether it makes sense to 
-        simplify the model in case there is no LAG. 
+        simplify the model in case there is no LAG. Keep the two Ethenet 
+        LTPs. 
 
         It is worth noting that in case of inter-domain IP link, no inter-
         domain Ethernet link can be discovered by the MDSC between the 
@@ -1766,14 +1767,13 @@
         that supports the two IP LTPs terminating that multi-layer intra-
         domain IP link. 
 
-        The MDSC therefore discovers which Ethernet cross-layer links 
-        support the multi-layer intra-domain IP links, as described in 
-        section 4.1.5. 
-
+        Add a note that the LLDP packets exchanged by the IP routers ports 
+        are used by the P-PNC to discover the intra-domain ETH link so there 
+        is no need to encode this information in the ETH LTPs. 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 27] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 27] 
       
       
 
@@ -1789,6 +1789,10 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        The MDSC therefore discovers which Ethernet cross-layer links 
+        support the multi-layer intra-domain IP links, as described in 
+        section 4.1.5. 
 
         The MDSC also discovers, from the information provided by the O-PNC 
         and described in section 4.1.2, which optical tunnels support the 
@@ -1833,13 +1837,9 @@
 
 
 
-
-
-
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 28] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 28] 
       
       
 
@@ -1905,7 +1905,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 29] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 29] 
       
       
 
@@ -1950,6 +1950,8 @@
         layer TE topology and an abstract view of the underlay optical layer 
         TE topology. 
 
+        Move these assumptions to section 2 
+
         The MDSC needs to translate the L2/L3 VPN SLA requirements into TE 
         requirements (e.g., bandwidth, TE metric bounds, SRLG disjointness, 
         nodes/links/domains inclusion/exclusion) and find the SR-TE paths 
@@ -1965,13 +1967,11 @@
         2. An existing SR-TE path could be modified (e.g., through bandwidth 
            increase) to meet the TE requirements: 
 
-            a. The SR-TE path characteristics can be modified only in the 
-               packet layer. 
 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 30] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 30] 
       
       
 
@@ -1987,6 +1987,9 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+            a. The SR-TE path characteristics can be modified only in the 
+               packet layer. 
 
             b. One or more new underlay Optical tunnels need to be setup to 
                support the requested changes of the overlay SR-TE paths  
@@ -2030,14 +2033,11 @@
         o  the P-PNC1 to update the bandwidth of the selected SR-TE path 
            between PE13 and PE14, as described in section 4.2.3. 
 
-        Considering for example the L3VPN in Figure 3, the MDSC can also 
-        decide that a new multi-domain SR-TE path needs to be setup between 
-        PE13 and PE23. 
 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 31] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 31] 
       
       
 
@@ -2053,6 +2053,10 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        Considering for example the L3VPN in Figure 3, the MDSC can also 
+        decide that a new multi-domain SR-TE path needs to be setup between 
+        PE13 and PE23. 
 
         As described in section 2.1.2, with partial summarization, the MDSC 
         will use the TE topology information provided by the P-PNCs and the 
@@ -2097,13 +2101,9 @@
         the binding between a L3VPN and this new end-to-end SR-TE path can 
         be configured. 
 
-
-
-
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 32] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 32] 
       
       
 
@@ -2160,16 +2160,16 @@
         4.2.1, with these two router ports. 
 
         The MDSC also requires the O-PNC to steer the Ethernet client 
-        traffic between the two cross-layer links over the Optical Tunnel. 
+        traffic between the two cross-layer links over the Optical Tunnel 
+        using the Ethernet Client Signal Model. 
 
         After the optical tunnel has been setup and the client traffic 
         steering configured, the two IP routers can exchange Ethernet 
         packets between themselves, including LLDP messages. 
 
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 33] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 33] 
       
       
 
@@ -2191,6 +2191,11 @@
         Ethernet link being set up by the MDSC. Otherwise, the MDSC 
         configures this multi-layer single-domain Ethernet link at the MPI 
         of the P-PNC. 
+
+        Add the option for other mechanisms (outside the scope of this 
+        document) that could be used by the P-PNC to discover the intra-
+        domain ETH Link. If no other mechanisms are possible, the MDSC can 
+        configure this link at the MPI. 
 
         The two Ethernet LTPs terminating this multi-layer single-domain 
         Ethernet link are supported by the two underly Ethernet LTPs 
@@ -2226,16 +2231,11 @@
         TE paths specifying the explicit path to force the P-PNC to setup 
         the actual path being computed by MDSC. 
 
-        The [TE-TUNNEL] model supports requesting the setup of both end-
-        to-end as well as segment TE paths (within one domain). 
 
-        In the latter case, SR-TE specific augmentations of the [TE-TUNNEL] 
-        model should be defined to allow the MDSC to configure the binding 
-        SIDs to be used for the end to-end SR-TE path stitching and to allow 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 34] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 34] 
       
       
 
@@ -2252,6 +2252,12 @@
      Internet-Draft                 ACTN POI                    January 2022 
          
 
+        The [TE-TUNNEL] model supports requesting the setup of both end-
+        to-end as well as segment TE paths (within one domain). 
+
+        In the latter case, SR-TE specific augmentations of the [TE-TUNNEL] 
+        model should be defined to allow the MDSC to configure the binding 
+        SIDs to be used for the end to-end SR-TE path stitching and to allow 
         the P-PNC to report the binding SID assigned to the segment TE 
         paths. 
 
@@ -2274,7 +2280,7 @@
         outside the scope of this document. The P-PNC takes into account the 
         multi-layer SRLG information, configured by the MDSC as described in 
         section 4.2.2, when computing the TI-LFA post-convergence path for 
-        multi-layer single-domain IP links.  
+        multi-layer single-domain IP links. 
 
         SR-TE path setup and update (e.g., bandwidth increase) through MPI 
         is identified as a gap requiring further work, which is outside of 
@@ -2292,16 +2298,10 @@
         controllers, may be required. These requirements and capabilities 
         will be discussed in future versions of this document. 
 
-     7. IANA Considerations 
-
-        This document requires no IANA actions. 
-
-
-
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 35] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 35] 
       
       
 
@@ -2317,6 +2317,10 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+     7. IANA Considerations 
+
+        This document requires no IANA actions. 
 
      8. References 
 
@@ -2361,13 +2365,9 @@
         [RFC8795] Liu, X. et al., "YANG Data Model for Traffic Engineering 
                   (TE) Topologies", RFC8795, August 2020. 
 
-        [RFC9094] Zheng H., Lee, Y. et al., "A YANG Data Model for 
-                  Wavelength Switched Optical Networks (WSONs)", RFC 9094, 
-                  August 2021. 
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 36] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 36] 
       
       
 
@@ -2383,6 +2383,10 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        [RFC9094] Zheng H., Lee, Y. et al., "A YANG Data Model for 
+                  Wavelength Switched Optical Networks (WSONs)", RFC 9094, 
+                  August 2021. 
 
         [IEEE 802.1AB] IEEE 802.1AB-2016, "IEEE Standard for Local and 
                   metropolitan area networks - Station and Media Access 
@@ -2426,14 +2430,10 @@
                   requesting Path Computation", draft-ietf-teas-yang-path-
                   computation, work in progress. 
 
-        [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport 
-                  Network Client Signals", draft-ietf-ccamp-client-signal-
-                  yang, work in progress. 
-
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 37] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 37] 
       
       
 
@@ -2449,6 +2449,10 @@
 
      Internet-Draft                 ACTN POI                    January 2022 
          
+
+        [CLIENT-SIGNAL]   Zheng, H. et al., "A YANG Data Model for Transport 
+                  Network Client Signals", draft-ietf-ccamp-client-signal-
+                  yang, work in progress. 
 
      8.2. Informative References 
 
@@ -2490,16 +2494,12 @@
         [L3NM]    S. Barguil, et al., “A Layer 3 VPN Network YANG Model”, 
                   draft-ietf-opsawg-l3sm-l3nm, work in progress.  
 
-        [TSM]     Y. Lee, et al., “Traffic Engineering and Service Mapping 
-                  Yang Model”, draft-ietf-teas-te-service-mapping-yang, work 
-                  in progress.  
-
 
 
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 38] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 38] 
       
       
 
@@ -2516,6 +2516,10 @@
      Internet-Draft                 ACTN POI                    January 2022 
          
 
+        [TSM]     Y. Lee, et al., “Traffic Engineering and Service Mapping 
+                  Yang Model”, draft-ietf-teas-te-service-mapping-yang, work 
+                  in progress.  
+
         [TNBI]    Busi, I., Daniel, K. et al., "Transport Northbound 
                   Interface Applicability Statement", draft-ietf-ccamp-
                   transport-nbi-app-statement, work in progress. 
@@ -2523,7 +2527,11 @@
         [VN]      Y. Lee, et al., “A Yang Data Model for ACTN VN Operation”, 
                   draft-ietf-teas-actn-vn-yang, work in progress.  
 
-        [UNI-TOPO]  Gonzalez de Dios O., et al., "A Network YANG Model for 
+        [OIA-TOPO]  Lee Y. et al., "A YANG Data Model for Optical 
+                  Impairment-aware Topology", draft-ietf-ccamp-optical-
+                  impairment-topology-yang, work in progress. 
+
+        [UNI-TOPO]  Gonzalez de Dios O. et al., "A Network YANG Model for 
                   Service Attachment Points", draft-dbwb-opsawg-sap, work in 
                   progress. 
 
@@ -2555,17 +2563,9 @@
 
 
 
-
-
-
-
-
-
-
-
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 39] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 39] 
       
       
 
@@ -2631,7 +2631,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 40] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 40] 
       
       
 
@@ -2697,7 +2697,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 41] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 41] 
       
       
 
@@ -2763,7 +2763,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 42] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 42] 
       
       
 
@@ -2829,7 +2829,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 43] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 43] 
       
       
 
@@ -2895,7 +2895,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 44] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 44] 
       
       
 
@@ -2961,7 +2961,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 45] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 45] 
       
       
 
@@ -3027,7 +3027,7 @@
 
       
       
-     Peruzzini et al.        Expires July 17, 2022                 [Page 46] 
+     Peruzzini et al.        Expires July 20, 2022                 [Page 46] 
       
       
 
