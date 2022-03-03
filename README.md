@@ -12,7 +12,7 @@ Diff editor copy vs published version:
 
 ## Abstract
 
-This document considers the applicability of Abstraction and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)in the context of IP/MPLS and Optical internetworking, identifying the YANG data models being defined by the IETF to support this deployment architecture as well as specific scenarios relevant for Service Providers.
+This document considers the applicability of Abstraction and Control of TE Networks (ACTN) architecture to Packet Optical Integration (POI)in the context of IP/MPLS and optical internetworking, identifying the YANG data models being defined by the IETF to support this deployment architecture as well as specific scenarios relevant for Service Providers.
 
 Existing IETF protocols and data models are identified for each multi-layer (packet over optical) scenario with particular focus on the MPI (Multi-Domain Service Coordinator to Provisioning Network Controllers Interface)in the ACTN architecture.
 
