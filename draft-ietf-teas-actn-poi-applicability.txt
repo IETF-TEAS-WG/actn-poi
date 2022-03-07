@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                Ericsson
 
-Expires: September 2022                                   March 3, 2022
+Expires: September 2022                                   March 7, 2022
 
 
 
@@ -17,7 +17,7 @@ Expires: September 2022                                   March 3, 2022
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-                 draft-ietf-teas-actn-poi-applicability-05
+                 draft-ietf-teas-actn-poi-applicability-06
 
 
 Abstract
@@ -50,7 +50,7 @@ Status of this Memo
    material or to cite them other than as "work in progress."
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 1]
+Peruzzini et al.      Expires September 7, 2022                [Page 1]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -104,7 +104,7 @@ Table of Contents
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 2]
+Peruzzini et al.      Expires September 7, 2022                [Page 2]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -158,7 +158,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 3]
+Peruzzini et al.      Expires September 7, 2022                [Page 3]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -212,7 +212,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 4]
+Peruzzini et al.      Expires September 7, 2022                [Page 4]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -266,7 +266,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 5]
+Peruzzini et al.      Expires September 7, 2022                [Page 5]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -320,7 +320,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 6]
+Peruzzini et al.      Expires September 7, 2022                [Page 6]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -374,7 +374,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 7]
+Peruzzini et al.      Expires September 7, 2022                [Page 7]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -428,7 +428,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 8]
+Peruzzini et al.      Expires September 7, 2022                [Page 8]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -482,7 +482,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022                [Page 9]
+Peruzzini et al.      Expires September 7, 2022                [Page 9]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -536,7 +536,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 10]
+Peruzzini et al.      Expires September 7, 2022               [Page 10]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -590,7 +590,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 11]
+Peruzzini et al.      Expires September 7, 2022               [Page 11]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -644,7 +644,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 12]
+Peruzzini et al.      Expires September 7, 2022               [Page 12]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -698,7 +698,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 13]
+Peruzzini et al.      Expires September 7, 2022               [Page 13]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -752,7 +752,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 14]
+Peruzzini et al.      Expires September 7, 2022               [Page 14]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -806,7 +806,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 15]
+Peruzzini et al.      Expires September 7, 2022               [Page 15]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -860,7 +860,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 16]
+Peruzzini et al.      Expires September 7, 2022               [Page 16]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -914,7 +914,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 17]
+Peruzzini et al.      Expires September 7, 2022               [Page 17]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -968,7 +968,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 18]
+Peruzzini et al.      Expires September 7, 2022               [Page 18]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1022,7 +1022,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 19]
+Peruzzini et al.      Expires September 7, 2022               [Page 19]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1076,7 +1076,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 20]
+Peruzzini et al.      Expires September 7, 2022               [Page 20]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1130,7 +1130,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 21]
+Peruzzini et al.      Expires September 7, 2022               [Page 21]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1184,7 +1184,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 22]
+Peruzzini et al.      Expires September 7, 2022               [Page 22]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1218,7 +1218,7 @@ Internet-Draft                 ACTN POI                      March 2022
       instead of one, unless the RESTOCONF/YANG interface is added to an
       existing PCEP deployment (brownfield scenario).
 
-   Section 1 of this draft analyses the case where a single
+   Section 4 and section 5 of this draft analyse the case where a single
    RESTCONF/YANG interface is deployed at the MPI (i.e., option 1
    above).
 
@@ -1238,7 +1238,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 23]
+Peruzzini et al.      Expires September 7, 2022               [Page 23]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1292,7 +1292,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 24]
+Peruzzini et al.      Expires September 7, 2022               [Page 24]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1346,7 +1346,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 25]
+Peruzzini et al.      Expires September 7, 2022               [Page 25]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1400,7 +1400,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 26]
+Peruzzini et al.      Expires September 7, 2022               [Page 26]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1423,7 +1423,7 @@ Internet-Draft                 ACTN POI                      March 2022
    inventory information as well as to perform multi-domain SR-TE path
    computation, the P-PNCs report the full SR-TE network, including all
    the information that is required by the MDSC to perform SR-TE path
-   computation. In particular, one TE node is reported for each  router
+   computation. In particular, one TE node is reported for each router
    and one TE link is reported for each intra-domain IP link. The SR-TE
    topology also reports the IP LTPs terminating the inter-domain IP
    links.
@@ -1454,7 +1454,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 27]
+Peruzzini et al.      Expires September 7, 2022               [Page 27]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1508,7 +1508,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 28]
+Peruzzini et al.      Expires September 7, 2022               [Page 28]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1562,7 +1562,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 29]
+Peruzzini et al.      Expires September 7, 2022               [Page 29]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1574,7 +1574,7 @@ Internet-Draft                 ACTN POI                      March 2022
        /      |        (5-1)O                O(6-1)        |       /
       /       |    (5-0)    |\              /|    (6-0)    |      /
      /        +------O------+|(*)        (*)|+------O------+     /
-    /       [PE13,5] ^\<-----+              +----->/^ [BR11,6]  /
+    /       {PE13,5} ^\<-----+              +----->/^ {BR11,6}  /
    +-----------------:------------------------------:----------+
                      :                              :
                      :                              :
@@ -1582,7 +1582,7 @@ Internet-Draft                 ACTN POI                      March 2022
                      :                              :
             +--------:------------------------------:------------------+
            /         :                              :                 /
-          / [PE13,5] v                              v [BR11,6]       /
+          / {PE13,5} v                              v {BR11,6}       /
          /    +------O------+                +------O------+        /
         /     |    (7-0)    |                |    (8-0)    |       /
        /      |             |                |             |      /
@@ -1600,7 +1600,7 @@ Internet-Draft                 ACTN POI                      March 2022
      O   LTP
    ----> Supporting LTP
    <...> Link discovered by the MDSC
-   [   ] LTP Plug-id reported by the PNC
+   {   } LTP Plug-id reported by the PNC
 
                    Figure 4 - Cross-layer link discovery
 
@@ -1616,7 +1616,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 30]
+Peruzzini et al.      Expires September 7, 2022               [Page 30]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1670,7 +1670,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 31]
+Peruzzini et al.      Expires September 7, 2022               [Page 31]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1691,11 +1691,11 @@ Internet-Draft                 ACTN POI                      March 2022
              +--------------|----------+    +|------------------------+
             /               V         /    / V                       /
            / +-------------+/        /    /  \+-------------+       /
-          /  |     [1](3-1)O.................>O(4-1)[1]     |      /
+          /  |     {1}(3-1)O.................>O(4-1){1}     |      /
          /   |             |\      /    /    /|             |     /
         /    |    BR11     |V(*)  /    /  (*)V|     BR21    |    /
        /     |             |/    /    /      \|             |   /
-      /      |     [2](3-0)O<~~~~~~~~~~~~~~~~>O(4-0)[2]     |  /
+      /      |     {2}(3-0)O<~~~~~~~~~~~~~~~~>O(4-0){2}     |  /
      /       +-------------+   /    /         +-------------+ /
     / Eth. Topology (P-PNC 1) /    / Eth. Topology (P-PNC 2) /
    +-------------------------+    +-------------------------+
@@ -1703,8 +1703,8 @@ Internet-Draft                 ACTN POI                      March 2022
    Notes:
    =====
    (*) Supporting LTP
-   [1] [BR11,3,BR21,4]
-   [2] [BR11,3]
+   {1} {BR11,3,BR21,4}
+   {2} {BR11,3}
 
    Legenda:
    ========
@@ -1712,7 +1712,7 @@ Internet-Draft                 ACTN POI                      March 2022
    ----> Supporting LTP
    <...> Link discovered by the MDSC
    <~~~> Link inferred by the MDSC
-   [   ] LTP Plug-id reported by the PNC
+   {   } LTP Plug-id reported by the PNC
 
           Figure 5 - Inter-domain Ethernet and IP link discovery
 
@@ -1724,7 +1724,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 32]
+Peruzzini et al.      Expires September 7, 2022               [Page 32]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1778,7 +1778,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 33]
+Peruzzini et al.      Expires September 7, 2022               [Page 33]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1832,7 +1832,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 34]
+Peruzzini et al.      Expires September 7, 2022               [Page 34]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1886,7 +1886,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 35]
+Peruzzini et al.      Expires September 7, 2022               [Page 35]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1904,7 +1904,6 @@ Internet-Draft                 ACTN POI                      March 2022
    <~~~> Link inferred by the MDSC
    x---x Ethernet client signal
    X===X Optical tunnel
-   [   ] LTP Plug-id reported by the PNC
 
     Figure 6 - Multi-layer intra-domain Ethernet and IP link discovery
 
@@ -1935,12 +1934,13 @@ Internet-Draft                 ACTN POI                      March 2022
 
    In this case, the P-PNC, always reports two Ethernet LTPs for each
    Ethernet interface on the router, e.g., the Ethernet LTP 1-0 and 1-1
-   on PE13, shown in 1.1. .
+   on PE13, shown in Figure 7.
 
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 36]
+
+Peruzzini et al.      Expires September 7, 2022               [Page 36]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -1965,7 +1965,7 @@ Internet-Draft                 ACTN POI                      March 2022
          /    |         |\                      /|         |       /
         /     |  PE13   |V(*)                (*)V|    P16  |      /
        /      |         |/                      \|         |     /
-      /       | [1](1-0)O<~~~~~~~~~~~~~~~~~~~~~~>O(2-0)[2] |    /
+      /       | {1}(1-0)O<~~~~~~~~~~~~~~~~~~~~~~>O(2-0){2} |    /
      /        +---------+                        +---------+   /
     /                   Ethernet Topology (P-PNC 1)           /
    +---------------------------------------------------------+
@@ -1973,8 +1973,8 @@ Internet-Draft                 ACTN POI                      March 2022
    Notes:
    =====
    (*) Supporting LTP
-   [1] [PE13,1]
-   [2] [P16,2]
+   {1} {PE13,1}
+   {2} {P16,2}
 
    Legenda:
    ========
@@ -1982,7 +1982,7 @@ Internet-Draft                 ACTN POI                      March 2022
    ----> Supporting LTP
    <===> Link discovered by the PNC and reported at the MPI
    <~~~> Link inferred by the MDSC
-   [   ] LTP Plug-id reported by the PNC
+   {   } LTP Plug-id reported by the PNC
 
     Figure 7 - Single-layer intra-domain Ethernet and IP link discovery
 
@@ -1990,18 +1990,18 @@ Internet-Draft                 ACTN POI                      March 2022
    physical Ethernet LTPs, does not discover any cross-layer link being
    terminated by the corresponding Ethernet interface. The  MDSC may
    infer the physical intra-domain Ethernet link, e.g., between LTP 1-0
-   on PE13 and LTP 2-0 on P16, as shown in 1.1. , if it knows a priori,
+   on PE13 and LTP 2-0 on P16, as shown in Figure 7, if it knows a
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 37]
+Peruzzini et al.      Expires September 7, 2022               [Page 37]
 
 Internet-Draft                 ACTN POI                      March 2022
 
 
-   by mechanisms which are outside the scope of this document, that all
-   the Ethernet interfaces on the routers either terminates a cross-
-   layer link or a single-layer intra-domain Ethernet link.
+   priori, by mechanisms which are outside the scope of this document,
+   that all the Ethernet interfaces on the routers either terminates a
+   cross-layer link or a single-layer intra-domain Ethernet link.
 
    The P-PNC can omit reporting the physical Ethernet LTP if it knows,
    by mechanisms which are outside the scope of this document, that the
@@ -2048,7 +2048,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 38]
+Peruzzini et al.      Expires September 7, 2022               [Page 38]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2102,7 +2102,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 39]
+Peruzzini et al.      Expires September 7, 2022               [Page 39]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2156,7 +2156,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 40]
+Peruzzini et al.      Expires September 7, 2022               [Page 40]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2210,7 +2210,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 41]
+Peruzzini et al.      Expires September 7, 2022               [Page 41]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2231,7 +2231,7 @@ Internet-Draft                 ACTN POI                      March 2022
    when the underlying multi-layer single-domain Ethernet link is either
    discovered by the P-PNC or configured by the MDSC at the MPI.
 
-    [Editor's Note] Add text for IP link update in case of LAG either
+   [Editor's Note] Add text for IP link update in case of LAG either
    here or in a new section.
 
    [Editor's Note] Add text about the configuration of multi-layer SRLG
@@ -2264,7 +2264,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 42]
+Peruzzini et al.      Expires September 7, 2022               [Page 42]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2318,7 +2318,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 43]
+Peruzzini et al.      Expires September 7, 2022               [Page 43]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2372,7 +2372,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 44]
+Peruzzini et al.      Expires September 7, 2022               [Page 44]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2426,7 +2426,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 45]
+Peruzzini et al.      Expires September 7, 2022               [Page 45]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2480,7 +2480,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 46]
+Peruzzini et al.      Expires September 7, 2022               [Page 46]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2534,7 +2534,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 47]
+Peruzzini et al.      Expires September 7, 2022               [Page 47]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2588,7 +2588,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 48]
+Peruzzini et al.      Expires September 7, 2022               [Page 48]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2642,7 +2642,7 @@ A.1.  MDSC NBI
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 49]
+Peruzzini et al.      Expires September 7, 2022               [Page 49]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2696,7 +2696,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 50]
+Peruzzini et al.      Expires September 7, 2022               [Page 50]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2750,7 +2750,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 51]
+Peruzzini et al.      Expires September 7, 2022               [Page 51]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2804,7 +2804,7 @@ B.2.  Router port failure
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 52]
+Peruzzini et al.      Expires September 7, 2022               [Page 52]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2858,7 +2858,7 @@ Contributors
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 53]
+Peruzzini et al.      Expires September 7, 2022               [Page 53]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2912,7 +2912,7 @@ Internet-Draft                 ACTN POI                      March 2022
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 54]
+Peruzzini et al.      Expires September 7, 2022               [Page 54]
 
 Internet-Draft                 ACTN POI                      March 2022
 
@@ -2966,5 +2966,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.      Expires September 3, 2022               [Page 55]
+Peruzzini et al.      Expires September 7, 2022               [Page 55]
 

@@ -57,4 +57,3 @@ Legenda:
 <~~~> Link inferred by the MDSC
 x---x Ethernet client signal
 X===X Optical tunnel
-[   ] LTP Plug-id reported by the PNC
