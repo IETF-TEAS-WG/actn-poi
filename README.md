@@ -36,15 +36,15 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- Slot 1 (China friendly): every two weeks at 4:30am NAEST, from December 21, 2021 till March 15, 2022
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/_Cz1pmBiHibiW_ICgqFiGUaQGto/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m982b59604dd52412035f70231747ceea)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m68b9821151952f756276ba0bccc312f6)
+- Slot 1 (China friendly): every two weeks at 4:30am NAEDT, from March 29, 2022 till July 19, 2022
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/-Wz8CQsNX6h91jG-gRlKZuAH6lE/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m28216a1df14fff82cbf4772a2d9c7928)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m57cf7c61c3cdc58f4ef01314e43be1f0)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- Slot 2 (US friendly): every two week at 11:00am NAEST, starting from December 28, 2021 till March 8, 2022
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/KRn6DK8y8Xo3hRllyDpmek6K4jw/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m5544bf5b65d40e485012e7fe8313e938)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m3e1988c289b7600c11a78e6ea51a5619)
+- Slot 2 (US friendly): every two week at 11:00am NAEDT, starting from April 5, 2021 till July 12, 2022
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/GE6wAxJozU-zmjhDyaqjvUxOmS8/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m7c5fe75872e4ed989e9c9b2232ec6060)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m63a700a829a56a408d7a9b0805308acb)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
