@@ -17,7 +17,7 @@ Expires: January 2023                                      July 5, 2022
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-                 draft-ietf-teas-actn-poi-applicability-06
+                 draft-ietf-teas-actn-poi-applicability-07
 
 
 Abstract
@@ -99,7 +99,7 @@ Table of Contents
       4.1. Optical topology discovery...............................25
       4.2. Optical path discovery...................................27
       4.3. Packet topology discovery................................27
-      4.4. SR-TE path discovery.....................................28
+      4.4. TE path discovery........................................28
       4.5. Inter-domain link discovery..............................29
 
 
@@ -120,7 +120,10 @@ Internet-Draft                 ACTN POI                       July 2022
    .................................................................42
       5.1. Optical Path Computation.................................44
       5.2. Multi-layer IP link Setup................................45
-      5.3. SR-TE Path Setup and Update..............................48
+         5.2.1. Multi-layer LAG setup...............................47
+         5.2.2. Multi-layer LAG update..............................47
+         5.2.3. Multi-layer SRLG configuration......................48
+      5.3. TE Path Setup and Update.................................48
    6. Conclusions...................................................49
    7. Security Considerations.......................................50
    8. Operational Considerations....................................50
@@ -151,10 +154,7 @@ Internet-Draft                 ACTN POI                       July 2022
    requirements from a network perspective (e.g. physical diversity,
    latency, bandwidth, topology, etc.)
 
-   Packet Optical Integration (POI) is an advanced use case of traffic
-   engineering. In wide-area networks, a packet network based on the
-   Internet Protocol (IP), and often Multiprotocol Label Switching
-   (MPLS) or Segment Routing (SR), is typically realized on top of an
+
 
 
 
@@ -163,6 +163,10 @@ Peruzzini et al.       Expires January 5, 2023                 [Page 3]
 Internet-Draft                 ACTN POI                       July 2022
 
 
+   Packet Optical Integration (POI) is an advanced use case of traffic
+   engineering. In wide-area networks, a packet network based on the
+   Internet Protocol (IP), and often Multiprotocol Label Switching
+   (MPLS) or Segment Routing (SR), is typically realized on top of an
    optical transport network that uses Dense Wavelength Division
    Multiplexing (DWDM)(and optionally an Optical Transport Network
    (OTN)layer).
@@ -206,10 +210,6 @@ Internet-Draft                 ACTN POI                       July 2022
    The focus of the scenarios are multi-domain packet networks operated
    as a client of optical networks.
 
-   This document analyses the case where the packet networks support
-   multi-domain SR-TE paths and the optical networks could be either a
-   DWDM network or an OTN network (without DWDM layer) or multi-layer
-
 
 
 Peruzzini et al.       Expires January 5, 2023                 [Page 4]
@@ -217,6 +217,9 @@ Peruzzini et al.       Expires January 5, 2023                 [Page 4]
 Internet-Draft                 ACTN POI                       July 2022
 
 
+   This document analyses the case where the packet networks support
+   multi-domain SR-TE paths and the optical networks could be either a
+   DWDM network or an OTN network (without DWDM layer) or multi-layer
    OTN/DWDM network. DWDM networks could be either fixed-grid or
    flexible-grid.
 
@@ -260,9 +263,6 @@ Internet-Draft                 ACTN POI                       July 2022
    Port:
 
      the physical entity that transmits and receives physical signals
-
-
-
 
 
 
@@ -2232,8 +2232,8 @@ Internet-Draft                 ACTN POI                       July 2022
 
    The MDSC translates the L2/L3 VPN SLA requirements into TE
    requirements (e.g., bandwidth, TE metric bounds, SRLG disjointness,
-   nodes/links/domains inclusion/exclusion) and find the TE paths
-   that meet these TE requirements (see section 2.1.1).
+   nodes/links/domains inclusion/exclusion) and find the TE paths that
+   meet these TE requirements (see section 2.1.1).
 
    For example, considering the L3VPN in Figure 2, the MDSC finds that:
 
@@ -2241,25 +2241,25 @@ Internet-Draft                 ACTN POI                       July 2022
       bandwidth to support the new L3VPN, as described in section 4.4;,
       and that:
 
-       o the IP link(s) between PE13 and P16 has not enough
-          bandwidth to support increasing the bandwidth of that TE
-          path, as described in section 4.3;
+       o the IP link(s) between PE13 and P16 has not enough bandwidth to
+          support increasing the bandwidth of that TE path, as described
+          in section 4.3;
 
        o a new underlay optical tunnel could be setup to increase the
-          bandwidth of the IP link(s) between PE13 and P16 to
-          support increasing the bandwidth of that overlay TE path,
-          as described in section 5.1. The dimensioning of the
-          underlay optical tunnel is decided by the MDSC based on the TE
-          requirements (e.g., the bandwidth) requested by the TE path
-          and on its multi-layer optimization policy, which is an
-          internal MDSC implementation issue;
+          bandwidth of the IP link(s) between PE13 and P16 to support
+          increasing the bandwidth of that overlay TE path, as described
+          in section 5.1. The dimensioning of the underlay optical
+          tunnel is decided by the MDSC based on the TE requirements
+          (e.g., the bandwidth) requested by the TE path and on its
+          multi-layer optimization policy, which is an internal MDSC
+          implementation issue;
 
        o a new multi-domain TE path needs to be setup between PE13 and
-          a new multi-domain TE path
-          needs to be setup between PE13 and PE23, e.g., either because
-          existing TE paths between PE13 and PE23 are not able to
-          meet the TE and binding requirements of the L2/L3 VPN service
-          or because there is no TE path between PE13 and PE23.
+          PE23, e.g., either because existing TE paths between PE13 and
+          PE23 are not able to meet the TE and binding requirements of
+          the L2/L3 VPN service or because there is no TE path between
+          PE13 and PE23.
+
 
 
 
