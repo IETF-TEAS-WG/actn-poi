@@ -114,28 +114,28 @@ Internet-Draft                 ACTN POI                       July 2022
       4.6. Multi-layer IP link discovery............................34
          4.6.1. Single-layer intra-domain IP links..................37
       4.7. LAG discovery............................................39
-      4.8. L2/L3 VPN network services discovery.....................40
-      4.9. Inventory discovery......................................40
+      4.8. L2/L3 VPN network services discovery.....................41
+      4.9. Inventory discovery......................................41
    5. Establishment of L2/L3 VPN network services with TE requirements
-   .................................................................41
-      5.1. Optical Path Computation.................................43
-      5.2. Multi-layer IP link Setup................................44
-      5.3. SR-TE Path Setup and Update..............................47
-   6. Conclusions...................................................48
-   7. Security Considerations.......................................49
-   8. Operational Considerations....................................49
-   9. IANA Considerations...........................................49
-   10. References...................................................49
-      10.1. Normative References....................................49
-      10.2. Informative References..................................51
-   Appendix A.    OSS/Orchestration Layer...........................54
-      A.1.  MDSC NBI................................................54
-   Appendix B.    Multi-layer and multi-domain resiliency...........57
-      B.1.  Maintenance Window......................................57
-      B.2.  Router port failure.....................................57
-   Acknowledgments..................................................58
-   Contributors.....................................................58
-   Authors' Addresses...............................................60
+   .................................................................42
+      5.1. Optical Path Computation.................................44
+      5.2. Multi-layer IP link Setup................................45
+      5.3. SR-TE Path Setup and Update..............................48
+   6. Conclusions...................................................49
+   7. Security Considerations.......................................50
+   8. Operational Considerations....................................50
+   9. IANA Considerations...........................................50
+   10. References...................................................50
+      10.1. Normative References....................................50
+      10.2. Informative References..................................52
+   Appendix A.    OSS/Orchestration Layer...........................55
+      A.1.  MDSC NBI................................................55
+   Appendix B.    Multi-layer and multi-domain resiliency...........58
+      B.1.  Maintenance Window......................................58
+      B.2.  Router port failure.....................................58
+   Acknowledgments..................................................59
+   Contributors.....................................................59
+   Authors' Addresses...............................................61
 
 1. Introduction
 
@@ -2078,7 +2078,66 @@ Internet-Draft                 ACTN POI                       July 2022
    o  between the Ethernet LTP 3-1 on BR21 and the Ethernet LTP 4-1 on
       P24.
 
-   <<To be added (slide 10 of inter-domain-link-discovery-05>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 39]
+
+Internet-Draft                 ACTN POI                       July 2022
+
+
+
+           +-----------------------------------------------------------+
+          /                    IP Topology (P-PNC 1)                  /
+         /    +---------+                        +---------+         /
+        /     |  BR21   |                        |    P24  |        /
+       /      |    (5-2)O<======================>O(6-2)    |       /
+      /       |         |            |           |         |      /
+     /        +---------+            |           +---------+     /
+    /                                |                          /
+   +---------------------------------|-------------------------+
+                                     |
+                                     | Supporting Link
+                                     |
+                                     |
+             +-----------------------|---------------------------------+
+            /                        |                                /
+           /  +---------+            v           +---------+         /
+          /   |    (5-1)O<======================>O(6-1)    |        /
+         /    |  BR21   |  Bundled Link          |    P24  |       /
+        /     |         |                        |         |      /
+       /      |    (3-1)O<======================>O(4-1)    |     /
+      /       |    (1-1)O<======================>O(2-1)    |    /
+     /        +---------+                        +---------+   /
+    /                   Ethernet Topology (P-PNC 1)           /
+   +---------------------------------------------------------+
+
+   Legenda:
+   ========
+     O   LTP
+   <===> Link discovered by the PNC and reported at the MPI
+
                               Figure 8 - LAG
 
    The mechanisms used by the MDSC to discover single-layer and multi-
@@ -2094,18 +2153,17 @@ Internet-Draft                 ACTN POI                       July 2022
    discover the configuration of the LAG groups within its domain, such
    as LLDP [IEEE 802.1AB], are outside the scope of this document.
 
-   However, it is worth noting that according to [IEEE 802.1AB], LLDP
-   can be configured on a LAG group (Aggregated Port) and/or on any
-   number of its LAG members (Aggregation Ports).
 
 
 
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 39]
+Peruzzini et al.       Expires January 5, 2023                [Page 40]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   However, it is worth noting that according to [IEEE 802.1AB], LLDP
+   can be configured on a LAG group (Aggregated Port) and/or on any
+   number of its LAG members (Aggregation Ports).
 
    If LLDP is enabled on both LAG members and groups, two types of LLDP
    packets are transmitted by the routers and received by the optical
@@ -2149,17 +2207,16 @@ Internet-Draft                 ACTN POI                       July 2022
 
    There are also no YANG data models in IETF that could be used to
    correlate topology information, e.g., a link termination point (LTP),
-   with inventory information, e.g., the physical port supporting an
-   LTP, if any.
 
 
 
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 40]
+Peruzzini et al.       Expires January 5, 2023                [Page 41]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   with inventory information, e.g., the physical port supporting an
+   LTP, if any.
 
    Inventory information through MPI and correlation with topology
    information is identified as a gap requiring further work and outside
@@ -2175,8 +2232,8 @@ Internet-Draft                 ACTN POI                       July 2022
 
    The MDSC translates the L2/L3 VPN SLA requirements into TE
    requirements (e.g., bandwidth, TE metric bounds, SRLG disjointness,
-   nodes/links/domains inclusion/exclusion) and find the TE paths that
-   meet these TE requirements (see section 2.1.1).
+   nodes/links/domains inclusion/exclusion) and find the TE paths
+   that meet these TE requirements (see section 2.1.1).
 
    For example, considering the L3VPN in Figure 2, the MDSC finds that:
 
@@ -2184,37 +2241,37 @@ Internet-Draft                 ACTN POI                       July 2022
       bandwidth to support the new L3VPN, as described in section 4.4;,
       and that:
 
-       o the IP link(s) between PE13 and P16 has not enough bandwidth to
-          support increasing the bandwidth of that TE path, as described
-          in section 4.3;
+       o the IP link(s) between PE13 and P16 has not enough
+          bandwidth to support increasing the bandwidth of that TE
+          path, as described in section 4.3;
 
        o a new underlay optical tunnel could be setup to increase the
-          bandwidth of the IP link(s) between PE13 and P16 to support
-          increasing the bandwidth of that overlay TE path, as described
-          in section 5.1. The dimensioning of the underlay optical
-          tunnel is decided by the MDSC based on the TE requirements
-          (e.g., the bandwidth) requested by the TE path and on its
-          multi-layer optimization policy, which is an internal MDSC
-          implementation issue;
+          bandwidth of the IP link(s) between PE13 and P16 to
+          support increasing the bandwidth of that overlay TE path,
+          as described in section 5.1. The dimensioning of the
+          underlay optical tunnel is decided by the MDSC based on the TE
+          requirements (e.g., the bandwidth) requested by the TE path
+          and on its multi-layer optimization policy, which is an
+          internal MDSC implementation issue;
 
        o a new multi-domain TE path needs to be setup between PE13 and
-          PE23, e.g., either because existing TE paths between PE13 and
-          PE23 are not able to meet the TE and binding requirements of
-          the L2/L3 VPN service or because there is no TE path between
-          PE13 and PE23.
-
-   As described in section 2.1.2, with partial summarization, the MDSC
-   will use the TE topology information provided by the P-PNCs and the
-   results of the path computation requests sent to the O-PNCs, as
+          a new multi-domain TE path
+          needs to be setup between PE13 and PE23, e.g., either because
+          existing TE paths between PE13 and PE23 are not able to
+          meet the TE and binding requirements of the L2/L3 VPN service
+          or because there is no TE path between PE13 and PE23.
 
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 41]
+Peruzzini et al.       Expires January 5, 2023                [Page 42]
 
 Internet-Draft                 ACTN POI                       July 2022
 
 
+   As described in section 2.1.2, with partial summarization, the MDSC
+   will use the TE topology information provided by the P-PNCs and the
+   results of the path computation requests sent to the O-PNCs, as
    described in section 5.1, to compute the multi-layer/multi-domain
    path between PE13 and PE23.
 
@@ -2258,17 +2315,17 @@ Internet-Draft                 ACTN POI                       July 2022
    BR21 and returns to the MDSC the binding SID it has assigned to this
    policy in BR21.
 
-   Then the MDSC requests P-PNC1 to setup a TE path between PE13 and
-   BR11, with an explicit path (PE13, BR11) to constrain this new TE
-   path to use the new underlay optical tunnel setup between PE13 and
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 42]
+Peruzzini et al.       Expires January 5, 2023                [Page 43]
 
 Internet-Draft                 ACTN POI                       July 2022
 
 
+   Then the MDSC requests P-PNC1 to setup a TE path between PE13 and
+   BR11, with an explicit path (PE13, BR11) to constrain this new TE
+   path to use the new underlay optical tunnel setup between PE13 and
    BR11, specifying also which inter-domain link should be used to send
    traffic to BR21 and the information to be used for the multi-domain
    TE path stitching, as described in section 4.4 (e.g., in case of
@@ -2311,17 +2368,17 @@ Internet-Draft                 ACTN POI                       July 2022
    relationship between the router ports, the cross-layer links and the
    optical TTPs. Therefore, the properties of an optical path between
    two optical TTPs, as computed by the O-PNC, can be used by the MDSC
-   to infer the properties of the multi-layer single-domain IP link
-   between the router ports associated with the two optical TTPs.
 
 
 
 
-
-Peruzzini et al.       Expires January 5, 2023                [Page 43]
+Peruzzini et al.       Expires January 5, 2023                [Page 44]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   to infer the properties of the multi-layer single-domain IP link
+   between the router ports associated with the two optical TTPs.
 
    There are no YANG data models in IETF that could be used to augment
    the generic path computation RPC with technology-specific attributes.
@@ -2366,17 +2423,16 @@ Internet-Draft                 ACTN POI                       July 2022
    terminating the two cross-layer links, e.g., the LTP 5-1 on PE13 and
    6-1 on BR11 shown in Figure 6.
 
-   After the multi-layer single-domain Ethernet link has been configured
-   by the MDSC or discovered by the P-PNC, the corresponding multi-layer
 
 
 
-
-Peruzzini et al.       Expires January 5, 2023                [Page 44]
+Peruzzini et al.       Expires January 5, 2023                [Page 45]
 
 Internet-Draft                 ACTN POI                       July 2022
 
 
+   After the multi-layer single-domain Ethernet link has been configured
+   by the MDSC or discovered by the P-PNC, the corresponding multi-layer
    single-domain IP link can also be configured either by the MDSC or by
    the P-PNC.
 
@@ -2418,19 +2474,21 @@ Internet-Draft                 ACTN POI                       July 2022
    and, once finished, reports it to the MDSC within the IP topology
    exposed at its MPI.
 
-5.2.1. Multi-layer LAG setup
-
-   The P-PNC configures a new LAG group between two routers when the
-   MDSC creates at the MPI a new Ethernet bundled link (using the
 
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 45]
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 46]
 
 Internet-Draft                 ACTN POI                       July 2022
 
 
+5.2.1. Multi-layer LAG setup
+
+   The P-PNC configures a new LAG group between two routers when the
+   MDSC creates at the MPI a new Ethernet bundled link (using the
    bundled-link container defined in [RFC8795]) bundling the multi-layer
    single-domain Ethernet link(s) being created, as described above.
 
@@ -2472,18 +2530,19 @@ Internet-Draft                 ACTN POI                       July 2022
    update the bandwidth information of the multi-layer single-domain IP
    link supported by the updated Ethernet bundled link.
 
+
+
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 47]
+
+Internet-Draft                 ACTN POI                       July 2022
+
+
 5.2.3. Multi-layer SRLG configuration
 
    [Editor's Note] Add text about the configuration of multi-layer SRLG
    information (issue #45).
-
-
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 46]
-
-Internet-Draft                 ACTN POI                       July 2022
-
 
    It is worth noting that the list of SRLGs for a multi-layer IP link
    can be quite long. Implementation-specific mechanisms can be
@@ -2526,19 +2585,19 @@ Internet-Draft                 ACTN POI                       July 2022
    both symmetric and asymmetric bandwidth configuration in the two
    directions.
 
+
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 48]
+
+Internet-Draft                 ACTN POI                       July 2022
+
+
    [Editor's Note:] Add some text about the protection options (to
    further discuss whether to put this text here or in section 4.2.2).
 
    The MDSC also request the P-PNC to configure local protection
    mechanisms. For example, in case of SR-TE domain, the TI-LFA local
-
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 47]
-
-Internet-Draft                 ACTN POI                       July 2022
-
-
    protection: the mechanisms to request the configuration TI-LFA local
    protection for SR-TE paths using the [TE-TUNNEL] are a gap in the
    current YANG models.
@@ -2581,17 +2640,17 @@ Internet-Draft                 ACTN POI                       July 2022
       UNI topology discover mechanism defined in [SAP]: this gap has
       been identified in section 4.3;
 
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 49]
+
+Internet-Draft                 ACTN POI                       July 2022
+
+
    o  a mechanism applicable to the P-PNC NBI to configure the SR-TE
       paths. Technology-specific augmentations of TE Tunnel model,
       defined in [TE-TUNNEL], are foreseen in section 1 of [TE-TUNNEL]
       but not yet defined: this gap has been identified in section 5.3.
-
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 48]
-
-Internet-Draft                 ACTN POI                       July 2022
-
 
 7. Security Considerations
 
@@ -2634,18 +2693,18 @@ Internet-Draft                 ACTN POI                       July 2022
    [RFC8346] Clemm, A. et al., "A YANG Data Model for Layer 3
              Topologies", RFC8346, March 2018.
 
+
+
+
+Peruzzini et al.       Expires January 5, 2023                [Page 50]
+
+Internet-Draft                 ACTN POI                       July 2022
+
+
    [RFC8453] Ceccarelli, D., Lee, Y. et al., "Framework for Abstraction
              and Control of TE Networks (ACTN)", RFC8453, August 2018.
 
    [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019.
-
-
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 49]
-
-Internet-Draft                 ACTN POI                       July 2022
-
 
    [RFC8527] Bjorklund, M. et al., "RESTCONF Extensions to Support the
              Network Management Datastore Architecture", RFC 8527, March
@@ -2687,19 +2746,18 @@ Internet-Draft                 ACTN POI                       July 2022
              Topologies", draft-ietf-teas-yang-l3-te-topo, work in
              progress.
 
-   [SR-TE-TOPO]   Liu, X. et al., "YANG Data Model for SR and SR TE
-             Topologies on MPLS Data Plane", draft-ietf-teas-yang-sr-te-
-             topo, work in progress.
 
 
 
 
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 50]
+Peruzzini et al.       Expires January 5, 2023                [Page 51]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   [SR-TE-TOPO]   Liu, X. et al., "YANG Data Model for SR and SR TE
+             Topologies on MPLS Data Plane", draft-ietf-teas-yang-sr-te-
+             topo, work in progress.
 
    [MPLS-TE-TOPO] Busi, I. et al., "A YANG Data Model for MPLS-TE
              Topology", draft-busizheng-teas-yang-te-mpls-topology, work
@@ -2743,17 +2801,17 @@ Internet-Draft                 ACTN POI                       July 2022
    [RFC5623] Oki, E. et al., "Framework for PCE-Based Inter-Layer MPLS
              and GMPLS Traffic Engineering", RFC 5623, September 2009.
 
-   [RFC8231] Crabbe, E. et al., "Path Computation Element Communication
-             Protocol (PCEP) Extensions for Stateful PCE", RFC 8231,
-             September 2017.
 
 
 
-
-Peruzzini et al.       Expires January 5, 2023                [Page 51]
+Peruzzini et al.       Expires January 5, 2023                [Page 52]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   [RFC8231] Crabbe, E. et al., "Path Computation Element Communication
+             Protocol (PCEP) Extensions for Stateful PCE", RFC 8231,
+             September 2017.
 
    [RFC8281] Crabbe, E. et al., "Path Computation Element Communication
              Protocol (PCEP) Extensions for PCE-Initiated LSP Setup in a
@@ -2798,16 +2856,16 @@ Internet-Draft                 ACTN POI                       July 2022
              Service Attachment Points (SAPs)", draft-ietf-opsawg-sap,
              work in progress.
 
-   [NETWORK-INVENTORY]  Yu C. et al., "A YANG Data Model for Optical
-             Network Inventory", draft-yg3bp-ccamp-optical-inventory-
-             yang, work in progress.
 
 
-
-Peruzzini et al.       Expires January 5, 2023                [Page 52]
+Peruzzini et al.       Expires January 5, 2023                [Page 53]
 
 Internet-Draft                 ACTN POI                       July 2022
 
+
+   [NETWORK-INVENTORY]  Yu C. et al., "A YANG Data Model for Optical
+             Network Inventory", draft-yg3bp-ccamp-optical-inventory-
+             yang, work in progress.
 
    [OPTICAL-PATH-COMPUTE]  Busi I. et al., "YANG Data Models for
              requesting Path Computation in Optical Networks", draft-
@@ -2854,11 +2912,7 @@ Internet-Draft                 ACTN POI                       July 2022
 
 
 
-
-
-
-
-Peruzzini et al.       Expires January 5, 2023                [Page 53]
+Peruzzini et al.       Expires January 5, 2023                [Page 54]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -2912,7 +2966,7 @@ A.1.  MDSC NBI
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 54]
+Peruzzini et al.       Expires January 5, 2023                [Page 55]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -2966,7 +3020,7 @@ Internet-Draft                 ACTN POI                       July 2022
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 55]
+Peruzzini et al.       Expires January 5, 2023                [Page 56]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -3020,7 +3074,7 @@ Internet-Draft                 ACTN POI                       July 2022
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 56]
+Peruzzini et al.       Expires January 5, 2023                [Page 57]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -3074,7 +3128,7 @@ B.2.  Router port failure
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 57]
+Peruzzini et al.       Expires January 5, 2023                [Page 58]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -3128,7 +3182,7 @@ Contributors
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 58]
+Peruzzini et al.       Expires January 5, 2023                [Page 59]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -3182,7 +3236,7 @@ Internet-Draft                 ACTN POI                       July 2022
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 59]
+Peruzzini et al.       Expires January 5, 2023                [Page 60]
 
 Internet-Draft                 ACTN POI                       July 2022
 
@@ -3236,5 +3290,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.       Expires January 5, 2023                [Page 60]
+Peruzzini et al.       Expires January 5, 2023                [Page 61]
 

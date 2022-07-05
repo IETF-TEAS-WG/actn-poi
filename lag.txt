@@ -23,15 +23,7 @@
  /                   Ethernet Topology (P-PNC 1)           / 
 +---------------------------------------------------------+
 
-Notes:
-=====
-(*) Supporting LTP
-{1} {BR21,1}
-{2} {P24,2}
-
 Legenda:
 ========
   O   LTP
 <===> Link discovered by the PNC and reported at the MPI
-<~~~> Link inferred by the MDSC
-{   } LTP Plug-id reported by the PNC
