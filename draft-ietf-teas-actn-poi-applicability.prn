@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                     Ericsson 
       
-     Expires: January 2023                                     July 10, 2022 
+     Expires: April 2023                                    October 17, 2022 
                                          
       
                                            
@@ -26,7 +26,7 @@
                  Networks (ACTN) to Packet Optical Integration (POI) 
 
 
-                      draft-ietf-teas-actn-poi-applicability-07 
+                      draft-ietf-teas-actn-poi-applicability-08 
 
 
      Abstract 
@@ -59,7 +59,7 @@
         material or to cite them other than as "work in progress." 
 
 
-     Peruzzini et al.       Expires January 10, 2023                [Page 1] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 1] 
 
 
 
@@ -71,7 +71,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         The list of current Internet-Drafts can be accessed at 
@@ -104,7 +104,7 @@
         2. Reference network architecture.................................7 
            2.1. Multi-domain Service Coordinator (MDSC) functions.........9 
               2.1.1. Multi-domain L2/L3 VPN network services.............11 
-              2.1.2. Multi-domain and multi-layer path computation.......14 
+              2.1.2. Multi-domain and multi-layer path computation.......15 
            2.2. IP/MPLS Domain Controller and NE Functions...............17 
            2.3. Optical Domain Controller and NE Functions...............19 
         3. Interface protocols and YANG data models for the MPIs.........19 
@@ -123,7 +123,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 2] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 2] 
       
       
 
@@ -137,12 +137,12 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
               4.5.1. Cross-layer link discovery..........................30 
               4.5.2. Inter-domain IP link discovery......................32 
-           4.6. Multi-layer IP link discovery............................34 
+           4.6. Multi-layer IP link discovery............................35 
               4.6.1. Single-layer intra-domain IP links..................37 
            4.7. LAG discovery............................................39 
            4.8. L2/L3 VPN network services discovery.....................41 
@@ -189,7 +189,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 3] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 3] 
       
       
 
@@ -203,7 +203,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Packet Optical Integration (POI) is an advanced use case of traffic 
@@ -255,7 +255,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 4] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 4] 
       
       
 
@@ -269,12 +269,12 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         This document analyses the case where the packet networks support 
-        multi-domain SR-TE paths and the optical networks could be either a 
-        DWDM network or an OTN network (without DWDM layer) or multi-layer 
+        multi-domain TE paths and the optical networks could be either a DWDM 
+        network or an OTN network (without DWDM layer) or multi-layer 
         OTN/DWDM network. DWDM networks could be either fixed-grid or 
         flexible-grid. 
 
@@ -321,7 +321,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 5] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 5] 
       
       
 
@@ -335,7 +335,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Interface: 
@@ -387,7 +387,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 6] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 6] 
       
       
 
@@ -401,7 +401,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Intra-domain multi-layer IP link: 
@@ -453,7 +453,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 7] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 7] 
       
       
 
@@ -467,7 +467,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         optical domain. The packet domains controlled by the P-PNCs can be 
@@ -489,7 +489,7 @@
         details depending on the policy chosen regarding the level of 
         abstraction supported. The level of abstraction can be obtained based 
         on P-PNC and O-PNC configuration parameters (e.g., provide the 
-        potential connectivity between any PE and any BR in an SR-TE 
+        potential connectivity between any PE and any BR in a packet 
         network). 
 
         In the reference network of Figure 1, it is assumed that: 
@@ -509,9 +509,9 @@
                optical NEs): these links are called cross-layer links within 
                this document; 
 
-            o between customer sites and the packet network (i.e., between CE 
-               devices and PE routers): these links are called access links 
-               within this document. 
+            o between customer sites and the packet network (i.e., between 
+               CE devices and PE routers): these links are called access 
+               links within this document. 
 
         o  All the physical interfaces at inter-domain links are Ethernet 
            physical interfaces. 
@@ -519,7 +519,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 8] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 8] 
       
       
 
@@ -533,7 +533,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Although the new optical technologies (e.g., QSFP-DD ZR 400G) allows 
@@ -585,7 +585,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023                [Page 9] 
+     Peruzzini et al.        Expires April 17, 2023                 [Page 9] 
       
       
 
@@ -599,7 +599,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         3. Another implementation can choose to split the MDSC functions 
@@ -651,7 +651,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 10] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 10] 
       
       
 
@@ -665,59 +665,59 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      2.1.1. Multi-domain L2/L3 VPN network services 
 
-        Figure 2 provides an example of an hub & spoke multi-domain L2/L3 VPN 
-        with three PEs where the hub PE (PE13) and one spoke PE (PE14) are 
-        within the same packet domain and the other spoke PE (PE23) is within 
-        a different packet domain. 
+        Figure 2 and Figure 3 provide an example of an hub & spoke multi-
+        domain L2/L3 VPN with three PEs where the hub PE (PE13) and one spoke 
+        PE (PE14) are within the same packet domain and the other spoke PE 
+        (PE23) is within a different packet domain. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+             ------ 
+            | CE13 |    Packet Domain 1              Packet Domain 2 
+             ------ ____________________            __________________ 
+             ( |                         )         (                  ) 
+            (  | PE13     P15       BR11  )       (  BR21       P24     ) 
+           (   |____         ___       ____ )      ( ____      ___       ) 
+          (    /    \ _ _ _ /   \ _ _ /    \________/    \    /   \     ) 
+         (     \____/       \___/     \___ /        \____/    \_ _/     ) 
+        (   PE14  :\_ _               /      )  (    /  :      : \__     ) 
+        (    ____  :   \__ P16    ___/      )  (  __/_             _\__  ) 
+         (  /    \  :  /   \- - -/    \__________/    \ :_ _ _ :_ /    \  ) 
+         (  \____/     \___/     \____/     )  ( \____/           \____/ ) 
+           (  / :   :    :         :  BR12  )   (   :    :     :     |  ) 
+            (/                              )   ( BR22           PE23|   ) 
+         ------ :   :    :         :       )      ( :     :    :     |  ) 
+        | CE14 | (__ ____ _________ _____)           (_____ ___ _ ------ 
+         ------ :   :    :         :                :      :   : | CE23 | 
+                                                                  ------ 
+                :   :    :         :                :      :   : 
+               _ ___ ____ _________ ________         ______ ___ _______ 
+              ( :   :    :         :        )       :      :   :       ) 
+             (      ____  :      ____        )     (      ____  .. ..   ) 
+            (   :  /    \_ _ _ _/    \ NE12   )   ( :    /    \ _    :   ) 
+           (  NE11 \____/ :     \____/         )  ( NE21 \____/   \     ) 
+           (    :  /    \    _ _ /  \          )  ( :     /        \ :   ) 
+           (   ___/      \:_|        \____    )  (   .___/         _\__  ) 
+           (  /    \_ _ /    \ _ _ _ /    \   )  (   /    \ _ _ _ /    \  ) 
+            ( \____/    \____/       \____/  )    (  \____/       \____/  ) 
+             ( NE13      NE14         NE15   )     (  NE22         NE23  ) 
+              (_____________________________)       (___________________) 
+         
+                     Optical Domain 1                  Optical Domain 2 
+         
+         
+               _____  = Inter-domain links 
+               .. ..  = Cross-layer links 
+               _ _ _  = Intra-domain links 
+         
+                    Figure 2 - Multi-domain VPN topology example 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 11] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 11] 
       
       
 
@@ -731,59 +731,59 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
              ------ 
-            | CE13 |___________________ 
-             ------                    )           __________________ 
-            ( |                         )         (                  ) 
-           (  | PE13     P15       BR11  )       (  BR21         P24  ) 
-          ( ____         ___       ____   )     (   ____         ___   ) 
-         ( / H  \ _ _ _ /   \ _ _ /    \ _)_ _ _(_ /    \ _ _ _ /   \  ) 
-        (  \____/...    \___/     \____/   )   (   \____/       \___/   ) 
-        (          :.....                   )  (                  |     ) 
-        (    ____       :__       ____      )  (  ____           _|__   ) 
-         (  / S  \...../   \._._./    \__________/    \._._._._./  S \  ) 
-          ( \____/     \___/     \____/     )  ( \____/         \____/  ) 
-           (   |                           )    (                   |  ) 
-            (  | PE14   P16       BR12     )    ( BR22         PE23 |  ) 
-             ( |                          )      (                  | ) 
-             ------                      )        (               ------ 
-            | CE14 | ___________________)          (_____________| CE23 | 
-             ------                                               ------ 
+            | CE13 |    Packet Domain 1              Packet Domain 2 
+             ------ ____________________            _________________ 
+             ( |                         )         (                 ) 
+            (  | PE13     P15       BR11  )       (  BR21       P24    ) 
+           (   |____         ___       ____ )      ( ____     ___       ) 
+          (    / H  \       /   \     /    \________/..  \   / ..\ ..  ) 
+         (     \____/.....  \___/     \___ / .. .. ..___:/   \___/   : ) 
+        (   PE14  :      :              .. .. )  (             :        ) 
+        (    ____  :    _:_ P16   ____ :     )  ( ____  :          __:_ ) 
+         (  / S  \  :  / ..\     /   ..__________/    \        :  /  S \ ) 
+         (  \____/     \__:/     \____/     )  ( \____/ :         \____/ ) 
+           (  / :   :     :          :BR12  )   (              :     |  ) 
+            (/  :         :                 )   ( BR22  :        PE23|   ) 
+         ------ :   :     :          :     )      (            :     | ) 
+        | CE14 |:(__ _____:__________ ___)           (__:______ __ ------ 
+         ------ :   :      :         :                         :  | CE23 | 
+                :           :                           :          ------ 
+                :   :       :        :                         : 
+               _:___________:________ ______         ___:______ _______ 
+              ( :   :       :        :      )       (          : .. .. ) 
+             (  :   ____    :    ____        )     (     :____          ) 
+            (   :  / .. \.. : ../ .. \ NE12   )   (      /..  \      :   ) 
+           (  NE11 \____/   :   \____/         )  ( NE21 \__:_/          ) 
+           (    :           :                  )  (                  :  ) 
+           (   _:__      ___:         ____    )  (    ____  : ..  ____  ) 
+           (  / :..\..../...:\       /    \   )  (   /    \      /.. :\  ) 
+            ( \____/    \____/       \____/  )    (  \____/      \____/  ) 
+             ( NE13      NE14         NE15   )     (  NE22        NE23  ) 
+              (_____________________________)       (__________________) 
          
-            _____________________________         ___________________ 
-           (                             )       (                   ) 
-          ( ____              ____        )     (       ____          ) 
-         ( /NE11\ __ _ _ _ _ /NE12\        )   (       /NE21\ _ _      ) 
-        (  \____/..          \____/         )  (       \____/    \     ) 
-        (     |   :.....  ...:   \          )  (        /         \    ) 
-        (    _|__      :__:        \____    )  (    ___/         __\_  ) 
-        (   /NE13\_ _ /NE14\ _ _ _ /NE15\   )  (   /NE22\ _ _ _ /NE23\ )  
-         (  \____/    \____/       \____/  )   (   \____/       \____/ ) 
-          (                               )     (                     ) 
-           (_____________________________)       (___________________) 
-         
-                  optical domain 1                  optical domain 2 
+                     Optical Domain 1                  Optical Domain 2 
          
          
-             H / S = Hub VRF / Spoke VRF 
-            ____   = Inter-domain interconnections 
-            .....  = SR policy Path 1 
-            _ _ _  = SR policy Path 2 
+                H / S = Hub VRF / Spoke VRF 
          
-                        Figure 2 - Multi-domain L3VPN example 
+               .....  = Intra-domain TE Path 1 {PE13, P16, NE14, NE13, PE14} 
+               .. ..  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12,  
+                        BR11, BR21, NE21, NE23, P24, PE23} 
+         
+                    Figure 3 - Multi-domain VPN TE paths example 
 
         There are many options to implement multi-domain L2/L3 VPNs, 
         including: 
 
           1. BGP-LU (seamless MPLS) 
-          2. Inter-domain RSVP-TE 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 12] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 12] 
       
       
 
@@ -797,16 +797,17 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
+          2. Inter-domain RSVP-TE 
           3. Inter-domain SR-TE 
 
         This document provides an analysis of the inter-domain TE options, 
         such as inter-domain SR-TE, for which the TE tunnel model, defined in 
         [TE-TUNNEL], could be used at the MPI for intra-domain or inter-
         domain TE configuration. The analysis of other options is outside the 
-        scope of this draft.  
+        scope of this draft. 
 
         It is also assumed that: 
 
@@ -822,8 +823,8 @@
            SRLG awareness. 
 
         In case of inter-domain SR-TE, it is also assumed that each packet 
-        domain in Figure 2 is implementing SR-TE and the stitching between 
-        two domains is done using inter-domain SR-TE. 
+        domain in Figure 2 and Figure 3 is implementing SR-TE and the 
+        stitching between two domains is done using inter-domain SR-TE. 
 
         In this scenario, one of the key MDSC functions is to identify the 
         multi-domain/multi-layer TE paths to be used to carry the L2/L3 VPN 
@@ -844,12 +845,11 @@
              and binding tunnels to the service such that they are not shared 
              by others services (e.g. VPN). 
              The level of isolation can be different: 
-               a) Hard isolation with deterministic latency that means L2/L3 
-                  VPN requiring a set of dedicated TE Tunnels (neither 
+
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 13] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 13] 
       
       
 
@@ -863,9 +863,11 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
+               a) Hard isolation with deterministic latency that means L2/L3 
+                  VPN requiring a set of dedicated TE Tunnels (neither 
                   sharing with other services nor competing for bandwidth 
                   with other tunnels) providing deterministic latency 
                   performances 
@@ -902,6 +904,34 @@
                support the setup of the new TE path  (multi-layer 
                coordination is required). 
 
+        This document analyses scenarios where only one TE path is used to 
+        carry the VPN traffic between PEs. Scenarios where multiple parallel 
+        TE paths are used in load-balancing to carry the VPN traffic between 
+        PEs are possible but their analysis is outside the scope of this 
+        document. 
+
+
+
+
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 14] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
      2.1.2. Multi-domain and multi-layer path computation 
 
         When a new TE path (e.g., a new SR-TE path) needs to be setup, the 
@@ -911,26 +941,6 @@
         Depending on the knowledge that MDSC has of the topology and 
         configuration of the underlying network domains, three approaches for 
         performing multi-layer/multi-domain path computation are possible: 
-
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 14] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         1. Full Summarization: In this approach, the MDSC has an abstracted 
            TE topology view of all of its, packet and optical, underlying 
@@ -969,19 +979,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 15] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 15] 
       
       
 
@@ -995,7 +995,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         2. Partial summarization: In this approach, the MDSC has full 
@@ -1047,7 +1047,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 16] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 16] 
       
       
 
@@ -1061,7 +1061,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      2.2. IP/MPLS Domain Controller and NE Functions 
@@ -1074,7 +1074,7 @@
         BRs in their respective controlled domains, as requested by MDSC,  
         and to provide topology information to the MDSC. 
 
-        For example, with reference to Figure 2, a bidirectional SR-TE path 
+        For example, with reference to Figure 3, a bidirectional SR-TE path 
         from PE13 in domain 1 to PE23 in domain 2 requires the MDSC to 
         coordinate the actions of: 
 
@@ -1086,7 +1086,7 @@
            associated to the SR-TE path in Domain 1 with PE13 as the target 
            destination (reverse direction). 
 
-        With reference to Figure 3, P-PNCs are then responsible: 
+        With reference to Figure 4, P-PNCs are then responsible: 
 
         1. To expose to MDSC their respective detailed TE topology 
 
@@ -1113,7 +1113,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 17] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 17] 
       
       
 
@@ -1127,7 +1127,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
          
@@ -1150,7 +1150,7 @@
                                    End-to-end TE path 
                   <-------------------------------------------------> 
          
-                     Figure 3  Domain Controller & NE Functions 
+                     Figure 4  Domain Controller & NE Functions 
 
         When requesting the setup of a new TE path, the MDSC provides the P-
         PNCs with the explicit path to be created or modified. In other 
@@ -1174,12 +1174,12 @@
         which path it has chosen so that the MDSC keeps track of the relevant 
         resources utilization. 
 
-        An example of that comes from Figure 2. The SR-TE path requested by 
+        An example of that comes from Figure 3. The SR-TE path requested by 
         the MDSC touches PE13 - P16 – BR12 – BR21 – PE23. P-PNC2 knows of two 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 18] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 18] 
       
       
 
@@ -1193,7 +1193,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         possible paths with the same topology metric, e.g. BR21 – P24 – PE23 
@@ -1245,7 +1245,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 19] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 19] 
       
       
 
@@ -1259,7 +1259,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         interfaces. In addition, extensions to RESTCONF, as defined in 
@@ -1311,7 +1311,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 20] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 20] 
       
       
 
@@ -1325,7 +1325,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         o  Dynamic Subscription to YANG Events and Datastores over RESTCONF 
@@ -1377,7 +1377,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 21] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 21] 
       
       
 
@@ -1391,7 +1391,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         The optical PNC uses the Ethernet Client Signal Model, defined in the 
@@ -1443,7 +1443,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 22] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 22] 
       
       
 
@@ -1457,7 +1457,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         o  L2VPN Network Model (L2NM), defined in the “ietf-l2vpn-ntw” YANG 
@@ -1509,7 +1509,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 23] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 23] 
       
       
 
@@ -1523,7 +1523,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         4. The MDSC uses the RESTCONF/YANG interface towards each PNC to 
@@ -1575,7 +1575,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 24] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 24] 
       
       
 
@@ -1589,7 +1589,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         approach and mechanisms to address potential issues is outside the 
@@ -1598,7 +1598,7 @@
         Each PNC provides to the MDSC the topology view of the domain it 
         controls, as described in section 4.1 and 4.3. The MDSC uses this 
         information to discover the complete topology view of the multi-layer 
-        multi-domain network it controls. 
+        multi-domain networks it controls. 
 
         The MDSC should also maintain up-to-date inventory, service and 
         network topology databases of both IP and optical layers through the 
@@ -1641,7 +1641,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 25] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 25] 
       
       
 
@@ -1655,7 +1655,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         inventory information, the O-PNCs report an abstract optical network 
@@ -1707,7 +1707,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 26] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 26] 
       
       
 
@@ -1721,7 +1721,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         In case of a multi-layer DWDM/OTN network domain, multi-layer intra-
@@ -1749,10 +1749,10 @@
         tunnels. 
 
         The DWDM tunnels can be used as underlay tunnels to support either 
-        Ethernet client connectivity or multi-layer intra-domain OTN links. 
-        In the latter case, the hierarchical-link container, defined in [TE-
-        TUNNEL], is used to reference which multi-layer intra-domain OTN 
-        links are supported by the underlay DWDM tunnels. 
+        Ethernet client signal or multi-layer intra-domain OTN links. In the 
+        latter case, the hierarchical-link container, defined in [TE-TUNNEL], 
+        is used to reference which multi-layer intra-domain OTN links are 
+        supported by the underlay DWDM tunnels. 
 
         The O-PNCs report in their operational datastores all the Ethernet 
         client connectivities and all the optical tunnels deployed within 
@@ -1768,12 +1768,12 @@
         network topology, as described in figure 2 of [SR-TE-TOPO]. 
 
         The L3 Topology Model, TE Topology Model, TE Packet Topology Model 
-        and MPLS-TE Topology Model are used together to report the SR-TE 
+        and MPLS-TE Topology Model are used together to report the MPLS-TE 
         network topology, as described in [MPLS-TE-TOPO]. 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 27] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 27] 
       
       
 
@@ -1787,7 +1787,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         In order to allow the MDSC to discover the complete multi-layer and 
@@ -1800,16 +1800,16 @@
         topology also reports the IP LTPs terminating the inter-domain IP 
         links. 
 
-        All the intra-domain IP links are discovered by the P-PNCs, using 
-        mechanisms, such as LLDP [IEEE 802.1AB], which are outside the scope 
-        of this document, and reported at the MPIs within the packet network 
-        topology. 
-
         The Ethernet Topology Model is used to report the intra-domain 
         Ethernet links supporting the intra-domain IP links as well as the 
         Ethernet LTPs that might terminate cross-layer links, inter-domain 
         Ethernet links or access links, as described in detail in section 4.5 
         and in section 4.6. 
+
+        All the intra-domain Ethernet and IP links are discovered by the 
+        P-PNCs, using mechanisms, such as LLDP [IEEE 802.1AB], which are 
+        outside the scope of this document, and reported at the MPIs within 
+        the Ethernet or the packet network topology. 
 
      4.4. TE path discovery 
 
@@ -1828,18 +1828,18 @@
         the P-PNC to report the TE path within its domain (e.g., the SID list 
         assigned to an SR-TE path). 
 
-        For example, considering the L3VPN in Figure 2, the PE13-P16-PE14 TE 
-        path and the TE path in the reverse direction (between PE14 and PE13) 
-        could be reported by the P-PNC1 to the MDSC as primary and reverse 
-        primary TE paths of the same TE tunnel instance. The bandwidth of 
-        these TE paths represents the bandwidth allocated by P-PNC1 to the 
-        two TE paths,which can be symmetric or asymmetric in the two 
-        directions. 
+        For example, considering the L3VPN in Figure 2, the TE path 1 in one 
+        direction (PE13-P16-PE14) and the TE path in the reverse direction 
+        (between PE14 and PE13) should be reported by the P-PNC1 to the MDSC 
+        as TE primary and primary-reverse paths of the same TE tunnel 
+        instance. The bandwidth of these TE paths represents the bandwidth 
+        allocated by P-PNC1 to the two TE paths,which can be symmetric or 
+        asymmetric in the two directions. 
 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 28] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 28] 
       
       
 
@@ -1853,7 +1853,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         The P-PNCs use the TE tunnel model to report, at the MPI, all the TE 
@@ -1878,14 +1878,17 @@
 
         All the three types of links are Ethernet links. 
 
+        There are two possible models to report the access links between CEs 
+        and PEs: the Ethernet Topology Model, defined in [CLIENT-TOPO], or 
+        the Service Attachment Points (SAP) Model, defined in  [SAP]. 
+        Clarifying the relationship between these two models has been 
+        identified as a gap. 
+
         It is worth noting that the P-PNC may not be aware whether an 
         Ethernet interface terminates a cross-layer link, an inter-domain 
-        Ethernet link or an access link. 
-
-        It is not yet clarified which model can be used to report the access 
-        links between CEs and PEs (e.g., by using the Ethernet Topology Model 
-        defined in [CLIENT-TOPO] or by using the SAP Model defined in  
-        [SAP]). This has been identified as a gap. 
+        Ethernet link or an access link. The Ethernet Topology Model supports 
+        the discovery for all these types of links with no need for the P-PNC 
+        to know the ypte of inter-domain link. 
 
         The inter-domain Ethernet links and cross-layer links are discovered 
         by the MDSC using the plug-id attribute, as described in section 4.3 
@@ -1893,6 +1896,31 @@
 
         More detailed description of how the plug-id can be used to discover 
         inter-domain links is also provided in section 5.1.4 of [TNBI]. 
+
+        The plug-id attribute can also be used to discover the access-links, 
+        but the analysis of the access-link discovery is outside the scope of 
+        this document. 
+
+
+
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 29] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
 
         This document considers the following two options for discovering 
         inter-domain links: 
@@ -1902,25 +1930,6 @@
         2. LLDP [IEEE 802.1AB] automatic discovery 
 
         Other options are possible but not described in this document. 
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 29] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         As outlined in [TNBI], the encoding of the plug-id namespace and the 
         specific LLDP information reported within the plug-id value, such as 
@@ -1949,16 +1958,7 @@
         information sent by the corresponding Ethernet interface on the 
         router while the O-PNC reports the LLDP information received by the 
         corresponding Ethernet interface on the optical NE, e.g., between LTP 
-        5-0 on PE13 and LTP 7-0 on NE11, as shown in Figure 4. 
-
-
-
-
-
-
-
-
-
+        5-0 on PE13 and LTP 7-0 on NE11, as shown in Figure 5. 
 
 
 
@@ -1971,7 +1971,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 30] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 30] 
       
       
 
@@ -1985,7 +1985,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
                 +-----------------------------------------------------------+ 
@@ -2023,13 +2023,13 @@
         <...> Link discovered by the MDSC 
         {   } LTP Plug-id reported by the PNC 
          
-                        Figure 4 – Cross-layer link discovery 
+                        Figure 5 – Cross-layer link discovery 
 
         It is worth noting that the discovery of cross-layer links is based 
         only on the LLDP information sent by the Ethernet interfaces of the 
-        routers and received by the Ethernet interfaces of the optical NEs, 
-        Therefore the MDSC can discover these links also before overlay 
-        multi-layer IP links are setup. 
+        routers and received by the Ethernet interfaces of the optical NEs. 
+        Therefore the MDSC can discover these links also before optical 
+        paths, supporting overlay multi-layer IP links, are setup. 
 
 
 
@@ -2037,7 +2037,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 31] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 31] 
       
       
 
@@ -2051,7 +2051,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      4.5.2. Inter-domain IP link discovery 
@@ -2061,7 +2061,7 @@
         Ethernet LTPs reported by the two adjacent P-PNCs: the two P-PNCs 
         report the LLDP information being sent and being received from the 
         corresponding Ethernet interfaces, e.g., between the Ethernet LTP 3-1 
-        on BR11 and the Ethernet LTP 4-1 on BR21 shown in Figure 5. 
+        on BR11 and the Ethernet LTP 4-1 on BR21 shown in Figure 6. 
 
 
 
@@ -2103,7 +2103,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 32] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 32] 
       
       
 
@@ -2117,7 +2117,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
                 +--------------------------+     +-------------------------+ 
@@ -2136,11 +2136,11 @@
                   +--------------|----------+    +|------------------------+ 
                  /               V         /    / V                       / 
                 / +-------------+/        /    /  \+-------------+       / 
-               /  |     {1}(3-1)O.................>O(4-1){1}     |      / 
+               /  |     {1}(3-1)O<................>O(4-1){1}     |      / 
               /   |             |\      /    /    /|             |     / 
              /    |    BR11     |V(*)  /    /  (*)V|     BR21    |    / 
             /     |             |/    /    /      \|             |   / 
-           /      |     {2}(3-0)O<~~~~~~~~~~~~~~~~>O(4-0){2}     |  / 
+           /      |     {2}(3-0)O<~~~~~~~~~~~~~~~~>O(4-0){3}     |  / 
           /       +-------------+   /    /         +-------------+ / 
          / Eth. Topology (P-PNC 1) /    / Eth. Topology (P-PNC 2) / 
         +-------------------------+    +-------------------------+  
@@ -2150,6 +2150,7 @@
         (*) Supporting LTP 
         {1} {BR11,3,BR21,4} 
         {2} {BR11,3} 
+        {3} {BR21,4} 
          
         Legenda: 
         ======== 
@@ -2159,17 +2160,16 @@
         <~~~> Link inferred by the MDSC 
         {   } LTP Plug-id reported by the PNC 
          
-               Figure 5 – Inter-domain Ethernet and IP link discovery 
+               Figure 6 – Inter-domain Ethernet and IP link discovery 
 
-        Different information is required to be encoded within the plug-id 
-        attribute of the Etherent LTPs to discover cross-layer links and 
-        inter-domain Ethernet links. 
-
+        Different information is required to be encoded by the P-PNC within 
+        the plug-id attribute of the Etherent LTPs to discover cross-layer 
+        links and inter-domain Ethernet links. 
 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 33] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 33] 
       
       
 
@@ -2183,89 +2183,89 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         If the P-PNC does not know a priori whether an Ethernet interface on 
         a router terminates a cross-layer link or an inter-domain Ethernet 
         link, it has to report at the MPI two Ethernet LTPs representing the 
         same Ethernet interface, e.g., both the Ethernet LTP 3-0 and the 
-        Ethenet LTP 3-1, supported by LTP 3-0, shown in Figure 5: 
+        Ethenet LTP 3-1, supported by LTP 3-0, shown in Figure 6: 
 
-        o  The physical Ethernet LTP is used to represent the physical 
-           adjacency between the router Ethernet interface and either the 
-           adjacent router Ethernet interface (in case of a single-layer 
-           Ethernet link) or the optical NE Ethernet interface (in case of a 
-           multi-layer Ethernet link). Therefore, this LTP reports, within 
-           the plug-id attribute, the LLDP information sent by the 
-           corresponding router Ethernet interface; 
+        o  The physical Ethernet LTP (e.g., LTP 3-0 in BR11, as shown in 
+           Figure 6) is used to represent the physical adjacency between the 
+           router Ethernet interface and either the adjacent router Ethernet 
+           interface (in case of a single-layer Ethernet link) or the optical 
+           NE Ethernet interface (in case of a multi-layer Ethernet link). 
+           Therefore, as described in section 4.5.1, the P-PNC reports, 
+           within the plug-id attribute of this LTP, the LLDP information 
+           sent by the corresponding router Ethernet interface; such as the 
+           {BR11,3} and {BR21,4} plug-id values reported, respectively, by 
+           the Ethernet LTP 3-0 on BR11 and by the Ethernet LTP 4-0 on BR21, 
+           as shown in Figure 6; 
 
-        o  The logical Ethernet LTP, supported by a physical Ethernet LTP, is 
-           used to discover the logical adjancecy between router Ethernet 
-           interfaces, which can be either single-layer or multi-layer. 
-           Therefore, this LTP reports, within the plug-id attribute, the 
-           LLDP information sent and received by the corresponding router 
-           Ethernet interface. 
+        o  The logical Ethernet LTP (e.g., LTP 3-1 in BR11, as shown in 
+           Figure 6), supported by a physical Ethernet LTP (e.g., LTP 3-0 in 
+           BR11, as shown in Figure 6), is used to discover the logical 
+           adjacency between router Ethernet interfaces, which can be either 
+           single-layer or multi-layer. Therefore, the P-PNC reports, within 
+           the plug-id attribute of this LTP, the LLDP information sent and 
+           received by the corresponding router Ethernet interface; such as 
+           the {BR11,3,BR21,4} plug-id values reported by the Ethernet LTP 3-
+           1 on BR11 and by the Ethernet LTP 4-1 on BR21, as shown in Figure 
+           6. 
 
         It is worth noting that in case of an inter-domain single-layer 
-        Ethernet link, the physical adjacency between the two router Ethernet 
-        interfaces cannot be discovered by the MDSC, using the LLDP 
-        information reported in the plug-id attributes, as shown in Figure 5. 
-        However, the MDSC may infer these links if it knows a priori, using 
-        mechanisms which are outside the scope of this document, that inter-
-        domain Ethernet links are always single-layer, e.g., as shown in 
-        Figure 5. 
+        Ethernet links, the MDSC cannot discover, using the the LLDP 
+        information reported in the plug-id attributes, the physical 
+        adjacency between the two router Ethernet interfaces because these 
+        two plug-id values do not match, such as the plug-id values {BR11,3} 
+        and {BR21,4} shown in Figure 6. However, the MDSC may infer the 
+        physical intra-domain Etherent links if it knows a priori, using 
+        mechanisms which are outside the scope of this document, that the 
+        Ethernet interfaces on the routers either terminates a cross-layer 
+        link or a single-layer (intra-domain or inter-domain) Ethernet link, 
+        e.g., as shown in Figure 6. 
 
         The P-PNC can omit reporting the physical Ethernet LTPs when it 
         knows, by mechanisms which are outside the scope of this document, 
         that the corresponding router Ethernet interfaces terminate single-
         layer inter-domain Ethernet links. 
 
+
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 34] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
         The MDSC can then discover an inter-domain IP link between the two IP 
         LTPs that are supported by the two Ethernet LTPs terminating an 
         inter-domain Ethernet link, discovered as described in section 4.5.2, 
         e.g., between the IP LTP 3-2 on BR21 and the IP LTP 4-2 on BR22, 
         supported respectively by the Ethernet LTP 3-1 on BR11 and by the 
-        Ethernet LTP 4-1 on BR21, as shown in Figure 5. 
+        Ethernet LTP 4-1 on BR21, as shown in Figure 6. 
 
      4.6. Multi-layer IP link discovery 
 
         A multi-layer intra-domain IP link and its supporting multi-layer 
         intra-domain Ethernet link are discovered by the P-PNC like any other 
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 34] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
-
         intra-domain IP and Ethernet links, as described in section 4.3, and 
-        reported at the MPI within the SR-TE and Ethernet network topologies, 
-        e.g., as shown in Figure 6. 
-
-
-
-
-
-
-
-
-
-
-
+        reported at the MPI within the packet and the Ethernet network 
+        topologies, e.g., as shown in Figure 7. 
 
 
 
@@ -2301,7 +2301,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 35] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 35] 
       
       
 
@@ -2315,7 +2315,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
                 +-----------------------------------------------------------+ 
@@ -2331,7 +2331,7 @@
                                             | Supporting Link 
                                             | 
                 +---------------------------|-------------------------------+ 
-               / Ethernet Topology (P-PNC1) |                              / 
+               / Ethernet Topology (P-PNC 1)|                              / 
               /    +-------------+          |     +-------------+         / 
              /     |    PE13     |          V     |    BR11     |        / 
             /      |        (5-1)O<==============>O(6-1)        |       / 
@@ -2367,7 +2367,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 36] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 36] 
       
       
 
@@ -2381,7 +2381,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Notes: 
@@ -2394,30 +2394,31 @@
         ----> Supporting LTP or Supporting Link or Underlay tunnel 
         <===> Link discovered by the PNC and reported at the MPI 
         <...> Link discovered by the MDSC 
-        <~~~> Link inferred by the MDSC 
         x---x Ethernet client signal 
         X===X Optical tunnel 
          
-         Figure 6 – Multi-layer intra-domain Ethernet and IP link discovery 
+         Figure 7 – Multi-layer intra-domain Ethernet and IP link discovery 
 
-        The P-PNC does not report any plug-id information on the Ethernet 
-        LTPs terminating intra-domain Ethernet links since these links are 
-        discovered by the PNC. 
+        The P-PNC does not report any plug-id information on the logical 
+        Ethernet LTPs terminating intra-domain Ethernet links, such as the 
+        LTP 5-1 on PE13 and LTP 6-1 in BR11 shown in Figure 7, since these 
+        links are discovered by the PNC. 
 
         In addition, the P-PNC also reports the physical Ethernet LTPs that 
         terminate the cross-layer links supporting the multi-layer intra-
         domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the 
-        Ethernet LTP 6-0 on BR11, shown in Figure 6. 
+        Ethernet LTP 6-0 on BR11, shown in Figure 7. 
 
         The MDSC discovers, using the mechanisms described in section 4.5, 
         which Ethernet cross-layer links support the multi-layer intra-domain 
-        Ethernet links, e.g. as shown in Figure 6. 
+        Ethernet links, e.g., the link between LTP 5-0 on PE13 and LTP 7-0 on 
+        NE11, shown in Figure 7. 
 
         The MDSC also discovers, from the information provided by the O-PNC 
         and described in section 4.2, which optical tunnels support the 
         multi-layer intra-domain IP links and therefore the path within the 
         optical network that supports a multi-layer intra-domain IP link, 
-        e.g., as shown in Figure 6. 
+        e.g., as shown in Figure 7. 
 
      4.6.1. Single-layer intra-domain IP links 
 
@@ -2427,13 +2428,12 @@
 
         In this case, the P-PNC, always reports two Ethernet LTPs for each 
         Ethernet interface on the router, e.g., the Ethernet LTP 1-0 and 1-1 
-        on PE13, shown in Figure 7. 
-
+        on PE13, shown in Figure 8. 
 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 37] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 37] 
       
       
 
@@ -2447,7 +2447,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
                 +-----------------------------------------------------------+ 
@@ -2489,17 +2489,17 @@
         <~~~> Link inferred by the MDSC 
         {   } LTP Plug-id reported by the PNC 
          
-         Figure 7 – Single-layer intra-domain Ethernet and IP link discovery 
+         Figure 8 – Single-layer intra-domain Ethernet and IP link discovery 
 
-        In this case, the MDSC, using the plug-id information reported in the 
-        physical Ethernet LTPs, does not discover any cross-layer link being 
-        terminated by the corresponding Ethernet interface. The  MDSC may 
-        infer the physical intra-domain Ethernet link, e.g., between LTP 1-0 
-        on PE13 and LTP 2-0 on P16, as shown in Figure 7, if it knows a 
+        It is worth noting that in case of an intra-domain single-layer 
+        Ethernet links, the MDSC cannot discover, using the LLDP information 
+        reported in the plug-id attributes, the physical adjacency between 
+        the two router Ethernet interfaces because the two plug-id values do 
+        not match, such as the plug-id values {PE13,1} and {P16,2} shown in 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 38] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 38] 
       
       
 
@@ -2513,12 +2513,16 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
-        priori, by mechanisms which are outside the scope of this document, 
-        that all the Ethernet interfaces on the routers either terminates a 
-        cross-layer link or a single-layer intra-domain Ethernet link. 
+        Figure 8. However, the MDSC may infer the physical intra-domain 
+        Ethernet links, e.g., between LTP 1-0 on PE13 and LTP 2-0 on P16, as 
+        shown in Figure 8, if it knows a priori, using mechanisms which are 
+        outside the scope of this document, that all the Ethernet interfaces 
+        on the routers either terminates a cross-layer link or a single-layer 
+        (intra-domain or inter-domain) Ethernet link, e.g., as shown in 
+        Figure 8. 
 
         The P-PNC can omit reporting the physical Ethernet LTP if it knows, 
         by mechanisms which are outside the scope of this document, that the 
@@ -2531,7 +2535,7 @@
         link, within the Ethernet topology exposed at the MPI. 
 
         This is done bundling multiple single-domain Ethernet links, as shown 
-        in Figure 8. For example, the Ethernet bundled link between the 
+        in Figure 9. For example, the Ethernet bundled link between the 
         Ethernet LTP 5-1 on BR21 and the Ethernet LTP 6-1 on P24, is built  
         from the Ethernet links setup respectively: 
 
@@ -2559,13 +2563,9 @@
 
 
 
-
-
-
-
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 39] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 39] 
       
       
 
@@ -2579,12 +2579,12 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
          
                 +-----------------------------------------------------------+ 
-               /                    IP Topology (P-PNC 1)                  / 
+               /                    IP Topology (P-PNC 2)                  / 
               /    +---------+                        +---------+         /  
              /     |  BR21   |                        |    P24  |        /   
             /      |    (5-2)O<======================>O(6-2)    |       / 
@@ -2605,7 +2605,7 @@
             /      |    (3-1)O<======================>O(4-1)    |     / 
            /       |    (1-1)O<======================>O(2-1)    |    /  
           /        +---------+                        +---------+   /  
-         /                   Ethernet Topology (P-PNC 1)           /  
+         /                   Ethernet Topology (P-PNC 2)           /  
         +---------------------------------------------------------+ 
          
         Legenda: 
@@ -2613,7 +2613,7 @@
           O   LTP 
         <===> Link discovered by the PNC and reported at the MPI 
          
-                                   Figure 8 – LAG 
+                                   Figure 9 – LAG 
 
         The mechanisms used by the MDSC to discover single-layer and multi-
         layer intra-domain LAG link is the same (the only difference being 
@@ -2631,7 +2631,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 40] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 40] 
       
       
 
@@ -2645,7 +2645,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         However, it is worth noting that according to [IEEE 802.1AB], LLDP 
@@ -2697,7 +2697,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 41] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 41] 
       
       
 
@@ -2711,7 +2711,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         with inventory information, e.g., the physical port supporting an 
@@ -2734,15 +2734,15 @@
         nodes/links/domains inclusion/exclusion) and find the TE paths that 
         meet these TE requirements (see section 2.1.1). 
 
-        For example, considering the L3VPN in Figure 2, the MDSC finds that: 
+        For example, considering the L3VPN in Figure 2 and Figure 3, the MDSC 
+        finds that: 
 
-        o  PE13-P16-PE14 SR-TE path already exists but have not enough 
-           bandwidth to support the new L3VPN, as described in section 4.4;, 
-           and that: 
+        o  PE13-P16-PE14 TE path already exists but have not enough bandwidth 
+           to support the new L3VPN, as described in section 4.4;, and that: 
 
-            o the IP link(s) between PE13 and P16 has not enough bandwidth to 
-               support increasing the bandwidth of that TE path, as described 
-               in section 4.3; 
+            o the IP link(s) between PE13 and P16 has not enough bandwidth 
+               to support increasing the bandwidth of that TE path, as 
+               described in section 4.3; 
 
             o a new underlay optical tunnel could be setup to increase the 
                bandwidth of the IP link(s) between PE13 and P16 to support 
@@ -2763,7 +2763,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 42] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 42] 
       
       
 
@@ -2777,7 +2777,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         As described in section 2.1.2, with partial summarization, the MDSC 
@@ -2829,7 +2829,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 43] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 43] 
       
       
 
@@ -2843,7 +2843,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Then the MDSC requests P-PNC1 to setup a TE path between PE13 and 
@@ -2895,7 +2895,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 44] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 44] 
       
       
 
@@ -2909,7 +2909,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         to infer the properties of the multi-layer single-domain IP link 
@@ -2938,7 +2938,7 @@
         steering configured, the two IP routers can exchange Ethernet packets 
         between themselves, including LLDP messages. 
 
-        For example, with a reference to Figure 6, the MDSC can request the 
+        For example, with a reference to Figure 7, the MDSC can request the 
         O-PNC1 to setup an optical tunnel between the TTPs within NE11 and 
         NE14 to steer over this tunnel the Ethernet traffic between LTP (7-0) 
         on NE11 and LTP (8-0) on NE14. 
@@ -2956,12 +2956,12 @@
         The two Ethernet LTPs terminating this multi-layer single-domain 
         Ethernet link are supported by the two underlay Ethernet LTPs 
         terminating the two cross-layer links, e.g., the LTP 5-1 on PE13 and 
-        6-1 on BR11 shown in Figure 6. 
+        6-1 on BR11 shown in Figure 7. 
 
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 45] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 45] 
       
       
 
@@ -2975,7 +2975,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         After the multi-layer single-domain Ethernet link has been configured 
@@ -3011,7 +3011,7 @@
         Ethernt link are configured by the MDSC. All the other configuration 
         is provided by the P-PNC. 
 
-        For example, with a reference to Figure 6, the MDSC can request the 
+        For example, with a reference to Figure 7, the MDSC can request the 
         P-PNC1 to setup a multi-layer single-domain IP Link between IP LTP 5-
         2 on PE13 and IP LTP 6-2 on BR11 supported by the multi-layer single-
         domain Ethernet link between ETH LTP 5-1 on PE13 and ETH LTP 6-1 on 
@@ -3027,7 +3027,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 46] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 46] 
       
       
 
@@ -3041,7 +3041,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      5.2.1. Multi-layer LAG setup 
@@ -3054,7 +3054,7 @@
         It is worth noting that a new LAG group can be created to bundle one 
         or more multi-layer single-domain Ethernet link(s). 
 
-        For example, with a reference to Figure 8, the MDSC can request the 
+        For example, with a reference to Figure 9, the MDSC can request the 
         P-PNC2 to setup an Ethernet bundled link between the Ethernet LTP 5-1 
         on BR21 and the Ethernet LTP 6-1 on P24, bundling the multi-layer 
         single-domain Ethernet link between the Etherent LTP 1-1 on BR21 and 
@@ -3067,7 +3067,7 @@
         domain IP link, supported by the the just configured Ethernet bundled 
         link, following the same procedure described in section 5.2 above. 
 
-        For example, with a reference to Figure 8, the MDSC can request the 
+        For example, with a reference to Figure 9, the MDSC can request the 
         P-PNC2 to setup a multi-layer single-domain IP Link between IP LTP 5-
         2 on BR21 and IP LTP 6-2 on P24 supported by the Ethernet bundle link 
         between ETH LTP 5-1 on BR21 and the Ethernet LTP 6-1 on P24. 
@@ -3079,7 +3079,7 @@
         link adding the multi-layer single-domain Ethernet link(s) being 
         created, as described above. 
 
-        For example, with a reference to Figure 8, the MDSC can request the 
+        For example, with a reference to Figure 9, the MDSC can request the 
         P-PNC2 to add the multi-layer single-domain Ethernet link setup 
         between the Etherent LTP 3-1 on BR21 and the Ethernet LTP 4-1 on P24 
         to the existing Ethernet bundle link setup between the Ethernet LTP 
@@ -3093,7 +3093,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 47] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 47] 
       
       
 
@@ -3107,7 +3107,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      5.2.3. Multi-layer SRLG configuration 
@@ -3159,7 +3159,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 48] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 48] 
       
       
 
@@ -3173,7 +3173,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         [Editor’s Note:] Add some text about the protection options (to 
@@ -3225,7 +3225,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 49] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 49] 
       
       
 
@@ -3239,13 +3239,19 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         o  a mechanism applicable to the P-PNC NBI to configure the SR-TE 
            paths. Technology-specific augmentations of TE Tunnel model, 
            defined in [TE-TUNNEL], are foreseen in section 1 of [TE-TUNNEL] 
            but not yet defined: this gap has been identified in section 5.3. 
+
+        Although not analysed in this document, it has been noted that the TE 
+        Tunnel model, defined in [TE-TUNNEL], needs also to be enhanced to 
+        support scenarios where multiple parallel TE paths are used in load-
+        balancing to carry the traffic between two end-points (e.g., VPN 
+        traffic between two PEs). 
 
      7. Security Considerations 
 
@@ -3282,31 +3288,31 @@
         [RFC8342] Bjorklund, M. et al., "Network Management Datastore 
                   Architecture (NMDA)", RFC 8342, March 2018. 
 
+
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 50] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
         [RFC8345] Clemm, A., Medved, J. et al., “A Yang Data Model for 
                   Network Topologies”, RFC8345, March 2018. 
 
         [RFC8346] Clemm, A. et al., “A YANG Data Model for Layer 3 
                   Topologies”, RFC8346, March 2018. 
-
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 50] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         [RFC8453] Ceccarelli, D., Lee, Y. et al., "Framework for Abstraction 
                   and Control of TE Networks (ACTN)", RFC8453, August 2018. 
@@ -3349,30 +3355,28 @@
                   Topology", draft-zheng-ccamp-client-topo-yang, work in 
                   progress. 
 
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 51] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
         [L3-TE-TOPO]   Liu, X. et al., "YANG Data Model for Layer 3 TE 
                   Topologies", draft-ietf-teas-yang-l3-te-topo, work in 
                   progress. 
-
-
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 51] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         [SR-TE-TOPO]   Liu, X. et al., "YANG Data Model for SR and SR TE 
                   Topologies on MPLS Data Plane", draft-ietf-teas-yang-sr-te-
@@ -3417,28 +3421,27 @@
         [RFC5440] Vasseur, JP. et al., "Path Computation Element (PCE) 
                   Communication Protocol (PCEP)", RFC 5440, March 2009. 
 
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 52] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
         [RFC5623] Oki, E. et al., "Framework for PCE-Based Inter-Layer MPLS 
                   and GMPLS Traffic Engineering", RFC 5623, September 2009. 
-
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 52] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         [RFC8231] Crabbe, E. et al., "Path Computation Element Communication 
                   Protocol (PCEP) Extensions for Stateful PCE", RFC 8231, 
@@ -3483,28 +3486,29 @@
                   aware Topology", draft-ietf-ccamp-optical-impairment-
                   topology-yang, work in progress. 
 
+
+      
+      
+     Peruzzini et al.        Expires April 17, 2023                [Page 53] 
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+     Internet-Draft                 ACTN POI                    October 2022 
+         
+
         [SAP]     Gonzalez de Dios O. et al., "A Network YANG Model for 
                   Service Attachment Points (SAPs)", draft-ietf-opsawg-sap, 
                   work in progress. 
-
-      
-      
-     Peruzzini et al.       Expires January 10, 2023               [Page 53] 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-     Internet-Draft                 ACTN POI                       July 2022 
-         
 
         [NETWORK-INVENTORY]  Yu C. et al., "A YANG Data Model for Optical 
                   Network Inventory", draft-yg3bp-ccamp-optical-inventory-
@@ -3549,13 +3553,9 @@
 
 
 
-
-
-
-
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 54] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 54] 
       
       
 
@@ -3569,7 +3569,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      Appendix A. OSS/Orchestration Layer 
@@ -3611,7 +3611,7 @@
         a more abstracted version of the MPI YANG data models used for 
         network configuration (e.g. L3NM, L2NM). 
 
-        Figure 9 shows an example of possible control flow between the 
+        Figure 10 shows an example of possible control flow between the 
         OSS/Orchestration layer and the MDSC to instantiate L2/L3 VPN network 
         services, using the YANG data models under the definition in [VN], 
         [L2NM], [RFC9182] and [TSM]. 
@@ -3621,7 +3621,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 55] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 55] 
       
       
 
@@ -3635,7 +3635,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
                     +-------------------------------------------+ 
@@ -3656,7 +3656,7 @@
                     |                                           | 
                     +-------------------------------------------+ 
          
-                          Figure 9 Service Request Process 
+                         Figure 10   Service Request Process 
 
         o  The VN YANG data model, defined in [VN], whose primary focus is 
            the CMI, can also provide VN Service configuration from an 
@@ -3687,7 +3687,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 56] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 56] 
       
       
 
@@ -3701,7 +3701,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
             o TE-service mapping provides the mapping between a L2/L3 VPN 
@@ -3753,7 +3753,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 57] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 57] 
       
       
 
@@ -3767,7 +3767,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
      Appendix B. Multi-layer and multi-domain resiliency 
@@ -3819,7 +3819,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 58] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 58] 
       
       
 
@@ -3833,7 +3833,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         b) If there is no LAG then the scenario is not clear since a router 
@@ -3885,7 +3885,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 59] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 59] 
       
       
 
@@ -3899,7 +3899,7 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
 
         Anton Snitser 
@@ -3951,7 +3951,7 @@
 
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 60] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 60] 
       
       
 
@@ -3965,8 +3965,15 @@
 
 
 
-     Internet-Draft                 ACTN POI                       July 2022 
+     Internet-Draft                 ACTN POI                    October 2022 
          
+
+         
+
+        Oscar Gonzalez de Dios 
+        Telefonica 
+
+        Email: oscar.gonzalezdedios@telefonica.com 
 
      Authors’ Addresses 
 
@@ -4008,16 +4015,9 @@
 
 
 
-
-
-
-
-
-
-
       
       
-     Peruzzini et al.       Expires January 10, 2023               [Page 61] 
+     Peruzzini et al.        Expires April 17, 2023                [Page 61] 
       
       
 
