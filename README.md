@@ -36,15 +36,15 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- Slot 1 (China friendly): every two weeks at 4:30am NAEDT, from September 13, 2022 till October 25, 2022
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/QJRBCnqaMPrm7hNTJHwDama3zB4/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m84f1006e961ba662bf1daaca01be2e15)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=mbf3e1994405a5ed785ead1e3a33d81d1)
+- Slot 1 (China friendly): every two weeks at 4:30am NA EST, from November 22, 2022 till March 14, 2023
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/vU3Qke2A8OKo6h2Od55Fcim5-Vc/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=mee4e061a282a2313f0e3501b60ea6e8a)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m7ee6a5e289ddd9b83152f0855e65efb2)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- Slot 2 (US friendly): every two week at 11:00am NAEDT, starting from September 20, 2022 till November 1, 2022
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/IEcKQoYLVhOb4RbfQtxaXq-LLVs/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=mc229ab3741dcaa4924fd7bd4b2c0480e)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m6c3cff20b27ce6802412110ee608e9e4)
+- Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from November 15, 2022 till March 7, 2023
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/vjuC1TYSW1KhLJ-JtpB_pq8grvM/)
+  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m53a3db14d6be4d319703eb3dd1068e06)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m28e6f28dc7c2b14cc6941cc2a4116010)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
