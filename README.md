@@ -44,7 +44,7 @@ The contributors on this draft has weekly informal conference calls on two alter
 - Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from April 18, 2023 till July 11, 2023
   - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/Wanlj7MY13LiiOO4S-eJBx852EQ/)
   - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=mbc22f82a19fa3fe0c843fe485f62798d)
-  - [Join Meeting]https://ietf.webex.com/ietf/j.php?MTID=m53be9a7b9c52b16456638df98dd0f54c)
+  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m53be9a7b9c52b16456638df98dd0f54c)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
