@@ -36,15 +36,15 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- Slot 1 (China friendly): every two weeks at 4:30am NA EDT, from April 11, 2023 till July 18, 2023
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/Y-u9_Uh-2devTyTyLLB_56Ud8sE/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=mae2f448d5aae2c7cdae70aec56f89240)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m7fc450a33da41de2e5f47341bc95825f)
+- Slot 1 (China friendly): every two weeks at 4:30am NA EDT, from May 9, 2023 till July 18, 2023
+  - [TEAS WG Announcement]()
+  - [Add to Calendar]()
+  - [Join Meeting]()
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from April 18, 2023 till July 11, 2023
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/Wanlj7MY13LiiOO4S-eJBx852EQ/)
-  - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=mbc22f82a19fa3fe0c843fe485f62798d)
-  - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=m53be9a7b9c52b16456638df98dd0f54c)
+- Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from May 16, 2023 till July 11, 2023
+  - [TEAS WG Announcement]()
+  - [Add to Calendar]()
+  - [Join Meeting]()
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
