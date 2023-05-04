@@ -37,9 +37,9 @@ subject to a Simplified BSD License) in Contributions.
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
 - Slot 1 (China friendly): every two weeks at 4:30am NA EDT, from May 9, 2023 till July 18, 2023
-  - [TEAS WG Announcement]()
-  - [Add to Calendar]()
-  - [Join Meeting]()
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/AoJww498852XXCiVwiCKp5tvtII/)
+  - [Add to Calendar](https://cisco.webex.com/webappng/sites/cisco/meeting/info/b067a49845894a6d84aa2c518acae3fc#)
+  - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=m6429a29e7eafe436a1ad7e984c01d75a)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
 - Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from May 16, 2023 till July 11, 2023
   - [TEAS WG Announcement]()
