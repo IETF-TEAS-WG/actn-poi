@@ -42,9 +42,9 @@ The contributors on this draft has weekly informal conference calls on two alter
   - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=m6429a29e7eafe436a1ad7e984c01d75a)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
 - Slot 2 (US friendly): every two week at 11:00am NA EDT, starting from May 16, 2023 till July 11, 2023
-  - [TEAS WG Announcement]()
-  - [Add to Calendar]()
-  - [Join Meeting]()
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/I5WST6EAjtYYluw02Z9F36cFJHE/)
+  - [Add to Calendar](https://cisco.webex.com/cisco/j.php?MTID=mb7fcc6dc32b4937291a03abe7120935c)
+  - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=mbb8100397253f0c60988ceae0ec09c18)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
 
 The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
