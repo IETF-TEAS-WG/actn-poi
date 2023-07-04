@@ -129,13 +129,15 @@ Internet-Draft                 ACTN POI                       July 2023
    9. IANA Considerations...........................................52
    10. References...................................................52
       10.1. Normative References....................................52
-      10.2. Informative References..................................54
-   Appendix A.    OSS/Orchestration Layer...........................57
-      A.1.  MDSC NBI................................................57
-   Appendix B.    Multi-layer and Multi-domain Resiliency...........59
-      B.1.  Maintenance Window......................................59
-      B.2.  Router Port Failure.....................................59
-   Acknowledgments..................................................60
+      10.2. Informative References..................................55
+   Appendix A.    Additional Scenarios..............................57
+      A.1.  OSS/Orchestration Layer.................................57
+         A.1.1.   MDSC NBI..........................................57
+      A.2.  Multi-layer and Multi-domain Resiliency.................59
+         A.2.1.   Maintenance Window................................59
+         A.2.2.   Router Port Failure...............................59
+      A.3.  Muxponders..............................................60
+   Acknowledgments..................................................62
    Contributors.....................................................62
    Authors' Addresses...............................................64
 
@@ -153,8 +155,6 @@ Internet-Draft                 ACTN POI                       July 2023
    requirements from a network perspective (e.g. physical diversity,
    latency, bandwidth, topology, etc.)
 
-   Packet Optical Integration (POI) is an advanced use case of traffic
-   engineering. In wide-area networks, a packet network based on the
 
 
 
@@ -163,6 +163,8 @@ Peruzzini et al.       Expires January 4, 2024                 [Page 3]
 Internet-Draft                 ACTN POI                       July 2023
 
 
+   Packet Optical Integration (POI) is an advanced use case of traffic
+   engineering. In wide-area networks, a packet network based on the
    Internet Protocol (IP), and often Multiprotocol Label Switching
    (MPLS) or Segment Routing (SR), is typically realized on top of an
    optical transport network that uses Dense Wavelength Division
@@ -207,8 +209,6 @@ Internet-Draft                 ACTN POI                       July 2023
 
    This document describes critical scenarios for POI from the packet
    service layer perspective and identifies the required coordination
-   between packet and optical layers to improve POI deployment and
-
 
 
 
@@ -217,6 +217,7 @@ Peruzzini et al.       Expires January 4, 2024                 [Page 4]
 Internet-Draft                 ACTN POI                       July 2023
 
 
+   between packet and optical layers to improve POI deployment and
    operation. These scenarios focus on multi-domain packet networks
    operated as a client of optical networks.
 
@@ -262,7 +263,6 @@ Internet-Draft                 ACTN POI                       July 2023
      network transport layer (e.g. RSVP-TE LSPs). This includes the
      configuration (on the PE side) of the interface towards the CE
      (e.g. VLAN, IP adress, routing protocol etc.)
-
 
 
 
@@ -2730,8 +2730,8 @@ Internet-Draft                 ACTN POI                       July 2023
       been identified in section 5.2.1;
 
    o  a mechanism to report client connectivity constraints imposed by
-      some muxponder design: this gap has been identified in
-      appendixA.3.
+      some muxponder design: this gap has been identified in appendix
+      A.3.
 
    Although not applicable to this document, it has been noted that
    being able to use WSON and Flexi-grid topology models together
@@ -2757,8 +2757,30 @@ Internet-Draft                 ACTN POI                       July 2023
 
 7. Security Considerations
 
-   Several security considerations have been identified and will be
-   discussed in future versions of this document.
+   This document highlights how the ACTN architecture can deploy packet
+   over optical infrastructure services. It highlights how existing IETF
+   protocols and data models may be used for multi-layer services. It
+   reuses several existing IETF protocols and data models for the MPI
+   interfaces between each PNC (Optical or Packet) and the MDSC,
+   including:
+
+   o  RESTCONF
+
+   o  NETCONF
+
+   o  PCEP
+
+   o  YANG
+
+   Several existing authentication and encryption practices and
+   techniques may be used to help secure these MPI interfaces. These
+   mechanisms include using Transport Layer Security (TLS) to provide
+   secure transport for RESTCONF, NETCONF and PCEP. Furthermore, access
+   control techniques can also provide additional security. NETCONF
+   supports an Access Control Model (NACM), and RESCONF supports Role
+   Based Access Control (RBAC), which should also ensure that MDSC to
+   PNC communication is based on authorised use and granular control of
+   connectivity and resource requests.
 
 8. Operational Considerations
 
@@ -2777,6 +2799,15 @@ Internet-Draft                 ACTN POI                       July 2023
 
    [RFC7923] Voit, E. et al., "Requirements for Subscription to YANG
              Datastores", RFC 7923, June 2016.
+
+
+
+
+
+Peruzzini et al.       Expires January 4, 2024                [Page 52]
+
+Internet-Draft                 ACTN POI                       July 2023
+
 
    [RFC7950] Bjorklund, M. et al., "The YANG 1.1 Data Modeling
              Language", RFC 7950, August 2016.
@@ -2800,14 +2831,6 @@ Internet-Draft                 ACTN POI                       July 2023
              and Control of TE Networks (ACTN)", RFC8453, August 2018.
 
    [RFC8525] Bierman, A. et al., "YANG Library", RFC 8525, March 2019.
-
-
-
-
-Peruzzini et al.       Expires January 4, 2024                [Page 52]
-
-Internet-Draft                 ACTN POI                       July 2023
-
 
    [RFC8527] Bjorklund, M. et al., "RESTCONF Extensions to Support the
              Network Management Datastore Architecture", RFC 8527, March
@@ -2833,6 +2856,13 @@ Internet-Draft                 ACTN POI                       July 2023
              metropolitan area networks - Station and Media Access
              Control Connectivity Discovery", March 2016.
 
+
+
+Peruzzini et al.       Expires January 4, 2024                [Page 53]
+
+Internet-Draft                 ACTN POI                       July 2023
+
+
    [IEEE 802.1AX] IEEE 802.1AB-2014, "IEEE Standard for Local and
              metropolitan area networks - Link Aggregation", December
              2014.
@@ -2852,16 +2882,6 @@ Internet-Draft                 ACTN POI                       July 2023
    [L3-TE-TOPO]   Liu, X. et al., "YANG Data Model for Layer 3 TE
              Topologies", draft-ietf-teas-yang-l3-te-topo, work in
              progress.
-
-
-
-
-
-
-Peruzzini et al.       Expires January 4, 2024                [Page 53]
-
-Internet-Draft                 ACTN POI                       July 2023
-
 
    [SR-TE-TOPO]   Liu, X. et al., "YANG Data Model for SR and SR TE
              Topologies on MPLS Data Plane", draft-ietf-teas-yang-sr-te-
@@ -2889,6 +2909,14 @@ Internet-Draft                 ACTN POI                       July 2023
              Traffic Engineering Tunnels", draft-ietf-teas-yang-te-mpls,
              work in progress.
 
+
+
+
+Peruzzini et al.       Expires January 4, 2024                [Page 54]
+
+Internet-Draft                 ACTN POI                       July 2023
+
+
    [PATH-COMPUTE] Busi, I., Belotti, S. et al, "Yang model for
              requesting Path Computation", draft-ietf-teas-yang-path-
              computation, work in progress.
@@ -2908,14 +2936,6 @@ Internet-Draft                 ACTN POI                       July 2023
 
    [RFC5623] Oki, E. et al., "Framework for PCE-Based Inter-Layer MPLS
              and GMPLS Traffic Engineering", RFC 5623, September 2009.
-
-
-
-
-Peruzzini et al.       Expires January 4, 2024                [Page 54]
-
-Internet-Draft                 ACTN POI                       July 2023
-
 
    [RFC8231] Crabbe, E. et al., "Path Computation Element Communication
              Protocol (PCEP) Extensions for Stateful PCE", RFC 8231,
@@ -2942,6 +2962,15 @@ Internet-Draft                 ACTN POI                       July 2023
    [RFC8751] Dhody, D. et al., "Hierarchical Stateful Path Computation
              Element (PCE)", RFC 8751, March 2020.
 
+
+
+
+
+Peruzzini et al.       Expires January 4, 2024                [Page 55]
+
+Internet-Draft                 ACTN POI                       July 2023
+
+
    [RFC9182]   S. Barguil, et al., "A YANG Network Data Model for Layer
              3 VPNs", RFC 9182, February 2022.
 
@@ -2963,14 +2992,6 @@ Internet-Draft                 ACTN POI                       July 2023
              aware Topology", draft-ietf-ccamp-optical-impairment-
              topology-yang, work in progress.
 
-
-
-
-Peruzzini et al.       Expires January 4, 2024                [Page 55]
-
-Internet-Draft                 ACTN POI                       July 2023
-
-
    [SAP]     Gonzalez de Dios O. et al., "A Network YANG Model for
              Service Attachment Points (SAPs)", draft-ietf-opsawg-sap,
              work in progress.
@@ -2991,27 +3012,6 @@ Internet-Draft                 ACTN POI                       July 2023
              (TE) Topology Data Model and Applicability to non-TE Use
              Cases", draft-busi-teas-te-topology-profiles, work in
              progress
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
