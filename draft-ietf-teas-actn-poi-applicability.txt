@@ -17,7 +17,7 @@ Expires: January 2024                                      July 7, 2023
             Networks (ACTN) to Packet Optical Integration (POI)
 
 
-                 draft-ietf-teas-actn-poi-applicability-09
+                 draft-ietf-teas-actn-poi-applicability-10
 
 
 Abstract
@@ -99,8 +99,8 @@ Table of Contents
       4.1. Optical Topology Discovery...............................25
       4.2. Optical Path Discovery...................................27
       4.3. Packet Topology Discovery................................28
-      4.4. TE Path Discovery........................................28
-      4.5. Inter-domain Link Discovery..............................29
+      4.4. TE Path Discovery........................................29
+      4.5. Inter-domain Link Discovery..............................30
 
 
 
@@ -127,19 +127,19 @@ Internet-Draft                 ACTN POI                       July 2023
    7. Security Considerations.......................................52
    8. Operational Considerations....................................52
    9. IANA Considerations...........................................52
-   10. References...................................................52
-      10.1. Normative References....................................52
+   10. References...................................................53
+      10.1. Normative References....................................53
       10.2. Informative References..................................55
-   Appendix A.    Additional Scenarios..............................57
-      A.1.  OSS/Orchestration Layer.................................57
-         A.1.1.   MDSC NBI..........................................57
-      A.2.  Multi-layer and Multi-domain Resiliency.................59
-         A.2.1.   Maintenance Window................................59
-         A.2.2.   Router Port Failure...............................59
-      A.3.  Muxponders..............................................60
-   Acknowledgments..................................................62
-   Contributors.....................................................62
-   Authors' Addresses...............................................64
+   Appendix A.    Additional Scenarios..............................58
+      A.1.  OSS/Orchestration Layer.................................58
+         A.1.1.   MDSC NBI..........................................58
+      A.2.  Multi-layer and Multi-domain Resiliency.................60
+         A.2.1.   Maintenance Window................................60
+         A.2.2.   Router Port Failure...............................60
+      A.3.  Muxponders..............................................61
+   Acknowledgments..................................................63
+   Contributors.....................................................63
+   Authors' Addresses...............................................65
 
 1. Introduction
 
@@ -1062,10 +1062,10 @@ Internet-Draft                 ACTN POI                       July 2023
    technology-specific YANG modules, as described in the following
    sections.
 
-   Both Optical and Packet PNCs also use the Ethernet Topology Model,
-   defined in the "ietf-eth-te-topology" YANG module of [CLIENT-TOPO],
-   which augments the TE Topology Model with Ethernet technology-
-   specific information.
+   Both the Packet PNCs and, optionally, the Optical PNCs use the
+   Ethernet Topology Model, defined in the "ietf-eth-te-topology" YANG
+   module of [CLIENT-TOPO], which augments the TE Topology Model with
+   Ethernet technology-specific information.
 
    Both Optical and Packet PNCs use the following common notifications
    YANG data models at the MPI:
@@ -1123,8 +1123,8 @@ Internet-Draft                 ACTN POI                       July 2023
    computation RPC for WSON, Flexi-grid and OTN path computation RPCs
    have been identified as a gap.
 
-   The optical PNC uses the Ethernet Client Signal Model, defined in the
-   "ietf-eth-tran-service" YANG module of [CLIENT-SIGNAL].
+   The optical PNC uses at least one of the following client signal
+   model:
 
 
 
@@ -1134,6 +1134,12 @@ Peruzzini et al.       Expires January 7, 2024                [Page 21]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   o  the CBR Client Signal Model, defined in the "ietf-trans-client-
+      service" YANG module of [CLIENT-SIGNAL];
+
+   o  the Ethernet Client Signal Model, defined in the "ietf-eth-tran-
+      service" YANG module of [CLIENT-SIGNAL].
 
 3.2.3. YANG data models at the Packet MPIs
 
@@ -1176,18 +1182,18 @@ Internet-Draft                 ACTN POI                       July 2023
    o  L3NM TE Service Mapping, defined in the "ietf-l3nm-te-service-
       mapping" YANG module of [TSM];
 
-   o  L2VPN Network Model (L2NM), defined in the "ietf-l2vpn-ntw" YANG
-      module of [RFC9291];
-
-   o  L2NM TE Service Mapping, defined in the "ietf-l2nm-te-service-
-      mapping" YANG module of [TSM].
-
 
 
 Peruzzini et al.       Expires January 7, 2024                [Page 22]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   o  L2VPN Network Model (L2NM), defined in the "ietf-l2vpn-ntw" YANG
+      module of [RFC9291];
+
+   o  L2NM TE Service Mapping, defined in the "ietf-l2nm-te-service-
+      mapping" YANG module of [TSM].
 
 3.3. Path Computation Elment Protocol (PCEP)
 
@@ -1227,6 +1233,16 @@ Internet-Draft                 ACTN POI                       July 2023
       having only one protocol for the MPI between MDSC and PNC have
       already been highlighted in [PATH-COMPUTE].
 
+
+
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 23]
+
+Internet-Draft                 ACTN POI                       July 2023
+
+
    4. The MDSC uses the RESTCONF/YANG interface towards each PNC to
       discover all the TE information and requests the creation of TE
       tunnels. However, it uses PCEP for hierarchical path computation.
@@ -1235,13 +1251,6 @@ Internet-Draft                 ACTN POI                       July 2023
       option can add integration complexity to have two protocols
       instead of one unless the RESTOCONF/YANG interface is added to an
       existing PCEP deployment (brownfield scenario).
-
-
-
-Peruzzini et al.       Expires January 7, 2024                [Page 23]
-
-Internet-Draft                 ACTN POI                       July 2023
-
 
    Section 4 and section 5 of this draft analyse the case where a single
    RESTCONF/YANG interface is deployed at the MPI (i.e., option 1
@@ -1280,15 +1289,6 @@ Internet-Draft                 ACTN POI                       July 2023
    Reporting the entire inventory and detailed topology information of
    packet and optical networks to the MDSC may present scalability
    issues as a potential drawback. The analysis of the scalability of
-   this approach and mechanisms to address potential issues is outside
-   the scope of this document.
-
-   Each PNC provides the MDSC the topology view of the domain it
-   controls, as described in section 4.1 and 4.3. The MDSC uses this
-   information to discover the complete topology view of the multi-layer
-   multi-domain networks it controls.
-
-
 
 
 
@@ -1296,6 +1296,14 @@ Peruzzini et al.       Expires January 7, 2024                [Page 24]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   this approach and mechanisms to address potential issues is outside
+   the scope of this document.
+
+   Each PNC provides the MDSC the topology view of the domain it
+   controls, as described in section 4.1 and 4.3. The MDSC uses this
+   information to discover the complete topology view of the multi-layer
+   multi-domain networks it controls.
 
    The MDSC should also maintain up-to-date inventory, service and
    network topology databases of IP and optical layers through IETF
@@ -1335,14 +1343,6 @@ Internet-Draft                 ACTN POI                       July 2023
    a flexible-grid which supports only m=4 and values of n which are
    only multiplier of 8.
 
-   As a consequence:
-
-   o  A flexible-grid DWDM network topology can only be reported using
-      the Flexi-grid Topology model;
-
-   o  A fixed-grid DWDM network topology, can be reported using either
-      the WSON Topology model or the Flexi-grid Topology model;
-
 
 
 
@@ -1350,6 +1350,14 @@ Peruzzini et al.       Expires January 7, 2024                [Page 25]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   As a consequence:
+
+   o  A flexible-grid DWDM network topology can only be reported using
+      the Flexi-grid Topology model;
+
+   o  A fixed-grid DWDM network topology, can be reported using either
+      the WSON Topology model or the Flexi-grid Topology model;
 
    o  A mixed fixed and flexible grid DWDM network topology can be
       reported using either the Flexi-grid Topology model or both WSON
@@ -1361,7 +1369,11 @@ Internet-Draft                 ACTN POI                       July 2023
 
    The OTN Topology Model is used to report the OTN network topology
    (e.g., OTN switching nodes and links), when the OTN switching layer
-   is deployed within the optical domain.
+   is deployed within the optical domain, as well as the CBR client LTPs
+   that terminates the cross-layer links: once CBR client LTP is
+   reported for ecah CBR or multi-function client interface on the
+   optical NEs (see sections 4.4 and 5.1 of [TNBI] for the description
+   of multi-function client interfaces).
 
    To allow the MDSC to discover the complete multi-layer and multi-
    domain network topology and to correlate it with the hardware
@@ -1372,7 +1384,10 @@ Internet-Draft                 ACTN POI                       July 2023
       optical network domain; and
 
    o  one TE link is reported for each OMS link and, optionally, for
-      each OTN link.
+      each OTN link; and
+
+   o  one CBR client LTP is reported for each CBR or multi-function
+      client interface on the optical NEs.
 
    The Ethernet Topology Model reports the Ethernet client LTPs that
    terminate the cross-layer links: one Ethernet client LTP is reported
@@ -1382,6 +1397,13 @@ Internet-Draft                 ACTN POI                       July 2023
    Since the MDSC delegates optical path computation to its underlay O-
    PNCs, the following information can be abstracted and not reported at
    the MPI:
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 26]
+
+Internet-Draft                 ACTN POI                       July 2023
+
 
    o  the optical parameters required for optical path computation, such
       as those detailed in [OIA-TOPO];
@@ -1397,59 +1419,37 @@ Internet-Draft                 ACTN POI                       July 2023
    abstraction is valid independently of the fact that optical
    transponders are physically integrated within the same WDM node or
    are physically located on a device external to the WDM node since it
-
-
-
-Peruzzini et al.       Expires January 7, 2024                [Page 26]
-
-Internet-Draft                 ACTN POI                       July 2023
-
-
    both cases the optical transponders and the WDM node are under the
    control of the same O-PNC.
 
-   The association between the Ethernet LTPs terminating the Ethernet
-   cross-layer links and the optical TTPs is reported using the Inter
-   Layer Lock (ILL) identifiers, defined in [RFC8795].
+   The association between the Ethernet or CBR client LTPs terminating
+   the Ethernet cross-layer links and the optical TTPs is reported using
+   the Inter Layer Lock (ILL) identifiers, defined in [RFC8795].
 
-   All the optical links are intra-domain and they are discovered by O-
-   PNCs, using mechanisms which are outside the scope of this document,
-   and reported at the MPIs within the optical network topology.
+   The intra-domain optical links are discovered by O-PNCs, using
+   mechanisms which are outside the scope of this document, and reported
+   at the MPIs within the optical network topology.
 
    In case of a multi-layer DWDM/OTN network domain, multi-layer intra-
-   domain OTN links are supported by underlay DWDM tunnels, which can be
-   either WSON tunnels or, alternatively, Flexi-grid tunnels, depending
-   on whether the DWDM optical network is based on fixed grid or
-   flexible-grid. This relationship is reported by the mechanisms
-   described in section 4.2.
+   domain OTN links are supported by underlay DWDM tunnels: this
+   relationship is reported by the mechanisms described in section 4.2.
 
 4.2. Optical Path Discovery
 
    The WSON Tunnel Model or, alternatively, the Flexi-grid Tunnel model,
    depending on whether the DWDM optical network is based on fixed grid
-   or flexible-grid, is used to report all the DWDM tunnels established
-   within the optical network.
+   or flexible-grid or a mix of fixed-grid and flexible-grid, is used to
+   report all the DWDM tunnels established within the optical network.
 
-   When the OTN switching layer is deployed within the optical domain,
-   the OTN Tunnel Model is used to report all the OTN tunnels
-   established within the optical network.
+   Since, as described in 4.1, a fixed-grid configuration can also be
+   described as a special case of a flexible grid configuration:
 
-   The Ethernet client signal Model is used to report all the Ethernet
-   connectivity provided by the underlay optical tunnels between
-   Ethernet client LTPs. The underlay optical tunnels can be either DWDM
-   tunnels or, when the optional OTN switching layer is deployed, OTN
-   tunnels.
+   o  DWDM tunnels established within a flexible-grid DWDM network
+      topology can only be reported using the Flexi-grid tunnel model;
 
-   The DWDM tunnels can be used as underlay tunnels to support either
-   Ethernet client signal or multi-layer intra-domain OTN links. In the
-   latter case, the hierarchical-link container, defined in [TE-TUNNEL],
-   associates the underlay DWDM tunnel with the supported multi-layer
-   intra-domain OTN link.
-
-   The O-PNCs report in their operational datastores all the Ethernet
-   client connectivities and all the optical tunnels deployed within
-   their optical domain regarless of the mechanisms being used to set
-   them up, such as the mechanisms described in section 5.2, as well as
+   o  DWDM tunnels established within a fixed-grid DWDM network
+      topology, can be reported using either the WSON tunnel model or
+      the Flexi-grid tunnel model;
 
 
 
@@ -1459,8 +1459,34 @@ Peruzzini et al.       Expires January 7, 2024                [Page 27]
 Internet-Draft                 ACTN POI                       July 2023
 
 
-   other mechanism (e.g., static configuration), which are outside the
-   scope of this document.
+   o  A mixed fixed and flexible grid DWDM network topology can be
+      reported using either the Flexi-grid Topology model or both WSON
+      and Flexi-grid topology models.
+
+   When the OTN switching layer is deployed within the optical domain,
+   the OTN Tunnel Model is used to report all the OTN tunnels
+   established within the optical network.
+
+   The Ethernet client signal model and the Transparent CBR client
+   signal model are used to report all the Ethernet connectivity
+   provided by the underlay optical tunnels between Ethernet or CBR
+   client LTPs, depending on whether the connectivity service is frame-
+   based or transparent. The underlay optical tunnels can be either DWDM
+   tunnels or, when the optional OTN switching layer is deployed, OTN
+   tunnels.
+
+   The DWDM tunnels can be used as underlay tunnels to support either
+   Ethernet or CBR client signals or multi-layer intra-domain OTN links.
+   In the latter case, the hierarchical-link container, defined in [TE-
+   TUNNEL], associates the underlay DWDM tunnel with the supported
+   multi-layer intra-domain OTN link.
+
+   The O-PNCs report in their operational datastores all the Ethernet
+   and CBR client connectivities and all the optical tunnels deployed
+   within their optical domain regarless of the mechanisms being used to
+   set them up, such as the mechanisms described in section 5.2, as well
+   as other mechanism (e.g., static configuration), which are outside
+   the scope of this document.
 
 4.3. Packet Topology Discovery
 
@@ -1479,6 +1505,13 @@ Internet-Draft                 ACTN POI                       July 2023
    network topologies are congruent or not: in the latter case, the L3
    TE Topology Model is used, together with the L3 Topology Model to
    provide the association between the two network topologies.
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 28]
+
+Internet-Draft                 ACTN POI                       July 2023
+
 
    To allow the MDSC to discover the complete multi-layer and multi-
    domain network topology and to correlate it with the hardware
@@ -1505,14 +1538,6 @@ Internet-Draft                 ACTN POI                       July 2023
 
    We assume that the discovery of existing TE paths, including their
    bandwidth, at the MPI is done using the generic TE tunnel YANG data
-
-
-
-Peruzzini et al.       Expires January 7, 2024                [Page 28]
-
-Internet-Draft                 ACTN POI                       July 2023
-
-
    model, defined in [TE-TUNNEL], with packet technology-specific (e.g.,
    MPLS-TE or SR-TE) augmentations.
 
@@ -1533,6 +1558,14 @@ Internet-Draft                 ACTN POI                       July 2023
    instance. The bandwidth of these TE paths represents the bandwidth
    allocated by P-PNC1 to the two TE paths, which can be symmetric or
    asymmetric in the two directions.
+
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 29]
+
+Internet-Draft                 ACTN POI                       July 2023
+
 
    The P-PNCs use the TE tunnel model to report, at the MPI, all the TE
    paths established within their packet domain regardless of the
@@ -1556,28 +1589,16 @@ Internet-Draft                 ACTN POI                       July 2023
 
    All the three types of links are Ethernet links.
 
-
-
-
-
-
-
-Peruzzini et al.       Expires January 7, 2024                [Page 29]
-
-Internet-Draft                 ACTN POI                       July 2023
-
-
    There are two possible models to report the access links between CEs
-   and PEs: the Ethernet Topology Model, defined in [CLIENT-TOPO], or
-   the Service Attachment Points (SAP) Model, defined in  [RFC9408].
-   Clarifying the relationship between these two models has been
-   identified as a gap.
+   and PEs: the TE Topology Model, defined in [RFC8795], or the Service
+   Attachment Points (SAP) Model, defined in  [RFC9408]. Clarifying the
+   relationship between these two models has been identified as a gap.
 
    It is worth noting that the P-PNC may not be aware whether an
    Ethernet interface terminates a cross-layer link, an inter-domain
-   Ethernet link or an access link. The Ethernet Topology Model supports
-   the discovery for all these types of links with no need for the P-PNC
-   to know the type of inter-domain link.
+   Ethernet link or an access link. The TE Topology Model supports the
+   discovery for all these types of links with no need for the P-PNC to
+   know the type of inter-domain link.
 
    The inter-domain Ethernet links and cross-layer links are discovered
    by the MDSC using the plug-id attribute, as described in section 4.3
@@ -1592,6 +1613,13 @@ Internet-Draft                 ACTN POI                       July 2023
 
    This document considers the following two options for discovering
    inter-domain links:
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 30]
+
+Internet-Draft                 ACTN POI                       July 2023
+
 
    1. Static configuration
 
@@ -1612,15 +1640,6 @@ Internet-Draft                 ACTN POI                       July 2023
 
    The routers exchange standard LLDP packets as defined in [IEEE
    802.1AB] and the optical NEs snoop the LLDP packets received from the
-
-
-
-
-Peruzzini et al.       Expires January 7, 2024                [Page 30]
-
-Internet-Draft                 ACTN POI                       July 2023
-
-
    local Ethernet interface and report to the O-PNCs the extracted
    information, such as the Chassis ID, the Port ID, System Name TLVs.
 
@@ -1630,31 +1649,12 @@ Internet-Draft                 ACTN POI                       July 2023
 4.5.1. Cross-layer Link Discovery
 
    The MDSC can discover a cross-layer link by matching the plug-id
-   values of the two Ethernet LTPs reported by two adjacent O-PNC and P-
-   PNC: in case LLDP snooping is used, the P-PNC reports the LLDP
-   information sent by the corresponding Ethernet interface on the
-   router while the O-PNC reports the LLDP information received by the
-   corresponding Ethernet interface on the optical NE, e.g., between LTP
-   5-0 on PE13 and LTP 7-0 on NE11, as shown in Figure 5.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   values of the two LTPs reported by two adjacent O-PNC and P-PNC: in
+   case LLDP snooping is used, the P-PNC reports the LLDP information
+   sent by the corresponding Ethernet interface on the router while the
+   O-PNC reports the LLDP information received by the corresponding
+   Ethernet interface on the optical NE, e.g., between LTP 5-0 on PE13
+   and LTP 7-0 on NE11, as shown in Figure 5.
 
 
 
@@ -1696,7 +1696,7 @@ Internet-Draft                 ACTN POI                       July 2023
        /      |             |                |             |      /
       /       |    NE11     |                |     NE12    |     /
      /        +-------------+                +-------------+    /
-    /                   Ethernet Topology (O-PNC)              /
+    /                Ethernet or OTN Topology (O-PNC)          /
    +----------------------------------------------------------+
 
    Notes:
@@ -1712,14 +1712,14 @@ Internet-Draft                 ACTN POI                       July 2023
 
                    Figure 5 - Cross-layer link discovery
 
+   As described in section 4.1, the LTP terminating a cross-layer link
+   is reported by an O-PNC in the Ethernet Ethernet topology or in the
+   OTN topology model or in both models, depending on the type of
+   corresponding physical port on the optical NE.
+
    It is worth noting that the discovery of cross-layer links is based
    only on the LLDP information sent by the Ethernet interfaces of the
    routers and received by the Ethernet interfaces of the optical NEs.
-   Therefore the MDSC can discover these links also before optical
-   paths, supporting overlay multi-layer IP links, are setup.
-
-
-
 
 
 
@@ -1729,6 +1729,9 @@ Peruzzini et al.       Expires January 7, 2024                [Page 32]
 Internet-Draft                 ACTN POI                       July 2023
 
 
+   Therefore the MDSC can discover these links also before optical
+   paths, supporting overlay multi-layer IP links, are setup.
+
 4.5.2. Inter-domain IP Link Discovery
 
    The MDSC can discover an inter-domain Ethernet link which supports an
@@ -1737,9 +1740,6 @@ Internet-Draft                 ACTN POI                       July 2023
    report the LLDP information being sent and being received from the
    corresponding Ethernet interfaces, e.g., between the Ethernet LTP 3-1
    on BR11 and the Ethernet LTP 4-1 on BR21 shown in Figure 6.
-
-
-
 
 
 
@@ -1970,13 +1970,13 @@ Internet-Draft                 ACTN POI                       July 2023
                      :                              :
                      :                              :
            +---------:------------------------------:------------------+
-          /          V  Ethernet Topology (O-PNC 1) V                 /
-         /    +------O------+                +------O------+         /
-        /     |    (7-0)    |Eth. client sig.|    (8-0)    |        /
-       /      |      X----------+-------------------X      |       /
-      /       |    NE11     |   |            |     NE12    |      /
-     /        +-------------+   |            +-------------+     /
-    /                           |                               /
+          /          :   Ethernet or OTN Topology   :                 /
+         /           V          (O-PNC 1)           V                /
+        /     +------O------+    ETH/CBR     +------O------+        /
+       /      |    (7-0)    |  client sig.   |    (8-0)    |       /
+      /       |      X----------+-------------------X      |      /
+     /        |    NE11     |   |            |     NE12    |     /
+    /         +-------------+   |            +-------------+    /
    +----------------------------|------------------------------+
                                 | Underlay
                                 | tunnel
@@ -2009,7 +2009,7 @@ Internet-Draft                 ACTN POI                       July 2023
    ----> Supporting LTP or Supporting Link or Underlay tunnel
    <===> Link discovered by the PNC and reported at the MPI
    <...> Link discovered by the MDSC
-   x---x Ethernet client signal
+   x---x Ethernet/CBR client signal
    X===X Optical tunnel
 
     Figure 7 - Multi-layer intra-domain Ethernet and IP link discovery
@@ -2449,17 +2449,18 @@ Internet-Draft                 ACTN POI                       July 2023
    between the two TTPs associated, as described in section 5.1, with
    these two router Ethernet interfaces.
 
-   The MDSC also requires the O-PNC to steer the Ethernet client traffic
-   between the two cross-layer links over the optical tunnel using the
-   Ethernet Client Signal Model.
+   The MDSC also requires the O-PNC to steer the client traffic between
+   the two cross-layer links over the optical tunnel using either the
+   Ethernet Client Signal Model (for frame-based transport) or the
+   Transparent CBR Client Signal Model (for transparent transport).
 
    After the optical tunnel has been setup and the client traffic
-   steering configured, the two IP routers can exchange Ethernet packets
+   steering configured, the two IP routers can exchange Ethernet frames
    between themselves, including LLDP messages.
 
    For example, with a reference to Figure 7, the MDSC can request the
    O-PNC1 to setup an optical tunnel between the TTPs within NE11 and
-   NE14 to steer over this tunnel the Ethernet traffic between LTP (7-0)
+   NE14 to steer over this tunnel the client traffic between LTP (7-0)
    on NE11 and LTP (8-0) on NE14.
 
    If LLDP [IEEE 802.1AB] or any other discovery mechanisms, which are
@@ -2476,7 +2477,6 @@ Internet-Draft                 ACTN POI                       July 2023
    Ethernet link are supported by the two underlay Ethernet LTPs
    terminating the two cross-layer links, e.g., the LTP 5-1 on PE13 and
    6-1 on BR11 shown in Figure 7.
-
 
 
 
@@ -2740,13 +2740,13 @@ Internet-Draft                 ACTN POI                       July 2023
    viable option in case of a mixed CWDM and flexible-grid DWDM network
    topology.
 
+   Although not applicable to this document, it has been noted that
+   merging the WSON and flexi-grid tunnel models would support also
+   optical tunnel setup in case of a mixed CWDM and flexible-grid DWDM
+   network topology.
+
    Although not analysed in this document, it has been noted that the TE
    Tunnel model, defined in [TE-TUNNEL], needs also to be enhanced to
-   support scenarios where multiple parallel TE paths are used in load-
-   balancing to carry the traffic between two end-points (e.g., VPN
-   traffic between two PEs).
-
-
 
 
 
@@ -2754,6 +2754,10 @@ Peruzzini et al.       Expires January 7, 2024                [Page 51]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   support scenarios where multiple parallel TE paths are used in load-
+   balancing to carry the traffic between two end-points (e.g., VPN
+   traffic between two PEs).
 
 7. Security Considerations
 
@@ -2793,12 +2797,8 @@ Internet-Draft                 ACTN POI                       July 2023
 
    This document requires no IANA actions.
 
-10. References
 
-10.1. Normative References
 
-   [RFC7923] Voit, E. et al., "Requirements for Subscription to YANG
-             Datastores", RFC 7923, June 2016.
 
 
 
@@ -2808,6 +2808,13 @@ Peruzzini et al.       Expires January 7, 2024                [Page 52]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+10. References
+
+10.1. Normative References
+
+   [RFC7923] Voit, E. et al., "Requirements for Subscription to YANG
+             Datastores", RFC 7923, June 2016.
 
    [RFC7950] Bjorklund, M. et al., "The YANG 1.1 Data Modeling
              Language", RFC 7950, August 2016.
@@ -2848,13 +2855,6 @@ Internet-Draft                 ACTN POI                       July 2023
    [RFC9094] Zheng H., Lee, Y. et al., "A YANG Data Model for Wavelength
              Switched Optical Networks (WSONs)", RFC 9094, August 2021.
 
-   [ITU-T_G.694.1]   International Telecommunication Union, "Spectral
-             grids for WDM applications: DWDM frequency grid", ITU-T
-             Recommendation G.694.1, February 2012.
-
-   [IEEE 802.1AB] IEEE 802.1AB-2016, "IEEE Standard for Local and
-             metropolitan area networks - Station and Media Access
-             Control Connectivity Discovery", March 2016.
 
 
 
@@ -2862,6 +2862,14 @@ Peruzzini et al.       Expires January 7, 2024                [Page 53]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   [ITU-T_G.694.1]   International Telecommunication Union, "Spectral
+             grids for WDM applications: DWDM frequency grid", ITU-T
+             Recommendation G.694.1, February 2012.
+
+   [IEEE 802.1AB] IEEE 802.1AB-2016, "IEEE Standard for Local and
+             metropolitan area networks - Station and Media Access
+             Control Connectivity Discovery", March 2016.
 
    [IEEE 802.1AX] IEEE 802.1AB-2014, "IEEE Standard for Local and
              metropolitan area networks - Link Aggregation", December
@@ -2902,20 +2910,19 @@ Internet-Draft                 ACTN POI                       July 2023
              Flexi-Grid Tunnels ", draft-ietf-ccamp-flexigrid-tunnel-
              yang, work in progress.
 
-   [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-ietf-
-             ccamp-otn-tunnel-model, work in progress.
-
-   [MPLS-TE-TUNNEL]  Saad, T. et al., "A YANG Data Model for MPLS
-             Traffic Engineering Tunnels", draft-ietf-teas-yang-te-mpls,
-             work in progress.
-
-
 
 
 Peruzzini et al.       Expires January 7, 2024                [Page 54]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   [OTN-TUNNEL]   Zheng, H. et al., "OTN Tunnel YANG Model", draft-ietf-
+             ccamp-otn-tunnel-model, work in progress.
+
+   [MPLS-TE-TUNNEL]  Saad, T. et al., "A YANG Data Model for MPLS
+             Traffic Engineering Tunnels", draft-ietf-teas-yang-te-mpls,
+             work in progress.
 
    [PATH-COMPUTE] Busi, I., Belotti, S. et al, "Yang model for
              requesting Path Computation", draft-ietf-teas-yang-path-
@@ -2955,13 +2962,6 @@ Internet-Draft                 ACTN POI                       July 2023
    [RFC8309] Q. Wu, W. Liu, and A. Farrel, "Service Model Explained",
              RFC 8309, January 2018.
 
-   [RFC8637] Dhody, D. et al., "Applicability of the Path Computation
-             Element (PCE) to the Abstraction and Control of TE Networks
-             (ACTN)", RFC 8637, July 2019.
-
-   [RFC8751] Dhody, D. et al., "Hierarchical Stateful Path Computation
-             Element (PCE)", RFC 8751, March 2020.
-
 
 
 
@@ -2970,6 +2970,13 @@ Peruzzini et al.       Expires January 7, 2024                [Page 55]
 
 Internet-Draft                 ACTN POI                       July 2023
 
+
+   [RFC8637] Dhody, D. et al., "Applicability of the Path Computation
+             Element (PCE) to the Abstraction and Control of TE Networks
+             (ACTN)", RFC 8637, July 2019.
+
+   [RFC8751] Dhody, D. et al., "Hierarchical Stateful Path Computation
+             Element (PCE)", RFC 8751, March 2020.
 
    [RFC9182]   S. Barguil, et al., "A YANG Network Data Model for Layer
              3 VPNs", RFC 9182, February 2022.
@@ -3007,6 +3014,17 @@ Internet-Draft                 ACTN POI                       July 2023
              using Segment Routing", draft-ietf-rtgwg-segment-routing-
              ti-lfa, work in progress.
 
+
+
+
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 56]
+
+Internet-Draft                 ACTN POI                       July 2023
+
+
    [TE-TOPO-PF]   Busi I. et al., " Profiles for Traffic Engineering
              (TE) Topology Data Model and Applicability to non-TE Use
              Cases", draft-busi-teas-te-topology-profiles, work in
@@ -3020,7 +3038,43 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 56]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peruzzini et al.       Expires January 7, 2024                [Page 57]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3074,7 +3128,7 @@ A.1.1.   MDSC NBI
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 57]
+Peruzzini et al.       Expires January 7, 2024                [Page 58]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3128,7 +3182,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 58]
+Peruzzini et al.       Expires January 7, 2024                [Page 59]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3182,7 +3236,7 @@ A.2.2.   Router Port Failure
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 59]
+Peruzzini et al.       Expires January 7, 2024                [Page 60]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3236,7 +3290,7 @@ A.3.  Muxponders
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 60]
+Peruzzini et al.       Expires January 7, 2024                [Page 61]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3290,7 +3344,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 61]
+Peruzzini et al.       Expires January 7, 2024                [Page 62]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3344,7 +3398,7 @@ Contributors
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 62]
+Peruzzini et al.       Expires January 7, 2024                [Page 63]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3398,7 +3452,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 63]
+Peruzzini et al.       Expires January 7, 2024                [Page 64]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3452,5 +3506,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.       Expires January 7, 2024                [Page 64]
+Peruzzini et al.       Expires January 7, 2024                [Page 65]
 
