@@ -1,3 +1,4 @@
+
         +-----------------------------------------------------------+
        /                    IP Topology (P-PNC 1)                  /
       /    +---------+                        +---------+         / 
@@ -11,7 +12,7 @@
                                     | Supporting Link
                                     |
         +---------------------------|-------------------------------+
-       / Ethernet Topology (P-PNC1) |                              /
+       / Ethernet Topology (P-PNC 1)|                              /
       /    +-------------+          |     +-------------+         /
      /     |    PE13     |          V     |    BR11     |        /
     /      |        (5-1)O<==============>O(6-1)        |       /
@@ -54,6 +55,5 @@ Legenda:
 ----> Supporting LTP or Supporting Link or Underlay tunnel
 <===> Link discovered by the PNC and reported at the MPI
 <...> Link discovered by the MDSC
-<~~~> Link inferred by the MDSC
 x---x Ethernet client signal
 X===X Optical tunnel

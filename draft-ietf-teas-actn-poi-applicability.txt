@@ -9,7 +9,7 @@ Intended status: Informational                   Jean-Francois Bouquier
                                                      Daniele Ceccarelli
                                                                   Cisco
 
-Expires: January 2024                                      July 4, 2023
+Expires: January 2024                                      July 7, 2023
 
 
 
@@ -50,7 +50,7 @@ Status of this Memo
    material or to cite them other than as "work in progress."
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 1]
+Peruzzini et al.       Expires January 7, 2024                 [Page 1]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -61,11 +61,11 @@ Internet-Draft                 ACTN POI                       July 2023
    The list of Internet-Draft Shadow Directories can be accessed at
    http://www.ietf.org/shadow.html
 
-   This Internet-Draft will expire on April 9, 2021.
+   This Internet-Draft will expire on January 7, 2024.
 
 Copyright Notice
 
-   Copyright (c) 2022 IETF Trust and the persons identified as the
+   Copyright (c) 2023 IETF Trust and the persons identified as the
    document authors. All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -104,7 +104,7 @@ Table of Contents
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 2]
+Peruzzini et al.       Expires January 7, 2024                 [Page 2]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -158,7 +158,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 3]
+Peruzzini et al.       Expires January 7, 2024                 [Page 3]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -212,7 +212,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 4]
+Peruzzini et al.       Expires January 7, 2024                 [Page 4]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -266,7 +266,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 5]
+Peruzzini et al.       Expires January 7, 2024                 [Page 5]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -320,7 +320,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 6]
+Peruzzini et al.       Expires January 7, 2024                 [Page 6]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -374,7 +374,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 7]
+Peruzzini et al.       Expires January 7, 2024                 [Page 7]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -428,7 +428,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 8]
+Peruzzini et al.       Expires January 7, 2024                 [Page 8]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -482,7 +482,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                 [Page 9]
+Peruzzini et al.       Expires January 7, 2024                 [Page 9]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -536,7 +536,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 10]
+Peruzzini et al.       Expires January 7, 2024                [Page 10]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -590,7 +590,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 11]
+Peruzzini et al.       Expires January 7, 2024                [Page 11]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -644,7 +644,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 12]
+Peruzzini et al.       Expires January 7, 2024                [Page 12]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -698,7 +698,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 13]
+Peruzzini et al.       Expires January 7, 2024                [Page 13]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -752,7 +752,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 14]
+Peruzzini et al.       Expires January 7, 2024                [Page 14]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -806,7 +806,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 15]
+Peruzzini et al.       Expires January 7, 2024                [Page 15]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -860,7 +860,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 16]
+Peruzzini et al.       Expires January 7, 2024                [Page 16]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -914,7 +914,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 17]
+Peruzzini et al.       Expires January 7, 2024                [Page 17]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -968,7 +968,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 18]
+Peruzzini et al.       Expires January 7, 2024                [Page 18]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1022,7 +1022,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 19]
+Peruzzini et al.       Expires January 7, 2024                [Page 19]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1076,7 +1076,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 20]
+Peruzzini et al.       Expires January 7, 2024                [Page 20]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1130,7 +1130,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 21]
+Peruzzini et al.       Expires January 7, 2024                [Page 21]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1184,7 +1184,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 22]
+Peruzzini et al.       Expires January 7, 2024                [Page 22]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1238,7 +1238,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 23]
+Peruzzini et al.       Expires January 7, 2024                [Page 23]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1292,7 +1292,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 24]
+Peruzzini et al.       Expires January 7, 2024                [Page 24]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1346,7 +1346,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 25]
+Peruzzini et al.       Expires January 7, 2024                [Page 25]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1400,7 +1400,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 26]
+Peruzzini et al.       Expires January 7, 2024                [Page 26]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1454,7 +1454,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 27]
+Peruzzini et al.       Expires January 7, 2024                [Page 27]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1474,11 +1474,11 @@ Internet-Draft                 ACTN POI                       July 2023
    Model are used together to report the MPLS-TE network topology, as
    described in [MPLS-TE-TOPO].
 
-   As described in [L3-TE-TOPO], the relationship  between the IP
-   network topology and the MPLS-TE network topology depends on whether
-   the two network topologies are congruent or not: in the latter case,
-   the L3 TE Topology Model is used, together with the L3 Topology Model
-   to provide the association between the two network topologies.
+   As described in [L3-TE-TOPO], the relationship between the IP network
+   topology and the MPLS-TE network topology depends on whether the two
+   network topologies are congruent or not: in the latter case, the L3
+   TE Topology Model is used, together with the L3 Topology Model to
+   provide the association between the two network topologies.
 
    To allow the MDSC to discover the complete multi-layer and multi-
    domain network topology and to correlate it with the hardware
@@ -1508,7 +1508,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 28]
+Peruzzini et al.       Expires January 7, 2024                [Page 28]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1562,14 +1562,14 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 29]
+Peruzzini et al.       Expires January 7, 2024                [Page 29]
 
 Internet-Draft                 ACTN POI                       July 2023
 
 
    There are two possible models to report the access links between CEs
    and PEs: the Ethernet Topology Model, defined in [CLIENT-TOPO], or
-   the Service Attachment Points (SAP) Model, defined in  [SAP].
+   the Service Attachment Points (SAP) Model, defined in  [RFC9408].
    Clarifying the relationship between these two models has been
    identified as a gap.
 
@@ -1616,7 +1616,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 30]
+Peruzzini et al.       Expires January 7, 2024                [Page 30]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1670,7 +1670,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 31]
+Peruzzini et al.       Expires January 7, 2024                [Page 31]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1724,7 +1724,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 32]
+Peruzzini et al.       Expires January 7, 2024                [Page 32]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1778,7 +1778,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 33]
+Peruzzini et al.       Expires January 7, 2024                [Page 33]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1832,7 +1832,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 34]
+Peruzzini et al.       Expires January 7, 2024                [Page 34]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1886,7 +1886,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 35]
+Peruzzini et al.       Expires January 7, 2024                [Page 35]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1940,7 +1940,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 36]
+Peruzzini et al.       Expires January 7, 2024                [Page 36]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -1994,7 +1994,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 37]
+Peruzzini et al.       Expires January 7, 2024                [Page 37]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2048,7 +2048,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 38]
+Peruzzini et al.       Expires January 7, 2024                [Page 38]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2066,8 +2066,8 @@ Internet-Draft                 ACTN POI                       July 2023
                                      | Supporting Link
                                      |
                                      |
-             +------------------------|--------------------------------+
-            /                         |                               /
+             +-----------------------|---------------------------------+
+            /                        |                                /
            /  +---------+            v           +---------+         /
           /   |    (1-1)O<======================>O(2-1)    |        /
          /    |         |\                      /|         |       /
@@ -2102,7 +2102,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 39]
+Peruzzini et al.       Expires January 7, 2024                [Page 39]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2156,7 +2156,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 40]
+Peruzzini et al.       Expires January 7, 2024                [Page 40]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2210,7 +2210,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 41]
+Peruzzini et al.       Expires January 7, 2024                [Page 41]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2264,7 +2264,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 42]
+Peruzzini et al.       Expires January 7, 2024                [Page 42]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2318,7 +2318,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 43]
+Peruzzini et al.       Expires January 7, 2024                [Page 43]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2372,7 +2372,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 44]
+Peruzzini et al.       Expires January 7, 2024                [Page 44]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2426,7 +2426,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 45]
+Peruzzini et al.       Expires January 7, 2024                [Page 45]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2480,7 +2480,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 46]
+Peruzzini et al.       Expires January 7, 2024                [Page 46]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2534,7 +2534,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 47]
+Peruzzini et al.       Expires January 7, 2024                [Page 47]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2588,7 +2588,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 48]
+Peruzzini et al.       Expires January 7, 2024                [Page 48]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2642,7 +2642,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 49]
+Peruzzini et al.       Expires January 7, 2024                [Page 49]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2696,7 +2696,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 50]
+Peruzzini et al.       Expires January 7, 2024                [Page 50]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2716,7 +2716,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
    o  relationship between a common discovery mechanisms applicable to
       access links, inter-domain IP links and cross-layer links and the
-      UNI topology discover mechanism defined in [SAP]: this gap has
+      UNI topology discover mechanism defined in [RFC9408]: this gap has
       been identified in section 4.3;
 
    o  a mechanism applicable to the P-PNC NBI to configure the SR-TE
@@ -2750,7 +2750,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 51]
+Peruzzini et al.       Expires January 7, 2024                [Page 51]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2804,7 +2804,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 52]
+Peruzzini et al.       Expires January 7, 2024                [Page 52]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2858,7 +2858,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 53]
+Peruzzini et al.       Expires January 7, 2024                [Page 53]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2912,7 +2912,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 54]
+Peruzzini et al.       Expires January 7, 2024                [Page 54]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2966,7 +2966,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 55]
+Peruzzini et al.       Expires January 7, 2024                [Page 55]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -2976,6 +2976,9 @@ Internet-Draft                 ACTN POI                       July 2023
 
    [RFC9291]   Boucadair, M. et al., "A YANG Network Data Model for
              Layer 2 VPNs", RFC 9291, September 2022.
+
+   [RFC9408] Boucadair, M. et al., " A YANG Network Data Model for
+             Service Attachment Points (SAPs)", RFC 9408, June 2023.
 
    [TSM]     Y. Lee, et al., "Traffic Engineering and Service Mapping
              Yang Model", draft-ietf-teas-te-service-mapping-yang, work
@@ -2991,10 +2994,6 @@ Internet-Draft                 ACTN POI                       July 2023
    [OIA-TOPO]  Lee Y. et al., "A YANG Data Model for Optical Impairment-
              aware Topology", draft-ietf-ccamp-optical-impairment-
              topology-yang, work in progress.
-
-   [SAP]     Gonzalez de Dios O. et al., "A Network YANG Model for
-             Service Attachment Points (SAPs)", draft-ietf-opsawg-sap,
-             work in progress.
 
    [NETWORK-INVENTORY]  Yu C. et al., "A YANG Data Model for Optical
              Network Inventory", draft-yg3bp-ccamp-optical-inventory-
@@ -3020,7 +3019,8 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 56]
+
+Peruzzini et al.       Expires January 7, 2024                [Page 56]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3069,12 +3069,12 @@ A.1.1.   MDSC NBI
    Figure 10 shows an example of possible control flow between the
    OSS/Orchestration layer and the MDSC to instantiate L2/L3 VPN network
    services, using the YANG data models under the definition in [VN],
-   [L2NM], [RFC9182] and [TSM].
+   [RFC9291], [RFC9182] and [TSM].
 
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 57]
+Peruzzini et al.       Expires January 7, 2024                [Page 57]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3117,7 +3117,7 @@ Internet-Draft                 ACTN POI                       July 2023
           VN member diversity) and VN-level admin-status and
           operational-status.
 
-   o  The L2NM and L3NM YANG data models, defined in [L2NM] and
+   o  The L2NM and L3NM YANG data models, defined in [RFC9291] and
       [RFC9182], whose primary focus is the MPI, can also be used to
       provide L2VPN and L3VPN network service configuration from a
       orchestrated connectivity service point of view.
@@ -3128,7 +3128,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 58]
+Peruzzini et al.       Expires January 7, 2024                [Page 58]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3182,7 +3182,7 @@ A.2.2.   Router Port Failure
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 59]
+Peruzzini et al.       Expires January 7, 2024                [Page 59]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3236,7 +3236,7 @@ A.3.  Muxponders
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 60]
+Peruzzini et al.       Expires January 7, 2024                [Page 60]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3290,7 +3290,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 61]
+Peruzzini et al.       Expires January 7, 2024                [Page 61]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3344,7 +3344,7 @@ Contributors
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 62]
+Peruzzini et al.       Expires January 7, 2024                [Page 62]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3398,7 +3398,7 @@ Internet-Draft                 ACTN POI                       July 2023
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 63]
+Peruzzini et al.       Expires January 7, 2024                [Page 63]
 
 Internet-Draft                 ACTN POI                       July 2023
 
@@ -3452,5 +3452,5 @@ Authors' Addresses
 
 
 
-Peruzzini et al.       Expires January 4, 2024                [Page 64]
+Peruzzini et al.       Expires January 7, 2024                [Page 64]
 
