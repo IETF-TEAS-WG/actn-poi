@@ -40,14 +40,14 @@ The contributors on this draft has weekly informal conference calls on two alter
   - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/SbUwL4w0aIZus6zUJ_DYbm4flQw/)
   - [Add to Calendar](https://cisco.webex.com/cisco/j.php?MTID=m2d2415a22dba69ad957aa8ea83228e28)
   - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=mbe29c97ecb4bcd3d4dbb28c44f310ff7)
-  - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
+  - Draft minutes taken during the call: [Draft Minutes (TEAS)](https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw)
 - CCAMP WG: every two week at 11:00am NA EDT, starting from May 16, 2023 till May 13, 2025
   - [CCAMP WG Announcement](https://mailarchive.ietf.org/arch/msg/ccamp/ewZ77Kr6TpiZK7SExHtntWVS1Gs/)
   - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m518114257c522731261ccb41d2a8ca71)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=mc554b49d0b8fa65fbf88c71ca5ee4fd3)
-  - Draft minutes taken during the call: https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg
+  - Draft minutes taken during the call: [Draft Minutes (CCAMP)](https://demo.hedgedoc.org/Lt4DCI9dRWe1mFQbPtZaPg)
 
-The official minutes of these calls are available in this repository: https://github.com/FabioPeruzzini/actn-poi/tree/master/minutes
+The official minutes of these calls are available in this repository: [Archived Minutes](https://github.com/IETF-TEAS-WG/actn-poi/tree/master/minutes)
 
 ### Other Resources
 
