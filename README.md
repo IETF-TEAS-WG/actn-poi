@@ -36,12 +36,12 @@ subject to a Simplified BSD License) in Contributions.
 ### Weekly Calls
 
 The contributors on this draft has weekly informal conference calls on two alternating slots:
-- TEAS WG: every two weeks at 4:30am NA EDT, from May 9, 2023 till July 18, 2023
-  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/_7OgOoluGBRDU3nEo6AOSjUXggs/)
-  - [Add to Calendar](https://cisco.webex.com/webappng/sites/cisco/meeting/info/b067a49845894a6d84aa2c518acae3fc#)
-  - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=m6429a29e7eafe436a1ad7e984c01d75a)
+- TEAS WG: every two weeks at 4:30am NA EDT, from August 29, 2023 till October 24, 2023
+  - [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/SbUwL4w0aIZus6zUJ_DYbm4flQw/)
+  - [Add to Calendar](https://cisco.webex.com/cisco/j.php?MTID=m2d2415a22dba69ad957aa8ea83228e28)
+  - [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=mbe29c97ecb4bcd3d4dbb28c44f310ff7)
   - Draft minutes taken during the call: https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw
-- CCAMP WG: every two week at 11:00am NA EDT, starting from May 16, 2023 till July 11, 2023
+- CCAMP WG: every two week at 11:00am NA EDT, starting from May 16, 2023 till May 13, 2025
   - [CCAMP WG Announcement](https://mailarchive.ietf.org/arch/msg/ccamp/ewZ77Kr6TpiZK7SExHtntWVS1Gs/)
   - [Add to Calendar](https://ietf.webex.com/ietf/j.php?MTID=m518114257c522731261ccb41d2a8ca71)
   - [Join Meeting](https://ietf.webex.com/ietf/j.php?MTID=mc554b49d0b8fa65fbf88c71ca5ee4fd3)
