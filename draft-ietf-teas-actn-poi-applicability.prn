@@ -18,7 +18,7 @@
                                                           Daniele Ceccarelli 
                                                                        Cisco 
       
-     Expires: August 2024                                  February 13, 2024 
+     Expires: August 2024                                  February 22, 2024 
                                          
       
                                            
@@ -59,7 +59,7 @@
         material or to cite them other than as "work in progress." 
 
 
-     Peruzzini et al.       Expires August 13, 2024                 [Page 1] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 1] 
 
 
 
@@ -80,7 +80,7 @@
         The list of Internet-Draft Shadow Directories can be accessed at 
         http://www.ietf.org/shadow.html 
 
-        This Internet-Draft will expire on August 13, 2024. 
+        This Internet-Draft will expire on August 22, 2024. 
 
      Copyright Notice 
 
@@ -116,14 +116,14 @@
            3.3. Path Computation Element Protocol (PCEP).................23 
         4. Inventory, Service and Network Topology Discovery.............24 
            4.1. Optical Topology Discovery...............................25 
-           4.2. Optical Path Discovery...................................29 
+           4.2. Optical Path Discovery...................................28 
            4.3. Packet Topology Discovery................................29 
            4.4. TE Path Discovery........................................30 
            4.5. Inter-domain Link Discovery..............................31 
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 2] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 2] 
       
       
 
@@ -189,7 +189,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 3] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 3] 
       
       
 
@@ -255,7 +255,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 4] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 4] 
       
       
 
@@ -321,7 +321,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 5] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 5] 
       
       
 
@@ -387,7 +387,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 6] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 6] 
       
       
 
@@ -453,7 +453,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 7] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 7] 
       
       
 
@@ -519,7 +519,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 8] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 8] 
       
       
 
@@ -585,7 +585,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                 [Page 9] 
+     Peruzzini et al.       Expires August 22, 2024                 [Page 9] 
       
       
 
@@ -651,7 +651,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 10] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 10] 
       
       
 
@@ -717,7 +717,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 11] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 11] 
       
       
 
@@ -783,7 +783,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 12] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 12] 
       
       
 
@@ -849,7 +849,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 13] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 13] 
       
       
 
@@ -915,7 +915,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 14] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 14] 
       
       
 
@@ -981,7 +981,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 15] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 15] 
       
       
 
@@ -1047,7 +1047,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 16] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 16] 
       
       
 
@@ -1113,7 +1113,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 17] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 17] 
       
       
 
@@ -1179,7 +1179,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 18] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 18] 
       
       
 
@@ -1245,7 +1245,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 19] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 19] 
       
       
 
@@ -1303,15 +1303,15 @@
         sections. 
 
         Both Optical and Packet PNCs can also use the Ethernet Topology 
-        Model, defined in the “ietf-eth-te-topology” YANG module of [CLIENT-
-        TOPO], which augments the TE Topology Model with Ethernet technology-
-        specific information. 
+        Model, defined in the “ietf-eth-te-topology” YANG module of 
+        [CLIENT-TOPO], which augments the TE Topology Model with Ethernet 
+        technology-specific information. 
 
 
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 20] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 20] 
       
       
 
@@ -1377,7 +1377,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 21] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 21] 
       
       
 
@@ -1443,7 +1443,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 22] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 22] 
       
       
 
@@ -1509,7 +1509,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 23] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 23] 
       
       
 
@@ -1575,7 +1575,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 24] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 24] 
       
       
 
@@ -1641,7 +1641,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 25] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 25] 
       
       
 
@@ -1671,8 +1671,8 @@
            and Flexi-grid topology models. 
 
         Clarifying how both WSON and Flexi-grid topology models could be used 
-        together (e.g., through multi-inheritance as described in [TE-TOPO-
-        PF]) has been identified as a gap. 
+        together (e.g., through multi-inheritance as described in 
+        [TE-TOPO-PF]) has been identified as a gap. 
 
         The OTN Topology Model is used to report the OTN network topology 
         (e.g., OTN switching nodes and links), when the OTN switching layer 
@@ -1707,7 +1707,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 26] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 26] 
       
       
 
@@ -1773,7 +1773,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 27] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 27] 
       
       
 
@@ -1793,7 +1793,7 @@
          
                  +----------------------------------------------------------+ 
                 /                                                          / 
-               /            [X]                      [Y]                  / 
+               /            <X>                      <Y>                  / 
               /    +------O------+                +------O------+        /  
              /     |    (7-0)    |                |    (8-0)    |       / 
             /      |             |                |             |      / 
@@ -1805,7 +1805,7 @@
                                       
                                       
                  +----------------------------------------------------------+ 
-                /    [X] (7)                            (8) [Y]            / 
+                /    <X> (7)                            (8) <Y>            / 
                /         ---                            ---               / 
               /    +-----\ /-----+                +-----\ /-----+        / 
              /     |      V      |                |      V      |       / 
@@ -1821,8 +1821,7 @@
          ---   
          \ /  TTP 
           V    
-        [   ] Inter-Layer Lock-id reported by the PNC  
-         
+        <   > Inter-Layer Lock-id reported by the PNC 
                   Figure 5 – Multi-layer optical topology discovery 
 
         The intra-domain optical links are discovered by O-PNCs, using 
@@ -1833,13 +1832,14 @@
         domain OTN links are supported by underlay WDM tunnels: this 
         relationship is reported by the mechanisms described in section 4.2. 
 
+     4.2. Optical Path Discovery 
 
-
-
+        The WDM Tunnel Model is used to report all the WDM tunnels 
+        established within the optical network. 
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 28] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 28] 
       
       
 
@@ -1855,11 +1855,6 @@
 
      Internet-Draft                 ACTN POI                   February 2024 
          
-
-     4.2. Optical Path Discovery 
-
-        The WDM Tunnel Model is used to report all the WDM tunnels 
-        established within the optical network. 
 
         When the OTN switching layer is deployed within the optical domain, 
         the OTN Tunnel Model is used to report all the OTN tunnels 
@@ -1902,10 +1897,15 @@
         As described in [L3-TE-TOPO], the relationship between the IP network 
         topology and the MPLS-TE network topology depends on whether the two 
         network topologies are congruent or not: in the latter case, the L3 
+        TE Topology Model is used, together with the L3 Topology Model to 
+        provide the association between the two network topologies. 
+
+        To allow the MDSC to discover the complete multi-layer and multi-
+        domain network topology and to correlate it with the hardware 
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 29] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 29] 
       
       
 
@@ -1922,11 +1922,6 @@
      Internet-Draft                 ACTN POI                   February 2024 
          
 
-        TE Topology Model is used, together with the L3 Topology Model to 
-        provide the association between the two network topologies. 
-
-        To allow the MDSC to discover the complete multi-layer and multi-
-        domain network topology and to correlate it with the hardware 
         inventory information as well as to perform multi-domain TE path 
         computation, the P-PNCs report the full packet network, including all 
         the information that the MDSC requires to perform TE path 
@@ -1968,10 +1963,15 @@
         (between PE14 and PE13) should be reported by the P-PNC1 to the MDSC 
         as TE primary and primary-reverse paths of the same TE tunnel 
         instance. The bandwidth of these TE paths represents the bandwidth 
+        allocated by P-PNC1 to the two TE paths, which can be symmetric or 
+        asymmetric in the two directions. 
+
+        The P-PNCs use the TE tunnel model to report, at the MPI, all the TE 
+        paths established within their packet domain regardless of the 
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 30] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 30] 
       
       
 
@@ -1988,11 +1988,6 @@
      Internet-Draft                 ACTN POI                   February 2024 
          
 
-        allocated by P-PNC1 to the two TE paths, which can be symmetric or 
-        asymmetric in the two directions. 
-
-        The P-PNCs use the TE tunnel model to report, at the MPI, all the TE 
-        paths established within their packet domain regardless of the 
         mechanism being used to set them up; i.e., independently on whether 
         the mechanisms described in section 5.3 or other means, such as 
         static configuration, which are outside the scope of this document, 
@@ -2034,10 +2029,15 @@
         More detailed description of how the plug-id can be used to discover 
         inter-domain links is also provided in section 5.1.4 of [TNBI]. 
 
+        The plug-id attribute can also be used to discover the access-links, 
+        but the analysis of the access-link discovery is outside the scope of 
+        this document. 
+
+
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 31] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 31] 
       
       
 
@@ -2053,10 +2053,6 @@
 
      Internet-Draft                 ACTN POI                   February 2024 
          
-
-        The plug-id attribute can also be used to discover the access-links, 
-        but the analysis of the access-link discovery is outside the scope of 
-        this document. 
 
         This document considers the following two options for discovering 
         inter-domain links: 
@@ -2101,9 +2097,13 @@
 
 
 
+
+
+
+
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 32] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 32] 
       
       
 
@@ -2169,7 +2169,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 33] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 33] 
       
       
 
@@ -2235,7 +2235,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 34] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 34] 
       
       
 
@@ -2301,7 +2301,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 35] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 35] 
       
       
 
@@ -2367,7 +2367,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 36] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 36] 
       
       
 
@@ -2433,7 +2433,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 37] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 37] 
       
       
 
@@ -2499,7 +2499,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 38] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 38] 
       
       
 
@@ -2565,7 +2565,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 39] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 39] 
       
       
 
@@ -2631,7 +2631,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 40] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 40] 
       
       
 
@@ -2697,7 +2697,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 41] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 41] 
       
       
 
@@ -2763,7 +2763,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 42] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 42] 
       
       
 
@@ -2829,7 +2829,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 43] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 43] 
       
       
 
@@ -2895,7 +2895,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 44] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 44] 
       
       
 
@@ -2961,7 +2961,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 45] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 45] 
       
       
 
@@ -3027,7 +3027,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 46] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 46] 
       
       
 
@@ -3093,7 +3093,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 47] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 47] 
       
       
 
@@ -3159,7 +3159,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 48] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 48] 
       
       
 
@@ -3225,7 +3225,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 49] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 49] 
       
       
 
@@ -3291,7 +3291,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 50] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 50] 
       
       
 
@@ -3357,7 +3357,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 51] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 51] 
       
       
 
@@ -3380,8 +3380,8 @@
         The MDSC also request the P-PNC to configure local protection 
         mechanisms. For example, in case of SR-TE domain, the TI-LFA local 
         protection, as defined in [TI-LFA]: the mechanisms to request the 
-        configuration TI-LFA local protection for SR-TE paths using the [TE-
-        TUNNEL] are a gap in the current YANG models. 
+        configuration TI-LFA local protection for SR-TE paths using the 
+        [TE-TUNNEL] are a gap in the current YANG models. 
 
         The requested local protection mechanisms within the P-PNC domain are 
         configured by the P-PNC through implementation specific mechanisms 
@@ -3423,7 +3423,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 52] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 52] 
       
       
 
@@ -3489,7 +3489,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 53] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 53] 
       
       
 
@@ -3555,7 +3555,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 54] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 54] 
       
       
 
@@ -3621,7 +3621,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 55] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 55] 
       
       
 
@@ -3687,7 +3687,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 56] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 56] 
       
       
 
@@ -3753,7 +3753,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 57] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 57] 
       
       
 
@@ -3819,7 +3819,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 58] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 58] 
       
       
 
@@ -3885,7 +3885,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 59] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 59] 
       
       
 
@@ -3951,7 +3951,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 60] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 60] 
       
       
 
@@ -4017,7 +4017,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 61] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 61] 
       
       
 
@@ -4083,7 +4083,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 62] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 62] 
       
       
 
@@ -4149,7 +4149,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 63] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 63] 
       
       
 
@@ -4215,7 +4215,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 64] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 64] 
       
       
 
@@ -4281,7 +4281,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 65] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 65] 
       
       
 
@@ -4347,7 +4347,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 66] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 66] 
       
       
 
@@ -4413,7 +4413,7 @@
 
       
       
-     Peruzzini et al.       Expires August 13, 2024                [Page 67] 
+     Peruzzini et al.       Expires August 22, 2024                [Page 67] 
       
       
 
