@@ -2,7 +2,7 @@
 coding: utf-8
 
 title: >
-  A YANG Data Model for requesting path computation
+  Applicability of Abstraction and Control of Traffic Engineered
   Networks (ACTN) to Packet Optical Integration (POI)
 
 abbrev: ACTN POI
@@ -133,7 +133,7 @@ informative:
 
 This document considers the applicability of Abstraction and Control
 of TE Networks (ACTN) architecture to Packet Optical Integration
-(POI)in the context of IP/MPLS and optical internetworking. It
+(POI) in the context of IP/MPLS and optical internetworking. It
 identifies the YANG data models defined by the IETF to support this
 deployment architecture and specific scenarios relevant to Service
 Providers.
@@ -527,6 +527,8 @@ and bind tunnels to the service so that they are not shared by
 other services (e.g. VPN).
 
    The level of isolation can be different:
+
+   {: type="a"}
 
    1.  Hard isolation with deterministic latency means L2/L3 VPN
    requires a set of dedicated TE Tunnels (neither sharing
