@@ -35,10 +35,10 @@ subject to a Simplified BSD License) in Contributions.
 
 ### Weekly Calls
 
-The contributors on this draft has weekly informal conference calls every two weeks at 4:30am NA EDT, from December 5, 2023 till March 12, 2024:
-- [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/fLmQq0LDI49pkhffDxVGLMvlDvA/)
-- [Add to Calendar](https://cisco.webex.com/cisco/j.php?MTID=m69e84fb53dfc212dde873693433888aa)
-- [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=m55b25ae6f8109ffc70f454a8e7500e12)
+The contributors on this draft has weekly informal conference calls every two weeks at 4:30am NA EDT, from April 9, 2024 till July 26, 2024:
+- [TEAS WG Announcement](https://mailarchive.ietf.org/arch/msg/teas/Ieyrfw28Vm0rgLSw9sXBE_r56h4/)
+- [Add to Calendar](https://cisco.webex.com/cisco/j.php?MTID=m6a2994493c74e0cbf6bf39abbba48128)
+- [Join Meeting](https://cisco.webex.com/cisco/j.php?MTID=me4e1b57338ac4aaab15aebf95b4987fe)
 - Draft minutes taken during the call: [Draft Minutes (TEAS)](https://demo.hedgedoc.org/sRDV7vcNSSeSS11g5-TuAw)
 
 The official minutes of these calls are available in this repository: [Archived Minutes](https://github.com/IETF-TEAS-WG/actn-poi/tree/master/minutes)
