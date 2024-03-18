@@ -1,3 +1,4 @@
+~~~~ ascii-art
 
         +-----------------------------------------------------------+
        /                    IP Topology (P-PNC 2)                  /
@@ -28,3 +29,4 @@ Legenda:
 ========
   O   LTP
 <===> Link discovered by the PNC and reported at the MPI
+~~~~

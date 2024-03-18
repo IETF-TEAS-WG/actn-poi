@@ -1,3 +1,4 @@
+~~~~ ascii-art
 
      ------
     | CE13 |    Packet Domain 1              Packet Domain 2
@@ -36,3 +37,4 @@
        _____  = Inter-domain links
        .. ..  = Cross-layer links
        _ _ _  = Intra-domain links
+~~~~

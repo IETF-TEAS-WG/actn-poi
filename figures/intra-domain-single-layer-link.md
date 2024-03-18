@@ -1,3 +1,4 @@
+~~~~ ascii-art
         +-----------------------------------------------------------+
        /                    IP Topology (P-PNC 1)                  /
       /    +---------+                        +---------+         / 
@@ -36,3 +37,4 @@ Legenda:
 <===> Link discovered by the PNC and reported at the MPI
 <~~~> Link inferred by the MDSC
 {   } LTP Plug-id reported by the PNC
+~~~~

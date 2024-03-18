@@ -1,3 +1,4 @@
+~~~~ ascii-art
 
         +-----------------------------------------------------------+
        /             Ethernet Topology (P-PNC)                     /
@@ -28,3 +29,4 @@ Legenda:
   O   LTP
 <...> Link discovered by the MDSC
 {   } LTP Plug-id reported by the PNC
+~~~~

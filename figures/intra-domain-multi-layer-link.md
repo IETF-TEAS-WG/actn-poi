@@ -1,3 +1,4 @@
+~~~~ ascii-art
 
         +-----------------------------------------------------------+
        /                    IP Topology (P-PNC 1)                  /
@@ -61,3 +62,4 @@ Legenda:
 <...> Link discovered by the MDSC
 x---x Ethernet/CBR client signal
 X===X Optical tunnel
+~~~~

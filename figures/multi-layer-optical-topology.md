@@ -1,3 +1,4 @@
+~~~~ ascii-art
 
          +----------------------------------------------------------+
         /                                                          /
@@ -30,3 +31,4 @@ Legenda:
  \ /  TTP
   V   
 <   > Inter-Layer Lock-id reported by the PNC
+~~~~
