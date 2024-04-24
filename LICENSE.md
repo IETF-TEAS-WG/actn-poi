@@ -1,4 +1,4 @@
 # License
 
 See the
-[guidelines for contributions](https://github.com/IETF-TEAS-WG/actn-poi/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/italobusi/actn-poi/blob//CONTRIBUTING.md).
