@@ -11,19 +11,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Routing"
+workgroup: "Traffic Engineering Architecture and Signaling"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "Traffic Engineering Architecture and Signaling"
+  type: "Working Group"
+  mail: "teas@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/teas/"
+  github: "IETF-TEAS-WG/actn-poi"
+  latest: "https://IETF-TEAS-WG.github.io/actn-poi/draft-ietf-teas-actn-poi-applicability.html"
 
 author:
  -
