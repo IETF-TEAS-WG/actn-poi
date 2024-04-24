@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 6 September 2024                                       Vodafone
+Expires: 26 October 2024                                        Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            5 March 2024
+                                                           24 April 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -48,14 +48,14 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 September 2024.
+   This Internet-Draft will expire on 26 October 2024.
 
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 1]
+Peruzzini, et al.        Expires 26 October 2024                [Page 1]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 2]
+Peruzzini, et al.        Expires 26 October 2024                [Page 2]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
        5.2.2.  Multi-layer LAG Update  . . . . . . . . . . . . . . .  50
@@ -122,8 +122,8 @@ Internet-Draft                  ACTN POI                      March 2024
    7.  Security Considerations . . . . . . . . . . . . . . . . . . .  54
    8.  Operational Considerations  . . . . . . . . . . . . . . . . .  54
    9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  54
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  54
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .  54
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  55
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  55
      10.2.  Informative References . . . . . . . . . . . . . . . . .  58
    Appendix A.  Additional Scenarios . . . . . . . . . . . . . . . .  61
      A.1.  OSS/Orchestration Layer . . . . . . . . . . . . . . . . .  61
@@ -132,7 +132,7 @@ Internet-Draft                  ACTN POI                      March 2024
        A.2.1.  Maintenance Window  . . . . . . . . . . . . . . . . .  64
        A.2.2.  Router Port Failure . . . . . . . . . . . . . . . . .  64
      A.3.  Muxponders  . . . . . . . . . . . . . . . . . . . . . . .  65
-   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  66
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  67
    Contributors  . . . . . . . . . . . . . . . . . . . . . . . . . .  67
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  68
 
@@ -165,9 +165,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 3]
+Peruzzini, et al.        Expires 26 October 2024                [Page 3]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    engineering and planning methods (e.g., inter-domain peering
@@ -221,9 +221,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 4]
+Peruzzini, et al.        Expires 26 October 2024                [Page 4]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    For each scenario, existing IETF protocols and data models,
@@ -277,9 +277,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 5]
+Peruzzini, et al.        Expires 26 October 2024                [Page 5]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
       A link between two Ethernet interfaces.
@@ -333,9 +333,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 6]
+Peruzzini, et al.        Expires 26 October 2024                [Page 6]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
                                +----------+
@@ -389,9 +389,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 7]
+Peruzzini, et al.        Expires 26 October 2024                [Page 7]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The MPI interface presents an abstracted topology to MDSC, hiding
@@ -445,9 +445,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 8]
+Peruzzini, et al.        Expires 26 October 2024                [Page 8]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    Therefore, if inter-domain links between the optical domains exist,
@@ -501,9 +501,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024                [Page 9]
+Peruzzini, et al.        Expires 26 October 2024                [Page 9]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    In the current service provider's network deployments, at the North
@@ -557,9 +557,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 10]
+Peruzzini, et al.        Expires 26 October 2024               [Page 10]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
         ------
@@ -613,9 +613,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 11]
+Peruzzini, et al.        Expires 26 October 2024               [Page 11]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
         ------
@@ -669,17 +669,17 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 12]
+Peruzzini, et al.        Expires 26 October 2024               [Page 12]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    3.  Inter-domain SR-TE
 
    This document analyses the inter-domain TE options for which the TE
-   tunnel model, defined in [TE-TUNNEL], could be used at the MPI for
-   intra-domain or inter-domain TE configuration.  The analysis of other
-   options is outside the scope of this draft.
+   tunnel model, defined in [I-D.ietf-teas-yang-te], could be used at
+   the MPI for intra-domain or inter-domain TE configuration.  The
+   analysis of other options is outside the scope of this draft.
 
    It is also assumed that:
 
@@ -725,9 +725,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 13]
+Peruzzini, et al.        Expires 26 October 2024               [Page 13]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
        a.  Hard isolation with deterministic latency means L2/L3 VPN
@@ -781,9 +781,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 14]
+Peruzzini, et al.        Expires 26 October 2024               [Page 14]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 2.1.2.  Multi-domain and Multi-layer Path Computation
@@ -837,9 +837,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 15]
+Peruzzini, et al.        Expires 26 October 2024               [Page 15]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
        The MDSC then has only the capability of performing multi-domain/
@@ -861,11 +861,12 @@ Internet-Draft                  ACTN POI                      March 2024
        PNCs.
 
        This approach may present, as a potential drawback, scalability
-       issues and, as discussed in section 2.2. of [PATH-COMPUTE],
-       performing path computation for optical networks in the MDSC is
-       quite challenging because the optimal paths depend also on
-       vendor-specific optical attributes (which may be different in the
-       two domains if different vendors provide them).
+       issues and, as discussed in section 2.2. of
+       [I-D.ietf-teas-yang-path-computation], performing path
+       computation for optical networks in the MDSC is quite challenging
+       because the optimal paths depend also on vendor-specific optical
+       attributes (which may be different in the two domains if
+       different vendors provide them).
 
    This document analyses scenarios where the MDSC uses the partial
    summarization approach to coordinate multi-domain/multi-layer path
@@ -879,9 +880,9 @@ Internet-Draft                  ACTN POI                      March 2024
    network service path.
 
    The methods and types of path requirements and impairments, such as
-   those detailed in [OIA-TOPO], used by the O-PNC for optical path
-   computation are not exposed at the MPI and therefore out of scope for
-   this document.
+   those detailed in [I-D.ietf-ccamp-optical-impairment-topology-yang],
+   used by the O-PNC for optical path computation are not exposed at the
+   MPI and therefore out of scope for this document.
 
 2.2.  IP/MPLS Domain Controller and NE Functions
 
@@ -892,10 +893,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 16]
+Peruzzini, et al.        Expires 26 October 2024               [Page 16]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    P-PNCs are responsible for setting up the TE paths between any two
@@ -949,9 +949,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 17]
+Peruzzini, et al.        Expires 26 October 2024               [Page 17]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            +------------------+            +------------------+
@@ -1005,9 +1005,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 18]
+Peruzzini, et al.        Expires 26 October 2024               [Page 18]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    For the purposes of this document it is assumed that the MDSC always
@@ -1061,9 +1061,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 19]
+Peruzzini, et al.        Expires 26 October 2024               [Page 19]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 3.2.  YANG Data Models at the MPIs
@@ -1097,7 +1097,7 @@ Internet-Draft                  ACTN POI                      March 2024
       Model.
 
    Optical and Packet PNCs can use the common TE Tunnel Model, defined
-   in the "ietf-te" YANG module of [TE-TUNNEL], at the MPI.
+   in the "ietf-te" YANG module of [I-D.ietf-teas-yang-te], at the MPI.
 
    All the common YANG data models are generic and augmented by
    technology-specific YANG modules, as described in the following
@@ -1105,8 +1105,8 @@ Internet-Draft                  ACTN POI                      March 2024
 
    Both Optical and Packet PNCs can also use the Ethernet Topology
    Model, defined in the "ietf-eth-te-topology" YANG module of
-   [CLIENT-TOPO], which augments the TE Topology Model with Ethernet
-   technology-specific information.
+   [I-D.ietf-ccamp-eth-client-te-topo-yang], which augments the TE
+   Topology Model with Ethernet technology-specific information.
 
    Both Optical and Packet PNCs can use the following common
    notifications YANG data models at the MPI:
@@ -1117,9 +1117,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 20]
+Peruzzini, et al.        Expires 26 October 2024               [Page 20]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    *  Subscription to YANG Notifications for Datastores updates as
@@ -1137,23 +1137,23 @@ Internet-Draft                  ACTN POI                      March 2024
       module of [RFC9094];
 
    *  the Flexi-grid Topology Model, defined in the "ietf-flexi-grid-
-      topology" YANG module of [Flexi-TOPO];
+      topology" YANG module of [I-D.ietf-ccamp-flexigrid-yang];
 
    *  the OTN Topology Model, as defined in the "ietf-otn-topology" YANG
-      module of [OTN-TOPO].
+      module of [I-D.ietf-ccamp-otn-topo-yang].
 
    The optical PNC can use the following technology-specific tunnel YANG
    data models, which augments the generic TE Tunnel Model:
 
    *  The WDM Tunnel Model, defined in the "ietf-wdm-tunnel" YANG module
-      of [WDM-TUNNEL];
+      of [I-D.ietf-ccamp-wdm-tunnel-yang];
 
    *  the OTN Tunnel Model, defined in the "ietf-otn-tunnel" YANG module
-      of [OTN-TUNNEL].
+      of [I-D.ietf-ccamp-otn-tunnel-model].
 
    The optical PNC can use the generic Path Computation YANG RPC,
    defined in the "ietf-te-path-computation" YANG module of
-   [PATH-COMPUTE].
+   [I-D.ietf-teas-yang-path-computation].
 
    Note that technology-specific augmentations of the generic path
    computation RPC for WSON, Flexi-grid and OTN path computation RPCs
@@ -1163,19 +1163,19 @@ Internet-Draft                  ACTN POI                      March 2024
    models:
 
    *  the CBR Client Signal Model, defined in the "ietf-trans-client-
-      service" YANG module of [CLIENT-SIGNAL];
+      service" YANG module of [I-D.ietf-ccamp-client-signal-yang];
 
    *  the Ethernet Client Signal Model, defined in the "ietf-eth-tran-
-      service" YANG module of [CLIENT-SIGNAL].
+      service" YANG module of [I-D.ietf-ccamp-client-signal-yang].
 
 
 
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 21]
+Peruzzini, et al.        Expires 26 October 2024               [Page 21]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 3.2.3.  YANG data models at the Packet MPIs
@@ -1188,22 +1188,23 @@ Internet-Draft                  ACTN POI                      March 2024
       Model;
 
    *  the packet TE Topology Mode, defined in the "ietf-te-topology-
-      packet" YANG module of [L3-TE-TOPO], which augments the generic TE
-      Topology Model;
+      packet" YANG module of [I-D.ietf-teas-yang-l3-te-topo], which
+      augments the generic TE Topology Model;
 
    *  The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-      YANG module of [MPLS-TE-TOPO], which augments the TE Packet
-      Topology Model with or without the L3 TE Topology Model, defined
-      in "ietf-l3-te-topology" YANG module of [L3-TE-TOPO];
+      YANG module of [I-D.busizheng-teas-yang-te-mpls-topology], which
+      augments the TE Packet Topology Model with or without the L3 TE
+      Topology Model, defined in "ietf-l3-te-topology" YANG module of
+      [I-D.ietf-teas-yang-l3-te-topo];
 
    *  the SR Topology Model, defined in the "ietf-sr-mpls-topology" YANG
-      module of [SR-TE-TOPO].
+      module of [I-D.ietf-teas-yang-sr-te-topo].
 
    The Packet PNC can use the following technology-specific tunnel YANG
    data models, which augments the generic TE Tunnel Model:
 
    *  The MPLS-TE Tunnel Model, defined in the "ietf-te-mpls" YANG
-      modules of [MPLS-TE-TUNNEL];
+      modules of [I-D.ietf-teas-yang-te-mpls];
 
    *  the SR-TE Tunnel Model which is to be defined as described in
       Section 6.
@@ -1215,23 +1216,22 @@ Internet-Draft                  ACTN POI                      March 2024
       module of [RFC9182];
 
    *  L3NM TE Service Mapping, defined in the "ietf-l3nm-te-service-
-      mapping" YANG module of [TSM];
+      mapping" YANG module of [I-D.ietf-teas-te-service-mapping-yang];
 
    *  L2VPN Network Model (L2NM), defined in the "ietf-l2vpn-ntw" YANG
       module of [RFC9291];
 
    *  L2NM TE Service Mapping, defined in the "ietf-l2nm-te-service-
-      mapping" YANG module of [TSM].
+      mapping" YANG module of [I-D.ietf-teas-te-service-mapping-yang].
 
 
 
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 22]
+Peruzzini, et al.        Expires 26 October 2024               [Page 22]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 3.3.  Path Computation Element Protocol (PCEP)
@@ -1270,7 +1270,8 @@ Internet-Draft                  ACTN POI                      March 2024
        of interface (RESTCONF) and use the relevant YANG data models
        depending on the operator use case considered.  The benefits of
        having only one protocol for the MPI between MDSC and PNC have
-       already been highlighted in [PATH-COMPUTE].
+       already been highlighted in
+       [I-D.ietf-teas-yang-path-computation].
 
    2.  The MDSC uses the RESTCONF/YANG interface towards each PNC to
        discover all the TE information and requests the creation of TE
@@ -1279,15 +1280,14 @@ Internet-Draft                  ACTN POI                      March 2024
 
        As mentioned in Option 1, from an operator perspective, this
        option can add integration complexity to have two protocols
-       instead of one unless the RESTOCONF/YANG interface is added to an
+       instead of one unless the RESTCONF/YANG interface is added to an
        existing PCEP deployment (brownfield scenario).
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 23]
+Peruzzini, et al.        Expires 26 October 2024               [Page 23]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    Section 4 and Section 5 of this draft analyze the case where a single
@@ -1341,9 +1341,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 24]
+Peruzzini, et al.        Expires 26 October 2024               [Page 24]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The MDSC should also maintain up-to-date inventory, service and
@@ -1397,9 +1397,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 25]
+Peruzzini, et al.        Expires 26 October 2024               [Page 25]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    *  A mixed fixed and flexible grid DWDM network topology can be
@@ -1408,7 +1408,7 @@ Internet-Draft                  ACTN POI                      March 2024
 
    Clarifying how both WSON and Flexi-grid topology models could be used
    together (e.g., through multi-inheritance as described in
-   [TE-TOPO-PF]) has been identified as a gap.
+   [I-D.ietf-teas-te-topology-profiles]) has been identified as a gap.
 
    The OTN Topology Model is used to report the OTN network topology
    (e.g., OTN switching nodes and links), when the OTN switching layer
@@ -1430,7 +1430,8 @@ Internet-Draft                  ACTN POI                      March 2024
    at the MPI:
 
    *  the optical parameters required for optical path computation, such
-      as those detailed in [OIA-TOPO];
+      as those detailed in
+      [I-D.ietf-ccamp-optical-impairment-topology-yang];
 
    *  the underlay OTS links and ILAs of OMS links;
 
@@ -1440,8 +1441,8 @@ Internet-Draft                  ACTN POI                      March 2024
    The OTN Topology Model also reports the CBR client LTPs that
    terminates the cross-layer links: once CBR client LTP is reported for
    each CBR or multi-function client interface on the optical NEs (see
-   sections 4.4 and 5.1 of [TNBI] for the description of multi-function
-   client interfaces).
+   sections 4.4 and 5.1 of [I-D.ietf-ccamp-transport-nbi-app-statement]
+   for the description of multi-function client interfaces).
 
    The Ethernet Topology Model reports the Ethernet client LTPs that
    terminate the cross-layer links: one Ethernet client LTP is reported
@@ -1452,10 +1453,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 26]
+Peruzzini, et al.        Expires 26 October 2024               [Page 26]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The optical transponders and, optionally, the OTN access cards, are
@@ -1509,9 +1509,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 27]
+Peruzzini, et al.        Expires 26 October 2024               [Page 27]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
             +----------------------------------------------------------+
@@ -1565,9 +1565,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 28]
+Peruzzini, et al.        Expires 26 October 2024               [Page 28]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    When the OTN switching layer is deployed within the optical domain,
@@ -1584,10 +1584,11 @@ Internet-Draft                  ACTN POI                      March 2024
 
    The WDM tunnels can be used to support either Ethernet or CBR client
    signals or multi-layer intra-domain OTN links.  In the latter case,
-   the hierarchical-link container, defined in [TE-TUNNEL], associates
-   the underlay WDM tunnel with the supported multi-layer intra-domain
-   OTN link and it allows discovery of the multi-layer path supporting
-   all the connectivity services provided by the optical network.
+   the hierarchical-link container, defined in [I-D.ietf-teas-yang-te],
+   associates the underlay WDM tunnel with the supported multi-layer
+   intra-domain OTN link and it allows discovery of the multi-layer path
+   supporting all the connectivity services provided by the optical
+   network.
 
    The O-PNCs report in their operational datastores all the Ethernet
    and CBR client connectivities and all the optical tunnels deployed
@@ -1602,30 +1603,33 @@ Internet-Draft                  ACTN POI                      March 2024
 
    The L3 Topology Model, SR Topology Model, TE Topology Model and the
    TE Packet Topology Model are used together to report the SR-TE
-   network topology, as described in Figure 2 of [SR-TE-TOPO].
+   network topology, as described in Figure 2 of
+   [I-D.ietf-teas-yang-sr-te-topo].
 
    The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
    Model are used together to report the MPLS-TE network topology, as
-   described in [MPLS-TE-TOPO].
+   described in [I-D.busizheng-teas-yang-te-mpls-topology].
 
-   As described in [L3-TE-TOPO], the relationship between the IP network
-   topology and the MPLS-TE network topology depends on whether the two
-   network topologies are congruent or not: in the latter case, the L3
-   TE Topology Model is used, together with the L3 Topology Model to
-   provide the association between the two network topologies.
+   As described in [I-D.ietf-teas-yang-l3-te-topo], the relationship
+   between the IP network topology and the MPLS-TE network topology
+   depends on whether the two network topologies are congruent or not:
+   in the latter case, the L3 TE Topology Model is used, together with
+   the L3 Topology Model to provide the association between the two
+   network topologies.
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 29]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
    To allow the MDSC to discover the complete multi-layer and multi-
    domain network topology and to correlate it with the hardware
    inventory information as well as to perform multi-domain TE path
    computation, the P-PNCs report the full packet network, including all
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 29]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
    the information that the MDSC requires to perform TE path
    computation.  In particular, one TE node is reported for each router
    and one TE link is reported for each intra-domain IP link.  The
@@ -1647,18 +1651,18 @@ Internet-Draft                  ACTN POI                      March 2024
 
    We assume that the discovery of existing TE paths, including their
    bandwidth, at the MPI is done using the generic TE tunnel YANG data
-   model, defined in [TE-TUNNEL], with packet technology-specific (e.g.,
-   MPLS-TE or SR-TE) augmentations.
+   model, defined in [I-D.ietf-teas-yang-te], with packet technology-
+   specific (e.g., MPLS-TE or SR-TE) augmentations.
 
    Note that technology-specific augmentations of the generic path TE
    tunnel model for SR-TE path setup and discovery is outlined in
-   section 1 of [TE-TUNNEL] but are currently identified as a gap in
-   Section 6.
+   section 1 of [I-D.ietf-teas-yang-te] but are currently identified as
+   a gap in Section 6.
 
    To enable MDSC to discover the full end-to-end TE path configuration,
-   the technology-specific augmentation of the [TE-TUNNEL] should allow
-   the P-PNC to report the TE path within its domain (e.g., the SID list
-   assigned to an SR-TE path).
+   the technology-specific augmentation of the [I-D.ietf-teas-yang-te]
+   should allow the P-PNC to report the TE path within its domain (e.g.,
+   the SID list assigned to an SR-TE path).
 
    For example, considering the L3VPN in Figure 2, the TE path 1 in one
    direction (PE13-P16-PE14) and the TE path in the reverse direction
@@ -1668,19 +1672,22 @@ Internet-Draft                  ACTN POI                      March 2024
    allocated by P-PNC1 to the two TE paths, which can be symmetric or
    asymmetric in the two directions.
 
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 30]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
    The P-PNCs use the TE tunnel model to report, at the MPI, all the TE
    paths established within their packet domain regardless of the
    mechanism being used to set them up; i.e., independently on whether
    the mechanisms described in Section 5.3 or other means, such as
    static configuration, which are outside the scope of this document,
    are used.
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 30]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
 4.5.  Inter-domain Link Discovery
 
@@ -1716,11 +1723,20 @@ Internet-Draft                  ACTN POI                      March 2024
    of [RFC8795].
 
    More detailed description of how the plug-id can be used to discover
-   inter-domain links is also provided in section 5.1.4 of [TNBI].
+   inter-domain links is also provided in section 5.1.4 of
+   [I-D.ietf-ccamp-transport-nbi-app-statement].
 
    The plug-id attribute can also be used to discover the access-links,
    but the analysis of the access-link discovery is outside the scope of
    this document.
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 31]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
    This document considers the following two options for discovering
    inter-domain links:
@@ -1731,17 +1747,11 @@ Internet-Draft                  ACTN POI                      March 2024
 
    Other options are possible but not described in this document.
 
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 31]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
-   As outlined in [TNBI], the encoding of the plug-id namespace and the
-   specific LLDP information reported within the plug-id value, such as
-   the Chassis ID and Port ID mandatory TLVs, is implementation specific
-   and needs to be consistent across all the PNCs within the network.
+   As outlined in [I-D.ietf-ccamp-transport-nbi-app-statement], the
+   encoding of the plug-id namespace and the specific LLDP information
+   reported within the plug-id value, such as the Chassis ID and Port ID
+   mandatory TLVs, is implementation specific and needs to be consistent
+   across all the PNCs within the network.
 
    The static configuration requires an administrative burden to
    configure network-wide unique identifiers: it is therefore more
@@ -1779,19 +1789,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-
-
-
-
-
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 32]
+Peruzzini, et al.        Expires 26 October 2024               [Page 32]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            +-----------------------------------------------------------+
@@ -1845,9 +1845,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 33]
+Peruzzini, et al.        Expires 26 October 2024               [Page 33]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 4.5.2.  Inter-domain IP Link Discovery
@@ -1901,9 +1901,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 34]
+Peruzzini, et al.        Expires 26 October 2024               [Page 34]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            Figure 7: Inter-domain Ethernet and IP link discovery
@@ -1957,9 +1957,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 35]
+Peruzzini, et al.        Expires 26 October 2024               [Page 35]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The P-PNC can omit reporting the physical Ethernet LTPs when it
@@ -2013,9 +2013,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 36]
+Peruzzini, et al.        Expires 26 October 2024               [Page 36]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
        /      |    (7-0)    |  client sig.   |    (8-0)    |       /
@@ -2069,9 +2069,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 37]
+Peruzzini, et al.        Expires 26 October 2024               [Page 37]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The MDSC discovers, using the mechanisms described in Section 4.5,
@@ -2125,9 +2125,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 38]
+Peruzzini, et al.        Expires 26 October 2024               [Page 38]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            +-----------------------------------------------------------+
@@ -2181,9 +2181,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 39]
+Peruzzini, et al.        Expires 26 October 2024               [Page 39]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    shown in Figure 9, if it knows a priori, using mechanisms which are
@@ -2237,9 +2237,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 40]
+Peruzzini, et al.        Expires 26 October 2024               [Page 40]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            +-----------------------------------------------------------+
@@ -2293,9 +2293,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 41]
+Peruzzini, et al.        Expires 26 October 2024               [Page 41]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    If LLDP is enabled on both LAG members and groups, two types of LLDP
@@ -2349,9 +2349,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 42]
+Peruzzini, et al.        Expires 26 October 2024               [Page 42]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    There are also no YANG data models in IETF that could be used to
@@ -2405,9 +2405,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 43]
+Peruzzini, et al.        Expires 26 October 2024               [Page 43]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    As described in Section 2.1.2, with partial summarization, the MDSC
@@ -2461,9 +2461,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 44]
+Peruzzini, et al.        Expires 26 October 2024               [Page 44]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    Then the MDSC requests P-PNC1 to setup a TE path between PE13 and
@@ -2501,11 +2501,12 @@ Internet-Draft                  ACTN POI                      March 2024
    be used by the MDSC to infer the properties of the associated multi-
    layer single-domain IP link.
 
-   As discussed in [PATH-COMPUTE], there are two options to request an
-   O-PNC to perform optical path computation: either via a "compute-
-   only" TE tunnel path, using the generic TE tunnel YANG data model
-   defined in [TE-TUNNEL] or via the path computation RPC defined in
-   [PATH-COMPUTE].
+   As discussed in [I-D.ietf-teas-yang-path-computation], there are two
+   options to request an O-PNC to perform optical path computation:
+   either via a "compute-only" TE tunnel path, using the generic TE
+   tunnel YANG data model defined in [I-D.ietf-teas-yang-te] or via the
+   path computation RPC defined in
+   [I-D.ietf-teas-yang-path-computation].
 
    This draft assumes that the path computation RPC is used.
 
@@ -2516,10 +2517,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 45]
+Peruzzini, et al.        Expires 26 October 2024               [Page 45]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    Optical technology-specific augmentation for the path computation RPC
@@ -2573,9 +2573,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 46]
+Peruzzini, et al.        Expires 26 October 2024               [Page 46]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
            +---------:------------------------------:------------------+
@@ -2629,9 +2629,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 47]
+Peruzzini, et al.        Expires 26 October 2024               [Page 47]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    If LLDP [IEEE_802.1AB] or any other discovery mechanisms, which are
@@ -2685,9 +2685,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 48]
+Peruzzini, et al.        Expires 26 October 2024               [Page 48]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    For example, with a reference to Figure 11, the MDSC can request the
@@ -2714,8 +2714,8 @@ Internet-Draft                  ACTN POI                      March 2024
    least two member links fail.
 
    The attribute required to configure the minimum number of active
-   member links is missing in [CLIENT-TOPO] and this is identified as a
-   gap in Section 6.
+   member links is missing in [I-D.ietf-ccamp-eth-client-te-topo-yang]
+   and this is identified as a gap in Section 6.
 
    It is worth noting that a new LAG group can be created to bundle one
    or more multi-layer single-domain Ethernet link(s).
@@ -2741,9 +2741,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 49]
+Peruzzini, et al.        Expires 26 October 2024               [Page 49]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
 5.2.2.  Multi-layer LAG Update
@@ -2797,9 +2797,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 50]
+Peruzzini, et al.        Expires 26 October 2024               [Page 50]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    optical tunnel.  These mechanisms are implementation-specific and
@@ -2810,52 +2810,52 @@ Internet-Draft                  ACTN POI                      March 2024
 
    This version of the draft assumes that TE path setup and update at
    the MPI could be done using the generic TE tunnel YANG data model,
-   defined in [TE-TUNNEL], with packet technology-specific
+   defined in [I-D.ietf-teas-yang-te], with packet technology-specific
    augmentations, described in Section 3.2.3.
 
    When a new TE path needs to be setup, the MDSC can use the
-   [TE-TUNNEL] model to request the P-PNC to set it up, properly
-   specifying the path constraints, such as the explicit path, to force
-   the P-PNC to setup an TE path that meets the end-to-end TE and
-   binding constraints and uses the optical tunnels setup by the MDSC
-   for the purpose of supporting this new TE path.
+   [I-D.ietf-teas-yang-te] model to request the P-PNC to set it up,
+   properly specifying the path constraints, such as the explicit path,
+   to force the P-PNC to setup an TE path that meets the end-to-end TE
+   and binding constraints and uses the optical tunnels setup by the
+   MDSC for the purpose of supporting this new TE path.
 
-   The [TE-TUNNEL] model supports requesting the setup of both end-to-
-   end as well as segment TE tunnels (within one domain).
+   The [I-D.ietf-teas-yang-te] model supports requesting the setup of
+   both end-to-end as well as segment TE tunnels (within one domain).
 
    In the latter case, the technology-specific augmentations should
    allow the configuration of the information needed for multi-domain TE
    path stitching.
 
-   For example, the SR-TE specific augmentations of the [TE-TUNNEL]
-   model should be defined to allow the MDSC to configure the binding
-   SIDs to be used for the multi-domain SR-TE path stitching and to
-   allow the P-PNC to report the binding SID assigned to the segment TE
-   paths.  Note that the assigned binding SID should be persistent in
-   case router or P-PNC rebooting.
+   For example, the SR-TE specific augmentations of the
+   [I-D.ietf-teas-yang-te] model should be defined to allow the MDSC to
+   configure the binding SIDs to be used for the multi-domain SR-TE path
+   stitching and to allow the P-PNC to report the binding SID assigned
+   to the segment TE paths.  Note that the assigned binding SID should
+   be persistent in case router or P-PNC rebooting.
 
-   The MDSC can also use the [TE-TUNNEL] model to request the P-PNC to
-   increase the bandwidth allocated to an existing TE path, and, if
-   needed, also on its reverse TE path.  The [TE-TUNNEL] model supports
-   both symmetric and asymmetric bandwidth configuration in the two
-   directions.
+   The MDSC can also use the [I-D.ietf-teas-yang-te] model to request
+   the P-PNC to increase the bandwidth allocated to an existing TE path,
+   and, if needed, also on its reverse TE path.  The
+   [I-D.ietf-teas-yang-te] model supports both symmetric and asymmetric
+   bandwidth configuration in the two directions.
 
    [Editor's Note:] Add some text about the protection options (to
    further discuss whether to put this text here or in Section 5.2).
 
    The MDSC also request the P-PNC to configure local protection
    mechanisms.  For example, in case of SR-TE domain, the TI-LFA local
-   protection, as defined in [TI-LFA]: the mechanisms to request the
-   configuration TI-LFA local protection for SR-TE paths using the
-   [TE-TUNNEL] are a gap in the current YANG models.
+   protection, as defined in [I-D.ietf-rtgwg-segment-routing-ti-lfa]:
+   the mechanisms to request the configuration TI-LFA local protection
+   for SR-TE paths using the [I-D.ietf-teas-yang-te] are a gap in the
+   current YANG models.
 
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 51]
+Peruzzini, et al.        Expires 26 October 2024               [Page 51]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    The requested local protection mechanisms within the P-PNC domain are
@@ -2881,12 +2881,12 @@ Internet-Draft                  ACTN POI                      March 2024
    (e.g., MPLS-TE or SR-TE).
 
    It is worth noting that the L2NM and L3NM TE service mapping models,
-   defined in [TSM], provide a list of TE tunnel(s) that should be used
-   to forward L2/L3 VPN traffic between the two PEs terminating the
-   listed TE tunnel(s).  If the list contains more than one TE tunnel
-   for the same pair of PEs, these TE tunnels are used for load
-   balancing the associated L2/L3 VPN traffic between the same set of
-   two PEs.
+   defined in [I-D.ietf-teas-te-service-mapping-yang], provide a list of
+   TE tunnel(s) that should be used to forward L2/L3 VPN traffic between
+   the two PEs terminating the listed TE tunnel(s).  If the list
+   contains more than one TE tunnel for the same pair of PEs, these TE
+   tunnels are used for load balancing the associated L2/L3 VPN traffic
+   between the same set of two PEs.
 
    The possibility to request splitting the traffic, between multiple TE
    tunnels for the same PEs pair, in a different way than load balancing
@@ -2909,9 +2909,9 @@ Internet-Draft                  ACTN POI                      March 2024
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 52]
+Peruzzini, et al.        Expires 26 October 2024               [Page 52]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    *  how both WSON and Flexi-grid topology models could be used
@@ -2919,13 +2919,15 @@ Internet-Draft                  ACTN POI                      March 2024
       in Section 4.1;.
 
    *  network inventory model: this gap has been identified in
-      Section 4.9 and the solution in [NETWORK-INVENTORY] has been
-      proposed to resolve it;
+      Section 4.9 and the solution in
+      [I-D.ietf-ivy-network-inventory-yang] has been proposed to resolve
+      it;
 
    *  technology-specific augmentations of the path computation RPC,
-      defined in [PATH-COMPUTE] for optical networks: this gap has been
-      identified in Section 5.1 and the solution in
-      [OPTICAL-PATH-COMPUTE] has been proposed to resolve it;
+      defined in [I-D.ietf-teas-yang-path-computation] for optical
+      networks: this gap has been identified in Section 5.1 and the
+      solution in [I-D.ietf-ccamp-optical-path-computation-yang] has
+      been proposed to resolve it;
 
    *  relationship between a common discovery mechanisms applicable to
       access links, inter-domain IP links and cross-layer links and the
@@ -2934,13 +2936,15 @@ Internet-Draft                  ACTN POI                      March 2024
 
    *  a mechanism applicable to the P-PNC NBI to configure the SR-TE
       paths.  Technology-specific augmentations of TE Tunnel model,
-      defined in [TE-TUNNEL], are foreseen in section 1 of [TE-TUNNEL]
-      but not yet defined: this gap has been identified in Section 5.3;
+      defined in [I-D.ietf-teas-yang-te], are foreseen in section 1 of
+      [I-D.ietf-teas-yang-te] but not yet defined: this gap has been
+      identified in Section 5.3;
 
    *  an attribute, which is used to configure the minimum number of
       active member links required to consider the LAG link as being up,
-      is missing from the topology model defined in [CLIENT-TOPO]: this
-      gap has been identified in Section 5.2.1;
+      is missing from the topology model defined in
+      [I-D.ietf-ccamp-eth-client-te-topo-yang]: this gap has been
+      identified in Section 5.2.1;
 
    *  a mechanism to configure splitting the L2/L3 VPN traffic, between
       multiple TE tunnels for the same PEs pair, in a different way than
@@ -2956,25 +2960,25 @@ Internet-Draft                  ACTN POI                      March 2024
    fixed-grid and flexible-grid DWDM network topology but also the only
    viable option in case of a mixed CWDM and DWDM network topology.
 
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 53]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
    Although not applicable to this document, it has been noted that the
    WDM tunnel model would support also optical tunnel setup in case of a
    mixed CWDM and DWDM network topology.
 
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 53]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
    Although not analysed in this document, it has been noted that the TE
-   Tunnel model, defined in [TE-TUNNEL], needs also to be enhanced to
-   support scenarios where multiple parallel TE paths are used in load-
-   balancing to carry the traffic between two end-points (e.g., VPN
-   traffic between two PEs).
+   Tunnel model, defined in [I-D.ietf-teas-yang-te], needs also to be
+   enhanced to support scenarios where multiple parallel TE paths are
+   used in load-balancing to carry the traffic between two end-points
+   (e.g., VPN traffic between two PEs).
 
 7.  Security Considerations
 
@@ -3014,19 +3018,27 @@ Internet-Draft                  ACTN POI                      March 2024
 
    This document requires no IANA actions.
 
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 54]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
 10.  References
 
 10.1.  Normative References
 
+   [I-D.busizheng-teas-yang-te-mpls-topology]
+              Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
+              YANG Data Model for MPLS-TE Topology", Work in Progress,
+              Internet-Draft, draft-busizheng-teas-yang-te-mpls-
+              topology-06, 22 October 2023,
+              <https://datatracker.ietf.org/doc/html/draft-busizheng-
+              teas-yang-te-mpls-topology-06>.
 
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 54]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
-   [CLIENT-SIGNAL]
+   [I-D.ietf-ccamp-client-signal-yang]
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
@@ -3034,21 +3046,105 @@ Internet-Draft                  ACTN POI                      March 2024
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
               client-signal-yang-12>.
 
-   [CLIENT-TOPO]
+   [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-05, 9 October 2023,
+              client-te-topo-yang-06, 12 April 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-05>.
+              eth-client-te-topo-yang-06>.
 
-   [Flexi-TOPO]
+   [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
               H. Zheng, "A YANG Data Model for Flexi-Grid Optical
               Networks", Work in Progress, Internet-Draft, draft-ietf-
               ccamp-flexigrid-yang-16, 29 January 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
               flexigrid-yang-16>.
+
+   [I-D.ietf-ccamp-otn-topo-yang]
+              Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
+              Dios, "A YANG Data Model for Optical Transport Network
+              Topology", Work in Progress, Internet-Draft, draft-ietf-
+              ccamp-otn-topo-yang-18, 19 April 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              otn-topo-yang-18>.
+
+
+
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 55]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
+   [I-D.ietf-ccamp-otn-tunnel-model]
+              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
+              "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
+              draft-ietf-ccamp-otn-tunnel-model-20, 24 November 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              otn-tunnel-model-20>.
+
+   [I-D.ietf-ccamp-wdm-tunnel-yang]
+              Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
+              and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
+              Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
+              tunnel-yang-01, 1 March 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              wdm-tunnel-yang-01>.
+
+   [I-D.ietf-teas-yang-l3-te-topo]
+              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
+              C., and O. G. de Dios, "YANG Data Model for Layer 3 TE
+              Topologies", Work in Progress, Internet-Draft, draft-ietf-
+              teas-yang-l3-te-topo-16, 2 March 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              yang-l3-te-topo-16>.
+
+   [I-D.ietf-teas-yang-path-computation]
+              Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
+              Shi, "A YANG Data Model for requesting path computation",
+              Work in Progress, Internet-Draft, draft-ietf-teas-yang-
+              path-computation-22, 14 February 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              yang-path-computation-22>.
+
+   [I-D.ietf-teas-yang-sr-te-topo]
+              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
+              C., and S. Litkowski, "YANG Data Model for SR and SR TE
+              Topologies on MPLS Data Plane", Work in Progress,
+              Internet-Draft, draft-ietf-teas-yang-sr-te-topo-18, 21
+              October 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-sr-te-topo-18>.
+
+   [I-D.ietf-teas-yang-te]
+              Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
+              Bryskin, "A YANG Data Model for Traffic Engineering
+              Tunnels, Label Switched Paths and Interfaces", Work in
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-36, 2
+              February 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-36>.
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 56]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
+   [I-D.ietf-teas-yang-te-mpls]
+              Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
+              Bryskin, "A YANG Data Model for MPLS Traffic Engineering
+              Tunnels", Work in Progress, Internet-Draft, draft-ietf-
+              teas-yang-te-mpls-04, 26 May 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              yang-te-mpls-04>.
 
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, ""IEEE
@@ -3068,75 +3164,6 @@ Internet-Draft                  ACTN POI                      March 2024
               WDM applications: DWDM frequency grid", ITU-T
               Recommendation G.694.1 , October 2020,
               <https://www.itu.int/rec/T-REC-G.694.1-202010-I>.
-
-
-
-
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 55]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
-   [L3-TE-TOPO]
-              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
-              C., and O. G. de Dios, "YANG Data Model for Layer 3 TE
-              Topologies", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-l3-te-topo-16, 2 March 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-l3-te-topo-16>.
-
-   [MPLS-TE-TOPO]
-              Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
-              YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-busizheng-teas-yang-te-mpls-
-              topology-06, 22 October 2023,
-              <https://datatracker.ietf.org/doc/html/draft-busizheng-
-              teas-yang-te-mpls-topology-06>.
-
-   [MPLS-TE-TUNNEL]
-              Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
-              Bryskin, "A YANG Data Model for MPLS Traffic Engineering
-              Tunnels", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-te-mpls-04, 26 May 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-te-mpls-04>.
-
-   [OTN-TOPO] Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
-              Dios, "A YANG Data Model for Optical Transport Network
-              Topology", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-otn-topo-yang-17, 10 July 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-topo-yang-17>.
-
-   [OTN-TUNNEL]
-              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
-              "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
-              draft-ietf-ccamp-otn-tunnel-model-20, 24 November 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-tunnel-model-20>.
-
-   [PATH-COMPUTE]
-              Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
-              Shi, "A YANG Data Model for requesting path computation",
-              Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-22, 14 February 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-22>.
-
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 56]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
    [RFC7923]  Voit, E., Clemm, A., and A. Gonzalez Prieto, "Requirements
               for Subscription to YANG Datastores", RFC 7923,
@@ -3159,6 +3186,13 @@ Internet-Draft                  ACTN POI                      March 2024
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
               <https://www.rfc-editor.org/info/rfc8342>.
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 57]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
    [RFC8345]  Clemm, A., Medved, J., Varga, R., Bahadur, N.,
               Ananthakrishnan, H., and X. Liu, "A YANG Data Model for
@@ -3186,14 +3220,6 @@ Internet-Draft                  ACTN POI                      March 2024
               DOI 10.17487/RFC8527, March 2019,
               <https://www.rfc-editor.org/info/rfc8527>.
 
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 57]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
    [RFC8641]  Clemm, A. and E. Voit, "Subscription to YANG Notifications
               for Datastore Updates", RFC 8641, DOI 10.17487/RFC8641,
               September 2019, <https://www.rfc-editor.org/info/rfc8641>.
@@ -3214,65 +3240,88 @@ Internet-Draft                  ACTN POI                      March 2024
               (WSONs)", RFC 9094, DOI 10.17487/RFC9094, August 2021,
               <https://www.rfc-editor.org/info/rfc9094>.
 
-   [SR-TE-TOPO]
-              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
-              C., and S. Litkowski, "YANG Data Model for SR and SR TE
-              Topologies on MPLS Data Plane", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-sr-te-topo-18, 21
-              October 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-sr-te-topo-18>.
-
-   [TE-TUNNEL]
-              Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
-              Bryskin, "A YANG Data Model for Traffic Engineering
-              Tunnels, Label Switched Paths and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-36, 2
-              February 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-36>.
-
-   [WDM-TUNNEL]
-              Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
-              and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
-              Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-01, 1 March 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-01>.
-
 10.2.  Informative References
 
 
 
 
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 58]
+Peruzzini, et al.        Expires 26 October 2024               [Page 58]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
-   [NETWORK-INVENTORY]
-              Yu, C., Busi, I., Guo, A., Belotti, S., Bouquier, J.,
-              Peruzzini, F., de Dios, O. G., and V. Lopez, "A YANG Data
-              Model for Optical Network Inventory", Work in Progress,
-              Internet-Draft, draft-yg3bp-ccamp-optical-inventory-yang-
-              01, 10 November 2021,
-              <https://datatracker.ietf.org/doc/html/draft-yg3bp-ccamp-
-              optical-inventory-yang-01>.
-
-   [OIA-TOPO] Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
+   [I-D.ietf-ccamp-optical-impairment-topology-yang]
+              Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
               ietf-ccamp-optical-impairment-topology-yang-15, 4 March
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
               ccamp-optical-impairment-topology-yang-15>.
 
-   [OPTICAL-PATH-COMPUTE]
+   [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
-              requesting Path Computation in Optical Networks", Work in
-              Progress, Internet-Draft, draft-gbb-ccamp-optical-path-
-              computation-yang-02, 12 September 2022,
-              <https://datatracker.ietf.org/doc/html/draft-gbb-ccamp-
-              optical-path-computation-yang-02>.
+              requesting Path Computation in WDM Optical Networks", Work
+              in Progress, Internet-Draft, draft-ietf-ccamp-optical-
+              path-computation-yang-03, 1 March 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              optical-path-computation-yang-03>.
+
+   [I-D.ietf-ccamp-transport-nbi-app-statement]
+              Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
+              Northbound Interface Applicability Statement", Work in
+              Progress, Internet-Draft, draft-ietf-ccamp-transport-nbi-
+              app-statement-17, 10 July 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              transport-nbi-app-statement-17>.
+
+   [I-D.ietf-ivy-network-inventory-yang]
+              Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
+              Bedard, "A YANG Data Model for Network Inventory", Work in
+              Progress, Internet-Draft, draft-ietf-ivy-network-
+              inventory-yang-01, 4 March 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
+              network-inventory-yang-01>.
+
+   [I-D.ietf-rtgwg-segment-routing-ti-lfa]
+              Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
+              Decraene, B., and D. Voyer, "Topology Independent Fast
+              Reroute using Segment Routing", Work in Progress,
+              Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
+              13, 16 January 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
+              segment-routing-ti-lfa-13>.
+
+   [I-D.ietf-teas-actn-vn-yang]
+              Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
+              Yoon, "A YANG Data Model for Virtual Network (VN)
+              Operations", Work in Progress, Internet-Draft, draft-ietf-
+              teas-actn-vn-yang-24, 16 March 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              actn-vn-yang-24>.
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 59]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
+   [I-D.ietf-teas-te-service-mapping-yang]
+              Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
+              and J. Tantsura, "Traffic Engineering (TE) and Service
+              Mapping YANG Data Model", Work in Progress, Internet-
+              Draft, draft-ietf-teas-te-service-mapping-yang-15, 16
+              March 2024, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-teas-te-service-mapping-yang-15>.
+
+   [I-D.ietf-teas-te-topology-profiles]
+              Busi, I., Liu, X., Bryskin, I., Saad, T., and O. G. de
+              Dios, "Profiles for Traffic Engineering (TE) Topology Data
+              Model and Applicability to non-TE Use Cases", Work in
+              Progress, Internet-Draft, draft-ietf-teas-te-topology-
+              profiles-01, 19 April 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
+              topology-profiles-01>.
 
    [RFC1930]  Hawkinson, J. and T. Bates, "Guidelines for creation,
               selection, and registration of an Autonomous System (AS)",
@@ -3299,18 +3348,19 @@ Internet-Draft                  ACTN POI                      March 2024
               Prefixes", RFC 8277, DOI 10.17487/RFC8277, October 2017,
               <https://www.rfc-editor.org/info/rfc8277>.
 
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 59]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
    [RFC8281]  Crabbe, E., Minei, I., Sivabalan, S., and R. Varga, "Path
               Computation Element Communication Protocol (PCEP)
               Extensions for PCE-Initiated LSP Setup in a Stateful PCE
               Model", RFC 8281, DOI 10.17487/RFC8281, December 2017,
               <https://www.rfc-editor.org/info/rfc8281>.
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 60]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
    [RFC8283]  Farrel, A., Ed., Zhao, Q., Ed., Li, Z., and C. Zhou, "An
               Architecture for Use of PCE and the PCE Communication
@@ -3348,58 +3398,6 @@ Internet-Draft                  ACTN POI                      March 2024
               Attachment Points (SAPs)", RFC 9408, DOI 10.17487/RFC9408,
               June 2023, <https://www.rfc-editor.org/info/rfc9408>.
 
-
-
-
-
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 60]
-
-Internet-Draft                  ACTN POI                      March 2024
-
-
-   [TE-TOPO-PF]
-              Busi, I., Liu, X., Bryskin, I., Saad, T., and O. G. de
-              Dios, "Profiles for Traffic Engineering (TE) Topology Data
-              Model and Applicability to non-TE Use Cases", Work in
-              Progress, Internet-Draft, draft-busi-teas-te-topology-
-              profiles-08, 29 January 2024,
-              <https://datatracker.ietf.org/doc/html/draft-busi-teas-te-
-              topology-profiles-08>.
-
-   [TI-LFA]   Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
-              Decraene, B., and D. Voyer, "Topology Independent Fast
-              Reroute using Segment Routing", Work in Progress,
-              Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              13, 16 January 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
-              segment-routing-ti-lfa-13>.
-
-   [TNBI]     Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
-              Northbound Interface Applicability Statement", Work in
-              Progress, Internet-Draft, draft-ietf-ccamp-transport-nbi-
-              app-statement-17, 10 July 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              transport-nbi-app-statement-17>.
-
-   [TSM]      Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
-              and J. Tantsura, "Traffic Engineering (TE) and Service
-              Mapping YANG Data Model", Work in Progress, Internet-
-              Draft, draft-ietf-teas-te-service-mapping-yang-14, 12
-              September 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-te-service-mapping-yang-14>.
-
-   [VN]       Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
-              Yoon, "A YANG Data Model for Virtual Network (VN)
-              Operations", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-vn-yang-23, 30 January 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-vn-yang-23>.
-
 Appendix A.  Additional Scenarios
 
 A.1.  OSS/Orchestration Layer
@@ -3413,9 +3411,11 @@ A.1.  OSS/Orchestration Layer
 
 
 
-Peruzzini, et al.       Expires 6 September 2024               [Page 61]
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 61]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
    *  to coordinate NFV, Transport (e.g.  IP, optical and microwave
@@ -3451,8 +3451,9 @@ A.1.1.  MDSC NBI
 
    Figure 12 shows an example of possible control flow between the OSS/
    Orchestration layer and the MDSC to instantiate L2/L3 VPN network
-   services, using the YANG data models under the definition in [VN],
-   [RFC9291], [RFC9182] and [TSM].
+   services, using the YANG data models under the definition in
+   [I-D.ietf-teas-actn-vn-yang], [RFC9291], [RFC9182] and
+   [I-D.ietf-teas-te-service-mapping-yang].
 
 
 
@@ -3468,10 +3469,9 @@ A.1.1.  MDSC NBI
 
 
 
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 62]
+Peruzzini, et al.        Expires 26 October 2024               [Page 62]
 
-Internet-Draft                  ACTN POI                      March 2024
+Internet-Draft                  ACTN POI                      April 2024
 
 
                   +-------------------------------------------+
@@ -3494,11 +3494,12 @@ Internet-Draft                  ACTN POI                      March 2024
 
                      Figure 12: Service Request Process
 
-   *  The VN YANG data model, defined in [VN], whose primary focus is
-      the CMI, can also provide VN Service configuration from an
-      orchestrated network service point of view when the L2/L3 VPN
-      network service has TE requirements.  However, this model is not
-      used to setup L2/L3 VPN service with no TE requirements.
+   *  The VN YANG data model, defined in [I-D.ietf-teas-actn-vn-yang],
+      whose primary focus is the CMI, can also provide VN Service
+      configuration from an orchestrated network service point of view
+      when the L2/L3 VPN network service has TE requirements.  However,
+      this model is not used to setup L2/L3 VPN service with no TE
+      requirements.
 
       -  It provides the profile of VN in terms of VN members, each of
          which corresponds to an edge-to-edge link between customer end-
@@ -3517,18 +3518,20 @@ Internet-Draft                  ACTN POI                      March 2024
       provide L2VPN and L3VPN network service configuration from a
       orchestrated connectivity service point of view.
 
-   *  The TE & Service Mapping YANG data model [TSM] provides TE-service
+   *  The TE & Service Mapping YANG data model
+      [I-D.ietf-teas-te-service-mapping-yang] provides TE-service
       mapping.
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 63]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
    *  TE-service mapping provides the mapping between a L2/L3 VPN
       instance and the corresponding VN instances.
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 63]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
    *  The TE-service mapping also provides the binding requirements as
       to how each L2/L3 VPN/VN instance is created concerning the
@@ -3571,20 +3574,24 @@ A.2.2.  Router Port Failure
        already in use previously by the failed router port and adds the
        new link to the LAG on the failure side.
 
+
+
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 64]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
        While the ROADM reconfiguration takes place, IP/MPLS traffic is
        using the reduced bandwidth of the IP link bundle, discarding
        lower priority traffic if required.  Once back-up port has been
        reconfigured to reuse the existing OCh and new link has been
        added to the LAG then original Bandwidth is recovered between the
        end routers.
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 64]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
        Note: in this LAG scenario let assume that BFD is running at LAG
        level so that there is nothing triggered at MPLS level when one
@@ -3625,6 +3632,16 @@ A.3.  Muxponders
    muxponder's trunk (or DWDM) port and client ports.  For example,
    there might be a 100Gb/s trunk port shared by ten 10GE client ports.
 
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 65]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
    The controller, when asked to set a 10GE client connectivity service
    between two muxponder's client ports, needs first to check whether
    there is already an existing WDM tunnel between the two muxponders
@@ -3633,14 +3650,6 @@ A.3.  Muxponders
    1.  if the WDM tunnel already exists, the controller needs only to
        enable the 10GE client ports to establish the 10GE client
        connectivity service;
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 65]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
    2.  if the WDM tunnel does not exist, the controller has to first
        establish the WDM tunnel, finding a proper optical path matching
@@ -3675,9 +3684,19 @@ Internet-Draft                  ACTN POI                      March 2024
    connectivity constraints to avoid try and fail.
 
    It is worth noting that the current WSON and Flexi-grid topology
-   models in [RFC9094] and [Flexi-TOPO] do not provide sufficient
-   information to the MDSC about this connectivity constraint and this
-   is identified as a gap.
+   models in [RFC9094] and [I-D.ietf-ccamp-flexigrid-yang] do not
+   provide sufficient information to the MDSC about this connectivity
+   constraint and this is identified as a gap.
+
+
+
+
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 66]
+
+Internet-Draft                  ACTN POI                      April 2024
+
 
 Acknowledgments
 
@@ -3688,15 +3707,6 @@ Acknowledgments
    v2.0.template.dot.
 
    This document was prepared using kramdown.
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 66]
-
-Internet-Draft                  ACTN POI                      March 2024
-
 
 Contributors
 
@@ -3737,6 +3747,13 @@ Contributors
    Email: jefftant.ietf@gmail.com
 
 
+
+
+Peruzzini, et al.        Expires 26 October 2024               [Page 67]
+
+Internet-Draft                  ACTN POI                      April 2024
+
+
    Paolo Volpato
    Huawei
    Email: paolo.volpato@huawei.com
@@ -3745,13 +3762,6 @@ Contributors
    Brent Foster
    Cisco
    Email: brfoster@cisco.com
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 67]
-
-Internet-Draft                  ACTN POI                      March 2024
 
 
    Oscar Gonzalez de Dios
@@ -3795,14 +3805,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-
-
-
-
-Peruzzini, et al.       Expires 6 September 2024               [Page 68]
+Peruzzini, et al.        Expires 26 October 2024               [Page 68]

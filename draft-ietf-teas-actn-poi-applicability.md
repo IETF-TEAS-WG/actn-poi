@@ -106,28 +106,8 @@ normative:
     date: December 2014
     seriesinfo: IEEE 802.1AX-2014
     target: https://ieeexplore.ieee.org/document/7055197
-  Flexi-TOPO: I-D.ietf-ccamp-flexigrid-yang
-  OTN-TOPO: I-D.ietf-ccamp-otn-topo-yang
-  CLIENT-TOPO: I-D.ietf-ccamp-eth-client-te-topo-yang
-  L3-TE-TOPO: I-D.ietf-teas-yang-l3-te-topo
-  SR-TE-TOPO: I-D.ietf-teas-yang-sr-te-topo
-  MPLS-TE-TOPO: I-D.busizheng-teas-yang-te-mpls-topology
-  TE-TUNNEL:  I-D.ietf-teas-yang-te
-  WDM-TUNNEL: I-D.ietf-ccamp-wdm-tunnel-yang
-  OTN-TUNNEL: I-D.ietf-ccamp-otn-tunnel-model
-  MPLS-TE-TUNNEL: I-D.ietf-teas-yang-te-mpls
-  PATH-COMPUTE: I-D.ietf-teas-yang-path-computation
-  CLIENT-SIGNAL: I-D.ietf-ccamp-client-signal-yang
 
 informative:
-  TSM: I-D.ietf-teas-te-service-mapping-yang
-  TNBI: I-D.ietf-ccamp-transport-nbi-app-statement
-  VN: I-D.ietf-teas-actn-vn-yang
-  OIA-TOPO: I-D.ietf-ccamp-optical-impairment-topology-yang
-  NETWORK-INVENTORY: I-D.yg3bp-ccamp-optical-inventory-yang
-  OPTICAL-PATH-COMPUTE: I-D.gbb-ccamp-optical-path-computation-yang
-  TI-LFA: I-D.ietf-rtgwg-segment-routing-ti-lfa
-  TE-TOPO-PF: I-D.busi-teas-te-topology-profiles
 
 --- abstract
 
@@ -480,7 +460,7 @@ including:
 1. Inter-domain SR-TE
 
 This document analyses the inter-domain TE options for which the TE
-tunnel model, defined in {{TE-TUNNEL}}, could be used at the MPI for
+tunnel model, defined in {{!I-D.ietf-teas-yang-te}}, could be used at the MPI for
 intra-domain or inter-domain TE configuration. The analysis of other
 options is outside the scope of this draft.
 
@@ -637,7 +617,7 @@ enough detailed view of the TE topology of all the network domains
    In such case MDSC has all the information needed to perform multi-domain/multi-layer path computation, without relying on PNCs.
 
    This approach may present, as a potential drawback, scalability
-   issues and, as discussed in section 2.2. of {{PATH-COMPUTE}},
+   issues and, as discussed in section 2.2. of {{!I-D.ietf-teas-yang-path-computation}},
    performing path computation for optical networks in the MDSC is
    quite challenging because the optimal paths depend also on
    vendor-specific optical attributes (which may be different in the
@@ -655,7 +635,7 @@ wavelength continuity, and non-linear impairments that may affect the
 network service path.
 
 The methods and types of path requirements and impairments, such as
-those detailed in {{OIA-TOPO}}, used by the O-PNC for optical path
+those detailed in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, used by the O-PNC for optical path
 computation are not exposed at the MPI and therefore out of scope for
 this document.
 
@@ -828,14 +808,14 @@ module of {{!RFC8795}}, which augments the Base Network Topology
 Model.
 
 Optical and Packet PNCs can use the common TE Tunnel Model, defined
-in the "ietf-te" YANG module of {{TE-TUNNEL}}, at the MPI.
+in the "ietf-te" YANG module of {{!I-D.ietf-teas-yang-te}}, at the MPI.
 
 All the common YANG data models are generic and augmented by
 technology-specific YANG modules, as described in the following
 sections.
 
 Both Optical and Packet PNCs can also use the Ethernet Topology
-Model, defined in the "ietf-eth-te-topology" YANG module of {{CLIENT-TOPO}},
+Model, defined in the "ietf-eth-te-topology" YANG module of {{!I-D.ietf-ccamp-eth-client-te-topo-yang}},
 which augments the TE Topology Model with Ethernet technology-specific information.
 
 Both Optical and Packet PNCs can use the following common
@@ -860,23 +840,23 @@ YANG data models, which augment the generic TE Topology Model:
 - The WSON Topology Model, defined in the "ietf-wson-topology" YANG
 module of {{!RFC9094}};
 
-- the Flexi-grid Topology Model, defined in the "ietf-flexi-grid-topology" YANG module of {{Flexi-TOPO}};
+- the Flexi-grid Topology Model, defined in the "ietf-flexi-grid-topology" YANG module of {{!I-D.ietf-ccamp-flexigrid-yang}};
 
 - the OTN Topology Model, as defined in the "ietf-otn-topology" YANG
-module of {{OTN-TOPO}}.
+module of {{!I-D.ietf-ccamp-otn-topo-yang}}.
 
 The optical PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The WDM Tunnel Model, defined in the "ietf-wdm-tunnel" YANG module
-of {{WDM-TUNNEL}};
+of {{!I-D.ietf-ccamp-wdm-tunnel-yang}};
 
 - the OTN Tunnel Model, defined in the "ietf-otn-tunnel" YANG module
-of {{OTN-TUNNEL}}.
+of {{!I-D.ietf-ccamp-otn-tunnel-model}}.
 
 The optical PNC can use the generic Path Computation YANG RPC,
 defined in the "ietf-te-path-computation" YANG module of
-{{PATH-COMPUTE}}.
+{{!I-D.ietf-teas-yang-path-computation}}.
 
 Note that technology-specific augmentations of the generic path
 computation RPC for WSON, Flexi-grid and OTN path computation RPCs
@@ -885,9 +865,9 @@ have been identified as a gap.
 The optical PNC uses can use the following client signal YANG data
 models:
 
-- the CBR Client Signal Model, defined in the "ietf-trans-client-service" YANG module of {{CLIENT-SIGNAL}};
+- the CBR Client Signal Model, defined in the "ietf-trans-client-service" YANG module of {{!I-D.ietf-ccamp-client-signal-yang}};
 
-- the Ethernet Client Signal Model, defined in the "ietf-eth-tran-service" YANG module of {{CLIENT-SIGNAL}}.
+- the Ethernet Client Signal Model, defined in the "ietf-eth-tran-service" YANG module of {{!I-D.ietf-ccamp-client-signal-yang}}.
 
 {: #packet-yang}
 
@@ -900,22 +880,22 @@ YANG data models:
 YANG module of {{!RFC8346}}, which augments the Base Network Topology
 Model;
 
-- the packet TE Topology Mode, defined in the "ietf-te-topology-packet" YANG module of {{L3-TE-TOPO}}, which augments the generic TE
+- the packet TE Topology Mode, defined in the "ietf-te-topology-packet" YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}}, which augments the generic TE
 Topology Model;
 
 - The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-YANG module of {{MPLS-TE-TOPO}}, which augments the TE Packet
+YANG module of {{!I-D.busizheng-teas-yang-te-mpls-topology}}, which augments the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
-in "ietf-l3-te-topology" YANG module of {{L3-TE-TOPO}};
+in "ietf-l3-te-topology" YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}};
 
 - the SR Topology Model, defined in the "ietf-sr-mpls-topology" YANG
-module of {{SR-TE-TOPO}}.
+module of {{!I-D.ietf-teas-yang-sr-te-topo}}.
 
 The Packet PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The MPLS-TE Tunnel Model, defined in the "ietf-te-mpls" YANG
-modules of {{MPLS-TE-TUNNEL}};
+modules of {{!I-D.ietf-teas-yang-te-mpls}};
 
 - the SR-TE Tunnel Model which is to be defined as described in
 {{conclusions}}.
@@ -926,12 +906,12 @@ models:
 - L3VPN Network Model (L3NM), defined in the "ietf-l3vpn-ntw" YANG
 module of {{?RFC9182}};
 
-- L3NM TE Service Mapping, defined in the "ietf-l3nm-te-service-mapping" YANG module of {{TSM}};
+- L3NM TE Service Mapping, defined in the "ietf-l3nm-te-service-mapping" YANG module of {{?I-D.ietf-teas-te-service-mapping-yang}};
 
 - L2VPN Network Model (L2NM), defined in the "ietf-l2vpn-ntw" YANG
 module of {{?RFC9291}};
 
-- L2NM TE Service Mapping, defined in the "ietf-l2nm-te-service-mapping" YANG module of {{TSM}}.
+- L2NM TE Service Mapping, defined in the "ietf-l2nm-te-service-mapping" YANG module of {{?I-D.ietf-teas-te-service-mapping-yang}}.
 
 {: #pcep}
 
@@ -970,7 +950,7 @@ computation to the underneath PNCs.
    interface (RESTCONF) and use the relevant YANG data models
    depending on the operator use case considered. The benefits of
    having only one protocol for the MPI between MDSC and PNC have
-   already been highlighted in {{PATH-COMPUTE}}.
+   already been highlighted in {{!I-D.ietf-teas-yang-path-computation}}.
 
 1. The MDSC uses the RESTCONF/YANG interface towards each PNC to
 discover all the TE information and requests the creation of TE
@@ -978,7 +958,7 @@ tunnels. However, it uses PCEP for hierarchical path computation.
 
    As mentioned in Option 1, from an operator perspective, this
    option can add integration complexity to have two protocols
-   instead of one unless the RESTOCONF/YANG interface is added to an
+   instead of one unless the RESTCONF/YANG interface is added to an
    existing PCEP deployment (brownfield scenario).
 
 {{discovery}} and {{config}} of this draft analyze the case where a single
@@ -1081,7 +1061,7 @@ reported using either the Flexi-grid Topology model or both WSON
 and Flexi-grid topology models.
 
 Clarifying how both WSON and Flexi-grid topology models could be used
-together (e.g., through multi-inheritance as described in {{TE-TOPO-PF}})
+together (e.g., through multi-inheritance as described in {{?I-D.ietf-teas-te-topology-profiles}})
 has been identified as a gap.
 
 The OTN Topology Model is used to report the OTN network topology
@@ -1102,7 +1082,7 @@ Since the MDSC delegates optical path computation to its underlay O-PNCs, the fo
 the MPI:
 
 - the optical parameters required for optical path computation, such
-as those detailed in {{OIA-TOPO}};
+as those detailed in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}};
 
 - the underlay OTS links and ILAs of OMS links;
 
@@ -1112,7 +1092,7 @@ ROADMs.
 The OTN Topology Model also reports the CBR client LTPs that
 terminates the cross-layer links: once CBR client LTP is reported for
 each CBR or multi-function client interface on the optical NEs (see
-sections 4.4 and 5.1 of {{TNBI}} for the description of multi-function
+sections 4.4 and 5.1 of {{?I-D.ietf-ccamp-transport-nbi-app-statement}} for the description of multi-function
 client interfaces).
 
 The Ethernet Topology Model reports the Ethernet client LTPs that
@@ -1168,7 +1148,7 @@ tunnels.
 
 The WDM tunnels can be used to support either Ethernet or CBR client
 signals or multi-layer intra-domain OTN links. In the latter case,
-the hierarchical-link container, defined in {{TE-TUNNEL}}, associates
+the hierarchical-link container, defined in {{!I-D.ietf-teas-yang-te}}, associates
 the underlay WDM tunnel with the supported multi-layer intra-domain
 OTN link and it allows discovery of the multi-layer path supporting
 all the connectivity services provided by the optical network.
@@ -1188,13 +1168,13 @@ The L3 Topology Model is used report the IP network topology.
 
 The L3 Topology Model, SR Topology Model, TE Topology Model and the
 TE Packet Topology Model are used together to report the SR-TE
-network topology, as described in Figure 2 of {{SR-TE-TOPO}}.
+network topology, as described in Figure 2 of {{!I-D.ietf-teas-yang-sr-te-topo}}.
 
 The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
-described in {{MPLS-TE-TOPO}}.
+described in {{!I-D.busizheng-teas-yang-te-mpls-topology}}.
 
-As described in {{L3-TE-TOPO}}, the relationship between the IP network
+As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship between the IP network
 topology and the MPLS-TE network topology depends on whether the two
 network topologies are congruent or not: in the latter case, the L3
 TE Topology Model is used, together with the L3 Topology Model to
@@ -1226,16 +1206,16 @@ the Ethernet or the packet network topology.
 
 We assume that the discovery of existing TE paths, including their
 bandwidth, at the MPI is done using the generic TE tunnel YANG data
-model, defined in {{TE-TUNNEL}}, with packet technology-specific (e.g.,
+model, defined in {{!I-D.ietf-teas-yang-te}}, with packet technology-specific (e.g.,
 MPLS-TE or SR-TE) augmentations.
 
 Note that technology-specific augmentations of the generic path TE
 tunnel model for SR-TE path setup and discovery is outlined in
-section 1 of {{TE-TUNNEL}} but are currently identified as a gap in
+section 1 of {{!I-D.ietf-teas-yang-te}} but are currently identified as a gap in
 {{conclusions}}.
 
 To enable MDSC to discover the full end-to-end TE path configuration,
-the technology-specific augmentation of the {{TE-TUNNEL}} should allow
+the technology-specific augmentation of the {{!I-D.ietf-teas-yang-te}} should allow
 the P-PNC to report the TE path within its domain (e.g., the SID list
 assigned to an SR-TE path).
 
@@ -1290,7 +1270,7 @@ by the MDSC using the plug-id attribute, as described in section 4.3
 of {{!RFC8795}}.
 
 More detailed description of how the plug-id can be used to discover
-inter-domain links is also provided in section 5.1.4 of {{TNBI}}.
+inter-domain links is also provided in section 5.1.4 of {{?I-D.ietf-ccamp-transport-nbi-app-statement}}.
 
 The plug-id attribute can also be used to discover the access-links,
 but the analysis of the access-link discovery is outside the scope of
@@ -1305,7 +1285,7 @@ inter-domain links:
 
 Other options are possible but not described in this document.
 
-As outlined in {{TNBI}}, the encoding of the plug-id namespace and the
+As outlined in {{?I-D.ietf-ccamp-transport-nbi-app-statement}}, the encoding of the plug-id namespace and the
 specific LLDP information reported within the plug-id value, such as
 the Chassis ID and Port ID mandatory TLVs, is implementation specific
 and needs to be consistent across all the PNCs within the network.
@@ -1704,10 +1684,10 @@ between two optical TTPs, as computed by the O-PNC, can be used by
 the MDSC to infer the properties of the associated multi-layer
 single-domain IP link.
 
-As discussed in {{PATH-COMPUTE}}, there are two options to request an
+As discussed in {{!I-D.ietf-teas-yang-path-computation}}, there are two options to request an
 O-PNC to perform optical path computation: either via a "compute-only" TE tunnel path, using the generic TE tunnel YANG data model
-defined in {{TE-TUNNEL}} or via the path computation RPC defined in
-{{PATH-COMPUTE}}.
+defined in {{!I-D.ietf-teas-yang-te}} or via the path computation RPC defined in
+{{!I-D.ietf-teas-yang-path-computation}}.
 
 This draft assumes that the path computation RPC is used.
 
@@ -1818,7 +1798,7 @@ be considered up when only one member link fails and down when at
 least two member links fail.
 
 The attribute required to configure the minimum number of active
-member links is missing in {{CLIENT-TOPO}} and this is identified as a
+member links is missing in {{!I-D.ietf-ccamp-eth-client-te-topo-yang}} and this is identified as a
 gap in {{conclusions}}.
 
 It is worth noting that a new LAG group can be created to bundle one
@@ -1899,32 +1879,32 @@ but cares have to be taken to avoid missing information.
 
 This version of the draft assumes that TE path setup and update at
 the MPI could be done using the generic TE tunnel YANG data model,
-defined in {{TE-TUNNEL}}, with packet technology-specific
+defined in {{!I-D.ietf-teas-yang-te}}, with packet technology-specific
 augmentations, described in {{packet-yang}}.
 
-When a new TE path needs to be setup, the MDSC can use the {{TE-TUNNEL}}
+When a new TE path needs to be setup, the MDSC can use the {{!I-D.ietf-teas-yang-te}}
 model to request the P-PNC to set it up, properly specifying
 the path constraints, such as the explicit path, to force the P-PNC
 to setup an TE path that meets the end-to-end TE and binding
 constraints and uses the optical tunnels setup by the MDSC for the
 purpose of supporting this new TE path.
 
-The {{TE-TUNNEL}} model supports requesting the setup of both end-to-end as well as segment TE tunnels (within one domain).
+The {{!I-D.ietf-teas-yang-te}} model supports requesting the setup of both end-to-end as well as segment TE tunnels (within one domain).
 
 In the latter case, the technology-specific augmentations should
 allow the configuration of the information needed for multi-domain TE
 path stitching.
 
-For example, the SR-TE specific augmentations of the {{TE-TUNNEL}}
+For example, the SR-TE specific augmentations of the {{!I-D.ietf-teas-yang-te}}
 model should be defined to allow the MDSC to configure the binding
 SIDs to be used for the multi-domain SR-TE path stitching and to
 allow the P-PNC to report the binding SID assigned to the segment TE
 paths. Note that the assigned binding SID should be persistent in
 case router or P-PNC rebooting.
 
-The MDSC can also use the {{TE-TUNNEL}} model to request the P-PNC to
+The MDSC can also use the {{!I-D.ietf-teas-yang-te}} model to request the P-PNC to
 increase the bandwidth allocated to an existing TE path, and, if
-needed, also on its reverse TE path. The {{TE-TUNNEL}} model supports
+needed, also on its reverse TE path. The {{!I-D.ietf-teas-yang-te}} model supports
 both symmetric and asymmetric bandwidth configuration in the two
 directions.
 
@@ -1933,8 +1913,8 @@ further discuss whether to put this text here or in {{multi-layer-link-setup}}).
 
 The MDSC also request the P-PNC to configure local protection
 mechanisms. For example, in case of SR-TE domain, the TI-LFA local
-protection, as defined in {{TI-LFA}}: the mechanisms to request the
-configuration TI-LFA local protection for SR-TE paths using the {{TE-TUNNEL}}
+protection, as defined in {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}}: the mechanisms to request the
+configuration TI-LFA local protection for SR-TE paths using the {{!I-D.ietf-teas-yang-te}}
 are a gap in the current YANG models.
 
 The requested local protection mechanisms within the P-PNC domain are
@@ -1961,7 +1941,7 @@ routers to steer the L2/L3 VPN traffic to the selected TE tunnels
 (e.g., MPLS-TE or SR-TE).
 
 It is worth noting that the L2NM and L3NM TE service mapping models,
-defined in {{TSM}}, provide a list of TE tunnel(s) that should be used
+defined in {{?I-D.ietf-teas-te-service-mapping-yang}}, provide a list of TE tunnel(s) that should be used
 to forward L2/L3 VPN traffic between the two PEs terminating the
 listed TE tunnel(s). If the list contains more than one TE tunnel for
 the same pair of PEs, these TE tunnels are used for load balancing
@@ -1990,12 +1970,12 @@ together (through multi-inheritance): this gap has been identified
 in {{optical-topology-discovery}};.
 
 - network inventory model: this gap has been identified in 
-{{inventory-discovery}} and the solution in {{NETWORK-INVENTORY}} has been proposed to
+{{inventory-discovery}} and the solution in {{?I-D.ietf-ivy-network-inventory-yang}} has been proposed to
 resolve it;
 
 - technology-specific augmentations of the path computation RPC,
-defined in {{PATH-COMPUTE}} for optical networks: this gap has been
-identified in {{optical-path-computation}} and the solution in {{OPTICAL-PATH-COMPUTE}}
+defined in {{!I-D.ietf-teas-yang-path-computation}} for optical networks: this gap has been
+identified in {{optical-path-computation}} and the solution in {{?I-D.ietf-ccamp-optical-path-computation-yang}}
 has been proposed to resolve it;
 
 - relationship between a common discovery mechanisms applicable to
@@ -2005,12 +1985,12 @@ been identified in {{packet-topology-discovery}};
 
 - a mechanism applicable to the P-PNC NBI to configure the SR-TE
 paths. Technology-specific augmentations of TE Tunnel model,
-defined in {{TE-TUNNEL}}, are foreseen in section 1 of {{TE-TUNNEL}}
+defined in {{!I-D.ietf-teas-yang-te}}, are foreseen in section 1 of {{!I-D.ietf-teas-yang-te}}
 but not yet defined: this gap has been identified in {{te-path-config}};
 
 - an attribute, which is used to configure the minimum number of
 active member links required to consider the LAG link as being up,
-is missing from the topology model defined in {{CLIENT-TOPO}}: this
+is missing from the topology model defined in {{!I-D.ietf-ccamp-eth-client-te-topo-yang}}: this
 gap has been identified in {{lag-setup}};
 
 - a mechanism to configure splitting the L2/L3 VPN traffic, between
@@ -2031,7 +2011,7 @@ WDM tunnel model would support also optical tunnel setup in case of a
 mixed CWDM and DWDM network topology.
 
 Although not analysed in this document, it has been noted that the TE
-Tunnel model, defined in {{TE-TUNNEL}}, needs also to be enhanced to
+Tunnel model, defined in {{!I-D.ietf-teas-yang-te}}, needs also to be enhanced to
 support scenarios where multiple parallel TE paths are used in load-balancing to carry the traffic between two end-points (e.g., VPN
 traffic between two PEs).
 
@@ -2119,13 +2099,13 @@ network configuration (e.g. L3NM, L2NM).
 
 {{fig-service-request}} shows an example of possible control flow between the
 OSS/Orchestration layer and the MDSC to instantiate L2/L3 VPN network
-services, using the YANG data models under the definition in {{VN}},
-{{?RFC9291}}, {{?RFC9182}} and {{TSM}}.
+services, using the YANG data models under the definition in {{?I-D.ietf-teas-actn-vn-yang}},
+{{?RFC9291}}, {{?RFC9182}} and {{?I-D.ietf-teas-te-service-mapping-yang}}.
 
 {::include ./figures/service-request.md}
 {: #fig-service-request title="Service Request Process"}
 
-- The VN YANG data model, defined in {{VN}}, whose primary focus is
+- The VN YANG data model, defined in {{?I-D.ietf-teas-actn-vn-yang}}, whose primary focus is
 the CMI, can also provide VN Service configuration from an
 orchestrated network service point of view when the L2/L3 VPN
 network service has TE requirements. However, this model is not
@@ -2148,7 +2128,7 @@ used to setup L2/L3 VPN service with no TE requirements.
 provide L2VPN and L3VPN network service configuration from a
 orchestrated connectivity service point of view.
 
-- The TE & Service Mapping YANG data model {{TSM}} provides TE-service
+- The TE & Service Mapping YANG data model {{?I-D.ietf-teas-te-service-mapping-yang}} provides TE-service
 mapping.
 
 - TE-service mapping provides the mapping between a L2/L3 VPN
@@ -2284,7 +2264,7 @@ the muxponder but the O-PNC and MDSC needs to be aware of the
 connectivity constraints to avoid try and fail.
 
 It is worth noting that the current WSON and Flexi-grid topology
-models in {{!RFC9094}} and {{Flexi-TOPO}} do not provide sufficient
+models in {{!RFC9094}} and {{!I-D.ietf-ccamp-flexigrid-yang}} do not provide sufficient
 information to the MDSC about this connectivity constraint and this
 is identified as a gap.
 
