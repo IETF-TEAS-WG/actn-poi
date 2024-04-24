@@ -19,11 +19,13 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: >
+  Applicability of Abstraction and Control of Traffic Engineered
+  Networks (ACTN) to Packet Optical Integration (POI)
+abbrev: ACTN POI
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-ietf-teas-actn-poi-applicability-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
