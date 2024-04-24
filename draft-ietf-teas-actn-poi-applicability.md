@@ -102,8 +102,8 @@ normative:
     target: https://www.itu.int/rec/T-REC-G.694.1-202010-I
   IEEE_802.1AB:
     title: >
-      "IEEE Standard for Local and metropolitan area networks - 
-      Station and Media Access Control Connectivity Discovery"
+      IEEE Standard for Local and metropolitan area networks -
+      Station and Media Access Control Connectivity Discovery
     author:
       org: Institute of Electrical and Electronics Engineers
     date: March 2016
@@ -1979,7 +1979,7 @@ Working Groups:
 together (through multi-inheritance): this gap has been identified
 in {{optical-topology-discovery}};.
 
-- network inventory model: this gap has been identified in 
+- network inventory model: this gap has been identified in
 {{inventory-discovery}} and the solution in {{?I-D.ietf-ivy-network-inventory-yang}} has been proposed to
 resolve it;
 
