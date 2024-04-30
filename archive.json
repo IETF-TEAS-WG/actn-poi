@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-04-28T00:40:59.467624+00:00",
+  "timestamp": "2024-04-30T00:36:46.188104+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -2600,9 +2600,17 @@
       ],
       "body": "In the context of optical impairment draft the WDM terminology has been clarified\r\n\r\nIt would be worthwhile to align the terminology with the draft and use these terms consistently in the POI draft as well:\r\n- WDM node\r\n- WDM-TE node\r\n- ROADM\r\n",
       "createdAt": "2022-02-21T15:59:53Z",
-      "updatedAt": "2023-07-05T09:17:40Z",
+      "updatedAt": "2024-04-29T14:53:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**2024-04-29 Italo/Sergio**\r\n\r\n\r\n| Physical node | Abstract Node |\r\n|----------------|------------------|\r\n| IP router | IP abstract node |\r\n| OTN switch | OTN TE-node |\r\n| WDM node | WDM TE-node |\r\n| Optical node | Optical TE-node |\r\n",
+          "createdAt": "2024-04-29T14:53:09Z",
+          "updatedAt": "2024-04-29T14:53:38Z"
+        }
+      ]
     },
     {
       "number": 79,
