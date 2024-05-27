@@ -247,7 +247,7 @@ Port:
 
 > The physical entity that transmits and receives physical signals.
 
-Interface:
+Interface: 
 
 > A physical or logical entity that transmits and receives traffic.
 
@@ -263,25 +263,33 @@ IP link:
 
 > A link between two IP interfaces.
 
+PNC:
+
+> Provisioning Network Controller that provisions either the optical devices (O-PNC) or the packet devices (P-PNC).
+
+PNC-domain:
+
+> the set of devices provisioned by a single PNC instance.
+
 Cross-layer link:
 
 > An Ethernet link between an Ethernet interface on a router and an Ethernet interface on an optical NE.
 
-Intra-domain single-layer Ethernet link:
+Intra-PNC-domain Ethernet link:
 
-> An Ethernet link between between two Ethernet interfaces on physically adjacent routers that belong to the same P-PNC domain.
+> An Ethernet link between between two Ethernet interfaces on physically adjacent devices that belong to the same P-PNC domain.
 
-Intra-domain single-layer IP link:
+Intra-PNC-domain IP link:
 
-> An IP link supported by an intra-domain single-layer Ethernet link.
+> An IP link supported by a set of intra-PNC-domain Ethernet links.
 
-Inter-domain single-layer Ethernet link:
+Inter-PNC-domain Ethernet link:
 
-> An Ethernet link between between two Ethernet interfaces on physically adjacent routers which belong to different P-PNC domains.
+> An Ethernet link between between two Ethernet interfaces on physically adjacent devices which belong to different P-PNC domains.
 
-Inter-domain single-layer IP link:
+Inter-PNC-domain IP link:
 
-> An IP link supported by an inter-domain single-layer Ethernet link.
+> An IP link supported by at least one inter-PNC-domain Ethernet link.
 
 Intra-domain multi-layer Ethernet link:
 
