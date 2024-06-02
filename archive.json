@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-30T00:39:30.424183+00:00",
+  "timestamp": "2024-06-02T00:42:52.602315+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -3092,7 +3092,7 @@
       ],
       "body": "It is not clear in the draft what is the real meaning of \"domain\" and the impact on layer functionality:  the suggestion is to use the term \"region\" to describe a switching technology domain (RFC4206). \r\n A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  \r\nA layer describes a data plane switching granularity level (e.g., VC4, VC-12).  A data plane layer is associated with a region  however, more than one data plane layer can be associated with the same region (e.g., both VC4 and VC12 are associated with TDM).\r\nFor example in our case for Ethernet we can say that PHY and MAC data plane layers can be associated with the same ETH region.\r\n\r\n\r\n",
       "createdAt": "2022-04-05T15:01:03Z",
-      "updatedAt": "2024-05-27T15:44:37Z",
+      "updatedAt": "2024-05-31T11:21:15Z",
       "closedAt": null,
       "comments": [
         {
@@ -3101,6 +3101,34 @@
           "body": "The issue here is that the draft doesn't define the term \"domain\". However, it does define the following terms:\r\n\r\n__original__ :\r\n> Cross-layer link:\r\n\r\n    An Ethernet link between an Ethernet interface on a router and an Ethernet interface on an optical NE.\r\n\r\nThis definition could mean the ethernet interface between a router and a transponder. In this case, the link is an ethernet link and would follow the logic of ethernet with PHY and MAC layers. Assuming we talk about ITU-T layers and e.g. an optical Ethernet interface of a router plugged into a WDM. In this case, the link would be an ITU-T optical layer as the ethernet part (MAC and PHY) would be edge-to-edge with the ethernet peer. A more appropriate term would be cross-region link because the ethernet switching region will be on the router and the optical switching region on the ROADM. I am actually unclear which of them is defined here. Depending on it I can propose some text.\r\n__unclear_\r\n\r\n__original__\r\n> Intra-domain single-layer Ethernet link:\r\n\r\n    An Ethernet link between between two Ethernet interfaces on physically adjacent routers that belong to the same P-PNC domain.\r\n\r\nSince domain is not defined, I suggest to use \"PNC-domain\" to clarify that it is about the act of provisioning that forms the domains. An ethernet link usually has two layers (MAC and PHY). Also the term \"router\" should be replaced by \"device\" throughout the definitions:\r\n\r\n__suggested__:\r\n> Intra-PNC-domain Ethernet link:\r\n\r\n    An Ethernet link between between two Ethernet interfaces on physically adjacent devices that belong to the same P-PNC domain.\r\n\r\n__original__\r\nIntra-domain single-layer IP link:\r\n\r\n    An IP link supported by an intra-domain single-layer Ethernet link.\r\n\r\n__suggested:\r\nIntra-PNC-domain IP link:\r\n    An IP link supported by an intra-PNC-domain Ethernet links.\r\n\r\n\r\n__original__\r\nInter-domain single-layer Ethernet link:\r\n\r\n    An Ethernet link between between two Ethernet interfaces on physically adjacent routers which belong to different P-PNC domains.\r\n\r\n__suggested__\r\nInter-PNC-domain Ethernet link:\r\n\r\n    An Ethernet link between between two Ethernet interfaces on physically adjacent devices which belong to different PNC domains.\r\n\r\n\r\n__original__\r\nInter-domain single-layer IP link:\r\n\r\n    An IP link supported by an inter-domain single-layer Ethernet link.\r\n\r\n__suggested__\r\nInter-PNC-domain IP link:\r\n\r\n    An IP link supported by an inter-PNC-domain Ethernet link.\r\n\r\n__original__\r\nIntra-domain multi-layer Ethernet link:\r\n\r\n    An Ethernet link supported by two cross-layer links and an optical tunnel in between.\r\n\r\nAs Ethernet links are inherently multi-layer (MAC and PHY) it doesn't mean much to talk about multilayer ethernet links. The description suggests the meaning is a link that starts in a packet switching region and traverses a wavelength switching region.\r\n__unclear__\r\n\r\nIntra-domain multi-layer IP link:\r\n\r\n    An IP link supported an intra-domain multi-layer Ethernet link.\r\n\r\nsame as above, the meaning/terminology is not clear.\r\n\r\n",
           "createdAt": "2024-05-27T15:44:36Z",
           "updatedAt": "2024-05-27T15:44:36Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@ggrammel : In order to protect the master branch, I have create a PR #120 and a new branch to track the changes to fix this issue",
+          "createdAt": "2024-05-30T07:43:26Z",
+          "updatedAt": "2024-05-30T07:43:26Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> The issue here is that the draft doesn't define the term \"domain\". However, it does define the following terms:\r\n> \r\n> **original** :\r\n> \r\n> > Cross-layer link:\r\n> \r\n> ```\r\n> An Ethernet link between an Ethernet interface on a router and an Ethernet interface on an optical NE.\r\n> ```\r\n> \r\n> This definition could mean the ethernet interface between a router and a transponder. In this case, the link is an ethernet link and would follow the logic of ethernet with PHY and MAC layers. Assuming we talk about ITU-T layers and e.g. an optical Ethernet interface of a router plugged into a WDM. In this case, the link would be an ITU-T optical layer as the ethernet part (MAC and PHY) would be edge-to-edge with the ethernet peer. A more appropriate term would be cross-region link because the ethernet switching region will be on the router and the optical switching region on the ROADM. I am actually unclear which of them is defined here. Depending on it I can propose some text. __unclear_\r\n> \r\n\r\nWe are updating the terminology to align with the optical impairments draft: see #78 \r\n\r\nIf the optical node is a WDM node with an integrated transponder, this link is between a router and a transponder. If the optical node is an OTN node, it is between a router and the access card of the optical node.\r\n\r\nThe MAC layer is terminated on the router but not on the optical node. The optical node terminates the PMD layer and:\r\n- in case of transparent mapping, switches at the PCS sub-layer;\r\n- in case of frame-based mapping, terminates the PCS and switches at the MAC layer.\r\n\r\nThe management of this link is quite different than the management of the link between two adjacent routers (which both terminates the ETH MAC layer)\r\n\r\nI am ok to rename this link as 'cross-region link'\r\n\r\n> **original**\r\n> \r\n> > Intra-domain single-layer Ethernet link:\r\n> \r\n> ```\r\n> An Ethernet link between between two Ethernet interfaces on physically adjacent routers that belong to the same P-PNC domain.\r\n> ```\r\n> \r\n> Since domain is not defined, I suggest to use \"PNC-domain\" to clarify that it is about the act of provisioning that forms the domains. An ethernet link usually has two layers (MAC and PHY). Also the term \"router\" should be replaced by \"device\" throughout the definitions:\r\n> \r\n> **suggested**:\r\n> \r\n> > Intra-PNC-domain Ethernet link:\r\n> \r\n> ```\r\n> An Ethernet link between between two Ethernet interfaces on physically adjacent devices that belong to the same P-PNC domain.\r\n> ```\r\n\r\nI have two comments here:\r\n- Intra-PNC-domain Ethernet link looks less readable that Intra-domain Ethernet link. IMHO, if we have a clear definition we can shorten the term to improve readability\r\n- There are two types of intra-PNC-domain Ethernet links:\r\n  - those between physically adjacent routers (just a cable between them)\r\n  - those which are setup through an Optical network (see comment below for the multi-layer Ethernet link)\r\n\r\n> \r\n> **original** Intra-domain single-layer IP link:\r\n> \r\n> ```\r\n> An IP link supported by an intra-domain single-layer Ethernet link.\r\n> ```\r\n> \r\n> __suggested: Intra-PNC-domain IP link: An IP link supported by an intra-PNC-domain Ethernet links.\r\n> \r\n\r\nSame comment as above on the term intra-PNC-domain versus intra-domain\r\n\r\n> **original** Inter-domain single-layer Ethernet link:\r\n> \r\n> ```\r\n> An Ethernet link between between two Ethernet interfaces on physically adjacent routers which belong to different P-PNC domains.\r\n> ```\r\n> \r\n> **suggested** Inter-PNC-domain Ethernet link:\r\n> \r\n> ```\r\n> An Ethernet link between between two Ethernet interfaces on physically adjacent devices which belong to different PNC domains.\r\n> ```\r\n> \r\n\r\nI am ok to remove the 'single layer' qualifier here since inter-domain Ethernet links are assumed to be always between two physically adjacent routers.\r\n\r\nSame comment as above on the term inter-PNC-domain versus inter-domain\r\n\r\n> **original** Inter-domain single-layer IP link:\r\n> \r\n> ```\r\n> An IP link supported by an inter-domain single-layer Ethernet link.\r\n> ```\r\n> \r\n> **suggested** Inter-PNC-domain IP link:\r\n> \r\n> ```\r\n> An IP link supported by an inter-PNC-domain Ethernet link.\r\n> ```\r\n> \r\n\r\nSame comment as above on the term intra-PNC-domain versus intra-domain\r\n\r\n> **original** Intra-domain multi-layer Ethernet link:\r\n> \r\n> ```\r\n> An Ethernet link supported by two cross-layer links and an optical tunnel in between.\r\n> ```\r\n> \r\n> As Ethernet links are inherently multi-layer (MAC and PHY) it doesn't mean much to talk about multilayer ethernet links. The description suggests the meaning is a link that starts in a packet switching region and traverses a wavelength switching region. **unclear**\r\n\r\nLet's consider these two cases:\r\n\r\n```\r\nR1 --- R2\r\n\r\nR1 --- Optical_NE1 --- (Optical Network) --- Optical_NE2 --- R2\r\n\r\n```\r\n\r\nIn both cases, there is an adjacency between the MAC sub-layer terminations in R1 and R2\r\n\r\nThe I-D is using the term \"Ethernet Link\" to describe this adjacency and qualify this as intra-domain or inter-domain depending on whether the routers R1 and R2 belongs to the same P-PNC domain or not.\r\n\r\nIn the first case, the adjacency between the MAC sub-layer terminations in R1 and R2 is supported by an adjacency between the PMA/PMD sub-layer terminations in R1 and R2\r\n\r\nIn the second case: there are:\r\n- an adjacency between the PMA/PMD sub-layer terminations in R1 and in Optical NE1\r\n- an adjacency between the PMA/PMD sub-layer terminations in R2 and in Optical NE2\r\n- an optical tunnel between Optical NE1 and Optical NE2\r\n\r\nThe adjacency between the MAC sub-layer terminations in R1 and R2 is supported by the concatenation of these three elements. Multi-layer coordination is required to manage the second case.\r\n\r\nThe I-D is using the term \"single layer\" to describe the first case and the term \"multi-layer\" to describe the second case.\r\n\r\n> \r\n> Intra-domain multi-layer IP link:\r\n> \r\n> ```\r\n> An IP link supported an intra-domain multi-layer Ethernet link.\r\n> ```\r\n> \r\n> same as above, the meaning/terminology is not clear.\r\n\r\nSee comment above\r\n\r\n",
+          "createdAt": "2024-05-30T09:01:03Z",
+          "updatedAt": "2024-05-30T09:01:03Z"
+        },
+        {
+          "author": "ggrammel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "the challenge with naming single/multi-layer these cases is\r\n> R1 --- R2\r\nR1 --- Optical_NE1 --- (Optical Network) --- Optical_NE2 --- R2\r\n\r\nthat none of it is \"single layer\". From G.8010/Y.1306:\r\n> 6.2 Ethernet network layered structure\r\nTwo layer networks are defined in the Ethernet transport network architecture:\r\n\u2022 Ethernet MAC (ETH) layer network;\r\n\u2022 Ethernet PHY (ETY) layer network.\r\nThe ETH layer network is a path layer network. The ETY layer network is a section layer network. The ETH layer network characteristic information can be transported through ETH links supported by trails in the server layer networks (e.g., ETY, SDH VC-n, OTN ODUk, MPLS, ATM).\r\n\r\nThe the MAC and PHY layer still exist in their entirety and the physical medium dependent (PMD) sublayer is a sublayer of PHY (ETY) i.e. a transceiver for the physical medium.   \r\n\r\nIOW, one may call the first \"single technology\" or if the term \"region\" is preferred, call it \"single-region\" but it's not single layer.\r\n",
+          "createdAt": "2024-05-31T10:36:39Z",
+          "updatedAt": "2024-05-31T10:36:39Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Summary of my understanding of Gert's proposal for terminology changes:\r\n\r\n| OLD | Gert's proposal | Other alternatives (for further discussion) |\r\n|------|-------|-\r\n| intra-domain | intra-PNC-domain | intra-domain (with proper clarification in the definition)\r\n| inter-domain | inter-PNC-domain | inter-domain (with proper clarification in the definition)\r\n| cross-layer | cross-region | cross-domain\r\n| single-layer | single-technology or single-region | single-hop\r\n| multi-layer | multi-technology or multi-region | multi-hop\r\n\r\n",
+          "createdAt": "2024-05-31T11:19:26Z",
+          "updatedAt": "2024-05-31T11:21:15Z"
         }
       ]
     },
@@ -6999,6 +7027,58 @@
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-02",
       "headRefOid": "911f7af38910c5dfd5de5719dccd51a15872a1ca",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 119,
+      "id": "PR_kwDOC9D8a85w-Ji5",
+      "title": "Gert's proposed changes",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/119",
+      "state": "CLOSED",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "PR referencing https://github.com/IETF-TEAS-WG/actn-poi/issues/89#issuecomment-2133724642\r\n\r\nNote: some definitions are still unclear and need to be defined, see #89 for the discussion",
+      "createdAt": "2024-05-30T07:34:26Z",
+      "updatedAt": "2024-05-30T07:42:07Z",
+      "baseRepository": "IETF-TEAS-WG/actn-poi",
+      "baseRefName": "main",
+      "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
+      "headRepository": "italobusi/actn-poi",
+      "headRefName": "gert-review",
+      "headRefOid": "1249d714a33d12d7afaf29f1567be953d4995580",
+      "closedAt": "2024-05-30T07:42:02Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 120,
+      "id": "PR_kwDOC9D8a85w-NCF",
+      "title": "Gert's proposed changes",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/120",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "PR referencing https://github.com/IETF-TEAS-WG/actn-poi/issues/89#issuecomment-2133724642\r\n\r\nNote: some definitions are still unclear and need to be defined, see #89 for the discussion",
+      "createdAt": "2024-05-30T07:42:21Z",
+      "updatedAt": "2024-05-30T07:42:21Z",
+      "baseRepository": "IETF-TEAS-WG/actn-poi",
+      "baseRefName": "main",
+      "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
+      "headRepository": "IETF-TEAS-WG/actn-poi",
+      "headRefName": "gert-review",
+      "headRefOid": "1249d714a33d12d7afaf29f1567be953d4995580",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
