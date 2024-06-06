@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-04T00:39:57.732884+00:00",
+  "timestamp": "2024-06-06T00:39:42.684794+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -1549,7 +1549,7 @@
       ],
       "body": "Describe LLDP snooping security considerations.\r\n",
       "createdAt": "2021-01-12T15:23:54Z",
-      "updatedAt": "2024-05-27T13:48:30Z",
+      "updatedAt": "2024-06-04T09:33:25Z",
       "closedAt": null,
       "comments": [
         {
@@ -1558,6 +1558,20 @@
           "body": "Suggested text...\r\n\r\n>>\r\nEarlier in the document, LLDP is discussed as a mechanism for the PNCs to discover the intra-domain Ethernet and IP links. While LLDP provides valuable information for network management and troubleshooting, it also presents several security issues:\r\n\r\no Eavesdropping: LLDP transmissions are not encrypted. Potentially, LLDP packets could be captured using a packet sniffer. An attacker can leverage this information to gain insights into the network topology, device types, and configurations, which could be used for further attacks;\r\n\r\no Unauthorized Access: Information disclosed by LLDP can include device types, software versions, and network configuration details. This might help an attacker identify vulnerable devices or configurations that can be exploited to gain unauthorized access or escalate privileges within the network;\r\n\r\no Data Manipulation: If an attacker gains access to a network device, they could manipulate LLDP information to advertise false device information, leading to potential misconfigurations or trust relationships being exploited. This can disrupt network operations or redirect traffic to malicious devices;\r\n\r\no Denial of Service (DoS): By flooding the network with fake LLDP packets, an attacker could overwhelm network devices or management systems, potentially leading to a denial of service where legitimate network traffic is disrupted;\r\n\r\no Spoofing: An attacker could spoof LLDP packets to impersonate other network devices. Potentially, this might lead to incorrect network mappings or trust relationships being established with malicious devices;\r\n\r\no Lack of Authentication: LLDP does not include mechanisms for authenticating the source of LLDP messages, which means that devices accept LLDP information from any source as legitimate. \r\n\r\nTo mitigate these security issues, network administrators might implement several security measures, including:\r\n\r\no Disabling LLDP on ports where it is not needed, especially those facing untrusted networks;\r\n\r\no Using network segmentation and Access Control Lists (ACLs) to limit who can send and receive LLDP packets;\r\n\r\no Employing network monitoring and anomaly detection systems to identify unusual LLDP traffic patterns that may indicate an attack;\r\n\r\no Regularly updating and patching network devices to address known vulnerabilities that could be exploited through information gathered via LLDP.\r\n<<",
           "createdAt": "2024-02-13T09:02:46Z",
           "updatedAt": "2024-02-13T09:02:46Z"
+        },
+        {
+          "author": "jbouqui153",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looks a great proposal to me! Detailed and very clear. ",
+          "createdAt": "2024-06-04T09:15:26Z",
+          "updatedAt": "2024-06-04T09:15:26Z"
+        },
+        {
+          "author": "danielkinguk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'll take another look at the security again today. ",
+          "createdAt": "2024-06-04T09:33:24Z",
+          "updatedAt": "2024-06-04T09:33:24Z"
         }
       ]
     },
@@ -3092,7 +3106,7 @@
       ],
       "body": "It is not clear in the draft what is the real meaning of \"domain\" and the impact on layer functionality:  the suggestion is to use the term \"region\" to describe a switching technology domain (RFC4206). \r\n A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  \r\nA layer describes a data plane switching granularity level (e.g., VC4, VC-12).  A data plane layer is associated with a region  however, more than one data plane layer can be associated with the same region (e.g., both VC4 and VC12 are associated with TDM).\r\nFor example in our case for Ethernet we can say that PHY and MAC data plane layers can be associated with the same ETH region.\r\n\r\n\r\n",
       "createdAt": "2022-04-05T15:01:03Z",
-      "updatedAt": "2024-05-31T11:21:15Z",
+      "updatedAt": "2024-06-05T13:40:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -3129,6 +3143,27 @@
           "body": "Summary of my understanding of Gert's proposal for terminology changes:\r\n\r\n| OLD | Gert's proposal | Other alternatives (for further discussion) |\r\n|------|-------|-\r\n| intra-domain | intra-PNC-domain | intra-domain (with proper clarification in the definition)\r\n| inter-domain | inter-PNC-domain | inter-domain (with proper clarification in the definition)\r\n| cross-layer | cross-region | cross-domain\r\n| single-layer | single-technology or single-region | single-hop\r\n| multi-layer | multi-technology or multi-region | multi-hop\r\n\r\n",
           "createdAt": "2024-05-31T11:19:26Z",
           "updatedAt": "2024-05-31T11:21:15Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[2024-06-04 ACTN POI Call](https://github.com/IETF-TEAS-WG/actn-poi/wiki/June-4,-2024)**\r\n\r\nThis issue will be addressed in an ad-hoc call between Gert, Italo and Sergio: the output will be reported in github for further review/discussion within the team\r\n\r\nIf anybody else is interested to join the call, please let Italo or Gert know\r\n\r\nSergio noted that the term 'region' is applicable to control plane and not to data plane\r\n\r\nThe references for MRN/MLN are:\r\n- [RFC 5212](https://datatracker.ietf.org/doc/html/rfc5212)\r\n- [RFC 5339](https://datatracker.ietf.org/doc/html/rfc5339)\r\n- [RFC 6001](https://datatracker.ietf.org/doc/html/rfc6001)\r\n",
+          "createdAt": "2024-06-05T09:45:12Z",
+          "updatedAt": "2024-06-05T09:45:12Z"
+        },
+        {
+          "author": "ggrammel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "RFC 5212:\r\n> A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  A layer describes a data plane switching granularity level (e.g., VC4, VC-12).  A data plane layer is associated with a region in the control plane (e.g., VC4 is associated with TDM, MPLS is associated with PSC).  However, more than one data plane layer can be associated with the same region (e.g., both VC4 and VC12 are associated with TDM).  Thus, a control plane region, identified by its switching type value (e.g., TDM), can be sub-divided into smaller-granularity component networks based on \"data plane switching layers\".\r\n\r\nThe proposed alternatives in the table may be a little misleading.\r\n\r\n1. a PNC-domain is a domain of nodes that are provisioned by a single PNC. I.e. it is not uncommon that an operator has more than one optical-PNC in the network, typically based on some vendor choices. If one has a back-to-back connection between O1-PNC and O2-PNC, it is an inter-PNC-domain-link. \r\n2. PNC-domains are strictly related to control. O1-PNC and O2-PNC would be different control domains in the O-Region. The need for O1/O2/... controllers is not related to Layers but a choice made by operators in structuring the network.\r\n3. Layers follow the ITU-T layered model logic and are Transport plane related. To \"connect\" different layers, one needs model an adaptation function which is not part of a link. So a cross-layer-link is a control construct and would rather represent a cross-region-link. Similarly, G.800/G.7703/[RFC 8795](https://datatracker.ietf.org/doc/html/rfc8795) defines \"transitional link\" as topological construct, not as a layer\r\n4. Any layered technology involves many layers, i.e. Ethernet is not a single layer, nor is OTN, WDM etc. The control logic is that switching happens on a specific layer (E.g. Ethernet MAC layer) and all lower layers need to be terminated to do so e.g. PHY, OPU,ODU,OTU,OCH (using old terminology here). So in simplified terms: the sum of devices operating (switching) on a specific technology is called \"region\".\r\n\r\n| OLD | Gert's proposal | Other alternatives (for further discussion) | commenting proposed alternatives\r\n|------|-------|-----|-\r\n| intra-domain-link | intra-PNC-domain | intra-domain (with proper clarification in the definition) |\r\n| inter-domain-link | inter-PNC-domain | inter-domain (with proper clarification in the definition) |  an O1-PNC-domain to O2-PNC-domain link would then be labeled \"inter-domain-link\"\r\n| cross-layer-link | cross-region | cross-domain | if \"domain\" is meant to be a PNC-domain, then cross-domain is the same as inter-domain. If the link connects regions, it would be an inter-region link.\r\n| single-layer-link | single-technology or single-region | single-hop | a hop is typically considered to  be between two devices of the same region.\r\n| multi-layer-link | inter-technology or inter-region | multi-hop | <- this term suggests multiple hops in the same region - is that the intention? \r\n\r\n",
+          "createdAt": "2024-06-05T11:04:22Z",
+          "updatedAt": "2024-06-05T13:40:52Z"
+        },
+        {
+          "author": "sergiobelotti",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Surely RFC5212 can help for some definitions. \r\nRFC5212:\r\n```\r\nThe representation, in a GMPLS control plane, of a switching\r\n   technology domain is referred to as a region [RFC4206].  A switching\r\n   type describes the ability of a node to forward data of a particular\r\n   data plane technology, and uniquely identifies a network region.  A\r\n   layer describes a data plane switching granularity level (e.g., VC4,\r\n   VC-12).  A data plane layer is associated with a region in the\r\n   control plane (e.g., VC4 is associated with TDM, MPLS is associated\r\n   with PSC).  However, more than one data plane layer can be associated\r\n   with the same region (e.g., both VC4 and VC12 are associated with\r\n   TDM).  Thus, a control plane region, identified by its switching type\r\n   value (e.g., TDM), can be sub-divided into smaller-granularity\r\n   component networks based on \"data plane switching layers\". \r\n``` ",
+          "createdAt": "2024-06-05T12:34:01Z",
+          "updatedAt": "2024-06-05T12:34:01Z"
         }
       ]
     },
@@ -3234,7 +3269,7 @@
       "id": "I_kwDOC9D8a85NIa1H",
       "title": "Duplicate figures?",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/96",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3247,8 +3282,8 @@
       ],
       "body": "General suggestion for this section: since the main content of the section is related to fig 2 why do not report again fig. 2 here: it very heavy to come back to figure 2 and reading the same time the text.\r\n\r\n_Originally posted by @sergiobelotti in https://github.com/FabioPeruzzini/actn-poi/pull/94#discussion_r912808073_",
       "createdAt": "2022-07-05T09:42:12Z",
-      "updatedAt": "2024-05-27T13:48:51Z",
-      "closedAt": null,
+      "updatedAt": "2024-06-05T09:43:12Z",
+      "closedAt": "2024-06-05T09:43:12Z",
       "comments": [
         {
           "author": "italobusi",
@@ -3291,6 +3326,13 @@
           "body": "I think this issue can be closed with PR #117 (which has been already merged)\r\n\r\n@sergiobelotti : what do you think?",
           "createdAt": "2024-05-27T11:02:27Z",
           "updatedAt": "2024-05-27T11:02:27Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[2024-06-04 ACTN POI Call](https://github.com/IETF-TEAS-WG/actn-poi/wiki/June-4,-2024)**\r\n\r\nAgreed to close this issue since it has been already resolved by PR #117 (which has been already merged)\r\n",
+          "createdAt": "2024-06-05T09:43:12Z",
+          "updatedAt": "2024-06-05T09:43:12Z"
         }
       ]
     },
@@ -7018,9 +7060,9 @@
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
-      "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 \r\n- Reconciled terminology with optical impairments draft: fix #78",
+      "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 and #107\r\n- Reconciled terminology with optical impairments draft: fix #78",
       "createdAt": "2024-05-27T13:15:53Z",
-      "updatedAt": "2024-05-27T13:15:53Z",
+      "updatedAt": "2024-06-05T09:49:37Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
@@ -7072,7 +7114,7 @@
       "labels": [],
       "body": "PR referencing https://github.com/IETF-TEAS-WG/actn-poi/issues/89#issuecomment-2133724642\r\n\r\nNote: some definitions are still unclear and need to be defined, see #89 for the discussion",
       "createdAt": "2024-05-30T07:42:21Z",
-      "updatedAt": "2024-05-30T07:42:21Z",
+      "updatedAt": "2024-06-05T09:46:13Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
@@ -7083,7 +7125,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[2024-06-04 ACTN POI Call](https://github.com/IETF-TEAS-WG/actn-poi/wiki/June-4,-2024)**\r\n\r\nhttps://github.com/IETF-TEAS-WG/actn-poi/issues/89#issuecomment-2149359178",
+          "createdAt": "2024-06-05T09:46:12Z",
+          "updatedAt": "2024-06-05T09:46:12Z"
+        }
+      ],
       "reviews": []
     }
   ]
