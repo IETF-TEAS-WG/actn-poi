@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-13T00:40:14.523471+00:00",
+  "timestamp": "2024-06-16T00:44:08.267864+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -3134,7 +3134,7 @@
       ],
       "body": "It is not clear in the draft what is the real meaning of \"domain\" and the impact on layer functionality:  the suggestion is to use the term \"region\" to describe a switching technology domain (RFC4206). \r\n A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  \r\nA layer describes a data plane switching granularity level (e.g., VC4, VC-12).  A data plane layer is associated with a region  however, more than one data plane layer can be associated with the same region (e.g., both VC4 and VC12 are associated with TDM).\r\nFor example in our case for Ethernet we can say that PHY and MAC data plane layers can be associated with the same ETH region.\r\n\r\n\r\n",
       "createdAt": "2022-04-05T15:01:03Z",
-      "updatedAt": "2024-06-12T22:45:55Z",
+      "updatedAt": "2024-06-13T09:30:53Z",
       "closedAt": null,
       "comments": [
         {
@@ -3199,6 +3199,13 @@
           "body": "**[2024-06-11 ACTN POI ad-hoc call](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-06-11)**\r\n\r\nJeff: region can be a bit misleading for a reader with the concept of geographical region. Sometime we use the term technology domain to refer to the IP domain, MW domain or Optical domain\r\n\r\nProposal from the call:\r\n- single-technology intra-domain link instead of single-layer intra-domain link\r\n- multi-technology intra-domain link instead of multi-layer intra-domain link\r\n- inter-domain link, with proper clarification that the term \"domain\" refers to PNC domain (as defined by Gert)\r\n- cross-technology link instead of cross-layer link\r\n\r\nAdd proper text to clarify that the term \"domain\" refers to PNC domain (as defined by Gert)\r\n\r\nAlso need to define technology by referencing the MLN/MRN document\r\n\r\n- [ ] @ggrammel send a reference to be used in the definition for technology (RFC5212)\r\n\r\n- [ ] @italobusi update the text in PR #118 based on the agreement above \r\n",
           "createdAt": "2024-06-12T22:41:54Z",
           "updatedAt": "2024-06-12T22:41:54Z"
+        },
+        {
+          "author": "ggrammel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Suggested text:\r\n\r\nThis draft leverages terminology from [RFC5212] where the term \"region\" is applied to (GMPLS) control domains: \r\n> The representation, in a GMPLS control plane, of a switching technology domain is referred to as a region [RFC4206].  A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  \r\n\r\nThe authors recognize that terminology can be confusing since in common language the term \"region\" is associated to a geographical region and the term \"domain\" has multiple connotations. To keep the text readable and disambiguate the terminology, this draft uses the following terms and definitions:\r\n- Technology: short for \"switching technology domain\" defined as \"region\" in [RFC5212].\r\n- Domain: short for PNC-domain. We define a Domain as part of the network under control of a single PNC instance. It is subject to the capabilities of the PNC which technologies are controlled.\r\n- Layer: refers to a Layer used in [ITU-T G.8010/Y.1306]\r\n",
+          "createdAt": "2024-06-13T09:30:52Z",
+          "updatedAt": "2024-06-13T09:30:52Z"
         }
       ]
     },
