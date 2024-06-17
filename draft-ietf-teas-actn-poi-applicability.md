@@ -485,9 +485,7 @@ respective P-PNC;
 - technology-specific mechanisms (in the case of inter-domain SR-TE,
 the binding SID) are used for the inter-domain TE path stitching;
 
-- each packet domain in {{fig-vpn-topo}} uses technology-specific local
-protection mechanisms (in the case of SR-TE, TI-LFA), with the
-awareness of multi-layer TE path properties (e.g., SRLG).
+- each packet domain in {{fig-vpn-topo}} uses technology-specific local protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-TE or Topology Independent Loop-free Alternate Fast Reroute (TI-LFA) in case of SR-TE), with the awareness of multi-layer TE path properties (e.g., SRLG).
 
 In the case of inter-domain TE-paths, it is also assumed that each
 packet domain in {{fig-vpn-topo}} and {{fig-vpn-path}} implements the same TE
@@ -1926,11 +1924,7 @@ directions.
 \[Editor's Note:] Add some text about the protection options (to
 further discuss whether to put this text here or in {{multi-layer-link-setup}}).
 
-The MDSC also request the P-PNC to configure local protection
-mechanisms. For example, in case of SR-TE domain, the TI-LFA local
-protection, as defined in {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}}: the mechanisms to request the
-configuration TI-LFA local protection for SR-TE paths using the {{!I-D.ietf-teas-yang-te}}
-are a gap in the current YANG models.
+The MDSC also request the P-PNC to configure local protection mechanisms. For example, the FRR local protection, as defined in {{?RFC4090}} in case of MPLS-TE domain or the TI-LFA local protection, as defined in {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}} in case of SR-TE domain. The  mechanisms to request the configuration TI-LFA local protection for SR-TE paths using the {{!I-D.ietf-teas-yang-te}} are a gap in the current YANG models.
 
 The requested local protection mechanisms within the P-PNC domain are
 configured by the P-PNC through implementation specific mechanisms
@@ -1939,7 +1933,7 @@ which are outside the scope of this document.
 The P-PNC takes into account the multi-layer TE path properties
 (e.g., SRLG information), configured by the MDSC as described in
 {{multi-layer-path-properties}}, when computing the protection configuration (e.g., in
-case of SR-TE domains, the TI-LFA post-convergence path for multi-layer single-domain IP links).
+case of SR-TE domains, the TI-LFA post-convergence path or, in case of MPLS-TE domain, the FRR backup tunnel) for multi-layer single-domain IP links.
 
 SR-TE path setup and update (e.g., bandwidth increase) through MPI is
 identified as a gap requiring further work, which is outside of the
