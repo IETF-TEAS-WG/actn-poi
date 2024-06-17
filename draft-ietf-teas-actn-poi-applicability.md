@@ -2051,6 +2051,32 @@ Based Access Control (RBAC), which should also ensure that MDSC to
 PNC communication is based on authorised use and granular control of
 connectivity and resource requests.
 
+## LLDP Snooping Security Considerations
+
+Earlier in the document, LLDP is discussed as a mechanism for the PNCs to discover the intra-domain Ethernet and IP links. While LLDP provides valuable information for network management and troubleshooting, it also presents several security issues:
+
+- Eavesdropping: LLDP transmissions are not encrypted. Potentially, LLDP packets could be captured using a packet sniffer. An attacker can leverage this information to gain insights into the network topology, device types, and configurations, which could be used for further attacks;
+
+- Unauthorized Access: Information disclosed by LLDP can include device types, software versions, and network configuration details. This might help an attacker identify vulnerable devices or configurations that can be exploited to gain unauthorized access or escalate privileges within the network;
+
+- Data Manipulation: If an attacker gains access to a network device, they could manipulate LLDP information to advertise false device information, leading to potential misconfigurations or trust relationships being exploited. This can disrupt network operations or redirect traffic to malicious devices;
+
+- Denial of Service (DoS): By flooding the network with fake LLDP packets, an attacker could overwhelm network devices or management systems, potentially leading to a denial of service where legitimate network traffic is disrupted;
+
+- Spoofing: An attacker could spoof LLDP packets to impersonate other network devices. Potentially, this might lead to incorrect network mappings or trust relationships being established with malicious devices;
+
+- Lack of Authentication: LLDP does not include mechanisms for authenticating the source of LLDP messages, which means that devices accept LLDP information from any source as legitimate.
+
+To mitigate these security issues, network administrators might implement several security measures, including:
+
+- Disabling LLDP on ports where it is not needed, especially those facing untrusted networks;
+
+- Using network segmentation and Access Control Lists (ACLs) to limit who can send and receive LLDP packets;
+
+- Employing network monitoring and anomaly detection systems to identify unusual LLDP traffic patterns that may indicate an attack;
+
+- Regularly updating and patching network devices to address known vulnerabilities that could be exploited through information gathered via LLDP.
+
 # Operational Considerations
 
 This document has identified the need and enabling components for automating the management and control of multi-layer Service Providers' transport networks, combining the optical and microwave transport layer with the packet (IP/MPLS) layer to create a more efficient and scalable network infrastructure. This approach is particularly beneficial for Service Providers and large enterprises dealing with high bandwidth demands and looking for cost-effective ways to expand their networks. However, integrating these two traditionally separate network layers involves several operational considerations:
