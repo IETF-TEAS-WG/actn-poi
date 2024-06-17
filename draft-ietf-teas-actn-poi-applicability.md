@@ -2024,7 +2024,7 @@ Tunnel model, defined in {{!I-D.ietf-teas-yang-te}}, needs also to be enhanced t
 support scenarios where multiple parallel TE paths are used in load-balancing to carry the traffic between two end-points (e.g., VPN
 traffic between two PEs).
 
-# Security Considerations
+# Security Considerations {#security}
 
 This document highlights how the ACTN architecture can deploy packet
 over optical infrastructure services. It highlights how existing IETF
@@ -2053,10 +2053,17 @@ connectivity and resource requests.
 
 # Operational Considerations
 
-Telemetry data, such as collecting lower-layer networking health and
-consideration of network and service performance from POI domain
-controllers, may be required. These requirements and capabilities
-will be discussed in future versions of this document.
+This document has identified the need and enabling components for automating the management and control of multi-layer Service Providers' transport networks, combining the optical and microwave transport layer with the packet (IP/MPLS) layer to create a more efficient and scalable network infrastructure. This approach is particularly beneficial for Service Providers and large enterprises dealing with high bandwidth demands and looking for cost-effective ways to expand their networks. However, integrating these two traditionally separate network layers involves several operational considerations:
+
+- Network Design and Capacity Planning: Deciding the degree of integration between the packet and optical layers is critical. Furthermore, this includes determining whether to pursue a loose integration (keeping layers distinct but coordinated) or a tight integration (combining layers more closely, potentially at the hardware level) coordinated via the MDSC. Accurate forecasting and planning will also be essential to ensure that the integrated ACTN infrastructure can handle future capacity demand without excessive over-provisioning;
+
+- System Interoperability: Networks often comprise equipment from various vendors. Ensuring that packet and optical devices can interoperate seamlessly and the PNCs can manage them is crucial for a successful integration. The Service Provider must also check with the vendors to ensure they support the IETF-based technologies outlined in this document;
+
+- Performance Monitoring: The integrated POI network will require comprehensive monitoring solutions that can provide visibility to the PNCs across both packet and optical layers. Identifying and diagnosing issues may become more complex with integrated layers. Telemetry data may also be required to collect lower-layer networking health and consider network and service performance. This topic is further discussed in [ACTN Assurance];
+
+- Fault Management and Recovery: The POI networks should be resilient, including considerations for automatic protection switching and fast reroute mechanisms that span both layers. Fault isolation and recovery may become more challenging, as issues in one layer can have cascading effects on the other. Effective fault management strategies must be in place to quickly identify and rectify such issues. This topic is further discussed in [ACTN Assurance];
+
+Specific Security Considerations are discussed in {{security}}.
 
 # IANA Considerations
 
