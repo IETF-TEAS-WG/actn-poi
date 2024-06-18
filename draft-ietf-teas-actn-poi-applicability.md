@@ -487,7 +487,7 @@ respective P-PNC;
 - technology-specific mechanisms (in the case of inter-domain SR-TE,
 the binding SID) are used for the inter-domain TE path stitching;
 
-- each packet domain in {{fig-vpn-topo}} uses technology-specific local protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-TE or Topology Independent Loop-free Alternate Fast Reroute (TI-LFA) in case of SR-TE), with the awareness of multi-layer TE path properties (e.g., SRLG).
+- each packet domain in {{fig-vpn-topo}} uses technology-specific local protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-TE or Topology Independent Loop-free Alternate Fast Reroute (TI-LFA) in case of SR-TE), with the awareness of multi-technology TE path properties (e.g., SRLG).
 
 In the case of inter-domain TE-paths, it is also assumed that each
 packet domain in {{fig-vpn-topo}} and {{fig-vpn-path}} implements the same TE
