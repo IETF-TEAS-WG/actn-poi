@@ -280,7 +280,7 @@ Inter-domain Ethernet link:
 Single-technology intra-domain Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.
 
-Multi-technology intra-domainEthernet link:
+Multi-technology intra-domain Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong tot he same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.
 
 IP link:
