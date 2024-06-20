@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-18T00:41:06.805351+00:00",
+  "timestamp": "2024-06-20T00:39:31.222729+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7102,19 +7102,60 @@
       "labels": [],
       "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 and #107\r\n- Reconciled terminology with optical impairments draft: fix #78\r\n- Added description for MPLS-TE local protection: fix #80 \r\n- Added Operational Considerations: fix #42 \r\n- Added LLDP security considerations: fix #40 \r\n- Updated domain terminology: fix #89 ",
       "createdAt": "2024-05-27T13:15:53Z",
-      "updatedAt": "2024-06-17T10:45:54Z",
+      "updatedAt": "2024-06-18T09:04:43Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-02",
-      "headRefOid": "e6c9164f48ee99b67724cdba114ea28e178cad5b",
+      "headRefOid": "c009c09fb8b5efb1ca00adc37b32fc56b7ab8365",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOC9D8a85-p6v6",
+          "commit": {
+            "abbreviatedOid": "e6c9164"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-06-18T08:51:33Z",
+          "updatedAt": "2024-06-18T08:51:33Z",
+          "comments": [
+            {
+              "originalPosition": 141,
+              "body": "```suggestion\r\nMulti-technology intra-domain Ethernet link:\r\n```",
+              "createdAt": "2024-06-18T08:51:33Z",
+              "updatedAt": "2024-06-18T08:51:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a85-p8XG",
+          "commit": {
+            "abbreviatedOid": "1c60dca"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-06-18T08:54:22Z",
+          "updatedAt": "2024-06-18T08:54:22Z",
+          "comments": [
+            {
+              "originalPosition": 279,
+              "body": "```suggestion\r\n- each packet domain in {{fig-vpn-topo}} uses technology-specific local protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-TE or Topology Independent Loop-free Alternate Fast Reroute (TI-LFA) in case of SR-TE), with the awareness of multi-technology TE path properties (e.g., SRLG).\r\n```",
+              "createdAt": "2024-06-18T08:54:22Z",
+              "updatedAt": "2024-06-18T08:54:31Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 119,
