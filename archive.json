@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-20T00:39:31.222729+00:00",
+  "timestamp": "2024-06-23T00:43:31.423010+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7102,7 +7102,7 @@
       "labels": [],
       "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 and #107\r\n- Reconciled terminology with optical impairments draft: fix #78\r\n- Added description for MPLS-TE local protection: fix #80 \r\n- Added Operational Considerations: fix #42 \r\n- Added LLDP security considerations: fix #40 \r\n- Updated domain terminology: fix #89 ",
       "createdAt": "2024-05-27T13:15:53Z",
-      "updatedAt": "2024-06-18T09:04:43Z",
+      "updatedAt": "2024-06-20T15:50:55Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
