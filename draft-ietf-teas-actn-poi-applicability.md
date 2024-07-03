@@ -242,10 +242,10 @@ configuration (on the PE side) of the interface towards the CE
 (e.g. VLAN, IP address, routing protocol etc.).
 
 Technology domain:
-: shot for "switching technology domain", defined as "region" in {{!RFC5212}}, where the term "region" is applied to (GMPLS) control domains.
+: short for "switching technology domain", defined as "region" in {{!RFC5212}}, where the term "region" is applied to (GMPLS) control domains.
 
 PNC Domain:
-: part of the network under control of a single PNC instance. It is subject to the capabilities of the PNC which technologies are controlled.
+: part of the network under control of a single PNC instance. It is subject to the capabilities of the PNC which technology is controlled.
 
 Port:
 : The physical entity that transmits and receives physical signals.
@@ -266,7 +266,7 @@ Ethernet link:
 : A link between two Ethernet interfaces.
 
 Single-technology Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers.
+: An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.
 
 Multi-technology Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.
@@ -281,7 +281,7 @@ Single-technology intra-domain Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.
 
 Multi-technology intra-domain Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong tot he same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.
+: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.
 
 IP link:
 : A link between two IP interfaces.
@@ -293,7 +293,7 @@ Inter-domain IP link:
 : An IP link supported by an inter-domain Ethernet link.
 
 Multi-technology intra-domain IP link:
-: An IP link supported a multi-technology intra-domain Ethernet link.
+: An IP link supported by a multi-technology intra-domain Ethernet link.
 
 # Reference Network Architecture {#reference-network}
 
@@ -987,7 +987,7 @@ PNCs:
 
 - the network topology, at both optical and IP layers, in terms of
 nodes and links, including the access links, inter-domain IP links
-as well as Cross-technology links;
+as well as cross-technology Ethernet links;
 
 - the optical tunnels supporting multi-technology intra-domain IP links;
 
@@ -1030,7 +1030,7 @@ It should also be possible to correlate information from IP and
 optical layers (e.g., which port, lambda/OTSi, and direction are used
 by a specific IP service on the WDM equipment).
 
-In particular, for the Cross-technology links, it is key for MDSC to
+In particular, for the cross-technology links, it is key for MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
 bundle links for LAG) to client ports in the ROADM.
@@ -1337,7 +1337,7 @@ corresponding physical port on the optical node.
 
 It is worth noting that the discovery of Cross-technology links is based
 only on the LLDP information sent by the Ethernet interfaces of the
-routers and received by the Ethernet interfaces of the optical nodes.
+routers and snooped by the Ethernet interfaces of the optical nodes.
 Therefore the MDSC can discover these links also before optical
 paths, supporting overlay multi-technology IP links, are setup.
 
@@ -1387,7 +1387,7 @@ the plug-id attribute of this LTP, the LLDP information sent and
 received by the corresponding Ethernet interface on the IP router; such as
 the {BR11,3,BR21,4} plug-id values reported by the Ethernet LTP 3-1 on BR11 and by the Ethernet LTP 4-1 on BR21, as shown in {{fig-inter-domain-link}}.
 
-It is worth noting that in case of an inter-domain Ethernet links, the MDSC cannot discover, using the the LLDP
+It is worth noting that in case of an inter-domain Ethernet links, the MDSC cannot discover, using the LLDP
 information reported in the plug-id attributes, the physical
 adjacency between the two Ethernet interfaces on physically adjacent IP routers, because these
 two plug-id values do not match, such as the plug-id values {BR11,3}
@@ -1428,7 +1428,7 @@ LTP 5-1 on PE13 and LTP 6-1 in BR11 shown in {{fig-multi-technology-link}}, sinc
 links are discovered by the PNC.
 
 In addition, the P-PNC also reports the physical Ethernet LTPs that
-terminate the Cross-technology links supporting the multi-technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the
+terminate the cross-technology Ethernet links supporting the multi-technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the
 Ethernet LTP 6-0 on BR11, shown in {{fig-multi-technology-link}}.
 
 The MDSC discovers, using the mechanisms described in {{inter-domain-link-discovery}},
