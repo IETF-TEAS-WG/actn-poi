@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-02T00:40:53.903988+00:00",
+  "timestamp": "2024-07-04T00:41:09.725999+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7109,13 +7109,13 @@
       "labels": [],
       "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 and #107\r\n- Reconciled terminology with optical impairments draft: fix #78\r\n- Added description for MPLS-TE local protection: fix #80 \r\n- Added Operational Considerations: fix #42 \r\n- Added LLDP security considerations: fix #40 \r\n- Updated domain terminology: fix #89 ",
       "createdAt": "2024-05-27T13:15:53Z",
-      "updatedAt": "2024-06-26T17:02:05Z",
+      "updatedAt": "2024-07-03T16:05:44Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-02",
-      "headRefOid": "c009c09fb8b5efb1ca00adc37b32fc56b7ab8365",
+      "headRefOid": "ee540dfe2e2edce459a4dd672956804b2c11b01b",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -7304,6 +7304,120 @@
           "createdAt": "2024-06-26T17:02:05Z",
           "updatedAt": "2024-06-26T17:02:05Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Ajiuq",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-03T15:40:16Z",
+          "updatedAt": "2024-07-03T15:52:58Z",
+          "comments": [
+            {
+              "originalPosition": 77,
+              "body": "```suggestion\r\n: short for \"switching technology domain\", defined as \"region\" in {{!RFC5212}}, where the term \"region\" is applied to (GMPLS) control domains.\r\n```",
+              "createdAt": "2024-07-03T15:40:17Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 81,
+              "body": "```suggestion\r\n: part of the network under control of a single PNC instance. It is subject to the capabilities of the PNC which technology is controlled.\r\n```",
+              "createdAt": "2024-07-03T15:40:53Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 122,
+              "body": "```suggestion\r\n: An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.\r\n```",
+              "createdAt": "2024-07-03T15:41:06Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 142,
+              "body": "```suggestion\r\n: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.\r\n```",
+              "createdAt": "2024-07-03T15:42:09Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 158,
+              "body": "```suggestion\r\n: An IP link supported by a multi-technology intra-domain Ethernet link.\r\n```",
+              "createdAt": "2024-07-03T15:45:54Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 320,
+              "body": "```suggestion\r\nas well as cross-technology Ethernet links;\r\n```",
+              "createdAt": "2024-07-03T15:47:27Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 341,
+              "body": "```suggestion\r\nIn particular, for the cross-technology links, it is key for MDSC to\r\n```",
+              "createdAt": "2024-07-03T15:47:43Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 529,
+              "body": "```suggestion\r\nrouters and snooped by the Ethernet interfaces of the optical nodes.\r\n```",
+              "createdAt": "2024-07-03T15:49:55Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 584,
+              "body": "```suggestion\r\nIt is worth noting that in case of an inter-domain Ethernet links, the MDSC cannot discover, using the LLDP\r\n```",
+              "createdAt": "2024-07-03T15:51:25Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            },
+            {
+              "originalPosition": 637,
+              "body": "```suggestion\r\nterminate the cross-technology Ethernet links supporting the multi-technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the\r\n```",
+              "createdAt": "2024-07-03T15:52:15Z",
+              "updatedAt": "2024-07-03T15:52:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AjqDZ",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-03T15:53:30Z",
+          "updatedAt": "2024-07-03T15:53:31Z",
+          "comments": [
+            {
+              "originalPosition": 77,
+              "body": "See: https://github.com/IETF-TEAS-WG/actn-poi/pull/118/files#r1664403361",
+              "createdAt": "2024-07-03T15:53:30Z",
+              "updatedAt": "2024-07-03T15:53:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Ajwot",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-03T16:05:44Z",
+          "updatedAt": "2024-07-03T16:05:44Z",
+          "comments": [
+            {
+              "originalPosition": 341,
+              "body": "Done in https://github.com/IETF-TEAS-WG/actn-poi/pull/118/commits/ee540dfe2e2edce459a4dd672956804b2c11b01b",
+              "createdAt": "2024-07-03T16:05:44Z",
+              "updatedAt": "2024-07-03T16:05:44Z"
+            }
+          ]
         }
       ]
     },
