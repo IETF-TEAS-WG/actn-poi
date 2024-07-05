@@ -129,7 +129,7 @@ deployment architecture and specific scenarios relevant to Service
 Providers.
 
 Existing IETF protocols and data models are identified for each
-multi-layer (packet over optical) scenario with a specific focus on
+multi-technology (packet over optical) scenario with a specific focus on
 the MPI (Multi-Domain Service Coordinator to Provisioning Network
 Controllers Interface)in the ACTN architecture.
 
@@ -173,12 +173,12 @@ technology domains require specific skill sets.
 The packet/optical network deployment and operation separation are
 inefficient for many reasons. First, both capital expenditure (CAPEX)
 and operational expenditure (OPEX) could be significantly reduced by
-integrating the packet and the optical networks. Second, multi-layer
+integrating the packet and the optical networks. Second, multi-technology
 online topology insight can speed up troubleshooting (e.g., alarm
 correlation) and network operation (e.g., coordination of maintenance
-events), and multi-layer offline topology inventory can improve
+events), and multi-technology offline topology inventory can improve
 service quality (e.g., detection of diversity constraint violations).
-Third, multi-layer traffic engineering can use the available network
+Third, multi-technology traffic engineering can use the available network
 capacity more efficiently (e.g., coordination of restoration). In
 addition, provisioning workflows can be simplified or automated
 across layers (e.g., to achieve bandwidth-on-demand or to perform
@@ -188,7 +188,7 @@ This document uses packet-based Traffic Engineered (TE) service
 examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using RSVP-TE-based or SR-TE-based, forwarding plane mechanisms.
 
-The ACTN framework enables the complete multi-layer and multi-vendor
+The ACTN framework enables the complete multi-technology and multi-vendor
 integration of packet and optical networks through a Multi-Domain
 Service Coordinator (MDSC), and packet and optical Provisioning
 Network Controllers (PNCs).
@@ -204,7 +204,7 @@ multi-domain TE paths. The optical networks could be either a DWDM
 network, an OTN network (without DWDM layer), or a multi-layer
 OTN/DWDM network. Furthermore, DWDM networks could be either fixed-grid or flexible-grid.
 
-Multi-layer and multi-domain scenarios, based on the reference
+Multi-technology and multi-domain scenarios, based on the reference
 network described in {{reference-network}} and very relevant for Service
 Providers, are described in {{discovery}} and {{config}}.
 
@@ -212,7 +212,7 @@ For each scenario, existing IETF protocols and data models,
 identified in {{restconf}} and {{yang}}, are analyzed with a particular
 focus on the MPI in the ACTN architecture.
 
-For each multi-layer scenario, the document analyzes how to use the
+For each multi-technology scenario, the document analyzes how to use the
 interfaces and data models of the ACTN architecture.
 
 A summary of the gaps identified in this analysis is provided in
@@ -227,97 +227,99 @@ service provisioning perspective.
 
 ## Terminology
 
-This document uses the ACTN terminology defined in {{!RFC8453}}
+This document uses the ACTN terminology defined in {{!RFC8453}}.
 
 In addition, this document uses the following terminology.
 
 Customer service:
-
-> The end-to-end service from CE to CE.
+: The end-to-end service from CE to CE.
 
 Network service:
-
-> The PE to PE configuration, including both the network service
+: The PE to PE configuration, including both the network service
 layer (VRFs, RT import/export policies configuration) and the
 network transport layer (e.g. RSVP-TE LSPs). This includes the
 configuration (on the PE side) of the interface towards the CE
 (e.g. VLAN, IP address, routing protocol etc.).
 
-Port:
+Technology domain:
+: short for "switching technology domain", defined as "region" in {{!RFC5212}}, where the term "region" is applied to (GMPLS) control domains.
 
-> The physical entity that transmits and receives physical signals.
+PNC Domain:
+: part of the network under control of a single PNC instance. It is subject to the capabilities of the PNC which technology is controlled.
+
+Port:
+: The physical entity that transmits and receives physical signals.
 
 Interface:
-
-> A physical or logical entity that transmits and receives traffic.
+: A physical or logical entity that transmits and receives traffic.
 
 Link:
+: An association between two interfaces that can exchange traffic directly.
 
-> An association between two interfaces that can exchange traffic directly.
+Intra-domain link:
+: a link between two adjacent nodes that belong to the same PNC domain.
+
+Inter-domain link:
+: a link between two adjacent nodes that belong to different PNC domains.
 
 Ethernet link:
+: A link between two Ethernet interfaces.
 
-> A link between two Ethernet interfaces.
+Single-technology Ethernet link:
+: An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.
+
+Multi-technology Ethernet link:
+: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.
+
+Cross-technology Ethernet link:
+: An Ethernet link between an Ethernet interface on an IP router and an Ethernet interface on a physically adjacent optical node.
+
+Inter-domain Ethernet link:
+: An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to different P-PNC domains.
+
+Single-technology intra-domain Ethernet link:
+: An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.
+
+Multi-technology intra-domain Ethernet link:
+: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.
 
 IP link:
+: A link between two IP interfaces.
 
-> A link between two IP interfaces.
+Single-technology intra-domain IP link:
+: An IP link supported by a single-technology intra-domain Ethernet link.
 
-Cross-layer link:
+Inter-domain IP link:
+: An IP link supported by an inter-domain Ethernet link.
 
-> An Ethernet link between an Ethernet interface on a router and an Ethernet interface on an optical NE.
+Multi-technology intra-domain IP link:
+: An IP link supported by a multi-technology intra-domain Ethernet link.
 
-Intra-domain single-layer Ethernet link:
-
-> An Ethernet link between between two Ethernet interfaces on physically adjacent routers that belong to the same P-PNC domain.
-
-Intra-domain single-layer IP link:
-
-> An IP link supported by an intra-domain single-layer Ethernet link.
-
-Inter-domain single-layer Ethernet link:
-
-> An Ethernet link between between two Ethernet interfaces on physically adjacent routers which belong to different P-PNC domains.
-
-Inter-domain single-layer IP link:
-
-> An IP link supported by an inter-domain single-layer Ethernet link.
-
-Intra-domain multi-layer Ethernet link:
-
-> An Ethernet link supported by two cross-layer links and an optical tunnel in between.
-
-Intra-domain multi-layer IP link:
-
-> An IP link supported an intra-domain multi-layer Ethernet link.
-
-{: #reference-network}
-
-# Reference Network Architecture
+# Reference Network Architecture {#reference-network}
 
 This document analyses several deployment scenarios for Packet and
 Optical Integration (POI) in which ACTN hierarchy is deployed to
-control a multi-layer and multi-domain network with two optical
+control a multi-technology and multi-domain network with two optical
 domains and two packet domains, as shown in {{fig-ref-network}}:
 
 {::include ./figures/reference-network.md}
 {: #fig-ref-network title="Reference Network"}
 
 The ACTN architecture, defined in {{!RFC8453}}, is used to control this
-multi-layer and multi-domain network where each Packet PNC (P-PNC) is
+multi-technology and multi-domain network where each Packet PNC (P-PNC) is
 responsible for controlling its packet domain and where each Optical
 PNC (O-PNC) in the above topology is responsible for controlling its
 optical domain. The packet domains controlled by the P-PNCs can be
 Autonomous Systems (ASes), defined in {{?RFC1930}}, or IGP areas, within
 the same operator network.
 
-The routers between the packet domains can be either AS Boundary
+The IP routers between the packet domains can be either AS Boundary
 Routers (ASBR) or Area Border Router (ABR): in this document, the
 generic term Border Router (BR) is used to represent either an ASBR
 or an ABR.
 
 The MDSC is responsible for coordinating the whole multi-domain
-multi-layer (packet and optical) network. A specific standard
+multi-technology (packet and optical) network. A specific standard
 interface (MPI) permits MDSC to interact with the different
 Provisioning Network Controller (O/P-PNCs).
 
@@ -333,7 +335,7 @@ In the reference network of {{fig-ref-network}}, it is assumed that:
 
 - The domain boundaries between the packet and optical domains are
 congruent. In other words, one optical domain supports
-connectivity between routers in one and only one packet domain;
+connectivity between IP routers in one and only one packet domain;
 
 - There are no inter-domain physical links between optical domains.
 Inter-domain physical links exist only:
@@ -343,7 +345,7 @@ Inter-domain physical links exist only:
   Ethernet or IP links within this document;
 
   - between packet and optical domains (i.e., between routers and
-  optical NEs): these links are called cross-layer links within
+  optical nodes): these links are called cross-technology Ethernet links within
   this document;
 
   - between customer sites and the packet network (i.e., between
@@ -354,31 +356,34 @@ Inter-domain physical links exist only:
 physical interfaces.
 
 Although the new optical technologies (e.g., QSFP-DD ZR 400G) allow
-the operators to provide DWDM pluggable interfaces on the routers,
+the operators to provide DWDM pluggable interfaces on the IP routers,
 the deployment of those pluggable optics is not yet widely adopted.
 The reason is that most operators are not yet ready to manage packet
 and optical networks in a single unified domain. Therefore, a unified
-use case analysis is outside this draft's scope.
+use case analysis is outside the scope of this document.
 
-This document analyses scenarios where all the multi-layer IP links,
-supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-layer links supported by Ethernet
+This document analyses scenarios where all the multi-technology IP links,
+supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-technology links supported by Ethernet
 physical links.
 
-The analysis of scenarios with multi-layer inter-domain IP links is
+The analysis of scenarios with multi-technology inter-domain IP links is
 outside the scope of this document.
 
 Therefore, if inter-domain links between the optical domains exist,
 they would be used to support multi-domain optical services, which
 are outside the scope of this document.
 
-The optical network elements (NEs) within the optical domains can be
-ROADMs or OTN switches, with or without an integrated ROADM function.
+The optical nodes within the optical domains can be either:
+
+- WDM nodes, as defined in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, with an integrated ROADM functions and with or without integrated optical transponders;
+
+- OTN nodes, with integrated an OTN cross-connect function and with or without integrated ROADM functions or optical transponders.
 
 {: #mdsc-overview}
 
 ## Multi-domain Service Coordinator (MDSC) functions
 
-The MDSC in {{fig-ref-network}} is responsible for multi-domain and multi-layer
+The MDSC in {{fig-ref-network}} is responsible for multi-domain and multi-technology
 coordination across multiple packet and optical domains and provides
 multi-layer/multi-domain L2/L3 VPN network services requested by an
 OSS/Orchestration layer.
@@ -403,7 +408,7 @@ Orchestrator is not specified in {{!RFC8453}}.
 
 1. Another implementation can choose to split the MDSC functions
 between an "higher-level MDSC" (MDSC-H) responsible for packet and
-optical multi-layer coordination, interfacing with one Optical
+optical multi-technology coordination, interfacing with one Optical
 "lower-level MDSC" (MDSC-L), providing multi-domain coordination
 between the O-PNCs and one Packet MDSC-L, providing multi-domain
 coordination between the P-PNCs (see for example Figure 9 of
@@ -425,7 +430,7 @@ of this draft. Therefore, this document assumes that the
 OSS/Orchestrator requests the MDSC to set up L2/L3 VPN network
 services through mechanisms outside this document's scope.
 
-There are two prominent workflow cases when the MDSC multi-layer
+There are two prominent workflow cases when the MDSC multi-technology
 coordination is initiated:
 
 -  Initiated by request from the OSS/Orchestration layer to setup
@@ -482,9 +487,7 @@ respective P-PNC;
 - technology-specific mechanisms (in the case of inter-domain SR-TE,
 the binding SID) are used for the inter-domain TE path stitching;
 
-- each packet domain in {{fig-vpn-topo}} uses technology-specific local
-protection mechanisms (in the case of SR-TE, TI-LFA), with the
-awareness of multi-layer TE path properties (e.g., SRLG).
+- each packet domain in {{fig-vpn-topo}} uses technology-specific local protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-TE or Topology Independent Loop-free Alternate Fast Reroute (TI-LFA) in case of SR-TE), with the awareness of multi-technology TE path properties (e.g., SRLG).
 
 In the case of inter-domain TE-paths, it is also assumed that each
 packet domain in {{fig-vpn-topo}} and {{fig-vpn-path}} implements the same TE
@@ -651,7 +654,7 @@ this document.
 
 {: #packet-pnc-overview}
 
-## IP/MPLS Domain Controller and NE Functions
+## IP/MPLS Domain Controller and IP router Functions
 
 Each packet domain in {{fig-ref-network}}, corresponding to either an IGP area
 or an Autonomous System (AS) within the same operator network, is
@@ -708,7 +711,7 @@ the MDSC.
                               End-to-end TE path
              <------------------------------------------------->
 ~~~~
-{: #fig-p-pnc title="Domain Controller & NE Functions"}
+{: #fig-p-pnc title="Domain Controller & node Functions"}
 
 When requesting the setup of a new TE path, the MDSC provides the P-PNCs with the explicit path to be created or modified. In other
 words, the MDSC can communicate to the P-PNCs the complete list of
@@ -890,11 +893,11 @@ YANG data models:
 YANG module of {{!RFC8346}}, which augments the Base Network Topology
 Model;
 
-- the packet TE Topology Mode, defined in the "ietf-te-topology-packet" YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}}, which augments the generic TE
+- the Packet TE Topology Mode, defined in the "ietf-te-topology-packet" YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}}, which augments the generic TE
 Topology Model;
 
 - The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-YANG module of {{!I-D.busizheng-teas-yang-te-mpls-topology}}, which augments the TE Packet
+YANG module of {{!I-D.ietf-teas-yang-te-mpls-topology}}, which augments the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
 in "ietf-l3-te-topology" YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}};
 
@@ -984,9 +987,9 @@ PNCs:
 
 - the network topology, at both optical and IP layers, in terms of
 nodes and links, including the access links, inter-domain IP links
-as well as cross-layer links;
+as well as cross-technology Ethernet links;
 
-- the optical tunnels supporting multi-layer intra-domain IP links;
+- the optical tunnels supporting multi-technology intra-domain IP links;
 
 - both intra-domain and inter-domain L2/L3 VPN network services
 deployed within the network;
@@ -1001,7 +1004,7 @@ management layers. In the context of POI, the inventory information
 of IP and optical equipment can complement the topology views and
 facilitate the packet/optical multi-layer view, e.g., by providing a
 mapping between the lowest level LTPs in the topology view and
-corresponding physical port in the network inventory view.
+corresponding ports in the network inventory view.
 
 The MDSC could also discover the entire network inventory information
 of both IP and optical equipment and correlate this information with
@@ -1027,7 +1030,7 @@ It should also be possible to correlate information from IP and
 optical layers (e.g., which port, lambda/OTSi, and direction are used
 by a specific IP service on the WDM equipment).
 
-In particular, for the cross-layer links, it is key for MDSC to
+In particular, for the cross-technology Ethernet links, it is key for MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
 bundle links for LAG) to client ports in the ROADM.
@@ -1039,7 +1042,7 @@ speed-up troubleshooting easily.
 
 Alarms and event notifications are required between MDSC and PNCs so
 that any network changes are reported almost in real-time to the MDSC
-(e.g., NE or link failure). As specified in {{!RFC7923}}, MDSC must
+(e.g., node or link failure). As specified in {{!RFC7923}}, MDSC must
 subscribe to specific objects from PNC YANG datastores for
 notifications.
 
@@ -1048,7 +1051,7 @@ notifications.
 ## Optical Topology Discovery
 
 The WSON Topology Model and the Flexi-grid Topology model can be used
-to report the DWDM network topology (e.g., ROADM nodes and links),
+to report the DWDM network topology (e.g., WDM nodes and OMS links),
 depending on whether the DWDM optical network is based on fixed-grid
 or flexible-grid or a mix of fixed-grid and flexible-grid.
 
@@ -1082,7 +1085,7 @@ To allow the MDSC to discover the complete multi-layer and multi-domain network 
 inventory information, the O-PNCs report an abstract optical network
 topology where:
 
-- one TE node is reported for each optical NE deployed within the
+- one TE node is reported for each optical node deployed within the
 optical network domain; and
 
 - one TE link is reported for each OMS link and, optionally, for
@@ -1100,15 +1103,15 @@ as those detailed in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}};
 ROADMs.
 
 The OTN Topology Model also reports the CBR client LTPs that
-terminates the cross-layer links: once CBR client LTP is reported for
-each CBR or multi-function client interface on the optical NEs (see
+terminates the cross-technology Ethernet links: once CBR client LTP is reported for
+each CBR or multi-function client interface on the optical nodes (see
 sections 4.4 and 5.1 of {{?I-D.ietf-ccamp-transport-nbi-app-statement}} for the description of multi-function
 client interfaces).
 
 The Ethernet Topology Model reports the Ethernet client LTPs that
-terminate the cross-layer links: one Ethernet client LTP is reported
+terminate the cross-technology Ethernet links: one Ethernet client LTP is reported
 for each Ethernet or multi-function client interface on the optical
-NEs.
+nodes.
 
 The optical transponders and, optionally, the OTN access cards, are
 abstracted at MPI by the O-PNC as Trail Termination Points (TTPs),
@@ -1117,10 +1120,10 @@ abstraction is valid independently of the fact that optical
 transponders are physically integrated within the same WDM node or
 are physically located on a device external to the WDM node since it
 both cases the optical transponders and the WDM node are under the
-control of the same O-PNC.
+control of the same O-PNC and abstracted as a single WDM TE Node at the O-MPI.
 
 The association between the Ethernet or CBR client LTPs terminating
-the Ethernet cross-layer links and the optical TTPs is reported using
+the Ethernet cross-technology Ethernet links and the optical TTPs is reported using
 the Inter Layer Lock-id (ILL) identifiers, defined in {{!RFC8795}}.
 
 For example, with a reference to {{fig-optical-topo}}, the ILL values X and Y are
@@ -1165,8 +1168,8 @@ all the connectivity services provided by the optical network.
 
 The O-PNCs report in their operational datastores all the Ethernet
 and CBR client connectivities and all the optical tunnels deployed
-within their optical domain regarless of the mechanisms being used to
-set them up, such as the mechanisms described in {{multi-layer-link-setup}}, as well
+within their optical domain regardless of the mechanisms being used to
+set them up, such as the mechanisms described in {{multi-technology-link-setup}}, as well
 as other mechanism (e.g., static configuration), which are outside
 the scope of this document.
 
@@ -1182,7 +1185,7 @@ network topology, as described in Figure 2 of {{!I-D.ietf-teas-yang-sr-te-topo}}
 
 The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
-described in {{!I-D.busizheng-teas-yang-te-mpls-topology}}.
+described in {{!I-D.ietf-teas-yang-te-mpls-topology}}.
 
 As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship between the IP network
 topology and the MPLS-TE network topology depends on whether the two
@@ -1194,16 +1197,16 @@ To allow the MDSC to discover the complete multi-layer and multi-domain network 
 inventory information as well as to perform multi-domain TE path
 computation, the P-PNCs report the full packet network, including all
 the information that the MDSC requires to perform TE path
-computation. In particular, one TE node is reported for each router
+computation. In particular, one TE node is reported for each IP router
 and one TE link is reported for each intra-domain IP link. The packet
 topology also reports the IP LTPs terminating the inter-domain IP
 links.
 
 The Ethernet Topology Model is used to report the intra-domain
 Ethernet links supporting the intra-domain IP links as well as the
-Ethernet LTPs that might terminate cross-layer links, inter-domain
+Ethernet LTPs that might terminate cross-technology Ethernet links, inter-domain
 Ethernet links or access links, as described in detail in {{inter-domain-link-discovery}}
-and in {{multi-layer-link-discovery}}.
+and in {{multi-technology-link-discovery}}.
 
 All the intra-domain Ethernet and IP links are discovered by the
 P-PNCs, using mechanisms, such as LLDP {{IEEE_802.1AB}}, which are
@@ -1251,10 +1254,10 @@ are used.
 In the reference network of {{fig-ref-network}}, there are three types of
 inter-domain links:
 
-- Inter-domain Ethernet links suppoting inter-domain IP links
-between two adjancent IP domains;
+- Inter-domain Ethernet links supporting inter-domain IP links
+between two adjacent IP domains;
 
-- Cross-layer links between an an IP domain and an adjacent optical
+- Cross-technology Ethernet links between an an IP domain and an adjacent optical
 domain;
 
 - Access links between a CE device and a PE router.
@@ -1262,7 +1265,7 @@ domain;
 All the three types of links are Ethernet links.
 
 It is worth noting that the P-PNC may not be aware whether an
-Ethernet interface terminates a cross-layer link, an inter-domain
+Ethernet interface terminates a cross-technology Ethernet link, an inter-domain
 Ethernet link or an access link. The TE Topology Model supports the
 discovery for all these types of links with no need for the P-PNC to
 know the type of inter-domain link.
@@ -1275,7 +1278,7 @@ Although the discovery of access links is outside the scope of this
 document, clarifying the relationship between these two models has
 been identified as a gap.
 
-The inter-domain Ethernet links and cross-layer links are discovered
+The inter-domain Ethernet links and cross-technology Ethernet links are discovered
 by the MDSC using the plug-id attribute, as described in section 4.3
 of {{!RFC8795}}.
 
@@ -1302,43 +1305,41 @@ and needs to be consistent across all the PNCs within the network.
 
 The static configuration requires an administrative burden to
 configure network-wide unique identifiers: it is therefore more
-viable for inter-domain Ethenet links. For the cross-layer links, the
+viable for inter-domain Ethernet links. For the cross-technology Ethernet links, the
 automatic discovery solution based on LLDP snooping is preferable
 when possible.
 
 The routers exchange standard LLDP packets as defined in {{IEEE_802.1AB}}
-and the optical NEs snoop the LLDP packets received from the
+and the optical nodes snoop the LLDP packets received from the
 local Ethernet interface and report to the O-PNCs the extracted
 information, such as the Chassis ID, the Port ID, System Name TLVs.
 
-Note that the optical NEs do not actively participate in the LLDP
+Note that the optical nodes do not actively participate in the LLDP
 packet exchange and does not send any LLDP packets.
 
-{: #cross-layer-link-discovery}
+### Cross-technology Ethernet link Discovery {#cross-technology-link-discovery}
 
-### Cross-layer Link Discovery
-
-The MDSC can discover a cross-layer link by matching the plug-id
+The MDSC can discover a cross-technology Ethernet link by matching the plug-id
 values of the two LTPs reported by two adjacent O-PNC and P-PNC: in
 case LLDP snooping is used, the P-PNC reports the LLDP information
-sent by the corresponding Ethernet interface on the router while the
+sent by the corresponding Ethernet interface on the IP router while the
 O-PNC reports the LLDP information received by the corresponding
-Ethernet interface on the optical NE, e.g., between LTP 5-0 on PE13
-and LTP 7-0 on NE11, as shown in {{fig-cross-layer-link}}.
+Ethernet interface on the optical node, e.g., between LTP 5-0 on PE13
+and LTP 7-0 on NE11, as shown in {{fig-cross-technology-link}}.
 
-{::include ./figures/cross-layer-link.md}
-{: #fig-cross-layer-link title="Cross-layer link discovery"}
+{::include ./figures/cross-technology-link.md}
+{: #fig-cross-technology-link title="Cross-technology Ethernet link discovery"}
 
-As described in {{optical-topology-discovery}}, the LTP terminating a cross-layer link
+As described in {{optical-topology-discovery}}, the LTP terminating a cross-technology Ethernet link
 is reported by an O-PNC in the Ethernet topology or in the OTN
 topology model or in both models, depending on the type of
-corresponding physical port on the optical NE.
+corresponding physical port on the optical node.
 
-It is worth noting that the discovery of cross-layer links is based
+It is worth noting that the discovery of cross-technology Ethernet links is based
 only on the LLDP information sent by the Ethernet interfaces of the
-routers and received by the Ethernet interfaces of the optical NEs.
+routers and snooped by the Ethernet interfaces of the optical nodes.
 Therefore the MDSC can discover these links also before optical
-paths, supporting overlay multi-layer IP links, are setup.
+paths, supporting overlay multi-technology IP links, are setup.
 
 {: #ip-inter-domain-link-discovery}
 
@@ -1355,23 +1356,24 @@ on BR11 and the Ethernet LTP 4-1 on BR21 shown in {{fig-inter-domain-link}}.
 {: #fig-inter-domain-link title="Inter-domain Ethernet and IP link discovery"}
 
 Different information is required to be encoded by the P-PNC within
-the plug-id attribute of the Etherent LTPs to discover cross-layer
+the plug-id attribute of the Ethernet LTPs to discover cross-technology Ethernet
 links and inter-domain Ethernet links.
 
 If the P-PNC does not know a priori whether an Ethernet interface on
-a router terminates a cross-layer link or an inter-domain Ethernet
+an IP router terminates a cross-technology Ethernet link or an inter-domain Ethernet
 link, it has to report at the MPI two Ethernet LTPs representing the
 same Ethernet interface, e.g., both the Ethernet LTP 3-0 and the
-Ethenet LTP 3-1, supported by LTP 3-0, shown in {{fig-inter-domain-link}}:
+Ethernet LTP 3-1, supported by LTP 3-0, shown in {{fig-inter-domain-link}}:
 
 - The physical Ethernet LTP (e.g., LTP 3-0 in BR11, as shown in
 {{fig-inter-domain-link}}) is used to represent the physical adjacency between the
-router Ethernet interface and either the adjacent router Ethernet
-interface (in case of a single-layer Ethernet link) or the optical
-NE Ethernet interface (in case of a multi-layer Ethernet link).
-Therefore, as described in {{cross-layer-link-discovery}}, the P-PNC reports,
+Ethernet interface on an IP router and the Ethernet interface on its physically adjacent node,
+which can be either an IP router
+(in case of a single-technology Ethernet link) or an optical
+node (in case of a multi-technology Ethernet link).
+Therefore, as described in {{cross-technology-link-discovery}}, the P-PNC reports,
 within the plug-id attribute of this LTP, the LLDP information
-sent by the corresponding router Ethernet interface; such as the
+sent by the corresponding Ethernet interface on the IP router; such as the
 {BR11,3} and {BR21,4} plug-id values reported, respectively, by
 the Ethernet LTP 3-0 on BR11 and by the Ethernet LTP 4-0 on BR21,
 as shown in {{fig-inter-domain-link}};
@@ -1379,27 +1381,26 @@ as shown in {{fig-inter-domain-link}};
 - The logical Ethernet LTP (e.g., LTP 3-1 in BR11, as shown in
 {{fig-inter-domain-link}}), supported by a physical Ethernet LTP (e.g., LTP 3-0 in
 BR11, as shown in {{fig-inter-domain-link}}), is used to discover the logical
-adjacency between router Ethernet interfaces, which can be either
-single-layer or multi-layer. Therefore, the P-PNC reports, within
+adjacency between the Ethernet interfaces on IP routers, which can be either
+single-technology or multi-technology. Therefore, the P-PNC reports, within
 the plug-id attribute of this LTP, the LLDP information sent and
-received by the corresponding router Ethernet interface; such as
+received by the corresponding Ethernet interface on the IP router; such as
 the {BR11,3,BR21,4} plug-id values reported by the Ethernet LTP 3-1 on BR11 and by the Ethernet LTP 4-1 on BR21, as shown in {{fig-inter-domain-link}}.
 
-It is worth noting that in case of an inter-domain single-layer
-Ethernet links, the MDSC cannot discover, using the the LLDP
+It is worth noting that in case of an inter-domain Ethernet links, the MDSC cannot discover, using the LLDP
 information reported in the plug-id attributes, the physical
-adjacency between the two router Ethernet interfaces because these
+adjacency between the two Ethernet interfaces on physically adjacent IP routers, because these
 two plug-id values do not match, such as the plug-id values {BR11,3}
 and {BR21,4} shown in {{fig-inter-domain-link}}. However, the MDSC may infer the
 physical intra-domain Ethernet links if it knows a priori, using
 mechanisms which are outside the scope of this document, that the
-Ethernet interfaces on the routers either terminates a cross-layer
-link or a single-layer (intra-domain or inter-domain) Ethernet link,
+Ethernet interfaces on the IP routers either terminates a cross-technology
+link or a single-technology (intra-domain or inter-domain) Ethernet link,
 e.g., as shown in {{fig-inter-domain-link}}.
 
 The P-PNC can omit reporting the physical Ethernet LTPs when it
 knows, by mechanisms which are outside the scope of this document,
-that the corresponding router Ethernet interfaces terminate single-layer inter-domain Ethernet links.
+that the corresponding Ethernet interfaces terminate inter-domain Ethernet links.
 
 The MDSC can then discover an inter-domain IP link between the two IP
 LTPs that are supported by the two Ethernet LTPs terminating an
@@ -1408,70 +1409,71 @@ e.g., between the IP LTP 3-2 on BR21 and the IP LTP 4-2 on BR22,
 supported respectively by the Ethernet LTP 3-1 on BR11 and by the
 Ethernet LTP 4-1 on BR21, as shown in {{fig-inter-domain-link}}.
 
-{: #multi-layer-link-discovery}
+{: #multi-technology-link-discovery}
 
-## Multi-layer IP Link Discovery
+## Multi-technology IP Link Discovery
 
-A multi-layer intra-domain IP link and its supporting multi-layer
+A multi-technology intra-domain IP link and its supporting multi-technology
 intra-domain Ethernet link are discovered by the P-PNC like any other
 intra-domain IP and Ethernet links, as described in {{packet-topology-discovery}}, and
 reported at the MPI within the packet and the Ethernet network
-topologies, e.g., as shown in {{fig-multi-layer-link}}.
+topologies, e.g., as shown in {{fig-multi-technology-link}}.
 
-{::include ./figures/intra-domain-multi-layer-link.md}
-{: #fig-multi-layer-link title="Multi-layer intra-domain Ethernet and IP link discovery"}
+{::include ./figures/multi-technology-intra-domain-link.md}
+{: #fig-multi-technology-link title="Multi-technology intra-domain Ethernet and IP link discovery"}
 
 The P-PNC does not report any plug-id information on the logical
 Ethernet LTPs terminating intra-domain Ethernet links, such as the
-LTP 5-1 on PE13 and LTP 6-1 in BR11 shown in {{fig-multi-layer-link}}, since these
+LTP 5-1 on PE13 and LTP 6-1 in BR11 shown in {{fig-multi-technology-link}}, since these
 links are discovered by the PNC.
 
 In addition, the P-PNC also reports the physical Ethernet LTPs that
-terminate the cross-layer links supporting the multi-layer intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the
-Ethernet LTP 6-0 on BR11, shown in {{fig-multi-layer-link}}.
+terminate the cross-technology Ethernet links supporting the multi-technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the
+Ethernet LTP 6-0 on BR11, shown in {{fig-multi-technology-link}}.
 
 The MDSC discovers, using the mechanisms described in {{inter-domain-link-discovery}},
-which Ethernet cross-layer links support the multi-layer intra-domain
+which cross-technology Ethernet links support the multi-technology intra-domain
 Ethernet links, e.g., the link between LTP 5-0 on PE13 and LTP 7-0 on
-NE11, shown in {{fig-multi-layer-link}}.
+NE11, shown in {{fig-multi-technology-link}}.
 
 The MDSC also discovers, from the information provided by the O-PNC
 and described in {{optical-path-discovery}}, which optical tunnels support the
-multi-layer intra-domain IP links and therefore the path within the
-optical network that supports a multi-layer intra-domain IP link,
-e.g., as shown in {{fig-multi-layer-link}}.
+multi-technology intra-domain IP links and therefore the path within the
+optical network that supports a multi-technology intra-domain IP link,
+e.g., as shown in {{fig-multi-technology-link}}.
 
-{: #single-layer-link-discovery-discovery}
+{: #single-technology-link-discovery-discovery}
 
-### Single-layer Intra-domain IP Links
+### Intra-domain single-technology IP Links
 
 It is worth noting that the P-PNC may not be aware of whether an
-Ethernet interface on the router terminates a multi-layer or a
-single-layer intra-domain Ethernet link.
+Ethernet interface on the IP router terminates a multi-technology or a
+single-technology intra-domain Ethernet link.
 
 In this case, the P-PNC, always reports two Ethernet LTPs for each
-Ethernet interface on the router, e.g., the Ethernet LTP 1-0 and 1-1
+Ethernet interface on the IP router, e.g., the Ethernet LTP 1-0 and 1-1
 on PE13, shown in {{fig-intra-domain-link}}.
 
-{::include ./figures/intra-domain-single-layer-link.md}
-{: #fig-intra-domain-link title="Single-layer intra-domain Ethernet and IP link discovery"}
+{::include ./figures/single-technology-intra-domain-link.md}
+{: #fig-intra-domain-link title="Single-technology intra-domain Ethernet and IP link discovery"}
 
-It is worth noting that in case of an intra-domain single-layer
+It is worth noting that in case of an intra-domain single-technology
 Ethernet links, the MDSC cannot discover, using the LLDP information
-reported in the plug-id attributes, the physical adjacency between
-the two router Ethernet interfaces because the two plug-id values do
+reported in the plug-id attributes, the physical adjacency
+between the two Ethernet interfaces on physically adjacent IP routers,
+because the two plug-id values do
 not match, such as the plug-id values {PE13,1} and {P16,2} shown in
 {{fig-intra-domain-link}}. However, the MDSC may infer the physical intra-domain
 Ethernet links, e.g., between LTP 1-0 on PE13 and LTP 2-0 on P16, as
 shown in {{fig-intra-domain-link}}, if it knows a priori, using mechanisms which are
 outside the scope of this document, that all the Ethernet interfaces
-on the routers either terminates a cross-layer link or a single-layer
+on the IP routers either terminates a cross-technology or a single-technology
 (intra-domain or inter-domain) Ethernet link, e.g., as shown in
 {{fig-intra-domain-link}}.
 
 The P-PNC can omit reporting the physical Ethernet LTP if it knows,
 by mechanisms which are outside the scope of this document, that the
-intra-domain Ethernet link is single-layer.
+intra-domain Ethernet link is single-technology.
 
 {: #lag-discovery}
 
@@ -1495,12 +1497,12 @@ P24.
 {::include ./figures/lag.md}
 {: #fig-lag title="LAG"}
 
-The mechanisms used by the MDSC to discover single-layer and multi-layer intra-domain LAG link is the same (the only difference being
-whether the bundled links are single-layer or multi-layer).
+The mechanisms used by the MDSC to discover single-technology and multi-technology intra-domain LAG link is the same (the only difference being
+whether the bundled links are single-technology or multi-technology).
 
-Instead, the mechanisms used by the MDSC to discover single-layer
+Instead, the mechanisms used by the MDSC to discover single-technology
 inter-domain LAG links between two BRs are different and outside the
-scope of this document since they do not imply any cross-layer
+scope of this document since they do not imply any cross-technology
 coordination between packet and optical domains.
 
 As described in {{packet-topology-discovery}}, the mechanisms used by the P-PNC to
@@ -1513,29 +1515,29 @@ number of its LAG members (Aggregation Ports).
 
 If LLDP is enabled on both LAG members and groups, two types of LLDP
 packets are transmitted by the routers and received by the optical
-NEs on some cross-layer links: one sent for the LLDP session
+nodes on some cross-technology Ethernet links: one sent for the LLDP session
 configured at LAG member (Aggregation Port)level and another one for
 the LLDP session configured at LAG group (Aggregated Port)level. This
 could cause some issues when LLDP snooping is used to discover the
-cross-layer links, as defined in {{cross-layer-link-discovery}}.
+cross-technology Ethernet links, as defined in {{cross-technology-link-discovery}}.
 
-The cross-layer link discovery is based only on the LLDP session
+The cross-technology Ethernet link discovery is based only on the LLDP session
 configured on the LAG members (Aggregation Ports) to allow discovery
 of these links independently from the configuration of the underlay
 optical tunnel or from the LAG group.
 
-To avoid any ambiguity on how the optical NEs can identify which LLDP
+To avoid any ambiguity on how the optical nodes can identify which LLDP
 packets belong to which LLDP session, the P-PNC can disable the LLDP
-sessions on the LAG groups configured by the MDSC (e.g., the multi-layer single-domain LAG groups configured using the mechanisms
+sessions on the LAG groups configured by the MDSC (e.g., the multi-technology single-domain LAG groups configured using the mechanisms
 described in {{lag-setup}}), keeping the LLDP sessions on the LAG
 members enabled.
 
 Another option is to rely on other mechanisms (e.g., the Port type
 field in the Link Aggregation TLV defined in Annex F of {{IEEE_802.1AX}})
-that allow the optical NE to identify which LLDP packets
+that allow the optical node to identify which LLDP packets
 belong to which LLDP session: the O-PNC can then use only the LLDP
 information from the LLDP sessions configured on the LAG members to
-support the cross-layer link discovery mechanisms defined in {{cross-layer-link-discovery}}.
+support the cross-technology Ethernet link discovery mechanisms defined in {{cross-technology-link-discovery}}.
 
 {: #vpn-discovery}
 
@@ -1547,9 +1549,9 @@ packet TE tunnels (e.g., MPLS-TE or SR-TE) are used by each L2/L3 VPN
 service, using the L2NM and L3NM TE service mapping models.
 
 The MDSC can use the information mentioned above together with the
-packet TE path, packet topology, multi-layer IP links, optical
+packet TE path, packet topology, multi-technology IP links, optical
 topology and optical path information discovered as described in the
-previous sections, to discover the multi-layer path used to carry the
+previous sections, to discover the multi-technology path used to carry the
 traffic for each L2/L3 VPN service.
 
 {: #inventory-discovery}
@@ -1621,11 +1623,11 @@ For example, the multi-layer/multi-domain performed by the MDSC could
 require the setup of:
 
 - a new underlay optical tunnel between PE13 and BR11, supporting a
-new IP link, as described in {{multi-layer-link-setup}};
+new IP link, as described in {{multi-technology-link-setup}};
 
 - a new underlay optical tunnel between BR21 and P24 to increase the
 bandwidth of the IP link(s) between BR21 and P24, as described in
-{{multi-layer-link-setup}}.
+{{multi-technology-link-setup}}.
 
 When the setup of the L2/L3 VPN network service requires multi-domain
 and multi-layer coordination, the MDSC is also responsible for
@@ -1636,17 +1638,17 @@ domains.
 The MDSC would therefore request:
 
 - the O-PNC1 to setup a new optical tunnel between the ROADMs
-connected to PE13 and P16, as described in {{multi-layer-link-setup}};
+connected to PE13 and P16, as described in {{multi-technology-link-setup}};
 
 - the P-PNC1 to update the configuration of the existing IP link, in
-case of LAG, or configure a new IP link, in case of ECMP, between
-PE13 and P16, as described in {{multi-layer-link-setup}};
+case of LAG, or configure a new IP link, in case of Equal Cost Multi-Path (ECMP), between
+PE13 and P16, as described in {{multi-technology-link-setup}};
 
 - the P-PNC1 to update the bandwidth of the selected TE path between
 PE13 and PE14, as described in {{te-path-config}}.
 
 After that, the MDSC requests P-PNC2 to setup a TE path between BR21
-and PE23, with an explicit path (BR21, P24, PE23) to constrainthis
+and PE23, with an explicit path (BR21, P24, PE23) to constrain this
 new TE path to use the new underlay optical tunnel setup between BR21
 and P24, as described in {{te-path-config}}. The P-PNC2 properly configures
 the routers within its domain to setup the requested path and returns
@@ -1687,7 +1689,7 @@ usually performed by the O-PNCs.
 When performing multi-layer/multi-domain path computation, the MDSC
 can delegate the O-PNC for single-domain optical path computation.
 
-As described in {{optical-topology-discovery}}, {{inter-domain-link-discovery}} and {{multi-layer-link-discovery}}, there is a one-to-one
+As described in {{optical-topology-discovery}}, {{inter-domain-link-discovery}} and {{multi-technology-link-discovery}}, there is a one-to-one
 relationship between a multi-layer intra-domain IP link and its
 underlay optical tunnel. Therefore, the properties of an optical path
 between two optical TTPs, as computed by the O-PNC, can be used by
@@ -1708,32 +1710,32 @@ Optical technology-specific augmentation for the path computation RPC
 is identified as a gap requiring further work outside of this draft's
 scope.
 
-{: #multi-layer-link-setup}
+{: #multi-technology-link-setup}
 
-## Multi-layer IP Link Setup
+## Multi-technology IP Link Setup
 
 As described in {{optical-path-computation}}, there is a one-to-one relationship
-between a multi-layer intra-domain IP link and its underlay optical
+between a multi-technology intra-domain IP link and its underlay optical
 tunnel.
 
-Therefore, to setup a new multi-layer intra-domain IP link, the MDSC
+Therefore, to setup a new multi-technology intra-domain IP link, the MDSC
 requires the O-PNC to setup the  optical tunnel (using either the WDM
 Tunnel model or the OTN Tunnel model, if the optional OTN switching
 is supported) within the optical network and to steer the client
-traffic between the two cross-layer links over that optical tunnel,
+traffic between the two cross-technology Ethernet links over that optical tunnel,
 using either the Ethernet Client Signal Model (for frame-based
 transport) or the Transparent CBR Client Signal Model (for
 transparent transport).
 
-For example, with a reference to {{fig-multi-layer-link-2}}, the MDSC can request the
+For example, with a reference to {{fig-multi-technology-link-2}}, the MDSC can request the
 O-PNC1 to setup an optical tunnel between the optical TTPs (7) on
 NE11 and (8) on NE12 and to steer over this tunnel the client traffic
 between LTP (7-0) on NE11 and LTP (8-0) on NE12.
 
-{::include ./figures/intra-domain-multi-layer-link.md}
-{: #fig-multi-layer-link-2 title="Multi-layer IP link setup"}
+{::include ./figures/multi-technology-intra-domain-link.md}
+{: #fig-multi-technology-link-2 title="Multi-technology IP link setup"}
 
-Note: {{fig-multi-layer-link-2}} is an exact copy of {{fig-multi-layer-link}}.
+Note: {{fig-multi-technology-link-2}} is an exact copy of {{fig-multi-technology-link}}.
 
 After the optical tunnel has been setup and the client traffic
 steering configured, the two IP routers can exchange Ethernet frames
@@ -1741,64 +1743,64 @@ between themselves, including LLDP messages.
 
 If LLDP {{IEEE_802.1AB}} or any other discovery mechanisms, which are
 outside the scope of this document, is used between the adjacency
-between the two routers' ports, the P-PNC can automatically discover
-the underlay multi-layer single-domain Ethernet link being set up by
-the MDSC and report it to the P-PNC, as described in {{multi-layer-link-discovery}}.
+between the two IP routers' ports, the P-PNC can automatically discover
+the underlay multi-technology single-domain Ethernet link being set up by
+the MDSC and report it to the P-PNC, as described in {{multi-technology-link-discovery}}.
 
 Otherwise, if there are no automatic discovery mechanisms, the MDSC
-can configure this multi-layer single-domain Ethernet link at the MPI
+can configure this multi-technology single-domain Ethernet link at the MPI
 of the P-PNC.
 
-The two Ethernet LTPs terminating this multi-layer single-domain
+The two Ethernet LTPs terminating this multi-technology single-domain
 Ethernet link are supported by the two underlay Ethernet LTPs
-terminating the two cross-layer links, e.g., the LTP 5-1 on PE13 and
-6-1 on BR11 shown in {{fig-multi-layer-link-2}}.
+terminating the two cross-technology Ethernet links, e.g., the LTP 5-1 on PE13 and
+6-1 on BR11 shown in {{fig-multi-technology-link-2}}.
 
-After the multi-layer single-domain Ethernet link has been configured
-by the MDSC or discovered by the P-PNC, the corresponding multi-layer
+After the multi-technology single-domain Ethernet link has been configured
+by the MDSC or discovered by the P-PNC, the corresponding multi-technology
 single-domain IP link can also be configured either by the MDSC or by
 the P-PNC.
 
 This document assumes that this IP link is configured by the P-PNC.
 
 It is worth noting that if LAG is not supported within the domain
-controlled by the P-PNC, the P-PNC can configure the multi-layer
-single-domain IP link as soon as the underlay multi-layer single-domain Ethernet link is either discovered by the P-PNC or configured
+controlled by the P-PNC, the P-PNC can configure the multi-technology
+single-domain IP link as soon as the underlay multi-technology single-domain Ethernet link is either discovered by the P-PNC or configured
 by the MDSC at the MPI. However, if LAG is supported the P-PNC has
 not enough information to know whether the discovered/configured
-multi-layer single-domain Ethernet link would be:
+multi-technology single-domain Ethernet link would be:
 
-1. Used to support a multi-layer single-domain IP link;
+1. Used to support a multi-technology single-domain IP link;
 
 2. Used to create a new LAG group;
 
 3. Added to an existing LAG group.
 
-Therefore the P-PNC does not take any further action after a multi-layer single-domain Ethernet link is discovered or configured by the
+Therefore the P-PNC does not take any further action after a multi-technology single-domain Ethernet link is discovered or configured by the
 MDSC at the MPI.
 
-The MDSC can request the P-PNC to configure a new multi-layer single-domain IP link, supported by the the just discovered or configured
-multi-layer single-domain Ethernet link, by creating an IP link
+The MDSC can request the P-PNC to configure a new multi-technology single-domain IP link, supported by the the just discovered or configured
+multi-technology single-domain Ethernet link, by creating an IP link
 within the running datastore of the P-PNC MPI. Only the IP link, IP
-LTPs and the reference to the supporting multi-layer single-domain
+LTPs and the reference to the supporting multi-technology single-domain
 Ethernet link are configured by the MDSC. All the other configuration
 is provided by the P-PNC.
 
-For example, with a reference to {{fig-multi-layer-link-2}}, the MDSC can request the
-P-PNC1 to setup a multi-layer single-domain IP Link between IP LTP 5-2 on PE13 and IP LTP 6-2 on BR11 supported by the multi-layer single-domain Ethernet link between ETH LTP 5-1 on PE13 and ETH LTP 6-1 on
+For example, with a reference to {{fig-multi-technology-link-2}}, the MDSC can request the
+P-PNC1 to setup a multi-technology single-domain IP Link between IP LTP 5-2 on PE13 and IP LTP 6-2 on BR11 supported by the multi-technology single-domain Ethernet link between ETH LTP 5-1 on PE13 and ETH LTP 6-1 on
 BR11.
 
-The P-PNC configures the requested multi-layer single-domain IP link
+The P-PNC configures the requested multi-technology single-domain IP link
 and, once finished, reports it to the MDSC within the IP topology
 exposed at its MPI.
 
 {: #lag-setup}
 
-### Multi-layer LAG Setup
+### Multi-technology LAG Setup
 
 The P-PNC configures a new LAG group between two routers when the
 MDSC creates at the MPI a new Ethernet bundled link (using the
-bundled-link container defined in {{!RFC8795}}) bundling the multi-layer
+bundled-link container defined in {{!RFC8795}}) bundling the multi-technology
 single-domain Ethernet link(s) being created, as described above.
 
 When a new LAG link is created, it is also recommended to configure
@@ -1812,29 +1814,29 @@ member links is missing in {{!I-D.ietf-ccamp-eth-client-te-topo-yang}} and this 
 gap in {{conclusions}}.
 
 It is worth noting that a new LAG group can be created to bundle one
-or more multi-layer single-domain Ethernet link(s).
+or more multi-technology single-domain Ethernet link(s).
 
 For example, with a reference to {{fig-lag}}, the MDSC can request the
 P-PNC2 to setup an Ethernet bundled link between the Ethernet LTP 5-1
-on BR21 and the Ethernet LTP 6-1 on P24, bundling the multi-layer
+on BR21 and the Ethernet LTP 6-1 on P24, bundling the multi-technology
 single-domain Ethernet link between the Ethernet LTP 1-1 on BR21 and
 the Ethernet LTP 2-1 on P24.
 
 It is worth noting that the MDSC needs to create also the Ethernet
 LTPs terminating the Ethernet bundled link.
 
-The MDSC can request the P-PNC to configure a new multi-layer single-domain IP link, supported by the the just configured Ethernet bundled
-link, following the same procedure described in {{multi-layer-link-setup}} above.
+The MDSC can request the P-PNC to configure a new multi-technology single-domain IP link, supported by the the just configured Ethernet bundled
+link, following the same procedure described in {{multi-technology-link-setup}} above.
 
 For example, with a reference to {{fig-lag}}, the MDSC can request the
-P-PNC2 to setup a multi-layer single-domain IP Link between IP LTP 5-2 on BR21 and IP LTP 6-2 on P24 supported by the Ethernet bundle link
+P-PNC2 to setup a multi-technology single-domain IP Link between IP LTP 5-2 on BR21 and IP LTP 6-2 on P24 supported by the Ethernet bundle link
 between ETH LTP 5-1 on BR21 and the Ethernet LTP 6-1 on P24.
 
-### Multi-layer LAG Update
+### Multi-technology LAG Update
 
 The P-PNC adds new member(s) to an existing LAG group when the MDSC
 updates at the MPI the configuration of an existing Ethernet bundled
-link adding the multi-layer single-domain Ethernet link(s) being
+link adding the multi-technology single-domain Ethernet link(s) being
 created, as described above.
 
 When member links are added or removed from a LAG link, the minimum
@@ -1842,23 +1844,23 @@ number of active member links required to consider the LAG link as
 being up may also need to be updated.
 
 For example, with a reference to {{fig-lag}}, the MDSC can request the
-P-PNC2 to add the multi-layer single-domain Ethernet link setup
+P-PNC2 to add the multi-technology single-domain Ethernet link setup
 between the Ethernet LTP 3-1 on BR21 and the Ethernet LTP 4-1 on P24
 to the existing Ethernet bundle link setup between the Ethernet LTP
 5-1 on node BR21 and the Ethernet LTP 6-1 on node P24.
 
 After the LAG configuration has been updated, the P-PNC can also
-update the bandwidth information of the multi-layer single-domain IP
+update the bandwidth information of the multi-technology single-domain IP
 link supported by the updated Ethernet bundled link.
 
-{: #multi-layer-path-properties}
+{: #multi-technology-path-properties}
 
-### Multi-layer TE path properties Configuration
+### Multi-technology TE path properties Configuration
 
 The MDSC can discover the TE path properties (e.g., the list of
-SRLGs, the delay) of a multi-layer IP link from the TE properties of:
+SRLGs, the delay) of a multi-technology IP link from the TE properties of:
 
-- the IP LTPs terminating the multi-layer IP link (e.g., the list of
+- the IP LTPs terminating the multi-technology IP link (e.g., the list of
 SRLGs reported by the P-PNC using the packet TE topology model);
 
 - the optical path (e.g., the list of SRLGs reported by the O-PNC
@@ -1868,7 +1870,7 @@ using the WDM or OTN tunnel model); and
 OTN and the packet TE topology models).
 
 The MDSC can also report this information to the P-PNC by properly
-configuring the multi-layer IP link properties using the packet TE
+configuring the multi-technology IP link properties using the packet TE
 topology model at the packet PNC MPI.
 
 This information is used by the P-PNC at least when computing the
@@ -1876,7 +1878,7 @@ local protection path, as described in {{te-path-config}}, e.g., to ensure
 that the local protection path is SRLG disjoint with the primary
 path.
 
-It is worth noting that the list of SRLGs for a multi-layer IP link
+It is worth noting that the list of SRLGs for a multi-technology IP link
 can be quite long. Implementation-specific mechanisms can be
 implemented by the MDSC or by the O-PNC to summarize the SRLGs of an
 optical tunnel. These mechanisms are implementation-specific and have
@@ -1910,7 +1912,7 @@ model should be defined to allow the MDSC to configure the binding
 SIDs to be used for the multi-domain SR-TE path stitching and to
 allow the P-PNC to report the binding SID assigned to the segment TE
 paths. Note that the assigned binding SID should be persistent in
-case router or P-PNC rebooting.
+case IP router or P-PNC rebooting.
 
 The MDSC can also use the {{!I-D.ietf-teas-yang-te}} model to request the P-PNC to
 increase the bandwidth allocated to an existing TE path, and, if
@@ -1919,13 +1921,9 @@ both symmetric and asymmetric bandwidth configuration in the two
 directions.
 
 \[Editor's Note:] Add some text about the protection options (to
-further discuss whether to put this text here or in {{multi-layer-link-setup}}).
+further discuss whether to put this text here or in {{multi-technology-link-setup}}).
 
-The MDSC also request the P-PNC to configure local protection
-mechanisms. For example, in case of SR-TE domain, the TI-LFA local
-protection, as defined in {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}}: the mechanisms to request the
-configuration TI-LFA local protection for SR-TE paths using the {{!I-D.ietf-teas-yang-te}}
-are a gap in the current YANG models.
+The MDSC also request the P-PNC to configure local protection mechanisms. For example, the FRR local protection, as defined in {{?RFC4090}} in case of MPLS-TE domain or the TI-LFA local protection, as defined in {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}} in case of SR-TE domain. The  mechanisms to request the configuration TI-LFA local protection for SR-TE paths using the {{!I-D.ietf-teas-yang-te}} are a gap in the current YANG models.
 
 The requested local protection mechanisms within the P-PNC domain are
 configured by the P-PNC through implementation specific mechanisms
@@ -1933,8 +1931,8 @@ which are outside the scope of this document.
 
 The P-PNC takes into account the multi-layer TE path properties
 (e.g., SRLG information), configured by the MDSC as described in
-{{multi-layer-path-properties}}, when computing the protection configuration (e.g., in
-case of SR-TE domains, the TI-LFA post-convergence path for multi-layer single-domain IP links).
+{{multi-technology-path-properties}}, when computing the protection configuration (e.g., in
+case of SR-TE domains, the TI-LFA post-convergence path or, in case of MPLS-TE domain, the FRR backup tunnel) for multi-technology single-domain IP links.
 
 SR-TE path setup and update (e.g., bandwidth increase) through MPI is
 identified as a gap requiring further work, which is outside of the
@@ -1989,7 +1987,7 @@ identified in {{optical-path-computation}} and the solution in {{?I-D.ietf-ccamp
 has been proposed to resolve it;
 
 - relationship between a common discovery mechanisms applicable to
-access links, inter-domain IP links and cross-layer links and the
+access links, inter-domain IP links and cross-technology Ethernet links and the
 UNI topology discover mechanism defined in {{?RFC9408}}: this gap has
 been identified in {{packet-topology-discovery}};
 
@@ -2025,7 +2023,7 @@ Tunnel model, defined in {{!I-D.ietf-teas-yang-te}}, needs also to be enhanced t
 support scenarios where multiple parallel TE paths are used in load-balancing to carry the traffic between two end-points (e.g., VPN
 traffic between two PEs).
 
-# Security Considerations
+# Security Considerations {#security}
 
 This document highlights how the ACTN architecture can deploy packet
 over optical infrastructure services. It highlights how existing IETF
@@ -2052,12 +2050,45 @@ Based Access Control (RBAC), which should also ensure that MDSC to
 PNC communication is based on authorised use and granular control of
 connectivity and resource requests.
 
+## LLDP Snooping Security Considerations
+
+Earlier in the document, LLDP is discussed as a mechanism for the PNCs to discover the intra-domain Ethernet and IP links. While LLDP provides valuable information for network management and troubleshooting, it also presents several security issues:
+
+- Eavesdropping: LLDP transmissions are not encrypted. Potentially, LLDP packets could be captured using a packet sniffer. An attacker can leverage this information to gain insights into the network topology, device types, and configurations, which could be used for further attacks;
+
+- Unauthorized Access: Information disclosed by LLDP can include device types, software versions, and network configuration details. This might help an attacker identify vulnerable devices or configurations that can be exploited to gain unauthorized access or escalate privileges within the network;
+
+- Data Manipulation: If an attacker gains access to a network device, they could manipulate LLDP information to advertise false device information, leading to potential misconfigurations or trust relationships being exploited. This can disrupt network operations or redirect traffic to malicious devices;
+
+- Denial of Service (DoS): By flooding the network with fake LLDP packets, an attacker could overwhelm network devices or management systems, potentially leading to a denial of service where legitimate network traffic is disrupted;
+
+- Spoofing: An attacker could spoof LLDP packets to impersonate other network devices. Potentially, this might lead to incorrect network mappings or trust relationships being established with malicious devices;
+
+- Lack of Authentication: LLDP does not include mechanisms for authenticating the source of LLDP messages, which means that devices accept LLDP information from any source as legitimate.
+
+To mitigate these security issues, network administrators might implement several security measures, including:
+
+- Disabling LLDP on ports where it is not needed, especially those facing untrusted networks;
+
+- Using network segmentation and Access Control Lists (ACLs) to limit who can send and receive LLDP packets;
+
+- Employing network monitoring and anomaly detection systems to identify unusual LLDP traffic patterns that may indicate an attack;
+
+- Regularly updating and patching network devices to address known vulnerabilities that could be exploited through information gathered via LLDP.
+
 # Operational Considerations
 
-Telemetry data, such as collecting lower-layer networking health and
-consideration of network and service performance from POI domain
-controllers, may be required. These requirements and capabilities
-will be discussed in future versions of this document.
+This document has identified the need and enabling components for automating the management and control of multi-layer Service Providers' transport networks, combining the optical and microwave transport layer with the packet (IP/MPLS) layer to create a more efficient and scalable network infrastructure. This approach is particularly beneficial for Service Providers and large enterprises dealing with high bandwidth demands and looking for cost-effective ways to expand their networks. However, integrating these two traditionally separate network layers involves several operational considerations:
+
+- Network Design and Capacity Planning: Deciding the degree of integration between the packet and optical layers is critical. Furthermore, this includes determining whether to pursue a loose integration (keeping layers distinct but coordinated) or a tight integration (combining layers more closely, potentially at the hardware level) coordinated via the MDSC. Accurate forecasting and planning will also be essential to ensure that the integrated ACTN infrastructure can handle future capacity demand without excessive over-provisioning;
+
+- System Interoperability: Networks often comprise equipment from various vendors. Ensuring that packet and optical devices can interoperate seamlessly and the PNCs can manage them is crucial for a successful integration. The Service Provider must also check with the vendors to ensure they support the IETF-based technologies outlined in this document;
+
+- Performance Monitoring: The integrated POI network will require comprehensive monitoring solutions that can provide visibility to the PNCs across both packet and optical layers. Identifying and diagnosing issues may become more complex with integrated layers. Telemetry data may also be required to collect lower-layer networking health and consider network and service performance. This topic is further discussed in [ACTN Assurance];
+
+- Fault Management and Recovery: The POI networks should be resilient, including considerations for automatic protection switching and fast reroute mechanisms that span both layers. Fault isolation and recovery may become more challenging, as issues in one layer can have cascading effects on the other. Effective fault management strategies must be in place to quickly identify and rectify such issues. This topic is further discussed in [ACTN Assurance];
+
+Specific Security Considerations are discussed in {{security}}.
 
 # IANA Considerations
 
@@ -2170,7 +2201,7 @@ The focus is on client-side protection scheme between IP router and
 reconfigurable ROADM. Scenario here is to define only one port in the
 routers and in the ROADM muxponder board at both ends as back-up
 ports to recover any other port failure on client-side of the ROADM
-(either on router port side or on muxponder side or on the link
+(either on the IP router port side or on the muxponder side or on the link
 between them). When client-side port failure occurs, alarms are
 raised to MDSC by IP-PNC and O-PNC (port status down, LOS etc.). MDSC
 checks with OP-PNC(s) that there is no optical failure in the optical
@@ -2178,17 +2209,17 @@ layer.
 
 There can be two cases here:
 
-1. LAG was defined between the two end routers. MDSC, after checking
-that optical layer is fine between the two end ROADMs, triggers
-the ROADM configuration so that the router back-up port with its
-associated muxponder port can reuse the OCh that was already in
-use previously by the failed router port and adds the new link to
+1. LAG was defined between the IP routers at the two ends. MDSC, after checking
+that optical layer is fine between the two edge WDM nodes, triggers
+the WDM edge node re-configuration so that the IP router's back-up port with its
+associated muxponder port can reuse the WDM tunnel that was already in
+use previously by the failed IP router port and adds the new link to
 the LAG on the failure side.
 
    While the ROADM reconfiguration takes place, IP/MPLS traffic is
    using the reduced bandwidth of the IP link bundle, discarding
    lower priority traffic if required. Once back-up port has been
-   reconfigured to reuse the existing OCh and new link has been added
+   reconfigured to reuse the existing WDM tunnel and the new link has been added
    to the LAG then original Bandwidth is recovered between the end
    routers.
 
@@ -2196,20 +2227,20 @@ the LAG on the failure side.
    level so that there is nothing triggered at MPLS level when one of
    the link member of the LAG fails.
 
-1. If there is no LAG then the scenario is not clear since a router
+1. If there is no LAG then the scenario is not clear since a IP router
 port failure would automatically trigger (through BFD failure)
 first a sub-50ms protection at MPLS level :FRR (MPLS RSVP-TE case)
 or TI-LFA (MPLS based SR-TE case) through a protection port. At
 the same time MDSC, after checking that optical network connection
 is still fine, would trigger the reconfiguration of the back-up
-port of the router and of the ROADM muxponder to re-use the same
-OCh as the one used originally for the failed router port. Once
+port of the IP router and of the muxponder to re-use the same
+WDM tunnel as the one used originally for the failed IP router port. Once
 everything has been correctly configured, MDSC Global PCE could
 suggest to the operator to trigger a possible re-optimization of
 the back-up MPLS path to go back to the  MPLS primary path through
-the back-up port of the router and the original OCh if overall
+the back-up port of the IP router and the original WDM tunnel if overall
 cost, latency etc. is improved. However, in this scenario, there
-is a need for protection port PLUS back-up port in the router
+is a need for protection port PLUS back-up port in the IP router
 which does not lead to clear port savings.
 
 {: #muxponder}
