@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-04T00:41:09.725999+00:00",
+  "timestamp": "2024-07-07T00:45:11.285727+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -67,6 +67,11 @@
       "name": "editorial",
       "description": "",
       "color": "E4CCF3"
+    },
+    {
+      "name": "need discussion",
+      "description": "",
+      "color": "FBCA04"
     }
   ],
   "issues": [
@@ -995,11 +1000,12 @@
         "jbouqui153"
       ],
       "labels": [
-        "documentation"
+        "documentation",
+        "need discussion"
       ],
       "body": "In section 3.2.3 YANG data models at the packet MPI we mentioned [CLIENT-TOPO] (https://datatracker.ietf.org/doc/draft-zheng-ccamp-client-topo-yang/ ). We should discuss further as for L3NM/L2NM, the authors are considering a recent draft proposal [UNI-TOPO] (https://datatracker.ietf.org/doc/draft-ogondio-opsawg-uni-topology/) which augments RFC8345 with the service attachment point abstraction for L3 or L2 VPNs network services. \r\n",
       "createdAt": "2020-11-12T17:37:08Z",
-      "updatedAt": "2024-02-13T17:03:42Z",
+      "updatedAt": "2024-07-05T14:40:17Z",
       "closedAt": null,
       "comments": [
         {
@@ -1538,7 +1544,7 @@
       "id": "MDU6SXNzdWU3ODQzMzgwMTA=",
       "title": "LLDP snooping security issues",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/40",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1550,8 +1556,8 @@
       ],
       "body": "Describe LLDP snooping security considerations.\r\n",
       "createdAt": "2021-01-12T15:23:54Z",
-      "updatedAt": "2024-06-12T22:40:44Z",
-      "closedAt": null,
+      "updatedAt": "2024-07-05T14:38:51Z",
+      "closedAt": "2024-07-05T14:38:51Z",
       "comments": [
         {
           "author": "danielkinguk",
@@ -1623,7 +1629,7 @@
       "id": "MDU6SXNzdWU3ODQzNDMwMDc=",
       "title": "Operational Considerations",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/42",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1635,8 +1641,8 @@
       ],
       "body": "Provide some short text for the operational considerations.\r\n",
       "createdAt": "2021-01-12T15:30:10Z",
-      "updatedAt": "2024-06-26T10:53:43Z",
-      "closedAt": null,
+      "updatedAt": "2024-07-05T14:38:51Z",
+      "closedAt": "2024-07-05T14:38:50Z",
       "comments": [
         {
           "author": "danielkinguk",
@@ -2629,7 +2635,7 @@
       "id": "I_kwDOC9D8a85ETjZl",
       "title": "Reconcile WDM terminology with optical-impairment draft",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/78",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2642,8 +2648,8 @@
       ],
       "body": "In the context of optical impairment draft the WDM terminology has been clarified\r\n\r\nIt would be worthwhile to align the terminology with the draft and use these terms consistently in the POI draft as well:\r\n- WDM node\r\n- WDM-TE node\r\n- ROADM\r\n",
       "createdAt": "2022-02-21T15:59:53Z",
-      "updatedAt": "2024-05-27T13:48:50Z",
-      "closedAt": null,
+      "updatedAt": "2024-07-05T14:38:49Z",
+      "closedAt": "2024-07-05T14:38:49Z",
       "comments": [
         {
           "author": "italobusi",
@@ -2685,7 +2691,7 @@
       "id": "I_kwDOC9D8a85E2x0U",
       "title": "Protection options with SR-TE",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/80",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2694,8 +2700,8 @@
       "labels": [],
       "body": "In section 4.2.3, it is said that the MDSC configures TI-LFA for a given SR-TE path. However, TI-LFA is pre-configured by the P-PNC for local protection, independently from the SR-TE paths. An unprotected adjacency SID can be used if TI-LFA local protection is not required.\r\n\r\n- [x] Brent: to provide some text for section 4.2.3 about the protection options: to be further discussed whether to place this text in section 4.2.3 or in section 2.2.2\r\n\r\n_Originally posted by @italobusi in https://github.com/FabioPeruzzini/actn-poi/issues/69#issuecomment-1048125960_",
       "createdAt": "2022-03-01T11:16:52Z",
-      "updatedAt": "2024-06-17T08:15:00Z",
-      "closedAt": null,
+      "updatedAt": "2024-07-05T14:38:50Z",
+      "closedAt": "2024-07-05T14:38:50Z",
       "comments": [
         {
           "author": "jbrentfoster",
@@ -3128,7 +3134,7 @@
       "id": "I_kwDOC9D8a85HICZT",
       "title": "Need to clarify what \"domain\" meant to describe and what impact a domain has with respect layer functionality",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/89",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "sergiobelotti",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3139,8 +3145,8 @@
       "labels": [],
       "body": "It is not clear in the draft what is the real meaning of \"domain\" and the impact on layer functionality:  the suggestion is to use the term \"region\" to describe a switching technology domain (RFC4206). \r\n A switching type describes the ability of a node to forward data of a particular data plane technology, and uniquely identifies a network region.  \r\nA layer describes a data plane switching granularity level (e.g., VC4, VC-12).  A data plane layer is associated with a region  however, more than one data plane layer can be associated with the same region (e.g., both VC4 and VC12 are associated with TDM).\r\nFor example in our case for Ethernet we can say that PHY and MAC data plane layers can be associated with the same ETH region.\r\n\r\n\r\n",
       "createdAt": "2022-04-05T15:01:03Z",
-      "updatedAt": "2024-06-17T10:47:40Z",
-      "closedAt": null,
+      "updatedAt": "2024-07-05T14:38:52Z",
+      "closedAt": "2024-07-05T14:38:51Z",
       "comments": [
         {
           "author": "ggrammel",
@@ -3838,6 +3844,50 @@
       "createdAt": "2024-01-11T13:20:04Z",
       "updatedAt": "2024-02-22T19:04:53Z",
       "closedAt": "2024-02-22T19:04:52Z",
+      "comments": []
+    },
+    {
+      "number": 121,
+      "id": "I_kwDOC9D8a86OnjqS",
+      "title": "Clarify the multi-layer Ethernet adjacency discovery",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/121",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "italobusi",
+        "sergiobelotti"
+      ],
+      "labels": [
+        "editorial",
+        "need discussion"
+      ],
+      "body": "See:\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655161576\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655218613\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655221039\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655226438",
+      "createdAt": "2024-07-05T14:39:58Z",
+      "updatedAt": "2024-07-05T15:21:09Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 122,
+      "id": "I_kwDOC9D8a86OnxYM",
+      "title": "Multi-technology intra-domain Ethernet link definition",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/122",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "italobusi",
+        "sergiobelotti"
+      ],
+      "labels": [
+        "editorial",
+        "need discussion"
+      ],
+      "body": "I'm wondering if this definition is really needed since we have already \"Multi-technology Ethernet link\" definition. \r\nI would specify better that the two cross-technology Ethernet link are related to the \"physical link\" between IP router and the optical node .\r\n\r\n_Originally posted by @sergiobelotti in https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1644626112_\r\n            ",
+      "createdAt": "2024-07-05T15:16:46Z",
+      "updatedAt": "2024-07-05T15:20:55Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -7102,24 +7152,26 @@
       "id": "PR_kwDOC9D8a85wqbcB",
       "title": "Preparation for WG LC",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/118",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Second preparation of WG LC with the objective to address all the pending issues with the exception of #31 and #107\r\n- Reconciled terminology with optical impairments draft: fix #78\r\n- Added description for MPLS-TE local protection: fix #80 \r\n- Added Operational Considerations: fix #42 \r\n- Added LLDP security considerations: fix #40 \r\n- Updated domain terminology: fix #89 ",
       "createdAt": "2024-05-27T13:15:53Z",
-      "updatedAt": "2024-07-03T16:05:44Z",
+      "updatedAt": "2024-07-05T15:20:25Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "9b333bdf365b1cb5d711acd816f1531517ea6ebb",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-02",
       "headRefOid": "ee540dfe2e2edce459a4dd672956804b2c11b01b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-07-05T14:38:48Z",
+      "mergedAt": "2024-07-05T14:38:48Z",
+      "mergedBy": "italobusi",
+      "mergeCommit": {
+        "oid": "0cf3db545bff180dddb601ac77994c3b003461b4"
+      },
       "comments": [],
       "reviews": [
         {
@@ -7416,6 +7468,106 @@
               "body": "Done in https://github.com/IETF-TEAS-WG/actn-poi/pull/118/commits/ee540dfe2e2edce459a4dd672956804b2c11b01b",
               "createdAt": "2024-07-03T16:05:44Z",
               "updatedAt": "2024-07-03T16:05:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AzPsS",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-05T15:17:54Z",
+          "updatedAt": "2024-07-05T15:17:54Z",
+          "comments": [
+            {
+              "originalPosition": 142,
+              "body": "See issue #122 ",
+              "createdAt": "2024-07-05T15:17:54Z",
+              "updatedAt": "2024-07-05T15:17:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AzQJo",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-05T15:19:17Z",
+          "updatedAt": "2024-07-05T15:19:17Z",
+          "comments": [
+            {
+              "originalPosition": 575,
+              "body": "See issue #121 ",
+              "createdAt": "2024-07-05T15:19:17Z",
+              "updatedAt": "2024-07-05T15:19:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AzQMP",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-05T15:19:24Z",
+          "updatedAt": "2024-07-05T15:19:24Z",
+          "comments": [
+            {
+              "originalPosition": 588,
+              "body": "See issue #121 ",
+              "createdAt": "2024-07-05T15:19:24Z",
+              "updatedAt": "2024-07-05T15:19:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AzQTX",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-05T15:19:45Z",
+          "updatedAt": "2024-07-05T15:19:46Z",
+          "comments": [
+            {
+              "originalPosition": 687,
+              "body": "See issue #121 ",
+              "createdAt": "2024-07-05T15:19:45Z",
+              "updatedAt": "2024-07-05T15:19:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86AzQib",
+          "commit": {
+            "abbreviatedOid": "c009c09"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-05T15:20:25Z",
+          "updatedAt": "2024-07-05T15:20:25Z",
+          "comments": [
+            {
+              "originalPosition": 541,
+              "body": "See #121 ",
+              "createdAt": "2024-07-05T15:20:25Z",
+              "updatedAt": "2024-07-05T15:20:25Z"
             }
           ]
         }
