@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 6 January 2025                                         Vodafone
+Expires: 10 February 2025                                       Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                             5 July 2024
+                                                           9 August 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 January 2025.
+   This Internet-Draft will expire on 10 February 2025.
 
 Copyright Notice
 
@@ -2594,9 +2594,9 @@ Table of Contents
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-12, 29 January 2024,
+              signal-yang-13, 1 August 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              client-signal-yang-12>.
+              client-signal-yang-13>.
 
    [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
@@ -2633,17 +2633,17 @@ Table of Contents
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-01, 1 March 2024,
+              tunnel-yang-02, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-01>.
+              wdm-tunnel-yang-02>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
               C., and O. G. de Dios, "YANG Data Model for Layer 3 TE
               Topologies", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-l3-te-topo-17, 23 June 2024,
+              teas-yang-l3-te-topo-18, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-l3-te-topo-17>.
+              yang-l3-te-topo-18>.
 
    [I-D.ietf-teas-yang-path-computation]
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
@@ -2807,17 +2807,17 @@ Table of Contents
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A YANG Data Model for Network Inventory", Work in
               Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-01, 4 March 2024,
+              inventory-yang-03, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-01>.
+              network-inventory-yang-03>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              16, 29 June 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-rtgwg-segment-routing-ti-lfa-16>.
+              17, 5 July 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-rtgwg-segment-routing-ti-lfa-17>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
