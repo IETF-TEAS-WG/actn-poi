@@ -268,7 +268,7 @@ Ethernet link:
 Single-technology Ethernet link:
 : An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.
 
--Multi-technology Ethernet link:
+Multi-technology Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.
 
 Cross-technology Ethernet link:
