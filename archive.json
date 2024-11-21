@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-19T00:52:17.062904+00:00",
+  "timestamp": "2024-11-21T00:51:49.959760+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -990,22 +990,21 @@
     {
       "number": 31,
       "id": "MDU6SXNzdWU3NDE3OTQxMjM=",
-      "title": "SAP-TOPO vs CLIENT-TOPO",
+      "title": "SAP-TOPO vs TE-TOPO",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/31",
       "state": "OPEN",
       "author": "jbouqui153",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
-        "sergiobelotti",
-        "jbouqui153"
+        "oscargdd"
       ],
       "labels": [
         "documentation",
-        "need discussion"
+        "wait"
       ],
       "body": "In section 3.2.3 YANG data models at the packet MPI we mentioned [CLIENT-TOPO] (https://datatracker.ietf.org/doc/draft-zheng-ccamp-client-topo-yang/ ). We should discuss further as for L3NM/L2NM, the authors are considering a recent draft proposal [UNI-TOPO] (https://datatracker.ietf.org/doc/draft-ogondio-opsawg-uni-topology/) which augments RFC8345 with the service attachment point abstraction for L3 or L2 VPNs network services. \r\n",
       "createdAt": "2020-11-12T17:37:08Z",
-      "updatedAt": "2024-07-05T14:40:17Z",
+      "updatedAt": "2024-11-20T12:43:50Z",
       "closedAt": null,
       "comments": [
         {
@@ -1056,6 +1055,20 @@
           "body": "See https://github.com/IETF-TEAS-WG/actn-poi/pull/115#discussion_r1487671518\r\n\r\n- [ ] @sergiobelotti @jbouqui153 : please provide a proposal for some text changes in section 4.5 to clarify the issue with access links discovery",
           "createdAt": "2024-02-13T17:02:27Z",
           "updatedAt": "2024-02-13T17:03:11Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[ACTN POI bi-weekly call (November 19, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-11-19)**\r\n\r\nDuring IETF 121, Oscar volunteered to provide some text proposal.\r\n\r\n- [x] @italobusi aend a mail reminding Oscar to provide some text proposal to address the gap\r\n\r\n> See: https://github.com/IETF-TEAS-WG/actn-poi/issues/31#issuecomment-2488331308\r\n\r\nIt has been agreed to add the guidelines on using TE Topology and SAP Topology if the text proposal is available before the document is ready for WG LC. Otherwise, considering that the scope of this I-D is to identify gaps, the document will be submitted to WG LC just highlighting the gap and without providing any guidance on how to address it.\r\n\r\nIt is worth noting that there is a similar issue in the TE topology profile draft and the gap can be addressed in that document.\r\n",
+          "createdAt": "2024-11-19T11:08:28Z",
+          "updatedAt": "2024-11-20T12:43:50Z"
+        },
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> * [x]  @italobusi aend a mail reminding Oscar to provide some text proposal to address the gap\r\n\r\nSee: https://mailarchive.ietf.org/arch/msg/teas/FKjX1Y6ueKNxIkfUtYdE00oM2z4/",
+          "createdAt": "2024-11-20T11:29:05Z",
+          "updatedAt": "2024-11-20T12:43:29Z"
         }
       ]
     },
@@ -3864,9 +3877,17 @@
       ],
       "body": "See:\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655161576\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655218613\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655221039\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655226438",
       "createdAt": "2024-07-05T14:39:58Z",
-      "updatedAt": "2024-07-05T15:21:09Z",
+      "updatedAt": "2024-11-19T16:51:47Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[ACTN POI bi-weekly call (November 19, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-11-19)**\r\n\r\n- [ ] @italobusi @sergiobelotti provide a PR with text proposal on how to update the text to improve clarity\r\n\r\n- [ ] @jbouqui153 @prmanna review the PR when it is opened\r\n",
+          "createdAt": "2024-11-19T11:07:37Z",
+          "updatedAt": "2024-11-19T16:51:47Z"
+        }
+      ]
     },
     {
       "number": 122,
