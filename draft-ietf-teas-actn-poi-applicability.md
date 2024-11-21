@@ -268,7 +268,7 @@ Ethernet link:
 Single-technology Ethernet link:
 : An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.
 
-Multi-technology Ethernet link:
+-Multi-technology Ethernet link:
 : An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.
 
 Cross-technology Ethernet link:
@@ -1421,6 +1421,10 @@ topologies, e.g., as shown in {{fig-multi-technology-link}}.
 
 {::include ./figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link title="Multi-technology intra-domain Ethernet and IP link discovery"}
+
+The Ethernet interface 5 on the P13 router is terminating two Ethernet abstract links:
+- The multi-technology intra-domain Ethernet link between logical Ethernet LTP 5-1 on PE13 and the logical Ethernet LTP 6-1 on BR11;
+- The cross-technology Ethernet link, which is supporting that multi-technology intra-domain Ethernet link, between the physical Ethernet LTPs 5-0 on PE13 and the physical Ethernet LTP 7-0 on the optical NE11.
 
 The P-PNC does not report any plug-id information on the logical
 Ethernet LTPs terminating intra-domain Ethernet links, such as the
