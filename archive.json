@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-21T00:51:49.959760+00:00",
+  "timestamp": "2024-11-24T00:56:35.349081+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7677,6 +7677,53 @@
               "body": "No need to redefine PNC since it is already defined in RFC8453 and the section stats referencing RFC8453 for the ACTN terminology",
               "createdAt": "2024-06-17T09:52:07Z",
               "updatedAt": "2024-06-17T09:52:07Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 123,
+      "id": "PR_kwDOC9D8a86Cs91p",
+      "title": "WG LC Preparation (step 3)",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/123",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Clarified why two Ethernet LTPs are reported by P-PNC for a single Ethernet interface on the IP router: fix #121\r\n\r\n---\r\n\r\nCo-Authored-By: sergio belotti <sergio.belotti@nokia.com>\r\n",
+      "createdAt": "2024-11-21T17:23:48Z",
+      "updatedAt": "2024-11-21T17:24:28Z",
+      "baseRepository": "IETF-TEAS-WG/actn-poi",
+      "baseRefName": "main",
+      "baseRefOid": "e82e9fbdad42f63bc4303d48f92b1dde2d637a94",
+      "headRepository": "italobusi/actn-poi",
+      "headRefName": "wg-lc-prep-03",
+      "headRefOid": "3bbfc651d813c6ce3a0de13624adbbade3b66dce",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOC9D8a86SKT8z",
+          "commit": {
+            "abbreviatedOid": "6d66c98"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-11-21T17:24:14Z",
+          "updatedAt": "2024-11-21T17:24:15Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nMulti-technology Ethernet link:\r\n```",
+              "createdAt": "2024-11-21T17:24:14Z",
+              "updatedAt": "2024-11-21T17:24:15Z"
             }
           ]
         }
