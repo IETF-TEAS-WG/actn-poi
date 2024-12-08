@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-12-05T00:54:18.400067+00:00",
+  "timestamp": "2024-12-08T00:58:29.859844+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -3872,20 +3872,19 @@
         "sergiobelotti"
       ],
       "labels": [
-        "editorial",
-        "need discussion"
+        "editorial"
       ],
       "body": "See:\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655161576\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655218613\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655221039\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655226438",
       "createdAt": "2024-07-05T14:39:58Z",
-      "updatedAt": "2024-11-19T16:51:47Z",
+      "updatedAt": "2024-12-06T14:12:04Z",
       "closedAt": null,
       "comments": [
         {
           "author": "italobusi",
           "authorAssociation": "COLLABORATOR",
-          "body": "**[ACTN POI bi-weekly call (November 19, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-11-19)**\r\n\r\n- [ ] @italobusi @sergiobelotti provide a PR with text proposal on how to update the text to improve clarity\r\n\r\n- [ ] @jbouqui153 @prmanna review the PR when it is opened\r\n",
+          "body": "**[ACTN POI bi-weekly call (November 19, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-11-19)**\r\n\r\n- [x] @italobusi @sergiobelotti provide a PR with text proposal on how to update the text to improve clarity\r\n\r\n- [ ] @jbouqui153 @prmanna review the PR when it is opened\r\n",
           "createdAt": "2024-11-19T11:07:37Z",
-          "updatedAt": "2024-11-19T16:51:47Z"
+          "updatedAt": "2024-12-05T15:52:38Z"
         }
       ]
     },
@@ -3902,14 +3901,21 @@
         "sergiobelotti"
       ],
       "labels": [
-        "editorial",
-        "need discussion"
+        "editorial"
       ],
       "body": "I'm wondering if this definition is really needed since we have already \"Multi-technology Ethernet link\" definition. \r\nI would specify better that the two cross-technology Ethernet link are related to the \"physical link\" between IP router and the optical node .\r\n\r\n_Originally posted by @sergiobelotti in https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1644626112_\r\n            ",
       "createdAt": "2024-07-05T15:16:46Z",
-      "updatedAt": "2024-07-05T15:20:55Z",
+      "updatedAt": "2024-12-06T14:11:49Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See proposal to the TEAS WG mailing list: https://mailarchive.ietf.org/arch/msg/teas/9iTWgryWOYgNCbdeM0GP6RBcscc/",
+          "createdAt": "2024-12-05T15:53:27Z",
+          "updatedAt": "2024-12-05T15:53:27Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -7692,15 +7698,15 @@
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
-      "body": "Clarified why two Ethernet LTPs are reported by P-PNC for a single Ethernet interface on the IP router: fix #121\r\n\r\n---\r\n\r\nCo-Authored-By: sergio belotti <sergio.belotti@nokia.com>\r\n",
+      "body": "Clarified why two Ethernet LTPs are reported by P-PNC for a single Ethernet interface on the IP router: fix #121\r\n\r\nCleaned up terminology: fix #122 \r\n\r\n---\r\n\r\nCo-Authored-By: sergio belotti <sergio.belotti@nokia.com>\r\n",
       "createdAt": "2024-11-21T17:23:48Z",
-      "updatedAt": "2024-11-21T17:24:28Z",
+      "updatedAt": "2024-12-06T14:20:49Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "e82e9fbdad42f63bc4303d48f92b1dde2d637a94",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-03",
-      "headRefOid": "3bbfc651d813c6ce3a0de13624adbbade3b66dce",
+      "headRefOid": "283ce92e86df26744a144420913889c5a8771347",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
