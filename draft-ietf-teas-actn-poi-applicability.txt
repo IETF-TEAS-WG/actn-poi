@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 10 February 2025                                       Vodafone
+Expires: 14 June 2025                                           Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                           9 August 2024
+                                                        11 December 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 February 2025.
+   This Internet-Draft will expire on 14 June 2025.
 
 Copyright Notice
 
@@ -273,35 +273,35 @@ Table of Contents
    Single-technology Ethernet link:  An Ethernet link between two
       Ethernet interfaces on physically adjacent IP routers.
 
-   Multi-technology Ethernet link:  An Ethernet link between between two
+   Multi-technology Ethernet link:  An Ethernet link between two
       Ethernet interfaces on logically adjacent IP routers, which is
-      supported by an underlay tunnel in a different technology domain.
+      supported by two cross-technology Ethernet links and an optical
+      tunnel in between.
 
    Cross-technology Ethernet link:  An Ethernet link between an Ethernet
       interface on an IP router and an Ethernet interface on a
       physically adjacent optical node.
 
-   Inter-domain Ethernet link:  An Ethernet link between between two
-      Ethernet interfaces on physically adjacent IP routers that belong
-      to different P-PNC domains.
+   Inter-domain Ethernet link:  An Ethernet link between two Ethernet
+      interfaces on physically adjacent IP routers that belong to
+      different P-PNC domains.
 
    Single-technology intra-domain Ethernet link:  An Ethernet link
-      between between two Ethernet interfaces on physically adjacent IP
-      routers that belong to the same P-PNC domain.
+      between two Ethernet interfaces on physically adjacent IP routers
+      that belong to the same P-PNC domain.
 
    Multi-technology intra-domain Ethernet link:  An Ethernet link
-      between between two Ethernet interfaces on logically adjacent IP
-      routers that belong to the same P-PNC domain, which is supported
-      by supported by two cross-technology Ethernet links and an optical
-      tunnel in between.
+      between two Ethernet interfaces on logically adjacent IP routers
+      that belong to the same P-PNC domain, which is supported by two
+      cross-technology Ethernet links and an optical tunnel in between.
 
    IP link:  A link between two IP interfaces.
 
-   Single-technology intra-domain IP link:  An IP link supported by a
-      single-technology intra-domain Ethernet link.
-
    Inter-domain IP link:  An IP link supported by an inter-domain
       Ethernet link.
+
+   Single-technology intra-domain IP link:  An IP link supported by a
+      single-technology intra-domain Ethernet link.
 
    Multi-technology intra-domain IP link:  An IP link supported by a
       multi-technology intra-domain Ethernet link.
@@ -402,10 +402,8 @@ Table of Contents
    links, supported by the optical network, are intra-domain (intra-AS/
    intra-area), such as PE-BR, PE-P, BR-P, P-P IP links.  Therefore the
    inter-domain IP links are always single-technology links supported by
-   Ethernet physical links.
-
-   The analysis of scenarios with multi-technology inter-domain IP links
-   is outside the scope of this document.
+   single-technology Ethernet links between physically adjacent IP
+   routers.
 
    Therefore, if inter-domain links between the optical domains exist,
    they would be used to support multi-domain optical services, which
@@ -1588,7 +1586,7 @@ Table of Contents
       Ethernet interface on an IP router and the Ethernet interface on
       its physically adjacent node, which can be either an IP router (in
       case of a single-technology Ethernet link) or an optical node (in
-      case of a multi-technology Ethernet link).  Therefore, as
+      case of a cross-technology Ethernet link).  Therefore, as
       described in Section 4.5.1, the P-PNC reports, within the plug-id
       attribute of this LTP, the LLDP information sent by the
       corresponding Ethernet interface on the IP router; such as the
@@ -1704,6 +1702,14 @@ Table of Contents
 
         Figure 8: Multi-technology intra-domain Ethernet and IP link
                                  discovery
+
+   The Ethernet interface 5 on the P13 router is terminating two
+   Ethernet abstract links: - The multi-technology intra-domain Ethernet
+   link between logical Ethernet LTP 5-1 on PE13 and the logical
+   Ethernet LTP 6-1 on BR11; - The cross-technology Ethernet link, which
+   is supporting that multi-technology intra-domain Ethernet link,
+   between the physical Ethernet LTPs 5-0 on PE13 and the physical
+   Ethernet LTP 7-0 on the optical NE11.
 
    The P-PNC does not report any plug-id information on the logical
    Ethernet LTPs terminating intra-domain Ethernet links, such as the
@@ -2602,40 +2608,41 @@ Table of Contents
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-06, 12 April 2024,
+              client-te-topo-yang-07, 14 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-06>.
+              eth-client-te-topo-yang-07>.
 
    [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
               H. Zheng, "A YANG Data Model for Flexi-Grid Optical
               Networks", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-flexigrid-yang-16, 29 January 2024,
+              ccamp-flexigrid-yang-17, 12 September 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              flexigrid-yang-16>.
+              flexigrid-yang-17>.
 
    [I-D.ietf-ccamp-otn-topo-yang]
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
               Dios, "A YANG Data Model for Optical Transport Network
               Topology", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-otn-topo-yang-19, 25 June 2024,
+              ccamp-otn-topo-yang-20, 7 November 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-topo-yang-19>.
+              otn-topo-yang-20>.
 
    [I-D.ietf-ccamp-otn-tunnel-model]
-              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
-              "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
-              draft-ietf-ccamp-otn-tunnel-model-21, 6 June 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-tunnel-model-21>.
+              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
+              YANG Data Model for Optical Transport Network (OTN)
+              Tunnels and Label Switched Paths", Work in Progress,
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-22, 3
+              December 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-ccamp-otn-tunnel-model-22>.
 
    [I-D.ietf-ccamp-wdm-tunnel-yang]
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-02, 7 July 2024,
+              tunnel-yang-03, 21 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-02>.
+              wdm-tunnel-yang-03>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
@@ -2649,9 +2656,9 @@ Table of Contents
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
               Shi, "A YANG Data Model for requesting path computation",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-22, 14 February 2024,
+              path-computation-23, 19 August 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-22>.
+              yang-path-computation-23>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
@@ -2665,9 +2672,9 @@ Table of Contents
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
               Bryskin, "A YANG Data Model for Traffic Engineering
               Tunnels, Label Switched Paths and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-36, 2
-              February 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-36>.
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-37, 9
+              October 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-37>.
 
    [I-D.ietf-teas-yang-te-mpls]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
@@ -2680,9 +2687,9 @@ Table of Contents
    [I-D.ietf-teas-yang-te-mpls-topology]
               Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
               YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-00,
-              18 March 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-mpls-topology-00>.
+              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-01,
+              16 September 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-mpls-topology-01>.
 
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, "IEEE
@@ -2783,17 +2790,17 @@ Table of Contents
               Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
-              ietf-ccamp-optical-impairment-topology-yang-16, 5 July
+              ietf-ccamp-optical-impairment-topology-yang-17, 21 October
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ccamp-optical-impairment-topology-yang-16>.
+              ccamp-optical-impairment-topology-yang-17>.
 
    [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
               requesting Path Computation in WDM Optical Networks", Work
               in Progress, Internet-Draft, draft-ietf-ccamp-optical-
-              path-computation-yang-03, 1 March 2024,
+              path-computation-yang-04, 29 August 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              optical-path-computation-yang-03>.
+              optical-path-computation-yang-04>.
 
    [I-D.ietf-ccamp-transport-nbi-app-statement]
               Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
@@ -2805,19 +2812,20 @@ Table of Contents
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
-              Bedard, "A YANG Data Model for Network Inventory", Work in
-              Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-03, 7 July 2024,
+              Bedard, "A Base YANG Data Model for Network Inventory",
+              Work in Progress, Internet-Draft, draft-ietf-ivy-network-
+              inventory-yang-04, 5 November 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-03>.
+              network-inventory-yang-04>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              17, 5 July 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-rtgwg-segment-routing-ti-lfa-17>.
+              19, 22 November 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
+              segment-routing-ti-lfa-19>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
@@ -2831,18 +2839,18 @@ Table of Contents
               Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
               and J. Tantsura, "Traffic Engineering (TE) and Service
               Mapping YANG Data Model", Work in Progress, Internet-
-              Draft, draft-ietf-teas-te-service-mapping-yang-15, 16
-              March 2024, <https://datatracker.ietf.org/doc/html/draft-
-              ietf-teas-te-service-mapping-yang-15>.
+              Draft, draft-ietf-teas-te-service-mapping-yang-16, 20
+              October 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-te-service-mapping-yang-16>.
 
    [I-D.ietf-teas-te-topology-profiles]
               Busi, I., Liu, X., Bryskin, I., Saad, T., and O. G. de
               Dios, "Profiles for Traffic Engineering (TE) Topology Data
               Model and Applicability to non-TE Use Cases", Work in
               Progress, Internet-Draft, draft-ietf-teas-te-topology-
-              profiles-01, 19 April 2024,
+              profiles-02, 21 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
-              topology-profiles-01>.
+              topology-profiles-02>.
 
    [RFC1930]  Hawkinson, J. and T. Bates, "Guidelines for creation,
               selection, and registration of an Autonomous System (AS)",
