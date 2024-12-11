@@ -269,28 +269,28 @@ Single-technology Ethernet link:
 : An Ethernet link between two Ethernet interfaces on physically adjacent IP routers.
 
 Multi-technology Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.
+: An Ethernet link between two Ethernet interfaces on logically adjacent IP routers, which is supported by two cross-technology Ethernet links and an optical tunnel in between.
 
 Cross-technology Ethernet link:
 : An Ethernet link between an Ethernet interface on an IP router and an Ethernet interface on a physically adjacent optical node.
 
 Inter-domain Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to different P-PNC domains.
+: An Ethernet link between two Ethernet interfaces on physically adjacent IP routers that belong to different P-PNC domains.
 
 Single-technology intra-domain Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.
+: An Ethernet link between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.
 
 Multi-technology intra-domain Ethernet link:
-: An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.
+: An Ethernet link between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by two cross-technology Ethernet links and an optical tunnel in between.
 
 IP link:
 : A link between two IP interfaces.
 
-Single-technology intra-domain IP link:
-: An IP link supported by a single-technology intra-domain Ethernet link.
-
 Inter-domain IP link:
 : An IP link supported by an inter-domain Ethernet link.
+
+Single-technology intra-domain IP link:
+: An IP link supported by a single-technology intra-domain Ethernet link.
 
 Multi-technology intra-domain IP link:
 : An IP link supported by a multi-technology intra-domain Ethernet link.
@@ -363,11 +363,8 @@ and optical networks in a single unified domain. Therefore, a unified
 use case analysis is outside the scope of this document.
 
 This document analyses scenarios where all the multi-technology IP links,
-supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-technology links supported by Ethernet
-physical links.
-
-The analysis of scenarios with multi-technology inter-domain IP links is
-outside the scope of this document.
+supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-technology links supported by single-technology Ethernet
+links between physically adjacent IP routers.
 
 Therefore, if inter-domain links between the optical domains exist,
 they would be used to support multi-domain optical services, which
@@ -1370,7 +1367,7 @@ Ethernet LTP 3-1, supported by LTP 3-0, shown in {{fig-inter-domain-link}}:
 Ethernet interface on an IP router and the Ethernet interface on its physically adjacent node,
 which can be either an IP router
 (in case of a single-technology Ethernet link) or an optical
-node (in case of a multi-technology Ethernet link).
+node (in case of a cross-technology Ethernet link).
 Therefore, as described in {{cross-technology-link-discovery}}, the P-PNC reports,
 within the plug-id attribute of this LTP, the LLDP information
 sent by the corresponding Ethernet interface on the IP router; such as the
@@ -1421,6 +1418,10 @@ topologies, e.g., as shown in {{fig-multi-technology-link}}.
 
 {::include ./figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link title="Multi-technology intra-domain Ethernet and IP link discovery"}
+
+The Ethernet interface 5 on the P13 router is terminating two Ethernet abstract links:
+- The multi-technology intra-domain Ethernet link between logical Ethernet LTP 5-1 on PE13 and the logical Ethernet LTP 6-1 on BR11;
+- The cross-technology Ethernet link, which is supporting that multi-technology intra-domain Ethernet link, between the physical Ethernet LTPs 5-0 on PE13 and the physical Ethernet LTP 7-0 on the optical NE11.
 
 The P-PNC does not report any plug-id information on the logical
 Ethernet LTPs terminating intra-domain Ethernet links, such as the
