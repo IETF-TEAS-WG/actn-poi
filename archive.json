@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-12-10T00:55:26.182320+00:00",
+  "timestamp": "2024-12-12T00:54:10.004074+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -3864,7 +3864,7 @@
       "id": "I_kwDOC9D8a86OnjqS",
       "title": "Clarify the multi-layer Ethernet adjacency discovery",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/121",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3876,8 +3876,8 @@
       ],
       "body": "See:\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655161576\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655218613\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655221039\r\n- https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1655226438",
       "createdAt": "2024-07-05T14:39:58Z",
-      "updatedAt": "2024-12-06T14:12:04Z",
-      "closedAt": null,
+      "updatedAt": "2024-12-11T17:02:23Z",
+      "closedAt": "2024-12-11T17:02:22Z",
       "comments": [
         {
           "author": "italobusi",
@@ -3893,7 +3893,7 @@
       "id": "I_kwDOC9D8a86OnxYM",
       "title": "Multi-technology intra-domain Ethernet link definition",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/122",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3905,8 +3905,8 @@
       ],
       "body": "I'm wondering if this definition is really needed since we have already \"Multi-technology Ethernet link\" definition. \r\nI would specify better that the two cross-technology Ethernet link are related to the \"physical link\" between IP router and the optical node .\r\n\r\n_Originally posted by @sergiobelotti in https://github.com/IETF-TEAS-WG/actn-poi/pull/118#discussion_r1644626112_\r\n            ",
       "createdAt": "2024-07-05T15:16:46Z",
-      "updatedAt": "2024-12-06T14:11:49Z",
-      "closedAt": null,
+      "updatedAt": "2024-12-11T17:02:23Z",
+      "closedAt": "2024-12-11T17:02:23Z",
       "comments": [
         {
           "author": "italobusi",
@@ -7693,24 +7693,26 @@
       "id": "PR_kwDOC9D8a86Cs91p",
       "title": "WG LC Preparation (step 3)",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/123",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Clarified why two Ethernet LTPs are reported by P-PNC for a single Ethernet interface on the IP router: fix #121\r\n\r\nCleaned up terminology: fix #122 \r\n\r\n---\r\n\r\nCo-Authored-By: sergio belotti <sergio.belotti@nokia.com>\r\n",
       "createdAt": "2024-11-21T17:23:48Z",
-      "updatedAt": "2024-12-06T14:20:49Z",
+      "updatedAt": "2024-12-11T17:02:21Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "e82e9fbdad42f63bc4303d48f92b1dde2d637a94",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "wg-lc-prep-03",
       "headRefOid": "283ce92e86df26744a144420913889c5a8771347",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-12-11T17:02:21Z",
+      "mergedAt": "2024-12-11T17:02:21Z",
+      "mergedBy": "italobusi",
+      "mergeCommit": {
+        "oid": "e4fb4ef156fa21251a644d30a692b53f9070d9d6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -7732,6 +7734,32 @@
               "updatedAt": "2024-11-21T17:24:15Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86UiK5P",
+          "commit": {
+            "abbreviatedOid": "283ce92"
+          },
+          "author": "jbouqui153",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "I am fine with these changes.",
+          "createdAt": "2024-12-10T11:18:18Z",
+          "updatedAt": "2024-12-10T11:18:18Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOC9D8a86UvH4f",
+          "commit": {
+            "abbreviatedOid": "283ce92"
+          },
+          "author": "prmanna",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-12-11T11:46:02Z",
+          "updatedAt": "2024-12-11T11:46:02Z",
+          "comments": []
         }
       ]
     }
