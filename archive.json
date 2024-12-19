@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-12-17T00:54:35.586457+00:00",
+  "timestamp": "2024-12-19T00:52:53.646966+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7762,6 +7762,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 124,
+      "id": "PR_kwDOC9D8a86Fej_j",
+      "title": "English and editorial review of the I-D.",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/124",
+      "state": "OPEN",
+      "author": "danielkinguk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-12-17T11:07:24Z",
+      "updatedAt": "2024-12-17T15:56:04Z",
+      "baseRepository": "IETF-TEAS-WG/actn-poi",
+      "baseRefName": "main",
+      "baseRefOid": "e4fb4ef156fa21251a644d30a692b53f9070d9d6",
+      "headRepository": "IETF-TEAS-WG/actn-poi",
+      "headRefName": "editorial-review",
+      "headRefOid": "bd9baaecc5193e23c8ea5c63b38b5f7a0d09f3fe",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
