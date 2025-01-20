@@ -803,9 +803,9 @@ discovery and path setup are typically vendor-specific and outside
 the scope of this document.
 
 Depending on the optical network type, TE topology abstraction, path 
-computation, and path setup can be single-layer (either OTN or WDM) 
+computation, and path setup can be single-layer (either OTN or DWDM) 
 or multi-layer OTN/WDM. In the latter case, multi-layer coordination 
-between the OTN and WDM layers is handled by the O-PNC.
+between the OTN and DWDM layers is handled by the O-PNC.
 
 {: #mpi}
 
@@ -1054,8 +1054,8 @@ inventory information of their equipment used by the different
 management layers. In the context of POI, the inventory information
 of IP and optical equipment can complement the topology views and
 facilitate the packet/optical multi-layer view, e.g., by providing a
-mapping between the lowest level LTPs in the topology view and
-corresponding ports in the network inventory view.
+mapping between the lowest level link termination points (LTPs) in 
+the topology view and corresponding ports in the network inventory view.
 
 The MDSC could also discover the entire network inventory information
 of both IP and optical equipment and correlate this information with
@@ -1080,13 +1080,14 @@ inventory/topology/service change occurs.
 
 It should also be possible to correlate information from IP and
 optical layers (e.g., which port, lambda/OTSi, and direction are used
-by a specific IP service on the WDM equipment).
+by a specific IP service on the DWDM equipment).
 
 In particular, for the cross-technology Ethernet links, it is key for
 MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
-bundle links for LAG) to client ports in the ROADM.
+bundle links for Link Aggregation Group (LAG)) to client ports in the 
+ROADM.
 
 The analysis of multi-layer fault management is outside the scope of
 this document. However, the discovered information should be
@@ -1104,7 +1105,7 @@ notifications.
 ## Optical Topology Discovery
 
 The WSON Topology Model and the Flexi-grid Topology model can be used
-to report the DWDM network topology (e.g., WDM nodes and OMS links),
+to report the DWDM network topology (e.g., DWDM nodes and OMS links),
 depending on whether the DWDM optical network is based on fixed-grid
 or flexible-grid or a mix of fixed-grid and flexible-grid.
 
@@ -1177,10 +1178,10 @@ The optical transponders and, optionally, the OTN access cards, are
 abstracted at MPI by the O-PNC as Trail Termination Points (TTPs),
 defined in {{!RFC8795}}, within the optical network topology. This
 abstraction is valid independently of the fact that optical
-transponders are physically integrated within the same WDM node or
-are physically located on a device external to the WDM node since it
-both cases the optical transponders and the WDM node are under the
-control of the same O-PNC and abstracted as a single WDM TE Node at the
+transponders are physically integrated within the same DWDM node or
+are physically located on a device external to the DWDM node since it
+both cases the optical transponders and the DWDM node are under the
+control of the same O-PNC and abstracted as a single DWDM TE Node at the
 O-MPI.
 
 The association between the Ethernet or CBR client LTPs terminating
@@ -1202,7 +1203,7 @@ mechanisms which are outside the scope of this document, and reported
 at the MPIs within the optical network topology.
 
 In case of a multi-layer DWDM/OTN network domain, multi-layer
-intra-domain OTN links are supported by underlay WDM tunnels: this
+intra-domain OTN links are supported by underlay DWDM tunnels: this
 relationship is reported by the mechanisms described in
 {{optical-path-discovery}}.
 
@@ -1210,7 +1211,7 @@ relationship is reported by the mechanisms described in
 
 ## Optical Path Discovery
 
-The WDM Tunnel Model is used to report all the WDM tunnels
+The DWDM Tunnel Model is used to report all the DWDM tunnels
 established within the optical network.
 
 When the OTN switching layer is deployed within the optical domain,
@@ -1221,15 +1222,15 @@ The Ethernet client signal model and the Transparent CBR client
 signal model are used to report all the connectivity services
 provided by the underlay optical tunnels between Ethernet or CBR
 client LTPs, depending on whether the connectivity service is frame-based
-or transparent. The underlay optical tunnels can be either WDM
+or transparent. The underlay optical tunnels can be either DWDM
 tunnels or, when the optional OTN switching layer is deployed, OTN
 tunnels.
 
-The WDM tunnels can be used to support either Ethernet or CBR client
+The DWDM tunnels can be used to support either Ethernet or CBR client
 signals or multi-layer intra-domain OTN links. In the latter case,
 the hierarchical-link container, defined in {{!I-D.ietf-teas-yang-te}},
 associates
-the underlay WDM tunnel with the supported multi-layer intra-domain
+the underlay DWDM tunnel with the supported multi-layer intra-domain
 OTN link and it allows discovery of the multi-layer path supporting
 all the connectivity services provided by the optical network.
 
@@ -1282,9 +1283,9 @@ Ethernet links or access links, as described in detail in
 and in {{multi-technology-link-discovery}}.
 
 All the intra-domain Ethernet and IP links are discovered by the
-P-PNCs, using mechanisms, such as LLDP {{IEEE_802.1AB}}, which are
-outside the scope of this document, and reported at the MPIs within
-the Ethernet or the packet network topology.
+P-PNCs, using mechanisms, such as Link Layer Discover Protocol LLDP 
+{{IEEE_802.1AB}}, which are outside the scope of this document, and 
+reported at the MPIs within the Ethernet or the packet network topology.
 
 {: #te-path-discovery}
 
@@ -1844,7 +1845,7 @@ underlay optical tunnel.
 
 Therefore, to set up a new multi-technology intra-domain IP link, 
 the MDSC requires the O-PNC to set up the optical tunnel (using either 
-the WDM Tunnel model or the OTN Tunnel model, if optional OTN switching 
+the DWDM Tunnel model or the OTN Tunnel model, if optional OTN switching 
 is supported) within the optical network and steer client traffic 
 between the two cross-technology Ethernet links over that optical tunnel, 
 using either the Ethernet Client Signal Model (for frame-based transport) 
@@ -1994,7 +1995,7 @@ of:
 SRLGs reported by the P-PNC using the packet TE topology model);
 
 - the optical path (e.g., the list of SRLGs reported by the O-PNC
-using the WDM or OTN tunnel model); and
+using the DWDM or OTN tunnel model); and
 
 - the cross-domain links (e.g., the list of SRLGs reported by the O-PNC
 and P-PNC respectively, using the WSON and/or flexi-grid, the
@@ -2021,7 +2022,7 @@ but cares have to be taken to avoid missing information.
 
 ## TE Path Setup and Update
 
-This version of the draft assumes that TE path setup and update at
+This document assumes that TE path setup and update at
 the MPI could be done using the generic TE tunnel YANG data model,
 defined in {{!I-D.ietf-teas-yang-te}}, with packet technology-specific
 augmentations, described in {{packet-yang}}.
@@ -2168,7 +2169,7 @@ flexible-grid DWDM network topologies but also the only viable option
 for a mixed CWDM and DWDM network topology.
 
 Although not applicable to this document, it has been noted that the 
-WDM tunnel model would also support optical tunnel setup in the case 
+DWDM tunnel model would also support optical tunnel setup in the case 
 of a mixed CWDM and DWDM network topology.
 
 Although not analyzed in this document, it has been noted that the TE 
@@ -2351,8 +2352,7 @@ requirements).
 
 Although the OSS/Orchestration layer interface is usually
 operator-specific, typically it would be using a RESTCONF/YANG interface
-with
-a more abstracted version of the MPI YANG data models used for
+with a more abstracted version of the MPI YANG data models used for
 network configuration (e.g. L3NM, L2NM).
 
 {{fig-service-request}} shows an example of possible control flow between
@@ -2434,17 +2434,17 @@ There can be two cases here:
 
 1. LAG was defined between the IP routers at the two ends. MDSC, after
 checking
-that optical layer is fine between the two edge WDM nodes, triggers
-the WDM edge node re-configuration so that the IP router's back-up port
+that optical layer is fine between the two edge DWDM nodes, triggers
+the DWDM edge node re-configuration so that the IP router's back-up port
 with its
-associated muxponder port can reuse the WDM tunnel that was already in
+associated muxponder port can reuse the DWDM tunnel that was already in
 use previously by the failed IP router port and adds the new link to
 the LAG on the failure side.
 
    While the ROADM reconfiguration takes place, IP/MPLS traffic is
    using the reduced bandwidth of the IP link bundle, discarding
    lower priority traffic if required. Once back-up port has been
-   reconfigured to reuse the existing WDM tunnel and the new link has
+   reconfigured to reuse the existing DWDM tunnel and the new link has
 been added
    to the LAG then original Bandwidth is recovered between the end
    routers.
@@ -2460,11 +2460,11 @@ or TI-LFA (MPLS based SR-TE case) through a protection port. At
 the same time MDSC, after checking that optical network connection
 is still fine, would trigger the reconfiguration of the back-up
 port of the IP router and of the muxponder to re-use the same
-WDM tunnel as the one used originally for the failed IP router port. Once
+DWDM tunnel as the one used originally for the failed IP router port. Once
 everything has been correctly configured, MDSC Global PCE could
 suggest to the operator to trigger a possible re-optimization of
 the back-up MPLS path to go back to the  MPLS primary path through
-the back-up port of the IP router and the original WDM tunnel if overall
+the back-up port of the IP router and the original DWDM tunnel if overall
 cost, latency etc. is improved. However, in this scenario, there
 is a need for protection port PLUS back-up port in the IP router
 which does not lead to clear port savings.
@@ -2482,7 +2482,7 @@ trunk port bit rate which will also determine the Baud-rate, the
 modulation format, the FEC etc.
 
 The controller, when asked to set up a client connectivity service,
-needs to find a WDM tunnel suitable to comply the DWDM port
+needs to find a DWDM tunnel suitable to comply the DWDM port
 parameters.
 
 The setup of a client connectivity service between two muxponders is
@@ -2492,20 +2492,20 @@ might be a 100Gb/s trunk port shared by ten 10GE client ports.
 
 The controller, when asked to set a 10GE client connectivity service
 between two muxponder's client ports, needs first to check whether
-there is already an existing WDM tunnel between the two muxponders
+there is already an existing DWDM tunnel between the two muxponders
 and then take different actions:
 
-1. if the WDM tunnel already exists, the controller needs only to
+1. if the DWDM tunnel already exists, the controller needs only to
 enable the 10GE client ports to establish the 10GE client
 connectivity service;
 
-2. if the WDM tunnel does not exist, the controller has to first
-establish the WDM tunnel, finding a proper optical path matching
+2. if the DWDM tunnel does not exist, the controller has to first
+establish the DWDM tunnel, finding a proper optical path matching
 the optical parameters of the two muxponders' trunk ports (e.g.,
 an OTSi carrying an OTU4), and then enable the 10GE client ports
 to establish the 10GE client connectivity service.
 
-Since multiple client connectivity services are sharing the same WDM
+Since multiple client connectivity services are sharing the same DWDM
 tunnel, a multiplexing label shall be assigned to each client
 connectivity service. The multiplexing label can either be a standard
 label (e.g., an OTN timeslot) or a vendor-specific label. The
@@ -2524,7 +2524,7 @@ the control of the same O-PNC, the configuration of the multiplexing
 label, regardless of whether it is a standard or vendor-specific
 label, can be done by the O-PNC using mechanisms which are
 vendor-specific and outside the scope of this document. The MDSC can just
-request the O-PNC to setup a client connectivity service over a WDM
+request the O-PNC to setup a client connectivity service over a DWDM
 tunnel.
 
 In case of fixed configuration, the multiplexing label is assigned by
