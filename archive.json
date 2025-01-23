@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-21T00:47:47.780734+00:00",
+  "timestamp": "2025-01-23T00:48:23.554256+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7775,7 +7775,7 @@
       "labels": [],
       "body": "**[ACTN POI bi-weekly call (December 17, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-12-17)**\r\n\r\nComment 1: \"(e.g., QSFP-DD ZR 400G)\" Reference needed?\r\nA1: Yes. Jeff was going to send it. \r\n\r\n- [ ] @jbouqui153 : provide a reference for QSFP-DD ZR 400G\r\n\r\nComment 2: We seem to use WDM, CWDM and DWDM in the document; do we need all\r\nof them, or can we use WDM or DWDM for consistency?   \r\nA2: Yes. Mainly DWDM, unless special case for CWDM\r\n\r\nComment 3: \"OSS/Orchestration layer\" is not synonymous. \r\nA3: Actually, this \r\n\r\nComment 4: Maybe provide a reference for the Shared Risk Link Group (SRLG) TE-path property?\r\nA4: Yes. Italo to add. \r\n\r\n- [ ] @italobusi provide a reference for Shared Risk Link Group (SRLG) TE-path property\r\n\r\nComment 6: Should \"Service Access Points\" contain a reference? \r\nA6 Yes, IETF SAP I-D. Italo to add.\r\n\r\n- [ ] @italobusi provide a reference for IETF SAP RFC\r\n\r\nComment 7: We need to double-check the usage of \"setup\" and \"set up\" based on the document, using them as verb phrases, nouns, or adjectives. I think I caught most of them. \r\nA7. Yes. Done. \r\n\r\nComment 8: Need reference for PCEP?\r\nA8. No. \r\n\r\nComment 10: Long paragraphs. \r\nA10.  I've split long paragraphs and some very long sentences into new shorter sentences to enhance readability. \r\n\r\nComment 12: Expand LTP on first use.\r\nA12. Yes. Done. \r\n\r\nComment 13: Expand LLDP on first use.\r\nA13: Done. \r\n\r\nComment 14: Expand RPC on first use, do we need a reference?\r\nA14: I think not. \r\n\r\nComment 15: Expand LAG and also reference.\r\nA15. Done. Maybe use RFC8795 TE Topo as reference too, Italo can decide. \r\n\r\n- [ ] @italobusi check reference for LAG\r\n\r\nComment 16: We say \"This version of the draft\", do we mean \"This document assumes\"\r\nA16: Fixed. \r\n",
       "createdAt": "2024-12-17T11:07:24Z",
-      "updatedAt": "2025-01-20T09:57:20Z",
+      "updatedAt": "2025-01-22T19:51:16Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "e4fb4ef156fa21251a644d30a692b53f9070d9d6",
@@ -7787,7 +7787,271 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOC9D8a86Y3fKz",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "prmanna",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-21T13:46:17Z",
+          "updatedAt": "2025-01-21T15:06:30Z",
+          "comments": [
+            {
+              "originalPosition": 107,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-01-21T13:46:17Z",
+              "updatedAt": "2025-01-21T15:06:30Z"
+            },
+            {
+              "originalPosition": 110,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-01-21T13:46:39Z",
+              "updatedAt": "2025-01-21T15:06:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZBM_0",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "prmanna",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-01-22T13:36:00Z",
+          "updatedAt": "2025-01-22T13:36:00Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZEDhr",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-22T18:27:49Z",
+          "updatedAt": "2025-01-22T19:51:16Z",
+          "comments": [
+            {
+              "originalPosition": 95,
+              "body": "There are some strange characters:\r\n\r\n```suggestion\r\ntransport  networks, spanning IP/MPLS, optical, and microwave\r\ntechnologies, is crucial to addressing customer demands for high-bandwidth\r\n```",
+              "createdAt": "2025-01-22T18:27:49Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 116,
+              "body": "Unless I misunderstand the meaning of 'results in', it seems that this sentence is saying that this difference is the cause of technical differences, ... while it is the other way around, this difference is caused by the technical differences, ...\r\n\r\n```suggestion\r\nengineered and operated independently. This separation is due to\r\n```\r\n",
+              "createdAt": "2025-01-22T18:31:31Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 147,
+              "body": "```suggestion\r\n\r\n```",
+              "createdAt": "2025-01-22T18:33:00Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 213,
+              "body": "```suggestion\r\n: The Provider Edge (PE) to PE configuration, including both the network\r\nservice layer (VRFs, RT import/export policies configuration) and the\r\n```",
+              "createdAt": "2025-01-22T18:37:05Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 217,
+              "body": "```suggestion\r\nincludes the configuration (on the PE side) of the interface towards the\r\nCE (e.g. VLAN, IP address, routing protocol, etc.).\r\n```",
+              "createdAt": "2025-01-22T18:37:28Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 309,
+              "body": "```suggestion\r\nGateway Protocol (IGP) areas within the same operator network.\r\n\r\n```",
+              "createdAt": "2025-01-22T18:38:35Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 632,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-01-22T18:51:36Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 636,
+              "body": "```suggestion\r\n       share resources with other services nor compete for bandwidth with\r\n       other tunnels, ensuring deterministic latency performance.\r\n```",
+              "createdAt": "2025-01-22T18:51:57Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2447,
+              "body": "```suggestion\r\ndescribed in {{yang}} provide useful support for Packet Optical Integration\r\n```",
+              "createdAt": "2025-01-22T19:25:42Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 404,
+              "body": "I-D.ietf-ccamp-optical-impairment-topology-yang defines the 'WDM node' (not the 'DWDM node')\r\n\r\n```suggestion\r\n- WDM nodes, as defined in\r\n```",
+              "createdAt": "2025-01-22T19:32:54Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 977,
+              "body": "```suggestion\r\nor multi-layer OTN/DWDM. In the latter case, multi-layer coordination\r\n```",
+              "createdAt": "2025-01-22T19:33:25Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1214,
+              "body": "There is no definition of 'WDM equipment' or 'DWDM equipment'\r\n\r\nI think we can use the term 'WDM node' from I-D.ietf-ccamp-optical-impairment-topology-yang as in the rest of the document\r\n\r\n```suggestion\r\nby a specific IP service on the WDM node).\r\n```",
+              "createdAt": "2025-01-22T19:36:00Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1232,
+              "body": "I-D.ietf-ccamp-optical-impairment-topology-yang defines the 'WDM node' (and not the 'DWDM node')\r\n\r\n```suggestion\r\nto report the DWDM network topology (e.g., WDM nodes and OMS links),\r\n```",
+              "createdAt": "2025-01-22T19:38:09Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1301,
+              "body": "I-D.ietf-ccamp-optical-impairment-topology-yang defines the 'WDM node' (and not the 'DWDM node')\r\n\r\n```suggestion\r\ntransponders are physically integrated within the same WDM node or\r\nare physically located on a device external to the WDM node since it\r\nboth cases the optical transponders and the WDM node are under the\r\n```\r\n",
+              "createdAt": "2025-01-22T19:39:37Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1302,
+              "body": "I-D.ietf-ccamp-optical-impairment-topology-yang defines the 'WDM TE node' (and not the 'DWDM TE node')\r\n\r\n```suggestion\r\ncontrol of the same O-PNC and abstracted as a single WDM TE Node at the\r\n```",
+              "createdAt": "2025-01-22T19:40:03Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1324,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nintra-domain OTN links are supported by underlay WDM tunnels: this\r\n```",
+              "createdAt": "2025-01-22T19:40:54Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1333,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nThe WDM Tunnel Model is used to report all the WDM tunnels\r\n```",
+              "createdAt": "2025-01-22T19:41:20Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1343,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nor transparent. The underlay optical tunnels can be either WDM\r\n```",
+              "createdAt": "2025-01-22T19:41:48Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1348,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nThe WDM tunnels can be used to support either Ethernet or CBR client\r\n```",
+              "createdAt": "2025-01-22T19:42:06Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 1354,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nthe underlay WDM tunnel with the supported multi-layer intra-domain\r\n```",
+              "createdAt": "2025-01-22T19:42:26Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2085,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nthe WDM Tunnel model or the OTN Tunnel model, if optional OTN switching\r\n```",
+              "createdAt": "2025-01-22T19:42:56Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2306,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nusing the WDM or OTN tunnel model); and\r\n```",
+              "createdAt": "2025-01-22T19:43:28Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2516,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nWDM tunnel model would also support optical tunnel setup in the case\r\n```",
+              "createdAt": "2025-01-22T19:43:59Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2720,
+              "body": "I-D.ietf-ccamp-optical-impairment-topology-yang defines the 'WDM node' (and not the 'DWDM node')\r\n\r\n```suggestion\r\nthat optical layer is fine between the two edge WDM nodes, triggers\r\nthe WDM edge node re-configuration so that the IP router's back-up port\r\n```",
+              "createdAt": "2025-01-22T19:45:25Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2722,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nassociated muxponder port can reuse the WDM tunnel that was already in\r\n```",
+              "createdAt": "2025-01-22T19:45:40Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2730,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\n   reconfigured to reuse the existing WDM tunnel and the new link has\r\n```",
+              "createdAt": "2025-01-22T19:46:03Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2740,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nWDM tunnel as the one used originally for the failed IP router port. Once\r\n```",
+              "createdAt": "2025-01-22T19:46:20Z",
+              "updatedAt": "2025-01-22T19:51:16Z"
+            },
+            {
+              "originalPosition": 2745,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nthe back-up port of the IP router and the original WDM tunnel if overall\r\n```",
+              "createdAt": "2025-01-22T19:46:37Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2754,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nneeds to find a WDM tunnel suitable to comply the DWDM port\r\n```",
+              "createdAt": "2025-01-22T19:47:35Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2763,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nthere is already an existing WDM tunnel between the two muxponders\r\n```",
+              "createdAt": "2025-01-22T19:48:29Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2767,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\n1. if the WDM tunnel already exists, the controller needs only to\r\n```",
+              "createdAt": "2025-01-22T19:48:47Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2774,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\n2. if the WDM tunnel does not exist, the controller has to first\r\nestablish the WDM tunnel, finding a proper optical path matching\r\n```",
+              "createdAt": "2025-01-22T19:49:00Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2780,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nSince multiple client connectivity services are sharing the same WDM\r\n```",
+              "createdAt": "2025-01-22T19:49:18Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 2792,
+              "body": "I-D.ietf-ccamp-wdm-tunnel-yang defines the 'WDM tunnel' model (and not the 'DWDM tunnel' model)\r\n\r\n```suggestion\r\nrequest the O-PNC to setup a client connectivity service over a WDM\r\n```",
+              "createdAt": "2025-01-22T19:49:40Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "I need a placeholder to add a contributor before uploading the I-D on IETF datatracker",
+              "createdAt": "2025-01-22T19:51:02Z",
+              "updatedAt": "2025-01-22T19:51:17Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
