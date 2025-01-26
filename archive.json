@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-23T00:48:23.554256+00:00",
+  "timestamp": "2025-01-26T00:50:25.647538+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7775,7 +7775,7 @@
       "labels": [],
       "body": "**[ACTN POI bi-weekly call (December 17, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-12-17)**\r\n\r\nComment 1: \"(e.g., QSFP-DD ZR 400G)\" Reference needed?\r\nA1: Yes. Jeff was going to send it. \r\n\r\n- [ ] @jbouqui153 : provide a reference for QSFP-DD ZR 400G\r\n\r\nComment 2: We seem to use WDM, CWDM and DWDM in the document; do we need all\r\nof them, or can we use WDM or DWDM for consistency?   \r\nA2: Yes. Mainly DWDM, unless special case for CWDM\r\n\r\nComment 3: \"OSS/Orchestration layer\" is not synonymous. \r\nA3: Actually, this \r\n\r\nComment 4: Maybe provide a reference for the Shared Risk Link Group (SRLG) TE-path property?\r\nA4: Yes. Italo to add. \r\n\r\n- [ ] @italobusi provide a reference for Shared Risk Link Group (SRLG) TE-path property\r\n\r\nComment 6: Should \"Service Access Points\" contain a reference? \r\nA6 Yes, IETF SAP I-D. Italo to add.\r\n\r\n- [ ] @italobusi provide a reference for IETF SAP RFC\r\n\r\nComment 7: We need to double-check the usage of \"setup\" and \"set up\" based on the document, using them as verb phrases, nouns, or adjectives. I think I caught most of them. \r\nA7. Yes. Done. \r\n\r\nComment 8: Need reference for PCEP?\r\nA8. No. \r\n\r\nComment 10: Long paragraphs. \r\nA10.  I've split long paragraphs and some very long sentences into new shorter sentences to enhance readability. \r\n\r\nComment 12: Expand LTP on first use.\r\nA12. Yes. Done. \r\n\r\nComment 13: Expand LLDP on first use.\r\nA13: Done. \r\n\r\nComment 14: Expand RPC on first use, do we need a reference?\r\nA14: I think not. \r\n\r\nComment 15: Expand LAG and also reference.\r\nA15. Done. Maybe use RFC8795 TE Topo as reference too, Italo can decide. \r\n\r\n- [ ] @italobusi check reference for LAG\r\n\r\nComment 16: We say \"This version of the draft\", do we mean \"This document assumes\"\r\nA16: Fixed. \r\n",
       "createdAt": "2024-12-17T11:07:24Z",
-      "updatedAt": "2025-01-22T19:51:16Z",
+      "updatedAt": "2025-01-24T17:06:26Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "e4fb4ef156fa21251a644d30a692b53f9070d9d6",
@@ -8048,6 +8048,32 @@
               "body": "I need a placeholder to add a contributor before uploading the I-D on IETF datatracker",
               "createdAt": "2025-01-22T19:51:02Z",
               "updatedAt": "2025-01-22T19:51:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZXQ9I",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "jbouqui153",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-01-24T15:50:36Z",
+          "updatedAt": "2025-01-24T17:06:26Z",
+          "comments": [
+            {
+              "originalPosition": 349,
+              "body": "remove \";\"",
+              "createdAt": "2025-01-24T15:50:36Z",
+              "updatedAt": "2025-01-24T17:06:26Z"
+            },
+            {
+              "originalPosition": 378,
+              "body": "These sentences were correct two years ago when we started to write them but 400G ZR(+) QSFP-DD (and 100G ZR QSFP28)are not anymore an \"emerging optical technology\" and operators have been deploying those coherent pluggables in the IP routers mainly in Metro/Core where link distances and performances allow it...The reason why it has been considered outside the scope of this document is because it leads to architecture considerations different from the traditional approach based on grey interfaces between routers and optical nodes. Would propose to rephrase in the following way:\r\nAlthough coherent transceiver pluggables (OIF 400G ZR, OpenZR+ 400G ZR+ and 100G ZR) are being deployed on IP routers in operators' networks, it was agreed to keep this use case outside the scope of this document since it can lead to different architecture options and requires a dedicated use case analysis which has been started in a separate IETF draft [https://datatracker.ietf.org/doc/draft-ietf-ccamp-actn-poi-pluggable-usecases-gaps/00/ ](url)\r\nReferences:\r\n- OIF Implementation Agreement 400ZR, March 2020, [https://www.oiforum.com/wp-content/uploads/OIF-400ZR-01.0_reduced2.pdf](url)\r\n- Open ZR+ MSA Technical specification rev3.0, July 2023, [https://openzrplus.org/wp-content/uploads/2024/04/openzrplus_rev3p0_final2.pdf](url)",
+              "createdAt": "2025-01-24T16:28:22Z",
+              "updatedAt": "2025-01-24T17:06:57Z"
             }
           ]
         }
