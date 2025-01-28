@@ -412,6 +412,11 @@ Table of Contents
    connections, supported by single-technology Ethernet links between
    physically adjacent IP routers.
 
+   As described in [RFC7424], in order to increase the bandwidth between
+   two adjacent routers multiple Ethernet links can be setup between
+   adjacent routers using either Link Aggregation Groups (LAGs)
+   [IEEE_802.1AX] or Equal Cost Multi-Path (ECMP) [RFC2991].
+
    Therefore, if inter-domain links between optical domains exist, they
    would be utilized to support multi-domain optical services, which
    fall outside the scope of this document.
@@ -620,7 +625,8 @@ Table of Contents
       protection mechanisms, such as Fast Reroute (FRR) for MPLS-TE or
       Topology Independent Loop-Free Alternate (TI-LFA) for SR-TE.
       These mechanisms operate with an awareness of multi-technology TE
-      path properties, such as Shared Risk Link Group (SRLG).
+      path properties, such as the Shared Risk Link Group (SRLG) path
+      properties defined in [RFC8001].
 
    For inter-domain TE paths, it is assumed that each packet domain in
    Figure 2 and Figure 3 employs the same TE technology.  The stitching
@@ -1152,8 +1158,7 @@ Table of Contents
    In particular, for the cross-technology Ethernet links, it is key for
    MDSC to automatically correlate the information from the PNC network
    databases about the physical ports from the routers (single link or
-   bundle links for Link Aggregation Group (LAG)) to client ports in the
-   ROADM.
+   bundle links for LAG) to client ports in the ROADM.
 
    The analysis of multi-layer fault management is outside the scope of
    this document.  However, the discovered information should be
@@ -2002,9 +2007,8 @@ Table of Contents
       connected to PE13 and P16, as described in Section 5.2;
 
    *  the P-PNC1 to update the configuration of the existing IP link, in
-      case of LAG, or configure a new IP link, in case of Equal Cost
-      Multi-Path (ECMP), between PE13 and P16, as described in
-      Section 5.2;
+      case of LAG, or configure a new IP link, in case of ECMP, between
+      PE13 and P16, as described in Section 5.2;
 
    *  the P-PNC1 to update the bandwidth of the selected TE path between
       PE13 and PE14, as described in Section 5.3.
@@ -2860,6 +2864,11 @@ Table of Contents
               BCP 6, RFC 1930, DOI 10.17487/RFC1930, March 1996,
               <https://www.rfc-editor.org/rfc/rfc1930>.
 
+   [RFC2991]  Thaler, D. and C. Hopps, "Multipath Issues in Unicast and
+              Multicast Next-Hop Selection", RFC 2991,
+              DOI 10.17487/RFC2991, November 2000,
+              <https://www.rfc-editor.org/rfc/rfc2991>.
+
    [RFC4090]  Pan, P., Ed., Swallow, G., Ed., and A. Atlas, Ed., "Fast
               Reroute Extensions to RSVP-TE for LSP Tunnels", RFC 4090,
               DOI 10.17487/RFC4090, May 2005,
@@ -2874,6 +2883,18 @@ Table of Contents
               "Framework for PCE-Based Inter-Layer MPLS and GMPLS
               Traffic Engineering", RFC 5623, DOI 10.17487/RFC5623,
               September 2009, <https://www.rfc-editor.org/rfc/rfc5623>.
+
+   [RFC7424]  Krishnan, R., Yong, L., Ghanwani, A., So, N., and B.
+              Khasnabish, "Mechanisms for Optimizing Link Aggregation
+              Group (LAG) and Equal-Cost Multipath (ECMP) Component Link
+              Utilization in Networks", RFC 7424, DOI 10.17487/RFC7424,
+              January 2015, <https://www.rfc-editor.org/rfc/rfc7424>.
+
+   [RFC8001]  Zhang, F., Ed., Gonzalez de Dios, O., Ed., Margaria, C.,
+              Hartley, M., and Z. Ali, "RSVP-TE Extensions for
+              Collecting Shared Risk Link Group (SRLG) Information",
+              RFC 8001, DOI 10.17487/RFC8001, January 2017,
+              <https://www.rfc-editor.org/rfc/rfc8001>.
 
    [RFC8231]  Crabbe, E., Minei, I., Medved, J., and R. Varga, "Path
               Computation Element Communication Protocol (PCEP)
@@ -3179,6 +3200,11 @@ Contributors
 
    Gabriele Galimberti
    Email: ggalimbe56@gmail.com
+
+
+   To-Be-Added
+   To-Be-Added
+   Email: To-Be-Added
 
 
    Anton Snitser

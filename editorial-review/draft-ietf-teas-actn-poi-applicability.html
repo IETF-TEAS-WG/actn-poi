@@ -1698,19 +1698,20 @@ supported by the optical network are intra-domain (intra-AS/intra-area),
 such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.<a href="#section-2-10" class="pilcrow">¶</a></p>
-<p id="section-2-11">Therefore, if inter-domain links between optical domains exist, they
+<p id="section-2-11">As described in <span>[<a href="#RFC7424" class="cite xref">RFC7424</a>]</span>, in order to increase the bandwidth between two adjacent routers multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) <span>[<a href="#IEEE_802.1AX" class="cite xref">IEEE_802.1AX</a>]</span> or Equal Cost Multi-Path (ECMP) <span>[<a href="#RFC2991" class="cite xref">RFC2991</a>]</span>.<a href="#section-2-11" class="pilcrow">¶</a></p>
+<p id="section-2-12">Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
-outside the scope of this document.<a href="#section-2-11" class="pilcrow">¶</a></p>
-<p id="section-2-12">The optical nodes within the optical domains can be either:<a href="#section-2-12" class="pilcrow">¶</a></p>
+outside the scope of this document.<a href="#section-2-12" class="pilcrow">¶</a></p>
+<p id="section-2-13">The optical nodes within the optical domains can be either:<a href="#section-2-13" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-13.1">
-          <p id="section-2-13.1.1">WDM nodes, as defined in
+<li class="normal" id="section-2-14.1">
+          <p id="section-2-14.1.1">WDM nodes, as defined in
 <span>[<a href="#I-D.ietf-ccamp-optical-impairment-topology-yang" class="cite xref">I-D.ietf-ccamp-optical-impairment-topology-yang</a>]</span>, with an integrated
-ROADM functions and with or without integrated optical transponders;<a href="#section-2-13.1.1" class="pilcrow">¶</a></p>
+ROADM functions and with or without integrated optical transponders;<a href="#section-2-14.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-13.2">
-          <p id="section-2-13.2.1">OTN nodes, with integrated an OTN cross-connect function and with or
-without integrated ROADM functions or optical transponders.<a href="#section-2-13.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-14.2">
+          <p id="section-2-14.2.1">OTN nodes, with integrated an OTN cross-connect function and with or
+without integrated ROADM functions or optical transponders.<a href="#section-2-14.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="mdsc-overview">
@@ -1930,7 +1931,7 @@ reference to a precomputed SR policy or path.<a href="#section-2.1.1-8.2.1" clas
 local protection mechanisms, such as Fast Reroute (FRR) for MPLS-TE or
 Topology Independent Loop-Free Alternate (TI-LFA) for SR-TE. These
 mechanisms operate with an awareness of multi-technology TE path
-properties, such as Shared Risk Link Group (SRLG).<a href="#section-2.1.1-8.3.1" class="pilcrow">¶</a></p>
+properties, such as the Shared Risk Link Group (SRLG) path properties defined in <span>[<a href="#RFC8001" class="cite xref">RFC8001</a>]</span>.<a href="#section-2.1.1-8.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 <p id="section-2.1.1-9">For inter-domain TE paths, it is assumed that each packet domain in
@@ -2568,7 +2569,7 @@ by a specific IP service on the WDM node).<a href="#section-4-8" class="pilcrow"
 MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
-bundle links for Link Aggregation Group (LAG)) to client ports in the
+bundle links for LAG) to client ports in the
 ROADM.<a href="#section-4-9" class="pilcrow">¶</a></p>
 <p id="section-4-10">The analysis of multi-layer fault management is outside the scope of
 this document. However, the discovered information should be
@@ -3510,8 +3511,7 @@ connected to PE13 and P16, as described in
 </li>
         <li class="normal" id="section-5-11.2">
           <p id="section-5-11.2.1">the P-PNC1 to update the configuration of the existing IP link, in
-case of LAG, or configure a new IP link, in case of Equal Cost Multi-Path
-(ECMP), between
+case of LAG, or configure a new IP link, in case of ECMP, between
 PE13 and P16, as described in <a href="#multi-technology-link-setup" class="auto internal xref">Section 5.2</a>;<a href="#section-5-11.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-5-11.3">
@@ -4327,6 +4327,10 @@ discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a><
         <dd>
 <span class="refAuthor">Hawkinson, J.</span> and <span class="refAuthor">T. Bates</span>, <span class="refTitle">"Guidelines for creation, selection, and registration of an Autonomous System (AS)"</span>, <span class="seriesInfo">BCP 6</span>, <span class="seriesInfo">RFC 1930</span>, <span class="seriesInfo">DOI 10.17487/RFC1930</span>, <time datetime="1996-03" class="refDate">March 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1930">https://www.rfc-editor.org/rfc/rfc1930</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC2991">[RFC2991]</dt>
+        <dd>
+<span class="refAuthor">Thaler, D.</span> and <span class="refAuthor">C. Hopps</span>, <span class="refTitle">"Multipath Issues in Unicast and Multicast Next-Hop Selection"</span>, <span class="seriesInfo">RFC 2991</span>, <span class="seriesInfo">DOI 10.17487/RFC2991</span>, <time datetime="2000-11" class="refDate">November 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2991">https://www.rfc-editor.org/rfc/rfc2991</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC4090">[RFC4090]</dt>
         <dd>
 <span class="refAuthor">Pan, P., Ed.</span>, <span class="refAuthor">Swallow, G., Ed.</span>, and <span class="refAuthor">A. Atlas, Ed.</span>, <span class="refTitle">"Fast Reroute Extensions to RSVP-TE for LSP Tunnels"</span>, <span class="seriesInfo">RFC 4090</span>, <span class="seriesInfo">DOI 10.17487/RFC4090</span>, <time datetime="2005-05" class="refDate">May 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4090">https://www.rfc-editor.org/rfc/rfc4090</a>&gt;</span>. </dd>
@@ -4338,6 +4342,14 @@ discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a><
 <dt id="RFC5623">[RFC5623]</dt>
         <dd>
 <span class="refAuthor">Oki, E.</span>, <span class="refAuthor">Takeda, T.</span>, <span class="refAuthor">Le Roux, JL.</span>, and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Framework for PCE-Based Inter-Layer MPLS and GMPLS Traffic Engineering"</span>, <span class="seriesInfo">RFC 5623</span>, <span class="seriesInfo">DOI 10.17487/RFC5623</span>, <time datetime="2009-09" class="refDate">September 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5623">https://www.rfc-editor.org/rfc/rfc5623</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7424">[RFC7424]</dt>
+        <dd>
+<span class="refAuthor">Krishnan, R.</span>, <span class="refAuthor">Yong, L.</span>, <span class="refAuthor">Ghanwani, A.</span>, <span class="refAuthor">So, N.</span>, and <span class="refAuthor">B. Khasnabish</span>, <span class="refTitle">"Mechanisms for Optimizing Link Aggregation Group (LAG) and Equal-Cost Multipath (ECMP) Component Link Utilization in Networks"</span>, <span class="seriesInfo">RFC 7424</span>, <span class="seriesInfo">DOI 10.17487/RFC7424</span>, <time datetime="2015-01" class="refDate">January 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7424">https://www.rfc-editor.org/rfc/rfc7424</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8001">[RFC8001]</dt>
+        <dd>
+<span class="refAuthor">Zhang, F., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Margaria, C.</span>, <span class="refAuthor">Hartley, M.</span>, and <span class="refAuthor">Z. Ali</span>, <span class="refTitle">"RSVP-TE Extensions for Collecting Shared Risk Link Group (SRLG) Information"</span>, <span class="seriesInfo">RFC 8001</span>, <span class="seriesInfo">DOI 10.17487/RFC8001</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8001">https://www.rfc-editor.org/rfc/rfc8001</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8231">[RFC8231]</dt>
         <dd>
@@ -4701,6 +4713,14 @@ Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).<a href="#ap
 <div class="email">
 <span>Email:</span>
 <a href="mailto:ggalimbe56@gmail.com" class="email">ggalimbe56@gmail.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">To-Be-Added</span></div>
+<div dir="auto" class="left"><span class="org">To-Be-Added</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:To-Be-Added" class="email">To-Be-Added</a>
 </div>
 </address>
 <address class="vcard">
