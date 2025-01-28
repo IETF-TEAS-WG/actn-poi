@@ -385,7 +385,7 @@ such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.
 
-As described in {{?RFC7424}, in order to increase the bandwidth between two adjacent routers multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
+As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
 
 Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
