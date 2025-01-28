@@ -1063,7 +1063,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Peruzzini, et al.</td>
-<td class="center">Expires 24 July 2025</td>
+<td class="center">Expires 1 August 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1076,12 +1076,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-teas-actn-poi-applicability-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-01-20" class="published">20 January 2025</time>
+<time datetime="2025-01-28" class="published">28 January 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-07-24">24 July 2025</time></dd>
+<dd class="expires"><time datetime="2025-08-01">1 August 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1156,7 +1156,7 @@ Network Controller Interface (MPI) within the ACTN architecture<a href="#section
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 24 July 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1387,8 +1387,8 @@ Network Controller Interface (MPI) within the ACTN architecture<a href="#section
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1">The full automation of management and control for Service Providers'
-transport  networks�spanning IP/MPLS, optical, and microwave
-technologies�is crucial to addressing customer demands for high-bandwidth
+transport  networks, spanning IP/MPLS, optical, and microwave
+technologies, is crucial to addressing customer demands for high-bandwidth
 applications, such as ultra-fast  mobile broadband for 5G and fiber
 connectivity services. The Abstraction and  Control of TE Networks (ACTN)
 architecture and interfaces enable the automation  and efficient
@@ -1398,13 +1398,13 @@ network  services that can be requested by upper-layer applications,
 meeting diverse  service-level requirements from a network perspective,
 such as physical diversity, latency, bandwidth, and topology.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">Packet Optical Integration (POI) represents an advanced application of
-traffic engineering. In wide-area networks, packet networks based on the<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Internet Protocol (IP), often augmented with Multiprotocol Label
-Switching (MPLS) or Segment Routing  (SR), are typically implemented over<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">an optical transport network utilizing Dense Wavelength Division
+traffic engineering. In wide-area networks, packet networks based on the
+Internet Protocol (IP), often augmented with Multiprotocol Label
+Switching (MPLS) or Segment Routing  (SR), are typically implemented over
+an optical transport network utilizing Dense Wavelength Division
 Multiplexing (DWDM), occasionally with an optional Optical Transport
-Network (OTN) layer.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">In many existing network deployments, packet and optical networks are
+Network (OTN) layer.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">In many existing network deployments, packet and optical networks are
 engineered and operated independently. This separation results in
 significant technical differences between the two technologies (e.g.,
 routers versus optical switches) and their associated network engineering
@@ -1414,8 +1414,8 @@ operating on vastly different time scales). Additionally, customer
 requirements often differ between packet and optical networks, and it is
 common for Service Providers to use different vendors for each domain. As
 a result, the operation of these complex packet and optical networks is
-often siloed, as each technology domain requires specialized skill sets.<a href="#section-1-5" class="pilcrow">¶</a></p>
-<p id="section-1-6">The separation of packet and optical network deployment and operation is
+often siloed, as each technology domain requires specialized skill sets.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The separation of packet and optical network deployment and operation is
 inefficient for several reasons. First, integrating packet and optical
 networks can significantly reduce both capital expenditures (CAPEX) and
 operational expenditures (OPEX). Second, multi-technology online topology
@@ -1427,41 +1427,41 @@ multi-technology traffic engineering enables more efficient use of
 available network capacity (e.g., coordination of restoration).
 Furthermore, provisioning workflows can be simplified or automated across
 layers, facilitating capabilities such as bandwidth-on-demand and
-streamlined maintenance activities.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">This document uses packet-based Traffic Engineered (TE) service
+streamlined maintenance activities.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">This document uses packet-based Traffic Engineered (TE) service
 examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using
-Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or SR<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">-TE-based, forwarding plane mechanisms.<a href="#section-1-8" class="pilcrow">¶</a></p>
-<p id="section-1-9">The ACTN framework facilitates seamless integration of packet and optical
+Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or SR
+-TE-based, forwarding plane mechanisms.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-6">The ACTN framework facilitates seamless integration of packet and optical
 networks across multiple technologies and vendors. This is achieved
 through the coordination of a Multi-Domain Service Coordinator (MDSC) and
 Provisioning Network Controllers (PNCs) for both packet and optical
-domains.<a href="#section-1-9" class="pilcrow">¶</a></p>
-<p id="section-1-10">This document outlines key scenarios for Packet Optical Integration (POI)
+domains.<a href="#section-1-6" class="pilcrow">¶</a></p>
+<p id="section-1-7">This document outlines key scenarios for Packet Optical Integration (POI)
 from the perspective of the packet service layer and highlights the
 necessary coordination between packet and optical layers to enhance POI
 deployment and operation. These scenarios emphasize multi-domain packet
-networks functioning as clients of optical networks.<a href="#section-1-10" class="pilcrow">¶</a></p>
-<p id="section-1-11">This document analyzes the scenario in which packet networks support
+networks functioning as clients of optical networks.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">This document analyzes the scenario in which packet networks support
 multi-domain TE paths. The optical networks may
 consist of a DWDM network, an OTN network (without a DWDM layer), or a
 multi-layer OTN/DWDM network. Additionally, DWDM networks can be either
-fixed-grid or flexible-grid.<a href="#section-1-11" class="pilcrow">¶</a></p>
-<p id="section-1-12">Multi-technology and multi-domain scenarios, based on the reference
+fixed-grid or flexible-grid.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<p id="section-1-9">Multi-technology and multi-domain scenarios, based on the reference
 network described in <a href="#reference-network" class="auto internal xref">Section 2</a> and very relevant for Service
-Providers, are described in <a href="#discovery" class="auto internal xref">Section 4</a> and <a href="#config" class="auto internal xref">Section 5</a>.<a href="#section-1-12" class="pilcrow">¶</a></p>
-<p id="section-1-13">For each scenario, existing IETF protocols and data models,
+Providers, are described in <a href="#discovery" class="auto internal xref">Section 4</a> and <a href="#config" class="auto internal xref">Section 5</a>.<a href="#section-1-9" class="pilcrow">¶</a></p>
+<p id="section-1-10">For each scenario, existing IETF protocols and data models,
 identified in <a href="#restconf" class="auto internal xref">Section 3.1</a> and <a href="#yang" class="auto internal xref">Section 3.2</a>, are analyzed with a particular
-focus on the MPI in the ACTN architecture.<a href="#section-1-13" class="pilcrow">¶</a></p>
-<p id="section-1-14">For each multi-technology scenario, the document analyzes how to use the
-interfaces and data models of the ACTN architecture.<a href="#section-1-14" class="pilcrow">¶</a></p>
-<p id="section-1-15">A summary of the gaps identified in this analysis is provided in
-<a href="#conclusions" class="auto internal xref">Section 6</a>.<a href="#section-1-15" class="pilcrow">¶</a></p>
-<p id="section-1-16">Understanding the degree of standardization and identifying potential
+focus on the MPI in the ACTN architecture.<a href="#section-1-10" class="pilcrow">¶</a></p>
+<p id="section-1-11">For each multi-technology scenario, the document analyzes how to use the
+interfaces and data models of the ACTN architecture.<a href="#section-1-11" class="pilcrow">¶</a></p>
+<p id="section-1-12">A summary of the gaps identified in this analysis is provided in
+<a href="#conclusions" class="auto internal xref">Section 6</a>.<a href="#section-1-12" class="pilcrow">¶</a></p>
+<p id="section-1-13">Understanding the degree of standardization and identifying potential
 gaps are crucial for evaluating the feasibility of integrating packet and
 optical DWDM domains (with an optional OTN layer) from an end-to-end,
-multi-vendor service provisioning perspective.<a href="#section-1-16" class="pilcrow">¶</a></p>
+multi-vendor service provisioning perspective.<a href="#section-1-13" class="pilcrow">¶</a></p>
 <div id="terms">
 <section id="section-1.1">
         <h3 id="name-terminology">
@@ -1477,115 +1477,113 @@ multi-vendor service provisioning perspective.<a href="#section-1-16" class="pil
           <dd class="break"></dd>
 <dt id="section-1.1-3.3">Network service:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.4">
-            <p id="section-1.1-3.4.1">The Provider Edge (PE) to PE configuration, including both the network<a href="#section-1.1-3.4.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-</dl>
-<p id="section-1.1-4">service layer (VRFs, RT import/export policies configuration) and the
+            <p id="section-1.1-3.4.1">The Provider Edge (PE) to PE configuration, including both the network
+service layer (VRFs, RT import/export policies configuration) and the
 network transport layer (e.g. RSVP-TE Label Switched Paths (LSPs). This
-includes the configuration (on the PE side) of the interface towards the<a href="#section-1.1-4" class="pilcrow">¶</a></p>
-<p id="section-1.1-5">CE (e.g. VLAN, IP address, routing protocol, etc.).<a href="#section-1.1-5" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-1.1-6">
-          <dt id="section-1.1-6.1">Technology domain:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.2">
-            <p id="section-1.1-6.2.1">short for "switching technology domain", defined as "region" in
+includes the configuration (on the PE side) of the interface towards the
+CE (e.g. VLAN, IP address, routing protocol, etc.).<a href="#section-1.1-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-1.1-3.5">Technology domain:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.6">
+            <p id="section-1.1-3.6.1">short for "switching technology domain", defined as "region" in
 <span>[<a href="#RFC5212" class="cite xref">RFC5212</a>]</span>, where the term "region" is applied to (GMPLS) control
-domains.<a href="#section-1.1-6.2.1" class="pilcrow">¶</a></p>
+domains.<a href="#section-1.1-3.6.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.3">PNC Domain:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.4">
-            <p id="section-1.1-6.4.1">part of the network under control of a single PNC instance. It is
-subject to the capabilities of the PNC which technology is controlled.<a href="#section-1.1-6.4.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.7">PNC Domain:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.8">
+            <p id="section-1.1-3.8.1">part of the network under control of a single PNC instance. It is
+subject to the capabilities of the PNC which technology is controlled.<a href="#section-1.1-3.8.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.5">Port:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.6">
-            <p id="section-1.1-6.6.1">The physical entity that transmits and receives physical signals.<a href="#section-1.1-6.6.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.9">Port:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.10">
+            <p id="section-1.1-3.10.1">The physical entity that transmits and receives physical signals.<a href="#section-1.1-3.10.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.7">Interface:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.8">
-            <p id="section-1.1-6.8.1">A physical or logical entity that transmits and receives traffic.<a href="#section-1.1-6.8.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.11">Interface:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.12">
+            <p id="section-1.1-3.12.1">A physical or logical entity that transmits and receives traffic.<a href="#section-1.1-3.12.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.9">Link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.10">
-            <p id="section-1.1-6.10.1">An association between two interfaces that can exchange traffic
-directly.<a href="#section-1.1-6.10.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.13">Link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.14">
+            <p id="section-1.1-3.14.1">An association between two interfaces that can exchange traffic
+directly.<a href="#section-1.1-3.14.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.11">Intra-domain link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.12">
-            <p id="section-1.1-6.12.1">a link between two adjacent nodes that belong to the same PNC domain.<a href="#section-1.1-6.12.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.15">Intra-domain link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.16">
+            <p id="section-1.1-3.16.1">a link between two adjacent nodes that belong to the same PNC domain.<a href="#section-1.1-3.16.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.13">Inter-domain link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.14">
-            <p id="section-1.1-6.14.1">a link between two adjacent nodes that belong to different PNC domains.<a href="#section-1.1-6.14.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.17">Inter-domain link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.18">
+            <p id="section-1.1-3.18.1">a link between two adjacent nodes that belong to different PNC domains.<a href="#section-1.1-3.18.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.15">Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.16">
-            <p id="section-1.1-6.16.1">A link between two Ethernet interfaces.<a href="#section-1.1-6.16.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.19">Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.20">
+            <p id="section-1.1-3.20.1">A link between two Ethernet interfaces.<a href="#section-1.1-3.20.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.17">Single-technology Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.18">
-            <p id="section-1.1-6.18.1">An Ethernet link between two Ethernet interfaces on physically adjacent
-IP routers.<a href="#section-1.1-6.18.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.21">Single-technology Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.22">
+            <p id="section-1.1-3.22.1">An Ethernet link between two Ethernet interfaces on physically adjacent
+IP routers.<a href="#section-1.1-3.22.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.19">Multi-technology Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.20">
-            <p id="section-1.1-6.20.1">An Ethernet link between two Ethernet interfaces on logically adjacent
+<dt id="section-1.1-3.23">Multi-technology Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.24">
+            <p id="section-1.1-3.24.1">An Ethernet link between two Ethernet interfaces on logically adjacent
 IP routers, supported by two cross-technology Ethernet links
-interconnected through an optical tunnel.<a href="#section-1.1-6.20.1" class="pilcrow">¶</a></p>
+interconnected through an optical tunnel.<a href="#section-1.1-3.24.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.21">Cross-technology Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.22">
-            <p id="section-1.1-6.22.1">An Ethernet link connecting an Ethernet interface on an IP router to an
-Ethernet interface on a physically adjacent optical node.<a href="#section-1.1-6.22.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.25">Cross-technology Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.26">
+            <p id="section-1.1-3.26.1">An Ethernet link connecting an Ethernet interface on an IP router to an
+Ethernet interface on a physically adjacent optical node.<a href="#section-1.1-3.26.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.23">Inter-domain Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.24">
-            <p id="section-1.1-6.24.1">An Ethernet link between two Ethernet interfaces on physically adjacent
-IP routers that belong to different P-PNC domains.<a href="#section-1.1-6.24.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.27">Inter-domain Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.28">
+            <p id="section-1.1-3.28.1">An Ethernet link between two Ethernet interfaces on physically adjacent
+IP routers that belong to different P-PNC domains.<a href="#section-1.1-3.28.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.25">Single-technology intra-domain Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.26">
-            <p id="section-1.1-6.26.1">An Ethernet link between two Ethernet interfaces on physically adjacent
-IP routers that belong to the same P-PNC domain.<a href="#section-1.1-6.26.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.29">Single-technology intra-domain Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.30">
+            <p id="section-1.1-3.30.1">An Ethernet link between two Ethernet interfaces on physically adjacent
+IP routers that belong to the same P-PNC domain.<a href="#section-1.1-3.30.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.27">Multi-technology intra-domain Ethernet link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.28">
-            <p id="section-1.1-6.28.1">An Ethernet link between two Ethernet interfaces on logically adjacent
+<dt id="section-1.1-3.31">Multi-technology intra-domain Ethernet link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.32">
+            <p id="section-1.1-3.32.1">An Ethernet link between two Ethernet interfaces on logically adjacent
 IP routers within the same P-PNC domain, supported by two
-cross-technology Ethernet links interconnected through an optical tunnel.<a href="#section-1.1-6.28.1" class="pilcrow">¶</a></p>
+cross-technology Ethernet links interconnected through an optical tunnel.<a href="#section-1.1-3.32.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.29">IP link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.30">
-            <p id="section-1.1-6.30.1">A link between two IP interfaces.<a href="#section-1.1-6.30.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.33">IP link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.34">
+            <p id="section-1.1-3.34.1">A link between two IP interfaces.<a href="#section-1.1-3.34.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.31">Inter-domain IP link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.32">
-            <p id="section-1.1-6.32.1">An IP link supported by an inter-domain Ethernet link.<a href="#section-1.1-6.32.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.35">Inter-domain IP link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.36">
+            <p id="section-1.1-3.36.1">An IP link supported by an inter-domain Ethernet link.<a href="#section-1.1-3.36.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.33">Single-technology intra-domain IP link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.34">
-            <p id="section-1.1-6.34.1">An IP link supported by a single-technology intra-domain Ethernet link.<a href="#section-1.1-6.34.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.37">Single-technology intra-domain IP link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.38">
+            <p id="section-1.1-3.38.1">An IP link supported by a single-technology intra-domain Ethernet link.<a href="#section-1.1-3.38.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-6.35">Multi-technology intra-domain IP link:</dt>
-          <dd style="margin-left: 1.5em" id="section-1.1-6.36">
-            <p id="section-1.1-6.36.1">An IP link supported by a multi-technology intra-domain Ethernet link.<a href="#section-1.1-6.36.1" class="pilcrow">¶</a></p>
+<dt id="section-1.1-3.39">Multi-technology intra-domain IP link:</dt>
+          <dd style="margin-left: 1.5em" id="section-1.1-3.40">
+            <p id="section-1.1-3.40.1">An IP link supported by a multi-technology intra-domain Ethernet link.<a href="#section-1.1-3.40.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1643,81 +1641,76 @@ Packet PNC (P-PNC) is responsible for controlling its respective packet
 domain, while each Optical PNC (O-PNC) is tasked with managing its
 optical domain. The packet domains controlled by the P-PNCs can represent
 Autonomous Systems (ASes), as defined in <span>[<a href="#RFC1930" class="cite xref">RFC1930</a>]</span>, or Interior
-Gateway Protocol (IGP) areas within the same operator network.
-The IP routers between the packet domains can be either AS Boundary
+Gateway Protocol (IGP) areas within the same operator network.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<p id="section-2-4">The IP routers between the packet domains can be either AS Boundary
 Routers (ASBR) or Area Border Router (ABR): in this document, the
 generic term Border Router (BR) is used to represent either an ASBR
-or an ABR.<a href="#section-2-3" class="pilcrow">¶</a></p>
-<p id="section-2-4">The Multi-Domain Service Coordinator (MDSC) is responsible for
+or an ABR.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-5">The Multi-Domain Service Coordinator (MDSC) is responsible for
 orchestrating the entire multi-domain, multi-technology network,
 encompassing both packet and optical domains. A standardized interface,
 the Multi-Domain Service Coordinator to Provisioning Network Controller
 Interface (MPI), enables the MDSC to interact with various Provisioning
-Network Controllers (O-PNCs and P-PNCs).<a href="#section-2-4" class="pilcrow">¶</a></p>
-<p id="section-2-5">The MPI interface provides the MDSC with an abstracted topology,
+Network Controllers (O-PNCs and P-PNCs).<a href="#section-2-5" class="pilcrow">¶</a></p>
+<p id="section-2-6">The MPI interface provides the MDSC with an abstracted topology,
 concealing technology-specific details of the network and selectively
 hiding topology information based on the chosen abstraction policy. The
 level of abstraction is determined by the configuration parameters of the
 P-PNC and O-PNC, such as offering potential connectivity information
 between any Provider Edge (PE) and Border Router (BR) within a packet
-network.<a href="#section-2-5" class="pilcrow">¶</a></p>
-<p id="section-2-6">In the reference network of <a href="#fig-ref-network" class="auto internal xref">Figure 1</a>, it is assumed that:<a href="#section-2-6" class="pilcrow">¶</a></p>
+network.<a href="#section-2-6" class="pilcrow">¶</a></p>
+<p id="section-2-7">In the reference network of <a href="#fig-ref-network" class="auto internal xref">Figure 1</a>, it is assumed that:<a href="#section-2-7" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-7.1">
-          <p id="section-2-7.1.1">The domain boundaries of the packet and optical domains are
+<li class="normal" id="section-2-8.1">
+          <p id="section-2-8.1.1">The domain boundaries of the packet and optical domains are
 congruent. In other words, each optical domain exclusively supports
-connectivity between IP routers within a single packet domain.;<a href="#section-2-7.1.1" class="pilcrow">¶</a></p>
+connectivity between IP routers within a single packet domain.<a href="#section-2-8.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-7.2">
-          <p id="section-2-7.2.1">There are no physical links directly connecting optical domains.
-Inter-domain physical links exist only under the following conditions:<a href="#section-2-7.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-8.2">
+          <p id="section-2-8.2.1">There are no physical links directly connecting optical domains.
+Inter-domain physical links exist only under the following conditions:<a href="#section-2-8.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-7.2.2.1">
-              <p id="section-2-7.2.2.1.1">between packet domains (i.e., between BRs belonging to
+<li class="normal" id="section-2-8.2.2.1">
+              <p id="section-2-8.2.2.1.1">between packet domains (i.e., between BRs belonging to
 different packet domains): these links are called inter-domain
-Ethernet or IP links within this document;<a href="#section-2-7.2.2.1.1" class="pilcrow">¶</a></p>
+Ethernet or IP links within this document;<a href="#section-2-8.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-2-7.2.2.2">
-              <p id="section-2-7.2.2.2.1">between packet and optical domains (i.e., between routers and
+            <li class="normal" id="section-2-8.2.2.2">
+              <p id="section-2-8.2.2.2.1">between packet and optical domains (i.e., between routers and
 optical nodes): these links are called cross-technology Ethernet links
-within this document;<a href="#section-2-7.2.2.2.1" class="pilcrow">¶</a></p>
+within this document;<a href="#section-2-8.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-2-7.2.2.3">
-              <p id="section-2-7.2.2.3.1">between customer sites and the packet network (i.e., between
+            <li class="normal" id="section-2-8.2.2.3">
+              <p id="section-2-8.2.2.3.1">between customer sites and the packet network (i.e., between
 CE devices and PE routers): these links are called access
-links within this document.<a href="#section-2-7.2.2.3.1" class="pilcrow">¶</a></p>
+links within this document.<a href="#section-2-8.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </li>
-        <li class="normal" id="section-2-7.3">
-          <p id="section-2-7.3.1">All the physical interfaces at inter-domain links are Ethernet
-physical interfaces.<a href="#section-2-7.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-8.3">
+          <p id="section-2-8.3.1">All the physical interfaces at inter-domain links are Ethernet
+physical interfaces.<a href="#section-2-8.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-2-8">Although emerging optical technologies (e.g., QSFP-DD ZR 400G) enable
-operators to deploy DWDM pluggable interfaces on IP routers, the adoption
-of these technologies remains limited. This is primarily because most
-operators are not yet prepared to manage packet and optical networks
-within a single unified domain. Consequently, a unified use case analysis
-falls outside the scope of this document.<a href="#section-2-8" class="pilcrow">¶</a></p>
-<p id="section-2-9">This document analyzes scenarios in which all multi-technology IP links
+<p id="section-2-9">Scenarios using coherent optical interfaces on the IP routers are outside the scope of this document.<a href="#section-2-9" class="pilcrow">¶</a></p>
+<p id="section-2-10">This document analyzes scenarios in which all multi-technology IP links
 supported by the optical network are intra-domain (intra-AS/intra-area),
 such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
-single-technology Ethernet links between physically adjacent IP routers.<a href="#section-2-9" class="pilcrow">¶</a></p>
-<p id="section-2-10">Therefore, if inter-domain links between optical domains exist, they
+single-technology Ethernet links between physically adjacent IP routers.<a href="#section-2-10" class="pilcrow">¶</a></p>
+<p id="section-2-11">Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
-outside the scope of this document.<a href="#section-2-10" class="pilcrow">¶</a></p>
-<p id="section-2-11">The optical nodes within the optical domains can be either:<a href="#section-2-11" class="pilcrow">¶</a></p>
+outside the scope of this document.<a href="#section-2-11" class="pilcrow">¶</a></p>
+<p id="section-2-12">The optical nodes within the optical domains can be either:<a href="#section-2-12" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-12.1">
-          <p id="section-2-12.1.1">DWDM nodes, as defined in
+<li class="normal" id="section-2-13.1">
+          <p id="section-2-13.1.1">WDM nodes, as defined in
 <span>[<a href="#I-D.ietf-ccamp-optical-impairment-topology-yang" class="cite xref">I-D.ietf-ccamp-optical-impairment-topology-yang</a>]</span>, with an integrated
-ROADM functions and with or without integrated optical transponders;<a href="#section-2-12.1.1" class="pilcrow">¶</a></p>
+ROADM functions and with or without integrated optical transponders;<a href="#section-2-13.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-12.2">
-          <p id="section-2-12.2.1">OTN nodes, with integrated an OTN cross-connect function and with or
-without integrated ROADM functions or optical transponders.<a href="#section-2-12.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-13.2">
+          <p id="section-2-13.2.1">OTN nodes, with integrated an OTN cross-connect function and with or
+without integrated ROADM functions or optical transponders.<a href="#section-2-13.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="mdsc-overview">
@@ -1964,11 +1957,9 @@ The level of isolation can be different:<a href="#section-2.1.1-13.1.2" class="p
 <ol start="1" type="a" class="normal type-a" id="section-2.1.1-13.1.3">
 <li id="section-2.1.1-13.1.3.1">
                   <p id="section-2.1.1-13.1.3.1.1">Hard isolation with deterministic latency implies that the L2/L3
-VPN requires a set of dedicated TE tunnels. These tunnels neither<a href="#section-2.1.1-13.1.3.1.1" class="pilcrow">¶</a></p>
-<p id="section-2.1.1-13.1.3.1.2">
-share resources with other services nor compete for bandwidth with<a href="#section-2.1.1-13.1.3.1.2" class="pilcrow">¶</a></p>
-<p id="section-2.1.1-13.1.3.1.3">
-other tunnels, ensuring deterministic latency performance.<a href="#section-2.1.1-13.1.3.1.3" class="pilcrow">¶</a></p>
+VPN requires a set of dedicated TE tunnels. These tunnels neither
+share resources with other services nor compete for bandwidth with
+other tunnels, ensuring deterministic latency performance.<a href="#section-2.1.1-13.1.3.1.1" class="pilcrow">¶</a></p>
 </li>
                 <li id="section-2.1.1-13.1.3.2">
                   <p id="section-2.1.1-13.1.3.2.1">Hard isolation but without deterministic characteristics<a href="#section-2.1.1-13.1.3.2.1" class="pilcrow">¶</a></p>
@@ -2252,7 +2243,7 @@ discovery and path setup are typically vendor-specific and outside
 the scope of this document.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
 <p id="section-2.3-5">Depending on the optical network type, TE topology abstraction, path
 computation, and path setup can be single-layer (either OTN or DWDM)
-or multi-layer OTN/WDM. In the latter case, multi-layer coordination
+or multi-layer OTN/DWDM. In the latter case, multi-layer coordination
 between the OTN and DWDM layers is handled by the O-PNC.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2572,7 +2563,7 @@ notifications through MPI with the PNCs when any network
 inventory/topology/service change occurs.<a href="#section-4-7" class="pilcrow">¶</a></p>
 <p id="section-4-8">It should also be possible to correlate information from IP and
 optical layers (e.g., which port, lambda/OTSi, and direction are used
-by a specific IP service on the DWDM equipment).<a href="#section-4-8" class="pilcrow">¶</a></p>
+by a specific IP service on the WDM node).<a href="#section-4-8" class="pilcrow">¶</a></p>
 <p id="section-4-9">In particular, for the cross-technology Ethernet links, it is key for
 MDSC to
 automatically correlate the information from the PNC network
@@ -2594,7 +2585,7 @@ notifications.<a href="#section-4-11" class="pilcrow">¶</a></p>
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-optical-topology-discovery" class="section-name selfRef">Optical Topology Discovery</a>
         </h3>
 <p id="section-4.1-1">The WSON Topology Model and the Flexi-grid Topology model can be used
-to report the DWDM network topology (e.g., DWDM nodes and OMS links),
+to report the DWDM network topology (e.g., WDM nodes and OMS links),
 depending on whether the DWDM optical network is based on fixed-grid
 or flexible-grid or a mix of fixed-grid and flexible-grid.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.1-2">It is worth noting that, as described in Appendix I of <span>[<a href="#ITU-T_G.694.1" class="cite xref">ITU-T_G.694.1</a>]</span>,
@@ -2672,10 +2663,10 @@ nodes.<a href="#section-4.1-12" class="pilcrow">¶</a></p>
 abstracted at MPI by the O-PNC as Trail Termination Points (TTPs),
 defined in <span>[<a href="#RFC8795" class="cite xref">RFC8795</a>]</span>, within the optical network topology. This
 abstraction is valid independently of the fact that optical
-transponders are physically integrated within the same DWDM node or
-are physically located on a device external to the DWDM node since it
-both cases the optical transponders and the DWDM node are under the
-control of the same O-PNC and abstracted as a single DWDM TE Node at the
+transponders are physically integrated within the same WDM node or
+are physically located on a device external to the WDM node since it
+both cases the optical transponders and the WDM node are under the
+control of the same O-PNC and abstracted as a single WDM TE Node at the
 O-MPI.<a href="#section-4.1-13" class="pilcrow">¶</a></p>
 <p id="section-4.1-14">The association between the Ethernet or CBR client LTPs terminating
 the Ethernet cross-technology Ethernet links and the optical TTPs is
@@ -2731,7 +2722,7 @@ Legenda:
 mechanisms which are outside the scope of this document, and reported
 at the MPIs within the optical network topology.<a href="#section-4.1-17" class="pilcrow">¶</a></p>
 <p id="section-4.1-18">In case of a multi-layer DWDM/OTN network domain, multi-layer
-intra-domain OTN links are supported by underlay DWDM tunnels: this
+intra-domain OTN links are supported by underlay WDM tunnels: this
 relationship is reported by the mechanisms described in
 <a href="#optical-path-discovery" class="auto internal xref">Section 4.2</a>.<a href="#section-4.1-18" class="pilcrow">¶</a></p>
 </section>
@@ -2741,7 +2732,7 @@ relationship is reported by the mechanisms described in
         <h3 id="name-optical-path-discovery">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-optical-path-discovery" class="section-name selfRef">Optical Path Discovery</a>
         </h3>
-<p id="section-4.2-1">The DWDM Tunnel Model is used to report all the DWDM tunnels
+<p id="section-4.2-1">The WDM Tunnel Model is used to report all the WDM tunnels
 established within the optical network.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">When the OTN switching layer is deployed within the optical domain,
 the OTN Tunnel Model is used to report all the OTN tunnels
@@ -2750,14 +2741,14 @@ established within the optical network.<a href="#section-4.2-2" class="pilcrow">
 signal model are used to report all the connectivity services
 provided by the underlay optical tunnels between Ethernet or CBR
 client LTPs, depending on whether the connectivity service is frame-based
-or transparent. The underlay optical tunnels can be either DWDM
+or transparent. The underlay optical tunnels can be either WDM
 tunnels or, when the optional OTN switching layer is deployed, OTN
 tunnels.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
-<p id="section-4.2-4">The DWDM tunnels can be used to support either Ethernet or CBR client
+<p id="section-4.2-4">The WDM tunnels can be used to support either Ethernet or CBR client
 signals or multi-layer intra-domain OTN links. In the latter case,
 the hierarchical-link container, defined in <span>[<a href="#I-D.ietf-teas-yang-te" class="cite xref">I-D.ietf-teas-yang-te</a>]</span>,
 associates
-the underlay DWDM tunnel with the supported multi-layer intra-domain
+the underlay WDM tunnel with the supported multi-layer intra-domain
 OTN link and it allows discovery of the multi-layer path supporting
 all the connectivity services provided by the optical network.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">The O-PNCs report in their operational datastores all the Ethernet
@@ -3592,7 +3583,7 @@ relationship between a multi-technology intra-domain IP link and its
 underlay optical tunnel.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.2-2">Therefore, to set up a new multi-technology intra-domain IP link,
 the MDSC requires the O-PNC to set up the optical tunnel (using either
-the DWDM Tunnel model or the OTN Tunnel model, if optional OTN switching
+the WDM Tunnel model or the OTN Tunnel model, if optional OTN switching
 is supported) within the optical network and steer client traffic
 between the two cross-technology Ethernet links over that optical tunnel,
 using either the Ethernet Client Signal Model (for frame-based transport)
@@ -3802,7 +3793,7 @@ SRLGs reported by the P-PNC using the packet TE topology model);<a href="#sectio
 </li>
             <li class="normal" id="section-5.2.3-2.2">
               <p id="section-5.2.3-2.2.1">the optical path (e.g., the list of SRLGs reported by the O-PNC
-using the DWDM or OTN tunnel model); and<a href="#section-5.2.3-2.2.1" class="pilcrow">¶</a></p>
+using the WDM or OTN tunnel model); and<a href="#section-5.2.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-5.2.3-2.3">
               <p id="section-5.2.3-2.3.1">the cross-domain links (e.g., the list of SRLGs reported by the O-PNC
@@ -3918,7 +3909,7 @@ of this draft.<a href="#section-5.4-3" class="pilcrow">¶</a></p>
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-conclusions" class="section-name selfRef">Conclusions</a>
       </h2>
 <p id="section-6-1">The analysis provided in this document shows that the IETF YANG models
-described in 3.2 provide useful support for Packet Optical Integration
+described in <a href="#yang" class="auto internal xref">Section 3.2</a> provide useful support for Packet Optical Integration
 (POI) scenarios for resource discovery (network topology, service,
 tunnels, and network inventory discovery), as well as for supporting
 multi-layer/multi-domain L2/L3 VPN network services.<a href="#section-6-1" class="pilcrow">¶</a></p>
@@ -3981,7 +3972,7 @@ multi-inheritance) is not only useful for mixed fixed-grid and
 flexible-grid DWDM network topologies but also the only viable option
 for a mixed CWDM and DWDM network topology.<a href="#section-6-4" class="pilcrow">¶</a></p>
 <p id="section-6-5">Although not applicable to this document, it has been noted that the
-DWDM tunnel model would also support optical tunnel setup in the case
+WDM tunnel model would also support optical tunnel setup in the case
 of a mixed CWDM and DWDM network topology.<a href="#section-6-5" class="pilcrow">¶</a></p>
 <p id="section-6-6">Although not analyzed in this document, it has been noted that the TE
 Tunnel model, defined in <span>[<a href="#I-D.ietf-teas-yang-te" class="cite xref">I-D.ietf-teas-yang-te</a>]</span>, needs enhancement
@@ -4571,17 +4562,17 @@ layer.<a href="#appendix-A.2.2-1" class="pilcrow">¶</a></p>
 <li id="appendix-A.2.2-3.1">
               <p id="appendix-A.2.2-3.1.1">LAG was defined between the IP routers at the two ends. MDSC, after
 checking
-that optical layer is fine between the two edge DWDM nodes, triggers
-the DWDM edge node re-configuration so that the IP router's back-up port
+that optical layer is fine between the two edge WDM nodes, triggers
+the WDM edge node re-configuration so that the IP router's back-up port
 with its
-associated muxponder port can reuse the DWDM tunnel that was already in
+associated muxponder port can reuse the WDM tunnel that was already in
 use previously by the failed IP router port and adds the new link to
 the LAG on the failure side.<a href="#appendix-A.2.2-3.1.1" class="pilcrow">¶</a></p>
 <p id="appendix-A.2.2-3.1.2">
 While the ROADM reconfiguration takes place, IP/MPLS traffic is
 using the reduced bandwidth of the IP link bundle, discarding
 lower priority traffic if required. Once back-up port has been
-reconfigured to reuse the existing DWDM tunnel and the new link has
+reconfigured to reuse the existing WDM tunnel and the new link has
 been added
 to the LAG then original Bandwidth is recovered between the end
 routers.<a href="#appendix-A.2.2-3.1.2" class="pilcrow">¶</a></p>
@@ -4598,11 +4589,11 @@ or TI-LFA (MPLS based SR-TE case) through a protection port. At
 the same time MDSC, after checking that optical network connection
 is still fine, would trigger the reconfiguration of the back-up
 port of the IP router and of the muxponder to re-use the same
-DWDM tunnel as the one used originally for the failed IP router port. Once
+WDM tunnel as the one used originally for the failed IP router port. Once
 everything has been correctly configured, MDSC Global PCE could
 suggest to the operator to trigger a possible re-optimization of
 the back-up MPLS path to go back to the  MPLS primary path through
-the back-up port of the IP router and the original DWDM tunnel if overall
+the back-up port of the IP router and the original WDM tunnel if overall
 cost, latency etc. is improved. However, in this scenario, there
 is a need for protection port PLUS back-up port in the IP router
 which does not lead to clear port savings.<a href="#appendix-A.2.2-3.2.1" class="pilcrow">¶</a></p>
@@ -4624,7 +4615,7 @@ and trunk (or DWDM) port. The client port bitrate determines the
 trunk port bit rate which will also determine the Baud-rate, the
 modulation format, the FEC etc.<a href="#appendix-A.3-2" class="pilcrow">¶</a></p>
 <p id="appendix-A.3-3">The controller, when asked to set up a client connectivity service,
-needs to find a DWDM tunnel suitable to comply the DWDM port
+needs to find a WDM tunnel suitable to comply the DWDM port
 parameters.<a href="#appendix-A.3-3" class="pilcrow">¶</a></p>
 <p id="appendix-A.3-4">The setup of a client connectivity service between two muxponders is
 different since there is a one to many relationship between the
@@ -4632,23 +4623,23 @@ muxponder's trunk (or DWDM) port and client ports. For example, there
 might be a 100Gb/s trunk port shared by ten 10GE client ports.<a href="#appendix-A.3-4" class="pilcrow">¶</a></p>
 <p id="appendix-A.3-5">The controller, when asked to set a 10GE client connectivity service
 between two muxponder's client ports, needs first to check whether
-there is already an existing DWDM tunnel between the two muxponders
+there is already an existing WDM tunnel between the two muxponders
 and then take different actions:<a href="#appendix-A.3-5" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="appendix-A.3-6">
 <li id="appendix-A.3-6.1">
-            <p id="appendix-A.3-6.1.1">if the DWDM tunnel already exists, the controller needs only to
+            <p id="appendix-A.3-6.1.1">if the WDM tunnel already exists, the controller needs only to
 enable the 10GE client ports to establish the 10GE client
 connectivity service;<a href="#appendix-A.3-6.1.1" class="pilcrow">¶</a></p>
 </li>
           <li id="appendix-A.3-6.2">
-            <p id="appendix-A.3-6.2.1">if the DWDM tunnel does not exist, the controller has to first
-establish the DWDM tunnel, finding a proper optical path matching
+            <p id="appendix-A.3-6.2.1">if the WDM tunnel does not exist, the controller has to first
+establish the WDM tunnel, finding a proper optical path matching
 the optical parameters of the two muxponders' trunk ports (e.g.,
 an OTSi carrying an OTU4), and then enable the 10GE client ports
 to establish the 10GE client connectivity service.<a href="#appendix-A.3-6.2.1" class="pilcrow">¶</a></p>
 </li>
         </ol>
-<p id="appendix-A.3-7">Since multiple client connectivity services are sharing the same DWDM
+<p id="appendix-A.3-7">Since multiple client connectivity services are sharing the same WDM
 tunnel, a multiplexing label shall be assigned to each client
 connectivity service. The multiplexing label can either be a standard
 label (e.g., an OTN timeslot) or a vendor-specific label. The
@@ -4666,7 +4657,7 @@ the control of the same O-PNC, the configuration of the multiplexing
 label, regardless of whether it is a standard or vendor-specific
 label, can be done by the O-PNC using mechanisms which are
 vendor-specific and outside the scope of this document. The MDSC can just
-request the O-PNC to setup a client connectivity service over a DWDM
+request the O-PNC to setup a client connectivity service over a WDM
 tunnel.<a href="#appendix-A.3-8" class="pilcrow">¶</a></p>
 <p id="appendix-A.3-9">In case of fixed configuration, the multiplexing label is assigned by
 the muxponder but the O-PNC and MDSC needs to be aware of the
