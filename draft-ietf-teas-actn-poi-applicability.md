@@ -57,6 +57,10 @@ contributor:
     name: Gabriele Galimberti
     email: ggalimbe56@gmail.com
   -
+    name: To-Be-Added
+    org: To-Be-Added
+    email: To-Be-Added
+  -
     name: Anton Snitser
     org: Cisco
     email: asnizar@cisco.com
@@ -381,6 +385,8 @@ such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.
 
+As described in {{?RFC7424}, in order to increase the bandwidth between two adjacent routers multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
+
 Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
 outside the scope of this document.
@@ -511,7 +517,7 @@ reference to a precomputed SR policy or path.
 local protection mechanisms, such as Fast Reroute (FRR) for MPLS-TE or
 Topology Independent Loop-Free Alternate (TI-LFA) for SR-TE. These
 mechanisms operate with an awareness of multi-technology TE path
-properties, such as Shared Risk Link Group (SRLG).
+properties, such as the Shared Risk Link Group (SRLG) path properties defined in {{?RFC8001}}.
 
 For inter-domain TE paths, it is assumed that each packet domain in
 {{fig-vpn-topo}} and {{fig-vpn-path}} employs the same TE technology. The
@@ -1071,7 +1077,7 @@ In particular, for the cross-technology Ethernet links, it is key for
 MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
-bundle links for Link Aggregation Group (LAG)) to client ports in the
+bundle links for LAG) to client ports in the
 ROADM.
 
 The analysis of multi-layer fault management is outside the scope of
@@ -1751,8 +1757,7 @@ connected to PE13 and P16, as described in
 {{multi-technology-link-setup}};
 
 - the P-PNC1 to update the configuration of the existing IP link, in
-case of LAG, or configure a new IP link, in case of Equal Cost Multi-Path
-(ECMP), between
+case of LAG, or configure a new IP link, in case of ECMP, between
 PE13 and P16, as described in {{multi-technology-link-setup}};
 
 - the P-PNC1 to update the bandwidth of the selected TE path between
