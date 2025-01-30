@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-28T00:48:34.770107+00:00",
+  "timestamp": "2025-01-30T00:47:09.195573+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -7773,20 +7773,28 @@
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
-      "body": "**[ACTN POI bi-weekly call (December 17, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-12-17)**\r\n\r\nComment 1: \"(e.g., QSFP-DD ZR 400G)\" Reference needed?\r\nA1: Yes. Jeff was going to send it. \r\n\r\n- [ ] @jbouqui153 : provide a reference for QSFP-DD ZR 400G\r\n\r\nComment 2: We seem to use WDM, CWDM and DWDM in the document; do we need all\r\nof them, or can we use WDM or DWDM for consistency?   \r\nA2: Yes. Mainly DWDM, unless special case for CWDM\r\n\r\nComment 3: \"OSS/Orchestration layer\" is not synonymous. \r\nA3: Actually, this \r\n\r\nComment 4: Maybe provide a reference for the Shared Risk Link Group (SRLG) TE-path property?\r\nA4: Yes. Italo to add. \r\n\r\n- [ ] @italobusi provide a reference for Shared Risk Link Group (SRLG) TE-path property\r\n\r\nComment 6: Should \"Service Access Points\" contain a reference? \r\nA6 Yes, IETF SAP I-D. Italo to add.\r\n\r\n- [ ] @italobusi provide a reference for IETF SAP RFC\r\n\r\nComment 7: We need to double-check the usage of \"setup\" and \"set up\" based on the document, using them as verb phrases, nouns, or adjectives. I think I caught most of them. \r\nA7. Yes. Done. \r\n\r\nComment 8: Need reference for PCEP?\r\nA8. No. \r\n\r\nComment 10: Long paragraphs. \r\nA10.  I've split long paragraphs and some very long sentences into new shorter sentences to enhance readability. \r\n\r\nComment 12: Expand LTP on first use.\r\nA12. Yes. Done. \r\n\r\nComment 13: Expand LLDP on first use.\r\nA13: Done. \r\n\r\nComment 14: Expand RPC on first use, do we need a reference?\r\nA14: I think not. \r\n\r\nComment 15: Expand LAG and also reference.\r\nA15. Done. Maybe use RFC8795 TE Topo as reference too, Italo can decide. \r\n\r\n- [ ] @italobusi check reference for LAG\r\n\r\nComment 16: We say \"This version of the draft\", do we mean \"This document assumes\"\r\nA16: Fixed. \r\n",
+      "body": "**[ACTN POI bi-weekly call (December 17, 2024)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2024-12-17)**\r\n\r\nComment 1: \"(e.g., QSFP-DD ZR 400G)\" Reference needed?\r\nA1: Yes. Jeff was going to send it. \r\n\r\n- [x] @jbouqui153 : provide a reference for QSFP-DD ZR 400G\r\n\r\nComment 2: We seem to use WDM, CWDM and DWDM in the document; do we need all\r\nof them, or can we use WDM or DWDM for consistency?   \r\nA2: Yes. Mainly DWDM, unless special case for CWDM\r\n\r\nComment 3: \"OSS/Orchestration layer\" is not synonymous. \r\nA3: Actually, this \r\n\r\nComment 4: Maybe provide a reference for the Shared Risk Link Group (SRLG) TE-path property?\r\nA4: Yes. Italo to add. \r\n\r\n- [x] @italobusi provide a reference for Shared Risk Link Group (SRLG) TE-path property\r\n\r\nComment 6: Should \"Service Access Points\" contain a reference? \r\nA6 Yes, IETF SAP I-D. Italo to add.\r\n\r\n- [x] @italobusi provide a reference for IETF SAP RFC\r\n\r\nComment 7: We need to double-check the usage of \"setup\" and \"set up\" based on the document, using them as verb phrases, nouns, or adjectives. I think I caught most of them. \r\nA7. Yes. Done. \r\n\r\nComment 8: Need reference for PCEP?\r\nA8. No. \r\n\r\nComment 10: Long paragraphs. \r\nA10.  I've split long paragraphs and some very long sentences into new shorter sentences to enhance readability. \r\n\r\nComment 12: Expand LTP on first use.\r\nA12. Yes. Done. \r\n\r\nComment 13: Expand LLDP on first use.\r\nA13: Done. \r\n\r\nComment 14: Expand RPC on first use, do we need a reference?\r\nA14: I think not. \r\n\r\nComment 15: Expand LAG and also reference.\r\nA15. Done. Maybe use RFC8795 TE Topo as reference too, Italo can decide. \r\n\r\n- [x] @italobusi check reference for LAG\r\n\r\nComment 16: We say \"This version of the draft\", do we mean \"This document assumes\"\r\nA16: Fixed. \r\n",
       "createdAt": "2024-12-17T11:07:24Z",
-      "updatedAt": "2025-01-24T17:06:26Z",
+      "updatedAt": "2025-01-28T15:20:50Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "e4fb4ef156fa21251a644d30a692b53f9070d9d6",
       "headRepository": "IETF-TEAS-WG/actn-poi",
       "headRefName": "editorial-review",
-      "headRefOid": "8a9c33796f28f67eb3b3ca19434a4ff60745db5a",
+      "headRefOid": "79cfabeb44893e0b5a5159aa18d848c372067e2e",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[ACTN POI bi-weekly call (January 28, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-01-28)**\r\n\r\nAccepted all the proposed changes:\r\n- fixing kramdown syntax issues\r\n- aligning the terminology with xxx and yyy\r\n\r\n- [x] @italobusi : [PR #124-comment](https://github.com/IETF-TEAS-WG/actn-poi/pull/124/files#r1932245925)\r\n\r\n> * [x]  @jbouqui153 : provide a reference for QSFP-DD ZR 400G\r\n\r\nSuperseded by [PR #124-comment](https://github.com/IETF-TEAS-WG/actn-poi/pull/124/files#r1932229551)\r\n\r\n> * [x]  @italobusi provide a reference for Shared Risk Link Group (SRLG) TE-path property\r\n\r\n- [x] @italobusi : [PR #124-comment](https://github.com/IETF-TEAS-WG/actn-poi/pull/124/files#r1932250038)\r\n\r\n> * [x]  @italobusi provide a reference for IETF SAP RFC\r\n\r\nCurrent text referencing RFC 9408 is sufficient\r\n\r\n> * [x]  @italobusi check reference for LAG\r\n\r\n- [x] @italobusi : Add the reference to IEEE 802.1AX where LAG is introduced with substantive text\r\n",
+          "createdAt": "2025-01-28T14:28:34Z",
+          "updatedAt": "2025-01-28T15:17:22Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOC9D8a86Y3fKz",
@@ -8074,6 +8082,166 @@
               "body": "These sentences were correct two years ago when we started to write them but 400G ZR(+) QSFP-DD (and 100G ZR QSFP28)are not anymore an \"emerging optical technology\" and operators have been deploying those coherent pluggables in the IP routers mainly in Metro/Core where link distances and performances allow it...The reason why it has been considered outside the scope of this document is because it leads to architecture considerations different from the traditional approach based on grey interfaces between routers and optical nodes. Would propose to rephrase in the following way:\r\nAlthough coherent transceiver pluggables (OIF 400G ZR, OpenZR+ 400G ZR+ and 100G ZR) are being deployed on IP routers in operators' networks, it was agreed to keep this use case outside the scope of this document since it can lead to different architecture options and requires a dedicated use case analysis which has been started in a separate IETF draft [https://datatracker.ietf.org/doc/draft-ietf-ccamp-actn-poi-pluggable-usecases-gaps/00/ ](url)\r\nReferences:\r\n- OIF Implementation Agreement 400ZR, March 2020, [https://www.oiforum.com/wp-content/uploads/OIF-400ZR-01.0_reduced2.pdf](url)\r\n- Open ZR+ MSA Technical specification rev3.0, July 2023, [https://openzrplus.org/wp-content/uploads/2024/04/openzrplus_rev3p0_final2.pdf](url)",
               "createdAt": "2025-01-24T16:28:22Z",
               "updatedAt": "2025-01-24T17:06:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZpYGO",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T10:14:58Z",
+          "updatedAt": "2025-01-28T10:14:59Z",
+          "comments": [
+            {
+              "originalPosition": 349,
+              "body": "```suggestion\r\nconnectivity between IP routers within a single packet domain.\r\n```",
+              "createdAt": "2025-01-28T10:14:58Z",
+              "updatedAt": "2025-01-28T10:14:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Zpaps",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "danielkinguk",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T10:19:20Z",
+          "updatedAt": "2025-01-28T10:19:20Z",
+          "comments": [
+            {
+              "originalPosition": 116,
+              "body": "How about... \r\n\r\n...In many current network deployments, packet and optical networks are designed and operated independently. This separation leads to technical disparities between the underlying technologies (e.g., routers versus optical switches) and the associated methods for network engineering and planning (e.g., inter-domain peering...",
+              "createdAt": "2025-01-28T10:19:20Z",
+              "updatedAt": "2025-01-28T10:19:20Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZrpFK",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T14:05:32Z",
+          "updatedAt": "2025-01-28T14:05:33Z",
+          "comments": [
+            {
+              "originalPosition": 383,
+              "body": "**[ACTN POI bi-weekly call (January 28, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-01-28)**\r\n\r\n```suggestion\r\nScenarios using coherent optical interfaces on the IP routers are outside the scope of this document.\r\n```",
+              "createdAt": "2025-01-28T14:05:32Z",
+              "updatedAt": "2025-01-28T14:05:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Zrv4K",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T14:14:41Z",
+          "updatedAt": "2025-01-28T14:14:41Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "**[ACTN POI bi-weekly call (January 28, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-01-28)**\r\n\r\nNeed to add back the TBD contributor",
+              "createdAt": "2025-01-28T14:14:41Z",
+              "updatedAt": "2025-01-28T14:17:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZrxhJ",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T14:17:04Z",
+          "updatedAt": "2025-01-28T14:17:04Z",
+          "comments": [
+            {
+              "originalPosition": 584,
+              "body": "**[ACTN POI bi-weekly call (January 28, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-01-28)**\r\n\r\nNeed to add a reference to RFC 8001",
+              "createdAt": "2025-01-28T14:17:04Z",
+              "updatedAt": "2025-01-28T14:17:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Zr6O2",
+          "commit": {
+            "abbreviatedOid": "d30660c"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T14:27:28Z",
+          "updatedAt": "2025-01-28T14:27:28Z",
+          "comments": [
+            {
+              "originalPosition": 116,
+              "body": "The way I read this text is:\r\n- cause: separation of engineering and operations between IP and optical\r\n- consequence: different underlying technologies and methods\r\n\r\nIMHO, it should be:\r\n- cause: different underlying technologies and methods\r\n- consequence: separation of engineering and operations between IP and optical\r\n\r\nWhat about:\r\n\r\nThere are significant technical differences between the packet and optical technologies (e.g.,\r\nrouters versus optical switches) and their associated network engineering\r\nand planning approaches (e.g., inter-domain peering optimization in IP\r\nnetworks versus managing physical impairments in DWDM systems or\r\noperating on vastly different time scales). Additionally, customer\r\nrequirements often differ between packet and optical networks, and it is\r\ncommon for Service Providers to use different vendors for each domain. As\r\na result, the operation of these complex packet and optical networks is\r\noften siloed, as each technology domain requires specialized skill sets.\r\n\r\nAs a consequence, in many existing network deployments, packet and optical networks are\r\nengineered and operated independently.\r\n\r\nThis separation is inefficient for several reasons. First, integrating packet and optical\r\n// see L174 onward\r\n",
+              "createdAt": "2025-01-28T14:27:28Z",
+              "updatedAt": "2025-01-28T14:27:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86Zsl5h",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T15:18:02Z",
+          "updatedAt": "2025-01-28T15:18:02Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Closed with https://github.com/IETF-TEAS-WG/actn-poi/pull/124/commits/c90c1b31e6bc25610672e6441695e982d55a4892",
+              "createdAt": "2025-01-28T15:18:02Z",
+              "updatedAt": "2025-01-28T15:18:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86ZsmA3",
+          "commit": {
+            "abbreviatedOid": "8a9c337"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-28T15:18:12Z",
+          "updatedAt": "2025-01-28T15:18:12Z",
+          "comments": [
+            {
+              "originalPosition": 584,
+              "body": "Closed with https://github.com/IETF-TEAS-WG/actn-poi/pull/124/commits/c90c1b31e6bc25610672e6441695e982d55a4892",
+              "createdAt": "2025-01-28T15:18:12Z",
+              "updatedAt": "2025-01-28T15:18:12Z"
             }
           ]
         }
