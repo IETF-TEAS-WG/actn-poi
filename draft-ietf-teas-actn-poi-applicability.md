@@ -149,7 +149,7 @@ connectivity services. The Abstraction and  Control of TE Networks (ACTN)
 architecture and interfaces enable the automation  and efficient
 operation of complex optical and IP/MPLS networks using standardized
 interfaces and data models. This approach supports a broad spectrum of
-network  services that can be requested by upper-layer applications,
+network services that can be requested by upper-layer applications,
 meeting diverse  service-level requirements from a network perspective,
 such as physical diversity, latency, bandwidth, and topology.
 
@@ -175,7 +175,7 @@ often siloed, as each technology domain requires specialized skill sets.
 
 The separation of packet and optical network deployment and operation is
 inefficient for several reasons. First, integrating packet and optical
-networks can significantly reduce both capital expenditures (CAPEX) and
+networks can significantly reduce capital expenditures (CAPEX) and
 operational expenditures (OPEX). Second, multi-technology online topology
 insights can accelerate troubleshooting (e.g., alarm correlation) and
 improve network operations (e.g., coordination of maintenance events),
@@ -255,7 +255,7 @@ Technology domain:
 domains.
 
 PNC Domain:
-: part of the network under control of a single PNC instance. It is
+: part of the network under the control of a single PNC instance. It is
 subject to the capabilities of the PNC which technology is controlled.
 
 Port:
@@ -385,7 +385,7 @@ such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.
 
-As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
+As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers, multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
 
 Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
@@ -395,7 +395,7 @@ The optical nodes within the optical domains can be either:
 
 - WDM nodes, as defined in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, with an integrated
-ROADM functions and with or without integrated optical transponders;
+ROADM functions with or without integrated optical transponders;
 
 - OTN nodes, with integrated an OTN cross-connect function and with or
 without integrated ROADM functions or optical transponders.
@@ -437,7 +437,7 @@ the P-PNCs. This approach is illustrated, for example, in Figure 9 of
 {{!RFC8453}}.
 
 1. An alternative implementation may choose to integrate the MDSC and
-P-PNC functions into a single entity.
+P-PNC functions in a single entity.
 
 In current service provider network deployments, the MDSC's Northbound
 Interface (NBI) typically connects to an OSS/Orchestration layer rather
@@ -463,7 +463,7 @@ coordination;
 multi-domain optimizations and/or maintenance activities (e.g., rerouting
 LSPs and their associated services when a resource, such as a fiber, is
 placed in maintenance mode during a maintenance window). Unlike service
-fulfillment, these workflows are not triggered by a network service
+fulfilment, these workflows are not triggered by a network service
 provisioning request from the OSS or Orchestration layer.
 
 The latter workflow cases are outside the scope of this document.
@@ -516,7 +516,7 @@ reference to a precomputed SR policy or path.
 - each packet domain in {{fig-vpn-topo}} employs technology-specific
 local protection mechanisms, such as Fast Reroute (FRR) for MPLS-TE or
 Topology Independent Loop-Free Alternate (TI-LFA) for SR-TE. These
-mechanisms operate with an awareness of multi-technology TE path
+mechanisms operate with an awareness of the multi-technology TE path
 properties, such as the Shared Risk Link Group (SRLG) path properties defined in {{?RFC8001}}.
 
 For inter-domain TE paths, it is assumed that each packet domain in
@@ -547,7 +547,7 @@ other services (e.g. VPN).
 
    1.  Hard isolation with deterministic latency implies that the L2/L3
        VPN requires a set of dedicated TE tunnels. These tunnels neither
-       share resources with other services nor compete for bandwidth with
+       share resources with other services, nor compete for bandwidth with
        other tunnels, ensuring deterministic latency performance.
 
    1.  Hard isolation but without deterministic characteristics
@@ -602,7 +602,7 @@ the path computation across multiple layers and domains.
 
 Based on the MDSC's knowledge of the underlying network topology and
 configuration, three approaches for multi-layer and multi-domain path
-computation are possible:
+computation is possible:
 
 1. Full Summarization: In this approach, the MDSC maintains an abstracted
 TE topology view of all its packet and optical underlying domains.
@@ -641,7 +641,7 @@ abstracted view of the TE topology of the optical network domains.
    computation for the packet layer, where the path can be computed
    optimally for the two packet domains.
 
-   The MDSC still needs to delegate the O-PNCs to perform local path
+   The MDSC must still need to delegate the O-PNCs to perform local path
    computation within their domains. It uses the information from the
    O-PNCs and its TE topology view of the multi-domain packet layer to
    perform multi-layer/multi-domain path computation.
@@ -675,7 +675,7 @@ network service path.
 The methods and types of path requirements and impairments, such as
 those detailed in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}},
 used by the O-PNC for optical path computation are not exposed at the
-MPI and therefore out of scope for this document.
+MPI is therefore out of scope for this document.
 
 {: #packet-pnc-overview}
 
@@ -757,9 +757,7 @@ To scale in large SR-TE packet domains, the MDSC can provide the P-PNC
 with a loose path and per-domain TE constraints. The P-PNC can then
 select the complete path within its domain.
 
-In this case, it is mandatory for the P-PNC to signal back to the MDSC
-which path it has chosen, allowing the MDSC to track relevant
-resource utilization.
+In this case, the P-PNC must signal back to the MDSC which path it has chosen, allowing the MDSC to track relevant resource utilization.
 
 From the {{fig-vpn-path}} example, the TE path requested by the MDSC
 touches PE13 - P16 - BR12 - BR21 - PE23. P-PNC2 is aware of two
@@ -1024,8 +1022,7 @@ above).
 
 # Inventory, Service and Network Topology Discovery
 
-In this scenario, the MSDC needs to discover through the underlying
-PNCs:
+In this scenario, the MSDC needs to discover the underlying PNCs:
 
 - the network topology, at both optical and IP layers, in terms of
 nodes and links, including the access links, inter-domain IP links
@@ -1041,11 +1038,11 @@ deployed within the network;
 - the hardware inventory information of IP and optical equipment.
 
 The O-PNC and P-PNC could discover and report the hardware network
-inventory information of their equipment used by the different
+inventory information of the equipment used by the different
 management layers. In the context of POI, the inventory information
 of IP and optical equipment can complement the topology views and
 facilitate the packet/optical multi-layer view, e.g., by providing a
-mapping between the lowest level link termination points (LTPs) in
+mapping between the lowest-level link termination points (LTPs) in
 the topology view and corresponding ports in the network inventory view.
 
 The MDSC could also discover the entire network inventory information
@@ -1082,7 +1079,7 @@ ROADM.
 
 The analysis of multi-layer fault management is outside the scope of
 this document. However, the discovered information should be
-sufficient for the MDSC to correlate optical and IP layers alarms to
+sufficient for the MDSC to correlate optical and IP layer alarms to
 speed-up troubleshooting easily.
 
 Alarms and event notifications are required between MDSC and PNCs so
@@ -1102,7 +1099,7 @@ or flexible-grid or a mix of fixed-grid and flexible-grid.
 
 It is worth noting that, as described in Appendix I of {{ITU-T_G.694.1}},
 a fixed-grid can also be described as a flexible grid
-with constraints: for example a 50GHz fixed-grid can be described as
+with constraints: for example, a 50GHz fixed-grid can be described as
 a flexible-grid which supports only m=4 and values of n which are
 only multiplier of 8.
 
@@ -1182,7 +1179,7 @@ the Inter Layer Lock-id (ILL) identifiers, defined in {{!RFC8795}}.
 
 For example, with a reference to {{fig-optical-topo}}, the ILL values X
 and Y are
-used to associated the client LTPs (7-0) in NE11 and (8-0) in NE12
+used to associate the client LTPs (7-0) in NE11 and (8-0) in NE12
 with the corresponding optical TTPs (7) in NE11 and (8) in NE12,
 respectively.
 
@@ -1193,7 +1190,7 @@ The intra-domain optical links are discovered by O-PNCs, using
 mechanisms which are outside the scope of this document, and reported
 at the MPIs within the optical network topology.
 
-In case of a multi-layer DWDM/OTN network domain, multi-layer
+In the case of a multi-layer DWDM/OTN network domain, multi-layer
 intra-domain OTN links are supported by underlay WDM tunnels: this
 relationship is reported by the mechanisms described in
 {{optical-path-discovery}}.
@@ -1222,7 +1219,7 @@ signals or multi-layer intra-domain OTN links. In the latter case,
 the hierarchical-link container, defined in {{!I-D.ietf-teas-yang-te}},
 associates
 the underlay WDM tunnel with the supported multi-layer intra-domain
-OTN link and it allows discovery of the multi-layer path supporting
+OTN link, and it allows discovery of the multi-layer path supporting
 all the connectivity services provided by the optical network.
 
 The O-PNCs report in their operational datastores all the Ethernet
@@ -1237,7 +1234,7 @@ the scope of this document.
 
 ## Packet Topology Discovery
 
-The L3 Topology Model is used report the IP network topology.
+The L3 Topology Model is used to report the IP network topology.
 
 The L3 Topology Model, SR Topology Model, TE Topology Model and the
 TE Packet Topology Model are used together to report the SR-TE
@@ -1250,7 +1247,7 @@ described in {{!I-D.ietf-teas-yang-te-mpls-topology}}.
 
 As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship
 between the IP network
-topology and the MPLS-TE network topology depends on whether the two
+topology and the MPLS-TE network topology depend on whether the two
 network topologies are congruent or not: in the latter case, the L3
 TE Topology Model is used, together with the L3 Topology Model to
 provide the association between the two network topologies.
@@ -1354,7 +1351,7 @@ discovered
 by the MDSC using the plug-id attribute, as described in section 4.3
 of {{!RFC8795}}.
 
-More detailed description of how the plug-id can be used to discover
+A more detailed description of how the plug-id can be used to discover
 inter-domain links is also provided in section 5.1.4 of
 {{?I-D.ietf-ccamp-transport-nbi-app-statement}}.
 
@@ -1482,7 +1479,7 @@ interfaces on the IP routers either terminate a cross-technology or
 single-technology (intra-domain or inter-domain) Ethernet link, e.g.,
 as shown in {{fig-inter-domain-link}}.
 
-The P-PNC can omit reporting the physical Ethernet LTPs when it
+The P-PNC can omit to report the physical Ethernet LTPs when it
 knows, through mechanisms outside the scope of this document, that
 the corresponding Ethernet interfaces terminate inter-domain Ethernet
 links.
