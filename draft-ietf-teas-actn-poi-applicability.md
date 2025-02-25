@@ -395,7 +395,7 @@ The optical nodes within the optical domains can be either:
 
 - WDM nodes, as defined in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, with an integrated
-ROADM functions with or without integrated optical transponders;
+ROADM function with or without integrated optical transponders;
 
 - OTN nodes, with integrated an OTN cross-connect function and with or
 without integrated ROADM functions or optical transponders.
@@ -601,8 +601,8 @@ When establishing a new TE path, the MDSC is responsible for coordinating
 the path computation across multiple layers and domains.
 
 Based on the MDSC's knowledge of the underlying network topology and
-configuration, three approaches for multi-layer and multi-domain path
-computation is possible:
+configuration, there are three possible approaches for multi-layer and multi-domain path
+computation:
 
 1. Full Summarization: In this approach, the MDSC maintains an abstracted
 TE topology view of all its packet and optical underlying domains.
@@ -674,8 +674,8 @@ network service path.
 
 The methods and types of path requirements and impairments, such as
 those detailed in {{?I-D.ietf-ccamp-optical-impairment-topology-yang}},
-used by the O-PNC for optical path computation are not exposed at the
-MPI is therefore out of scope for this document.
+used by the O-PNC for optical path computation, are not exposed at the
+MPI and therefore are out of scope for this document.
 
 {: #packet-pnc-overview}
 
