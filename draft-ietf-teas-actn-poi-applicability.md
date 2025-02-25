@@ -177,7 +177,7 @@ This separation is inefficient for several reasons.
 Firstly, integrating packet and optical
 networks can significantly reduce both capital expenditures (CAPEX) and
 operational expenditures (OPEX).
-Second, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.
+Secondly, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.
 Thirdly, multi-technology traffic engineering enables more efficient use of
 available network capacity (e.g., coordination of restoration).
 Furthermore, provisioning workflows can be simplified or automated across
