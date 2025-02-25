@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-23T00:54:16.537334+00:00",
+  "timestamp": "2025-02-25T00:51:34.929828+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -3947,7 +3947,7 @@
       "labels": [],
       "body": "In the document we described the positive effects of integrating packet and optical networks . \nOne of the aspect considered as positive is multi-technology online topology as improving alarm correlation and network operation , the second aspect is multi-technology offline topology inventories that can enhance service quality like diversity constraints violation.\nIt would be needed to describe somewhere what we mean with multi-technology online topology vs. multi-technology offline topology.",
       "createdAt": "2025-01-31T16:15:33Z",
-      "updatedAt": "2025-01-31T16:15:33Z",
+      "updatedAt": "2025-02-24T19:23:30Z",
       "closedAt": null,
       "comments": []
     }
@@ -8306,28 +8306,49 @@
     {
       "number": 126,
       "id": "PR_kwDOC9D8a86JiF64",
-      "title": "Cleaned up description of operations separation",
+      "title": "Some text clean up",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/126",
       "state": "OPEN",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
-      "body": "Cleaned up description of operations separation: fix #125",
+      "body": "Cleaned up description of operations separation: fix #125\r\n\r\nCleaned up text on multi-technology online and offline topology: fix #127 \r\n\r\n---\r\n\r\nCo-authored by michael-scharf <michael-scharf@users.noreply.github.com>",
       "createdAt": "2025-01-30T17:41:25Z",
-      "updatedAt": "2025-01-30T17:41:41Z",
+      "updatedAt": "2025-02-24T21:18:29Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "a333de0b30ce9bc34d5ea678b84fa3848252abe6",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "separation",
-      "headRefOid": "54faa1e3b02119116f59b53f6a7ba6a2369fb206",
+      "headRefOid": "ba4c68107ea77c819a4ba0fe50a28145f53015c2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOC9D8a86dQ7AQ",
+          "commit": {
+            "abbreviatedOid": "ba4c681"
+          },
+          "author": "danielkinguk",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Looks good. I made a couple of changes and had a comment Re: \"Diversity\". I'll be on the call so can discuss with you.",
+          "createdAt": "2025-02-24T21:15:49Z",
+          "updatedAt": "2025-02-24T21:18:29Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "\"Firstly,\" and then perhaps we can use the following text for the second paragraph. \r\n\r\n\"Secondly, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operations (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can improve service assurance quality, such as detecting constraint violations or lack of path diversity.\"\r\n\r\nAlthough, I need to check with you guys that [path] \"diversity\" is  what we mean in this context. ",
+              "createdAt": "2025-02-24T21:15:49Z",
+              "updatedAt": "2025-02-24T21:18:29Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
