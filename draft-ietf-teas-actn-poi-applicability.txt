@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 3 August 2025                                          Vodafone
+Expires: 29 August 2025                                         Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                         30 January 2025
+                                                        25 February 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 August 2025.
+   This Internet-Draft will expire on 29 August 2025.
 
 Copyright Notice
 
@@ -163,45 +163,49 @@ Table of Contents
    Wavelength Division Multiplexing (DWDM), occasionally with an
    optional Optical Transport Network (OTN) layer.
 
-   In many existing network deployments, packet and optical networks are
-   engineered and operated independently.  This separation results in
-   significant technical differences between the two technologies (e.g.,
-   routers versus optical switches) and their associated network
-   engineering and planning approaches (e.g., inter-domain peering
-   optimization in IP networks versus managing physical impairments in
-   DWDM systems or operating on vastly different time scales).
-   Additionally, customer requirements often differ between packet and
-   optical networks, and it is common for Service Providers to use
-   different vendors for each domain.  As a result, the operation of
-   these complex packet and optical networks is often siloed, as each
-   technology domain requires specialized skill sets.
+   There are significant technical differences between the packet and
+   optical technologies (e.g., routers versus optical switches) and
+   their associated network engineering and planning approaches (e.g.,
+   inter-domain peering optimization in IP networks versus managing
+   physical impairments in DWDM systems or operating on vastly different
+   time scales).  Additionally, customer requirements often differ
+   between packet and optical networks, and it is common for Service
+   Providers to use different vendors for each domain.  As a result, the
+   operation of these complex packet and optical networks is often
+   siloed, as each technology domain requires specialized skill sets.
 
-   The separation of packet and optical network deployment and operation
-   is inefficient for several reasons.  First, integrating packet and
-   optical networks can significantly reduce both capital expenditures
-   (CAPEX) and operational expenditures (OPEX).  Second, multi-
-   technology online topology insights can accelerate troubleshooting
-   (e.g., alarm correlation) and improve network operations (e.g.,
-   coordination of maintenance events), while multi-technology offline
-   topology inventories can enhance service quality (e.g., detection of
-   diversity constraint violations).  Third, multi-technology traffic
-   engineering enables more efficient use of available network capacity
-   (e.g., coordination of restoration).  Furthermore, provisioning
-   workflows can be simplified or automated across layers, facilitating
+   As a consequence, in many existing network deployments, packet and
+   optical networks are engineered and operated independently.
+
+   This separation is inefficient for several reasons.  Firstly,
+   integrating packet and optical networks can significantly reduce both
+   capital expenditures (CAPEX) and operational expenditures (OPEX).
+   Secondly, multi-technology topology insights can optimize
+   troubleshooting (e.g., alarm correlation) and enhance network
+   operation (e.g., coordination of maintenance events).  Additionally,
+   detailed inventory and planning information can also improve service
+   assurance quality, such as detecting constraint violations or lack of
+   resource diversity.  Thirdly, multi-technology traffic engineering
+   enables more efficient use of available network capacity (e.g.,
+   coordination of restoration).  Furthermore, provisioning workflows
+   can be simplified or automated across layers, facilitating
    capabilities such as bandwidth-on-demand and streamlined maintenance
    activities.
+
+   The ACTN framework facilitates seamless integration of packet and
+   optical networks across multiple technologies and vendors.  This is
+   achieved through separated Provisioning Network Controllers (PNCs)
+   for both packet and optical domains, which hide the complexities of
+   the technical differences between the packet and optical technologies
+   while providing sufficient abstract information that allows the
+   Multi-Domain Service Coordinator (MDSC) to provide multi-layer
+   coordination between packet and optical networks.
 
    This document uses packet-based Traffic Engineered (TE) service
    examples.  These are described as "TE-path" in this document.  Unless
    otherwise stated, these TE services may be instantiated using
    Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based
    or SR -TE-based, forwarding plane mechanisms.
-
-   The ACTN framework facilitates seamless integration of packet and
-   optical networks across multiple technologies and vendors.  This is
-   achieved through the coordination of a Multi-Domain Service
-   Coordinator (MDSC) and Provisioning Network Controllers (PNCs) for
-   both packet and optical domains.
 
    This document outlines key scenarios for Packet Optical Integration
    (POI) from the perspective of the packet service layer and highlights
@@ -249,7 +253,7 @@ Table of Contents
       policies configuration) and the network transport layer (e.g.
       RSVP-TE Label Switched Paths (LSPs).  This includes the
       configuration (on the PE side) of the interface towards the CE
-      (e.g.  VLAN, IP address, routing protocol, etc.).
+      (e.g. VLAN, IP address, routing protocol, etc.).
 
    Technology domain:  short for "switching technology domain", defined
       as "region" in [RFC5212], where the term "region" is applied to
@@ -648,7 +652,7 @@ Table of Contents
 
    1.  The customer is asking for VPN isolation to dynamically create
        and bind tunnels to the service so that they are not shared by
-       other services (e.g.  VPN).
+       other services (e.g. VPN).
 
        The level of isolation can be different:
 
@@ -2607,9 +2611,9 @@ Table of Contents
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-13, 1 August 2024,
+              signal-yang-14, 4 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              client-signal-yang-13>.
+              client-signal-yang-14>.
 
    [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
@@ -2663,9 +2667,9 @@ Table of Contents
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
               Shi, "A YANG Data Model for requesting path computation",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-23, 19 August 2024,
+              path-computation-24, 13 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-23>.
+              yang-path-computation-24>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
@@ -2830,9 +2834,9 @@ Table of Contents
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              19, 22 November 2024,
+              21, 12 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
-              segment-routing-ti-lfa-19>.
+              segment-routing-ti-lfa-21>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
@@ -2958,12 +2962,12 @@ A.1.  OSS/Orchestration Layer
    *  to abstract (through MDSC and PNCs) the underlying transport
       network complexity to the Business Systems Support layer;
 
-   *  to coordinate NFV, Transport (e.g.  IP, optical and microwave
+   *  to coordinate NFV, Transport (e.g. IP, optical and microwave
       networks), Fixed Acess, Core and Radio domains enabling full
       automation of end-to-end services to the end customers;
 
    *  to enable catalogue-driven service provisioning from external
-      applications (e.g.  Customer Portal for Enterprise Business
+      applications (e.g. Customer Portal for Enterprise Business
       services), orchestrating the design and lifecycle management of
       these end-to-end transport connectivity services, consuming IP
       and/or optical transport connectivity services upon request.
@@ -2987,7 +2991,7 @@ A.1.1.  MDSC NBI
    Although the OSS/Orchestration layer interface is usually operator-
    specific, typically it would be using a RESTCONF/YANG interface with
    a more abstracted version of the MPI YANG data models used for
-   network configuration (e.g.  L3NM, L2NM).
+   network configuration (e.g. L3NM, L2NM).
 
    Figure 12 shows an example of possible control flow between the OSS/
    Orchestration layer and the MDSC to instantiate L2/L3 VPN network

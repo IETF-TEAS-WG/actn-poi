@@ -22,14 +22,14 @@ multi-technology scenario (packet over optical), particularly
 emphasising the Multi-Domain Service Coordinator to Provisioning
 Network Controller Interface (MPI) within the ACTN architecture 
     " name="description">
-<meta content="xml2rfc 3.25.0" name="generator">
+<meta content="xml2rfc 3.27.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
 <meta content="draft-ietf-teas-actn-poi-applicability-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.25.0
-    Python 3.12.8
+  xml2rfc 3.27.0
+    Python 3.12.9
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
@@ -450,7 +450,7 @@ dl {
     margin-bottom: 0;
   }
 }
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
@@ -1059,11 +1059,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">ACTN POI</td>
-<td class="right">January 2025</td>
+<td class="right">February 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Peruzzini, et al.</td>
-<td class="center">Expires 3 August 2025</td>
+<td class="center">Expires 29 August 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1076,12 +1076,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-teas-actn-poi-applicability-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-01-30" class="published">30 January 2025</time>
+<time datetime="2025-02-25" class="published">25 February 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-08-03">3 August 2025</time></dd>
+<dd class="expires"><time datetime="2025-08-29">29 August 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1156,7 +1156,7 @@ Network Controller Interface (MPI) within the ACTN architecture<a href="#section
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 29 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1404,10 +1404,8 @@ Switching (MPLS) or Segment Routing  (SR), are typically implemented over
 an optical transport network utilizing Dense Wavelength Division
 Multiplexing (DWDM), occasionally with an optional Optical Transport
 Network (OTN) layer.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">In many existing network deployments, packet and optical networks are
-engineered and operated independently. This separation results in
-significant technical differences between the two technologies (e.g.,
-routers versus optical switches) and their associated network engineering
+<p id="section-1-3">There are significant technical differences between the packet and optical technologies
+(e.g., routers versus optical switches) and their associated network engineering
 and planning approaches (e.g., inter-domain peering optimization in IP
 networks versus managing physical impairments in DWDM systems or
 operating on vastly different time scales). Additionally, customer
@@ -1415,53 +1413,52 @@ requirements often differ between packet and optical networks, and it is
 common for Service Providers to use different vendors for each domain. As
 a result, the operation of these complex packet and optical networks is
 often siloed, as each technology domain requires specialized skill sets.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">The separation of packet and optical network deployment and operation is
-inefficient for several reasons. First, integrating packet and optical
+<p id="section-1-4">As a consequence, in many existing network deployments, packet and optical networks are engineered and operated independently.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">This separation is inefficient for several reasons.
+Firstly, integrating packet and optical
 networks can significantly reduce both capital expenditures (CAPEX) and
-operational expenditures (OPEX). Second, multi-technology online topology
-insights can accelerate troubleshooting (e.g., alarm correlation) and
-improve network operations (e.g., coordination of maintenance events),
-while multi-technology offline topology inventories can enhance service
-quality (e.g., detection of diversity constraint violations). Third,
-multi-technology traffic engineering enables more efficient use of
+operational expenditures (OPEX).
+Secondly, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.
+Thirdly, multi-technology traffic engineering enables more efficient use of
 available network capacity (e.g., coordination of restoration).
 Furthermore, provisioning workflows can be simplified or automated across
 layers, facilitating capabilities such as bandwidth-on-demand and
-streamlined maintenance activities.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">This document uses packet-based Traffic Engineered (TE) service
+streamlined maintenance activities.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-6">The ACTN framework facilitates seamless integration of packet and optical
+networks across multiple technologies and vendors.
+This is achieved through separated Provisioning Network Controllers (PNCs) for both packet and optical domains,
+which hide the complexities of the technical differences between the packet and optical technologies while
+providing sufficient abstract information that allows the Multi-Domain Service Coordinator (MDSC)
+to provide multi-layer coordination between packet and optical networks.<a href="#section-1-6" class="pilcrow">¶</a></p>
+<p id="section-1-7">This document uses packet-based Traffic Engineered (TE) service
 examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using
 Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or SR
--TE-based, forwarding plane mechanisms.<a href="#section-1-5" class="pilcrow">¶</a></p>
-<p id="section-1-6">The ACTN framework facilitates seamless integration of packet and optical
-networks across multiple technologies and vendors. This is achieved
-through the coordination of a Multi-Domain Service Coordinator (MDSC) and
-Provisioning Network Controllers (PNCs) for both packet and optical
-domains.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">This document outlines key scenarios for Packet Optical Integration (POI)
+-TE-based, forwarding plane mechanisms.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">This document outlines key scenarios for Packet Optical Integration (POI)
 from the perspective of the packet service layer and highlights the
 necessary coordination between packet and optical layers to enhance POI
 deployment and operation. These scenarios emphasize multi-domain packet
-networks functioning as clients of optical networks.<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">This document analyzes the scenario in which packet networks support
+networks functioning as clients of optical networks.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<p id="section-1-9">This document analyzes the scenario in which packet networks support
 multi-domain TE paths. The optical networks may
 consist of a DWDM network, an OTN network (without a DWDM layer), or a
 multi-layer OTN/DWDM network. Additionally, DWDM networks can be either
-fixed-grid or flexible-grid.<a href="#section-1-8" class="pilcrow">¶</a></p>
-<p id="section-1-9">Multi-technology and multi-domain scenarios, based on the reference
+fixed-grid or flexible-grid.<a href="#section-1-9" class="pilcrow">¶</a></p>
+<p id="section-1-10">Multi-technology and multi-domain scenarios, based on the reference
 network described in <a href="#reference-network" class="auto internal xref">Section 2</a> and very relevant for Service
-Providers, are described in <a href="#discovery" class="auto internal xref">Section 4</a> and <a href="#config" class="auto internal xref">Section 5</a>.<a href="#section-1-9" class="pilcrow">¶</a></p>
-<p id="section-1-10">For each scenario, existing IETF protocols and data models,
+Providers, are described in <a href="#discovery" class="auto internal xref">Section 4</a> and <a href="#config" class="auto internal xref">Section 5</a>.<a href="#section-1-10" class="pilcrow">¶</a></p>
+<p id="section-1-11">For each scenario, existing IETF protocols and data models,
 identified in <a href="#restconf" class="auto internal xref">Section 3.1</a> and <a href="#yang" class="auto internal xref">Section 3.2</a>, are analyzed with a particular
-focus on the MPI in the ACTN architecture.<a href="#section-1-10" class="pilcrow">¶</a></p>
-<p id="section-1-11">For each multi-technology scenario, the document analyzes how to use the
-interfaces and data models of the ACTN architecture.<a href="#section-1-11" class="pilcrow">¶</a></p>
-<p id="section-1-12">A summary of the gaps identified in this analysis is provided in
-<a href="#conclusions" class="auto internal xref">Section 6</a>.<a href="#section-1-12" class="pilcrow">¶</a></p>
-<p id="section-1-13">Understanding the degree of standardization and identifying potential
+focus on the MPI in the ACTN architecture.<a href="#section-1-11" class="pilcrow">¶</a></p>
+<p id="section-1-12">For each multi-technology scenario, the document analyzes how to use the
+interfaces and data models of the ACTN architecture.<a href="#section-1-12" class="pilcrow">¶</a></p>
+<p id="section-1-13">A summary of the gaps identified in this analysis is provided in
+<a href="#conclusions" class="auto internal xref">Section 6</a>.<a href="#section-1-13" class="pilcrow">¶</a></p>
+<p id="section-1-14">Understanding the degree of standardization and identifying potential
 gaps are crucial for evaluating the feasibility of integrating packet and
 optical DWDM domains (with an optional OTN layer) from an end-to-end,
-multi-vendor service provisioning perspective.<a href="#section-1-13" class="pilcrow">¶</a></p>
+multi-vendor service provisioning perspective.<a href="#section-1-14" class="pilcrow">¶</a></p>
 <div id="terms">
 <section id="section-1.1">
         <h3 id="name-terminology">
@@ -4164,7 +4161,7 @@ discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a><
 <dl class="references">
 <dt id="I-D.ietf-ccamp-client-signal-yang">[I-D.ietf-ccamp-client-signal-yang]</dt>
         <dd>
-<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Guo, A.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Snitser, A.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"A YANG Data Model for Transport Network Client Signals"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-client-signal-yang-13</span>, <time datetime="2024-08-01" class="refDate">1 August 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-13">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-13</a>&gt;</span>. </dd>
+<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Guo, A.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Snitser, A.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"A YANG Data Model for Transport Network Client Signals"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-client-signal-yang-14</span>, <time datetime="2025-02-04" class="refDate">4 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-14">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-14</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-eth-client-te-topo-yang">[I-D.ietf-ccamp-eth-client-te-topo-yang]</dt>
         <dd>
@@ -4192,7 +4189,7 @@ discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a><
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-yang-path-computation">[I-D.ietf-teas-yang-path-computation]</dt>
         <dd>
-<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">de Dios, O. G.</span>, <span class="refAuthor">Sharma, A.</span>, and <span class="refAuthor">Y. Shi</span>, <span class="refTitle">"A YANG Data Model for requesting path computation"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-yang-path-computation-23</span>, <time datetime="2024-08-19" class="refDate">19 August 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-path-computation-23">https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-path-computation-23</a>&gt;</span>. </dd>
+<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">de Dios, O. G.</span>, <span class="refAuthor">Sharma, A.</span>, and <span class="refAuthor">Y. Shi</span>, <span class="refTitle">"A YANG Data Model for requesting path computation"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-yang-path-computation-24</span>, <time datetime="2025-02-13" class="refDate">13 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-path-computation-24">https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-path-computation-24</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-yang-sr-te-topo">[I-D.ietf-teas-yang-sr-te-topo]</dt>
         <dd>
@@ -4309,7 +4306,7 @@ discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a><
 <dd class="break"></dd>
 <dt id="I-D.ietf-rtgwg-segment-routing-ti-lfa">[I-D.ietf-rtgwg-segment-routing-ti-lfa]</dt>
         <dd>
-<span class="refAuthor">Bashandy, A.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Filsfils, C.</span>, <span class="refAuthor">Francois, P.</span>, <span class="refAuthor">Decraene, B.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"Topology Independent Fast Reroute using Segment Routing"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-19</span>, <time datetime="2024-11-22" class="refDate">22 November 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-19">https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-19</a>&gt;</span>. </dd>
+<span class="refAuthor">Bashandy, A.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Filsfils, C.</span>, <span class="refAuthor">Francois, P.</span>, <span class="refAuthor">Decraene, B.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"Topology Independent Fast Reroute using Segment Routing"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-21</span>, <time datetime="2025-02-12" class="refDate">12 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-21">https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-21</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-actn-vn-yang">[I-D.ietf-teas-actn-vn-yang]</dt>
         <dd>
