@@ -161,10 +161,8 @@ an optical transport network utilizing Dense Wavelength Division
 Multiplexing (DWDM), occasionally with an optional Optical Transport
 Network (OTN) layer.
 
-In many existing network deployments, packet and optical networks are
-engineered and operated independently. This separation results in
-significant technical differences between the two technologies (e.g.,
-routers versus optical switches) and their associated network engineering
+There are significant technical differences between the packet and optical technologies
+(e.g., routers versus optical switches) and their associated network engineering
 and planning approaches (e.g., inter-domain peering optimization in IP
 networks versus managing physical impairments in DWDM systems or
 operating on vastly different time scales). Additionally, customer
@@ -173,32 +171,31 @@ common for Service Providers to use different vendors for each domain. As
 a result, the operation of these complex packet and optical networks is
 often siloed, as each technology domain requires specialized skill sets.
 
-The separation of packet and optical network deployment and operation is
-inefficient for several reasons. First, integrating packet and optical
+As a consequence, in many existing network deployments, packet and optical networks are engineered and operated independently.
+
+This separation is inefficient for several reasons.
+Firstly, integrating packet and optical
 networks can significantly reduce capital expenditures (CAPEX) and
-operational expenditures (OPEX). Second, multi-technology online topology
-insights can accelerate troubleshooting (e.g., alarm correlation) and
-improve network operations (e.g., coordination of maintenance events),
-while multi-technology offline topology inventories can enhance service
-quality (e.g., detection of diversity constraint violations). Third,
-multi-technology traffic engineering enables more efficient use of
+operational expenditures (OPEX).
+Secondly, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.
+Thirdly, multi-technology traffic engineering enables more efficient use of
 available network capacity (e.g., coordination of restoration).
 Furthermore, provisioning workflows can be simplified or automated across
 layers, facilitating capabilities such as bandwidth-on-demand and
 streamlined maintenance activities.
 
+The ACTN framework facilitates seamless integration of packet and optical
+networks across multiple technologies and vendors.
+This is achieved through separated Provisioning Network Controllers (PNCs) for both packet and optical domains,
+which hide the complexities of the technical differences between the packet and optical technologies while
+providing sufficient abstract information that allows the Multi-Domain Service Coordinator (MDSC)
+to provide multi-layer coordination between packet and optical networks.
 
 This document uses packet-based Traffic Engineered (TE) service
 examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using
 Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or SR
 -TE-based, forwarding plane mechanisms.
-
-The ACTN framework facilitates seamless integration of packet and optical
-networks across multiple technologies and vendors. This is achieved
-through the coordination of a Multi-Domain Service Coordinator (MDSC) and
-Provisioning Network Controllers (PNCs) for both packet and optical
-domains.
 
 This document outlines key scenarios for Packet Optical Integration (POI)
 from the perspective of the packet service layer and highlights the
