@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-25T00:51:34.929828+00:00",
+  "timestamp": "2025-02-27T00:51:22.561241+00:00",
   "repo": "IETF-TEAS-WG/actn-poi",
   "labels": [
     {
@@ -1000,11 +1000,12 @@
       ],
       "labels": [
         "documentation",
+        "wontfix",
         "wait"
       ],
       "body": "In section 3.2.3 YANG data models at the packet MPI we mentioned [CLIENT-TOPO] (https://datatracker.ietf.org/doc/draft-zheng-ccamp-client-topo-yang/ ). We should discuss further as for L3NM/L2NM, the authors are considering a recent draft proposal [UNI-TOPO] (https://datatracker.ietf.org/doc/draft-ogondio-opsawg-uni-topology/) which augments RFC8345 with the service attachment point abstraction for L3 or L2 VPNs network services. \r\n",
       "createdAt": "2020-11-12T17:37:08Z",
-      "updatedAt": "2024-11-20T12:43:50Z",
+      "updatedAt": "2025-02-25T11:30:04Z",
       "closedAt": null,
       "comments": [
         {
@@ -3660,11 +3661,12 @@
         "dancecca"
       ],
       "labels": [
-        "help wanted"
+        "help wanted",
+        "wontfix"
       ],
       "body": "**[2022-11-22 ACTN POI Call (Slot 1)](https://github.com/FabioPeruzzini/actn-poi/blob/master/minutes/minutes-2022-11-22.md)**\r\n\r\nA new draft has been submitted to SPRING for for multi-layer networks, which may be relevant to our work:\r\n\r\nhttps://datatracker.ietf.org/doc/draft-dong-spring-srv6-inter-layer-programming/\r\n\r\n- [ ] @dancecca : provide a link to the competing draft\r\n- [ ] review these drafts",
       "createdAt": "2022-12-01T09:04:06Z",
-      "updatedAt": "2024-05-27T13:28:15Z",
+      "updatedAt": "2025-02-25T11:30:04Z",
       "closedAt": null,
       "comments": [
         {
@@ -3922,7 +3924,7 @@
       "id": "I_kwDOC9D8a86oKO3b",
       "title": "Clean up description of operations separation",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/125",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3931,8 +3933,8 @@
       "labels": [],
       "body": "The way I read this text is:\r\n- cause: separation of engineering and operations between IP and optical\r\n- consequence: different underlying technologies and methods\r\n\r\nIMHO, it should be:\r\n- cause: different underlying technologies and methods\r\n- consequence: separation of engineering and operations between IP and optical\r\n\r\nWhat about:\r\n\r\nThere are significant technical differences between the packet and optical technologies (e.g.,\r\nrouters versus optical switches) and their associated network engineering\r\nand planning approaches (e.g., inter-domain peering optimization in IP\r\nnetworks versus managing physical impairments in DWDM systems or\r\noperating on vastly different time scales). Additionally, customer\r\nrequirements often differ between packet and optical networks, and it is\r\ncommon for Service Providers to use different vendors for each domain. As\r\na result, the operation of these complex packet and optical networks is\r\noften siloed, as each technology domain requires specialized skill sets.\r\n\r\nAs a consequence, in many existing network deployments, packet and optical networks are\r\nengineered and operated independently.\r\n\r\nThis separation is inefficient for several reasons. First, integrating packet and optical\r\n// see L174 onward\r\n\r\n_Originally posted by @italobusi in https://github.com/IETF-TEAS-WG/actn-poi/pull/124#discussion_r1932269464_\r\n            ",
       "createdAt": "2025-01-30T16:18:39Z",
-      "updatedAt": "2025-01-30T17:40:24Z",
-      "closedAt": null,
+      "updatedAt": "2025-02-25T10:50:11Z",
+      "closedAt": "2025-02-25T10:50:10Z",
       "comments": []
     },
     {
@@ -3940,15 +3942,15 @@
       "id": "I_kwDOC9D8a86oUWGt",
       "title": "multi-technology online topology vs. multi-technology offline topology",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/issues/127",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "sergiobelotti",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "In the document we described the positive effects of integrating packet and optical networks . \nOne of the aspect considered as positive is multi-technology online topology as improving alarm correlation and network operation , the second aspect is multi-technology offline topology inventories that can enhance service quality like diversity constraints violation.\nIt would be needed to describe somewhere what we mean with multi-technology online topology vs. multi-technology offline topology.",
       "createdAt": "2025-01-31T16:15:33Z",
-      "updatedAt": "2025-02-24T19:23:30Z",
-      "closedAt": null,
+      "updatedAt": "2025-02-25T10:50:11Z",
+      "closedAt": "2025-02-25T10:50:11Z",
       "comments": []
     }
   ],
@@ -8308,25 +8310,35 @@
       "id": "PR_kwDOC9D8a86JiF64",
       "title": "Some text clean up",
       "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/126",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "italobusi",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Cleaned up description of operations separation: fix #125\r\n\r\nCleaned up text on multi-technology online and offline topology: fix #127 \r\n\r\n---\r\n\r\nCo-authored by michael-scharf <michael-scharf@users.noreply.github.com>",
       "createdAt": "2025-01-30T17:41:25Z",
-      "updatedAt": "2025-02-24T21:18:29Z",
+      "updatedAt": "2025-02-25T11:31:02Z",
       "baseRepository": "IETF-TEAS-WG/actn-poi",
       "baseRefName": "main",
       "baseRefOid": "a333de0b30ce9bc34d5ea678b84fa3848252abe6",
       "headRepository": "italobusi/actn-poi",
       "headRefName": "separation",
-      "headRefOid": "ba4c68107ea77c819a4ba0fe50a28145f53015c2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "21e0f9b4c7fece086954419d2cf9b811decfa4a4",
+      "closedAt": "2025-02-25T10:50:09Z",
+      "mergedAt": "2025-02-25T10:50:09Z",
+      "mergedBy": "italobusi",
+      "mergeCommit": {
+        "oid": "bd2b3c2ac06197c762e34a0eb12015cb34d222af"
+      },
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[ACTN POI bi-weekly call (February 25, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-02-25)**\r\n\r\nResolved PR review comments\r\n\r\nAgreed to merge the PR",
+          "createdAt": "2025-02-25T10:49:25Z",
+          "updatedAt": "2025-02-25T11:31:02Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOC9D8a86dQ7AQ",
@@ -8347,8 +8359,137 @@
               "updatedAt": "2025-02-24T21:18:29Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86dXdp4",
+          "commit": {
+            "abbreviatedOid": "ba4c681"
+          },
+          "author": "sergiobelotti",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-25T08:58:42Z",
+          "updatedAt": "2025-02-25T08:58:50Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "@danielkinguk : I like the original Michael/Italo text but your wordsmithing is very good (as usual). About path diversity , my interpretation is something that for sure is improving the service quality and so the text is fine.",
+              "createdAt": "2025-02-25T08:58:42Z",
+              "updatedAt": "2025-02-25T08:58:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86dYbvm",
+          "commit": {
+            "abbreviatedOid": "ba4c681"
+          },
+          "author": "jbouqui153",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-25T10:00:25Z",
+          "updatedAt": "2025-02-25T10:00:25Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOC9D8a86dY1TZ",
+          "commit": {
+            "abbreviatedOid": "ba4c681"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-25T10:27:02Z",
+          "updatedAt": "2025-02-25T10:27:03Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\r\nSecond, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.\r\nThirdly, multi-technology traffic engineering enables more efficient use of\r\n```",
+              "createdAt": "2025-02-25T10:27:02Z",
+              "updatedAt": "2025-02-25T10:27:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86dY1fi",
+          "commit": {
+            "abbreviatedOid": "ba4c681"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-25T10:27:22Z",
+          "updatedAt": "2025-02-25T10:27:23Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "```suggestion\r\nFirstly, integrating packet and optical\r\n```",
+              "createdAt": "2025-02-25T10:27:22Z",
+              "updatedAt": "2025-02-25T10:27:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOC9D8a86dZE-I",
+          "commit": {
+            "abbreviatedOid": "8d48302"
+          },
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-25T10:48:11Z",
+          "updatedAt": "2025-02-25T10:48:12Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\nSecondly, multi-technology topology insights can optimize troubleshooting (e.g., alarm correlation) and enhance network operation (e.g., coordination of maintenance events). Additionally, detailed inventory and planning information can also improve service assurance quality, such as detecting constraint violations or lack of resource diversity.\r\n```",
+              "createdAt": "2025-02-25T10:48:11Z",
+              "updatedAt": "2025-02-25T10:48:12Z"
+            }
+          ]
         }
       ]
+    },
+    {
+      "number": 128,
+      "id": "PR_kwDOC9D8a86Mchxn",
+      "title": "Minor nits.",
+      "url": "https://github.com/IETF-TEAS-WG/actn-poi/pull/128",
+      "state": "MERGED",
+      "author": "danielkinguk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-02-25T10:29:10Z",
+      "updatedAt": "2025-02-25T11:32:32Z",
+      "baseRepository": "IETF-TEAS-WG/actn-poi",
+      "baseRefName": "main",
+      "baseRefOid": "bd2b3c2ac06197c762e34a0eb12015cb34d222af",
+      "headRepository": "IETF-TEAS-WG/actn-poi",
+      "headRefName": "editorial-review",
+      "headRefOid": "b849bcbaed68229155dec71feb4652a28145dc56",
+      "closedAt": "2025-02-25T10:55:19Z",
+      "mergedAt": "2025-02-25T10:55:19Z",
+      "mergedBy": "italobusi",
+      "mergeCommit": {
+        "oid": "984db88188b6b5f85add5e00c37b9806d344703a"
+      },
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "COLLABORATOR",
+          "body": "**[ACTN POI bi-weekly call (February 25, 2025)](https://github.com/IETF-TEAS-WG/actn-poi/wiki/minutes-2025-02-25)**\r\n\r\nProposed changes agreed\r\n\r\nResolved PR conflicts\r\n\r\nAgreed to merge the PR",
+          "createdAt": "2025-02-25T11:21:55Z",
+          "updatedAt": "2025-02-25T11:32:32Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
