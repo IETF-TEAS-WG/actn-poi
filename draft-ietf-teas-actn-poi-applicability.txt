@@ -3,16 +3,16 @@
 
 
 Traffic Engineering Architecture and Signaling              F. Peruzzini
-Internet-Draft                                                       TIM
+Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 29 August 2025                                         Vodafone
+Expires: 5 January 2026                                         Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                        25 February 2025
+                                                             4 July 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 August 2025.
+   This Internet-Draft will expire on 5 January 2026.
 
 Copyright Notice
 
@@ -2618,17 +2618,17 @@ Table of Contents
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-07, 14 October 2024,
+              client-te-topo-yang-09, 14 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-07>.
+              eth-client-te-topo-yang-09>.
 
    [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
               H. Zheng, "A YANG Data Model for Flexi-Grid Optical
               Networks", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-flexigrid-yang-17, 12 September 2024,
+              ccamp-flexigrid-yang-18, 17 March 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              flexigrid-yang-17>.
+              flexigrid-yang-18>.
 
    [I-D.ietf-ccamp-otn-topo-yang]
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
@@ -2642,17 +2642,17 @@ Table of Contents
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
               YANG Data Model for Optical Transport Network (OTN)
               Tunnels and Label Switched Paths", Work in Progress,
-              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-22, 3
-              December 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-ccamp-otn-tunnel-model-22>.
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-23, 4
+              June 2025, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-ccamp-otn-tunnel-model-23>.
 
    [I-D.ietf-ccamp-wdm-tunnel-yang]
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-03, 21 October 2024,
+              tunnel-yang-05, 3 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-03>.
+              wdm-tunnel-yang-05>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
@@ -2682,9 +2682,9 @@ Table of Contents
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
               Bryskin, "A YANG Data Model for Traffic Engineering
               Tunnels, Label Switched Paths and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-37, 9
-              October 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-37>.
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-38, 29
+              May 2025, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-teas-yang-te-38>.
 
    [I-D.ietf-teas-yang-te-mpls]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
@@ -2697,9 +2697,9 @@ Table of Contents
    [I-D.ietf-teas-yang-te-mpls-topology]
               Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
               YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-01,
-              16 September 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-mpls-topology-01>.
+              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-02,
+              17 March 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-mpls-topology-02>.
 
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, "IEEE
@@ -2800,17 +2800,17 @@ Table of Contents
               Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
-              ietf-ccamp-optical-impairment-topology-yang-17, 21 October
-              2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ccamp-optical-impairment-topology-yang-17>.
+              ietf-ccamp-optical-impairment-topology-yang-18, 11 April
+              2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              ccamp-optical-impairment-topology-yang-18>.
 
    [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
               requesting Path Computation in WDM Optical Networks", Work
               in Progress, Internet-Draft, draft-ietf-ccamp-optical-
-              path-computation-yang-04, 29 August 2024,
+              path-computation-yang-05, 28 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              optical-path-computation-yang-04>.
+              optical-path-computation-yang-05>.
 
    [I-D.ietf-ccamp-transport-nbi-app-statement]
               Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
@@ -2824,9 +2824,9 @@ Table of Contents
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A Base YANG Data Model for Network Inventory",
               Work in Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-04, 5 November 2024,
+              inventory-yang-06, 21 May 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-04>.
+              network-inventory-yang-06>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
@@ -2858,9 +2858,9 @@ Table of Contents
               Dios, "Profiles for Traffic Engineering (TE) Topology Data
               Model and Applicability to non-TE Use Cases", Work in
               Progress, Internet-Draft, draft-ietf-teas-te-topology-
-              profiles-02, 21 October 2024,
+              profiles-03, 14 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
-              topology-profiles-02>.
+              topology-profiles-03>.
 
    [RFC1930]  Hawkinson, J. and T. Bates, "Guidelines for creation,
               selection, and registration of an Autonomous System (AS)",
@@ -3205,9 +3205,9 @@ Contributors
    Email: ggalimbe56@gmail.com
 
 
-   To-Be-Added
-   To-Be-Added
-   Email: To-Be-Added
+   Yanlei Zheng
+   China Unicom
+   Email: zhengyanlei@chinaunicom.cn
 
 
    Anton Snitser
@@ -3253,8 +3253,8 @@ Contributors
 Authors' Addresses
 
    Fabio Peruzzini
-   TIM
-   Email: fabio.peruzzini@telecomitalia.it
+   FiberCop
+   Email: fabio.peruzzini@fibercop.com
 
 
    Jean-Francois Bouquier
