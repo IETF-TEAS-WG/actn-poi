@@ -28,8 +28,8 @@ venue:
 author:
   -
     name: Fabio Peruzzini
-    org: TIM
-    email: fabio.peruzzini@telecomitalia.it
+    org: FiberCop
+    email: fabio.peruzzini@fibercop.com
   -
     ins: J-F. Bouquier
     name: Jean-Francois Bouquier
@@ -57,9 +57,9 @@ contributor:
     name: Gabriele Galimberti
     email: ggalimbe56@gmail.com
   -
-    name: To-Be-Added
-    org: To-Be-Added
-    email: To-Be-Added
+    name: Yanlei Zheng
+    org: China Unicom
+    email: zhengyanlei@chinaunicom.cn
   -
     name: Anton Snitser
     org: Cisco
