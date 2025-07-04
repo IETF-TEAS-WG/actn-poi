@@ -2585,7 +2585,8 @@ Table of Contents
       diagnosing issues may become more complex with integrated layers.
       Telemetry data may also be required to collect lower-layer
       networking health and consider network and service performance.
-      This topic is further discussed in [ACTN Assurance];
+      This topic is further discussed in
+      [I-D.poidt-teas-actn-poi-assurance];
 
    *  Fault Management and Recovery: The POI networks should be
       resilient, including considerations for automatic protection
@@ -2594,7 +2595,7 @@ Table of Contents
       issues in one layer can have cascading effects on the other.
       Effective fault management strategies must be in place to quickly
       identify and rectify such issues.  This topic is further discussed
-      in [ACTN Assurance];
+      in [I-D.poidt-teas-actn-poi-assurance];
 
    Specific Security Considerations are discussed in Section 7.
 
@@ -2861,6 +2862,15 @@ Table of Contents
               profiles-03, 14 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
               topology-profiles-03>.
+
+   [I-D.poidt-teas-actn-poi-assurance]
+              Busi, I., Bouquier, J., Peruzzini, F., Volpato, P., and P.
+              Manna, "Applicability of Abstraction and Control of
+              Traffic Engineered Networks (ACTN) for Packet Optical
+              Integration (POI) service assurance", Work in Progress,
+              Internet-Draft, draft-poidt-teas-actn-poi-assurance-05, 26
+              February 2025, <https://datatracker.ietf.org/doc/html/
+              draft-poidt-teas-actn-poi-assurance-05>.
 
    [RFC1930]  Hawkinson, J. and T. Bates, "Guidelines for creation,
               selection, and registration of an Autonomous System (AS)",
