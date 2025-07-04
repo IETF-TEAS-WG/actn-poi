@@ -1,17 +1,19 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)
 
-This is the working area for the IETF [TEAS Working Group](https://datatracker.ietf.org/wg/teas/documents/) Internet-Draft, "Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)".
+This is the working area for the IETF [TEAS Working Group](https://datatracker.ietf.org/group/teas/documents/) Internet-Draft, "Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) to Packet Optical Integration (POI)".
 
-* [Editor's Copy](https://italobusi.github.io/actn-poi/#go.draft-ietf-teas-actn-poi-applicability.html)
+* [Editor's Copy](https://IETF-TEAS-WG.github.io/actn-poi/#go.draft-ietf-teas-actn-poi-applicability.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-teas-actn-poi-applicability)
 * [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-applicability)
-* [Compare Editor's Copy to Working Group Draft](https://italobusi.github.io/actn-poi/#go.draft-ietf-teas-actn-poi-applicability.diff)
+* [Compare Editor's Copy to Working Group Draft](https://IETF-TEAS-WG.github.io/actn-poi/#go.draft-ietf-teas-actn-poi-applicability.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/italobusi/actn-poi/blob/fork/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/IETF-TEAS-WG/actn-poi/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
