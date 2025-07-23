@@ -12,7 +12,7 @@ date:
 consensus: true
 v: 3
 area: "Routing"
-workgroup: "Traffic Engineering Architecture and Signaling"
+workgroup: "TEAS Working Group"
 keyword:
  - next generation
  - unicorn
