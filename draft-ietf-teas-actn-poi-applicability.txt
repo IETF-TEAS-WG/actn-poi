@@ -2,17 +2,17 @@
 
 
 
-Traffic Engineering Architecture and Signaling              F. Peruzzini
+TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 5 January 2026                                         Vodafone
+Expires: 24 January 2026                                        Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                             4 July 2025
+                                                            23 July 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 January 2026.
+   This Internet-Draft will expire on 24 January 2026.
 
 Copyright Notice
 
@@ -2656,8 +2656,8 @@ Table of Contents
               wdm-tunnel-yang-05>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
-              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
-              C., and O. G. de Dios, "YANG Data Model for Layer 3 TE
+              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
+              and O. G. de Dios, "YANG Data Model for Layer 3 TE
               Topologies", Work in Progress, Internet-Draft, draft-ietf-
               teas-yang-l3-te-topo-18, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
@@ -2672,8 +2672,8 @@ Table of Contents
               yang-path-computation-24>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
-              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
-              C., and S. Litkowski, "YANG Data Model for SR and SR TE
+              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
+              and S. Litkowski, "YANG Data Model for SR and SR TE
               Topologies on MPLS Data Plane", Work in Progress,
               Internet-Draft, draft-ietf-teas-yang-sr-te-topo-19, 4 July
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
@@ -2801,9 +2801,9 @@ Table of Contents
               Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
-              ietf-ccamp-optical-impairment-topology-yang-18, 11 April
+              ietf-ccamp-optical-impairment-topology-yang-19, 7 July
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ccamp-optical-impairment-topology-yang-18>.
+              ccamp-optical-impairment-topology-yang-19>.
 
    [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
@@ -2825,9 +2825,9 @@ Table of Contents
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A Base YANG Data Model for Network Inventory",
               Work in Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-06, 21 May 2025,
+              inventory-yang-08, 22 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-06>.
+              network-inventory-yang-08>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
