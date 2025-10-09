@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 24 January 2026                                        Vodafone
+Expires: 12 April 2026                                          Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            23 July 2025
+                                                          9 October 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 January 2026.
+   This Internet-Draft will expire on 12 April 2026.
 
 Copyright Notice
 
@@ -2611,9 +2611,9 @@ Table of Contents
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-14, 4 February 2025,
+              signal-yang-16, 28 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              client-signal-yang-14>.
+              client-signal-yang-16>.
 
    [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
@@ -2667,9 +2667,9 @@ Table of Contents
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
               Shi, "A YANG Data Model for requesting path computation",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-24, 13 February 2025,
+              path-computation-25, 11 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-24>.
+              yang-path-computation-25>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
@@ -2698,9 +2698,9 @@ Table of Contents
    [I-D.ietf-teas-yang-te-mpls-topology]
               Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
               YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-02,
-              17 March 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-mpls-topology-02>.
+              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-03,
+              7 September 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-mpls-topology-03>.
 
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, "IEEE
@@ -2809,9 +2809,9 @@ Table of Contents
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
               requesting Path Computation in WDM Optical Networks", Work
               in Progress, Internet-Draft, draft-ietf-ccamp-optical-
-              path-computation-yang-05, 28 February 2025,
+              path-computation-yang-06, 29 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              optical-path-computation-yang-05>.
+              optical-path-computation-yang-06>.
 
    [I-D.ietf-ccamp-transport-nbi-app-statement]
               Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
@@ -3199,6 +3199,10 @@ Acknowledgments
    Some of this analysis work was supported in part by the European
    Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).
 
+   The authors would like to thank Young Lee for his valuable input on
+   the initial discusssions which have triggered this work as well as
+   for his contribution to the first drafts of this document.
+
    Previous versions of document were prepared using 2-Word-
    v2.0.template.dot.
 
@@ -3233,11 +3237,6 @@ Contributors
    Michael Scharf
    Hochschule Esslingen - University of Applied Sciences
    Email: michael.scharf@hs-esslingen.de
-
-
-   Young Lee
-   Sung Kyun Kwan University
-   Email: younglee.tx@gmail.com
 
 
    Jeff Tantsura
