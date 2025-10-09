@@ -73,10 +73,6 @@ contributor:
     org: Hochschule Esslingen - University of Applied Sciences
     email: michael.scharf@hs-esslingen.de
   -
-    name: Young Lee
-    org: Sung Kyun Kwan University
-    email: younglee.tx@gmail.com
-  -
     name: Jeff Tantsura
     org: Nvidia
     email: jefftant.ietf@gmail.com
@@ -2525,6 +2521,8 @@ is identified as a gap.
 
 Some of this analysis work was supported in part by the European
 Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).
+
+The authors would like to thank Young Lee for his valuable input on the initial discusssions which have triggered this work as well as for his contribution to the first drafts of this document.
 
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
