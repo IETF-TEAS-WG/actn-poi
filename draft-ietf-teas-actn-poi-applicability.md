@@ -239,13 +239,19 @@ includes the configuration (on the PE side) of the interface towards the
 CE (e.g. VLAN, IP address, routing protocol, etc.).
 
 Technology domain:
-: short for "switching technology domain", defined as "region" in
+: Short for "switching technology domain", defined as "region" in
 {{!RFC5212}}, where the term "region" is applied to (GMPLS) control
 domains.
 
 PNC Domain:
-: part of the network under the control of a single PNC instance. It is
+: Part of the network under the control of a single PNC instance. It is
 subject to the capabilities of the PNC which technology is controlled.
+
+Optical PNC (O-PNC):
+: A PNC controlling an optical network domain.
+
+Packet PNC (P-PNC):
+: A PNC controlling a packet network domain.
 
 Port:
 : The physical entity that transmits and receives physical signals.
@@ -258,10 +264,10 @@ Link:
 directly.
 
 Intra-domain link:
-: a link between two adjacent nodes that belong to the same PNC domain.
+: A link between two adjacent nodes that belong to the same PNC domain.
 
 Inter-domain link:
-: a link between two adjacent nodes that belong to different PNC domains.
+: A link between two adjacent nodes that belong to different PNC domains.
 
 Ethernet link:
 : A link between two Ethernet interfaces.
@@ -2448,6 +2454,8 @@ Some of this analysis work was supported in part by the European
 Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).
 
 The authors would like to thank Young Lee for his valuable input on the initial discusssions which have triggered this work as well as for his contribution to the first drafts of this document.
+
+The authors would like to thank Adrian Farrel for his review and comments to this document.
 
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
