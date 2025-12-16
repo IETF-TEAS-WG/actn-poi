@@ -232,11 +232,16 @@ Customer service:
 : The end-to-end service from Customer Edge (CE) to CE.
 
 Network service:
-: The Provider Edge (PE) to PE configuration, including both the network
-service layer (VRFs, RT import/export policies configuration) and the
-network transport layer (e.g. RSVP-TE Label Switched Paths (LSPs). This
-includes the configuration (on the PE side) of the interface towards the
-CE (e.g. VLAN, IP address, routing protocol, etc.).
+: Per {{?RFC8309}}, a network service provides
+Connectivity between customer sites and the Internet or between
+customer sites across the network operator's network and across
+the Internet. In the context of this document, a network service
+is enabled by Provider Edge (PE) to PE configuration, including
+both the network service layer (VRFs, RT import/export policies
+configuration) and the network transport layer (e.g., RSVP-TE
+Label Switched Paths (LSPs)). This includes the configuration
+(on the PE side) of the interface towards the CE (e.g., VLAN, IP
+address, routing protocol, etc.).
 
 Technology domain:
 : Short for "switching technology domain", defined as "region" in
@@ -257,11 +262,10 @@ Port:
 : The physical entity that transmits and receives physical signals.
 
 Interface:
-: A physical or logical entity that transmits and receives traffic.
+: A bidirectional link interface, as defined in {{Section 3.6.1 of ?RFC4397}}.
 
-Link:
-: An association between two interfaces that can exchange traffic
-directly.
+makeLink:
+: A bidirectional data link, as defined in {{Section 3.5.1 of ?RFC4397}}.
 
 Intra-domain link:
 : A link between two adjacent nodes that belong to the same PNC domain.
@@ -525,27 +529,18 @@ be routed over the designated multi-domain and multi-layer TE paths.
 The selection of the TE path should consider both the TE requirements and
 the binding requirements of the L2/L3 VPN network service.
 
-In general, the binding requirements for a network service (e.g., L2/L3
-VPN) can be categorized into three main cases:
+In general, the binding requirements for a network service (e.g., L2/L3 VPN)
+depend on the the service isolation requirements (e.g., as discussed in {{Section 8 of ?RFC9543}})
+and can be categorized into three main cases:
 
-1. The customer is asking for VPN isolation to dynamically create
-and bind tunnels to the service so that they are not shared by
-other services (e.g. VPN).
+1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which neither
+share resources with other services, nor compete for bandwidth with
+other tunnels, ensuring deterministic latency performance.
 
-   The level of isolation can be different:
+1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which can
+compete for bandwidth with other tunnels.
 
-   {: type="a"}
-
-   1.  Hard isolation with deterministic latency implies that the L2/L3
-       VPN requires a set of dedicated TE tunnels. These tunnels neither
-       share resources with other services, nor compete for bandwidth with
-       other tunnels, ensuring deterministic latency performance.
-
-   1.  Hard isolation but without deterministic characteristics
-
-   1.  Soft isolation means the tunnels associated with L2/L3 VPN
-       are dedicated to that but can compete for bandwidth with
-       other tunnels.
+1. The L2/L3 VPN is bound to a set of TE tunnels which can shared with other services.
 
 1. The customer does not require isolation and may request a VPN service
 where the associated tunnels are shared across multiple VPNs.
