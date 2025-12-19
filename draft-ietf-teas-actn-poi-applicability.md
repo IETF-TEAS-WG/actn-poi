@@ -234,7 +234,7 @@ Customer service:
 Network service:
 : Per {{?RFC8309}}, a network service provides
 Connectivity between customer sites and the Internet or between
-customer sites across the network operator's network and across
+customer sites across the operator's network and across
 the Internet. In the context of this document, a network service
 is enabled by Provider Edge (PE) to PE configuration, including
 both the network service layer (VRFs, RT import/export policies
@@ -540,7 +540,7 @@ other tunnels, ensuring deterministic latency performance.
 1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which can
 compete for bandwidth with other tunnels.
 
-1. The L2/L3 VPN is bound to a set of TE tunnels which can shared with other services.
+1. The L2/L3 VPN is bound to a set of TE tunnels which can be shared with other services.
 
 1. The customer does not require isolation and may request a VPN service
 where the associated tunnels are shared across multiple VPNs.
@@ -1494,7 +1494,7 @@ multi-technology intra-domain IP links and therefore the path within the
 optical network that supports a multi-technology intra-domain IP link,
 e.g., as shown in {{fig-multi-technology-link}}.
 
-### Intra-domain single-technology IP Links {#single-technology-link-discovery-discovery}
+### Intra-domain single-technology IP Links {#single-technology-link-discovery}
 
 It is worth noting that the P-PNC may not be aware of whether an
 Ethernet interface on the IP router terminates a multi-technology or a
