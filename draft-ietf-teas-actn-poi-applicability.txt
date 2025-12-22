@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 12 April 2026                                          Vodafone
+Expires: 25 June 2026                                           Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                          9 October 2025
+                                                        22 December 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 April 2026.
+   This Internet-Draft will expire on 25 June 2026.
 
 Copyright Notice
 
@@ -248,34 +248,42 @@ Table of Contents
    Customer service:  The end-to-end service from Customer Edge (CE) to
       CE.
 
-   Network service:  The Provider Edge (PE) to PE configuration,
-      including both the network service layer (VRFs, RT import/export
-      policies configuration) and the network transport layer (e.g.
-      RSVP-TE Label Switched Paths (LSPs).  This includes the
-      configuration (on the PE side) of the interface towards the CE
-      (e.g. VLAN, IP address, routing protocol, etc.).
+   Network service:  Per [RFC8309], a network service provides
+      Connectivity between customer sites and the Internet or between
+      customer sites across the operator's network and across the
+      Internet.  In the context of this document, a network service is
+      enabled by Provider Edge (PE) to PE configuration, including both
+      the network service layer (VRFs, RT import/export policies
+      configuration) and the network transport layer (e.g., RSVP-TE
+      Label Switched Paths (LSPs)).  This includes the configuration (on
+      the PE side) of the interface towards the CE (e.g., VLAN, IP
+      address, routing protocol, etc.).
 
-   Technology domain:  short for "switching technology domain", defined
+   Technology domain:  Short for "switching technology domain", defined
       as "region" in [RFC5212], where the term "region" is applied to
       (GMPLS) control domains.
 
-   PNC Domain:  part of the network under the control of a single PNC
+   PNC Domain:  Part of the network under the control of a single PNC
       instance.  It is subject to the capabilities of the PNC which
       technology is controlled.
+
+   Optical PNC (O-PNC):  A PNC controlling an optical network domain.
+
+   Packet PNC (P-PNC):  A PNC controlling a packet network domain.
 
    Port:  The physical entity that transmits and receives physical
       signals.
 
-   Interface:  A physical or logical entity that transmits and receives
-      traffic.
+   Interface:  A bidirectional link interface, as defined in
+      Section 3.6.1 of [RFC4397].
 
-   Link:  An association between two interfaces that can exchange
-      traffic directly.
+   makeLink:  A bidirectional data link, as defined in Section 3.5.1 of
+      [RFC4397].
 
-   Intra-domain link:  a link between two adjacent nodes that belong to
+   Intra-domain link:  A link between two adjacent nodes that belong to
       the same PNC domain.
 
-   Inter-domain link:  a link between two adjacent nodes that belong to
+   Inter-domain link:  A link between two adjacent nodes that belong to
       different PNC domains.
 
    Ethernet link:  A link between two Ethernet interfaces.
@@ -648,27 +656,22 @@ Table of Contents
    and the binding requirements of the L2/L3 VPN network service.
 
    In general, the binding requirements for a network service (e.g., L2/
-   L3 VPN) can be categorized into three main cases:
+   L3 VPN) depend on the the service isolation requirements (e.g., as
+   discussed in Section 8 of [RFC9543]) and can be categorized into
+   three main cases:
 
-   1.  The customer is asking for VPN isolation to dynamically create
-       and bind tunnels to the service so that they are not shared by
-       other services (e.g. VPN).
+   1.  The L2/L3 VPN is bound to a set of dedicated TE tunnels, which
+       neither share resources with other services, nor compete for
+       bandwidth with other tunnels, ensuring deterministic latency
+       performance.
 
-       The level of isolation can be different:
+   2.  The L2/L3 VPN is bound to a set of dedicated TE tunnels, which
+       can compete for bandwidth with other tunnels.
 
-       a.  Hard isolation with deterministic latency implies that the
-           L2/L3 VPN requires a set of dedicated TE tunnels.  These
-           tunnels neither share resources with other services, nor
-           compete for bandwidth with other tunnels, ensuring
-           deterministic latency performance.
+   3.  The L2/L3 VPN is bound to a set of TE tunnels which can be shared
+       with other services.
 
-       b.  Hard isolation but without deterministic characteristics
-
-       c.  Soft isolation means the tunnels associated with L2/L3 VPN
-           are dedicated to that but can compete for bandwidth with
-           other tunnels.
-
-   2.  The customer does not require isolation and may request a VPN
+   4.  The customer does not require isolation and may request a VPN
        service where the associated tunnels are shared across multiple
        VPNs.
 
@@ -1721,12 +1724,15 @@ Table of Contents
                                  discovery
 
    The Ethernet interface 5 on the P13 router is terminating two
-   Ethernet abstract links: - The multi-technology intra-domain Ethernet
-   link between logical Ethernet LTP 5-1 on PE13 and the logical
-   Ethernet LTP 6-1 on BR11; - The cross-technology Ethernet link, which
-   is supporting that multi-technology intra-domain Ethernet link,
-   between the physical Ethernet LTPs 5-0 on PE13 and the physical
-   Ethernet LTP 7-0 on the optical NE11.
+   Ethernet abstract links:
+
+   *  The multi-technology intra-domain Ethernet link between logical
+      Ethernet LTP 5-1 on PE13 and the logical Ethernet LTP 6-1 on BR11;
+
+   *  The cross-technology Ethernet link, which is supporting that
+      multi-technology intra-domain Ethernet link, between the physical
+      Ethernet LTPs 5-0 on PE13 and the physical Ethernet LTP 7-0 on the
+      optical NE11.
 
    The P-PNC does not report any plug-id information on the logical
    Ethernet LTPs terminating intra-domain Ethernet links, such as the
@@ -1976,11 +1982,10 @@ Table of Contents
          multi-layer optimization policy, which is an internal MDSC
          implementation issue;
 
-      -  a new multi-domain TE path needs to be setup between PE13 and
-         PE23, e.g., either because existing TE paths between PE13 and
-         PE23 are not able to meet the TE and binding requirements of
-         the L2/L3 VPN service or because there is no TE path between
-         PE13 and PE23.
+   *  a new multi-domain TE path needs to be setup between PE13 and
+      PE23, e.g., either because existing TE paths between PE13 and PE23
+      are not able to meet the TE and binding requirements of the L2/L3
+      VPN service or because there is no TE path between PE13 and PE23.
 
    As described in Section 2.1.2, with partial summarization, the MDSC
    will use the TE topology information provided by the P-PNCs and the
@@ -2351,9 +2356,6 @@ Table of Contents
    [I-D.ietf-teas-yang-te] model supports both symmetric and asymmetric
    bandwidth configuration in the two directions.
 
-   [Editor's Note:] Add some text about the protection options (to
-   further discuss whether to put this text here or in Section 5.2).
-
    The MDSC also request the P-PNC to configure local protection
    mechanisms.  For example, the FRR local protection, as defined in
    [RFC4090] in case of MPLS-TE domain or the TI-LFA local protection,
@@ -2619,9 +2621,9 @@ Table of Contents
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-09, 14 April 2025,
+              client-te-topo-yang-10, 15 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-09>.
+              eth-client-te-topo-yang-10>.
 
    [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
@@ -2643,17 +2645,17 @@ Table of Contents
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
               YANG Data Model for Optical Transport Network (OTN)
               Tunnels and Label Switched Paths", Work in Progress,
-              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-23, 4
-              June 2025, <https://datatracker.ietf.org/doc/html/draft-
-              ietf-ccamp-otn-tunnel-model-23>.
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-24, 1
+              December 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-ccamp-otn-tunnel-model-24>.
 
    [I-D.ietf-ccamp-wdm-tunnel-yang]
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-05, 3 July 2025,
+              tunnel-yang-06, 20 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-05>.
+              wdm-tunnel-yang-06>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
@@ -2682,10 +2684,10 @@ Table of Contents
    [I-D.ietf-teas-yang-te]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
               Bryskin, "A YANG Data Model for Traffic Engineering
-              Tunnels, Label Switched Paths and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-38, 29
-              May 2025, <https://datatracker.ietf.org/doc/html/draft-
-              ietf-teas-yang-te-38>.
+              Tunnels, Label Switched Paths, and Interfaces", Work in
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-40, 2
+              November 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-40>.
 
    [I-D.ietf-teas-yang-te-mpls]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
@@ -2801,9 +2803,9 @@ Table of Contents
               Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
-              ietf-ccamp-optical-impairment-topology-yang-19, 7 July
+              ietf-ccamp-optical-impairment-topology-yang-20, 10 October
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ccamp-optical-impairment-topology-yang-19>.
+              ccamp-optical-impairment-topology-yang-20>.
 
    [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
@@ -2825,9 +2827,9 @@ Table of Contents
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A Base YANG Data Model for Network Inventory",
               Work in Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-08, 22 July 2025,
+              inventory-yang-11, 14 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-08>.
+              network-inventory-yang-11>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
@@ -2850,18 +2852,18 @@ Table of Contents
               Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
               and J. Tantsura, "Traffic Engineering (TE) and Service
               Mapping YANG Data Model", Work in Progress, Internet-
-              Draft, draft-ietf-teas-te-service-mapping-yang-17, 29
-              January 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-te-service-mapping-yang-17>.
+              Draft, draft-ietf-teas-te-service-mapping-yang-18, 12
+              October 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-te-service-mapping-yang-18>.
 
    [I-D.ietf-teas-te-topology-profiles]
               Busi, I., Liu, X., Bryskin, I., Saad, T., and O. G. de
               Dios, "Profiles for Traffic Engineering (TE) Topology Data
-              Model and Applicability to non-TE Use Cases", Work in
-              Progress, Internet-Draft, draft-ietf-teas-te-topology-
-              profiles-03, 14 April 2025,
+              Model and Applicability to non-TE-centric Use Cases", Work
+              in Progress, Internet-Draft, draft-ietf-teas-te-topology-
+              profiles-04, 20 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
-              topology-profiles-03>.
+              topology-profiles-04>.
 
    [I-D.poidt-teas-actn-poi-assurance]
               Busi, I., Bouquier, J., Peruzzini, F., Volpato, P., and P.
@@ -2886,6 +2888,13 @@ Table of Contents
               Reroute Extensions to RSVP-TE for LSP Tunnels", RFC 4090,
               DOI 10.17487/RFC4090, May 2005,
               <https://www.rfc-editor.org/rfc/rfc4090>.
+
+   [RFC4397]  Bryskin, I. and A. Farrel, "A Lexicography for the
+              Interpretation of Generalized Multiprotocol Label
+              Switching (GMPLS) Terminology within the Context of the
+              ITU-T's Automatically Switched Optical Network (ASON)
+              Architecture", RFC 4397, DOI 10.17487/RFC4397, February
+              2006, <https://www.rfc-editor.org/rfc/rfc4397>.
 
    [RFC5440]  Vasseur, JP., Ed. and JL. Le Roux, Ed., "Path Computation
               Element (PCE) Communication Protocol (PCEP)", RFC 5440,
@@ -2960,6 +2969,12 @@ Table of Contents
               Q., and V. Lopez, "A YANG Network Data Model for Service
               Attachment Points (SAPs)", RFC 9408, DOI 10.17487/RFC9408,
               June 2023, <https://www.rfc-editor.org/rfc/rfc9408>.
+
+   [RFC9543]  Farrel, A., Ed., Drake, J., Ed., Rokui, R., Homma, S.,
+              Makhijani, K., Contreras, L., and J. Tantsura, "A
+              Framework for Network Slices in Networks Built from IETF
+              Technologies", RFC 9543, DOI 10.17487/RFC9543, March 2024,
+              <https://www.rfc-editor.org/rfc/rfc9543>.
 
 Appendix A.  Additional Scenarios
 
@@ -3202,6 +3217,9 @@ Acknowledgments
    The authors would like to thank Young Lee for his valuable input on
    the initial discusssions which have triggered this work as well as
    for his contribution to the first drafts of this document.
+
+   The authors would like to thank Adrian Farrel for his review and
+   comments to this document.
 
    Previous versions of document were prepared using 2-Word-
    v2.0.template.dot.
