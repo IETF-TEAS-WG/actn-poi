@@ -404,7 +404,7 @@ without integrated ROADM functions or optical transponders.
 The MDSC in {{fig-ref-network}} is responsible for coordinating multiple
 packet and optical domains in a multi-domain, multi-technology
 environment. It facilitates multi-layer and multi-domain L2/L3 VPN
-network services as requested by the OSS/Orchestration layer.
+network services as requested by the Operational Support System/Orchestration layer.
 
 From an implementation perspective, the functions associated with
 MDSC described in {{!RFC8453}} may be grouped differently.
@@ -2456,3 +2456,4 @@ Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
 This document was prepared using kramdown.
+
