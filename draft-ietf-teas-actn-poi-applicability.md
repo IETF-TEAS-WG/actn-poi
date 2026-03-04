@@ -900,7 +900,7 @@ generic TE
 Topology Model;
 
 - The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-YANG module of {{!I-D.ietf-teas-yang-te-mpls-topology}}, which augments
+YANG module of {{?I-D.ietf-teas-yang-te-mpls-topology}}, which augments
 the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
 in "ietf-l3-te-topology" YANG module of
@@ -1201,7 +1201,7 @@ network topology, as described in Figure 2 of
 
 The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
-described in {{!I-D.ietf-teas-yang-te-mpls-topology}}.
+described in {{?I-D.ietf-teas-yang-te-mpls-topology}}.
 
 As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship
 between the IP network
@@ -2456,3 +2456,4 @@ Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
 This document was prepared using kramdown.
+
