@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 3 September 2026                                       Vodafone
+Expires: 5 September 2026                                       Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            2 March 2026
+                                                            4 March 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2026.
+   This Internet-Draft will expire on 5 September 2026.
 
 Copyright Notice
 
@@ -2634,13 +2634,6 @@ Table of Contents
               February 2026, <https://datatracker.ietf.org/doc/html/
               draft-ietf-teas-yang-te-43>.
 
-   [I-D.ietf-teas-yang-te-mpls-topology]
-              Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
-              YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-04,
-              1 March 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-mpls-topology-04>.
-
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, "IEEE
               Standard for Local and metropolitan area networks -
@@ -2840,9 +2833,9 @@ Table of Contents
               Dios, "Profiles for Traffic Engineering (TE) Topology Data
               Model and Applicability to non-TE-centric Use Cases", Work
               in Progress, Internet-Draft, draft-ietf-teas-te-topology-
-              profiles-04, 20 October 2025,
+              profiles-05, 2 March 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
-              topology-profiles-04>.
+              topology-profiles-05>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
@@ -2859,6 +2852,13 @@ Table of Contents
               teas-yang-te-mpls-04, 26 May 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
               yang-te-mpls-04>.
+
+   [I-D.ietf-teas-yang-te-mpls-topology]
+              Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
+              YANG Data Model for MPLS-TE Topology", Work in Progress,
+              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-04,
+              1 March 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-mpls-topology-04>.
 
    [I-D.poidt-teas-actn-poi-assurance]
               Busi, I., Bouquier, J., Peruzzini, F., Volpato, P., and P.
