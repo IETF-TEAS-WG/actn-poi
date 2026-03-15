@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 5 September 2026                                       Vodafone
+Expires: 16 September 2026                                      Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            4 March 2026
+                                                           15 March 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 September 2026.
+   This Internet-Draft will expire on 16 September 2026.
 
 Copyright Notice
 
@@ -3090,7 +3090,9 @@ A.2.1.  Maintenance Window
    Before planned maintenance operation on DWDM network takes place, IP
    traffic should be moved hitless to another link.
 
-   MDSC must reroute IP traffic before the event takes place.  It should
+   MDSC must request to reroute IP traffic before the event takes place.
+   It should
+
    be possible to lock IP traffic to the protection route until the
    maintenance event is finished, unless a fault occurs on such path.
 
