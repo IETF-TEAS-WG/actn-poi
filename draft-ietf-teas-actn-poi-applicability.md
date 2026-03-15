@@ -2319,7 +2319,8 @@ access link.
 Before planned maintenance operation on DWDM network takes place, IP
 traffic should be moved hitless to another link.
 
-MDSC must reroute IP traffic before the event takes place. It should
+MDSC must request to reroute IP traffic before the event takes place. It should
+
 be possible to lock IP traffic to the protection route until the
 maintenance event is finished, unless a fault occurs on such path.
 
