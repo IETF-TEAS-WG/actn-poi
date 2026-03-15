@@ -850,7 +850,7 @@ The Optical PNC can use the following technology-specific topology
 YANG data models, which augment the generic TE Topology Model:
 
 - The WSON Topology Model, defined in the "ietf-wson-topology" YANG
-module of {{!RFC9094}};
+module of {{?RFC9094}};
 
 - the Flexi-grid Topology Model, defined in the
 "ietf-flexi-grid-topology" YANG module of
@@ -2437,7 +2437,7 @@ the muxponder but the O-PNC and MDSC needs to be aware of the
 connectivity constraints to avoid try and fail.
 
 It is worth noting that the current WSON and Flexi-grid topology
-models in {{!RFC9094}} and {{?I-D.ietf-ccamp-flexigrid-yang}} do not
+models in {{?RFC9094}} and {{?I-D.ietf-ccamp-flexigrid-yang}} do not
 provide sufficient
 information to the MDSC about this connectivity constraint and this
 is identified as a gap.
