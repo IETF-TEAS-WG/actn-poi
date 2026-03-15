@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 6 September 2026                                       Vodafone
+Expires: 16 September 2026                                      Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            5 March 2026
+                                                           15 March 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 September 2026.
+   This Internet-Draft will expire on 16 September 2026.
 
 Copyright Notice
 
@@ -2716,11 +2716,6 @@ Table of Contents
               DOI 10.17487/RFC8795, August 2020,
               <https://www.rfc-editor.org/rfc/rfc8795>.
 
-   [RFC9094]  Zheng, H., Lee, Y., Guo, A., Lopez, V., and D. King, "A
-              YANG Data Model for Wavelength Switched Optical Networks
-              (WSONs)", RFC 9094, DOI 10.17487/RFC9094, August 2021,
-              <https://www.rfc-editor.org/rfc/rfc9094>.
-
 10.2.  Informative References
 
    [I-D.ietf-ccamp-client-signal-yang]
@@ -2956,6 +2951,11 @@ Table of Contents
               RFC 8751, DOI 10.17487/RFC8751, March 2020,
               <https://www.rfc-editor.org/rfc/rfc8751>.
 
+   [RFC9094]  Zheng, H., Lee, Y., Guo, A., Lopez, V., and D. King, "A
+              YANG Data Model for Wavelength Switched Optical Networks
+              (WSONs)", RFC 9094, DOI 10.17487/RFC9094, August 2021,
+              <https://www.rfc-editor.org/rfc/rfc9094>.
+
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
               for Layer 3 VPNs", RFC 9182, DOI 10.17487/RFC9182,
@@ -3090,7 +3090,9 @@ A.2.1.  Maintenance Window
    Before planned maintenance operation on DWDM network takes place, IP
    traffic should be moved hitless to another link.
 
-   MDSC must reroute IP traffic before the event takes place.  It should
+   MDSC must request to reroute IP traffic before the event takes place.
+   It should
+
    be possible to lock IP traffic to the protection route until the
    maintenance event is finished, unless a fault occurs on such path.
 
