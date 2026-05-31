@@ -14,9 +14,11 @@ v: 3
 area: "Routing"
 workgroup: "TEAS Working Group"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - ACTN
+ - POI
+ - packet optical integration
+ - YANG
+ - DWDM
 venue:
   group: "Traffic Engineering Architecture and Signaling"
   type: "Working Group"
@@ -116,6 +118,15 @@ normative:
     target: https://ieeexplore.ieee.org/document/7055197
 
 informative:
+  IEEE_802.1AE:
+    title: >
+      IEEE Standard for Local and metropolitan area networks -
+      Media Access Control (MAC) Security
+    author:
+      org: Institute of Electrical and Electronics Engineers
+    date: December 2018
+    seriesinfo: IEEE 802.1AE-2018
+    target: https://standards.ieee.org/standard/802_1AE-2018.html
 
 --- abstract
 
@@ -129,7 +140,7 @@ to Service Providers.
 Existing IETF protocols and data models are identified for each
 multi-technology scenario (packet over optical), particularly
 emphasising the Multi-Domain Service Coordinator to Provisioning
-Network Controller Interface (MPI) within the ACTN architecture.
+Network Controller Interface (MPI) within the ACTN architecture
 
 --- middle
 
@@ -186,10 +197,15 @@ providing sufficient abstract information that allows the Multi-Domain Service C
 to provide multi-layer coordination between packet and optical networks.
 
 This document uses packet-based Traffic Engineered (TE) service
-examples. These are described as "TE-paths" in this document. Unless
+examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using
-Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based
-or SR-TE-based, forwarding plane mechanisms.
+Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or
+Segment Routing Traffic Engineering (SR-TE)-based, forwarding plane
+mechanisms.
+
+This document assumes familiarity with the ACTN architecture defined in
+{{!RFC8453}}, the TE topology model defined in {{!RFC8795}}, and the
+basic operation of IP/MPLS and optical transport networks.
 
 This document outlines key scenarios for Packet Optical Integration (POI)
 from the perspective of the packet service layer and highlights the
@@ -233,11 +249,11 @@ Customer service:
 
 Network service:
 : Per {{?RFC8309}}, a network service provides
-connectivity between customer sites and the Internet or between
+Connectivity between customer sites and the Internet or between
 customer sites across the operator's network and across
 the Internet. In the context of this document, a network service
 is enabled by Provider Edge (PE) to PE configuration, including
-both the network service layer (VRFs and RT import/export policies
+both the network service layer (VRFs, RT import/export policies
 configuration) and the network transport layer (e.g., RSVP-TE
 Label Switched Paths (LSPs)). This includes the configuration
 (on the PE side) of the interface towards the CE (e.g., VLAN, IP
@@ -245,18 +261,24 @@ address, routing protocol, etc.).
 
 Technology domain:
 : Short for "switching technology domain", defined as "region" in
-{{?RFC5212}}, where the term "region" is applied to (GMPLS) control
+{{!RFC5212}}, where the term "region" is applied to (GMPLS) control
 domains.
 
 PNC Domain:
-: Part of the network under the control of a single PNC instance. It is
-subject to the capabilities of the PNC which technology is controlled.
+: A portion of the network controlled by one PNC instance, where
+capabilities are defined by the technologies supported by both the PNC
+instance and its managed network elements.
 
 Optical PNC (O-PNC):
 : A PNC controlling an optical network domain.
 
 Packet PNC (P-PNC):
 : A PNC controlling a packet network domain.
+
+Muxponder:
+: An optical device that aggregates multiple lower-rate client signals
+into a single higher-speed optical signal, combining multiplexing and
+transponder functionalities to maximize network efficiency.
 
 Port:
 : The physical entity that transmits and receives physical signals.
@@ -333,7 +355,7 @@ Autonomous Systems (ASes), as defined in {{?RFC1930}}, or Interior
 Gateway Protocol (IGP) areas within the same operator network.
 
 The IP routers between the packet domains can be either AS Boundary
-Routers (ASBRs) or Area Border Router (ABRs): in this document, the
+Routers (ASBR) or Area Border Router (ABR): in this document, the
 generic term Border Router (BR) is used to represent either an ASBR
 or an ABR.
 
@@ -392,11 +414,12 @@ outside the scope of this document.
 
 The optical nodes within the optical domains can be either:
 
-- WDM nodes, as defined in
+- Wavelength Division Multiplexing (WDM) nodes, as defined in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, with an integrated
-ROADM function with or without integrated optical transponders;
+Reconfigurable Optical Add-Drop Multiplexer (ROADM) function with or
+without integrated optical transponders;
 
-- OTN nodes, with integrated an OTN cross-connect function and with or
+- OTN nodes, with an integrated OTN cross-connect function and with or
 without integrated ROADM functions or optical transponders.
 
 ## Multi-domain Service Coordinator (MDSC) functions {#mdsc-overview}
@@ -438,14 +461,14 @@ P-PNC functions in a single entity.
 
 In current service provider network deployments, the MDSC's Northbound
 Interface (NBI) typically connects to an OSS/Orchestration layer rather
-than a CNC. In this scenario, the MDSC is limited to performing Network
+than a Customer Network Controller (CNC). In this scenario, the MDSC is limited to performing Network
 Orchestration functions, as described in {{?RFC8309}} (point 2 above).
 Consequently, the MDSC handles network service requests received from the
 OSS and/or Orchestration.
 
 The functionality of the OSS and/or Orchestration layer, as well as its
 interface with the MDSC, is typically operator-specific and falls outside
-the scope of this document. Therefore, this document assumes that the OSS
+the scope of this draft. Therefore, this document assumes that the OSS
 and/or Orchestration layer requests the MDSC to provision L2/L3 VPN
 network services through mechanisms not covered in this document.
 
@@ -495,7 +518,7 @@ including:
 This document explores inter-domain TE options where the TE tunnel model,
 as defined in {{!I-D.ietf-teas-yang-te}}, applies at the MPI for both
 intra-domain and inter-domain TE configurations. The assessment of
-alternative options is beyond the scope of this document.
+alternative options is beyond the scope of this draft.
 
 It is also assumed that:
 
@@ -687,12 +710,12 @@ SR-TE path from PE13 in Domain 1 to PE23 in Domain 2, as shown in
 With reference to {{fig-p-pnc}}, P-PNCs are responsible for the
 following:
 
-1. To expose to MDSC their respective detailed TE topology;
+1. To expose to MDSC their respective detailed TE topology
 
 1. To perform single-layer, single-domain local TE path computation,
 when requested by the MDSC, between two PEs (for single-domain
 end-to-end TE path) or between PEs and BRs for an inter-domain TE
-path selected by the MDSC;
+path selected by the MDSC.
 
 1. To configure the routers in their respective domain to setup a TE
 path;
@@ -829,7 +852,7 @@ sections.
 
 Both Optical and Packet PNCs can also use the Ethernet Topology
 Model, defined in the "ietf-eth-te-topology" YANG module of
-{{?I-D.ietf-ccamp-eth-client-te-topo-yang}}, which augments the TE
+{{!I-D.ietf-ccamp-eth-client-te-topo-yang}}, which augments the TE
 Topology Model with Ethernet technology-specific information.
 
 Both Optical and Packet PNCs can use the following common
@@ -849,24 +872,24 @@ PNCs and MDSCs comply with subscription requirements as stated in
 The Optical PNC can use the following technology-specific topology
 YANG data models, which augment the generic TE Topology Model:
 
-- The WSON Topology Model, defined in the "ietf-wson-topology" YANG
-module of {{?RFC9094}};
+- The Wavelength Switched Optical Network (WSON) Topology Model,
+defined in the "ietf-wson-topology" YANG module of {{!RFC9094}};
 
 - the Flexi-grid Topology Model, defined in the
 "ietf-flexi-grid-topology" YANG module of
-{{?I-D.ietf-ccamp-flexigrid-yang}};
+{{!I-D.ietf-ccamp-flexigrid-yang}};
 
 - the OTN Topology Model, as defined in the "ietf-otn-topology" YANG
-module of {{?I-D.ietf-ccamp-otn-topo-yang}}.
+module of {{!I-D.ietf-ccamp-otn-topo-yang}}.
 
 The optical PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The WDM Tunnel Model, defined in the "ietf-wdm-tunnel" YANG module
-of {{?I-D.ietf-ccamp-wdm-tunnel-yang}};
+of {{!I-D.ietf-ccamp-wdm-tunnel-yang}};
 
 - the OTN Tunnel Model, defined in the "ietf-otn-tunnel" YANG module
-of {{?I-D.ietf-ccamp-otn-tunnel-model}}.
+of {{!I-D.ietf-ccamp-otn-tunnel-model}}.
 
 The optical PNC can use the generic Path Computation YANG RPC,
 defined in the "ietf-te-path-computation" YANG module of
@@ -878,12 +901,13 @@ have been identified as a gap.
 
 The optical PNC can use the following client signal YANG data models:
 
-- the CBR Client Signal Model, defined in the "ietf-trans-client-service"
-YANG module of {{?I-D.ietf-ccamp-client-signal-yang}};
+- the Constant Bit Rate (CBR) Client Signal Model, defined in the
+"ietf-trans-client-service" YANG module of
+{{!I-D.ietf-ccamp-client-signal-yang}};
 
 - the Ethernet Client Signal Model, defined in the
 "ietf-eth-tran-service" YANG module of
-{{?I-D.ietf-ccamp-client-signal-yang}}.
+{{!I-D.ietf-ccamp-client-signal-yang}}.
 
 ### YANG data models at the Packet MPIs {#packet-yang}
 
@@ -900,20 +924,20 @@ generic TE
 Topology Model;
 
 - The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-YANG module of {{?I-D.ietf-teas-yang-te-mpls-topology}}, which augments
+YANG module of {{!I-D.ietf-teas-yang-te-mpls-topology}}, which augments
 the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
 in "ietf-l3-te-topology" YANG module of
 {{!I-D.ietf-teas-yang-l3-te-topo}};
 
 - the SR Topology Model, defined in the "ietf-sr-mpls-topology" YANG
-module of {{?I-D.ietf-teas-yang-sr-te-topo}}.
+module of {{!I-D.ietf-teas-yang-sr-te-topo}}.
 
 The Packet PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The MPLS-TE Tunnel Model, defined in the "ietf-te-mpls" YANG
-modules of {{?I-D.ietf-teas-yang-te-mpls}};
+modules of {{!I-D.ietf-teas-yang-te-mpls}};
 
 - the SR-TE Tunnel Model which is to be defined as described in
 {{conclusions}}.
@@ -979,7 +1003,7 @@ tunnels. However, it uses PCEP for hierarchical path computation.
    instead of one unless the RESTCONF/YANG interface is added to an
    existing PCEP deployment (brownfield scenario).
 
-{{discovery}} and {{config}} of this document analyze the case where a
+{{discovery}} and {{config}} of this draft analyze the case where a
 single
 RESTCONF/YANG interface is deployed at the MPI (i.e., option 1
 above).
@@ -989,7 +1013,7 @@ above).
 In this scenario, the MDSC needs to discover the underlying PNCs:
 
 - the network topology, at both optical and IP layers, in terms of
-nodes and links, including the access links, inter-domain IP links,
+nodes and links, including the access links, inter-domain IP links
 as well as cross-technology Ethernet links;
 
 - the optical tunnels supporting multi-technology intra-domain IP links;
@@ -1025,20 +1049,20 @@ controls, as described in {{optical-topology-discovery}} and
 information to discover the complete topology view of the multi-layer
 multi-domain networks it controls.
 
-The MDSC should also maintain up-to-date inventory, service and
-network topology databases of IP and optical layers through IETF
-notifications through MPI with the PNCs when any network
-inventory/topology/service change occurs.
+The MDSC should also maintain up-to-date inventory, service, and
+network topology databases of IP and optical layers through notifications
+over the MPIs from the PNCs when any network inventory, topology, or
+service change occurs.
 
 It should also be possible to correlate information from IP and
-optical layers (e.g., which port, lambda/OTSi, and direction are used
-by a specific IP service on the WDM node).
+optical layers (e.g., which port, lambda/Optical Tributary Signal
+(OTSi), and direction are used by a specific IP service on the WDM node).
 
 In particular, for the cross-technology Ethernet links, it is key for
 MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
-bundle of links for a LAG) to client ports in the
+bundle links for LAG) to client ports in the
 ROADM.
 
 The analysis of multi-layer fault management is outside the scope of
@@ -1063,7 +1087,7 @@ It is worth noting that, as described in Appendix I of {{ITU-T_G.694.1}},
 a fixed-grid can also be described as a flexible grid
 with constraints: for example, a 50GHz fixed-grid can be described as
 a flexible-grid which supports only m=4 and values of n which are
-only multiples of 8.
+only multiplier of 8.
 
 As a consequence:
 
@@ -1105,7 +1129,8 @@ the MPI:
 as those detailed in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}};
 
-- the underlay OTS links and ILAs of OMS links;
+- the underlay Optical Transmission Section (OTS) links and In-Line
+Amplifiers (ILAs) of Optical Multiplex Section (OMS) links;
 
 - the physical connectivity between the optical transponders and the
 ROADMs.
@@ -1137,7 +1162,7 @@ O-MPI.
 The association between the Ethernet or CBR client LTPs terminating
 the Ethernet cross-technology Ethernet links and the optical TTPs is
 reported using
-the Inter-Layer Lock-id (ILL) identifiers, defined in {{!RFC8795}}.
+the Inter Layer Lock-id (ILL) identifiers, defined in {{!RFC8795}}.
 
 For example, with a reference to {{fig-optical-topo}}, the ILL values X
 and Y are
@@ -1197,11 +1222,11 @@ The L3 Topology Model is used to report the IP network topology.
 The L3 Topology Model, SR Topology Model, TE Topology Model and the
 TE Packet Topology Model are used together to report the SR-TE
 network topology, as described in Figure 2 of
-{{?I-D.ietf-teas-yang-sr-te-topo}}.
+{{!I-D.ietf-teas-yang-sr-te-topo}}.
 
 The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
-described in {{?I-D.ietf-teas-yang-te-mpls-topology}}.
+described in {{!I-D.ietf-teas-yang-te-mpls-topology}}.
 
 As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship
 between the IP network
@@ -1264,7 +1289,7 @@ asymmetric in the two directions.
 
 The P-PNCs use the TE tunnel model to report, at the MPI, all the TE
 paths established within their packet domain regardless of the
-mechanism being used to set them up, i.e., independently on whether
+mechanism being used to set them up; i.e., independently on whether
 the mechanisms described in {{te-path-config}} or other means, such as
 static configuration, which are outside the scope of this document,
 are used.
@@ -1288,7 +1313,7 @@ All the three types of links are Ethernet links.
 It is worth noting that the P-PNC may not be aware whether an
 Ethernet interface terminates a cross-technology Ethernet link, an
 inter-domain
-Ethernet link, or an access link. The TE Topology Model supports the
+Ethernet link or an access link. The TE Topology Model supports the
 discovery for all these types of links with no need for the P-PNC to
 know the type of inter-domain link.
 
@@ -1604,7 +1629,7 @@ service, using the L2NM and L3NM TE service mapping models.
 
 The MDSC can use the information mentioned above together with the
 packet TE path, packet topology, multi-technology IP links, optical
-topology, and optical path information discovered as described in the
+topology and optical path information discovered as described in the
 previous sections, to discover the multi-technology path used to carry
 the
 traffic for each L2/L3 VPN service.
@@ -1624,14 +1649,14 @@ LTP, if any.
 
 Inventory information through MPI and correlation with topology
 information is identified as a gap requiring further work and outside
-of the scope of this document.
+of the scope of this draft.
 
 # Establishment of L2/L3 VPN Services with TE Requirements {#config}
 
 In this scenario the MDSC needs to setup a multi-domain L2VPN or a
 multi-domain L3VPN with some SLA requirements.
 
-The MDSC receives the request to setup an L2/L3 VPN network service
+The MDSC receives the request to setup a L2/L3 VPN network service
 from the OSS/Orchestration layer (see {{additional-scenarios}}).
 
 The MDSC translates the L2/L3 VPN SLA requirements into TE
@@ -1647,7 +1672,7 @@ finds that:
 to support the new L3VPN, as described in {{te-path-discovery}}, and
 that:
 
-   - the IP link(s) between PE13 and P16 does not have enough bandwidth
+   - the IP link(s) between PE13 and P16 do not have enough bandwidth
    to support increasing the bandwidth of that TE path, as
    described in {{packet-topology-discovery}};
 
@@ -1751,14 +1776,14 @@ via a "compute-only" TE tunnel path, using the generic TE tunnel YANG
 data model defined in {{!I-D.ietf-teas-yang-te}}, or via the path
 computation RPC defined in {{!I-D.ietf-teas-yang-path-computation}}.
 
-This document assumes that the path computation RPC is used.
+This draft assumes that the path computation RPC is used.
 
 There are no YANG data models in IETF that could be used to augment
 the generic path computation RPC with technology-specific attributes.
 
 Optical technology-specific augmentation for the path computation RPC
-is identified as a gap requiring further work outside the scope of
-this document.
+is identified as a gap requiring further work outside of this draft's
+scope.
 
 ## Multi-technology IP Link Setup {#multi-technology-link-setup}
 
@@ -1858,7 +1883,7 @@ considered up when only one member link fails and down when at least
 two member links fail.
 
 The attribute required to configure the minimum number of active
-member links is missing in {{?I-D.ietf-ccamp-eth-client-te-topo-yang}}
+member links is missing in {{!I-D.ietf-ccamp-eth-client-te-topo-yang}}
 and is identified as a gap in {{conclusions}}.
 
 It is worth noting that a new LAG group can be created to bundle one
@@ -1935,7 +1960,7 @@ can be quite long. Implementation-specific mechanisms can be
 implemented by the MDSC or by the O-PNC to summarize the SRLGs of an
 optical tunnel. These mechanisms are implementation-specific and have
 no impact on the YANG models nor on the interoperability at the MPI,
-but care has to be taken to avoid missing information.
+but cares have to be taken to avoid missing information.
 
 ## TE Path Setup and Update {#te-path-config}
 
@@ -1964,7 +1989,7 @@ model should be defined to allow the MDSC to configure the binding
 SIDs to be used for the multi-domain SR-TE path stitching and to
 allow the P-PNC to report the binding SID assigned to the segment TE
 paths. Note that the assigned binding SID should be persistent in
-case the IP router or P-PNC reboots.
+case IP router or P-PNC rebooting.
 
 The MDSC can also use the {{!I-D.ietf-teas-yang-te}} model to request the
 P-PNC to
@@ -1974,10 +1999,10 @@ supports
 both symmetric and asymmetric bandwidth configuration in the two
 directions.
 
-The MDSC also requests the P-PNC to configure local protection mechanisms.
-For example, the FRR local protection as defined in {{?RFC4090}}, in case
-of MPLS-TE domain or the TI-LFA local protection as defined in
-{{?I-D.ietf-rtgwg-segment-routing-ti-lfa}}, in case of SR-TE domain. The
+The MDSC also request the P-PNC to configure local protection mechanisms.
+For example, the FRR local protection, as defined in {{?RFC4090}} in case
+of MPLS-TE domain or the TI-LFA local protection, as defined in
+{{?I-D.ietf-rtgwg-segment-routing-ti-lfa}} in case of SR-TE domain. The
 mechanisms to request the configuration TI-LFA local protection for SR-TE
 paths using the {{!I-D.ietf-teas-yang-te}} are a gap in the current YANG
 models.
@@ -1996,7 +2021,7 @@ IP links.
 
 SR-TE path setup and update (e.g., bandwidth increase) through MPI is
 identified as a gap requiring further work, which is outside of the
-scope of this document.
+scope of this draft.
 
 ## L2/L3 VPN Network Service Setup {#vpn-setup}
 
@@ -2011,13 +2036,13 @@ defined in {{?I-D.ietf-teas-te-service-mapping-yang}}, provide a list
 of TE tunnel(s) that should be used to forward L2/L3 VPN traffic
 between the two PEs terminating the listed TE tunnel(s). If the list
 contains more than one TE tunnel for the same pair of PEs, these TE
-tunnels are used to load-balance the associated L2/L3 VPN traffic
-between the same pair PEs.
+tunnels are used to load balance the associated L2/L3 VPN traffic
+between the same set of two PEs.
 
 The possibility to request splitting the traffic between multiple TE
 tunnels for the same PE pair in a way other than load balancing is
 identified as a gap requiring further work and is outside the scope
-of this document.
+of this draft.
 
 # Conclusions and Gaps {#conclusions}
 
@@ -2032,7 +2057,7 @@ the relevant IETF Working Groups:
 
 - how both WSON and Flexi-grid topology models could be used
 together (through multi-inheritance): this gap has been identified
-in {{optical-topology-discovery}};
+in {{optical-topology-discovery}};.
 
 - network inventory model: this gap has been identified in
 {{inventory-discovery}} and the solution in
@@ -2061,12 +2086,12 @@ but not yet defined: this gap has been identified in {{te-path-config}};
 - an attribute, which is used to configure the minimum number of
 active member links required to consider the LAG link as being up,
 is missing from the topology model defined in
-{{?I-D.ietf-ccamp-eth-client-te-topo-yang}}: this
+{{!I-D.ietf-ccamp-eth-client-te-topo-yang}}: this
 gap has been identified in {{lag-setup}};
 
 - a mechanism to configure splitting the L2/L3 VPN traffic, between
-multiple TE tunnels for the same PE pair, in a different way than
-load-balancing: this gap has been identified in {{vpn-setup}};
+multiple TE tunnels for the same PEs pair, in a different way than
+load balancing: this gap has been identified in {{vpn-setup}};
 
 - a mechanism to report client connectivity constraints imposed by
 some muxponder design: this gap has been identified in {{muxponder}}.
@@ -2161,6 +2186,11 @@ untrusted networks;
 - Using network segmentation and Access Control Lists (ACLs) to limit who
 can send and receive LLDP packets;
 
+- Using IEEE 802.1AE MAC Security (MACsec) {{?IEEE_802.1AE}} to provide
+data origin authentication, integrity, and confidentiality for Ethernet
+frames, reducing the risk of LLDP spoofing or tampering on protected
+links;
+
 - Employing network monitoring and anomaly detection systems to identify
 unusual LLDP traffic patterns that may indicate an attack;
 
@@ -2227,14 +2257,14 @@ The OSS/Orchestration layer is a vital part of the architecture
 framework for a service provider:
 
 - to abstract (through MDSC and PNCs) the underlying transport
-network complexity to the Business Systems Support (BSS) layer;
+network complexity to the Business Systems Support layer;
 
-- to coordinate NFV, Transport (e.g., IP, optical and microwave
+- to coordinate NFV, Transport (e.g. IP, optical and microwave
 networks), Fixed Access, Core and Radio domains enabling full
 automation of end-to-end services to the end customers;
 
 - to enable catalogue-driven service provisioning from external
-applications (e.g., Customer Portal for Enterprise Business
+applications (e.g. Customer Portal for Enterprise Business
 services), orchestrating the design and lifecycle management of
 these end-to-end transport connectivity services, consuming IP
 and/or optical transport connectivity services upon request.
@@ -2243,10 +2273,11 @@ As discussed in {{mdsc-overview}}, in this document, the MDSC interfaces
 with the OSS/Orchestration layer and, therefore, it performs the
 functions of the Network Orchestrator, defined in {{?RFC8309}}.
 
-In the case of an operator-managed service, the OSS/Orchestration layer requests the creation of a network
+The OSS/Orchestration layer requests the creation of a network
 service to the MDSC specifying its end-points (PEs and the interfaces
 towards the CEs) as well as the network service SLA and then proceeds
-to configuring accordingly the end-to-end customer service between the CEs.
+to configuring accordingly the end-to-end customer service between
+the CEs in the case of an operator managed service.
 
 ### MDSC NBI
 
@@ -2258,7 +2289,7 @@ requirements).
 Although the OSS/Orchestration layer interface is usually
 operator-specific, typically it would be using a RESTCONF/YANG interface
 with a more abstracted version of the MPI YANG data models used for
-network configuration (e.g., L3NM, L2NM).
+network configuration (e.g. L3NM, L2NM).
 
 {{fig-service-request}} shows an example of possible control flow between
 the
@@ -2292,8 +2323,8 @@ used to setup L2/L3 VPN service with no TE requirements.
 
 - The L2NM and L3NM YANG data models, defined in {{?RFC9291}} and
 {{?RFC9182}}, whose primary focus is the MPI, can also be used to
-provide L2VPN and L3VPN network service configuration from an
-orchestrated-connectivity service point of view.
+provide L2VPN and L3VPN network service configuration from a
+orchestrated connectivity service point of view.
 
 - The TE & Service Mapping YANG data model
 {{?I-D.ietf-teas-te-service-mapping-yang}} provides TE-service
@@ -2316,29 +2347,29 @@ access link.
 ### Maintenance Window
 
 Before planned maintenance operation on DWDM network takes place, IP
-traffic should be hitlessly transferred to another link.
+traffic should be moved hitless to another link.
 
-The MDSC must request to reroute IP traffic before the event takes place.
-It should be possible to lock IP traffic to the protection route until the
+MDSC must reroute IP traffic before the events takes place. It should
+be possible to lock IP traffic to the protection route until the
 maintenance event is finished, unless a fault occurs on such path.
 
 ### Router Port Failure
 
 The focus is on client-side protection scheme between IP router and
-reconfigurable ROADM. The scenario here is to define only one port in the
+reconfigurable ROADM. Scenario here is to define only one port in the
 routers and in the ROADM muxponder board at both ends as back-up
 ports to recover any other port failure on client-side of the ROADM
 (either on the IP router port side or on the muxponder side or on the
 link
 between them). When client-side port failure occurs, alarms are
-raised to MDSC by IP-PNC and O-PNC (port status down, LOS, etc.). MDSC
+raised to MDSC by IP-PNC and O-PNC (port status down, LOS etc.). MDSC
 checks with OP-PNC(s) that there is no optical failure in the optical
 layer.
 
 There can be two cases here:
 
-1. The LAG was defined between the IP routers at the two ends.
-The MDSC, after checking
+1. LAG was defined between the IP routers at the two ends. MDSC, after
+checking
 that optical layer is fine between the two edge WDM nodes, triggers
 the WDM edge node re-configuration so that the IP router's back-up port
 with its
@@ -2346,54 +2377,50 @@ associated muxponder port can reuse the WDM tunnel that was already in
 use previously by the failed IP router port and adds the new link to
 the LAG on the failure side.
 
-    While the ROADM reconfiguration takes place, IP/MPLS traffic is
-    using the reduced bandwidth of the IP link bundle, discarding
-    lower priority traffic if required.
+   While the ROADM reconfiguration takes place, IP/MPLS traffic is
+   using the reduced bandwidth of the IP link bundle, discarding
+   lower priority traffic if required. Once back-up port has been
+   reconfigured to reuse the existing WDM tunnel and the new link has
+been added
+   to the LAG then original Bandwidth is recovered between the end
+   routers.
 
-    The original Bandwidth is recovered between the end
-    routers after the back-up port has been
-    reconfigured to reuse the existing WDM tunnel and the new link has
-    been added to the LAG.
+   Note: in this LAG scenario let assume that BFD is running at LAG
+   level so that there is nothing triggered at MPLS level when one of
+   the link member of the LAG fails.
 
-    > Note: in this LAG scenario let us assume that BFD is running at LAG
-    level so that there is nothing triggered at MPLS level when one of
-    the link members of the LAG fails.
-
-1. If there is no LAG then the scenario is not clear since an IP router
+1. If there is no LAG then the scenario is not clear since a IP router
 port failure would automatically trigger (through BFD failure)
-a sub-50ms protection at MPLS level: FRR (MPLS RSVP-TE case)
-or TI-LFA (MPLS based SR-TE case) through a protection port.
-
-    At the same time, the MDSC, after checking that optical network connection
-    is still fine, would trigger the reconfiguration of the back-up
-    port of the IP router and of the muxponder to re-use the same
-    WDM tunnel as the one used originally for the failed IP router port.
-
-    Once everything has been correctly configured, MDSC Global PCE could
-    suggest to the operator to trigger a possible re-optimization of
-    the back-up MPLS path to go back to the  MPLS primary path through
-    the back-up port of the IP router and the original WDM tunnel, if overall
-    cost, latency, etc. is improved.
-
-    However, in this scenario, there is a need for a protection port PLUS
-    a back-up port in the IP router which does not lead to clear port savings.
+first a sub-50ms protection at MPLS level :FRR (MPLS RSVP-TE case)
+or TI-LFA (MPLS based SR-TE case) through a protection port. At
+the same time MDSC, after checking that optical network connection
+is still fine, would trigger the reconfiguration of the back-up
+port of the IP router and of the muxponder to re-use the same
+WDM tunnel as the one used originally for the failed IP router port. Once
+everything has been correctly configured, MDSC Global PCE could
+suggest to the operator to trigger a possible re-optimization of
+the back-up MPLS path to go back to the  MPLS primary path through
+the back-up port of the IP router and the original WDM tunnel if overall
+cost, latency etc. is improved. However, in this scenario, there
+is a need for protection port PLUS back-up port in the IP router
+which does not lead to clear port savings.
 
 ## Muxponders {#muxponder}
 
 The setup of a client connectivity service between two transponders
 is relatively clear and its implementation simple.
 
-There is a one-to-one relationship between the transponder's client
-and trunk (or DWDM) port. The client port bit rate determines the
-trunk port bit rate which will also determines the Baud-rate, the
-modulation format, the FEC, etc.
+There is a one to one relationship between the transponder's client
+and trunk (or DWDM) port. The client port bitrate determines the
+trunk port bit rate which will also determine the Baud-rate, the
+modulation format, the FEC etc.
 
 The controller, when asked to set up a client connectivity service,
 needs to find a WDM tunnel suitable to comply the DWDM port
 parameters.
 
 The setup of a client connectivity service between two muxponders is
-different since there is a one-to-many relationship between the
+different since there is a one to many relationship between the
 muxponder's trunk (or DWDM) port and client ports. For example, there
 might be a 100Gb/s trunk port shared by ten 10GE client ports.
 
@@ -2420,9 +2447,9 @@ multiplexing label can be either configurable (flexible
 configuration) or assigned by design to each muxponder's client port
 (fixed configuration). In the former case, any muxponder client port
 can be connected with any other client port of the peer muxponder
-(for example, client port 1 on one muxponder can be connected with
+(for example client port 1 on one muxponder can be connected with
 client port 5 on the peer muxponder) while in the latter case only
-client ports with the same port number can be connected (for example,
+client ports with the same port number can be connected (for example
 client port 2 on one muxponder can be connected only with client port
 2 on the peer muxponder and not with any other client port).
 
@@ -2436,10 +2463,10 @@ tunnel.
 
 In case of fixed configuration, the multiplexing label is assigned by
 the muxponder but the O-PNC and MDSC needs to be aware of the
-connectivity constraints to avoid try-and-fail.
+connectivity constraints to avoid try and fail.
 
 It is worth noting that the current WSON and Flexi-grid topology
-models in {{?RFC9094}} and {{?I-D.ietf-ccamp-flexigrid-yang}} do not
+models in {{!RFC9094}} and {{!I-D.ietf-ccamp-flexigrid-yang}} do not
 provide sufficient
 information to the MDSC about this connectivity constraint and this
 is identified as a gap.
@@ -2453,11 +2480,11 @@ Commission funded H2020-ICT-2016-2 METRO-HAUL project (G.A. 761727).
 
 The authors would like to thank Young Lee for his valuable input on the initial discussions which have triggered this work as well as for his contribution to the first drafts of this document.
 
-The authors would like to thank Adrian Farrel and Acee Lindem
-for their reviews and comments to this document.
+The authors would like to thank Adrian Farrel for his review and comments to this document.
 
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
 This document was prepared using kramdown.
+
 
