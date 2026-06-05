@@ -852,7 +852,7 @@ sections.
 
 Both Optical and Packet PNCs can also use the Ethernet Topology
 Model, defined in the "ietf-eth-te-topology" YANG module of
-{{!I-D.ietf-ccamp-eth-client-te-topo-yang}}, which augments the TE
+{{?I-D.ietf-ccamp-eth-client-te-topo-yang}}, which augments the TE
 Topology Model with Ethernet technology-specific information.
 
 Both Optical and Packet PNCs can use the following common
@@ -873,23 +873,23 @@ The Optical PNC can use the following technology-specific topology
 YANG data models, which augment the generic TE Topology Model:
 
 - The Wavelength Switched Optical Network (WSON) Topology Model,
-defined in the "ietf-wson-topology" YANG module of {{!RFC9094}};
+defined in the "ietf-wson-topology" YANG module of {{?RFC9094}};
 
 - the Flexi-grid Topology Model, defined in the
 "ietf-flexi-grid-topology" YANG module of
-{{!I-D.ietf-ccamp-flexigrid-yang}};
+{{?I-D.ietf-ccamp-flexigrid-yang}};
 
 - the OTN Topology Model, as defined in the "ietf-otn-topology" YANG
-module of {{!I-D.ietf-ccamp-otn-topo-yang}}.
+module of {{?I-D.ietf-ccamp-otn-topo-yang}}.
 
 The optical PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The WDM Tunnel Model, defined in the "ietf-wdm-tunnel" YANG module
-of {{!I-D.ietf-ccamp-wdm-tunnel-yang}};
+of {{?I-D.ietf-ccamp-wdm-tunnel-yang}};
 
 - the OTN Tunnel Model, defined in the "ietf-otn-tunnel" YANG module
-of {{!I-D.ietf-ccamp-otn-tunnel-model}}.
+of {{?I-D.ietf-ccamp-otn-tunnel-model}}.
 
 The optical PNC can use the generic Path Computation YANG RPC,
 defined in the "ietf-te-path-computation" YANG module of
@@ -903,11 +903,11 @@ The optical PNC can use the following client signal YANG data models:
 
 - the Constant Bit Rate (CBR) Client Signal Model, defined in the
 "ietf-trans-client-service" YANG module of
-{{!I-D.ietf-ccamp-client-signal-yang}};
+{{?I-D.ietf-ccamp-client-signal-yang}};
 
 - the Ethernet Client Signal Model, defined in the
 "ietf-eth-tran-service" YANG module of
-{{!I-D.ietf-ccamp-client-signal-yang}}.
+{{?I-D.ietf-ccamp-client-signal-yang}}.
 
 ### YANG data models at the Packet MPIs {#packet-yang}
 
@@ -919,25 +919,25 @@ YANG module of {{!RFC8346}}, which augments the Base Network Topology
 Model;
 
 - the Packet TE Topology Mode, defined in the "ietf-te-topology-packet"
-YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}}, which augments the
+YANG module of {{?I-D.ietf-teas-yang-l3-te-topo}}, which augments the
 generic TE
 Topology Model;
 
 - The MPLS-TE Topology Model, defined in the "ietf-te-mpls-topology"
-YANG module of {{!I-D.ietf-teas-yang-te-mpls-topology}}, which augments
+YANG module of {{?I-D.ietf-teas-yang-te-mpls-topology}}, which augments
 the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
 in "ietf-l3-te-topology" YANG module of
-{{!I-D.ietf-teas-yang-l3-te-topo}};
+{{?I-D.ietf-teas-yang-l3-te-topo}};
 
 - the SR Topology Model, defined in the "ietf-sr-mpls-topology" YANG
-module of {{!I-D.ietf-teas-yang-sr-te-topo}}.
+module of {{?I-D.ietf-teas-yang-sr-te-topo}}.
 
 The Packet PNC can use the following technology-specific tunnel YANG
 data models, which augments the generic TE Tunnel Model:
 
 - The MPLS-TE Tunnel Model, defined in the "ietf-te-mpls" YANG
-modules of {{!I-D.ietf-teas-yang-te-mpls}};
+modules of {{?I-D.ietf-teas-yang-te-mpls}};
 
 - the SR-TE Tunnel Model which is to be defined as described in
 {{conclusions}}.
@@ -1222,13 +1222,13 @@ The L3 Topology Model is used to report the IP network topology.
 The L3 Topology Model, SR Topology Model, TE Topology Model and the
 TE Packet Topology Model are used together to report the SR-TE
 network topology, as described in Figure 2 of
-{{!I-D.ietf-teas-yang-sr-te-topo}}.
+{{?I-D.ietf-teas-yang-sr-te-topo}}.
 
 The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
-described in {{!I-D.ietf-teas-yang-te-mpls-topology}}.
+described in {{?I-D.ietf-teas-yang-te-mpls-topology}}.
 
-As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship
+As described in {{?I-D.ietf-teas-yang-l3-te-topo}}, the relationship
 between the IP network
 topology and the MPLS-TE network topology depend on whether the two
 network topologies are congruent or not: in the latter case, the L3
@@ -1883,7 +1883,7 @@ considered up when only one member link fails and down when at least
 two member links fail.
 
 The attribute required to configure the minimum number of active
-member links is missing in {{!I-D.ietf-ccamp-eth-client-te-topo-yang}}
+member links is missing in {{?I-D.ietf-ccamp-eth-client-te-topo-yang}}
 and is identified as a gap in {{conclusions}}.
 
 It is worth noting that a new LAG group can be created to bundle one
@@ -2057,7 +2057,7 @@ the relevant IETF Working Groups:
 
 - how both WSON and Flexi-grid topology models could be used
 together (through multi-inheritance): this gap has been identified
-in {{optical-topology-discovery}};.
+in {{optical-topology-discovery}};
 
 - network inventory model: this gap has been identified in
 {{inventory-discovery}} and the solution in
@@ -2086,7 +2086,7 @@ but not yet defined: this gap has been identified in {{te-path-config}};
 - an attribute, which is used to configure the minimum number of
 active member links required to consider the LAG link as being up,
 is missing from the topology model defined in
-{{!I-D.ietf-ccamp-eth-client-te-topo-yang}}: this
+{{?I-D.ietf-ccamp-eth-client-te-topo-yang}}: this
 gap has been identified in {{lag-setup}};
 
 - a mechanism to configure splitting the L2/L3 VPN traffic, between
@@ -2186,7 +2186,7 @@ untrusted networks;
 - Using network segmentation and Access Control Lists (ACLs) to limit who
 can send and receive LLDP packets;
 
-- Using IEEE 802.1AE MAC Security (MACsec) {{?IEEE_802.1AE}} to provide
+- Using IEEE 802.1AE MAC Security (MACsec) {{IEEE_802.1AE}} to provide
 data origin authentication, integrity, and confidentiality for Ethernet
 frames, reducing the risk of LLDP spoofing or tampering on protected
 links;
@@ -2466,7 +2466,7 @@ the muxponder but the O-PNC and MDSC needs to be aware of the
 connectivity constraints to avoid try and fail.
 
 It is worth noting that the current WSON and Flexi-grid topology
-models in {{!RFC9094}} and {{!I-D.ietf-ccamp-flexigrid-yang}} do not
+models in {{?RFC9094}} and {{?I-D.ietf-ccamp-flexigrid-yang}} do not
 provide sufficient
 information to the MDSC about this connectivity constraint and this
 is identified as a gap.
@@ -2486,5 +2486,3 @@ Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
 This document was prepared using kramdown.
-
-
