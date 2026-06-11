@@ -2482,6 +2482,8 @@ The authors would like to thank Young Lee for his valuable input on the initial 
 
 The authors would like to thank Adrian Farrel for his review and comments to this document.
 
+The authors would like to thank Acee Lindem for the Routing Directorate Early Review.
+
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
