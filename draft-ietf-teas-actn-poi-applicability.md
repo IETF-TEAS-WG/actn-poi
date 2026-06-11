@@ -2323,7 +2323,7 @@ used to setup L2/L3 VPN service with no TE requirements.
 
 - The L2NM and L3NM YANG data models, defined in {{?RFC9291}} and
 {{?RFC9182}}, whose primary focus is the MPI, can also be used to
-provide L2VPN and L3VPN network service configuration from a
+provide L2VPN and L3VPN network service configuration from an
 orchestrated connectivity service point of view.
 
 - The TE & Service Mapping YANG data model
@@ -2389,7 +2389,7 @@ been added
    level so that there is nothing triggered at MPLS level when one of
    the link member of the LAG fails.
 
-1. If there is no LAG then the scenario is not clear since a IP router
+1. If there is no LAG then the scenario is not clear since an IP router
 port failure would automatically trigger (through BFD failure)
 first a sub-50ms protection at MPLS level :FRR (MPLS RSVP-TE case)
 or TI-LFA (MPLS based SR-TE case) through a protection port. At
