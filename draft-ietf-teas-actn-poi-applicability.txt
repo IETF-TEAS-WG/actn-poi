@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 16 September 2026                                      Vodafone
+Expires: 13 December 2026                                       Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                           15 March 2026
+                                                            11 June 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 September 2026.
+   This Internet-Draft will expire on 13 December 2026.
 
 Copyright Notice
 
@@ -121,7 +121,7 @@ Table of Contents
        5.2.3.  Multi-technology TE path properties Configuration
      5.3.  TE Path Setup and Update
      5.4.  L2/L3 VPN Network Service Setup
-   6.  Conclusions
+   6.  Conclusions and Gaps
    7.  Security Considerations
      7.1.  LLDP Snooping Security Considerations
    8.  Operational Considerations
@@ -205,7 +205,12 @@ Table of Contents
    examples.  These are described as "TE-path" in this document.  Unless
    otherwise stated, these TE services may be instantiated using
    Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based
-   or SR -TE-based, forwarding plane mechanisms.
+   or Segment Routing Traffic Engineering (SR-TE)-based, forwarding
+   plane mechanisms.
+
+   This document assumes familiarity with the ACTN architecture defined
+   in [RFC8453], the TE topology model defined in [RFC8795], and the
+   basic operation of IP/MPLS and optical transport networks.
 
    This document outlines key scenarios for Packet Optical Integration
    (POI) from the perspective of the packet service layer and highlights
@@ -263,13 +268,18 @@ Table of Contents
       as "region" in [RFC5212], where the term "region" is applied to
       (GMPLS) control domains.
 
-   PNC Domain:  Part of the network under the control of a single PNC
-      instance.  It is subject to the capabilities of the PNC which
-      technology is controlled.
+   PNC Domain:  A portion of the network controlled by one PNC instance,
+      where capabilities are defined by the technologies supported by
+      both the PNC instance and its managed network elements.
 
    Optical PNC (O-PNC):  A PNC controlling an optical network domain.
 
    Packet PNC (P-PNC):  A PNC controlling a packet network domain.
+
+   Muxponder:  An optical device that aggregates multiple lower-rate
+      client signals into a single higher-speed optical signal,
+      combining multiplexing and transponder functionalities to maximize
+      network efficiency.
 
    Port:  The physical entity that transmits and receives physical
       signals.
@@ -277,7 +287,7 @@ Table of Contents
    Interface:  A bidirectional link interface, as defined in
       Section 3.6.1 of [RFC4397].
 
-   makeLink:  A bidirectional data link, as defined in Section 3.5.1 of
+   Link:  A bidirectional data link, as defined in Section 3.5.1 of
       [RFC4397].
 
    Intra-domain link:  A link between two adjacent nodes that belong to
@@ -435,12 +445,12 @@ Table of Contents
 
    The optical nodes within the optical domains can be either:
 
-   *  WDM nodes, as defined in
+   *  Wavelength Division Multiplexing (WDM) nodes, as defined in
       [I-D.ietf-ccamp-optical-impairment-topology-yang], with an
-      integrated ROADM function with or without integrated optical
-      transponders;
+      integrated Reconfigurable Optical Add-Drop Multiplexer (ROADM)
+      function with or without integrated optical transponders;
 
-   *  OTN nodes, with integrated an OTN cross-connect function and with
+   *  OTN nodes, with an integrated OTN cross-connect function and with
       or without integrated ROADM functions or optical transponders.
 
 2.1.  Multi-domain Service Coordinator (MDSC) functions
@@ -486,10 +496,11 @@ Table of Contents
 
    In current service provider network deployments, the MDSC's
    Northbound Interface (NBI) typically connects to an OSS/Orchestration
-   layer rather than a CNC.  In this scenario, the MDSC is limited to
-   performing Network Orchestration functions, as described in [RFC8309]
-   (point 2 above).  Consequently, the MDSC handles network service
-   requests received from the OSS and/or Orchestration.
+   layer rather than a Customer Network Controller (CNC).  In this
+   scenario, the MDSC is limited to performing Network Orchestration
+   functions, as described in [RFC8309] (point 2 above).  Consequently,
+   the MDSC handles network service requests received from the OSS and/
+   or Orchestration.
 
    The functionality of the OSS and/or Orchestration layer, as well as
    its interface with the MDSC, is typically operator-specific and falls
@@ -978,8 +989,8 @@ Table of Contents
    The Optical PNC can use the following technology-specific topology
    YANG data models, which augment the generic TE Topology Model:
 
-   *  The WSON Topology Model, defined in the "ietf-wson-topology" YANG
-      module of [RFC9094];
+   *  The Wavelength Switched Optical Network (WSON) Topology Model,
+      defined in the "ietf-wson-topology" YANG module of [RFC9094];
 
    *  the Flexi-grid Topology Model, defined in the "ietf-flexi-grid-
       topology" YANG module of [I-D.ietf-ccamp-flexigrid-yang];
@@ -1006,8 +1017,9 @@ Table of Contents
 
    The optical PNC can use the following client signal YANG data models:
 
-   *  the CBR Client Signal Model, defined in the "ietf-trans-client-
-      service" YANG module of [I-D.ietf-ccamp-client-signal-yang];
+   *  the Constant Bit Rate (CBR) Client Signal Model, defined in the
+      "ietf-trans-client-service" YANG module of
+      [I-D.ietf-ccamp-client-signal-yang];
 
    *  the Ethernet Client Signal Model, defined in the "ietf-eth-tran-
       service" YANG module of [I-D.ietf-ccamp-client-signal-yang].
@@ -1152,14 +1164,15 @@ Table of Contents
    this information to discover the complete topology view of the multi-
    layer multi-domain networks it controls.
 
-   The MDSC should also maintain up-to-date inventory, service and
-   network topology databases of IP and optical layers through IETF
-   notifications through MPI with the PNCs when any network
-   inventory/topology/service change occurs.
+   The MDSC should also maintain up-to-date inventory, service, and
+   network topology databases of IP and optical layers through
+   notifications over the MPIs from the PNCs when any network inventory,
+   topology, or service change occurs.
 
    It should also be possible to correlate information from IP and
-   optical layers (e.g., which port, lambda/OTSi, and direction are used
-   by a specific IP service on the WDM node).
+   optical layers (e.g., which port, lambda/Optical Tributary Signal
+   (OTSi), and direction are used by a specific IP service on the WDM
+   node).
 
    In particular, for the cross-technology Ethernet links, it is key for
    MDSC to automatically correlate the information from the PNC network
@@ -1229,13 +1242,14 @@ Table of Contents
       as those detailed in
       [I-D.ietf-ccamp-optical-impairment-topology-yang];
 
-   *  the underlay OTS links and ILAs of OMS links;
+   *  the underlay Optical Transmission Section (OTS) links and In-Line
+      Amplifiers (ILAs) of Optical Multiplex Section (OMS) links;
 
    *  the physical connectivity between the optical transponders and the
       ROADMs.
 
    The OTN Topology Model also reports the CBR client LTPs that
-   terminates the cross-technology Ethernet links: one CBR client LTP is
+   terminate the cross-technology Ethernet links: one CBR client LTP is
    reported for each CBR or multi-function client interface on the
    optical nodes (see sections 4.4 and 5.1 of
    [I-D.ietf-ccamp-transport-nbi-app-statement] for the description of
@@ -1290,8 +1304,8 @@ Table of Contents
     /                   Optical Topology (O-PNC 1)             /
    +----------------------------------------------------------+
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
     ---
     \ /  TTP
@@ -1520,8 +1534,6 @@ Table of Contents
     /                Ethernet or OTN Topology (O-PNC)          /
    +----------------------------------------------------------+
 
-   Legenda:
-   ========
      O   LTP
    <...> Link discovered by the MDSC
    {   } LTP Plug-id reported by the PNC
@@ -1581,8 +1593,8 @@ Table of Contents
    {2} {BR11,3}
    {3} {BR21,4}
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
    ----> Supporting LTP
    <...> Link discovered by the MDSC
@@ -1708,8 +1720,8 @@ Table of Contents
    =====
    (*) Supporting LTP
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
     ---
     \ /  TTP
@@ -1796,8 +1808,8 @@ Table of Contents
    {1} {PE13,1}
    {2} {P16,2}
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
    ----> Supporting LTP
    <===> Link discovered by the PNC and reported at the MPI
@@ -1866,8 +1878,8 @@ Table of Contents
     /                   Ethernet Topology (P-PNC 2)           /
    +---------------------------------------------------------+
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
    <===> Link discovered by the PNC and reported at the MPI
 
@@ -1970,7 +1982,7 @@ Table of Contents
       bandwidth to support the new L3VPN, as described in Section 4.4,
       and that:
 
-      -  the IP link(s) between PE13 and P16 does not have enough
+      -  the IP link(s) between PE13 and P16 do not have enough
          bandwidth to support increasing the bandwidth of that TE path,
          as described in Section 4.3;
 
@@ -2154,8 +2166,8 @@ Table of Contents
    =====
    (*) Supporting LTP
 
-   Legenda:
-   ========
+   Legend:
+   =======
      O   LTP
     ---
     \ /  TTP
@@ -2401,7 +2413,7 @@ Table of Contents
    identified as a gap requiring further work and is outside the scope
    of this draft.
 
-6.  Conclusions
+6.  Conclusions and Gaps
 
    The analysis provided in this document shows that the IETF YANG
    models described in Section 3.2 provide useful support for Packet
@@ -2544,6 +2556,11 @@ Table of Contents
    *  Using network segmentation and Access Control Lists (ACLs) to
       limit who can send and receive LLDP packets;
 
+   *  Using IEEE 802.1AE MAC Security (MACsec) [IEEE_802.1AE] to provide
+      data origin authentication, integrity, and confidentiality for
+      Ethernet frames, reducing the risk of LLDP spoofing or tampering
+      on protected links;
+
    *  Employing network monitoring and anomaly detection systems to
       identify unusual LLDP traffic patterns that may indicate an
       attack;
@@ -2610,29 +2627,21 @@ Table of Contents
 
 10.1.  Normative References
 
-   [I-D.ietf-teas-yang-l3-te-topo]
-              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
-              and O. G. de Dios, "YANG Data Model for Layer 3 TE
-              Topologies", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-l3-te-topo-18, 7 July 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-l3-te-topo-18>.
-
    [I-D.ietf-teas-yang-path-computation]
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
               Shi, "A YANG Data Model for requesting path computation",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-26, 5 February 2026,
+              path-computation-28, 12 May 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-26>.
+              yang-path-computation-28>.
 
    [I-D.ietf-teas-yang-te]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., and I.
               Bryskin, "A YANG Data Model for Traffic Engineering
               Tunnels, Label Switched Paths, and Interfaces", Work in
-              Progress, Internet-Draft, draft-ietf-teas-yang-te-43, 28
-              February 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-43>.
+              Progress, Internet-Draft, draft-ietf-teas-yang-te-44, 26
+              March 2026, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-teas-yang-te-44>.
 
    [IEEE_802.1AB]
               Institute of Electrical and Electronics Engineers, "IEEE
@@ -2652,6 +2661,12 @@ Table of Contents
               WDM applications: DWDM frequency grid", ITU-T
               Recommendation G.694.1 , October 2020,
               <https://www.itu.int/rec/T-REC-G.694.1-202010-I>.
+
+   [RFC5212]  Shiomoto, K., Papadimitriou, D., Le Roux, JL., Vigoureux,
+              M., and D. Brungard, "Requirements for GMPLS-Based Multi-
+              Region and Multi-Layer Networks (MRN/MLN)", RFC 5212,
+              DOI 10.17487/RFC5212, July 2008,
+              <https://www.rfc-editor.org/rfc/rfc5212>.
 
    [RFC7923]  Voit, E., Clemm, A., and A. Gonzalez Prieto, "Requirements
               for Subscription to YANG Datastores", RFC 7923,
@@ -2730,9 +2745,9 @@ Table of Contents
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-10, 15 October 2025,
+              client-te-topo-yang-11, 13 April 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-10>.
+              eth-client-te-topo-yang-11>.
 
    [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
@@ -2770,9 +2785,9 @@ Table of Contents
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
               YANG Data Model for Optical Transport Network (OTN)
               Tunnels and Label Switched Paths", Work in Progress,
-              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-24, 1
-              December 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-ccamp-otn-tunnel-model-24>.
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-25, 27
+              May 2026, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-ccamp-otn-tunnel-model-25>.
 
    [I-D.ietf-ccamp-transport-nbi-app-statement]
               Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
@@ -2786,17 +2801,17 @@ Table of Contents
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-06, 20 October 2025,
+              tunnel-yang-08, 22 April 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-06>.
+              wdm-tunnel-yang-08>.
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A Base YANG Data Model for Network Inventory",
               Work in Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-14, 5 February 2026,
+              inventory-yang-18, 27 May 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-14>.
+              network-inventory-yang-18>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
@@ -2832,6 +2847,14 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
               topology-profiles-05>.
 
+   [I-D.ietf-teas-yang-l3-te-topo]
+              Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
+              and O. G. de Dios, "YANG Data Model for Layer 3 TE
+              Topologies", Work in Progress, Internet-Draft, draft-ietf-
+              teas-yang-l3-te-topo-18, 7 July 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              yang-l3-te-topo-18>.
+
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
               and S. Litkowski, "YANG Data Model for SR and SR TE
@@ -2864,6 +2887,13 @@ Table of Contents
               February 2025, <https://datatracker.ietf.org/doc/html/
               draft-poidt-teas-actn-poi-assurance-05>.
 
+   [IEEE_802.1AE]
+              Institute of Electrical and Electronics Engineers, "IEEE
+              Standard for Local and metropolitan area networks - Media
+              Access Control (MAC) Security", IEEE 802.1AE-2018 ,
+              December 2018,
+              <https://standards.ieee.org/standard/802_1AE-2018.html>.
+
    [RFC1930]  Hawkinson, J. and T. Bates, "Guidelines for creation,
               selection, and registration of an Autonomous System (AS)",
               BCP 6, RFC 1930, DOI 10.17487/RFC1930, March 1996,
@@ -2885,12 +2915,6 @@ Table of Contents
               ITU-T's Automatically Switched Optical Network (ASON)
               Architecture", RFC 4397, DOI 10.17487/RFC4397, February
               2006, <https://www.rfc-editor.org/rfc/rfc4397>.
-
-   [RFC5212]  Shiomoto, K., Papadimitriou, D., Le Roux, JL., Vigoureux,
-              M., and D. Brungard, "Requirements for GMPLS-Based Multi-
-              Region and Multi-Layer Networks (MRN/MLN)", RFC 5212,
-              DOI 10.17487/RFC5212, July 2008,
-              <https://www.rfc-editor.org/rfc/rfc5212>.
 
    [RFC5440]  Vasseur, JP., Ed. and JL. Le Roux, Ed., "Path Computation
               Element (PCE) Communication Protocol (PCEP)", RFC 5440,
@@ -3090,11 +3114,10 @@ A.2.1.  Maintenance Window
    Before planned maintenance operation on DWDM network takes place, IP
    traffic should be moved hitless to another link.
 
-   MDSC must request to reroute IP traffic before the event takes place.
-   It should
-
-   be possible to lock IP traffic to the protection route until the
-   maintenance event is finished, unless a fault occurs on such path.
+   MDSC must reroute IP traffic before the events takes place.  It
+   should be possible to lock IP traffic to the protection route until
+   the maintenance event is finished, unless a fault occurs on such
+   path.
 
 A.2.2.  Router Port Failure
 
@@ -3125,7 +3148,7 @@ A.2.2.  Router Port Failure
        has been added to the LAG then original Bandwidth is recovered
        between the end routers.
 
-       Note: in this LAG scenario let us assume that BFD is running at
+       Note: in this LAG scenario it is assumed that BFD is running at
        LAG level so that there is nothing triggered at MPLS level when
        one of the link member of the LAG fails.
 
