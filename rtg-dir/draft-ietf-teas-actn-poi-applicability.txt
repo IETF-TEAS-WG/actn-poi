@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 7 December 2026                                        Vodafone
+Expires: 13 December 2026                                       Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                             5 June 2026
+                                                            11 June 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 December 2026.
+   This Internet-Draft will expire on 13 December 2026.
 
 Copyright Notice
 
@@ -3089,7 +3089,7 @@ A.1.1.  MDSC NBI
 
    *  The L2NM and L3NM YANG data models, defined in [RFC9291] and
       [RFC9182], whose primary focus is the MPI, can also be used to
-      provide L2VPN and L3VPN network service configuration from a
+      provide L2VPN and L3VPN network service configuration from an
       orchestrated connectivity service point of view.
 
    *  The TE & Service Mapping YANG data model
@@ -3152,7 +3152,7 @@ A.2.2.  Router Port Failure
        level so that there is nothing triggered at MPLS level when one
        of the link member of the LAG fails.
 
-   2.  If there is no LAG then the scenario is not clear since a IP
+   2.  If there is no LAG then the scenario is not clear since an IP
        router port failure would automatically trigger (through BFD
        failure) first a sub-50ms protection at MPLS level :FRR (MPLS
        RSVP-TE case) or TI-LFA (MPLS based SR-TE case) through a
