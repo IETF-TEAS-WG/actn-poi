@@ -37,6 +37,6 @@
         H / S = Hub VRF / Spoke VRF
 
        .....  = Intra-domain TE Path 1 {PE13, P16, NE14, NE13, PE14}
-       .. ..  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12, 
+       .. ..  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12,
                 BR11, BR21, NE21, NE23, P24, PE23}
 ~~~~

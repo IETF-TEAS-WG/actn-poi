@@ -14,9 +14,11 @@ v: 3
 area: "Routing"
 workgroup: "TEAS Working Group"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - ACTN
+ - POI
+ - packet optical integration
+ - YANG
+ - DWDM
 venue:
   group: "Traffic Engineering Architecture and Signaling"
   type: "Working Group"
@@ -116,6 +118,15 @@ normative:
     target: https://ieeexplore.ieee.org/document/7055197
 
 informative:
+  IEEE_802.1AE:
+    title: >
+      IEEE Standard for Local and metropolitan area networks -
+      Media Access Control (MAC) Security
+    author:
+      org: Institute of Electrical and Electronics Engineers
+    date: December 2018
+    seriesinfo: IEEE 802.1AE-2018
+    target: https://standards.ieee.org/standard/802_1AE-2018.html
 
 --- abstract
 
@@ -188,8 +199,13 @@ to provide multi-layer coordination between packet and optical networks.
 This document uses packet-based Traffic Engineered (TE) service
 examples. These are described as "TE-path" in this document. Unless
 otherwise stated, these TE services may be instantiated using
-Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or SR
--TE-based, forwarding plane mechanisms.
+Resource Reservation Protocol (RSVP) Traffic Engineering (TE)-based or
+Segment Routing Traffic Engineering (SR-TE)-based, forwarding plane
+mechanisms.
+
+This document assumes familiarity with the ACTN architecture defined in
+{{!RFC8453}}, the TE topology model defined in {{!RFC8795}}, and the
+basic operation of IP/MPLS and optical transport networks.
 
 This document outlines key scenarios for Packet Optical Integration (POI)
 from the perspective of the packet service layer and highlights the
@@ -245,12 +261,13 @@ address, routing protocol, etc.).
 
 Technology domain:
 : Short for "switching technology domain", defined as "region" in
-{{?RFC5212}}, where the term "region" is applied to (GMPLS) control
+{{!RFC5212}}, where the term "region" is applied to (GMPLS) control
 domains.
 
 PNC Domain:
-: Part of the network under the control of a single PNC instance. It is
-subject to the capabilities of the PNC which technology is controlled.
+: A portion of the network controlled by one PNC instance, where
+capabilities are defined by the technologies supported by both the PNC
+instance and its managed network elements.
 
 Optical PNC (O-PNC):
 : A PNC controlling an optical network domain.
@@ -258,13 +275,18 @@ Optical PNC (O-PNC):
 Packet PNC (P-PNC):
 : A PNC controlling a packet network domain.
 
+Muxponder:
+: An optical device that aggregates multiple lower-rate client signals
+into a single higher-speed optical signal, combining multiplexing and
+transponder functionalities to maximize network efficiency.
+
 Port:
 : The physical entity that transmits and receives physical signals.
 
 Interface:
 : A bidirectional link interface, as defined in {{Section 3.6.1 of ?RFC4397}}.
 
-makeLink:
+Link:
 : A bidirectional data link, as defined in {{Section 3.5.1 of ?RFC4397}}.
 
 Intra-domain link:
@@ -392,11 +414,12 @@ outside the scope of this document.
 
 The optical nodes within the optical domains can be either:
 
-- WDM nodes, as defined in
+- Wavelength Division Multiplexing (WDM) nodes, as defined in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}}, with an integrated
-ROADM function with or without integrated optical transponders;
+Reconfigurable Optical Add-Drop Multiplexer (ROADM) function with or
+without integrated optical transponders;
 
-- OTN nodes, with integrated an OTN cross-connect function and with or
+- OTN nodes, with an integrated OTN cross-connect function and with or
 without integrated ROADM functions or optical transponders.
 
 ## Multi-domain Service Coordinator (MDSC) functions {#mdsc-overview}
@@ -438,7 +461,7 @@ P-PNC functions in a single entity.
 
 In current service provider network deployments, the MDSC's Northbound
 Interface (NBI) typically connects to an OSS/Orchestration layer rather
-than a CNC. In this scenario, the MDSC is limited to performing Network
+than a Customer Network Controller (CNC). In this scenario, the MDSC is limited to performing Network
 Orchestration functions, as described in {{?RFC8309}} (point 2 above).
 Consequently, the MDSC handles network service requests received from the
 OSS and/or Orchestration.
@@ -849,8 +872,8 @@ PNCs and MDSCs comply with subscription requirements as stated in
 The Optical PNC can use the following technology-specific topology
 YANG data models, which augment the generic TE Topology Model:
 
-- The WSON Topology Model, defined in the "ietf-wson-topology" YANG
-module of {{?RFC9094}};
+- The Wavelength Switched Optical Network (WSON) Topology Model,
+defined in the "ietf-wson-topology" YANG module of {{?RFC9094}};
 
 - the Flexi-grid Topology Model, defined in the
 "ietf-flexi-grid-topology" YANG module of
@@ -878,8 +901,9 @@ have been identified as a gap.
 
 The optical PNC can use the following client signal YANG data models:
 
-- the CBR Client Signal Model, defined in the "ietf-trans-client-service"
-YANG module of {{?I-D.ietf-ccamp-client-signal-yang}};
+- the Constant Bit Rate (CBR) Client Signal Model, defined in the
+"ietf-trans-client-service" YANG module of
+{{?I-D.ietf-ccamp-client-signal-yang}};
 
 - the Ethernet Client Signal Model, defined in the
 "ietf-eth-tran-service" YANG module of
@@ -895,7 +919,7 @@ YANG module of {{!RFC8346}}, which augments the Base Network Topology
 Model;
 
 - the Packet TE Topology Mode, defined in the "ietf-te-topology-packet"
-YANG module of {{!I-D.ietf-teas-yang-l3-te-topo}}, which augments the
+YANG module of {{?I-D.ietf-teas-yang-l3-te-topo}}, which augments the
 generic TE
 Topology Model;
 
@@ -904,7 +928,7 @@ YANG module of {{?I-D.ietf-teas-yang-te-mpls-topology}}, which augments
 the TE Packet
 Topology Model with or without the L3 TE Topology Model, defined
 in "ietf-l3-te-topology" YANG module of
-{{!I-D.ietf-teas-yang-l3-te-topo}};
+{{?I-D.ietf-teas-yang-l3-te-topo}};
 
 - the SR Topology Model, defined in the "ietf-sr-mpls-topology" YANG
 module of {{?I-D.ietf-teas-yang-sr-te-topo}}.
@@ -1025,14 +1049,14 @@ controls, as described in {{optical-topology-discovery}} and
 information to discover the complete topology view of the multi-layer
 multi-domain networks it controls.
 
-The MDSC should also maintain up-to-date inventory, service and
-network topology databases of IP and optical layers through IETF
-notifications through MPI with the PNCs when any network
-inventory/topology/service change occurs.
+The MDSC should also maintain up-to-date inventory, service, and
+network topology databases of IP and optical layers through notifications
+over the MPIs from the PNCs when any network inventory, topology, or
+service change occurs.
 
 It should also be possible to correlate information from IP and
-optical layers (e.g., which port, lambda/OTSi, and direction are used
-by a specific IP service on the WDM node).
+optical layers (e.g., which port, lambda/Optical Tributary Signal
+(OTSi), and direction are used by a specific IP service on the WDM node).
 
 In particular, for the cross-technology Ethernet links, it is key for
 MDSC to
@@ -1105,13 +1129,14 @@ the MPI:
 as those detailed in
 {{?I-D.ietf-ccamp-optical-impairment-topology-yang}};
 
-- the underlay OTS links and ILAs of OMS links;
+- the underlay Optical Transmission Section (OTS) links and In-Line
+Amplifiers (ILAs) of Optical Multiplex Section (OMS) links;
 
 - the physical connectivity between the optical transponders and the
 ROADMs.
 
 The OTN Topology Model also reports the CBR client LTPs that
-terminates the cross-technology Ethernet links: one CBR client LTP is
+terminate the cross-technology Ethernet links: one CBR client LTP is
 reported for
 each CBR or multi-function client interface on the optical nodes (see
 sections 4.4 and 5.1 of {{?I-D.ietf-ccamp-transport-nbi-app-statement}}
@@ -1203,7 +1228,7 @@ The TE Topology Model, TE Packet Topology Model and MPLS-TE Topology
 Model are used together to report the MPLS-TE network topology, as
 described in {{?I-D.ietf-teas-yang-te-mpls-topology}}.
 
-As described in {{!I-D.ietf-teas-yang-l3-te-topo}}, the relationship
+As described in {{?I-D.ietf-teas-yang-l3-te-topo}}, the relationship
 between the IP network
 topology and the MPLS-TE network topology depend on whether the two
 network topologies are congruent or not: in the latter case, the L3
@@ -1647,7 +1672,7 @@ finds that:
 to support the new L3VPN, as described in {{te-path-discovery}}, and
 that:
 
-   - the IP link(s) between PE13 and P16 does not have enough bandwidth
+   - the IP link(s) between PE13 and P16 do not have enough bandwidth
    to support increasing the bandwidth of that TE path, as
    described in {{packet-topology-discovery}};
 
@@ -2019,7 +2044,7 @@ tunnels for the same PE pair in a way other than load balancing is
 identified as a gap requiring further work and is outside the scope
 of this draft.
 
-# Conclusions {#conclusions}
+# Conclusions and Gaps {#conclusions}
 
 The analysis provided in this document shows that the IETF YANG models
 described in {{yang}} provide useful support for Packet Optical Integration
@@ -2160,6 +2185,11 @@ untrusted networks;
 
 - Using network segmentation and Access Control Lists (ACLs) to limit who
 can send and receive LLDP packets;
+
+- Using IEEE 802.1AE MAC Security (MACsec) {{IEEE_802.1AE}} to provide
+data origin authentication, integrity, and confidentiality for Ethernet
+frames, reducing the risk of LLDP spoofing or tampering on protected
+links;
 
 - Employing network monitoring and anomaly detection systems to identify
 unusual LLDP traffic patterns that may indicate an attack;
@@ -2319,8 +2349,7 @@ access link.
 Before planned maintenance operation on DWDM network takes place, IP
 traffic should be moved hitless to another link.
 
-MDSC must request to reroute IP traffic before the event takes place. It should
-
+MDSC must reroute IP traffic before the events takes place. It should
 be possible to lock IP traffic to the protection route until the
 maintenance event is finished, unless a fault occurs on such path.
 
@@ -2356,7 +2385,7 @@ been added
    to the LAG then original Bandwidth is recovered between the end
    routers.
 
-   Note: in this LAG scenario let us assume that BFD is running at LAG
+   Note: in this LAG scenario it is assumed that BFD is running at LAG
    level so that there is nothing triggered at MPLS level when one of
    the link member of the LAG fails.
 
@@ -2457,4 +2486,3 @@ Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
 
 This document was prepared using kramdown.
-
