@@ -2385,7 +2385,7 @@ been added
    to the LAG then original Bandwidth is recovered between the end
    routers.
 
-   Note: in this LAG scenario let assume that BFD is running at LAG
+   Note: in this LAG scenario it is assumed that BFD is running at LAG
    level so that there is nothing triggered at MPLS level when one of
    the link member of the LAG fails.
 
