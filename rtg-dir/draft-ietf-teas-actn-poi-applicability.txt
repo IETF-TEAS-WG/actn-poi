@@ -3148,9 +3148,9 @@ A.2.2.  Router Port Failure
        has been added to the LAG then original Bandwidth is recovered
        between the end routers.
 
-       Note: in this LAG scenario let assume that BFD is running at LAG
-       level so that there is nothing triggered at MPLS level when one
-       of the link member of the LAG fails.
+       Note: in this LAG scenario it is assumed that BFD is running at
+       LAG level so that there is nothing triggered at MPLS level when
+       one of the link member of the LAG fails.
 
    2.  If there is no LAG then the scenario is not clear since an IP
        router port failure would automatically trigger (through BFD
