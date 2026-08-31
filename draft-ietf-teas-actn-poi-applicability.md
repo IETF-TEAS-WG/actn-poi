@@ -2231,7 +2231,7 @@ comprehensive monitoring solutions that can provide visibility to the
 PNCs across both packet and optical layers. Identifying and diagnosing
 issues may become more complex with integrated layers. Telemetry data may
 also be required to collect lower-layer networking health and consider
-network and service performance. This topic is further discussed in {{?I-D.poidt-teas-actn-poi-assurance}};
+network and service performance. This topic is further discussed in {{?I-D.ietf-teas-actn-poi-assurance}};
 
 - Fault Management and Recovery: The POI networks should be resilient,
 including considerations for automatic protection switching and fast
@@ -2239,7 +2239,7 @@ reroute mechanisms that span both layers. Fault isolation and recovery
 may become more challenging, as issues in one layer can have cascading
 effects on the other. Effective fault management strategies must be in
 place to quickly identify and rectify such issues. This topic is further
-discussed in {{?I-D.poidt-teas-actn-poi-assurance}};
+discussed in {{?I-D.ietf-teas-actn-poi-assurance}};
 
 Specific Security Considerations are discussed in {{security}}.
 
