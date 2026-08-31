@@ -22,7 +22,7 @@ multi-technology scenario (packet over optical), particularly
 emphasising the Multi-Domain Service Coordinator to Provisioning
 Network Controller Interface (MPI) within the ACTN architecture 
     " name="description">
-<meta content="xml2rfc 3.33.0" name="generator">
+<meta content="xml2rfc 3.34.0" name="generator">
 <meta content="ACTN" name="keyword">
 <meta content="POI" name="keyword">
 <meta content="packet optical integration" name="keyword">
@@ -30,18 +30,19 @@ Network Controller Interface (MPI) within the ACTN architecture
 <meta content="DWDM" name="keyword">
 <meta content="draft-ietf-teas-actn-poi-applicability-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.33.0
-    Python 3.12.13
-    ConfigArgParse 1.7
+  xml2rfc 3.34.0
+    Python 3.14.7
+    ConfigArgParse 1.7.5
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
-    lxml 6.0.2
-    platformdirs 4.9.6
+    lxml 6.1.1
+    natsort 8.4.0
+    platformdirs 4.11.5
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.7.0
+    wcwidth 0.8.2
 -->
 <link href="draft-ietf-teas-actn-poi-applicability.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -77,7 +78,6 @@ Network Controller Interface (MPI) within the ACTN architecture
   src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-
 @font-face {
   font-family: 'Lora';
   font-style: italic;
@@ -126,7 +126,6 @@ Network Controller Interface (MPI) within the ACTN architecture
   src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 @font-face {
   font-family: 'Lora';
   font-style: normal;
@@ -191,7 +190,6 @@ Network Controller Interface (MPI) within the ACTN architecture
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 }
 
 @font-face {
@@ -1060,11 +1058,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">ACTN POI</td>
-<td class="right">June 2026</td>
+<td class="right">August 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Peruzzini, et al.</td>
-<td class="center">Expires 13 December 2026</td>
+<td class="center">Expires 4 March 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1077,12 +1075,12 @@ svg {
 <dd class="internet-draft">draft-ietf-teas-actn-poi-applicability-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-11" class="published">11 June 2026</time>
+<time datetime="2026-08-31" class="published">31 August 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-13">13 December 2026</time></dd>
+<dd class="expires"><time datetime="2027-03-04">4 March 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1157,7 +1155,7 @@ Network Controller Interface (MPI) within the ACTN architecture<a href="#section
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 13 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 4 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -4148,7 +4146,7 @@ comprehensive monitoring solutions that can provide visibility to the
 PNCs across both packet and optical layers. Identifying and diagnosing
 issues may become more complex with integrated layers. Telemetry data may
 also be required to collect lower-layer networking health and consider
-network and service performance. This topic is further discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xref">I-D.poidt-teas-actn-poi-assurance</a>]</span>;<a href="#section-8-2.3.1" class="pilcrow">¶</a></p>
+network and service performance. This topic is further discussed in <span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref">I-D.ietf-teas-actn-poi-assurance</a>]</span>;<a href="#section-8-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-8-2.4">
           <p id="section-8-2.4.1">Fault Management and Recovery: The POI networks should be resilient,
@@ -4157,7 +4155,7 @@ reroute mechanisms that span both layers. Fault isolation and recovery
 may become more challenging, as issues in one layer can have cascading
 effects on the other. Effective fault management strategies must be in
 place to quickly identify and rectify such issues. This topic is further
-discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xref">I-D.poidt-teas-actn-poi-assurance</a>]</span>;<a href="#section-8-2.4.1" class="pilcrow">¶</a></p>
+discussed in <span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref">I-D.ietf-teas-actn-poi-assurance</a>]</span>;<a href="#section-8-2.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-8-3">Specific Security Considerations are discussed in <a href="#security" class="auto internal xref">Section 7</a>.<a href="#section-8-3" class="pilcrow">¶</a></p>
@@ -4269,7 +4267,7 @@ discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xre
 <dl class="references">
 <dt id="I-D.ietf-ccamp-client-signal-yang">[I-D.ietf-ccamp-client-signal-yang]</dt>
         <dd>
-<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Guo, A.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Snitser, A.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"A YANG Data Model for Transport Network Client Signals"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-client-signal-yang-17</span>, <time datetime="2026-02-04" class="refDate">4 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-17">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-17</a>&gt;</span>. </dd>
+<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Guo, A.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Snitser, A.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"A YANG Data Model for Transport Network Client Signals"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-client-signal-yang-18</span>, <time datetime="2026-08-05" class="refDate">5 August 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-18">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-client-signal-yang-18</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-eth-client-te-topo-yang">[I-D.ietf-ccamp-eth-client-te-topo-yang]</dt>
         <dd>
@@ -4281,7 +4279,7 @@ discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xre
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-optical-impairment-topology-yang">[I-D.ietf-ccamp-optical-impairment-topology-yang]</dt>
         <dd>
-<span class="refAuthor">Beller, D.</span>, <span class="refAuthor">Le Rouzic, E.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Galimberti, G.</span>, and <span class="refAuthor">I. Busi</span>, <span class="refTitle">"A YANG Data Model for Optical Impairment-aware Topology"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-optical-impairment-topology-yang-23</span>, <time datetime="2026-02-27" class="refDate">27 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-optical-impairment-topology-yang-23">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-optical-impairment-topology-yang-23</a>&gt;</span>. </dd>
+<span class="refAuthor">Beller, D.</span>, <span class="refAuthor">Le Rouzic, E.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Galimberti, G.</span>, and <span class="refAuthor">I. Busi</span>, <span class="refTitle">"A YANG Data Model for Optical Impairment-aware Topology"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-optical-impairment-topology-yang-24</span>, <time datetime="2026-06-22" class="refDate">22 June 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-optical-impairment-topology-yang-24">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-optical-impairment-topology-yang-24</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-optical-path-computation-yang">[I-D.ietf-ccamp-optical-path-computation-yang]</dt>
         <dd>
@@ -4289,11 +4287,11 @@ discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xre
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-otn-topo-yang">[I-D.ietf-ccamp-otn-topo-yang]</dt>
         <dd>
-<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Belotti, S.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"A YANG Data Model for Optical Transport Network Topology"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-topo-yang-20</span>, <time datetime="2024-11-07" class="refDate">7 November 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-topo-yang-20">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-topo-yang-20</a>&gt;</span>. </dd>
+<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Belotti, S.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"A YANG Data Model for Optical Transport Network Topology"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-topo-yang-21</span>, <time datetime="2026-06-16" class="refDate">16 June 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-topo-yang-21">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-topo-yang-21</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-otn-tunnel-model">[I-D.ietf-ccamp-otn-tunnel-model]</dt>
         <dd>
-<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Lopez, V.</span>, and <span class="refAuthor">Y. Xu</span>, <span class="refTitle">"A YANG Data Model for Optical Transport Network (OTN) Tunnels and Label Switched Paths"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-25</span>, <time datetime="2026-05-27" class="refDate">27 May 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-25">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-25</a>&gt;</span>. </dd>
+<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Lopez, V.</span>, and <span class="refAuthor">Y. Xu</span>, <span class="refTitle">"A YANG Data Model for Optical Transport Network (OTN) Tunnels and Label Switched Paths"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-26</span>, <time datetime="2026-08-13" class="refDate">13 August 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-26">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-26</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-transport-nbi-app-statement">[I-D.ietf-ccamp-transport-nbi-app-statement]</dt>
         <dd>
@@ -4311,21 +4309,25 @@ discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xre
         <dd>
 <span class="refAuthor">Bashandy, A.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Filsfils, C.</span>, <span class="refAuthor">Francois, P.</span>, <span class="refAuthor">Decraene, B.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"Topology Independent Fast Reroute using Segment Routing"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-21</span>, <time datetime="2025-02-12" class="refDate">12 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-21">https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-21</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="I-D.ietf-teas-actn-poi-assurance">[I-D.ietf-teas-actn-poi-assurance]</dt>
+        <dd>
+<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Bouquier, J.</span>, <span class="refAuthor">Peruzzini, F.</span>, <span class="refAuthor">Volpato, P.</span>, and <span class="refAuthor">P. Manna</span>, <span class="refTitle">"Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) for Packet Optical Integration (POI) service assurance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-actn-poi-assurance-05</span>, <time datetime="2026-07-30" class="refDate">30 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-assurance-05">https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-poi-assurance-05</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.ietf-teas-actn-vn-yang">[I-D.ietf-teas-actn-vn-yang]</dt>
         <dd>
 <span class="refAuthor">Lee, Y.</span>, <span class="refAuthor">Dhody, D.</span>, <span class="refAuthor">Ceccarelli, D.</span>, <span class="refAuthor">Bryskin, I.</span>, and <span class="refAuthor">B. Y. Yoon</span>, <span class="refTitle">"A YANG Data Model for Virtual Network (VN) Operations"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-actn-vn-yang-29</span>, <time datetime="2024-06-22" class="refDate">22 June 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-vn-yang-29">https://datatracker.ietf.org/doc/html/draft-ietf-teas-actn-vn-yang-29</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-te-service-mapping-yang">[I-D.ietf-teas-te-service-mapping-yang]</dt>
         <dd>
-<span class="refAuthor">Lee, Y.</span>, <span class="refAuthor">Dhody, D.</span>, <span class="refAuthor">Fioccola, G.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Ceccarelli, D.</span>, and <span class="refAuthor">J. Tantsura</span>, <span class="refTitle">"Traffic Engineering (TE) and Service Mapping YANG Data Model"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-te-service-mapping-yang-18</span>, <time datetime="2025-10-12" class="refDate">12 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-service-mapping-yang-18">https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-service-mapping-yang-18</a>&gt;</span>. </dd>
+<span class="refAuthor">Lee, Y.</span>, <span class="refAuthor">Dhody, D.</span>, <span class="refAuthor">Fioccola, G.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Ceccarelli, D.</span>, and <span class="refAuthor">J. Tantsura</span>, <span class="refTitle">"Traffic Engineering (TE) and Service Mapping YANG Data Model"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-te-service-mapping-yang-19</span>, <time datetime="2026-07-04" class="refDate">4 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-service-mapping-yang-19">https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-service-mapping-yang-19</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-te-topology-profiles">[I-D.ietf-teas-te-topology-profiles]</dt>
         <dd>
-<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Bryskin, I.</span>, <span class="refAuthor">Saad, T.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"Profiles for Traffic Engineering (TE) Topology Data Model and Applicability to non-TE-centric Use Cases"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-te-topology-profiles-05</span>, <time datetime="2026-03-02" class="refDate">2 March 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-topology-profiles-05">https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-topology-profiles-05</a>&gt;</span>. </dd>
+<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Bryskin, I.</span>, <span class="refAuthor">Saad, T.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"Profiles for Traffic Engineering (TE) Topology Data Model and Applicability to non-TE-centric Use Cases"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-te-topology-profiles-06</span>, <time datetime="2026-07-05" class="refDate">5 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-topology-profiles-06">https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-topology-profiles-06</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-yang-l3-te-topo">[I-D.ietf-teas-yang-l3-te-topo]</dt>
         <dd>
-<span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Bryskin, I.</span>, <span class="refAuthor">Beeram, V. P.</span>, <span class="refAuthor">Saad, T.</span>, <span class="refAuthor">Shah, H.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"YANG Data Model for Layer 3 TE Topologies"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-yang-l3-te-topo-18</span>, <time datetime="2024-07-07" class="refDate">7 July 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-l3-te-topo-18">https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-l3-te-topo-18</a>&gt;</span>. </dd>
+<span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Bryskin, I.</span>, <span class="refAuthor">Beeram, V. P.</span>, <span class="refAuthor">Saad, T.</span>, <span class="refAuthor">Shah, H.</span>, and <span class="refAuthor">O. G. de Dios</span>, <span class="refTitle">"YANG Data Models for Layer 3 and Packet TE Topologies"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-yang-l3-te-topo-19</span>, <time datetime="2026-07-19" class="refDate">19 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-l3-te-topo-19">https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-l3-te-topo-19</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-yang-sr-te-topo">[I-D.ietf-teas-yang-sr-te-topo]</dt>
         <dd>
@@ -4338,10 +4340,6 @@ discussed in <span>[<a href="#I-D.poidt-teas-actn-poi-assurance" class="cite xre
 <dt id="I-D.ietf-teas-yang-te-mpls-topology">[I-D.ietf-teas-yang-te-mpls-topology]</dt>
         <dd>
 <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Guo, A.</span>, <span class="refAuthor">Liu, X.</span>, <span class="refAuthor">Saad, T.</span>, and <span class="refAuthor">R. Gandhi</span>, <span class="refTitle">"A YANG Data Model for MPLS-TE Topology"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-04</span>, <time datetime="2026-03-01" class="refDate">1 March 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-te-mpls-topology-04">https://datatracker.ietf.org/doc/html/draft-ietf-teas-yang-te-mpls-topology-04</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="I-D.poidt-teas-actn-poi-assurance">[I-D.poidt-teas-actn-poi-assurance]</dt>
-        <dd>
-<span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Bouquier, J.</span>, <span class="refAuthor">Peruzzini, F.</span>, <span class="refAuthor">Volpato, P.</span>, and <span class="refAuthor">P. Manna</span>, <span class="refTitle">"Applicability of Abstraction and Control of Traffic Engineered Networks (ACTN) for Packet Optical Integration (POI) service assurance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-poidt-teas-actn-poi-assurance-05</span>, <time datetime="2025-02-26" class="refDate">26 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-poidt-teas-actn-poi-assurance-05">https://datatracker.ietf.org/doc/html/draft-poidt-teas-actn-poi-assurance-05</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IEEE_802.1AE">[IEEE_802.1AE]</dt>
         <dd>

@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 13 December 2026                                       Vodafone
+Expires: 4 March 2027                                           Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            11 June 2026
+                                                          31 August 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 December 2026.
+   This Internet-Draft will expire on 4 March 2027.
 
 Copyright Notice
 
@@ -2606,7 +2606,7 @@ Table of Contents
       Telemetry data may also be required to collect lower-layer
       networking health and consider network and service performance.
       This topic is further discussed in
-      [I-D.poidt-teas-actn-poi-assurance];
+      [I-D.ietf-teas-actn-poi-assurance];
 
    *  Fault Management and Recovery: The POI networks should be
       resilient, including considerations for automatic protection
@@ -2615,7 +2615,7 @@ Table of Contents
       issues in one layer can have cascading effects on the other.
       Effective fault management strategies must be in place to quickly
       identify and rectify such issues.  This topic is further discussed
-      in [I-D.poidt-teas-actn-poi-assurance];
+      in [I-D.ietf-teas-actn-poi-assurance];
 
    Specific Security Considerations are discussed in Section 7.
 
@@ -2737,9 +2737,9 @@ Table of Contents
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-17, 4 February 2026,
+              signal-yang-18, 5 August 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              client-signal-yang-17>.
+              client-signal-yang-18>.
 
    [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
@@ -2761,9 +2761,9 @@ Table of Contents
               Beller, D., Le Rouzic, E., Belotti, S., Galimberti, G.,
               and I. Busi, "A YANG Data Model for Optical Impairment-
               aware Topology", Work in Progress, Internet-Draft, draft-
-              ietf-ccamp-optical-impairment-topology-yang-23, 27
-              February 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-ccamp-optical-impairment-topology-yang-23>.
+              ietf-ccamp-optical-impairment-topology-yang-24, 22 June
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              ccamp-optical-impairment-topology-yang-24>.
 
    [I-D.ietf-ccamp-optical-path-computation-yang]
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
@@ -2777,17 +2777,17 @@ Table of Contents
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
               Dios, "A YANG Data Model for Optical Transport Network
               Topology", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-otn-topo-yang-20, 7 November 2024,
+              ccamp-otn-topo-yang-21, 16 June 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-topo-yang-20>.
+              otn-topo-yang-21>.
 
    [I-D.ietf-ccamp-otn-tunnel-model]
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
               YANG Data Model for Optical Transport Network (OTN)
               Tunnels and Label Switched Paths", Work in Progress,
-              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-25, 27
-              May 2026, <https://datatracker.ietf.org/doc/html/draft-
-              ietf-ccamp-otn-tunnel-model-25>.
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-26, 13
+              August 2026, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-ccamp-otn-tunnel-model-26>.
 
    [I-D.ietf-ccamp-transport-nbi-app-statement]
               Busi, I., King, D., Zheng, H., and Y. Xu, "Transport
@@ -2822,6 +2822,15 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
               segment-routing-ti-lfa-21>.
 
+   [I-D.ietf-teas-actn-poi-assurance]
+              Busi, I., Bouquier, J., Peruzzini, F., Volpato, P., and P.
+              Manna, "Applicability of Abstraction and Control of
+              Traffic Engineered Networks (ACTN) for Packet Optical
+              Integration (POI) service assurance", Work in Progress,
+              Internet-Draft, draft-ietf-teas-actn-poi-assurance-05, 30
+              July 2026, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-teas-actn-poi-assurance-05>.
+
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
               Yoon, "A YANG Data Model for Virtual Network (VN)
@@ -2834,26 +2843,26 @@ Table of Contents
               Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
               and J. Tantsura, "Traffic Engineering (TE) and Service
               Mapping YANG Data Model", Work in Progress, Internet-
-              Draft, draft-ietf-teas-te-service-mapping-yang-18, 12
-              October 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-te-service-mapping-yang-18>.
+              Draft, draft-ietf-teas-te-service-mapping-yang-19, 4 July
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              teas-te-service-mapping-yang-19>.
 
    [I-D.ietf-teas-te-topology-profiles]
               Busi, I., Liu, X., Bryskin, I., Saad, T., and O. G. de
               Dios, "Profiles for Traffic Engineering (TE) Topology Data
               Model and Applicability to non-TE-centric Use Cases", Work
               in Progress, Internet-Draft, draft-ietf-teas-te-topology-
-              profiles-05, 2 March 2026,
+              profiles-06, 5 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-te-
-              topology-profiles-05>.
+              topology-profiles-06>.
 
    [I-D.ietf-teas-yang-l3-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
-              and O. G. de Dios, "YANG Data Model for Layer 3 TE
-              Topologies", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-l3-te-topo-18, 7 July 2024,
+              and O. G. de Dios, "YANG Data Models for Layer 3 and
+              Packet TE Topologies", Work in Progress, Internet-Draft,
+              draft-ietf-teas-yang-l3-te-topo-19, 19 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-l3-te-topo-18>.
+              yang-l3-te-topo-19>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.,
@@ -2877,15 +2886,6 @@ Table of Contents
               Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-04,
               1 March 2026, <https://datatracker.ietf.org/doc/html/
               draft-ietf-teas-yang-te-mpls-topology-04>.
-
-   [I-D.poidt-teas-actn-poi-assurance]
-              Busi, I., Bouquier, J., Peruzzini, F., Volpato, P., and P.
-              Manna, "Applicability of Abstraction and Control of
-              Traffic Engineered Networks (ACTN) for Packet Optical
-              Integration (POI) service assurance", Work in Progress,
-              Internet-Draft, draft-poidt-teas-actn-poi-assurance-05, 26
-              February 2025, <https://datatracker.ietf.org/doc/html/
-              draft-poidt-teas-actn-poi-assurance-05>.
 
    [IEEE_802.1AE]
               Institute of Electrical and Electronics Engineers, "IEEE
