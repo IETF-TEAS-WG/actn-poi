@@ -140,7 +140,7 @@ to Service Providers.
 Existing IETF protocols and data models are identified for each
 multi-technology scenario (packet over optical), particularly
 emphasising the Multi-Domain Service Coordinator to Provisioning
-Network Controller Interface (MPI) within the ACTN architecture
+Network Controller Interface (MPI) within the ACTN architecture.
 
 --- middle
 
@@ -565,9 +565,6 @@ compete for bandwidth with other tunnels.
 
 1. The L2/L3 VPN is bound to a set of TE tunnels which can be shared with other services.
 
-1. The customer does not require isolation and may request a VPN service
-where the associated tunnels are shared across multiple VPNs.
-
 For each TE path required to support the L2/L3 VPN network service,
 it is possible that:
 
@@ -714,8 +711,8 @@ following:
 
 1. To perform single-layer, single-domain local TE path computation,
 when requested by the MDSC, between two PEs (for single-domain
-end-to-end TE path) or between PEs and BRs for an inter-domain TE
-path selected by the MDSC.
+end-to-end TE path) or between PEs and BRs (for an intra-domain TE
+path segment, as selected by the MDSC).
 
 1. To configure the routers in their respective domain to setup a TE
 path;
