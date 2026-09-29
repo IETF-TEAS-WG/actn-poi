@@ -406,11 +406,11 @@ such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.
 
-As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers, multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
-
 Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
 outside the scope of this document.
+
+As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers, multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
 
 The optical nodes within the optical domains can be either:
 
@@ -558,7 +558,7 @@ and can be categorized into three main cases:
 
 1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which neither
 share resources with other services, nor compete for bandwidth with
-other tunnels, ensuring deterministic latency performance.
+other tunnels, ensuring deterministic or predictable latency performance.
 
 1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which can
 compete for bandwidth with other tunnels.
@@ -1747,7 +1747,7 @@ binding SID assigned by P-PNC2 to the corresponding SR policy in BR21).
 The P-PNC1 properly configures the routers within its domain to set up
 the requested path and the multi-domain TE path stitching. For example,
 in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs
-assigned within its domain and the PE SID assigned by P-PNC1 to the
+assigned within its domain and the Peer SID assigned by P-PNC1 to the
 inter-domain link between BR11 and BR21, along with the binding SID
 assigned by P-PNC2, installs the proper policy or policies within PE13.
 
@@ -1764,7 +1764,7 @@ When performing multi-layer/multi-domain path computation, the MDSC
 can delegate single-domain optical path computation to the O-PNC.
 
 As described in {{optical-topology-discovery}}, {{inter-domain-link-discovery}},
-and {{multi-technology-link-discovery}}, there is a one-to-one
+and {{multi-technology-link-discovery}}, without LAG, there is a one-to-one
 relationship between a multi-layer intra-domain IP link and its underlay
 optical tunnel. Therefore, the properties of an optical path between
 two optical TTPs, as computed by the O-PNC, can be used by the MDSC to
@@ -1788,7 +1788,7 @@ scope.
 ## Multi-technology IP Link Setup {#multi-technology-link-setup}
 
 As described in {{optical-path-computation}}, there is a one-to-one
-relationship between a multi-technology intra-domain IP link and its
+relationship between a multi-technology intra-domain Ethernet link and its
 underlay optical tunnel.
 
 Therefore, to set up a new multi-technology intra-domain IP link,
@@ -1959,8 +1959,8 @@ It is worth noting that the list of SRLGs for a multi-technology IP link
 can be quite long. Implementation-specific mechanisms can be
 implemented by the MDSC or by the O-PNC to summarize the SRLGs of an
 optical tunnel. These mechanisms are implementation-specific and have
-no impact on the YANG models nor on the interoperability at the MPI,
-but cares have to be taken to avoid missing information.
+no impact on the YANG models nor on the interoperability at the MPI.
+However, they should be carefully designed to avoid missing information: failure to do so could result in miscalculating two path candidates as being fully SRLG-disjoint when they actually share a hidden failure point.
 
 ## TE Path Setup and Update {#te-path-config}
 
@@ -2047,9 +2047,9 @@ of this draft.
 # Conclusions and Gaps {#conclusions}
 
 The analysis provided in this document shows that the IETF YANG models
-described in {{yang}} provide useful support for Packet Optical Integration
-(POI) scenarios for resource discovery (network topology, service,
-tunnels, and network inventory discovery), as well as for supporting
+described in {{yang}} provide good support for Packet Optical Integration
+(POI) scenarios for resource discovery (e.g., network topology, service,
+tunnels), as well as for setup of
 multi-layer/multi-domain L2/L3 VPN network services.
 
 The following gaps were identified that may need to be addressed by
