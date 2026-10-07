@@ -500,10 +500,24 @@ spoke
 PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.
 
+<figure anchor="fig-vpn-topo">
+  <name>Multi-domain VPN topology example</name>
+  <artset>
+    <artwork type="svg"
+{::include-data-xml figures/vpn-topology.svg}
+    />
+    <artwork type="ascii-art">
+{::include figures/vpn-topology.txt}
+    </artwork>
+  </artset>
+</figure>
+
+> Note: The ascii-art of {{fig-vpn-topo-2}} below is an exact copy of the ascii-art of {{fig-vpn-topo}} above. The only difference is that the SVG version of {{fig-vpn-topo-2}} has been automatically generated from the ascii-art with  AASVG while the SVG version of {{fig-vpn-topo}} is an SVG native version of the ascii-art figure.
+
 ~~~~ aasvg
 {::include figures/vpn-topology.txt}
 ~~~~
-{: #fig-vpn-topo title="Multi-domain VPN topology example (with AASVG)"}
+{: #fig-vpn-topo-2 title="Multi-domain VPN topology example (without AASVG)"}
 
 {::include ./figures/vpn-te-paths.md}
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}
