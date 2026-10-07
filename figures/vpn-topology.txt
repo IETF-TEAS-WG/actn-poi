@@ -41,6 +41,3 @@
          |                                |
          |  _ _ _ _ = Intra-domain links  |
          |________________________________|
-
-
-                Figure 2: Multi-domain VPN topology example
