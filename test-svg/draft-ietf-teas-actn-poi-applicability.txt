@@ -631,7 +631,7 @@ Table of Contents
             |  _ _ _ _ = Intra-domain links  |
             |________________________________|
 
-        Figure 3: Multi-domain VPN topology example (without AASVG)
+          Figure 3: Multi-domain VPN topology example (with AASVG)
 
             ______
            | CE13 |
@@ -676,7 +676,7 @@ Table of Contents
     |                  BR11, BR21, NE21, NE23, P24, PE23}           |
     |_______________________________________________________________|
 
-                Figure 4: Multi-domain VPN TE paths example
+          Figure 4: Multi-domain VPN TE paths example (with AASVG)
 
    There are many options to implement multi-domain L2/L3 VPNs,
    including:
