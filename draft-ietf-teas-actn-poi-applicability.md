@@ -267,7 +267,7 @@ domains.
 PNC Domain:
 : A portion of the network controlled by one PNC instance, where
 capabilities are defined by the technologies supported by both the PNC
-instance and its managed network elements.
+instance and its managed Network Elements (NEs).
 
 Optical PNC (O-PNC):
 : A PNC controlling an optical network domain.
@@ -995,7 +995,7 @@ the underlying PNCs.
 discover all the TE information and requests the creation of TE
 tunnels. However, it uses PCEP for hierarchical path computation.
 
-   As mentioned in Option 1, from an operator perspective, this
+   As opposed to Option 1, from an operator perspective, this
    option can add integration complexity to have two protocols
    instead of one unless the RESTCONF/YANG interface is added to an
    existing PCEP deployment (brownfield scenario).
@@ -2097,7 +2097,8 @@ Although not applicable to this document, it has been noted that being
 able to use WSON and Flexi-grid topology models together (through
 multi-inheritance) is not only useful for mixed fixed-grid and
 flexible-grid DWDM network topologies but also the only viable option
-for a mixed CWDM and DWDM network topology.
+for a mixed Coarse Wavelength Division
+Multiplexing (CWDM) and DWDM network topology.
 
 Although not applicable to this document, it has been noted that the
 WDM tunnel model would also support optical tunnel setup in the case
