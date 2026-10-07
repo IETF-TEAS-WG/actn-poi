@@ -2480,7 +2480,19 @@ The authors would like to thank Young Lee for his valuable input on the initial 
 
 The authors would like to thank Adrian Farrel for his review and comments to this document.
 
-The authors would like to thank Acee Lindem for the Routing Directorate Early Review.
+The authors would like to thank Acee Lindem for his Early Routing Area Directorate (Rtgdir) Review.
+
+The authors would like to thank
+Ines Robles,
+Zheng Zhang,
+Nick Buraglio, and
+Yaron Sheffer
+for their IETF Last Call (LC)
+General Area Review Team (Genart),
+Routing Area Directorate (Rtgdir),
+Ops Directorate (Opsdir), and
+Security Area Directorate (Secdir)
+reviews.
 
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
