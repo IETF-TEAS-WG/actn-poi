@@ -519,7 +519,9 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 ~~~~
 {: #fig-vpn-topo-2 title="Multi-domain VPN topology example (without AASVG)"}
 
-{::include ./figures/vpn-te-paths.md}
+~~~~ aasvg
+{::include figures/vpn-te-paths.txt}
+~~~~
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}
 
 There are many options to implement multi-domain L2/L3 VPNs,
