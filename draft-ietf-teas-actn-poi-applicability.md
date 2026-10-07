@@ -500,8 +500,10 @@ spoke
 PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.
 
-{::include ./figures/vpn-topology.md}
-{: #fig-vpn-topo title="Multi-domain VPN topology example"}
+~~~~ aasvg
+{::include figures/vpn-topology.txt}
+~~~~
+{: #fig-vpn-topo title="Multi-domain VPN topology example (with AASVG)"}
 
 {::include ./figures/vpn-te-paths.md}
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}

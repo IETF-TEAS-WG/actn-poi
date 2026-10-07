@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="730" viewBox="0 0 850 730">
+  <!-- ======================================================================= -->
+  <!-- 1. CODICE CHE GENERA LA FIGURA DI RETE                                  -->
+  <!-- ======================================================================= -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <text x="275" y="122" font-family="monospace" font-size="15px" fill="#000000" font-weight="bold" text-anchor="middle">Packet Domain 1</text>
+  <text x="648" y="122" font-family="monospace" font-size="15px" fill="#000000" font-weight="bold" text-anchor="middle">Packet Domain 2</text>
+  <text x="245" y="545" font-family="monospace" font-size="15px" fill="#000000" font-weight="bold" text-anchor="middle">Optical Domain 1</text>
+  <text x="612" y="545" font-family="monospace" font-size="15px" fill="#000000" font-weight="bold" text-anchor="middle">Optical Domain 2</text>
+  <polygon points="35 265, 110 130, 430 130, 355 265" stroke="#000000" stroke-width="1.5" fill="none" />
+  <rect x="110" y="40" width="60" height="30" stroke="#000000" stroke-width="2" fill="#ffffff" />
+  <text x="140" y="59" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">CE13</text>
+  <line x1="140" y1="70" x2="140" y2="137" stroke="#000000" stroke-width="1.5" fill="none" />
+  <circle cx="140" cy="155" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="140" y="159" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">PE13</text>
+  <circle cx="90" cy="225" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="90" y="229" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">PE14</text>
+  <circle cx="250" cy="155" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="250" y="159" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">P15</text>
+  <circle cx="210" cy="225" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="210" y="229" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">P16</text>
+  <circle cx="360" cy="155" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="360" y="159" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">BR11</text>
+  <circle cx="310" cy="225" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="310" y="229" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">BR12</text>
+  <line x1="158" y1="155" x2="232" y2="155" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="268" y1="155" x2="342" y2="155" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="153" y1="168" x2="197" y2="212" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="349" y1="168" x2="321" y2="212" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="228" y1="225" x2="292" y2="225" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <rect x="10" y="280" width="60" height="30" stroke="#000000" stroke-width="2" fill="#ffffff" />
+  <text x="40" y="299" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">CE14</text>
+  <line x1="40" y1="280" x2="77" y2="237" stroke="#000000" stroke-width="1.5" fill="none" />
+  <polygon points="460 265, 535 130, 835 130, 760 265" stroke="#000000" stroke-width="1.5" fill="none" />
+  <circle cx="570" cy="155" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="570" y="159" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">BR21</text>
+  <circle cx="520" cy="225" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="520" y="229" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">BR22</text>
+  <circle cx="655" cy="155" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="655" y="159" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">P24</text>
+  <circle cx="740" cy="225" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="740" y="229" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">PE23</text>
+  <line x1="378" y1="155" x2="552" y2="155" stroke="#000000" stroke-width="1.5" fill="none" />
+  <line x1="328" y1="225" x2="502" y2="225" stroke="#000000" stroke-width="1.5" fill="none" />
+  <line x1="558" y1="168" x2="532" y2="212" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="538" y1="225" x2="724" y2="225" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="668" y1="164" x2="727" y2="216" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <rect x="710" y="280" width="60" height="30" stroke="#000000" stroke-width="2" fill="#ffffff" />
+  <text x="740" y="299" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">CE23</text>
+  <line x1="740" y1="243" x2="740" y2="280" stroke="#000000" stroke-width="1.5" fill="none" />
+  <polygon points="35 525, 110 395, 470 395, 395 525" stroke="#000000" stroke-width="1.5" fill="none" />
+  <circle cx="140" cy="420" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="140" y="424" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE11</text>
+  <circle cx="90" cy="485" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="90" y="489" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE13</text>
+  <circle cx="310" cy="420" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="310" y="424" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE12</text>
+  <circle cx="210" cy="485" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="210" y="489" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE14</text>
+  <circle cx="360" cy="485" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="360" y="489" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE15</text>
+  <line x1="158" y1="420" x2="292" y2="420" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="153" y1="433" x2="197" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="108" y1="485" x2="192" y2="485" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="297" y1="433" x2="223" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="318" y1="433" x2="352" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="228" y1="485" x2="342" y2="485" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="128" y1="433" x2="102" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <polygon points="437 525, 512 395, 787 395, 712 525" stroke="#000000" stroke-width="1.5" fill="none" />
+  <circle cx="570" cy="420" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="570" y="424" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE21</text>
+  <circle cx="520" cy="485" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="520" y="489" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE22</text>
+  <circle cx="655" cy="485" r="18" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="655" y="489" font-family="monospace" font-size="13px" fill="#000000" font-weight="bold" text-anchor="middle">NE23</text>
+  <line x1="561" y1="433" x2="529" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="583" y1="433" x2="642" y2="472" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="538" y1="485" x2="637" y2="485" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <line x1="140" y1="173" x2="140" y2="402" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="210" y1="243" x2="210" y2="467" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="90" y1="243" x2="90" y2="467" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="310" y1="243" x2="310" y2="402" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="360" y1="173" x2="360" y2="467" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="520" y1="243" x2="520" y2="467" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="570" y1="173" x2="570" y2="402" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <line x1="655" y1="173" x2="655" y2="467" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+
+  <!-- ======================================================================= -->
+  <!-- 2. CODICE CHE GENERA LA LEGENDA                                         -->
+  <!-- ======================================================================= -->
+  <rect x="275" y="580" width="300" height="130" stroke="#000000" stroke-width="1.5" fill="#ffffff" />
+  <text x="425" y="602" font-family="monospace" font-size="14px" fill="#000000" font-weight="bold" text-anchor="middle">Legenda</text>
+  
+  <line x1="295" y1="625" x2="345" y2="625" stroke="#000000" stroke-width="1.5" fill="none" />
+  <text x="360" y="629" font-family="monospace" font-size="13px" fill="#000000" text-anchor="start">= Inter-domain links</text>
+  
+  <line x1="295" y1="655" x2="345" y2="655" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" fill="none" />
+  <text x="360" y="659" font-family="monospace" font-size="13px" fill="#000000" text-anchor="start">= Cross-layer links</text>
+  
+  <line x1="295" y1="685" x2="345" y2="685" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 4" fill="none" />
+  <text x="360" y="689" font-family="monospace" font-size="13px" fill="#000000" text-anchor="start">= Intra-domain links</text>
+</svg>
