@@ -2130,12 +2130,8 @@ including:
 Several existing authentication and encryption practices and
 techniques may be used to help secure these MPI interfaces. These
 mechanisms include using Transport Layer Security (TLS) to provide
-secure transport for RESTCONF, NETCONF and PCEP. Furthermore, access
-control techniques can also provide additional security. NETCONF
-supports an Access Control Model (NACM), and RESTCONF supports Role
-Based Access Control (RBAC), which should also ensure that MDSC to
-PNC communication is based on authorised use and granular control of
-connectivity and resource requests.
+secure transport for RESTCONF, NETCONF and PCEP.
+Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) [RFC8341], which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.
 
 ## LLDP Snooping Security Considerations
 
