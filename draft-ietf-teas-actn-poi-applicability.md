@@ -512,17 +512,17 @@ PE (PE14) are within the same packet domain, and the other spoke PE
   </artset>
 </figure>
 
-> Note: The ascii-art of {{fig-vpn-topo-2}} below is an exact copy of the ascii-art of {{fig-vpn-topo}} above. The only difference is that the SVG version of {{fig-vpn-topo-2}} has been automatically generated from the ascii-art with  AASVG while the SVG version of {{fig-vpn-topo}} is an SVG native version of the ascii-art figure.
+> Note: The ascii-art of {{fig-vpn-topo-2}} below is an exact copy of the ascii-art of {{fig-vpn-topo}} above. The only difference is that the SVG version of {{fig-vpn-topo-2}} has been automatically generated from the ascii-art with AASVG while the SVG version of {{fig-vpn-topo}} is an SVG native version of the ascii-art figure.
 
 ~~~~ aasvg
 {::include figures/vpn-topology.txt}
 ~~~~
-{: #fig-vpn-topo-2 title="Multi-domain VPN topology example (without AASVG)"}
+{: #fig-vpn-topo-2 title="Multi-domain VPN topology example (with AASVG)"}
 
 ~~~~ aasvg
 {::include figures/vpn-te-paths.txt}
 ~~~~
-{: #fig-vpn-path title="Multi-domain VPN TE paths example"}
+{: #fig-vpn-path title="Multi-domain VPN TE paths example (with AASVG)"}
 
 There are many options to implement multi-domain L2/L3 VPNs,
 including:
