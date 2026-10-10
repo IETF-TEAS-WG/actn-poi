@@ -1825,46 +1825,361 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.<a href="#section-2.1.1-1" class="pilcrow">¶</a></p>
 <span id="name-multi-domain-vpn-topology-e"></span><div id="fig-vpn-topo">
 <figure id="figure-2">
-            <div class="alignLeft art-ascii-art art-text artwork" id="section-2.1.1-2.1">
-<pre>
-     ------
-    | CE13 |    Packet Domain 1              Packet Domain 2
-     ------ ____________________            __________________
-     ( |                         )         (                  )
-    (  | PE13     P15       BR11  )       (  BR21       P24     )
-   (   |____         ___       ____ )      ( ____      ___       )
-  (    /    \ _ _ _ /   \ _ _ /    \________/    \    /   \     )
- (     \____/       \___/     \___ /        \____/    \_ _/     )
-(   PE14  :\_ _               /      )  (    /  :      : \__     )
-(    ____  :   \__ P16    ___/      )  (  __/_             _\__  )
- (  /    \  :  /   \- - -/    \__________/    \ :_ _ _ :_ /    \  )
- (  \____/     \___/     \____/     )  ( \____/           \____/ )
-   (  / :   :    :         :  BR12  )   (   :    :     :     |  )
-    (/                              )   ( BR22           PE23|   )
- ------ :   :    :         :       )      ( :     :    :     |  )
-| CE14 | (__ ____ _________ _____)           (_____ ___ _ ------
- ------ :   :    :         :                :      :   : | CE23 |
-                                                          ------
-        :   :    :         :                :      :   :
-       _ ___ ____ _________ ________         ______ ___ _______
-      ( :   :    :         :        )       :      :   :       )
-     (      ____  :      ____        )     (      ____  .. ..   )
-    (   :  /    \_ _ _ _/    \ NE12   )   ( :    /    \ _    :   )
-   (  NE11 \____/ :     \____/         )  ( NE21 \____/   \     )
-   (    :  /    \    _ _ /  \          )  ( :     /        \ :   )
-   (   ___/      \:_|        \____    )  (   .___/         _\__  )
-   (  /    \_ _ /    \ _ _ _ /    \   )  (   /    \ _ _ _ /    \  )
-    ( \____/    \____/       \____/  )    (  \____/       \____/  )
-     ( NE13      NE14         NE15   )     (  NE22         NE23  )
-      (_____________________________)       (___________________)
-
-             Optical Domain 1                  Optical Domain 2
-
-
-       _____  = Inter-domain links
-       .. ..  = Cross-layer links
-       _ _ _  = Intra-domain links
-</pre>
+            <div id="section-2.1.1-2.1">
+              <div class="alignLeft art-svg artwork" id="section-2.1.1-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="720" width="560" viewBox="0 0 560 720" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+                  <path d="M 8,280 L 8,312" fill="none" stroke="black"></path>
+                  <path d="M 56,232 L 56,280" fill="none" stroke="black"></path>
+                  <path d="M 64,288 L 64,312" fill="none" stroke="black"></path>
+                  <path d="M 72,40 L 72,72" fill="none" stroke="black"></path>
+                  <path d="M 80,568 L 80,696" fill="none" stroke="black"></path>
+                  <path d="M 104,72 L 104,120" fill="none" stroke="black"></path>
+                  <path d="M 128,40 L 128,72" fill="none" stroke="black"></path>
+                  <path d="M 344,568 L 344,696" fill="none" stroke="black"></path>
+                  <path d="M 408,280 L 408,312" fill="none" stroke="black"></path>
+                  <path d="M 448,232 L 448,280" fill="none" stroke="black"></path>
+                  <path d="M 464,280 L 464,312" fill="none" stroke="black"></path>
+                  <path d="M 176,432 L 216,432" fill="none" stroke="black"></path>
+                  <path d="M 36,472 L 44,488" fill="none" stroke="black"></path>
+                  <path d="M 80,464 L 84,472" fill="none" stroke="black"></path>
+                  <path d="M 76,392 L 84,408" fill="none" stroke="black"></path>
+                  <path d="M 124,472 L 132,488" fill="none" stroke="black"></path>
+                  <path d="M 108,408 L 132,456" fill="none" stroke="black"></path>
+                  <path d="M 116,376 L 124,392" fill="none" stroke="black"></path>
+                  <path d="M 44,216 L 60,248" fill="none" stroke="black"></path>
+                  <path d="M 164,456 L 172,472" fill="none" stroke="black"></path>
+                  <path d="M 212,472 L 220,488" fill="none" stroke="black"></path>
+                  <path d="M 84,200 L 92,216" fill="none" stroke="black"></path>
+                  <path d="M 76,136 L 84,152" fill="none" stroke="black"></path>
+                  <path d="M 124,216 L 132,232" fill="none" stroke="black"></path>
+                  <path d="M 256,464 L 260,472" fill="none" stroke="black"></path>
+                  <path d="M 108,152 L 132,200" fill="none" stroke="black"></path>
+                  <path d="M 244,392 L 252,408" fill="none" stroke="black"></path>
+                  <path d="M 116,120 L 124,136" fill="none" stroke="black"></path>
+                  <path d="M 156,200 L 164,216" fill="none" stroke="black"></path>
+                  <path d="M 324,472 L 332,488" fill="none" stroke="black"></path>
+                  <path d="M 164,136 L 172,152" fill="none" stroke="black"></path>
+                  <path d="M 204,216 L 212,232" fill="none" stroke="black"></path>
+                  <path d="M 284,376 L 292,392" fill="none" stroke="black"></path>
+                  <path d="M 196,120 L 204,136" fill="none" stroke="black"></path>
+                  <path d="M 364,456 L 372,472" fill="none" stroke="black"></path>
+                  <path d="M 244,200 L 252,216" fill="none" stroke="black"></path>
+                  <path d="M 244,136 L 252,152" fill="none" stroke="black"></path>
+                  <path d="M 372,392 L 380,408" fill="none" stroke="black"></path>
+                  <path d="M 404,408 L 412,424" fill="none" stroke="black"></path>
+                  <path d="M 436,472 L 444,488" fill="none" stroke="black"></path>
+                  <path d="M 324,216 L 332,232" fill="none" stroke="black"></path>
+                  <path d="M 436,440 L 444,456" fill="none" stroke="black"></path>
+                  <path d="M 284,120 L 292,136" fill="none" stroke="black"></path>
+                  <path d="M 412,376 L 420,392" fill="none" stroke="black"></path>
+                  <path d="M 476,456 L 484,472" fill="none" stroke="black"></path>
+                  <path d="M 364,200 L 372,216" fill="none" stroke="black"></path>
+                  <path d="M 364,136 L 372,152" fill="none" stroke="black"></path>
+                  <path d="M 428,216 L 436,232" fill="none" stroke="black"></path>
+                  <path d="M 404,120 L 412,136" fill="none" stroke="black"></path>
+                  <path d="M 468,200 L 476,216" fill="none" stroke="black"></path>
+                  <path d="M 476,136 L 484,152" fill="none" stroke="black"></path>
+                  <path d="M 508,120 L 516,136" fill="none" stroke="black"></path>
+                  <path d="M 4,248 L 76,104" fill="none" stroke="black"></path>
+                  <path d="M 76,136 L 84,120" fill="none" stroke="black"></path>
+                  <path d="M 44,216 L 52,200" fill="none" stroke="black"></path>
+                  <path d="M 116,152 L 124,136" fill="none" stroke="black"></path>
+                  <path d="M 84,232 L 92,216" fill="none" stroke="black"></path>
+                  <path d="M 124,216 L 132,200" fill="none" stroke="black"></path>
+                  <path d="M 164,136 L 172,120" fill="none" stroke="black"></path>
+                  <path d="M 4,504 L 76,360" fill="none" stroke="black"></path>
+                  <path d="M 36,472 L 44,456" fill="none" stroke="black"></path>
+                  <path d="M 76,392 L 84,376" fill="none" stroke="black"></path>
+                  <path d="M 156,232 L 164,216" fill="none" stroke="black"></path>
+                  <path d="M 196,152 L 204,136" fill="none" stroke="black"></path>
+                  <path d="M 68,456 L 92,408" fill="none" stroke="black"></path>
+                  <path d="M 204,216 L 212,200" fill="none" stroke="black"></path>
+                  <path d="M 244,136 L 252,120" fill="none" stroke="black"></path>
+                  <path d="M 76,488 L 84,472" fill="none" stroke="black"></path>
+                  <path d="M 116,408 L 124,392" fill="none" stroke="black"></path>
+                  <path d="M 244,200 L 268,152" fill="none" stroke="black"></path>
+                  <path d="M 124,472 L 132,456" fill="none" stroke="black"></path>
+                  <path d="M 244,232 L 252,216" fill="none" stroke="black"></path>
+                  <path d="M 284,152 L 292,136" fill="none" stroke="black"></path>
+                  <path d="M 252,248 L 268,216" fill="none" stroke="black"></path>
+                  <path d="M 288,176 L 308,136" fill="none" stroke="black"></path>
+                  <path d="M 320,112 L 324,104" fill="none" stroke="black"></path>
+                  <path d="M 164,456 L 172,440" fill="none" stroke="black"></path>
+                  <path d="M 164,488 L 172,472" fill="none" stroke="black"></path>
+                  <path d="M 292,248 L 308,216" fill="none" stroke="black"></path>
+                  <path d="M 320,192 L 348,136" fill="none" stroke="black"></path>
+                  <path d="M 360,112 L 364,104" fill="none" stroke="black"></path>
+                  <path d="M 324,216 L 332,200" fill="none" stroke="black"></path>
+                  <path d="M 364,136 L 372,120" fill="none" stroke="black"></path>
+                  <path d="M 244,392 L 252,376" fill="none" stroke="black"></path>
+                  <path d="M 212,472 L 220,456" fill="none" stroke="black"></path>
+                  <path d="M 244,424 L 252,408" fill="none" stroke="black"></path>
+                  <path d="M 364,200 L 388,152" fill="none" stroke="black"></path>
+                  <path d="M 244,456 L 268,408" fill="none" stroke="black"></path>
+                  <path d="M 364,232 L 372,216" fill="none" stroke="black"></path>
+                  <path d="M 404,152 L 412,136" fill="none" stroke="black"></path>
+                  <path d="M 284,408 L 292,392" fill="none" stroke="black"></path>
+                  <path d="M 252,488 L 260,472" fill="none" stroke="black"></path>
+                  <path d="M 252,504 L 324,360" fill="none" stroke="black"></path>
+                  <path d="M 428,216 L 436,200" fill="none" stroke="black"></path>
+                  <path d="M 292,504 L 336,416" fill="none" stroke="black"></path>
+                  <path d="M 352,384 L 364,360" fill="none" stroke="black"></path>
+                  <path d="M 476,136 L 484,120" fill="none" stroke="black"></path>
+                  <path d="M 324,472 L 332,456" fill="none" stroke="black"></path>
+                  <path d="M 372,392 L 380,376" fill="none" stroke="black"></path>
+                  <path d="M 468,200 L 492,152" fill="none" stroke="black"></path>
+                  <path d="M 468,232 L 476,216" fill="none" stroke="black"></path>
+                  <path d="M 508,152 L 516,136" fill="none" stroke="black"></path>
+                  <path d="M 364,456 L 388,408" fill="none" stroke="black"></path>
+                  <path d="M 364,488 L 372,472" fill="none" stroke="black"></path>
+                  <path d="M 484,248 L 496,224" fill="none" stroke="black"></path>
+                  <path d="M 512,192 L 556,104" fill="none" stroke="black"></path>
+                  <path d="M 412,408 L 420,392" fill="none" stroke="black"></path>
+                  <path d="M 436,472 L 444,456" fill="none" stroke="black"></path>
+                  <path d="M 476,488 L 484,472" fill="none" stroke="black"></path>
+                  <path d="M 484,504 L 556,360" fill="none" stroke="black"></path>
+                  <path d="M 72,40 L 128,40" fill="none" stroke="black"></path>
+                  <path d="M 72,72 L 128,72" fill="none" stroke="black"></path>
+                  <path d="M 76,104 L 104,104" fill="none" stroke="black"></path>
+                  <path d="M 104,104 L 324,104" fill="none" stroke="black"></path>
+                  <path d="M 364,104 L 556,104" fill="none" stroke="black"></path>
+                  <path d="M 84,120 L 104,120" fill="none" stroke="black"></path>
+                  <path d="M 172,120 L 196,120" fill="none" stroke="black"></path>
+                  <path d="M 252,120 L 284,120" fill="none" stroke="black"></path>
+                  <path d="M 372,120 L 404,120" fill="none" stroke="black"></path>
+                  <path d="M 484,120 L 508,120" fill="none" stroke="black"></path>
+                  <path d="M 292,136 L 364,136" fill="none" stroke="black"></path>
+                  <path d="M 84,152 L 116,152" fill="none" stroke="black"></path>
+                  <path d="M 172,152 L 196,152" fill="none" stroke="black"></path>
+                  <path d="M 252,152 L 284,152" fill="none" stroke="black"></path>
+                  <path d="M 372,152 L 404,152" fill="none" stroke="black"></path>
+                  <path d="M 484,152 L 508,152" fill="none" stroke="black"></path>
+                  <path d="M 52,200 L 84,200" fill="none" stroke="black"></path>
+                  <path d="M 132,200 L 156,200" fill="none" stroke="black"></path>
+                  <path d="M 212,200 L 244,200" fill="none" stroke="black"></path>
+                  <path d="M 332,200 L 364,200" fill="none" stroke="black"></path>
+                  <path d="M 436,200 L 468,200" fill="none" stroke="black"></path>
+                  <path d="M 252,216 L 324,216" fill="none" stroke="black"></path>
+                  <path d="M 52,232 L 84,232" fill="none" stroke="black"></path>
+                  <path d="M 132,232 L 156,232" fill="none" stroke="black"></path>
+                  <path d="M 212,232 L 244,232" fill="none" stroke="black"></path>
+                  <path d="M 332,232 L 364,232" fill="none" stroke="black"></path>
+                  <path d="M 436,232 L 468,232" fill="none" stroke="black"></path>
+                  <path d="M 4,248 L 56,248" fill="none" stroke="black"></path>
+                  <path d="M 56,248 L 76,248" fill="none" stroke="black"></path>
+                  <path d="M 84,248 L 140,248" fill="none" stroke="black"></path>
+                  <path d="M 148,248 L 220,248" fill="none" stroke="black"></path>
+                  <path d="M 228,248 L 252,248" fill="none" stroke="black"></path>
+                  <path d="M 292,248 L 340,248" fill="none" stroke="black"></path>
+                  <path d="M 348,248 L 388,248" fill="none" stroke="black"></path>
+                  <path d="M 396,248 L 448,248" fill="none" stroke="black"></path>
+                  <path d="M 448,248 L 484,248" fill="none" stroke="black"></path>
+                  <path d="M 8,280 L 56,280" fill="none" stroke="black"></path>
+                  <path d="M 408,280 L 448,280" fill="none" stroke="black"></path>
+                  <path d="M 8,312 L 64,312" fill="none" stroke="black"></path>
+                  <path d="M 408,312 L 464,312" fill="none" stroke="black"></path>
+                  <path d="M 76,360 L 92,360" fill="none" stroke="black"></path>
+                  <path d="M 100,360 L 140,360" fill="none" stroke="black"></path>
+                  <path d="M 148,360 L 220,360" fill="none" stroke="black"></path>
+                  <path d="M 228,360 L 276,360" fill="none" stroke="black"></path>
+                  <path d="M 284,360 L 324,360" fill="none" stroke="black"></path>
+                  <path d="M 364,360 L 388,360" fill="none" stroke="black"></path>
+                  <path d="M 396,360 L 500,360" fill="none" stroke="black"></path>
+                  <path d="M 508,360 L 556,360" fill="none" stroke="black"></path>
+                  <path d="M 84,376 L 116,376" fill="none" stroke="black"></path>
+                  <path d="M 252,376 L 284,376" fill="none" stroke="black"></path>
+                  <path d="M 380,376 L 412,376" fill="none" stroke="black"></path>
+                  <path d="M 84,408 L 116,408" fill="none" stroke="black"></path>
+                  <path d="M 252,408 L 284,408" fill="none" stroke="black"></path>
+                  <path d="M 380,408 L 412,408" fill="none" stroke="black"></path>
+                  <path d="M 44,456 L 68,456" fill="none" stroke="black"></path>
+                  <path d="M 132,456 L 164,456" fill="none" stroke="black"></path>
+                  <path d="M 220,456 L 244,456" fill="none" stroke="black"></path>
+                  <path d="M 332,456 L 364,456" fill="none" stroke="black"></path>
+                  <path d="M 444,456 L 476,456" fill="none" stroke="black"></path>
+                  <path d="M 44,488 L 76,488" fill="none" stroke="black"></path>
+                  <path d="M 132,488 L 164,488" fill="none" stroke="black"></path>
+                  <path d="M 220,488 L 252,488" fill="none" stroke="black"></path>
+                  <path d="M 332,488 L 364,488" fill="none" stroke="black"></path>
+                  <path d="M 444,488 L 476,488" fill="none" stroke="black"></path>
+                  <path d="M 4,504 L 252,504" fill="none" stroke="black"></path>
+                  <path d="M 292,504 L 484,504" fill="none" stroke="black"></path>
+                  <path d="M 80,568 L 344,568" fill="none" stroke="black"></path>
+                  <path d="M 100,616 L 156,616" fill="none" stroke="black"></path>
+                  <path d="M 80,696 L 344,696" fill="none" stroke="black"></path>
+                  <g class="text">
+                    <text x="100" y="52">CE13</text>
+                    <text x="172" y="84">Packet</text>
+                    <text x="228" y="84">Domain</text>
+                    <text x="264" y="84">1</text>
+                    <text x="412" y="84">Packet</text>
+                    <text x="468" y="84">Domain</text>
+                    <text x="504" y="84">2</text>
+                    <text x="112" y="116">_</text>
+                    <text x="100" y="132">PE13</text>
+                    <text x="128" y="132">_</text>
+                    <text x="144" y="132">_</text>
+                    <text x="160" y="132">_</text>
+                    <text x="184" y="132">P15</text>
+                    <text x="208" y="132">_</text>
+                    <text x="224" y="132">_</text>
+                    <text x="240" y="132">_</text>
+                    <text x="268" y="132">BR11</text>
+                    <text x="388" y="132">BR11</text>
+                    <text x="496" y="132">P24</text>
+                    <text x="280" y="164">:</text>
+                    <text x="392" y="164">:</text>
+                    <text x="504" y="164">:</text>
+                    <text x="280" y="180">:</text>
+                    <text x="392" y="180">:</text>
+                    <text x="504" y="180">:</text>
+                    <text x="280" y="196">:</text>
+                    <text x="392" y="196">:</text>
+                    <text x="504" y="196">:</text>
+                    <text x="68" y="212">PE14</text>
+                    <text x="144" y="212">P16</text>
+                    <text x="168" y="212">_</text>
+                    <text x="184" y="212">_</text>
+                    <text x="200" y="212">_</text>
+                    <text x="228" y="212">BR12</text>
+                    <text x="348" y="212">BR22</text>
+                    <text x="376" y="212">_</text>
+                    <text x="392" y="212">_</text>
+                    <text x="408" y="212">_</text>
+                    <text x="424" y="212">_</text>
+                    <text x="452" y="212">PE23</text>
+                    <text x="504" y="212">:</text>
+                    <text x="280" y="228">:</text>
+                    <text x="504" y="228">:</text>
+                    <text x="80" y="244">:</text>
+                    <text x="144" y="244">:</text>
+                    <text x="224" y="244">:</text>
+                    <text x="280" y="244">:</text>
+                    <text x="344" y="244">:</text>
+                    <text x="392" y="244">:</text>
+                    <text x="504" y="244">:</text>
+                    <text x="80" y="260">:</text>
+                    <text x="144" y="260">:</text>
+                    <text x="224" y="260">:</text>
+                    <text x="280" y="260">:</text>
+                    <text x="344" y="260">:</text>
+                    <text x="392" y="260">:</text>
+                    <text x="504" y="260">:</text>
+                    <text x="80" y="276">:</text>
+                    <text x="144" y="276">:</text>
+                    <text x="224" y="276">:</text>
+                    <text x="280" y="276">:</text>
+                    <text x="344" y="276">:</text>
+                    <text x="392" y="276">:</text>
+                    <text x="456" y="276">_</text>
+                    <text x="504" y="276">:</text>
+                    <text x="36" y="292">CE13</text>
+                    <text x="80" y="292">:</text>
+                    <text x="144" y="292">:</text>
+                    <text x="224" y="292">:</text>
+                    <text x="280" y="292">:</text>
+                    <text x="344" y="292">:</text>
+                    <text x="392" y="292">:</text>
+                    <text x="436" y="292">CE23</text>
+                    <text x="504" y="292">:</text>
+                    <text x="80" y="308">:</text>
+                    <text x="144" y="308">:</text>
+                    <text x="224" y="308">:</text>
+                    <text x="280" y="308">:</text>
+                    <text x="344" y="308">:</text>
+                    <text x="392" y="308">:</text>
+                    <text x="504" y="308">:</text>
+                    <text x="88" y="324">...</text>
+                    <text x="144" y="324">:</text>
+                    <text x="224" y="324">:</text>
+                    <text x="280" y="324">:</text>
+                    <text x="344" y="324">:</text>
+                    <text x="392" y="324">:</text>
+                    <text x="504" y="324">:</text>
+                    <text x="96" y="340">:</text>
+                    <text x="144" y="340">:</text>
+                    <text x="224" y="340">:</text>
+                    <text x="280" y="340">:</text>
+                    <text x="344" y="340">:</text>
+                    <text x="392" y="340">:</text>
+                    <text x="504" y="340">:</text>
+                    <text x="96" y="356">:</text>
+                    <text x="144" y="356">:</text>
+                    <text x="224" y="356">:</text>
+                    <text x="280" y="356">:</text>
+                    <text x="344" y="356">:</text>
+                    <text x="392" y="356">:</text>
+                    <text x="504" y="356">:</text>
+                    <text x="144" y="372">:</text>
+                    <text x="224" y="372">:</text>
+                    <text x="344" y="372">:</text>
+                    <text x="504" y="372">:</text>
+                    <text x="100" y="388">NE11</text>
+                    <text x="128" y="388">_</text>
+                    <text x="144" y="388">_</text>
+                    <text x="160" y="388">_</text>
+                    <text x="176" y="388">_</text>
+                    <text x="192" y="388">_</text>
+                    <text x="208" y="388">_</text>
+                    <text x="224" y="388">_</text>
+                    <text x="240" y="388">_</text>
+                    <text x="268" y="388">NE12</text>
+                    <text x="344" y="388">:</text>
+                    <text x="396" y="388">NE21</text>
+                    <text x="504" y="388">:</text>
+                    <text x="144" y="404">:</text>
+                    <text x="224" y="404">:</text>
+                    <text x="344" y="404">:</text>
+                    <text x="504" y="404">:</text>
+                    <text x="144" y="420">:</text>
+                    <text x="224" y="420">:</text>
+                    <text x="344" y="420">:</text>
+                    <text x="488" y="420">....:</text>
+                    <text x="144" y="436">:</text>
+                    <text x="232" y="436">:--</text>
+                    <text x="344" y="436">:</text>
+                    <text x="416" y="436">-</text>
+                    <text x="432" y="436">-</text>
+                    <text x="472" y="436">:</text>
+                    <text x="60" y="468">NE13</text>
+                    <text x="88" y="468">_</text>
+                    <text x="104" y="468">_</text>
+                    <text x="120" y="468">_</text>
+                    <text x="148" y="468">NE14</text>
+                    <text x="176" y="468">_</text>
+                    <text x="192" y="468">_</text>
+                    <text x="208" y="468">_</text>
+                    <text x="236" y="468">NE15</text>
+                    <text x="348" y="468">NE22</text>
+                    <text x="376" y="468">_</text>
+                    <text x="392" y="468">_</text>
+                    <text x="408" y="468">_</text>
+                    <text x="424" y="468">_</text>
+                    <text x="460" y="468">NE23</text>
+                    <text x="96" y="532">Optical</text>
+                    <text x="156" y="532">Domain</text>
+                    <text x="192" y="532">1</text>
+                    <text x="352" y="532">Optical</text>
+                    <text x="412" y="532">Domain</text>
+                    <text x="448" y="532">2</text>
+                    <text x="160" y="580">Legenda</text>
+                    <text x="168" y="612">=</text>
+                    <text x="228" y="612">Inter-domain</text>
+                    <text x="304" y="612">links</text>
+                    <text x="128" y="644">.......</text>
+                    <text x="168" y="644">=</text>
+                    <text x="228" y="644">Cross-domain</text>
+                    <text x="304" y="644">links</text>
+                    <text x="104" y="676">_</text>
+                    <text x="120" y="676">_</text>
+                    <text x="136" y="676">_</text>
+                    <text x="152" y="676">_</text>
+                    <text x="168" y="676">=</text>
+                    <text x="228" y="676">Intra-domain</text>
+                    <text x="304" y="676">links</text>
+                  </g>
+                </svg><a href="#section-2.1.1-2.1.1" class="pilcrow">¶</a>
+</div>
 </div>
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
 <a href="#name-multi-domain-vpn-topology-e" class="selfRef">Multi-domain VPN topology example</a>
@@ -1872,48 +2187,347 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 </div>
 <span id="name-multi-domain-vpn-te-paths-e"></span><div id="fig-vpn-path">
 <figure id="figure-3">
-            <div class="alignLeft art-ascii-art art-text artwork" id="section-2.1.1-3.1">
-<pre>
-     ------
-    | CE13 |    Packet Domain 1              Packet Domain 2
-     ------ ____________________            _________________
-     ( |                         )         (                 )
-    (  | PE13     P15       BR11  )       (  BR21       P24    )
-   (   |____         ___       ____ )      ( ____     ___       )
-  (    / H  \       /   \     /    \________/..  \   / ..\ ..  )
- (     \____/.....  \___/     \___ / .. .. ..___:/   \___/   : )
-(   PE14  :      :              .. .. )  (             :        )
-(    ____  :    _:_ P16   ____ :     )  ( ____  :          __:_ )
- (  / S  \  :  / ..\     /   ..__________/    \        :  /  S \ )
- (  \____/     \__:/     \____/     )  ( \____/ :         \____/ )
-   (  / :   :     :          :BR12  )   (              :     |  )
-    (/  :         :                 )   ( BR22  :        PE23|   )
- ------ :   :     :          :     )      (            :     | )
-| CE14 |:(__ _____:__________ ___)           (__:______ __ ------
- ------ :   :      :         :                         :  | CE23 |
-        :           :                           :          ------
-        :   :       :        :                         :
-       _:___________:________ ______         ___:______ _______
-      ( :   :       :        :      )       (          : .. .. )
-     (  :   ____    :    ____        )     (     :____          )
-    (   :  / .. \.. : ../ .. \ NE12   )   (      /..  \      :   )
-   (  NE11 \____/   :   \____/         )  ( NE21 \__:_/          )
-   (    :           :                  )  (                  :  )
-   (   _:__      ___:         ____    )  (    ____  : ..  ____  )
-   (  / :..\..../...:\       /    \   )  (   /    \      /.. :\  )
-    ( \____/    \____/       \____/  )    (  \____/      \____/  )
-     ( NE13      NE14         NE15   )     (  NE22        NE23  )
-      (_____________________________)       (__________________)
-
-             Optical Domain 1                  Optical Domain 2
-
-
-        H / S = Hub VRF / Spoke VRF
-
-       .....  = Intra-domain TE Path 1 {PE13, P16, NE14, NE13, PE14}
-       .. ..  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12,
-                BR11, BR21, NE21, NE23, P24, PE23}
-</pre>
+            <div id="section-2.1.1-3.1">
+              <div class="alignLeft art-svg artwork" id="section-2.1.1-3.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="704" width="576" viewBox="0 0 576 704" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+                  <path d="M 8,280 L 8,312" fill="none" stroke="black"></path>
+                  <path d="M 16,568 L 16,696" fill="none" stroke="black"></path>
+                  <path d="M 56,232 L 56,280" fill="none" stroke="black"></path>
+                  <path d="M 64,288 L 64,312" fill="none" stroke="black"></path>
+                  <path d="M 72,40 L 72,72" fill="none" stroke="black"></path>
+                  <path d="M 104,72 L 104,120" fill="none" stroke="black"></path>
+                  <path d="M 128,40 L 128,72" fill="none" stroke="black"></path>
+                  <path d="M 408,280 L 408,312" fill="none" stroke="black"></path>
+                  <path d="M 448,232 L 448,280" fill="none" stroke="black"></path>
+                  <path d="M 464,280 L 464,312" fill="none" stroke="black"></path>
+                  <path d="M 528,568 L 528,696" fill="none" stroke="black"></path>
+                  <path d="M 36,472 L 44,488" fill="none" stroke="black"></path>
+                  <path d="M 76,456 L 84,472" fill="none" stroke="black"></path>
+                  <path d="M 76,392 L 84,408" fill="none" stroke="black"></path>
+                  <path d="M 120,464 L 132,488" fill="none" stroke="black"></path>
+                  <path d="M 116,376 L 124,392" fill="none" stroke="black"></path>
+                  <path d="M 44,216 L 60,248" fill="none" stroke="black"></path>
+                  <path d="M 164,456 L 172,472" fill="none" stroke="black"></path>
+                  <path d="M 212,472 L 220,488" fill="none" stroke="black"></path>
+                  <path d="M 84,200 L 92,216" fill="none" stroke="black"></path>
+                  <path d="M 76,136 L 84,152" fill="none" stroke="black"></path>
+                  <path d="M 124,216 L 132,232" fill="none" stroke="black"></path>
+                  <path d="M 252,456 L 260,472" fill="none" stroke="black"></path>
+                  <path d="M 240,384 L 252,408" fill="none" stroke="black"></path>
+                  <path d="M 116,120 L 124,136" fill="none" stroke="black"></path>
+                  <path d="M 156,200 L 164,216" fill="none" stroke="black"></path>
+                  <path d="M 324,472 L 332,488" fill="none" stroke="black"></path>
+                  <path d="M 164,136 L 172,152" fill="none" stroke="black"></path>
+                  <path d="M 204,216 L 212,232" fill="none" stroke="black"></path>
+                  <path d="M 284,376 L 292,392" fill="none" stroke="black"></path>
+                  <path d="M 196,120 L 204,136" fill="none" stroke="black"></path>
+                  <path d="M 364,456 L 372,472" fill="none" stroke="black"></path>
+                  <path d="M 244,200 L 252,216" fill="none" stroke="black"></path>
+                  <path d="M 244,136 L 252,152" fill="none" stroke="black"></path>
+                  <path d="M 372,392 L 380,408" fill="none" stroke="black"></path>
+                  <path d="M 432,464 L 444,488" fill="none" stroke="black"></path>
+                  <path d="M 324,216 L 332,232" fill="none" stroke="black"></path>
+                  <path d="M 284,120 L 292,136" fill="none" stroke="black"></path>
+                  <path d="M 412,376 L 420,392" fill="none" stroke="black"></path>
+                  <path d="M 476,456 L 484,472" fill="none" stroke="black"></path>
+                  <path d="M 364,200 L 372,216" fill="none" stroke="black"></path>
+                  <path d="M 356,120 L 372,152" fill="none" stroke="black"></path>
+                  <path d="M 428,216 L 436,232" fill="none" stroke="black"></path>
+                  <path d="M 404,120 L 412,136" fill="none" stroke="black"></path>
+                  <path d="M 472,208 L 476,216" fill="none" stroke="black"></path>
+                  <path d="M 476,136 L 484,152" fill="none" stroke="black"></path>
+                  <path d="M 508,120 L 516,136" fill="none" stroke="black"></path>
+                  <path d="M 4,248 L 76,104" fill="none" stroke="black"></path>
+                  <path d="M 76,136 L 84,120" fill="none" stroke="black"></path>
+                  <path d="M 44,216 L 52,200" fill="none" stroke="black"></path>
+                  <path d="M 116,152 L 124,136" fill="none" stroke="black"></path>
+                  <path d="M 84,232 L 92,216" fill="none" stroke="black"></path>
+                  <path d="M 124,216 L 132,200" fill="none" stroke="black"></path>
+                  <path d="M 164,136 L 172,120" fill="none" stroke="black"></path>
+                  <path d="M 4,504 L 48,416" fill="none" stroke="black"></path>
+                  <path d="M 64,384 L 76,360" fill="none" stroke="black"></path>
+                  <path d="M 36,472 L 44,456" fill="none" stroke="black"></path>
+                  <path d="M 76,392 L 84,376" fill="none" stroke="black"></path>
+                  <path d="M 156,232 L 164,216" fill="none" stroke="black"></path>
+                  <path d="M 196,152 L 204,136" fill="none" stroke="black"></path>
+                  <path d="M 204,216 L 212,200" fill="none" stroke="black"></path>
+                  <path d="M 244,136 L 252,120" fill="none" stroke="black"></path>
+                  <path d="M 76,488 L 88,464" fill="none" stroke="black"></path>
+                  <path d="M 116,408 L 128,384" fill="none" stroke="black"></path>
+                  <path d="M 124,472 L 132,456" fill="none" stroke="black"></path>
+                  <path d="M 244,232 L 252,216" fill="none" stroke="black"></path>
+                  <path d="M 284,152 L 296,128" fill="none" stroke="black"></path>
+                  <path d="M 252,248 L 268,216" fill="none" stroke="black"></path>
+                  <path d="M 280,192 L 312,128" fill="none" stroke="black"></path>
+                  <path d="M 164,488 L 172,472" fill="none" stroke="black"></path>
+                  <path d="M 292,248 L 308,216" fill="none" stroke="black"></path>
+                  <path d="M 320,192 L 364,104" fill="none" stroke="black"></path>
+                  <path d="M 324,216 L 332,200" fill="none" stroke="black"></path>
+                  <path d="M 364,136 L 372,120" fill="none" stroke="black"></path>
+                  <path d="M 244,392 L 252,376" fill="none" stroke="black"></path>
+                  <path d="M 212,472 L 220,456" fill="none" stroke="black"></path>
+                  <path d="M 364,232 L 372,216" fill="none" stroke="black"></path>
+                  <path d="M 404,152 L 412,136" fill="none" stroke="black"></path>
+                  <path d="M 284,408 L 292,392" fill="none" stroke="black"></path>
+                  <path d="M 252,488 L 260,472" fill="none" stroke="black"></path>
+                  <path d="M 252,504 L 324,360" fill="none" stroke="black"></path>
+                  <path d="M 428,216 L 436,200" fill="none" stroke="black"></path>
+                  <path d="M 292,504 L 336,416" fill="none" stroke="black"></path>
+                  <path d="M 352,384 L 364,360" fill="none" stroke="black"></path>
+                  <path d="M 476,136 L 484,120" fill="none" stroke="black"></path>
+                  <path d="M 324,472 L 332,456" fill="none" stroke="black"></path>
+                  <path d="M 372,392 L 380,376" fill="none" stroke="black"></path>
+                  <path d="M 468,232 L 476,216" fill="none" stroke="black"></path>
+                  <path d="M 508,152 L 516,136" fill="none" stroke="black"></path>
+                  <path d="M 364,488 L 372,472" fill="none" stroke="black"></path>
+                  <path d="M 484,248 L 496,224" fill="none" stroke="black"></path>
+                  <path d="M 512,192 L 556,104" fill="none" stroke="black"></path>
+                  <path d="M 412,408 L 420,392" fill="none" stroke="black"></path>
+                  <path d="M 436,472 L 444,456" fill="none" stroke="black"></path>
+                  <path d="M 476,488 L 484,472" fill="none" stroke="black"></path>
+                  <path d="M 484,504 L 556,360" fill="none" stroke="black"></path>
+                  <path d="M 72,40 L 128,40" fill="none" stroke="black"></path>
+                  <path d="M 72,72 L 128,72" fill="none" stroke="black"></path>
+                  <path d="M 76,104 L 104,104" fill="none" stroke="black"></path>
+                  <path d="M 104,104 L 324,104" fill="none" stroke="black"></path>
+                  <path d="M 364,104 L 556,104" fill="none" stroke="black"></path>
+                  <path d="M 84,120 L 104,120" fill="none" stroke="black"></path>
+                  <path d="M 172,120 L 196,120" fill="none" stroke="black"></path>
+                  <path d="M 252,120 L 284,120" fill="none" stroke="black"></path>
+                  <path d="M 372,120 L 404,120" fill="none" stroke="black"></path>
+                  <path d="M 484,120 L 508,120" fill="none" stroke="black"></path>
+                  <path d="M 84,152 L 116,152" fill="none" stroke="black"></path>
+                  <path d="M 172,152 L 196,152" fill="none" stroke="black"></path>
+                  <path d="M 252,152 L 284,152" fill="none" stroke="black"></path>
+                  <path d="M 372,152 L 404,152" fill="none" stroke="black"></path>
+                  <path d="M 484,152 L 508,152" fill="none" stroke="black"></path>
+                  <path d="M 52,200 L 84,200" fill="none" stroke="black"></path>
+                  <path d="M 212,200 L 228,200" fill="none" stroke="black"></path>
+                  <path d="M 332,200 L 364,200" fill="none" stroke="black"></path>
+                  <path d="M 436,200 L 460,200" fill="none" stroke="black"></path>
+                  <path d="M 252,216 L 324,216" fill="none" stroke="black"></path>
+                  <path d="M 52,232 L 84,232" fill="none" stroke="black"></path>
+                  <path d="M 132,232 L 156,232" fill="none" stroke="black"></path>
+                  <path d="M 212,232 L 244,232" fill="none" stroke="black"></path>
+                  <path d="M 332,232 L 364,232" fill="none" stroke="black"></path>
+                  <path d="M 436,232 L 468,232" fill="none" stroke="black"></path>
+                  <path d="M 4,248 L 56,248" fill="none" stroke="black"></path>
+                  <path d="M 56,248 L 76,248" fill="none" stroke="black"></path>
+                  <path d="M 84,248 L 100,248" fill="none" stroke="black"></path>
+                  <path d="M 108,248 L 140,248" fill="none" stroke="black"></path>
+                  <path d="M 148,248 L 220,248" fill="none" stroke="black"></path>
+                  <path d="M 228,248 L 252,248" fill="none" stroke="black"></path>
+                  <path d="M 292,248 L 340,248" fill="none" stroke="black"></path>
+                  <path d="M 348,248 L 388,248" fill="none" stroke="black"></path>
+                  <path d="M 396,248 L 448,248" fill="none" stroke="black"></path>
+                  <path d="M 448,248 L 484,248" fill="none" stroke="black"></path>
+                  <path d="M 8,280 L 56,280" fill="none" stroke="black"></path>
+                  <path d="M 408,280 L 448,280" fill="none" stroke="black"></path>
+                  <path d="M 8,312 L 64,312" fill="none" stroke="black"></path>
+                  <path d="M 408,312 L 464,312" fill="none" stroke="black"></path>
+                  <path d="M 76,360 L 100,360" fill="none" stroke="black"></path>
+                  <path d="M 108,360 L 140,360" fill="none" stroke="black"></path>
+                  <path d="M 148,360 L 268,360" fill="none" stroke="black"></path>
+                  <path d="M 276,360 L 324,360" fill="none" stroke="black"></path>
+                  <path d="M 364,360 L 388,360" fill="none" stroke="black"></path>
+                  <path d="M 396,360 L 500,360" fill="none" stroke="black"></path>
+                  <path d="M 508,360 L 556,360" fill="none" stroke="black"></path>
+                  <path d="M 84,376 L 116,376" fill="none" stroke="black"></path>
+                  <path d="M 252,376 L 284,376" fill="none" stroke="black"></path>
+                  <path d="M 380,376 L 412,376" fill="none" stroke="black"></path>
+                  <path d="M 84,408 L 116,408" fill="none" stroke="black"></path>
+                  <path d="M 252,408 L 284,408" fill="none" stroke="black"></path>
+                  <path d="M 380,408 L 412,408" fill="none" stroke="black"></path>
+                  <path d="M 44,456 L 76,456" fill="none" stroke="black"></path>
+                  <path d="M 132,456 L 164,456" fill="none" stroke="black"></path>
+                  <path d="M 220,456 L 252,456" fill="none" stroke="black"></path>
+                  <path d="M 332,456 L 364,456" fill="none" stroke="black"></path>
+                  <path d="M 444,456 L 476,456" fill="none" stroke="black"></path>
+                  <path d="M 44,488 L 76,488" fill="none" stroke="black"></path>
+                  <path d="M 132,488 L 164,488" fill="none" stroke="black"></path>
+                  <path d="M 220,488 L 252,488" fill="none" stroke="black"></path>
+                  <path d="M 332,488 L 364,488" fill="none" stroke="black"></path>
+                  <path d="M 444,488 L 476,488" fill="none" stroke="black"></path>
+                  <path d="M 4,504 L 252,504" fill="none" stroke="black"></path>
+                  <path d="M 292,504 L 484,504" fill="none" stroke="black"></path>
+                  <path d="M 16,568 L 528,568" fill="none" stroke="black"></path>
+                  <path d="M 16,696 L 528,696" fill="none" stroke="black"></path>
+                  <g class="text">
+                    <text x="100" y="52">CE13</text>
+                    <text x="172" y="84">Packet</text>
+                    <text x="228" y="84">Domain</text>
+                    <text x="264" y="84">1</text>
+                    <text x="412" y="84">Packet</text>
+                    <text x="468" y="84">Domain</text>
+                    <text x="504" y="84">2</text>
+                    <text x="112" y="116">_</text>
+                    <text x="320" y="116">/</text>
+                    <text x="100" y="132">PE13</text>
+                    <text x="184" y="132">P15</text>
+                    <text x="268" y="132">BR11</text>
+                    <text x="304" y="132">.</text>
+                    <text x="332" y="132">....</text>
+                    <text x="388" y="132">BR11</text>
+                    <text x="496" y="132">P24</text>
+                    <text x="80" y="164">"H"</text>
+                    <text x="108" y="164">::</text>
+                    <text x="264" y="164">:</text>
+                    <text x="392" y="164">:</text>
+                    <text x="488" y="164">:</text>
+                    <text x="504" y="164">:</text>
+                    <text x="108" y="180">::</text>
+                    <text x="128" y="180">.</text>
+                    <text x="144" y="180">.</text>
+                    <text x="248" y="180">....:</text>
+                    <text x="392" y="180">:</text>
+                    <text x="476" y="180">...:</text>
+                    <text x="504" y="180">:</text>
+                    <text x="144" y="196">_:_</text>
+                    <text x="236" y="196">:_</text>
+                    <text x="392" y="196">:</text>
+                    <text x="424" y="196">"S"</text>
+                    <text x="464" y="196">:</text>
+                    <text x="504" y="196">:</text>
+                    <text x="68" y="212">PE14</text>
+                    <text x="104" y="212">:</text>
+                    <text x="144" y="212">P16</text>
+                    <text x="228" y="212">BR12</text>
+                    <text x="348" y="212">BR22</text>
+                    <text x="392" y="212">:</text>
+                    <text x="452" y="212">PE23</text>
+                    <text x="504" y="212">:</text>
+                    <text x="32" y="228">"S"</text>
+                    <text x="104" y="228">:</text>
+                    <text x="392" y="228">:</text>
+                    <text x="504" y="228">:</text>
+                    <text x="104" y="244">:</text>
+                    <text x="224" y="244">:</text>
+                    <text x="344" y="244">:</text>
+                    <text x="392" y="244">:</text>
+                    <text x="504" y="244">:</text>
+                    <text x="80" y="260">:</text>
+                    <text x="104" y="260">:</text>
+                    <text x="144" y="260">:</text>
+                    <text x="224" y="260">:</text>
+                    <text x="344" y="260">:</text>
+                    <text x="392" y="260">:</text>
+                    <text x="504" y="260">:</text>
+                    <text x="104" y="276">:</text>
+                    <text x="224" y="276">:</text>
+                    <text x="344" y="276">:</text>
+                    <text x="392" y="276">:</text>
+                    <text x="456" y="276">_</text>
+                    <text x="504" y="276">:</text>
+                    <text x="36" y="292">CE13</text>
+                    <text x="80" y="292">:</text>
+                    <text x="104" y="292">:</text>
+                    <text x="144" y="292">:</text>
+                    <text x="224" y="292">:</text>
+                    <text x="344" y="292">:</text>
+                    <text x="392" y="292">:</text>
+                    <text x="436" y="292">CE23</text>
+                    <text x="504" y="292">:</text>
+                    <text x="104" y="308">:</text>
+                    <text x="248" y="308">:......</text>
+                    <text x="344" y="308">:</text>
+                    <text x="392" y="308">:</text>
+                    <text x="504" y="308">:</text>
+                    <text x="76" y="324">..</text>
+                    <text x="104" y="324">:</text>
+                    <text x="144" y="324">:</text>
+                    <text x="272" y="324">:</text>
+                    <text x="344" y="324">:</text>
+                    <text x="392" y="324">:</text>
+                    <text x="504" y="324">:</text>
+                    <text x="56" y="340">:</text>
+                    <text x="104" y="340">:</text>
+                    <text x="272" y="340">:</text>
+                    <text x="344" y="340">:</text>
+                    <text x="392" y="340">:</text>
+                    <text x="504" y="340">:</text>
+                    <text x="104" y="356">:</text>
+                    <text x="144" y="356">:</text>
+                    <text x="272" y="356">:</text>
+                    <text x="344" y="356">:</text>
+                    <text x="392" y="356">:</text>
+                    <text x="504" y="356">:</text>
+                    <text x="56" y="372">:</text>
+                    <text x="344" y="372">:</text>
+                    <text x="504" y="372">:</text>
+                    <text x="100" y="388">NE11</text>
+                    <text x="184" y="388">.............</text>
+                    <text x="268" y="388">NE12</text>
+                    <text x="344" y="388">:</text>
+                    <text x="396" y="388">NE21</text>
+                    <text x="504" y="388">:</text>
+                    <text x="56" y="404">:</text>
+                    <text x="144" y="404">:</text>
+                    <text x="344" y="404">:</text>
+                    <text x="504" y="404">:</text>
+                    <text x="344" y="420">:</text>
+                    <text x="392" y="420">:</text>
+                    <text x="484" y="420">.....:</text>
+                    <text x="56" y="436">:</text>
+                    <text x="144" y="436">:</text>
+                    <text x="344" y="436">:</text>
+                    <text x="392" y="436">:</text>
+                    <text x="464" y="436">:</text>
+                    <text x="392" y="452">:</text>
+                    <text x="60" y="468">NE13</text>
+                    <text x="96" y="468">.</text>
+                    <text x="112" y="468">.</text>
+                    <text x="148" y="468">NE14</text>
+                    <text x="236" y="468">NE15</text>
+                    <text x="348" y="468">NE22</text>
+                    <text x="408" y="468">:....</text>
+                    <text x="460" y="468">NE23</text>
+                    <text x="96" y="532">Optical</text>
+                    <text x="156" y="532">Domain</text>
+                    <text x="192" y="532">1</text>
+                    <text x="352" y="532">Optical</text>
+                    <text x="412" y="532">Domain</text>
+                    <text x="448" y="532">2</text>
+                    <text x="104" y="580">Legenda</text>
+                    <text x="32" y="612">H</text>
+                    <text x="48" y="612">/</text>
+                    <text x="64" y="612">S</text>
+                    <text x="80" y="612">=</text>
+                    <text x="104" y="612">Hub</text>
+                    <text x="136" y="612">VRF</text>
+                    <text x="160" y="612">/</text>
+                    <text x="192" y="612">Spoke</text>
+                    <text x="232" y="612">VRF</text>
+                    <text x="36" y="644">..</text>
+                    <text x="60" y="644">..</text>
+                    <text x="88" y="644">=</text>
+                    <text x="148" y="644">Intra-domain</text>
+                    <text x="212" y="644">TE</text>
+                    <text x="244" y="644">Path</text>
+                    <text x="272" y="644">1</text>
+                    <text x="308" y="644">{PE13,</text>
+                    <text x="356" y="644">P16,</text>
+                    <text x="400" y="644">NE14,</text>
+                    <text x="448" y="644">NE13,</text>
+                    <text x="496" y="644">PE14}</text>
+                    <text x="48" y="660">.....</text>
+                    <text x="88" y="660">=</text>
+                    <text x="148" y="660">Inter-domain</text>
+                    <text x="212" y="660">TE</text>
+                    <text x="244" y="660">Path</text>
+                    <text x="272" y="660">2</text>
+                    <text x="308" y="660">{PE13,</text>
+                    <text x="360" y="660">NE11,</text>
+                    <text x="408" y="660">NE12,</text>
+                    <text x="456" y="660">BR12,</text>
+                    <text x="184" y="676">BR11,</text>
+                    <text x="232" y="676">BR21,</text>
+                    <text x="280" y="676">NE21,</text>
+                    <text x="328" y="676">NE23,</text>
+                    <text x="372" y="676">P24,</text>
+                    <text x="416" y="676">PE23}</text>
+                  </g>
+                </svg><a href="#section-2.1.1-3.1.1" class="pilcrow">¶</a>
+</div>
 </div>
 <figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
 <a href="#name-multi-domain-vpn-te-paths-e" class="selfRef">Multi-domain VPN TE paths example</a>
@@ -4020,7 +4634,7 @@ including:<a href="#section-7-1" class="pilcrow">¶</a></p>
 techniques may be used to help secure these MPI interfaces. These
 mechanisms include using Transport Layer Security (TLS) to provide
 secure transport for RESTCONF, NETCONF and PCEP.
-Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) [RFC8341], which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a></p>
+Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span>, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a></p>
 <div id="lldp-snooping-security-considerations">
 <section id="section-7.1">
         <h3 id="name-lldp-snooping-security-cons">
@@ -4212,6 +4826,10 @@ discussed in <span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref
 <dt id="RFC8040">[RFC8040]</dt>
         <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8341">[RFC8341]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"Network Configuration Access Control Model"</span>, <span class="seriesInfo">STD 91</span>, <span class="seriesInfo">RFC 8341</span>, <span class="seriesInfo">DOI 10.17487/RFC8341</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8341">https://www.rfc-editor.org/rfc/rfc8341</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8342">[RFC8342]</dt>
         <dd>
