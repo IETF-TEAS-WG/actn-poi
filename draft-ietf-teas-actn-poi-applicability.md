@@ -140,7 +140,7 @@ to Service Providers.
 Existing IETF protocols and data models are identified for each
 multi-technology scenario (packet over optical), particularly
 emphasising the Multi-Domain Service Coordinator to Provisioning
-Network Controller Interface (MPI) within the ACTN architecture
+Network Controller Interface (MPI) within the ACTN architecture.
 
 --- middle
 
@@ -267,7 +267,7 @@ domains.
 PNC Domain:
 : A portion of the network controlled by one PNC instance, where
 capabilities are defined by the technologies supported by both the PNC
-instance and its managed network elements.
+instance and its managed Network Elements (NEs).
 
 Optical PNC (O-PNC):
 : A PNC controlling an optical network domain.
@@ -406,11 +406,11 @@ such as PE-BR, PE-P, BR-P, and P-P IP links. Consequently, inter-domain
 IP links are always single-technology connections, supported by
 single-technology Ethernet links between physically adjacent IP routers.
 
-As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers, multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
-
 Therefore, if inter-domain links between optical domains exist, they
 would be utilized to support multi-domain optical services, which fall
 outside the scope of this document.
+
+As described in {{?RFC7424}}, in order to increase the bandwidth between two adjacent routers, multiple Ethernet links can be setup between adjacent routers using either Link Aggregation Groups (LAGs) {{IEEE_802.1AX}} or Equal Cost Multi-Path (ECMP) {{?RFC2991}}.
 
 The optical nodes within the optical domains can be either:
 
@@ -500,10 +500,14 @@ spoke
 PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.
 
-{::include ./figures/vpn-topology.md}
+~~~~ aasvg
+{::include ./figures/vpn-topology.txt}
+~~~~
 {: #fig-vpn-topo title="Multi-domain VPN topology example"}
 
-{::include ./figures/vpn-te-paths.md}
+~~~~ aasvg
+{::include ./figures/vpn-te-paths.txt}
+~~~~
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}
 
 There are many options to implement multi-domain L2/L3 VPNs,
@@ -558,15 +562,12 @@ and can be categorized into three main cases:
 
 1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which neither
 share resources with other services, nor compete for bandwidth with
-other tunnels, ensuring deterministic latency performance.
+other tunnels, ensuring deterministic or predictable latency performance.
 
 1. The L2/L3 VPN is bound to a set of dedicated TE tunnels, which can
 compete for bandwidth with other tunnels.
 
 1. The L2/L3 VPN is bound to a set of TE tunnels which can be shared with other services.
-
-1. The customer does not require isolation and may request a VPN service
-where the associated tunnels are shared across multiple VPNs.
 
 For each TE path required to support the L2/L3 VPN network service,
 it is possible that:
@@ -714,8 +715,8 @@ following:
 
 1. To perform single-layer, single-domain local TE path computation,
 when requested by the MDSC, between two PEs (for single-domain
-end-to-end TE path) or between PEs and BRs for an inter-domain TE
-path selected by the MDSC.
+end-to-end TE path) or between PEs and BRs (for an intra-domain TE
+path segment, as selected by the MDSC).
 
 1. To configure the routers in their respective domain to setup a TE
 path;
@@ -998,7 +999,7 @@ the underlying PNCs.
 discover all the TE information and requests the creation of TE
 tunnels. However, it uses PCEP for hierarchical path computation.
 
-   As mentioned in Option 1, from an operator perspective, this
+   As opposed to Option 1, from an operator perspective, this
    option can add integration complexity to have two protocols
    instead of one unless the RESTCONF/YANG interface is added to an
    existing PCEP deployment (brownfield scenario).
@@ -1747,7 +1748,7 @@ binding SID assigned by P-PNC2 to the corresponding SR policy in BR21).
 The P-PNC1 properly configures the routers within its domain to set up
 the requested path and the multi-domain TE path stitching. For example,
 in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs
-assigned within its domain and the PE SID assigned by P-PNC1 to the
+assigned within its domain and the Peer SID assigned by P-PNC1 to the
 inter-domain link between BR11 and BR21, along with the binding SID
 assigned by P-PNC2, installs the proper policy or policies within PE13.
 
@@ -1764,7 +1765,7 @@ When performing multi-layer/multi-domain path computation, the MDSC
 can delegate single-domain optical path computation to the O-PNC.
 
 As described in {{optical-topology-discovery}}, {{inter-domain-link-discovery}},
-and {{multi-technology-link-discovery}}, there is a one-to-one
+and {{multi-technology-link-discovery}}, without LAG, there is a one-to-one
 relationship between a multi-layer intra-domain IP link and its underlay
 optical tunnel. Therefore, the properties of an optical path between
 two optical TTPs, as computed by the O-PNC, can be used by the MDSC to
@@ -1788,7 +1789,7 @@ scope.
 ## Multi-technology IP Link Setup {#multi-technology-link-setup}
 
 As described in {{optical-path-computation}}, there is a one-to-one
-relationship between a multi-technology intra-domain IP link and its
+relationship between a multi-technology intra-domain Ethernet link and its
 underlay optical tunnel.
 
 Therefore, to set up a new multi-technology intra-domain IP link,
@@ -1959,8 +1960,8 @@ It is worth noting that the list of SRLGs for a multi-technology IP link
 can be quite long. Implementation-specific mechanisms can be
 implemented by the MDSC or by the O-PNC to summarize the SRLGs of an
 optical tunnel. These mechanisms are implementation-specific and have
-no impact on the YANG models nor on the interoperability at the MPI,
-but cares have to be taken to avoid missing information.
+no impact on the YANG models nor on the interoperability at the MPI.
+However, they should be carefully designed to avoid missing information: failure to do so could result in miscalculating two path candidates as being fully SRLG-disjoint when they actually share a hidden failure point.
 
 ## TE Path Setup and Update {#te-path-config}
 
@@ -2047,9 +2048,9 @@ of this draft.
 # Conclusions and Gaps {#conclusions}
 
 The analysis provided in this document shows that the IETF YANG models
-described in {{yang}} provide useful support for Packet Optical Integration
-(POI) scenarios for resource discovery (network topology, service,
-tunnels, and network inventory discovery), as well as for supporting
+described in {{yang}} provide good support for Packet Optical Integration
+(POI) scenarios for resource discovery (e.g., network topology, service,
+tunnels), as well as for setup of
 multi-layer/multi-domain L2/L3 VPN network services.
 
 The following gaps were identified that may need to be addressed by
@@ -2100,7 +2101,8 @@ Although not applicable to this document, it has been noted that being
 able to use WSON and Flexi-grid topology models together (through
 multi-inheritance) is not only useful for mixed fixed-grid and
 flexible-grid DWDM network topologies but also the only viable option
-for a mixed CWDM and DWDM network topology.
+for a mixed Coarse Wavelength Division
+Multiplexing (CWDM) and DWDM network topology.
 
 Although not applicable to this document, it has been noted that the
 WDM tunnel model would also support optical tunnel setup in the case
@@ -2132,12 +2134,8 @@ including:
 Several existing authentication and encryption practices and
 techniques may be used to help secure these MPI interfaces. These
 mechanisms include using Transport Layer Security (TLS) to provide
-secure transport for RESTCONF, NETCONF and PCEP. Furthermore, access
-control techniques can also provide additional security. NETCONF
-supports an Access Control Model (NACM), and RESTCONF supports Role
-Based Access Control (RBAC), which should also ensure that MDSC to
-PNC communication is based on authorised use and granular control of
-connectivity and resource requests.
+secure transport for RESTCONF, NETCONF and PCEP.
+Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) {{!RFC8341}}, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.
 
 ## LLDP Snooping Security Considerations
 
@@ -2482,7 +2480,19 @@ The authors would like to thank Young Lee for his valuable input on the initial 
 
 The authors would like to thank Adrian Farrel for his review and comments to this document.
 
-The authors would like to thank Acee Lindem for the Routing Directorate Early Review.
+The authors would like to thank Acee Lindem for his Early Routing Area Directorate (Rtgdir) Review.
+
+The authors would like to thank
+Ines Robles,
+Zheng Zhang,
+Nick Buraglio, and
+Yaron Sheffer
+for their IETF Last Call (LC)
+General Area Review Team (Genart),
+Routing Area Directorate (Rtgdir),
+Ops Directorate (Opsdir), and
+Security Area Directorate (Secdir)
+reviews.
 
 Previous versions of document were prepared using
 2-Word-v2.0.template.dot.
