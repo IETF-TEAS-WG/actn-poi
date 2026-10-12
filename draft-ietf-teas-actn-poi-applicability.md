@@ -1746,11 +1746,8 @@ BR21 and the information for multi-domain TE path stitching, as
 described in {{te-path-discovery}} (e.g., in inter-domain SR-TE, the
 binding SID assigned by P-PNC2 to the corresponding SR policy in BR21).
 The P-PNC1 properly configures the routers within its domain to set up
-the requested path and the multi-domain TE path stitching. For example,
-in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs
-assigned within its domain and the Peer SID assigned by P-PNC1 to the
-inter-domain link between BR11 and BR21, along with the binding SID
-assigned by P-PNC2, installs the proper policy or policies within PE13.
+the requested path and the multi-domain TE path stitching.
+For example, in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs assigned within its domain and the Peer Adjancency SID assigned by P-PNC1 to the inter-domain link between BR11 and BR21, along with the binding SID assigned by P-PNC2, installs the proper policy or policies within PE13.
 
 Once the TE paths have been selected and, if needed, set up or modified,
 the MDSC can request both P-PNCs to configure the L3VPN and its binding
