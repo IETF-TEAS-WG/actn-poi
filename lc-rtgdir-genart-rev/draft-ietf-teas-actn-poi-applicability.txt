@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 13 April 2027                                          Vodafone
+Expires: 15 April 2027                                          Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                         10 October 2026
+                                                         12 October 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 April 2027.
+   This Internet-Draft will expire on 15 April 2027.
 
 Copyright Notice
 
@@ -2059,10 +2059,10 @@ Table of Contents
    P-PNC1 properly configures the routers within its domain to set up
    the requested path and the multi-domain TE path stitching.  For
    example, in inter-domain SR-TE, the P-PNC1, knowing the node and
-   adjacency SIDs assigned within its domain and the Peer SID assigned
-   by P-PNC1 to the inter-domain link between BR11 and BR21, along with
-   the binding SID assigned by P-PNC2, installs the proper policy or
-   policies within PE13.
+   adjacency SIDs assigned within its domain and the Peer Adjancency SID
+   assigned by P-PNC1 to the inter-domain link between BR11 and BR21,
+   along with the binding SID assigned by P-PNC2, installs the proper
+   policy or policies within PE13.
 
    Once the TE paths have been selected and, if needed, set up or
    modified, the MDSC can request both P-PNCs to configure the L3VPN and
