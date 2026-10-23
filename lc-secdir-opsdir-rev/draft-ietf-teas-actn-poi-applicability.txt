@@ -546,9 +546,6 @@ Table of Contents
    PE (PE14) are within the same packet domain, and the other spoke PE
    (PE23) is within a different packet domain.
 
-   +---+
-   |   |
-   +---+
             ______
            | CE13 |
            |______|
