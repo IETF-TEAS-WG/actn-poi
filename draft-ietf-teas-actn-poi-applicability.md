@@ -127,6 +127,20 @@ informative:
     date: December 2018
     seriesinfo: IEEE 802.1AE-2018
     target: https://standards.ieee.org/standard/802_1AE-2018.html
+  ONF-TR-530:
+    title: "Threat Analysis for the SDN Architecture"
+    author:
+      org: "Open Networking Foundation"
+    date: July 2016
+    seriesinfo: "ONF TR-530"
+    target: "https://opennetworking.org/wp-content/uploads/2014/10/Threat_Analysis_for_the_SDN_Architecture.pdf"
+  ENISA-SDN:
+    title: "Threat Landscape and Good Practice Guide for Software Defined Networks/5G"
+    author:
+      org: "European Union Agency for Network and Information Security (ENISA)"
+    date: 2016
+    target: "https://www.enisa.europa.eu/sites/default/files/publications/SDN%20Threat%20Landscape.pdf"
+
 
 --- abstract
 
@@ -149,8 +163,7 @@ Network Controller Interface (MPI) within the ACTN architecture.
 The full automation of management and control for Service Providers'
 transport  networks, spanning IP/MPLS, optical, and microwave
 technologies, is crucial to addressing customer demands for high-bandwidth
-applications, such as ultra-fast  mobile broadband for 5G and fiber
-connectivity services. The Abstraction and  Control of TE Networks (ACTN)
+applications. The Abstraction and  Control of TE Networks (ACTN)
 architecture and interfaces enable the automation  and efficient
 operation of complex optical and IP/MPLS networks using standardized
 interfaces and data models. This approach supports a broad spectrum of
@@ -343,7 +356,7 @@ Optical Integration (POI), where the ACTN hierarchy is implemented to
 manage a multi-technology, multi-domain network comprising two optical
 domains and two packet domains, as illustrated in {{fig-ref-network}}:
 
-{::include figures/reference-network.md}
+{::include ./figures/reference-network.md}
 {: #fig-ref-network title="Reference Network"}
 
 The ACTN architecture, as defined in {{!RFC8453}}, is utilized to manage
@@ -398,7 +411,16 @@ Inter-domain physical links exist only under the following conditions:
 -  All the physical interfaces at inter-domain links are Ethernet
 physical interfaces.
 
-Scenarios using coherent optical interfaces on the IP routers are outside the scope of this document.
+Scenarios using coherent pluggable optical interfaces on the IP routers
+(e.g., 400ZR or OpenZR+) are outside the scope of this document. This
+exclusion is deliberate: with coherent pluggables, the IP router itself
+becomes a DWDM endpoint, which changes the boundary between the packet
+and optical domains assumed in this document (there is no
+cross-technology Ethernet link), and the options for controlling the
+pluggables (from the O-PNC or from the P-PNC) are still evolving. These
+scenarios are addressed by separate work in the CCAMP Working Group
+(see {{?I-D.ietf-ccamp-actn-poi-pluggable-usecases-gaps}} and
+{{?I-D.ietf-ccamp-actn-wdm-pluggable-modelling}}).
 
 This document analyzes scenarios in which all multi-technology IP links
 supported by the optical network are intra-domain (intra-AS/intra-area),
@@ -501,12 +523,12 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.
 
 ~~~~ aasvg
-{::include figures/vpn-topology.txt}
+{::include ./figures/vpn-topology.txt}
 ~~~~
 {: #fig-vpn-topo title="Multi-domain VPN topology example"}
 
 ~~~~ aasvg
-{::include figures/vpn-te-paths.txt}
+{::include ./figures/vpn-te-paths.txt}
 ~~~~
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}
 
@@ -1040,9 +1062,15 @@ the links reported in the network topology.
 
 Reporting the entire inventory and detailed topology information of
 packet and optical networks to the MDSC may present scalability
-issues as a potential drawback. The analysis of the scalability of
-this approach and mechanisms to address potential issues is outside
-the scope of this document.
+issues as a potential drawback, in particular for large optical
+networks (see also {{path-computation-overview}}). This document does
+not analyze the scalability of this approach. The characterization of
+the scalability constraints (e.g., the network sizes at which they
+arise) and the mechanisms to address them (e.g., topology abstraction,
+as described in {{!RFC8453}}, or filtering of the notification
+subscriptions) are identified as a gap requiring further work (see
+{{conclusions}}). The scale supported by a given MDSC or PNC
+implementation is implementation-specific.
 
 Each PNC provides the MDSC the topology view of the domain it
 controls, as described in {{optical-topology-discovery}} and
@@ -1171,7 +1199,7 @@ used to associate the client LTPs (7-0) in NE11 and (8-0) in NE12
 with the corresponding optical TTPs (7) in NE11 and (8) in NE12,
 respectively.
 
-{::include figures/multi-layer-optical-topology.md}
+{::include ./figures/multi-layer-optical-topology.md}
 {: #fig-optical-topo title="Multi-layer optical topology discovery"}
 
 The intra-domain optical links are discovered by O-PNCs, using
@@ -1380,7 +1408,7 @@ corresponding Ethernet interface on the optical node, e.g., between
 LTP 5-0 on PE13 and LTP 7-0 on NE11, as shown in
 {{fig-cross-technology-link}}.
 
-{::include figures/cross-technology-link.md}
+{::include ./figures/cross-technology-link.md}
 {: #fig-cross-technology-link title="Cross-technology Ethernet link
 discovery"}
 
@@ -1405,7 +1433,7 @@ LLDP information being sent and received from the corresponding
 Ethernet interfaces, e.g., between Ethernet LTP 3-1 on BR11 and
 Ethernet LTP 4-1 on BR21, as shown in {{fig-inter-domain-link}}.
 
-{::include figures/inter-domain-link.md}
+{::include ./figures/inter-domain-link.md}
 {: #fig-inter-domain-link title="Inter-domain Ethernet and IP link
 discovery"}
 
@@ -1480,7 +1508,7 @@ intra-domain IP and Ethernet links, as described in
 reported at the MPI within the packet and the Ethernet network
 topologies, e.g., as shown in {{fig-multi-technology-link}}.
 
-{::include figures/multi-technology-intra-domain-link.md}
+{::include ./figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link title="Multi-technology intra-domain
 Ethernet and IP link discovery"}
 
@@ -1530,7 +1558,7 @@ In this case, the P-PNC, always reports two Ethernet LTPs for each
 Ethernet interface on the IP router, e.g., the Ethernet LTP 1-0 and 1-1
 on PE13, shown in {{fig-intra-domain-link}}.
 
-{::include figures/single-technology-intra-domain-link.md}
+{::include ./figures/single-technology-intra-domain-link.md}
 {: #fig-intra-domain-link title="Single-technology intra-domain Ethernet
 and IP link discovery"}
 
@@ -1568,7 +1596,7 @@ P24; and
 - between the Ethernet LTP 3-1 on BR21 and the Ethernet LTP 4-1 on
 P24.
 
-{::include figures/lag.md}
+{::include ./figures/lag.md}
 {: #fig-lag title="LAG"}
 
 The mechanisms used by the MDSC to discover single-technology and
@@ -1747,7 +1775,7 @@ described in {{te-path-discovery}} (e.g., in inter-domain SR-TE, the
 binding SID assigned by P-PNC2 to the corresponding SR policy in BR21).
 The P-PNC1 properly configures the routers within its domain to set up
 the requested path and the multi-domain TE path stitching.
-For example, in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs assigned within its domain and the Peer Adjancency SID assigned by P-PNC1 to the inter-domain link between BR11 and BR21, along with the binding SID assigned by P-PNC2, installs the proper policy or policies within PE13.
+For example, in inter-domain SR-TE, the P-PNC1, knowing the node and adjacency SIDs assigned within its domain and the Peer Adjacency SID assigned by P-PNC1 to the inter-domain link between BR11 and BR21, along with the binding SID assigned by P-PNC2, installs the proper policy or policies within PE13.
 
 Once the TE paths have been selected and, if needed, set up or modified,
 the MDSC can request both P-PNCs to configure the L3VPN and its binding
@@ -1802,7 +1830,7 @@ MDSC can request O-PNC1 to set up an optical tunnel between optical
 TTPs (7) on NE11 and (8) on NE12 and steer client traffic over this
 tunnel between LTP (7-0) on NE11 and LTP (8-0) on NE12.
 
-{::include figures/multi-technology-intra-domain-link.md}
+{::include ./figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link-2 title="Multi-technology IP link setup"}
 
 Note: {{fig-multi-technology-link-2}} is an exact copy of
@@ -1986,8 +2014,15 @@ For example, the SR-TE specific augmentations of the
 model should be defined to allow the MDSC to configure the binding
 SIDs to be used for the multi-domain SR-TE path stitching and to
 allow the P-PNC to report the binding SID assigned to the segment TE
-paths. Note that the assigned binding SID should be persistent in
-case IP router or P-PNC rebooting.
+paths. Note that the binding SIDs assigned for multi-domain SR-TE
+path stitching need to be persistent across IP router and P-PNC
+restarts: otherwise, the multi-domain TE path would be broken until
+the MDSC re-learns the new binding SIDs ({{te-path-discovery}}) and
+reconfigures the SR policies in the other domains. Whether this
+persistence is provided by the IP routers, by the P-PNC, or by both,
+is implementation-specific; in any case, the augmentation identified
+above should allow the P-PNC to report the binding SIDs currently in
+use.
 
 The MDSC can also use the {{!I-D.ietf-teas-yang-te}} model to request the
 P-PNC to
@@ -1997,7 +2032,7 @@ supports
 both symmetric and asymmetric bandwidth configuration in the two
 directions.
 
-The MDSC also request the P-PNC to configure local protection mechanisms.
+The MDSC also requests the P-PNC to configure local protection mechanisms.
 For example, the FRR local protection, as defined in {{?RFC4090}} in case
 of MPLS-TE domain or the TI-LFA local protection, as defined in
 {{?I-D.ietf-rtgwg-segment-routing-ti-lfa}} in case of SR-TE domain. The
@@ -2092,7 +2127,19 @@ multiple TE tunnels for the same PEs pair, in a different way than
 load balancing: this gap has been identified in {{vpn-setup}};
 
 - a mechanism to report client connectivity constraints imposed by
-some muxponder design: this gap has been identified in {{muxponder}}.
+some muxponder design: this gap has been identified in {{muxponder}};
+
+- the scalability of reporting the entire inventory and detailed
+topology information of the packet and optical networks to the MDSC,
+including the characterization of the scalability constraints and of
+the mechanisms to address them: this gap has been identified in
+{{discovery}};
+
+- enhancements to the TE Tunnel model, defined in
+{{!I-D.ietf-teas-yang-te}}, to support scenarios where multiple
+parallel TE paths are used in load-balancing to carry traffic between
+two end-points (e.g., VPN traffic between two PEs): this gap has been
+noted, but not analyzed, in this document.
 
 Although not applicable to this document, it has been noted that being
 able to use WSON and Flexi-grid topology models together (through
@@ -2105,11 +2152,7 @@ Although not applicable to this document, it has been noted that the
 WDM tunnel model would also support optical tunnel setup in the case
 of a mixed CWDM and DWDM network topology.
 
-Although not analyzed in this document, it has been noted that the TE
-Tunnel model, defined in {{!I-D.ietf-teas-yang-te}}, needs enhancement
-to support scenarios where multiple parallel TE paths are used in
-load-balancing to carry traffic between two end-points (e.g., VPN
-traffic between two PEs).
+
 
 # Security Considerations {#security}
 
@@ -2128,13 +2171,144 @@ including:
 
 - YANG
 
+The security considerations of the ACTN framework, discussed in
+Section 9 of {{!RFC8453}}, apply to the POI scenarios analyzed in this
+document. The security considerations of the protocols reused at the
+MPIs also apply and are not repeated here: see Section 12 of
+{{!RFC8040}} for RESTCONF, Section 9 of {{?RFC6241}} for NETCONF,
+Section 10 of {{?RFC5440}} and {{?RFC8253}} for PCEP, and the Security
+Considerations of the YANG data models listed in {{yang}}. This
+section adds two things that are specific to the application of ACTN
+to POI: a threat model for the ACTN POI architecture
+({{threat-model}}), since the analysis in {{!RFC8453}} is generic, and
+the security considerations for LLDP snooping ({{lldp-security}}).
+LLDP snooping is singled out because it is the one mechanism described
+in this document that is particular to the POI scenarios: it is used
+by the PNCs to discover the cross-technology Ethernet links between
+the IP routers and the optical nodes ({{cross-technology-link-discovery}})
+and, through them, the multi-technology IP links on which the
+multi-layer coordination performed by the MDSC depends.
+
 Several existing authentication and encryption practices and
 techniques may be used to help secure these MPI interfaces. These
 mechanisms include using Transport Layer Security (TLS) to provide
-secure transport for RESTCONF, NETCONF and PCEP.
+secure transport for RESTCONF, NETCONF and PCEP. The recommendations
+in {{?BCP195}} apply: TLS 1.2 or later should be used, and earlier
+versions should not be used. Each MPI is a trust boundary between the
+MDSC and a PNC and, in multi-vendor deployments, between controllers
+supplied by different vendors; the MDSC and each PNC are therefore
+expected to mutually authenticate (e.g., using client certificates
+with TLS) rather than relying on one-way authentication.
 Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) {{!RFC8341}}, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.
+Since the operations performed over the MPIs can modify both the
+packet and the optical forwarding state, the MDSC and the PNCs are also
+expected to keep audit logs of the configuration operations they
+request and perform.
 
-## LLDP Snooping Security Considerations
+## Threat Model for ACTN applied to POI {#threat-model}
+
+This subsection applies the SDN threat analysis in {{ONF-TR-530}} to
+the ACTN POI architecture described in {{reference-network}}, at the
+same architectural level as the rest of this document ({{ENISA-SDN}}
+provides further background). The intent is not to enumerate every
+possible threat, but to identify the threats that are most relevant to
+this architecture and how they are expected to be mitigated. A broader
+analysis of ACTN security considerations, across deployment scenarios
+beyond POI, is outside the scope of this document and is expected to
+be addressed in a separate document.
+
+The assets and trust boundaries of the architecture are:
+
+- The MDSC, which is the coordination point for both layers and for
+all the domains: it can set up, modify and tear down optical tunnels,
+TE paths and L2/L3 VPN network services across the whole network, and
+it holds the multi-layer topology, inventory and service information
+retrieved from all the PNCs. The MDSC is therefore a high-value target
+and operators should treat access to it with the same care as access
+to a device with control-plane adjacencies to all the IP routers and
+optical nodes.
+
+- The P-PNCs and O-PNCs, each with authority over its own domain, and
+the network elements they control.
+
+- The MPIs, which are the trust boundaries between the MDSC and each
+PNC and, in multi-vendor deployments, between controllers supplied by
+different vendors. The CMI and the MDSC NBI are outside the scope of
+this document.
+
+- The topology, inventory, TE and service information exchanged over
+the MPIs, whose confidentiality matters (it describes the structure,
+capacity and shared risks of the network) and whose integrity is
+critical, since the MDSC decisions depend on it.
+
+Against these assets, the threats most relevant to the ACTN POI
+architecture, and their expected mitigations, are:
+
+- Compromised or misbehaving controller: a compromised MDSC can
+reroute, disrupt or disclose the traffic of every domain; a
+compromised PNC can do the same within its domain and can feed false
+information to the MDSC. Mitigations are the mutual authentication,
+transport security, access control and audit logging described above,
+and the hierarchical nature of ACTN itself: each PNC retains authority
+over its domain, so NACM can limit each MPI client to the operations
+the architecture requires of it (e.g., read access to topology and
+write access only to the tunnels and services the MDSC manages), and a
+PNC can reject requests that are inconsistent with its own view of its
+domain.
+
+- False or stale topology and resource information: whether injected
+by a compromised PNC, spoofed on the cross-technology Ethernet links
+(see {{lldp-security}}), or caused by lost notifications, incorrect
+information leads the MDSC to compute wrong paths, for example two
+paths considered SRLG-disjoint that share a failure point
+({{multi-technology-path-properties}}), or to issue provisioning
+requests that fail or leak resources. Mitigations are the integrity
+protection of the MPIs, the LLDP mitigations in {{lldp-security}}, and
+the ability of the MDSC to resynchronize its view with the PNCs
+({{discovery}}); the distributed control planes of the IP/MPLS and
+optical networks remain authoritative for the network state.
+
+- Unauthorized cross-layer operations: an operation requested over one
+MPI that results in changes in the other layer, or an MPI client with
+authority over one layer causing changes in the other. In the ACTN
+architecture, cross-layer coordination is performed only by the MDSC,
+and each PNC only acts on its own domain: the O-PNC and the P-PNC
+should therefore enforce, through NACM, that each MPI client can only
+perform the operations required for its role, and the O-PNC retains
+the validation of the optical paths it is requested to set up
+({{optical-path-computation}}).
+
+- Information disclosure: the information exchanged over the MPIs, or
+disclosed through LLDP on the cross-technology Ethernet links, can be
+used to plan further attacks. Mitigations are the confidentiality
+protection of the MPIs, read-access restrictions through NACM, and the
+LLDP mitigations in {{lldp-security}}.
+
+- Resource exhaustion: controllers can be overloaded through the MPIs
+(e.g., by large topology retrievals, by many notification
+subscriptions or by repeated path computation requests), and network
+elements can be overloaded with LLDP traffic. Mitigations are to
+accept MPI requests only from authenticated and authorized clients,
+rate limiting and subscription filtering at the PNCs (see also the
+scalability gap in {{discovery}}), and the LLDP mitigations in
+{{lldp-security}}.
+
+- Inconsistent packet and optical state: a multi-layer operation that
+succeeds in one layer and fails in the other (e.g., an optical tunnel
+set up without the corresponding IP link, or the reverse) leaves state
+that can disrupt services or be exploited. The MDSC is expected to
+treat multi-layer operations as coordinated sequences, to verify their
+outcome through the discovery mechanisms and notifications described
+in {{discovery}}, and to roll back or raise an alarm when a step fails.
+Multi-layer fault management is further discussed in
+{{?I-D.ietf-teas-actn-poi-assurance}}.
+
+These mitigations rely on the security mechanisms of the protocols and
+data models reused by this document; this document does not define any
+new security mechanism.
+
+## LLDP Snooping Security Considerations {#lldp-security}
+
 
 Earlier in the document, LLDP is discussed as a mechanism for the PNCs to
 discover the intra-domain Ethernet and IP links. While LLDP provides
@@ -2236,6 +2410,45 @@ effects on the other. Effective fault management strategies must be in
 place to quickly identify and rectify such issues. This topic is further
 discussed in {{?I-D.ietf-teas-actn-poi-assurance}};
 
+This document analyzes the applicability of the ACTN architecture and
+of the IETF YANG data models to the POI scenarios; it is not a
+deployment or operations guide. In particular, the following aspects
+depend on the capabilities of a given MDSC or PNC implementation and
+on the operator's deployment choices, and are not analyzed in this
+document:
+
+- MDSC and PNC high availability, redundancy and failover;
+
+- the mechanisms by which an MDSC detects and recovers from a
+divergence between its view and the state of the PNCs (e.g., after a
+PNC restart or a loss of notifications), including the handling of
+in-flight provisioning operations;
+
+- the lifecycle of the notification subscriptions ({{common-yang}})
+across controller restarts, and any polling fallback;
+
+- the timing of the provisioning workflows described in {{discovery}}
+and {{config}}, and the timeout and retry behavior at the MPIs.
+
+To set expectations for these topics: in the scenarios analyzed in
+this document, the MDSC maintains a near-real-time view of the packet
+and optical networks and services, kept current by the topology and
+operational-status changes notified by the PNCs over the MPIs. The
+MDSC performs multi-layer and multi-domain coordination and
+optimization on that view; it is not part of the online real-time
+control loop of either network. The consistency of the network state
+itself is maintained by the distributed control planes of the IP/MPLS
+and optical networks, and fast recovery from failures relies on the
+protection and restoration mechanisms of each layer (see also
+{{additional-scenarios}}). Where an MDSC implementation is based on a
+PCE ({{pcep}}), it inherits the redundancy and state synchronization
+practices of PCE deployments, as described in {{?RFC5440}},
+{{?RFC8231}} and {{?RFC8283}}. Multi-layer fault management and
+service assurance are discussed in {{?I-D.ietf-teas-actn-poi-assurance}}.
+A more complete resilience analysis of ACTN-based POI, covering
+availability, failure recovery, and security and trust, is left for
+further work.
+
 Specific Security Considerations are discussed in {{security}}.
 
 # IANA Considerations
@@ -2294,7 +2507,7 @@ services, using the YANG data models under the definition in
 {{?RFC9291}}, {{?RFC9182}} and
 {{?I-D.ietf-teas-te-service-mapping-yang}}.
 
-{::include figures/service-request.md}
+{::include ./figures/service-request.md}
 {: #fig-service-request title="Service Request Process"}
 
 - The VN YANG data model, defined in {{?I-D.ietf-teas-actn-vn-yang}},
@@ -2384,21 +2597,25 @@ been added
    level so that there is nothing triggered at MPLS level when one of
    the link member of the LAG fails.
 
-1. If there is no LAG then the scenario is not clear since an IP router
-port failure would automatically trigger (through BFD failure)
-first a sub-50ms protection at MPLS level :FRR (MPLS RSVP-TE case)
-or TI-LFA (MPLS based SR-TE case) through a protection port. At
-the same time MDSC, after checking that optical network connection
-is still fine, would trigger the reconfiguration of the back-up
-port of the IP router and of the muxponder to re-use the same
-WDM tunnel as the one used originally for the failed IP router port. Once
-everything has been correctly configured, MDSC Global PCE could
-suggest to the operator to trigger a possible re-optimization of
-the back-up MPLS path to go back to the  MPLS primary path through
-the back-up port of the IP router and the original WDM tunnel if overall
-cost, latency etc. is improved. However, in this scenario, there
-is a need for protection port PLUS back-up port in the IP router
-which does not lead to clear port savings.
+1. If there is no LAG, the benefit of this scheme is less clear. An IP
+router port failure would automatically trigger (through BFD failure)
+first a sub-50ms protection at the MPLS level: FRR (MPLS RSVP-TE case)
+or TI-LFA (SR-TE case) through a protection port. At the same time,
+the MDSC, after checking that the optical network connection is still
+fine, would trigger the reconfiguration of the back-up port of the IP
+router and of the muxponder to re-use the same WDM tunnel as the one
+used originally by the failed IP router port. Once everything has been
+correctly configured, the MDSC could suggest to the operator a
+re-optimization of the back-up MPLS path, back to the MPLS primary
+path through the back-up port of the IP router and the original WDM
+tunnel, if the overall cost, latency, etc. is improved. However, in
+this scenario, both a protection port and a back-up port are needed in
+the IP router, which does not lead to clear port savings. The
+interaction between the MPLS-level protection, the MDSC-driven
+back-up port reconfiguration and the subsequent re-optimization has
+not been analyzed in this document and is left for further work,
+together with the multi-layer fault management discussed in
+{{?I-D.ietf-teas-actn-poi-assurance}}.
 
 ## Muxponders {#muxponder}
 
