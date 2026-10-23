@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 4 March 2027                                           Vodafone
+Expires: 26 April 2027                                          Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                          31 August 2026
+                                                         23 October 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -31,7 +31,7 @@ Abstract
    Existing IETF protocols and data models are identified for each
    multi-technology scenario (packet over optical), particularly
    emphasising the Multi-Domain Service Coordinator to Provisioning
-   Network Controller Interface (MPI) within the ACTN architecture
+   Network Controller Interface (MPI) within the ACTN architecture.
 
 About This Document
 
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 March 2027.
+   This Internet-Draft will expire on 26 April 2027.
 
 Copyright Notice
 
@@ -270,7 +270,7 @@ Table of Contents
 
    PNC Domain:  A portion of the network controlled by one PNC instance,
       where capabilities are defined by the technologies supported by
-      both the PNC instance and its managed network elements.
+      both the PNC instance and its managed Network Elements (NEs).
 
    Optical PNC (O-PNC):  A PNC controlling an optical network domain.
 
@@ -434,14 +434,14 @@ Table of Contents
    connections, supported by single-technology Ethernet links between
    physically adjacent IP routers.
 
+   Therefore, if inter-domain links between optical domains exist, they
+   would be utilized to support multi-domain optical services, which
+   fall outside the scope of this document.
+
    As described in [RFC7424], in order to increase the bandwidth between
    two adjacent routers, multiple Ethernet links can be setup between
    adjacent routers using either Link Aggregation Groups (LAGs)
    [IEEE_802.1AX] or Equal Cost Multi-Path (ECMP) [RFC2991].
-
-   Therefore, if inter-domain links between optical domains exist, they
-   would be utilized to support multi-domain optical services, which
-   fall outside the scope of this document.
 
    The optical nodes within the optical domains can be either:
 
@@ -537,85 +537,93 @@ Table of Contents
    PE (PE14) are within the same packet domain, and the other spoke PE
    (PE23) is within a different packet domain.
 
-        ------
-       | CE13 |    Packet Domain 1              Packet Domain 2
-        ------ ____________________            __________________
-        ( |                         )         (                  )
-       (  | PE13     P15       BR11  )       (  BR21       P24     )
-      (   |____         ___       ____ )      ( ____      ___       )
-     (    /    \ _ _ _ /   \ _ _ /    \________/    \    /   \     )
-    (     \____/       \___/     \___ /        \____/    \_ _/     )
-   (   PE14  :\_ _               /      )  (    /  :      : \__     )
-   (    ____  :   \__ P16    ___/      )  (  __/_             _\__  )
-    (  /    \  :  /   \- - -/    \__________/    \ :_ _ _ :_ /    \  )
-    (  \____/     \___/     \____/     )  ( \____/           \____/ )
-      (  / :   :    :         :  BR12  )   (   :    :     :     |  )
-       (/                              )   ( BR22           PE23|   )
-    ------ :   :    :         :       )      ( :     :    :     |  )
-   | CE14 | (__ ____ _________ _____)           (_____ ___ _ ------
-    ------ :   :    :         :                :      :   : | CE23 |
-                                                             ------
-           :   :    :         :                :      :   :
-          _ ___ ____ _________ ________         ______ ___ _______
-         ( :   :    :         :        )       :      :   :       )
-        (      ____  :      ____        )     (      ____  .. ..   )
-       (   :  /    \_ _ _ _/    \ NE12   )   ( :    /    \ _    :   )
-      (  NE11 \____/ :     \____/         )  ( NE21 \____/   \     )
-      (    :  /    \    _ _ /  \          )  ( :     /        \ :   )
-      (   ___/      \:_|        \____    )  (   .___/         _\__  )
-      (  /    \_ _ /    \ _ _ _ /    \   )  (   /    \ _ _ _ /    \  )
-       ( \____/    \____/       \____/  )    (  \____/       \____/  )
-        ( NE13      NE14         NE15   )     (  NE22         NE23  )
-         (_____________________________)       (___________________)
+            ______
+           | CE13 |
+           |______|
+               |     Packet Domain 1               Packet Domain 2
+            ___|___________________________     ________________________
+           / __|_       ___       ____    /    / ____          ___     /
+          / /PE13\_ _ _/P15\_ _ _/BR11\_________/BR11\        /P24\   /
+         /  \____/     \___/     \____/ /    /  \____/        \___/  /
+        /       \                  / : /    /     /:           / :  /
+       /         \                /  :/    /     / :          /  : /
+      /  ____     \___       ____/   :    / ____/  :     ____/   :/
+     /  /PE14\    /P16\_ _ _/BR12\_________/BR22\_ _ _ _/PE23\   :
+    /   \____/    \___/     \____/ / :  /  \____/       \____/  /:
+   /_____|__:_______:_________:___/  : /_____:_____:______|____/ :
+         |  :       :         :      :       :     :      |      :
+    _____|  :       :         :      :       :     :  ____|_     :
+   | CE13 | :       :         :      :       :     : | CE23 |    :
+   |______| :       :         :      :       :     : |______|    :
+            ...     :         :      :       :     :             :
+              :     :         :      :       :     :             :
+            __:_____:_________:______:_____  :  ___:_____________:______
+           / ____   :         :   ____    /  : /  ____           :     /
+          / /NE11\_ _ _ _ _ _ _ _/NE12\  /   :/  /NE21\          :    /
+         /  \____/  :         :  \____/ /    :   \____/          :   /
+        /    /  \   :         :  / /   /    /:    /  \       ....:  /
+       /    /    \  :   ------:-- /   /    / :   /    - -    :     /
+      / ___/      \____/      ___/   /    / ____/        \____    /
+     / /NE13\_ _ _/NE14\_ _ _/NE15\ /    / /NE22\_ _ _ _ /NE23\  /
+    /  \____/     \____/     \____//    /  \____/        \____/ /
+   /______________________________/    /_______________________/
 
-                Optical Domain 1                  Optical Domain 2
+           Optical Domain 1                Optical Domain 2
 
-
-          _____  = Inter-domain links
-          .. ..  = Cross-layer links
-          _ _ _  = Intra-domain links
+             ________________________________
+            |      Legenda                   |
+            |                                |
+            |  _______ = Inter-domain links  |
+            |                                |
+            |  ....... = Cross-domain links  |
+            |                                |
+            |  _ _ _ _ = Intra-domain links  |
+            |________________________________|
 
                 Figure 2: Multi-domain VPN topology example
 
-        ------
-       | CE13 |    Packet Domain 1              Packet Domain 2
-        ------ ____________________            _________________
-        ( |                         )         (                 )
-       (  | PE13     P15       BR11  )       (  BR21       P24    )
-      (   |____         ___       ____ )      ( ____     ___       )
-     (    / H  \       /   \     /    \________/..  \   / ..\ ..  )
-    (     \____/.....  \___/     \___ / .. .. ..___:/   \___/   : )
-   (   PE14  :      :              .. .. )  (             :        )
-   (    ____  :    _:_ P16   ____ :     )  ( ____  :          __:_ )
-    (  / S  \  :  / ..\     /   ..__________/    \        :  /  S \ )
-    (  \____/     \__:/     \____/     )  ( \____/ :         \____/ )
-      (  / :   :     :          :BR12  )   (              :     |  )
-       (/  :         :                 )   ( BR22  :        PE23|   )
-    ------ :   :     :          :     )      (            :     | )
-   | CE14 |:(__ _____:__________ ___)           (__:______ __ ------
-    ------ :   :      :         :                         :  | CE23 |
-           :           :                           :          ------
-           :   :       :        :                         :
-          _:___________:________ ______         ___:______ _______
-         ( :   :       :        :      )       (          : .. .. )
-        (  :   ____    :    ____        )     (     :____          )
-       (   :  / .. \.. : ../ .. \ NE12   )   (      /..  \      :   )
-      (  NE11 \____/   :   \____/         )  ( NE21 \__:_/          )
-      (    :           :                  )  (                  :  )
-      (   _:__      ___:         ____    )  (    ____  : ..  ____  )
-      (  / :..\..../...:\       /    \   )  (   /    \      /.. :\  )
-       ( \____/    \____/       \____/  )    (  \____/      \____/  )
-        ( NE13      NE14         NE15   )     (  NE22        NE23  )
-         (_____________________________)       (__________________)
+            ______
+           | CE13 |
+           |______|
+               |     Packet Domain 1               Packet Domain 2
+            ___|___________________________     ________________________
+           / __|_       ___       ____    /    / ____          ___     /
+          / /PE13\     /P15\     /BR11\........./BR11\        /P24\   /
+         /  \____/     \___/     \____/ /    /  \____/        \___/  /
+        /  "H" ::                  :   /    /      :           : :  /
+       /       :: . .          ....:  /    /       :        ...: : /
+      /  ____      _:_       __:_    /    / ____   :  "S"___:    :/
+     /  /PE14\ :  /P16\     /BR12\_________/BR22\  :    /PE23\   :
+    /"S"\____/ :  \___/     \____/ /    /  \____/  :    \____/  /:
+   /_____|__ __:____ _________:___/    /_____:_____:______|____/ :
+         |  :  :    :         :              :     :      |      :
+    _____|     :              :              :     :  ____|_     :
+   | CE13 | :  :    :         :              :     : | CE23 |    :
+   |______|    :              :......        :     : |______|    :
+           ..  :    :               :        :     :             :
+         :     :                    :        :     :             :
+            ___:____:_______________:______  :  ___:_____________:______
+         : / ____                 ____    /  : /  ____           :     /
+          / /NE11\.............../NE12\  /   :/  /NE21\          :    /
+         :  \____/  :            \____/ /    :   \____/          :   /
+        /                              /    /:     :        .....:  /
+       / :          :                 /    / :     :        :      /
+      / ____       ____       ____   /    / ____   :      ____    /
+     / /NE13\.. ../NE14\     /NE15\ /    / /NE22\  :...../NE23\  /
+    /  \____/     \____/     \____//    /  \____/        \____/ /
+   /______________________________/    /_______________________/
 
-                Optical Domain 1                  Optical Domain 2
+           Optical Domain 1                Optical Domain 2
 
-
-           H / S = Hub VRF / Spoke VRF
-
-          .....  = Intra-domain TE Path 1 {PE13, P16, NE14, NE13, PE14}
-          .. ..  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12,
-                   BR11, BR21, NE21, NE23, P24, PE23}
+     _______________________________________________________________
+    |       Legenda                                                 |
+    |                                                               |
+    | H / S = Hub VRF / Spoke VRF                                   |
+    |                                                               |
+    | .. ..  = Intra-domain TE Path 1 {PE13, P16, NE14, NE13, PE14} |
+    | .....  = Inter-domain TE Path 2 {PE13, NE11, NE12, BR12,      |
+    |                  BR11, BR21, NE21, NE23, P24, PE23}           |
+    |_______________________________________________________________|
 
                 Figure 3: Multi-domain VPN TE paths example
 
@@ -674,18 +682,14 @@ Table of Contents
 
    1.  The L2/L3 VPN is bound to a set of dedicated TE tunnels, which
        neither share resources with other services, nor compete for
-       bandwidth with other tunnels, ensuring deterministic latency
-       performance.
+       bandwidth with other tunnels, ensuring deterministic or
+       predictable latency performance.
 
    2.  The L2/L3 VPN is bound to a set of dedicated TE tunnels, which
        can compete for bandwidth with other tunnels.
 
    3.  The L2/L3 VPN is bound to a set of TE tunnels which can be shared
        with other services.
-
-   4.  The customer does not require isolation and may request a VPN
-       service where the associated tunnels are shared across multiple
-       VPNs.
 
    For each TE path required to support the L2/L3 VPN network service,
    it is possible that:
@@ -831,8 +835,8 @@ Table of Contents
 
    2.  To perform single-layer, single-domain local TE path computation,
        when requested by the MDSC, between two PEs (for single-domain
-       end-to-end TE path) or between PEs and BRs for an inter-domain TE
-       path selected by the MDSC.
+       end-to-end TE path) or between PEs and BRs (for an intra-domain
+       TE path segment, as selected by the MDSC).
 
    3.  To configure the routers in their respective domain to setup a TE
        path;
@@ -1113,10 +1117,10 @@ Table of Contents
        tunnels.  However, it uses PCEP for hierarchical path
        computation.
 
-       As mentioned in Option 1, from an operator perspective, this
-       option can add integration complexity to have two protocols
-       instead of one unless the RESTCONF/YANG interface is added to an
-       existing PCEP deployment (brownfield scenario).
+       As opposed to Option 1, from an operator perspective, this option
+       can add integration complexity to have two protocols instead of
+       one unless the RESTCONF/YANG interface is added to an existing
+       PCEP deployment (brownfield scenario).
 
    Section 4 and Section 5 of this draft analyze the case where a single
    RESTCONF/YANG interface is deployed at the MPI (i.e., option 1
@@ -2055,10 +2059,10 @@ Table of Contents
    P-PNC1 properly configures the routers within its domain to set up
    the requested path and the multi-domain TE path stitching.  For
    example, in inter-domain SR-TE, the P-PNC1, knowing the node and
-   adjacency SIDs assigned within its domain and the PE SID assigned by
-   P-PNC1 to the inter-domain link between BR11 and BR21, along with the
-   binding SID assigned by P-PNC2, installs the proper policy or
-   policies within PE13.
+   adjacency SIDs assigned within its domain and the Peer Adjancency SID
+   assigned by P-PNC1 to the inter-domain link between BR11 and BR21,
+   along with the binding SID assigned by P-PNC2, installs the proper
+   policy or policies within PE13.
 
    Once the TE paths have been selected and, if needed, set up or
    modified, the MDSC can request both P-PNCs to configure the L3VPN and
@@ -2072,12 +2076,12 @@ Table of Contents
    When performing multi-layer/multi-domain path computation, the MDSC
    can delegate single-domain optical path computation to the O-PNC.
 
-   As described in Section 4.1, Section 4.5, and Section 4.6, there is a
-   one-to-one relationship between a multi-layer intra-domain IP link
-   and its underlay optical tunnel.  Therefore, the properties of an
-   optical path between two optical TTPs, as computed by the O-PNC, can
-   be used by the MDSC to infer the properties of the associated multi-
-   layer single-domain IP link.
+   As described in Section 4.1, Section 4.5, and Section 4.6, without
+   LAG, there is a one-to-one relationship between a multi-layer intra-
+   domain IP link and its underlay optical tunnel.  Therefore, the
+   properties of an optical path between two optical TTPs, as computed
+   by the O-PNC, can be used by the MDSC to infer the properties of the
+   associated multi-layer single-domain IP link.
 
    As discussed in [I-D.ietf-teas-yang-path-computation], there are two
    options to request an O-PNC to perform optical path computation:
@@ -2098,8 +2102,8 @@ Table of Contents
 5.2.  Multi-technology IP Link Setup
 
    As described in Section 5.1, there is a one-to-one relationship
-   between a multi-technology intra-domain IP link and its underlay
-   optical tunnel.
+   between a multi-technology intra-domain Ethernet link and its
+   underlay optical tunnel.
 
    Therefore, to set up a new multi-technology intra-domain IP link, the
    MDSC requires the O-PNC to set up the optical tunnel (using either
@@ -2333,7 +2337,10 @@ Table of Contents
    implemented by the MDSC or by the O-PNC to summarize the SRLGs of an
    optical tunnel.  These mechanisms are implementation-specific and
    have no impact on the YANG models nor on the interoperability at the
-   MPI, but cares have to be taken to avoid missing information.
+   MPI.  However, they should be carefully designed to avoid missing
+   information: failure to do so could result in miscalculating two path
+   candidates as being fully SRLG-disjoint when they actually share a
+   hidden failure point.
 
 5.3.  TE Path Setup and Update
 
@@ -2416,11 +2423,10 @@ Table of Contents
 6.  Conclusions and Gaps
 
    The analysis provided in this document shows that the IETF YANG
-   models described in Section 3.2 provide useful support for Packet
-   Optical Integration (POI) scenarios for resource discovery (network
-   topology, service, tunnels, and network inventory discovery), as well
-   as for supporting multi-layer/multi-domain L2/L3 VPN network
-   services.
+   models described in Section 3.2 provide good support for Packet
+   Optical Integration (POI) scenarios for resource discovery (e.g.,
+   network topology, service, tunnels), as well as for setup of multi-
+   layer/multi-domain L2/L3 VPN network services.
 
    The following gaps were identified that may need to be addressed by
    the relevant IETF Working Groups:
@@ -2469,7 +2475,8 @@ Table of Contents
    being able to use WSON and Flexi-grid topology models together
    (through multi-inheritance) is not only useful for mixed fixed-grid
    and flexible-grid DWDM network topologies but also the only viable
-   option for a mixed CWDM and DWDM network topology.
+   option for a mixed Coarse Wavelength Division Multiplexing (CWDM) and
+   DWDM network topology.
 
    Although not applicable to this document, it has been noted that the
    WDM tunnel model would also support optical tunnel setup in the case
@@ -2502,11 +2509,12 @@ Table of Contents
    techniques may be used to help secure these MPI interfaces.  These
    mechanisms include using Transport Layer Security (TLS) to provide
    secure transport for RESTCONF, NETCONF and PCEP.  Furthermore, access
-   control techniques can also provide additional security.  NETCONF
-   supports an Access Control Model (NACM), and RESTCONF supports Role
-   Based Access Control (RBAC), which should also ensure that MDSC to
-   PNC communication is based on authorised use and granular control of
-   connectivity and resource requests.
+   control techniques can also provide additional security features.
+   Both NETCONF and RESTCONF support the Network Configuration Access
+   Control Model (NACM) [RFC8341], which provides group-based (role-
+   based) access control, ensuring that MDSC to PNC communication is
+   based on authorised use and granular control of connectivity and
+   resource requests.
 
 7.1.  LLDP Snooping Security Considerations
 
@@ -2685,6 +2693,11 @@ Table of Contents
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
               <https://www.rfc-editor.org/rfc/rfc8040>.
 
+   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
+              Access Control Model", STD 91, RFC 8341,
+              DOI 10.17487/RFC8341, March 2018,
+              <https://www.rfc-editor.org/rfc/rfc8341>.
+
    [RFC8342]  Bjorklund, M., Schoenwaelder, J., Shafer, P., Watsen, K.,
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
@@ -2745,9 +2758,9 @@ Table of Contents
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
               and X. Liu, "A YANG Data Model for Ethernet TE Topology",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-eth-
-              client-te-topo-yang-11, 13 April 2026,
+              client-te-topo-yang-12, 15 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              eth-client-te-topo-yang-11>.
+              eth-client-te-topo-yang-12>.
 
    [I-D.ietf-ccamp-flexigrid-yang]
               de Madrid, U. A., Burrero, D. P., King, D., Lee, Y., and
@@ -2769,9 +2782,9 @@ Table of Contents
               Busi, I., Guo, A., and S. Belotti, "YANG Data Models for
               requesting Path Computation in WDM Optical Networks", Work
               in Progress, Internet-Draft, draft-ietf-ccamp-optical-
-              path-computation-yang-08, 27 February 2026,
+              path-computation-yang-09, 1 September 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              optical-path-computation-yang-08>.
+              optical-path-computation-yang-09>.
 
    [I-D.ietf-ccamp-otn-topo-yang]
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
@@ -2801,17 +2814,17 @@ Table of Contents
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
               and D. P. Burrero, "A YANG Data Model for WDM Tunnels",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-wdm-
-              tunnel-yang-08, 22 April 2026,
+              tunnel-yang-09, 22 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              wdm-tunnel-yang-08>.
+              wdm-tunnel-yang-09>.
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
               Bedard, "A Base YANG Data Model for Network Inventory",
               Work in Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-18, 27 May 2026,
+              inventory-yang-20, 29 September 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-18>.
+              network-inventory-yang-20>.
 
    [I-D.ietf-rtgwg-segment-routing-ti-lfa]
               Bashandy, A., Litkowski, S., Filsfils, C., Francois, P.,
@@ -2883,9 +2896,9 @@ Table of Contents
    [I-D.ietf-teas-yang-te-mpls-topology]
               Busi, I., Guo, A., Liu, X., Saad, T., and R. Gandhi, "A
               YANG Data Model for MPLS-TE Topology", Work in Progress,
-              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-04,
-              1 March 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-teas-yang-te-mpls-topology-04>.
+              Internet-Draft, draft-ietf-teas-yang-te-mpls-topology-05,
+              1 September 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-mpls-topology-05>.
 
    [IEEE_802.1AE]
               Institute of Electrical and Electronics Engineers, "IEEE
@@ -3246,8 +3259,13 @@ Acknowledgments
    The authors would like to thank Adrian Farrel for his review and
    comments to this document.
 
-   The authors would like to thank Acee Lindem for the Routing
-   Directorate Early Review.
+   The authors would like to thank Acee Lindem for his Early Routing
+   Area Directorate (Rtgdir) Review.
+
+   The authors would like to thank Ines Robles, Zheng Zhang, Nick
+   Buraglio, and Yaron Sheffer for their IETF Last Call (LC) General
+   Area Review Team (Genart), Routing Area Directorate (Rtgdir), Ops
+   Directorate (Opsdir), and Security Area Directorate (Secdir) reviews.
 
    Previous versions of document were prepared using 2-Word-
    v2.0.template.dot.
