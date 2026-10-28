@@ -2177,11 +2177,13 @@ document. The security considerations of the protocols reused at the
 MPIs also apply and are not repeated here: see Section 12 of
 {{!RFC8040}} for RESTCONF, Section 9 of {{?RFC6241}} for NETCONF,
 Section 10 of {{?RFC5440}} and {{?RFC8253}} for PCEP, and the Security
-Considerations of the YANG data models listed in {{yang}}. This
-section adds two things that are specific to the application of ACTN
+Considerations of the YANG data models listed in {{yang}}.
+
+This section adds two things that are specific to the application of ACTN
 to POI: a threat model for the ACTN POI architecture
 ({{threat-model}}), since the analysis in {{!RFC8453}} is generic, and
 the security considerations for LLDP snooping ({{lldp-security}}).
+
 LLDP snooping is singled out because it is the one mechanism described
 in this document that is particular to the POI scenarios: it is used
 by the PNCs to discover the cross-technology Ethernet links between
@@ -2199,7 +2201,9 @@ MDSC and a PNC and, in multi-vendor deployments, between controllers
 supplied by different vendors; the MDSC and each PNC are therefore
 expected to mutually authenticate (e.g., using client certificates
 with TLS) rather than relying on one-way authentication.
+
 Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) {{!RFC8341}}, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.
+
 Since the operations performed over the MPIs can modify both the
 packet and the optical forwarding state, the MDSC and the PNCs are also
 expected to keep audit logs of the configuration operations they
@@ -2233,7 +2237,9 @@ the network elements they control.
 
 - The MPIs, which are the trust boundaries between the MDSC and each
 PNC and, in multi-vendor deployments, between controllers supplied by
-different vendors. The CMI and the MDSC NBI are outside the scope of
+different vendors.
+
+> Note: the CMI and the MDSC NBI are outside the scope of
 this document.
 
 - The topology, inventory, TE and service information exchanged over
@@ -2440,10 +2446,14 @@ control loop of either network. The consistency of the network state
 itself is maintained by the distributed control planes of the IP/MPLS
 and optical networks, and fast recovery from failures relies on the
 protection and restoration mechanisms of each layer (see also
-{{additional-scenarios}}). Where an MDSC implementation is based on a
+{{additional-scenarios}}).
+
+Where an MDSC implementation is based on a
 PCE ({{pcep}}), it inherits the redundancy and state synchronization
 practices of PCE deployments, as described in {{?RFC5440}},
-{{?RFC8231}} and {{?RFC8283}}. Multi-layer fault management and
+{{?RFC8231}} and {{?RFC8283}}.
+
+Multi-layer fault management and
 service assurance are discussed in {{?I-D.ietf-teas-actn-poi-assurance}}.
 A more complete resilience analysis of ACTN-based POI, covering
 availability, failure recovery, and security and trust, is left for
