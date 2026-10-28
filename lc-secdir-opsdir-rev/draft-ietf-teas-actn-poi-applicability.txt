@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 26 April 2027                                          Vodafone
+Expires: 1 May 2027                                             Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                         23 October 2026
+                                                         28 October 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 April 2027.
+   This Internet-Draft will expire on 1 May 2027.
 
 Copyright Notice
 
@@ -546,6 +546,9 @@ Table of Contents
    PE (PE14) are within the same packet domain, and the other spoke PE
    (PE23) is within a different packet domain.
 
+   +---+
+   |   |
+   +---+
             ______
            | CE13 |
            |______|
@@ -2539,17 +2542,19 @@ Table of Contents
    MPIs also apply and are not repeated here: see Section 12 of
    [RFC8040] for RESTCONF, Section 9 of [RFC6241] for NETCONF,
    Section 10 of [RFC5440] and [RFC8253] for PCEP, and the Security
-   Considerations of the YANG data models listed in Section 3.2.  This
-   section adds two things that are specific to the application of ACTN
-   to POI: a threat model for the ACTN POI architecture (Section 7.1),
-   since the analysis in [RFC8453] is generic, and the security
-   considerations for LLDP snooping (Section 7.2).  LLDP snooping is
-   singled out because it is the one mechanism described in this
-   document that is particular to the POI scenarios: it is used by the
-   PNCs to discover the cross-technology Ethernet links between the IP
-   routers and the optical nodes (Section 4.5.1) and, through them, the
-   multi-technology IP links on which the multi-layer coordination
-   performed by the MDSC depends.
+   Considerations of the YANG data models listed in Section 3.2.
+
+   This section adds two things that are specific to the application of
+   ACTN to POI: a threat model for the ACTN POI architecture
+   (Section 7.1), since the analysis in [RFC8453] is generic, and the
+   security considerations for LLDP snooping (Section 7.2).
+
+   LLDP snooping is singled out because it is the one mechanism
+   described in this document that is particular to the POI scenarios:
+   it is used by the PNCs to discover the cross-technology Ethernet
+   links between the IP routers and the optical nodes (Section 4.5.1)
+   and, through them, the multi-technology IP links on which the multi-
+   layer coordination performed by the MDSC depends.
 
    Several existing authentication and encryption practices and
    techniques may be used to help secure these MPI interfaces.  These
@@ -2561,15 +2566,18 @@ Table of Contents
    controllers supplied by different vendors; the MDSC and each PNC are
    therefore expected to mutually authenticate (e.g., using client
    certificates with TLS) rather than relying on one-way authentication.
+
    Furthermore, access control techniques can also provide additional
    security features.  Both NETCONF and RESTCONF support the Network
    Configuration Access Control Model (NACM) [RFC8341], which provides
    group-based (role-based) access control, ensuring that MDSC to PNC
    communication is based on authorised use and granular control of
-   connectivity and resource requests.  Since the operations performed
-   over the MPIs can modify both the packet and the optical forwarding
-   state, the MDSC and the PNCs are also expected to keep audit logs of
-   the configuration operations they request and perform.
+   connectivity and resource requests.
+
+   Since the operations performed over the MPIs can modify both the
+   packet and the optical forwarding state, the MDSC and the PNCs are
+   also expected to keep audit logs of the configuration operations they
+   request and perform.
 
 7.1.  Threat Model for ACTN applied to POI
 
@@ -2599,8 +2607,10 @@ Table of Contents
 
    *  The MPIs, which are the trust boundaries between the MDSC and each
       PNC and, in multi-vendor deployments, between controllers supplied
-      by different vendors.  The CMI and the MDSC NBI are outside the
-      scope of this document.
+      by different vendors.
+
+      Note: the CMI and the MDSC NBI are outside the scope of this
+      document.
 
    *  The topology, inventory, TE and service information exchanged over
       the MPIs, whose confidentiality matters (it describes the
@@ -2813,13 +2823,16 @@ Table of Contents
    itself is maintained by the distributed control planes of the IP/MPLS
    and optical networks, and fast recovery from failures relies on the
    protection and restoration mechanisms of each layer (see also
-   Appendix A).  Where an MDSC implementation is based on a PCE
-   (Section 3.3), it inherits the redundancy and state synchronization
-   practices of PCE deployments, as described in [RFC5440], [RFC8231]
-   and [RFC8283].  Multi-layer fault management and service assurance
-   are discussed in [I-D.ietf-teas-actn-poi-assurance].  A more complete
-   resilience analysis of ACTN-based POI, covering availability, failure
-   recovery, and security and trust, is left for further work.
+   Appendix A).
+
+   Where an MDSC implementation is based on a PCE (Section 3.3), it
+   inherits the redundancy and state synchronization practices of PCE
+   deployments, as described in [RFC5440], [RFC8231] and [RFC8283].
+
+   Multi-layer fault management and service assurance are discussed in
+   [I-D.ietf-teas-actn-poi-assurance].  A more complete resilience
+   analysis of ACTN-based POI, covering availability, failure recovery,
+   and security and trust, is left for further work.
 
    Specific Security Considerations are discussed in Section 7.
 

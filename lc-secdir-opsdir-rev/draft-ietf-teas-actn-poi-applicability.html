@@ -1062,7 +1062,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Peruzzini, et al.</td>
-<td class="center">Expires 26 April 2027</td>
+<td class="center">Expires 1 May 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1075,12 +1075,12 @@ svg {
 <dd class="internet-draft">draft-ietf-teas-actn-poi-applicability-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-10-23" class="published">23 October 2026</time>
+<time datetime="2026-10-28" class="published">28 October 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-04-26">26 April 2027</time></dd>
+<dd class="expires"><time datetime="2027-05-01">1 May 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1155,7 +1155,7 @@ Network Controller Interface (MPI) within the ACTN architecture.<a href="#sectio
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 26 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 May 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1836,52 +1836,365 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.<a href="#section-2.1.1-1" class="pilcrow">¶</a></p>
 <span id="name-multi-domain-vpn-topology-e"></span><div id="fig-vpn-topo">
 <figure id="figure-2">
-            <div class="alignLeft art-ascii-art art-text artwork" id="section-2.1.1-2.1">
-<pre>
-         ______
-        | CE13 |
-        |______|
-            |     Packet Domain 1               Packet Domain 2
-         ___|___________________________     ________________________
-        / __|_       ___       ____    /    / ____          ___     /
-       / /PE13\_ _ _/P15\_ _ _/BR11\_________/BR11\        /P24\   /
-      /  \____/     \___/     \____/ /    /  \____/        \___/  /
-     /       \                  / : /    /     /:           / :  /
-    /         \                /  :/    /     / :          /  : /
-   /  ____     \___       ____/   :    / ____/  :     ____/   :/
-  /  /PE14\    /P16\_ _ _/BR12\_________/BR22\_ _ _ _/PE23\   :
- /   \____/    \___/     \____/ / :  /  \____/       \____/  /:
-/_____|__:_______:_________:___/  : /_____:_____:______|____/ :
-      |  :       :         :      :       :     :      |      :
- _____|  :       :         :      :       :     :  ____|_     :
-| CE13 | :       :         :      :       :     : | CE23 |    :
-|______| :       :         :      :       :     : |______|    :
-         ...     :         :      :       :     :             :
-           :     :         :      :       :     :             :
-         __:_____:_________:______:_____  :  ___:_____________:______
-        / ____   :         :   ____    /  : /  ____           :     /
-       / /NE11\_ _ _ _ _ _ _ _/NE12\  /   :/  /NE21\          :    /
-      /  \____/  :         :  \____/ /    :   \____/          :   /
-     /    /  \   :         :  / /   /    /:    /  \       .....  /
-    /    /    \  :   ------:-- /   /    / :   /    - -    :     /
-   / ___/      \____/      ___/   /    / ____/        \____    /
-  / /NE13\_ _ _/NE14\_ _ _/NE15\ /    / /NE22\_ _ _ _ /NE23\  /
- /  \____/     \____/     \____//    /  \____/        \____/ /
-/______________________________/    /_______________________/
-
-        Optical Domain 1                Optical Domain 2
-
-          ________________________________
-         |      Legenda                   |
-         |                                |
-         |  _______ = Inter-domain links  |
-         |                                |
-         |  ....... = Cross-domain links  |
-         |                                |
-         |  _ _ _ _ = Intra-domain links  |
-         |________________________________|
-
-</pre>
+            <div id="section-2.1.1-2.1">
+              <div class="alignLeft art-svg artwork" id="section-2.1.1-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="768" width="560" viewBox="0 0 560 768" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+                  <path d="M 8,32 L 8,64" fill="none" stroke="black"></path>
+                  <path d="M 8,328 L 8,360" fill="none" stroke="black"></path>
+                  <path d="M 40,32 L 40,64" fill="none" stroke="black"></path>
+                  <path d="M 56,280 L 56,328" fill="none" stroke="black"></path>
+                  <path d="M 64,336 L 64,360" fill="none" stroke="black"></path>
+                  <path d="M 72,88 L 72,120" fill="none" stroke="black"></path>
+                  <path d="M 80,616 L 80,744" fill="none" stroke="black"></path>
+                  <path d="M 104,120 L 104,168" fill="none" stroke="black"></path>
+                  <path d="M 128,88 L 128,120" fill="none" stroke="black"></path>
+                  <path d="M 344,616 L 344,744" fill="none" stroke="black"></path>
+                  <path d="M 408,328 L 408,360" fill="none" stroke="black"></path>
+                  <path d="M 448,280 L 448,328" fill="none" stroke="black"></path>
+                  <path d="M 464,328 L 464,360" fill="none" stroke="black"></path>
+                  <path d="M 8,32 L 40,32" fill="none" stroke="black"></path>
+                  <path d="M 8,64 L 40,64" fill="none" stroke="black"></path>
+                  <path d="M 176,480 L 216,480" fill="none" stroke="black"></path>
+                  <path d="M 36,520 L 44,536" fill="none" stroke="black"></path>
+                  <path d="M 80,512 L 84,520" fill="none" stroke="black"></path>
+                  <path d="M 76,440 L 84,456" fill="none" stroke="black"></path>
+                  <path d="M 124,520 L 132,536" fill="none" stroke="black"></path>
+                  <path d="M 108,456 L 132,504" fill="none" stroke="black"></path>
+                  <path d="M 116,424 L 124,440" fill="none" stroke="black"></path>
+                  <path d="M 44,264 L 60,296" fill="none" stroke="black"></path>
+                  <path d="M 164,504 L 172,520" fill="none" stroke="black"></path>
+                  <path d="M 212,520 L 220,536" fill="none" stroke="black"></path>
+                  <path d="M 84,248 L 92,264" fill="none" stroke="black"></path>
+                  <path d="M 76,184 L 84,200" fill="none" stroke="black"></path>
+                  <path d="M 124,264 L 132,280" fill="none" stroke="black"></path>
+                  <path d="M 256,512 L 260,520" fill="none" stroke="black"></path>
+                  <path d="M 108,200 L 132,248" fill="none" stroke="black"></path>
+                  <path d="M 244,440 L 252,456" fill="none" stroke="black"></path>
+                  <path d="M 116,168 L 124,184" fill="none" stroke="black"></path>
+                  <path d="M 156,248 L 164,264" fill="none" stroke="black"></path>
+                  <path d="M 324,520 L 332,536" fill="none" stroke="black"></path>
+                  <path d="M 164,184 L 172,200" fill="none" stroke="black"></path>
+                  <path d="M 204,264 L 212,280" fill="none" stroke="black"></path>
+                  <path d="M 284,424 L 292,440" fill="none" stroke="black"></path>
+                  <path d="M 196,168 L 204,184" fill="none" stroke="black"></path>
+                  <path d="M 364,504 L 372,520" fill="none" stroke="black"></path>
+                  <path d="M 244,248 L 252,264" fill="none" stroke="black"></path>
+                  <path d="M 244,184 L 252,200" fill="none" stroke="black"></path>
+                  <path d="M 372,440 L 380,456" fill="none" stroke="black"></path>
+                  <path d="M 404,456 L 412,472" fill="none" stroke="black"></path>
+                  <path d="M 436,520 L 444,536" fill="none" stroke="black"></path>
+                  <path d="M 324,264 L 332,280" fill="none" stroke="black"></path>
+                  <path d="M 436,488 L 444,504" fill="none" stroke="black"></path>
+                  <path d="M 284,168 L 292,184" fill="none" stroke="black"></path>
+                  <path d="M 412,424 L 420,440" fill="none" stroke="black"></path>
+                  <path d="M 476,504 L 484,520" fill="none" stroke="black"></path>
+                  <path d="M 364,248 L 372,264" fill="none" stroke="black"></path>
+                  <path d="M 364,184 L 372,200" fill="none" stroke="black"></path>
+                  <path d="M 428,264 L 436,280" fill="none" stroke="black"></path>
+                  <path d="M 404,168 L 412,184" fill="none" stroke="black"></path>
+                  <path d="M 468,248 L 476,264" fill="none" stroke="black"></path>
+                  <path d="M 476,184 L 484,200" fill="none" stroke="black"></path>
+                  <path d="M 508,168 L 516,184" fill="none" stroke="black"></path>
+                  <path d="M 4,296 L 76,152" fill="none" stroke="black"></path>
+                  <path d="M 76,184 L 84,168" fill="none" stroke="black"></path>
+                  <path d="M 44,264 L 52,248" fill="none" stroke="black"></path>
+                  <path d="M 116,200 L 124,184" fill="none" stroke="black"></path>
+                  <path d="M 84,280 L 92,264" fill="none" stroke="black"></path>
+                  <path d="M 124,264 L 132,248" fill="none" stroke="black"></path>
+                  <path d="M 164,184 L 172,168" fill="none" stroke="black"></path>
+                  <path d="M 4,552 L 76,408" fill="none" stroke="black"></path>
+                  <path d="M 36,520 L 44,504" fill="none" stroke="black"></path>
+                  <path d="M 76,440 L 84,424" fill="none" stroke="black"></path>
+                  <path d="M 156,280 L 164,264" fill="none" stroke="black"></path>
+                  <path d="M 196,200 L 204,184" fill="none" stroke="black"></path>
+                  <path d="M 68,504 L 92,456" fill="none" stroke="black"></path>
+                  <path d="M 204,264 L 212,248" fill="none" stroke="black"></path>
+                  <path d="M 244,184 L 252,168" fill="none" stroke="black"></path>
+                  <path d="M 76,536 L 84,520" fill="none" stroke="black"></path>
+                  <path d="M 116,456 L 124,440" fill="none" stroke="black"></path>
+                  <path d="M 244,248 L 268,200" fill="none" stroke="black"></path>
+                  <path d="M 124,520 L 132,504" fill="none" stroke="black"></path>
+                  <path d="M 244,280 L 252,264" fill="none" stroke="black"></path>
+                  <path d="M 284,200 L 292,184" fill="none" stroke="black"></path>
+                  <path d="M 252,296 L 268,264" fill="none" stroke="black"></path>
+                  <path d="M 288,224 L 308,184" fill="none" stroke="black"></path>
+                  <path d="M 320,160 L 324,152" fill="none" stroke="black"></path>
+                  <path d="M 164,504 L 172,488" fill="none" stroke="black"></path>
+                  <path d="M 164,536 L 172,520" fill="none" stroke="black"></path>
+                  <path d="M 292,296 L 308,264" fill="none" stroke="black"></path>
+                  <path d="M 320,240 L 348,184" fill="none" stroke="black"></path>
+                  <path d="M 360,160 L 364,152" fill="none" stroke="black"></path>
+                  <path d="M 324,264 L 332,248" fill="none" stroke="black"></path>
+                  <path d="M 364,184 L 372,168" fill="none" stroke="black"></path>
+                  <path d="M 244,440 L 252,424" fill="none" stroke="black"></path>
+                  <path d="M 212,520 L 220,504" fill="none" stroke="black"></path>
+                  <path d="M 244,472 L 252,456" fill="none" stroke="black"></path>
+                  <path d="M 364,248 L 388,200" fill="none" stroke="black"></path>
+                  <path d="M 244,504 L 268,456" fill="none" stroke="black"></path>
+                  <path d="M 364,280 L 372,264" fill="none" stroke="black"></path>
+                  <path d="M 404,200 L 412,184" fill="none" stroke="black"></path>
+                  <path d="M 284,456 L 292,440" fill="none" stroke="black"></path>
+                  <path d="M 252,536 L 260,520" fill="none" stroke="black"></path>
+                  <path d="M 252,552 L 324,408" fill="none" stroke="black"></path>
+                  <path d="M 428,264 L 436,248" fill="none" stroke="black"></path>
+                  <path d="M 292,552 L 336,464" fill="none" stroke="black"></path>
+                  <path d="M 352,432 L 364,408" fill="none" stroke="black"></path>
+                  <path d="M 476,184 L 484,168" fill="none" stroke="black"></path>
+                  <path d="M 324,520 L 332,504" fill="none" stroke="black"></path>
+                  <path d="M 372,440 L 380,424" fill="none" stroke="black"></path>
+                  <path d="M 468,248 L 492,200" fill="none" stroke="black"></path>
+                  <path d="M 468,280 L 476,264" fill="none" stroke="black"></path>
+                  <path d="M 508,200 L 516,184" fill="none" stroke="black"></path>
+                  <path d="M 364,504 L 388,456" fill="none" stroke="black"></path>
+                  <path d="M 364,536 L 372,520" fill="none" stroke="black"></path>
+                  <path d="M 484,296 L 496,272" fill="none" stroke="black"></path>
+                  <path d="M 512,240 L 556,152" fill="none" stroke="black"></path>
+                  <path d="M 412,456 L 420,440" fill="none" stroke="black"></path>
+                  <path d="M 436,520 L 444,504" fill="none" stroke="black"></path>
+                  <path d="M 476,536 L 484,520" fill="none" stroke="black"></path>
+                  <path d="M 484,552 L 556,408" fill="none" stroke="black"></path>
+                  <path d="M 72,88 L 128,88" fill="none" stroke="black"></path>
+                  <path d="M 72,120 L 128,120" fill="none" stroke="black"></path>
+                  <path d="M 76,152 L 104,152" fill="none" stroke="black"></path>
+                  <path d="M 104,152 L 324,152" fill="none" stroke="black"></path>
+                  <path d="M 364,152 L 556,152" fill="none" stroke="black"></path>
+                  <path d="M 84,168 L 104,168" fill="none" stroke="black"></path>
+                  <path d="M 172,168 L 196,168" fill="none" stroke="black"></path>
+                  <path d="M 252,168 L 284,168" fill="none" stroke="black"></path>
+                  <path d="M 372,168 L 404,168" fill="none" stroke="black"></path>
+                  <path d="M 484,168 L 508,168" fill="none" stroke="black"></path>
+                  <path d="M 292,184 L 364,184" fill="none" stroke="black"></path>
+                  <path d="M 84,200 L 116,200" fill="none" stroke="black"></path>
+                  <path d="M 172,200 L 196,200" fill="none" stroke="black"></path>
+                  <path d="M 252,200 L 284,200" fill="none" stroke="black"></path>
+                  <path d="M 372,200 L 404,200" fill="none" stroke="black"></path>
+                  <path d="M 484,200 L 508,200" fill="none" stroke="black"></path>
+                  <path d="M 52,248 L 84,248" fill="none" stroke="black"></path>
+                  <path d="M 132,248 L 156,248" fill="none" stroke="black"></path>
+                  <path d="M 212,248 L 244,248" fill="none" stroke="black"></path>
+                  <path d="M 332,248 L 364,248" fill="none" stroke="black"></path>
+                  <path d="M 436,248 L 468,248" fill="none" stroke="black"></path>
+                  <path d="M 252,264 L 324,264" fill="none" stroke="black"></path>
+                  <path d="M 52,280 L 84,280" fill="none" stroke="black"></path>
+                  <path d="M 132,280 L 156,280" fill="none" stroke="black"></path>
+                  <path d="M 212,280 L 244,280" fill="none" stroke="black"></path>
+                  <path d="M 332,280 L 364,280" fill="none" stroke="black"></path>
+                  <path d="M 436,280 L 468,280" fill="none" stroke="black"></path>
+                  <path d="M 4,296 L 56,296" fill="none" stroke="black"></path>
+                  <path d="M 56,296 L 76,296" fill="none" stroke="black"></path>
+                  <path d="M 84,296 L 140,296" fill="none" stroke="black"></path>
+                  <path d="M 148,296 L 220,296" fill="none" stroke="black"></path>
+                  <path d="M 228,296 L 252,296" fill="none" stroke="black"></path>
+                  <path d="M 292,296 L 340,296" fill="none" stroke="black"></path>
+                  <path d="M 348,296 L 388,296" fill="none" stroke="black"></path>
+                  <path d="M 396,296 L 448,296" fill="none" stroke="black"></path>
+                  <path d="M 448,296 L 484,296" fill="none" stroke="black"></path>
+                  <path d="M 8,328 L 56,328" fill="none" stroke="black"></path>
+                  <path d="M 408,328 L 448,328" fill="none" stroke="black"></path>
+                  <path d="M 8,360 L 64,360" fill="none" stroke="black"></path>
+                  <path d="M 408,360 L 464,360" fill="none" stroke="black"></path>
+                  <path d="M 76,408 L 92,408" fill="none" stroke="black"></path>
+                  <path d="M 100,408 L 140,408" fill="none" stroke="black"></path>
+                  <path d="M 148,408 L 220,408" fill="none" stroke="black"></path>
+                  <path d="M 228,408 L 276,408" fill="none" stroke="black"></path>
+                  <path d="M 284,408 L 324,408" fill="none" stroke="black"></path>
+                  <path d="M 364,408 L 388,408" fill="none" stroke="black"></path>
+                  <path d="M 396,408 L 500,408" fill="none" stroke="black"></path>
+                  <path d="M 508,408 L 556,408" fill="none" stroke="black"></path>
+                  <path d="M 84,424 L 116,424" fill="none" stroke="black"></path>
+                  <path d="M 252,424 L 284,424" fill="none" stroke="black"></path>
+                  <path d="M 380,424 L 412,424" fill="none" stroke="black"></path>
+                  <path d="M 84,456 L 116,456" fill="none" stroke="black"></path>
+                  <path d="M 252,456 L 284,456" fill="none" stroke="black"></path>
+                  <path d="M 380,456 L 412,456" fill="none" stroke="black"></path>
+                  <path d="M 44,504 L 68,504" fill="none" stroke="black"></path>
+                  <path d="M 132,504 L 164,504" fill="none" stroke="black"></path>
+                  <path d="M 220,504 L 244,504" fill="none" stroke="black"></path>
+                  <path d="M 332,504 L 364,504" fill="none" stroke="black"></path>
+                  <path d="M 444,504 L 476,504" fill="none" stroke="black"></path>
+                  <path d="M 44,536 L 76,536" fill="none" stroke="black"></path>
+                  <path d="M 132,536 L 164,536" fill="none" stroke="black"></path>
+                  <path d="M 220,536 L 252,536" fill="none" stroke="black"></path>
+                  <path d="M 332,536 L 364,536" fill="none" stroke="black"></path>
+                  <path d="M 444,536 L 476,536" fill="none" stroke="black"></path>
+                  <path d="M 4,552 L 252,552" fill="none" stroke="black"></path>
+                  <path d="M 292,552 L 484,552" fill="none" stroke="black"></path>
+                  <path d="M 80,616 L 344,616" fill="none" stroke="black"></path>
+                  <path d="M 100,664 L 156,664" fill="none" stroke="black"></path>
+                  <path d="M 80,744 L 344,744" fill="none" stroke="black"></path>
+                  <g class="text">
+                    <text x="100" y="100">CE13</text>
+                    <text x="172" y="132">Packet</text>
+                    <text x="228" y="132">Domain</text>
+                    <text x="264" y="132">1</text>
+                    <text x="412" y="132">Packet</text>
+                    <text x="468" y="132">Domain</text>
+                    <text x="504" y="132">2</text>
+                    <text x="112" y="164">_</text>
+                    <text x="100" y="180">PE13</text>
+                    <text x="128" y="180">_</text>
+                    <text x="144" y="180">_</text>
+                    <text x="160" y="180">_</text>
+                    <text x="184" y="180">P15</text>
+                    <text x="208" y="180">_</text>
+                    <text x="224" y="180">_</text>
+                    <text x="240" y="180">_</text>
+                    <text x="268" y="180">BR11</text>
+                    <text x="388" y="180">BR11</text>
+                    <text x="496" y="180">P24</text>
+                    <text x="280" y="212">:</text>
+                    <text x="392" y="212">:</text>
+                    <text x="504" y="212">:</text>
+                    <text x="280" y="228">:</text>
+                    <text x="392" y="228">:</text>
+                    <text x="504" y="228">:</text>
+                    <text x="280" y="244">:</text>
+                    <text x="392" y="244">:</text>
+                    <text x="504" y="244">:</text>
+                    <text x="68" y="260">PE14</text>
+                    <text x="144" y="260">P16</text>
+                    <text x="168" y="260">_</text>
+                    <text x="184" y="260">_</text>
+                    <text x="200" y="260">_</text>
+                    <text x="228" y="260">BR12</text>
+                    <text x="348" y="260">BR22</text>
+                    <text x="376" y="260">_</text>
+                    <text x="392" y="260">_</text>
+                    <text x="408" y="260">_</text>
+                    <text x="424" y="260">_</text>
+                    <text x="452" y="260">PE23</text>
+                    <text x="504" y="260">:</text>
+                    <text x="280" y="276">:</text>
+                    <text x="504" y="276">:</text>
+                    <text x="80" y="292">:</text>
+                    <text x="144" y="292">:</text>
+                    <text x="224" y="292">:</text>
+                    <text x="280" y="292">:</text>
+                    <text x="344" y="292">:</text>
+                    <text x="392" y="292">:</text>
+                    <text x="504" y="292">:</text>
+                    <text x="80" y="308">:</text>
+                    <text x="144" y="308">:</text>
+                    <text x="224" y="308">:</text>
+                    <text x="280" y="308">:</text>
+                    <text x="344" y="308">:</text>
+                    <text x="392" y="308">:</text>
+                    <text x="504" y="308">:</text>
+                    <text x="80" y="324">:</text>
+                    <text x="144" y="324">:</text>
+                    <text x="224" y="324">:</text>
+                    <text x="280" y="324">:</text>
+                    <text x="344" y="324">:</text>
+                    <text x="392" y="324">:</text>
+                    <text x="456" y="324">_</text>
+                    <text x="504" y="324">:</text>
+                    <text x="36" y="340">CE13</text>
+                    <text x="80" y="340">:</text>
+                    <text x="144" y="340">:</text>
+                    <text x="224" y="340">:</text>
+                    <text x="280" y="340">:</text>
+                    <text x="344" y="340">:</text>
+                    <text x="392" y="340">:</text>
+                    <text x="436" y="340">CE23</text>
+                    <text x="504" y="340">:</text>
+                    <text x="80" y="356">:</text>
+                    <text x="144" y="356">:</text>
+                    <text x="224" y="356">:</text>
+                    <text x="280" y="356">:</text>
+                    <text x="344" y="356">:</text>
+                    <text x="392" y="356">:</text>
+                    <text x="504" y="356">:</text>
+                    <text x="88" y="372">...</text>
+                    <text x="144" y="372">:</text>
+                    <text x="224" y="372">:</text>
+                    <text x="280" y="372">:</text>
+                    <text x="344" y="372">:</text>
+                    <text x="392" y="372">:</text>
+                    <text x="504" y="372">:</text>
+                    <text x="96" y="388">:</text>
+                    <text x="144" y="388">:</text>
+                    <text x="224" y="388">:</text>
+                    <text x="280" y="388">:</text>
+                    <text x="344" y="388">:</text>
+                    <text x="392" y="388">:</text>
+                    <text x="504" y="388">:</text>
+                    <text x="96" y="404">:</text>
+                    <text x="144" y="404">:</text>
+                    <text x="224" y="404">:</text>
+                    <text x="280" y="404">:</text>
+                    <text x="344" y="404">:</text>
+                    <text x="392" y="404">:</text>
+                    <text x="504" y="404">:</text>
+                    <text x="144" y="420">:</text>
+                    <text x="224" y="420">:</text>
+                    <text x="344" y="420">:</text>
+                    <text x="504" y="420">:</text>
+                    <text x="100" y="436">NE11</text>
+                    <text x="128" y="436">_</text>
+                    <text x="144" y="436">_</text>
+                    <text x="160" y="436">_</text>
+                    <text x="176" y="436">_</text>
+                    <text x="192" y="436">_</text>
+                    <text x="208" y="436">_</text>
+                    <text x="224" y="436">_</text>
+                    <text x="240" y="436">_</text>
+                    <text x="268" y="436">NE12</text>
+                    <text x="344" y="436">:</text>
+                    <text x="396" y="436">NE21</text>
+                    <text x="504" y="436">:</text>
+                    <text x="144" y="452">:</text>
+                    <text x="224" y="452">:</text>
+                    <text x="344" y="452">:</text>
+                    <text x="504" y="452">:</text>
+                    <text x="144" y="468">:</text>
+                    <text x="224" y="468">:</text>
+                    <text x="344" y="468">:</text>
+                    <text x="488" y="468">.....</text>
+                    <text x="144" y="484">:</text>
+                    <text x="232" y="484">:--</text>
+                    <text x="344" y="484">:</text>
+                    <text x="416" y="484">-</text>
+                    <text x="432" y="484">-</text>
+                    <text x="472" y="484">:</text>
+                    <text x="60" y="516">NE13</text>
+                    <text x="88" y="516">_</text>
+                    <text x="104" y="516">_</text>
+                    <text x="120" y="516">_</text>
+                    <text x="148" y="516">NE14</text>
+                    <text x="176" y="516">_</text>
+                    <text x="192" y="516">_</text>
+                    <text x="208" y="516">_</text>
+                    <text x="236" y="516">NE15</text>
+                    <text x="348" y="516">NE22</text>
+                    <text x="376" y="516">_</text>
+                    <text x="392" y="516">_</text>
+                    <text x="408" y="516">_</text>
+                    <text x="424" y="516">_</text>
+                    <text x="460" y="516">NE23</text>
+                    <text x="96" y="580">Optical</text>
+                    <text x="156" y="580">Domain</text>
+                    <text x="192" y="580">1</text>
+                    <text x="352" y="580">Optical</text>
+                    <text x="412" y="580">Domain</text>
+                    <text x="448" y="580">2</text>
+                    <text x="160" y="628">Legenda</text>
+                    <text x="168" y="660">=</text>
+                    <text x="228" y="660">Inter-domain</text>
+                    <text x="304" y="660">links</text>
+                    <text x="128" y="692">.......</text>
+                    <text x="168" y="692">=</text>
+                    <text x="228" y="692">Cross-domain</text>
+                    <text x="304" y="692">links</text>
+                    <text x="104" y="724">_</text>
+                    <text x="120" y="724">_</text>
+                    <text x="136" y="724">_</text>
+                    <text x="152" y="724">_</text>
+                    <text x="168" y="724">=</text>
+                    <text x="228" y="724">Intra-domain</text>
+                    <text x="304" y="724">links</text>
+                  </g>
+                </svg><a href="#section-2.1.1-2.1.1" class="pilcrow">¶</a>
+</div>
 </div>
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
 <a href="#name-multi-domain-vpn-topology-e" class="selfRef">Multi-domain VPN topology example</a>
@@ -1891,7 +2204,7 @@ PE (PE14) are within the same packet domain, and the other spoke PE
 <figure id="figure-3">
             <div id="section-2.1.1-3.1">
               <div class="alignLeft art-svg artwork" id="section-2.1.1-3.1.1">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="720" width="576" viewBox="0 0 576 720" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="704" width="576" viewBox="0 0 576 704" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
                   <path d="M 8,280 L 8,312" fill="none" stroke="black"></path>
                   <path d="M 16,568 L 16,696" fill="none" stroke="black"></path>
                   <path d="M 56,232 L 56,280" fill="none" stroke="black"></path>
@@ -4357,18 +4670,18 @@ document. The security considerations of the protocols reused at the
 MPIs also apply and are not repeated here: see Section 12 of
 <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span> for RESTCONF, Section 9 of <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> for NETCONF,
 Section 10 of <span>[<a href="#RFC5440" class="cite xref">RFC5440</a>]</span> and <span>[<a href="#RFC8253" class="cite xref">RFC8253</a>]</span> for PCEP, and the Security
-Considerations of the YANG data models listed in <a href="#yang" class="auto internal xref">Section 3.2</a>. This
-section adds two things that are specific to the application of ACTN
+Considerations of the YANG data models listed in <a href="#yang" class="auto internal xref">Section 3.2</a>.<a href="#section-7-3" class="pilcrow">¶</a></p>
+<p id="section-7-4">This section adds two things that are specific to the application of ACTN
 to POI: a threat model for the ACTN POI architecture
 (<a href="#threat-model" class="auto internal xref">Section 7.1</a>), since the analysis in <span>[<a href="#RFC8453" class="cite xref">RFC8453</a>]</span> is generic, and
-the security considerations for LLDP snooping (<a href="#lldp-security" class="auto internal xref">Section 7.2</a>).
-LLDP snooping is singled out because it is the one mechanism described
+the security considerations for LLDP snooping (<a href="#lldp-security" class="auto internal xref">Section 7.2</a>).<a href="#section-7-4" class="pilcrow">¶</a></p>
+<p id="section-7-5">LLDP snooping is singled out because it is the one mechanism described
 in this document that is particular to the POI scenarios: it is used
 by the PNCs to discover the cross-technology Ethernet links between
 the IP routers and the optical nodes (<a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>)
 and, through them, the multi-technology IP links on which the
-multi-layer coordination performed by the MDSC depends.<a href="#section-7-3" class="pilcrow">¶</a></p>
-<p id="section-7-4">Several existing authentication and encryption practices and
+multi-layer coordination performed by the MDSC depends.<a href="#section-7-5" class="pilcrow">¶</a></p>
+<p id="section-7-6">Several existing authentication and encryption practices and
 techniques may be used to help secure these MPI interfaces. These
 mechanisms include using Transport Layer Security (TLS) to provide
 secure transport for RESTCONF, NETCONF and PCEP. The recommendations
@@ -4377,12 +4690,12 @@ versions should not be used. Each MPI is a trust boundary between the
 MDSC and a PNC and, in multi-vendor deployments, between controllers
 supplied by different vendors; the MDSC and each PNC are therefore
 expected to mutually authenticate (e.g., using client certificates
-with TLS) rather than relying on one-way authentication.
-Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span>, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.
-Since the operations performed over the MPIs can modify both the
+with TLS) rather than relying on one-way authentication.<a href="#section-7-6" class="pilcrow">¶</a></p>
+<p id="section-7-7">Furthermore, access control techniques can also provide additional security features. Both NETCONF and RESTCONF support the Network Configuration Access Control Model (NACM) <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span>, which provides group-based (role-based) access control, ensuring that MDSC to PNC communication is based on authorised use and granular control of connectivity and resource requests.<a href="#section-7-7" class="pilcrow">¶</a></p>
+<p id="section-7-8">Since the operations performed over the MPIs can modify both the
 packet and the optical forwarding state, the MDSC and the PNCs are also
 expected to keep audit logs of the configuration operations they
-request and perform.<a href="#section-7-4" class="pilcrow">¶</a></p>
+request and perform.<a href="#section-7-8" class="pilcrow">¶</a></p>
 <div id="threat-model">
 <section id="section-7.1">
         <h3 id="name-threat-model-for-actn-appli">
@@ -4416,21 +4729,28 @@ the network elements they control.<a href="#section-7.1-3.2.1" class="pilcrow">�
           <li class="normal" id="section-7.1-3.3">
             <p id="section-7.1-3.3.1">The MPIs, which are the trust boundaries between the MDSC and each
 PNC and, in multi-vendor deployments, between controllers supplied by
-different vendors. The CMI and the MDSC NBI are outside the scope of
-this document.<a href="#section-7.1-3.3.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-7.1-3.4">
-            <p id="section-7.1-3.4.1">The topology, inventory, TE and service information exchanged over
-the MPIs, whose confidentiality matters (it describes the structure,
-capacity and shared risks of the network) and whose integrity is
-critical, since the MDSC decisions depend on it.<a href="#section-7.1-3.4.1" class="pilcrow">¶</a></p>
+different vendors.<a href="#section-7.1-3.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-7.1-4">Against these assets, the threats most relevant to the ACTN POI
-architecture, and their expected mitigations, are:<a href="#section-7.1-4" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-7.1-4.1">
+            <p id="section-7.1-4.1.1">Note: the CMI and the MDSC NBI are outside the scope of
+this document.<a href="#section-7.1-4.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
 <ul class="normal">
 <li class="normal" id="section-7.1-5.1">
-            <p id="section-7.1-5.1.1">Compromised or misbehaving controller: a compromised MDSC can
+            <p id="section-7.1-5.1.1">The topology, inventory, TE and service information exchanged over
+the MPIs, whose confidentiality matters (it describes the structure,
+capacity and shared risks of the network) and whose integrity is
+critical, since the MDSC decisions depend on it.<a href="#section-7.1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-7.1-6">Against these assets, the threats most relevant to the ACTN POI
+architecture, and their expected mitigations, are:<a href="#section-7.1-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-7.1-7.1">
+            <p id="section-7.1-7.1.1">Compromised or misbehaving controller: a compromised MDSC can
 reroute, disrupt or disclose the traffic of every domain; a
 compromised PNC can do the same within its domain and can feed false
 information to the MDSC. Mitigations are the mutual authentication,
@@ -4440,10 +4760,10 @@ over its domain, so NACM can limit each MPI client to the operations
 the architecture requires of it (e.g., read access to topology and
 write access only to the tunnels and services the MDSC manages), and a
 PNC can reject requests that are inconsistent with its own view of its
-domain.<a href="#section-7.1-5.1.1" class="pilcrow">¶</a></p>
+domain.<a href="#section-7.1-7.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-7.1-5.2">
-            <p id="section-7.1-5.2.1">False or stale topology and resource information: whether injected
+          <li class="normal" id="section-7.1-7.2">
+            <p id="section-7.1-7.2.1">False or stale topology and resource information: whether injected
 by a compromised PNC, spoofed on the cross-technology Ethernet links
 (see <a href="#lldp-security" class="auto internal xref">Section 7.2</a>), or caused by lost notifications, incorrect
 information leads the MDSC to compute wrong paths, for example two
@@ -4453,10 +4773,10 @@ requests that fail or leak resources. Mitigations are the integrity
 protection of the MPIs, the LLDP mitigations in <a href="#lldp-security" class="auto internal xref">Section 7.2</a>, and
 the ability of the MDSC to resynchronize its view with the PNCs
 (<a href="#discovery" class="auto internal xref">Section 4</a>); the distributed control planes of the IP/MPLS and
-optical networks remain authoritative for the network state.<a href="#section-7.1-5.2.1" class="pilcrow">¶</a></p>
+optical networks remain authoritative for the network state.<a href="#section-7.1-7.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-7.1-5.3">
-            <p id="section-7.1-5.3.1">Unauthorized cross-layer operations: an operation requested over one
+          <li class="normal" id="section-7.1-7.3">
+            <p id="section-7.1-7.3.1">Unauthorized cross-layer operations: an operation requested over one
 MPI that results in changes in the other layer, or an MPI client with
 authority over one layer causing changes in the other. In the ACTN
 architecture, cross-layer coordination is performed only by the MDSC,
@@ -4464,27 +4784,27 @@ and each PNC only acts on its own domain: the O-PNC and the P-PNC
 should therefore enforce, through NACM, that each MPI client can only
 perform the operations required for its role, and the O-PNC retains
 the validation of the optical paths it is requested to set up
-(<a href="#optical-path-computation" class="auto internal xref">Section 5.1</a>).<a href="#section-7.1-5.3.1" class="pilcrow">¶</a></p>
+(<a href="#optical-path-computation" class="auto internal xref">Section 5.1</a>).<a href="#section-7.1-7.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-7.1-5.4">
-            <p id="section-7.1-5.4.1">Information disclosure: the information exchanged over the MPIs, or
+          <li class="normal" id="section-7.1-7.4">
+            <p id="section-7.1-7.4.1">Information disclosure: the information exchanged over the MPIs, or
 disclosed through LLDP on the cross-technology Ethernet links, can be
 used to plan further attacks. Mitigations are the confidentiality
 protection of the MPIs, read-access restrictions through NACM, and the
-LLDP mitigations in <a href="#lldp-security" class="auto internal xref">Section 7.2</a>.<a href="#section-7.1-5.4.1" class="pilcrow">¶</a></p>
+LLDP mitigations in <a href="#lldp-security" class="auto internal xref">Section 7.2</a>.<a href="#section-7.1-7.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-7.1-5.5">
-            <p id="section-7.1-5.5.1">Resource exhaustion: controllers can be overloaded through the MPIs
+          <li class="normal" id="section-7.1-7.5">
+            <p id="section-7.1-7.5.1">Resource exhaustion: controllers can be overloaded through the MPIs
 (e.g., by large topology retrievals, by many notification
 subscriptions or by repeated path computation requests), and network
 elements can be overloaded with LLDP traffic. Mitigations are to
 accept MPI requests only from authenticated and authorized clients,
 rate limiting and subscription filtering at the PNCs (see also the
 scalability gap in <a href="#discovery" class="auto internal xref">Section 4</a>), and the LLDP mitigations in
-<a href="#lldp-security" class="auto internal xref">Section 7.2</a>.<a href="#section-7.1-5.5.1" class="pilcrow">¶</a></p>
+<a href="#lldp-security" class="auto internal xref">Section 7.2</a>.<a href="#section-7.1-7.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-7.1-5.6">
-            <p id="section-7.1-5.6.1">Inconsistent packet and optical state: a multi-layer operation that
+          <li class="normal" id="section-7.1-7.6">
+            <p id="section-7.1-7.6.1">Inconsistent packet and optical state: a multi-layer operation that
 succeeds in one layer and fails in the other (e.g., an optical tunnel
 set up without the corresponding IP link, or the reverse) leaves state
 that can disrupt services or be exploited. The MDSC is expected to
@@ -4492,12 +4812,12 @@ treat multi-layer operations as coordinated sequences, to verify their
 outcome through the discovery mechanisms and notifications described
 in <a href="#discovery" class="auto internal xref">Section 4</a>, and to roll back or raise an alarm when a step fails.
 Multi-layer fault management is further discussed in
-<span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref">I-D.ietf-teas-actn-poi-assurance</a>]</span>.<a href="#section-7.1-5.6.1" class="pilcrow">¶</a></p>
+<span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref">I-D.ietf-teas-actn-poi-assurance</a>]</span>.<a href="#section-7.1-7.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-7.1-6">These mitigations rely on the security mechanisms of the protocols and
+<p id="section-7.1-8">These mitigations rely on the security mechanisms of the protocols and
 data models reused by this document; this document does not define any
-new security mechanism.<a href="#section-7.1-6" class="pilcrow">¶</a></p>
+new security mechanism.<a href="#section-7.1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="lldp-security">
@@ -4665,15 +4985,17 @@ control loop of either network. The consistency of the network state
 itself is maintained by the distributed control planes of the IP/MPLS
 and optical networks, and fast recovery from failures relies on the
 protection and restoration mechanisms of each layer (see also
-<a href="#additional-scenarios" class="auto internal xref">Appendix A</a>). Where an MDSC implementation is based on a
+<a href="#additional-scenarios" class="auto internal xref">Appendix A</a>).<a href="#section-8-5" class="pilcrow">¶</a></p>
+<p id="section-8-6">Where an MDSC implementation is based on a
 PCE (<a href="#pcep" class="auto internal xref">Section 3.3</a>), it inherits the redundancy and state synchronization
 practices of PCE deployments, as described in <span>[<a href="#RFC5440" class="cite xref">RFC5440</a>]</span>,
-<span>[<a href="#RFC8231" class="cite xref">RFC8231</a>]</span> and <span>[<a href="#RFC8283" class="cite xref">RFC8283</a>]</span>. Multi-layer fault management and
+<span>[<a href="#RFC8231" class="cite xref">RFC8231</a>]</span> and <span>[<a href="#RFC8283" class="cite xref">RFC8283</a>]</span>.<a href="#section-8-6" class="pilcrow">¶</a></p>
+<p id="section-8-7">Multi-layer fault management and
 service assurance are discussed in <span>[<a href="#I-D.ietf-teas-actn-poi-assurance" class="cite xref">I-D.ietf-teas-actn-poi-assurance</a>]</span>.
 A more complete resilience analysis of ACTN-based POI, covering
 availability, failure recovery, and security and trust, is left for
-further work.<a href="#section-8-5" class="pilcrow">¶</a></p>
-<p id="section-8-6">Specific Security Considerations are discussed in <a href="#security" class="auto internal xref">Section 7</a>.<a href="#section-8-6" class="pilcrow">¶</a></p>
+further work.<a href="#section-8-7" class="pilcrow">¶</a></p>
+<p id="section-8-8">Specific Security Considerations are discussed in <a href="#security" class="auto internal xref">Section 7</a>.<a href="#section-8-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
