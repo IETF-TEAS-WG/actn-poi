@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 1 May 2027                                             Vodafone
+Expires: 3 May 2027                                             Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                         28 October 2026
+                                                         30 October 2026
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 May 2027.
+   This Internet-Draft will expire on 3 May 2027.
 
 Copyright Notice
 
@@ -546,9 +546,6 @@ Table of Contents
    PE (PE14) are within the same packet domain, and the other spoke PE
    (PE23) is within a different packet domain.
 
-   +---+
-   |   |
-   +---+
             ______
            | CE13 |
            |______|
