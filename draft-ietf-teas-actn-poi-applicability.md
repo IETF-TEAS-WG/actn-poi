@@ -356,7 +356,7 @@ Optical Integration (POI), where the ACTN hierarchy is implemented to
 manage a multi-technology, multi-domain network comprising two optical
 domains and two packet domains, as illustrated in {{fig-ref-network}}:
 
-{::include ./figures/reference-network.md}
+{::include figures/reference-network.md}
 {: #fig-ref-network title="Reference Network"}
 
 The ACTN architecture, as defined in {{!RFC8453}}, is utilized to manage
@@ -522,14 +522,10 @@ spoke
 PE (PE14) are within the same packet domain, and the other spoke PE
 (PE23) is within a different packet domain.
 
-~~~~ aasvg
-{::include ./figures/vpn-topology.txt}
-~~~~
+{::include figures/vpn-topology.md}
 {: #fig-vpn-topo title="Multi-domain VPN topology example"}
 
-~~~~ aasvg
-{::include ./figures/vpn-te-paths.txt}
-~~~~
+{::include figures/vpn-te-paths.md}
 {: #fig-vpn-path title="Multi-domain VPN TE paths example"}
 
 There are many options to implement multi-domain L2/L3 VPNs,
@@ -1199,7 +1195,7 @@ used to associate the client LTPs (7-0) in NE11 and (8-0) in NE12
 with the corresponding optical TTPs (7) in NE11 and (8) in NE12,
 respectively.
 
-{::include ./figures/multi-layer-optical-topology.md}
+{::include figures/multi-layer-optical-topology.md}
 {: #fig-optical-topo title="Multi-layer optical topology discovery"}
 
 The intra-domain optical links are discovered by O-PNCs, using
@@ -1408,7 +1404,7 @@ corresponding Ethernet interface on the optical node, e.g., between
 LTP 5-0 on PE13 and LTP 7-0 on NE11, as shown in
 {{fig-cross-technology-link}}.
 
-{::include ./figures/cross-technology-link.md}
+{::include figures/cross-technology-link.md}
 {: #fig-cross-technology-link title="Cross-technology Ethernet link
 discovery"}
 
@@ -1433,7 +1429,7 @@ LLDP information being sent and received from the corresponding
 Ethernet interfaces, e.g., between Ethernet LTP 3-1 on BR11 and
 Ethernet LTP 4-1 on BR21, as shown in {{fig-inter-domain-link}}.
 
-{::include ./figures/inter-domain-link.md}
+{::include figures/inter-domain-link.md}
 {: #fig-inter-domain-link title="Inter-domain Ethernet and IP link
 discovery"}
 
@@ -1508,7 +1504,7 @@ intra-domain IP and Ethernet links, as described in
 reported at the MPI within the packet and the Ethernet network
 topologies, e.g., as shown in {{fig-multi-technology-link}}.
 
-{::include ./figures/multi-technology-intra-domain-link.md}
+{::include figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link title="Multi-technology intra-domain
 Ethernet and IP link discovery"}
 
@@ -1558,7 +1554,7 @@ In this case, the P-PNC, always reports two Ethernet LTPs for each
 Ethernet interface on the IP router, e.g., the Ethernet LTP 1-0 and 1-1
 on PE13, shown in {{fig-intra-domain-link}}.
 
-{::include ./figures/single-technology-intra-domain-link.md}
+{::include figures/single-technology-intra-domain-link.md}
 {: #fig-intra-domain-link title="Single-technology intra-domain Ethernet
 and IP link discovery"}
 
@@ -1596,7 +1592,7 @@ P24; and
 - between the Ethernet LTP 3-1 on BR21 and the Ethernet LTP 4-1 on
 P24.
 
-{::include ./figures/lag.md}
+{::include figures/lag.md}
 {: #fig-lag title="LAG"}
 
 The mechanisms used by the MDSC to discover single-technology and
@@ -1830,7 +1826,7 @@ MDSC can request O-PNC1 to set up an optical tunnel between optical
 TTPs (7) on NE11 and (8) on NE12 and steer client traffic over this
 tunnel between LTP (7-0) on NE11 and LTP (8-0) on NE12.
 
-{::include ./figures/multi-technology-intra-domain-link.md}
+{::include figures/multi-technology-intra-domain-link.md}
 {: #fig-multi-technology-link-2 title="Multi-technology IP link setup"}
 
 Note: {{fig-multi-technology-link-2}} is an exact copy of
@@ -2517,7 +2513,7 @@ services, using the YANG data models under the definition in
 {{?RFC9291}}, {{?RFC9182}} and
 {{?I-D.ietf-teas-te-service-mapping-yang}}.
 
-{::include ./figures/service-request.md}
+{::include figures/service-request.md}
 {: #fig-service-request title="Service Request Process"}
 
 - The VN YANG data model, defined in {{?I-D.ietf-teas-actn-vn-yang}},
